@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8bcdd0d7-7142-4bb9-8f4f-4cae248f8de9" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test2_Create OW  pnr with seat and ssr" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="8bcdd0d7-7142-4bb9-8f4f-4cae248f8de9" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="0002_Create OW  pnr with seat and ssr" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="8bcdd0d7-7142-4bb9-8f4f-4cae248f8de9fileName">Test2_Create-OW--pnr-with-seat-and-ssr</con:setting>
+    <con:setting id="8bcdd0d7-7142-4bb9-8f4f-4cae248f8de9fileName">0002_Create-OW--pnr-with-seat-and-ssr</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="calltestcase" name="1. RetrieveSecuirtyToken and Input parameters" id="9894bcb5-8fa4-4020-ba11-2e171372eae3">

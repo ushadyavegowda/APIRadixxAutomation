@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="949e3cc1-a7f5-432d-acbb-7534ac10f1cd" isOneWay="false" action="http://tempuri.org/IConnectPoint_Notification/SendNotification" name="SendNotification" bindingOperationName="SendNotification" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Notification/SendNotification" anonymous="optional" bindingOperationName="SendNotification" id="949e3cc1-a7f5-432d-acbb-7534ac10f1cd" inputName="" isOneWay="false" name="SendNotification" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="949e3cc1-a7f5-432d-acbb-7534ac10f1cdfileName">SendNotification</con:setting>
   </con:settings>
@@ -83,6 +83,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Notification/SendNotification"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Notification/SendNotification" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

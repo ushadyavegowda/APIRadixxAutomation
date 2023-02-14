@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="ff37d007-5c78-49fa-ad79-952c73cb0cd5" isOneWay="false" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" name="RetrieveAARQuote" bindingOperationName="RetrieveAARQuote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" anonymous="optional" bindingOperationName="RetrieveAARQuote" id="ff37d007-5c78-49fa-ad79-952c73cb0cd5" inputName="" isOneWay="false" name="RetrieveAARQuote" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ff37d007-5c78-49fa-ad79-952c73cb0cd5fileName">RetrieveAARQuote</con:setting>
   </con:settings>

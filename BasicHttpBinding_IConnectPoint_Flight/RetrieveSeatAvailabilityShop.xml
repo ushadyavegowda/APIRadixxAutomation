@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="a11224b3-5cb7-4335-a2fa-8126085e3d8b" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" name="RetrieveSeatAvailabilityShop" bindingOperationName="RetrieveSeatAvailabilityShop" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" anonymous="optional" bindingOperationName="RetrieveSeatAvailabilityShop" id="a11224b3-5cb7-4335-a2fa-8126085e3d8b" inputName="" isOneWay="false" name="RetrieveSeatAvailabilityShop" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a11224b3-5cb7-4335-a2fa-8126085e3d8bfileName">RetrieveSeatAvailabilityShop</con:setting>
   </con:settings>
   <con:call id="7177d065-7094-43f1-a638-9ee902e0d574" name="RetrieveSeatAvailabilityShop Request">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -43,6 +43,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

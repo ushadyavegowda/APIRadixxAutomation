@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="60992d74-dec6-4774-b1d0-2b6914055a93" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail" name="CheckForExistingProfileEmail" bindingOperationName="CheckForExistingProfileEmail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail" anonymous="optional" bindingOperationName="CheckForExistingProfileEmail" id="60992d74-dec6-4774-b1d0-2b6914055a93" inputName="" isOneWay="false" name="CheckForExistingProfileEmail" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="60992d74-dec6-4774-b1d0-2b6914055a93fileName">CheckForExistingProfileEmail</con:setting>
   </con:settings>
@@ -36,6 +36,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

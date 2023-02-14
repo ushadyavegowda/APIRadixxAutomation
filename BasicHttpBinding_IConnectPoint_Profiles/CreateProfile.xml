@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="307470f2-2266-486f-b35c-106c2b6b8846" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/CreateProfile" name="CreateProfile" bindingOperationName="CreateProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Profiles/CreateProfile" anonymous="optional" bindingOperationName="CreateProfile" id="307470f2-2266-486f-b35c-106c2b6b8846" inputName="" isOneWay="false" name="CreateProfile" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="307470f2-2266-486f-b35c-106c2b6b8846fileName">CreateProfile</con:setting>
   </con:settings>
@@ -266,6 +266,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/CreateProfile"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Profiles/CreateProfile" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

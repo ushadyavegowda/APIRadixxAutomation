@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f458dd86-3547-469e-b64d-b0aab1f53521" isOneWay="false" action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers" name="BoardOffLoadPassengers" bindingOperationName="BoardOffLoadPassengers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers" anonymous="optional" bindingOperationName="BoardOffLoadPassengers" id="f458dd86-3547-469e-b64d-b0aab1f53521" inputName="" isOneWay="false" name="BoardOffLoadPassengers" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f458dd86-3547-469e-b64d-b0aab1f53521fileName">BoardOffLoadPassengers</con:setting>
   </con:settings>
@@ -45,6 +45,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

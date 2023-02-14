@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" created="3.8.0" activeEnvironment="QAEnvi" name="CPTestAutomation" resourceRoot="${projectDir}" updated="3.43.1" encryptionMode="Not encrypted" projectVersion="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project activeEnvironment="QAEnvi" compositeProjectFormat="1.3" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" projectVersion="" resourceRoot="${projectDir}" updated="3.43.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">APITests_Dynamic-readyapi-project</con:setting>
+    <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">ReadyApi</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
@@ -35,7 +35,7 @@
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+  <con:eventHandlers name="RequestFilter.filterRequest" type="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests
 
@@ -52,7 +52,7 @@
 //   request.requestHeaders = headers
 // }</con:script>
   </con:eventHandlers>
-  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+  <con:eventHandlers name="TestRunListener.afterStep" type="TestRunListener.afterStep">
     <con:script>// Save all test step results into files
 // Change the directory path in line 5 to a location where you want to store details
 // then uncomment lines 5 to 10
@@ -64,33 +64,33 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
-  <con:environment id="ff76c282-7c43-48ac-88d6-a00107f279b7" name="QAEnvi" index="0">
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Reservation">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+  <con:environment id="ff76c282-7c43-48ac-88d6-a00107f279b7" index="0" name="QAEnvi">
+    <con:service name="BasicHttpBinding_IConnectPoint_Reservation" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Security">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Security.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Security" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Security.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Pricing">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Pricing" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Utilities">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Utilities.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Utilities" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Utilities.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Fees">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Fees.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Fees" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Fees.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Fulfillment">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Fulfillment" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Seating">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Seating" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_TravelAgents">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_TravelAgents" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
     </con:service>
-    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Flight">
-      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
+    <con:service name="BasicHttpBinding_IConnectPoint_Flight" type="SOAP">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
     </con:service>
     <con:property>
       <con:name>LogonID</con:name>

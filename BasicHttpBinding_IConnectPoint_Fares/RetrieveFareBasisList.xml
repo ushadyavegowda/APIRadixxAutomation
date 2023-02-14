@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="b8ae25e6-36a9-426a-b781-9b3bdb3994ff" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fares/RetrieveFareBasisList" name="RetrieveFareBasisList" bindingOperationName="RetrieveFareBasisList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fares/RetrieveFareBasisList" anonymous="optional" bindingOperationName="RetrieveFareBasisList" id="b8ae25e6-36a9-426a-b781-9b3bdb3994ff" inputName="" isOneWay="false" name="RetrieveFareBasisList" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b8ae25e6-36a9-426a-b781-9b3bdb3994fffileName">RetrieveFareBasisList</con:setting>
   </con:settings>
@@ -36,6 +36,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Fares/RetrieveFareBasisList"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fares/RetrieveFareBasisList" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

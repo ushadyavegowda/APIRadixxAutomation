@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="650a1d75-9a09-4709-b4a5-699b28b1114a" isOneWay="false" action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote" name="RetrieveInsuranceQuote" bindingOperationName="RetrieveInsuranceQuote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote" anonymous="optional" bindingOperationName="RetrieveInsuranceQuote" id="650a1d75-9a09-4709-b4a5-699b28b1114a" inputName="" isOneWay="false" name="RetrieveInsuranceQuote" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="650a1d75-9a09-4709-b4a5-699b28b1114afileName">RetrieveInsuranceQuote</con:setting>
   </con:settings>
@@ -97,6 +97,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

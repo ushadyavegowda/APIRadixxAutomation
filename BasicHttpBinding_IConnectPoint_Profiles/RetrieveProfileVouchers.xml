@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="09779eee-8274-4317-8336-e44d5c0281e9" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" name="RetrieveProfileVouchers" bindingOperationName="RetrieveProfileVouchers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" anonymous="optional" bindingOperationName="RetrieveProfileVouchers" id="09779eee-8274-4317-8336-e44d5c0281e9" inputName="" isOneWay="false" name="RetrieveProfileVouchers" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="09779eee-8274-4317-8336-e44d5c0281e9fileName">RetrieveProfileVouchers</con:setting>
   </con:settings>
@@ -37,6 +37,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

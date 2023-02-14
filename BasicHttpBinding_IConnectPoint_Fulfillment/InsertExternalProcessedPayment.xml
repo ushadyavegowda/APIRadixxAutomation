@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="2681f01d-8429-409b-ad16-be53a28674ad" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/InsertExternalProcessedPayment" name="InsertExternalProcessedPayment" bindingOperationName="InsertExternalProcessedPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/InsertExternalProcessedPayment" anonymous="optional" bindingOperationName="InsertExternalProcessedPayment" id="2681f01d-8429-409b-ad16-be53a28674ad" inputName="" isOneWay="false" name="InsertExternalProcessedPayment" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2681f01d-8429-409b-ad16-be53a28674adfileName">InsertExternalProcessedPayment</con:setting>
   </con:settings>

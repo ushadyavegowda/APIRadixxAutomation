@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="d201a078-6537-40ed-ac0f-898209b68d0c" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencywithCCInfo" name="RetrieveAgencywithCCInfo" bindingOperationName="RetrieveAgencywithCCInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencywithCCInfo" anonymous="optional" bindingOperationName="RetrieveAgencywithCCInfo" id="d201a078-6537-40ed-ac0f-898209b68d0c" inputName="" isOneWay="false" name="RetrieveAgencywithCCInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d201a078-6537-40ed-ac0f-898209b68d0cfileName">RetrieveAgencywithCCInfo</con:setting>
   </con:settings>

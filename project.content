@@ -144,3 +144,5 @@ ConnectPointRegressionTestCases\Test15_Modify-TA-booking-to-another-date.xml
 ConnectPointRegressionTestCases\Test1_Create-a-OW-boking---ADT-passenger---CASH-payment.xml
 ConnectPointRegressionTestCases\Create-OW-pnr-withSSR.xml
 ConnectPointRegressionTestCases\test.xml
+ConnectPointRegressionTestCases\Test-Case-Jitender01.xml
+ConnectPointRegressionTestCases\Jitender-AddPax.xml

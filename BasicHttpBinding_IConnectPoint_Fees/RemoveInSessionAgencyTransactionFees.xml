@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="b91e500c-0f43-4604-88bd-fbe2c85fcac1" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFees" name="RemoveInSessionAgencyTransactionFees" bindingOperationName="RemoveInSessionAgencyTransactionFees" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFees" anonymous="optional" bindingOperationName="RemoveInSessionAgencyTransactionFees" id="b91e500c-0f43-4604-88bd-fbe2c85fcac1" inputName="" isOneWay="false" name="RemoveInSessionAgencyTransactionFees" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b91e500c-0f43-4604-88bd-fbe2c85fcac1fileName">RemoveInSessionAgencyTransactionFees</con:setting>
   </con:settings>

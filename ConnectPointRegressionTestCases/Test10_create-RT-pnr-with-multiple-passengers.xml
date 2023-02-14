@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="3b03766b-48eb-45c4-8b15-c8e2410a9268" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test10_create RT pnr with multiple passengers" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="3b03766b-48eb-45c4-8b15-c8e2410a9268" keepSession="false" maxResults="0" name="Test10_create RT pnr with multiple passengers" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3b03766b-48eb-45c4-8b15-c8e2410a9268fileName">Test10_create-RT-pnr-with-multiple-passengers</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1 RetrieveSecuirtyToken and Input parameters" id="d49f4bcb-0ad4-4012-89af-277a543d4d11">
+  <con:testStep id="d49f4bcb-0ad4-4012-89af-277a543d4d11" name="1 RetrieveSecuirtyToken and Input parameters" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -13,12 +13,12 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" name="2 FareQuote1ADT1INF1 CHD" id="470c112c-9a7f-4f36-a6ea-84f7e9b06e34">
+  <con:testStep id="470c112c-9a7f-4f36-a6ea-84f7e9b06e34" name="2 FareQuote1ADT1INF1 CHD" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveFareQuote</con:operation>
-      <con:request name="2 FareQuote1ADT1INF1 CHD" id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7">
+      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="2 FareQuote1ADT1INF1 CHD">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -94,8 +94,8 @@
       </tem:RetrieveFareQuote>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="c1f8f955-ad53-4d9f-aece-902a9e63b8af"/>
-        <con:assertion type="XPath Match" id="c92c3915-fe4a-4433-9401-58ef95ba0671" name="Check for existence of [a:FareID]">
+        <con:assertion id="c1f8f955-ad53-4d9f-aece-902a9e63b8af" type="SOAP Response"/>
+        <con:assertion id="c92c3915-fe4a-4433-9401-58ef95ba0671" name="Check for existence of [a:FareID]" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 declare namespace ns1='http://tempuri.org/';
@@ -233,10 +233,10 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer" id="b689c996-dba4-4041-994c-cad13cbe8b6b">
+  <con:testStep id="b689c996-dba4-4041-994c-cad13cbe8b6b" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LFID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -248,7 +248,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>fareid_ADT</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -259,7 +259,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>fareid_CHD</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -270,7 +270,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LFID_ReturnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -281,7 +281,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>fareid_ADT_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -292,7 +292,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>fareid_CHD_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 FareQuote1ADT1INF1 CHD</con:sourceStep>
@@ -305,12 +305,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="af6832ec-ace0-4173-9ddf-16eea8c5f571" name="3 SummaryPNR - Get Summary">
+  <con:testStep id="af6832ec-ace0-4173-9ddf-16eea8c5f571" name="3 SummaryPNR - Get Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>SummaryPNR</con:operation>
-      <con:request name="3 SummaryPNR - Get Summary" outgoingWss="" incomingWss="" timeout="0" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" incomingWss="" name="3 SummaryPNR - Get Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -582,8 +582,8 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </SummaryPNR>\r
    </s:Body>\r
 </s:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response"/>
-        <con:assertion type="XPath Match" id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match">
+        <con:assertion id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response" type="SOAP Response"/>
+        <con:assertion id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -601,7 +601,7 @@ declare namespace ns1='http://tempuri.org/';
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
@@ -722,12 +722,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" name="4 AssessPaymentFee" id="027b0e4c-6c9a-412a-a688-bbfc179fe6f7">
+  <con:testStep id="027b0e4c-6c9a-412a-a688-bbfc179fe6f7" name="4 AssessPaymentFee" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
       <con:operation>AssessPaymentMethodFees</con:operation>
-      <con:request name="4 AssessPaymentFee" id="d8584d8e-fe96-40a0-a905-833328bcc9e9">
+      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="4 AssessPaymentFee">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -764,7 +764,7 @@ declare namespace ns1='http://tempuri.org/';\r
       </tem:AssessPaymentMethodFees>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="6f6f30f9-3137-42d2-a769-c9d87e0884d8"/>
+        <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -892,10 +892,10 @@ declare namespace ns1='http://tempuri.org/';\r
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer balance" id="24fe0a39-b6f4-4b1a-923f-a7b386a40a15">
+  <con:testStep id="24fe0a39-b6f4-4b1a-923f-a7b386a40a15" name="Transfer balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3 SummaryPNR - Get Summary</con:sourceStep>
@@ -909,12 +909,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" name="5 InsertExternalProcessedPayment_CASH" id="fc5bfb3b-d29a-4750-a9d1-69a7eaff5a19">
+  <con:testStep id="fc5bfb3b-d29a-4750-a9d1-69a7eaff5a19" name="5 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>InsertExternalProcessedPayment</con:operation>
-      <con:request name="5 InsertExternalProcessedPayment_CASH" id="9d7c2303-c5ba-45a0-bbcc-075533e03849">
+      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="5 InsertExternalProcessedPayment_CASH">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1067,7 +1067,7 @@ declare namespace ns1='http://tempuri.org/';
       </tem:InsertExternalProcessedPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="a2eabbf9-162d-4551-b815-c47d65cba4b6"/>
+        <con:assertion id="a2eabbf9-162d-4551-b815-c47d65cba4b6" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -1195,18 +1195,18 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="9c044dad-5d56-477a-979b-1c3cf0f8fbe1">
+  <con:testStep id="9c044dad-5d56-477a-979b-1c3cf0f8fbe1" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="12909658-351f-4f38-b3cc-5fc846a3ad2e" name="6 CreatePNR - Commit Summary">
+  <con:testStep id="12909658-351f-4f38-b3cc-5fc846a3ad2e" name="6 CreatePNR - Commit Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="6 CreatePNR - Commit Summary" outgoingWss="" incomingWss="" timeout="0" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="6 CreatePNR - Commit Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1238,8 +1238,8 @@ declare namespace ns1='http://tempuri.org/';
       </tem:CreatePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response"/>
-        <con:assertion type="XPath Match" id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match">
+        <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
+        <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -1257,7 +1257,7 @@ declare namespace ns1='http://tempuri.org/';
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
@@ -1378,10 +1378,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer Confirmation Number" id="e42af369-ea09-4e69-8e97-ead59b9f4a28">
+  <con:testStep id="e42af369-ea09-4e69-8e97-ead59b9f4a28" name="Transfer Confirmation Number" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 CreatePNR - Commit Summary</con:sourceStep>
@@ -1406,7 +1406,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LFID_ReturnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
@@ -1414,19 +1414,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>fareid_ADT</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>fareid_CHD</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>fareid_ADT_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>fareid_CHD_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

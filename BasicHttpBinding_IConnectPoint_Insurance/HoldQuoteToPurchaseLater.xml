@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="c38d7552-82b6-4a9d-a102-850e08f8a90f" isOneWay="false" action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater" name="HoldQuoteToPurchaseLater" bindingOperationName="HoldQuoteToPurchaseLater" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater" anonymous="optional" bindingOperationName="HoldQuoteToPurchaseLater" id="c38d7552-82b6-4a9d-a102-850e08f8a90f" inputName="" isOneWay="false" name="HoldQuoteToPurchaseLater" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c38d7552-82b6-4a9d-a102-850e08f8a90ffileName">HoldQuoteToPurchaseLater</con:setting>
   </con:settings>
@@ -41,6 +41,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

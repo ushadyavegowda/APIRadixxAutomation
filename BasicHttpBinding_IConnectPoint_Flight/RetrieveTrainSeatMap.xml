@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" name="RetrieveTrainSeatMap" bindingOperationName="RetrieveTrainSeatMap" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" anonymous="optional" bindingOperationName="RetrieveTrainSeatMap" id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6" inputName="" isOneWay="false" name="RetrieveTrainSeatMap" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6fileName">RetrieveTrainSeatMap</con:setting>
   </con:settings>
   <con:call id="8435ac91-946e-4582-9307-f1d0229640b9" name="RetrieveTrainSeatMap Request">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -40,6 +40,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

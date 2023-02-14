@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="7166a9a7-5df1-46bf-a359-b40669edf1af" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" name="UpdateLidAircraft" bindingOperationName="UpdateLidAircraft" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" anonymous="optional" bindingOperationName="UpdateLidAircraft" id="7166a9a7-5df1-46bf-a359-b40669edf1af" inputName="" isOneWay="false" name="UpdateLidAircraft" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7166a9a7-5df1-46bf-a359-b40669edf1affileName">UpdateLidAircraft</con:setting>
   </con:settings>
   <con:call id="8d9e3eb7-c402-4f6a-8faa-be0d1d4b15b0" name="UpdateLidAircraft Request">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -47,6 +47,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

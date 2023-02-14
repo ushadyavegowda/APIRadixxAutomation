@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="c4b54877-7ce5-4c96-8e1b-68a133c2078d" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentDetails" name="RetrieveAgentDetails" bindingOperationName="RetrieveAgentDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentDetails" anonymous="optional" bindingOperationName="RetrieveAgentDetails" id="c4b54877-7ce5-4c96-8e1b-68a133c2078d" inputName="" isOneWay="false" name="RetrieveAgentDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c4b54877-7ce5-4c96-8e1b-68a133c2078dfileName">RetrieveAgentDetails</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="9fa59ffa-2a17-4e8f-ae10-13525466e187" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgency" name="ModifyAgency" bindingOperationName="ModifyAgency" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgency" anonymous="optional" bindingOperationName="ModifyAgency" id="9fa59ffa-2a17-4e8f-ae10-13525466e187" inputName="" isOneWay="false" name="ModifyAgency" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9fa59ffa-2a17-4e8f-ae10-13525466e187fileName">ModifyAgency</con:setting>
   </con:settings>

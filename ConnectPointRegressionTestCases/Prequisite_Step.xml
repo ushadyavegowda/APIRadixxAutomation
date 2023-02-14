@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="19b662e5-acaa-4c2d-b343-9c8f079d4d2c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Prequisite_Step" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="19b662e5-acaa-4c2d-b343-9c8f079d4d2c" keepSession="false" name="Prequisite_Step" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="19b662e5-acaa-4c2d-b343-9c8f079d4d2cfileName">Prequisite_Step</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="request" name="1. RetrieveSecuirtyToken" id="93c16e07-4dd5-4c85-9ca2-62f3497b8927">
+  <con:testStep id="93c16e07-4dd5-4c85-9ca2-62f3497b8927" name="1. RetrieveSecuirtyToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request name="1. RetrieveSecuirtyToken" id="4ae458c3-17a0-4bf7-88ff-227035d525d4">
+      <con:request id="4ae458c3-17a0-4bf7-88ff-227035d525d4" name="1. RetrieveSecuirtyToken">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -31,7 +31,7 @@
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="bf589686-356f-4900-8474-369eecd57c9b"/>
+        <con:assertion id="bf589686-356f-4900-8474-369eecd57c9b" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -159,7 +159,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script_securityToken" id="3d624e87-3216-425c-a55a-3c5925bebdb4">
+  <con:testStep id="3d624e87-3216-425c-a55a-3c5925bebdb4" name="Groovy Script_securityToken" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -175,7 +175,7 @@ testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 log.info(securityToken)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script_input TestSuite" id="d8523e1d-5331-40b9-9cb2-9cbd163428a6">
+  <con:testStep id="d8523e1d-5331-40b9-9cb2-9cbd163428a6" name="Groovy Script_input TestSuite" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods

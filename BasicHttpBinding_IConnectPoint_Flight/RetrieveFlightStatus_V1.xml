@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="dafda11b-01c2-433c-8a96-1f02db3b232f" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" name="RetrieveFlightStatus_V1" bindingOperationName="RetrieveFlightStatus_V1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" anonymous="optional" bindingOperationName="RetrieveFlightStatus_V1" id="dafda11b-01c2-433c-8a96-1f02db3b232f" inputName="" isOneWay="false" name="RetrieveFlightStatus_V1" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="dafda11b-01c2-433c-8a96-1f02db3b232ffileName">RetrieveFlightStatus_V1</con:setting>
   </con:settings>
   <con:call id="9210ac00-d8b7-4425-855f-432e000ee044" name="RetrieveFlightStatus_V1 Request">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -41,6 +41,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

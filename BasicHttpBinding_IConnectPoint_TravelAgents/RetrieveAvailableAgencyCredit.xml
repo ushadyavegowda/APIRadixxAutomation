@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="4c691cdb-7d11-4d31-9c8f-eb0b5c34adff" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableAgencyCredit" name="RetrieveAvailableAgencyCredit" bindingOperationName="RetrieveAvailableAgencyCredit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableAgencyCredit" anonymous="optional" bindingOperationName="RetrieveAvailableAgencyCredit" id="4c691cdb-7d11-4d31-9c8f-eb0b5c34adff" inputName="" isOneWay="false" name="RetrieveAvailableAgencyCredit" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4c691cdb-7d11-4d31-9c8f-eb0b5c34adfffileName">RetrieveAvailableAgencyCredit</con:setting>
   </con:settings>

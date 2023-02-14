@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="46ad7f73-217e-4f83-93f4-928e9d0d5d42" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/AgencyFundsTransfer" name="AgencyFundsTransfer" bindingOperationName="AgencyFundsTransfer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/AgencyFundsTransfer" anonymous="optional" bindingOperationName="AgencyFundsTransfer" id="46ad7f73-217e-4f83-93f4-928e9d0d5d42" inputName="" isOneWay="false" name="AgencyFundsTransfer" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="46ad7f73-217e-4f83-93f4-928e9d0d5d42fileName">AgencyFundsTransfer</con:setting>
   </con:settings>

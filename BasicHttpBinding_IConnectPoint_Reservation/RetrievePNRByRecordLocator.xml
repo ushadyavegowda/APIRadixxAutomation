@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f0af2201-3648-4085-89af-c82f7ef064fa" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNRByRecordLocator" name="RetrievePNRByRecordLocator" bindingOperationName="RetrievePNRByRecordLocator" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNRByRecordLocator" anonymous="optional" bindingOperationName="RetrievePNRByRecordLocator" id="f0af2201-3648-4085-89af-c82f7ef064fa" inputName="" isOneWay="false" name="RetrievePNRByRecordLocator" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f0af2201-3648-4085-89af-c82f7ef064fafileName">RetrievePNRByRecordLocator</con:setting>
   </con:settings>

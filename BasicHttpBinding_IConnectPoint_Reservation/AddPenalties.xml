@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="dbfcaa6e-af02-4cc4-857c-688ddbcbb90a" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/AddPenalties" name="AddPenalties" bindingOperationName="AddPenalties" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/AddPenalties" anonymous="optional" bindingOperationName="AddPenalties" id="dbfcaa6e-af02-4cc4-857c-688ddbcbb90a" inputName="" isOneWay="false" name="AddPenalties" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="dbfcaa6e-af02-4cc4-857c-688ddbcbb90afileName">AddPenalties</con:setting>
   </con:settings>

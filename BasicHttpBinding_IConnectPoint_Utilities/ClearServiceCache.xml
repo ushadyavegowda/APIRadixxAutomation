@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2" isOneWay="false" action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache" name="ClearServiceCache" bindingOperationName="ClearServiceCache" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache" anonymous="optional" bindingOperationName="ClearServiceCache" id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2" inputName="" isOneWay="false" name="ClearServiceCache" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2fileName">ClearServiceCache</con:setting>
   </con:settings>
@@ -8,7 +8,7 @@
       <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
     </con:settings>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
    <soapenv:Header/>
    <soapenv:Body>
@@ -35,7 +35,7 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache" mustUnderstand="NONE" version="200508"/>
     <con:wsrmConfig version="1.2"/>
     <con:environmentSpec>
       <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">

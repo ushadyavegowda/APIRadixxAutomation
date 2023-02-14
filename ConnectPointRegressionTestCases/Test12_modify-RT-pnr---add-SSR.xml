@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b288fa0d-d894-499e-b551-dba9ab404c7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test12_modify RT pnr - add SSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="b288fa0d-d894-499e-b551-dba9ab404c7b" keepSession="false" name="Test12_modify RT pnr - add SSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b288fa0d-d894-499e-b551-dba9ab404c7bfileName">Test12_modify-RT-pnr---add-SSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="Create RT Booking" id="cc292aee-69bd-430c-9b3b-901dd8ec379e">
+  <con:testStep id="cc292aee-69bd-430c-9b3b-901dd8ec379e" name="Create RT Booking" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>cf5b1ad3-fb89-4aac-815a-27e9a1e5acbd</con:targetTestCase>
@@ -19,7 +19,7 @@
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
@@ -27,11 +27,11 @@
         </con:property>
         <con:property>
           <con:name>fareid_returnSeg</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>LFID_returnSeg</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>s_ServiceID</con:name>
@@ -63,12 +63,12 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="16cf7f64-104b-46be-a00c-6c7d6473a0eb" name="2 RetrieveAARQuote">
+  <con:testStep id="16cf7f64-104b-46be-a00c-6c7d6473a0eb" name="2 RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveAARQuote</con:operation>
-      <con:request name="2 RetrieveAARQuote" id="54501837-f6a9-4255-9cde-5dcda727641b">
+      <con:request id="54501837-f6a9-4255-9cde-5dcda727641b" name="2 RetrieveAARQuote">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -136,19 +136,19 @@
       </tem:RetrieveAARQuote>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="c3473c48-719c-49f1-8a18-232638cc5c1d" name="Valid HTTP Status Codes">
+        <con:assertion id="c3473c48-719c-49f1-8a18-232638cc5c1d" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="55e7de09-b919-4aed-a6e4-da3e0aaf0029" name="Response SLA">
+        <con:assertion id="55e7de09-b919-4aed-a6e4-da3e0aaf0029" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>1500</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="d10548f7-5529-4dbd-ba2d-b1af1fbd7ac7" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="4a47412e-b6d5-473a-84af-df1ae8677116" name="Schema Compliance">
+        <con:assertion id="d10548f7-5529-4dbd-ba2d-b1af1fbd7ac7" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="4a47412e-b6d5-473a-84af-df1ae8677116" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -166,10 +166,10 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer SSR Info" id="bad441ab-e0f4-4396-a17e-5a256e937546">
+  <con:testStep id="bad441ab-e0f4-4396-a17e-5a256e937546" name="Transfer SSR Info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
@@ -181,7 +181,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_SSRCategory</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
@@ -192,7 +192,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_Amount</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
@@ -203,7 +203,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ServiceCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
@@ -216,12 +216,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="2ed5007f-d7fc-4f97-b90a-12365616e8c3" name="RetrivePNR">
+  <con:testStep id="2ed5007f-d7fc-4f97-b90a-12365616e8c3" name="RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request name="RetrivePNR" id="4d262156-e890-40d5-96f3-6bb863343380">
+      <con:request id="4d262156-e890-40d5-96f3-6bb863343380" name="RetrivePNR">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -253,19 +253,19 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:RetrievePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="f856b47b-72c9-4d02-8372-1c10ce969f0b" name="Valid HTTP Status Codes">
+        <con:assertion id="f856b47b-72c9-4d02-8372-1c10ce969f0b" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="5bcdc6a3-3aae-4041-90e1-830e8573f9e9" name="Response SLA">
+        <con:assertion id="5bcdc6a3-3aae-4041-90e1-830e8573f9e9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>2000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="0ca8f7e8-31f3-4e86-b115-80c103c4570d" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="69271050-612d-429f-a7b2-79cd1e38e550" name="Schema Compliance">
+        <con:assertion id="0ca8f7e8-31f3-4e86-b115-80c103c4570d" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="69271050-612d-429f-a7b2-79cd1e38e550" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -283,10 +283,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer" id="70ca31d7-e595-4eea-93cd-a03729aad093">
+  <con:testStep id="70ca31d7-e595-4eea-93cd-a03729aad093" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PersonOrgID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>RetrivePNR</con:sourceStep>
@@ -298,7 +298,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PhysicalFlightID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>RetrivePNR</con:sourceStep>
@@ -309,7 +309,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PhysicalFlightID_ReturnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>RetrivePNR</con:sourceStep>
@@ -322,12 +322,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="55c9e335-17fd-4c84-a260-ae34d1a91c4b" name="ModifyPNR_Add SSR to both segment">
+  <con:testStep id="55c9e335-17fd-4c84-a260-ae34d1a91c4b" name="ModifyPNR_Add SSR to both segment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request name="ModifyPNR_Add SSR to both segment" id="291e0f31-a000-4516-a88f-1b14c2908bcc">
+      <con:request id="291e0f31-a000-4516-a88f-1b14c2908bcc" name="ModifyPNR_Add SSR to both segment">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -399,19 +399,19 @@ declare namespace ns1='http://tempuri.org/';
       </tem:ModifyPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes">
+        <con:assertion id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA">
+        <con:assertion id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>500</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="5a05fb18-2462-494f-86a8-7a2626076d9f" name="Schema Compliance">
+        <con:assertion id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="5a05fb18-2462-494f-86a8-7a2626076d9f" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -429,12 +429,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="dce9b6b0-b62f-4305-a69c-7ab16e636b50" name="Save PNR">
+  <con:testStep id="dce9b6b0-b62f-4305-a69c-7ab16e636b50" name="Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="Save PNR" outgoingWss="" incomingWss="" timeout="0" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="Save PNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -466,8 +466,8 @@ declare namespace ns1='http://tempuri.org/';
       </tem:CreatePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response"/>
-        <con:assertion type="XPath Match" id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match">
+        <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
+        <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -485,7 +485,7 @@ declare namespace ns1='http://tempuri.org/';
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">

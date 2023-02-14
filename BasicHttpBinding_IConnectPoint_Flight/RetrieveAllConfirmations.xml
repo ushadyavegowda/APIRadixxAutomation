@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f818456b-3c6d-4125-874d-47ffd097cbc0" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" name="RetrieveAllConfirmations" bindingOperationName="RetrieveAllConfirmations" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" anonymous="optional" bindingOperationName="RetrieveAllConfirmations" id="f818456b-3c6d-4125-874d-47ffd097cbc0" inputName="" isOneWay="false" name="RetrieveAllConfirmations" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f818456b-3c6d-4125-874d-47ffd097cbc0fileName">RetrieveAllConfirmations</con:setting>
   </con:settings>
   <con:call id="216c8849-9770-417c-97e4-4447712ab51d" name="RetrieveAllConfirmations Request">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint xsi:nil="true"/>
+    <con:endpoint/>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -52,6 +52,6 @@
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" mustUnderstand="NONE" version="200508"/>
   </con:call>
 </con:operation>

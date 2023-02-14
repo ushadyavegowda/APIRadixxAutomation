@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="3602b96c-11ed-4e5b-bf17-61c2fdc92485" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="test" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="3602b96c-11ed-4e5b-bf17-61c2fdc92485" keepSession="false" name="test" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3602b96c-11ed-4e5b-bf17-61c2fdc92485fileName">test</con:setting>
   </con:settings>
-  <con:testStep type="request" id="c6492de0-0dd0-49e6-b3d1-1b052627e6c8" name="SOAP Request">
+  <con:testStep id="c6492de0-0dd0-49e6-b3d1-1b052627e6c8" name="SOAP Request" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Seating</con:interface>
       <con:operation>SeatAssignment</con:operation>
-      <con:request name="SOAP Request" id="10c0f5d6-b35a-4fad-8da6-a16bb76f509e">
+      <con:request id="10c0f5d6-b35a-4fad-8da6-a16bb76f509e" name="SOAP Request">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -54,19 +54,19 @@
       </tem:SeatAssignment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="d6a6a518-8664-44bf-96c1-70ea6a814ad0" name="Valid HTTP Status Codes">
+        <con:assertion id="d6a6a518-8664-44bf-96c1-70ea6a814ad0" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="67e09dfb-fa5d-4e66-94b7-1b7171ba8cb9" name="Response SLA">
+        <con:assertion id="67e09dfb-fa5d-4e66-94b7-1b7171ba8cb9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="e8aaff78-5072-405e-b466-bc2435d4b48c" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="1e731d05-e0e2-4b77-a9a0-84610d308372" name="Schema Compliance">
+        <con:assertion id="e8aaff78-5072-405e-b466-bc2435d4b48c" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="1e731d05-e0e2-4b77-a9a0-84610d308372" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>

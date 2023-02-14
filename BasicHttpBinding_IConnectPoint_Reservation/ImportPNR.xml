@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="56d2957b-8719-4463-ac4a-52703e4572d4" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" name="ImportPNR" bindingOperationName="ImportPNR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" anonymous="optional" bindingOperationName="ImportPNR" id="56d2957b-8719-4463-ac4a-52703e4572d4" inputName="" isOneWay="false" name="ImportPNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="56d2957b-8719-4463-ac4a-52703e4572d4fileName">ImportPNR</con:setting>
   </con:settings>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="75188f55-f076-43f5-b391-3dd60d793fdc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test6_ModifyBooking OW pnr to add passengers" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="75188f55-f076-43f5-b391-3dd60d793fdc" keepSession="false" name="Test6_ModifyBooking OW pnr to add passengers" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="75188f55-f076-43f5-b391-3dd60d793fdcfileName">Test6_ModifyBooking-OW-pnr-to-add-passengers</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="Run_Test1 Create OW booking without SSR and seat" id="73630f1c-d175-4cc8-af37-8bb8ab60915e">
+  <con:testStep id="73630f1c-d175-4cc8-af37-8bb8ab60915e" name="Run_Test1 Create OW booking without SSR and seat" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
@@ -45,7 +45,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="InputValues" id="cf7d17e4-5242-4afe-b514-713534b2ecf5">
+  <con:testStep id="cf7d17e4-5242-4afe-b514-713534b2ecf5" name="InputValues" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -59,12 +59,12 @@ testRunner.testCase.setPropertyValue("p_DOB", "1974-10-23");
 testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="d8fec1ad-4405-4e09-9547-eedafc6cb560" name="RetrivePNR">
+  <con:testStep id="d8fec1ad-4405-4e09-9547-eedafc6cb560" name="RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request name="RetrivePNR" id="4d262156-e890-40d5-96f3-6bb863343380">
+      <con:request id="4d262156-e890-40d5-96f3-6bb863343380" name="RetrivePNR">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -96,19 +96,19 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
       </tem:RetrievePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="f856b47b-72c9-4d02-8372-1c10ce969f0b" name="Valid HTTP Status Codes">
+        <con:assertion id="f856b47b-72c9-4d02-8372-1c10ce969f0b" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="5bcdc6a3-3aae-4041-90e1-830e8573f9e9" name="Response SLA">
+        <con:assertion id="5bcdc6a3-3aae-4041-90e1-830e8573f9e9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>2000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="0ca8f7e8-31f3-4e86-b115-80c103c4570d" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="69271050-612d-429f-a7b2-79cd1e38e550" name="Schema Compliance">
+        <con:assertion id="0ca8f7e8-31f3-4e86-b115-80c103c4570d" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="69271050-612d-429f-a7b2-79cd1e38e550" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -126,12 +126,12 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="510bd892-a036-4ad2-96e2-7fe5a826b340" name="ModifyPNR_Add Pax">
+  <con:testStep id="510bd892-a036-4ad2-96e2-7fe5a826b340" name="ModifyPNR_Add Pax" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request name="ModifyPNR_Add Pax" id="291e0f31-a000-4516-a88f-1b14c2908bcc">
+      <con:request id="291e0f31-a000-4516-a88f-1b14c2908bcc" name="ModifyPNR_Add Pax">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -269,19 +269,19 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
       </tem:ModifyPNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes">
+        <con:assertion id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA">
+        <con:assertion id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>3000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="5a05fb18-2462-494f-86a8-7a2626076d9f" name="Schema Compliance">
+        <con:assertion id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="5a05fb18-2462-494f-86a8-7a2626076d9f" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -299,12 +299,12 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="107c4804-743d-474c-8fba-f5c3acebf974" name="Save PNR">
+  <con:testStep id="107c4804-743d-474c-8fba-f5c3acebf974" name="Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="Save PNR" outgoingWss="" incomingWss="" timeout="0" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="Save PNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -336,8 +336,8 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
       </tem:CreatePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response"/>
-        <con:assertion type="XPath Match" id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match">
+        <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
+        <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -355,7 +355,7 @@ declare namespace ns1='http://tempuri.org/';
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8493c21b-095b-44d6-aa3c-e143256105d3" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test13_modify RT PNR multiple passengers - add seats for multiple passengers" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="false" failTestCaseOnErrors="true" id="8493c21b-095b-44d6-aa3c-e143256105d3" keepSession="false" maxResults="0" name="Test13_modify RT PNR multiple passengers - add seats for multiple passengers" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8493c21b-095b-44d6-aa3c-e143256105d3fileName">Test13_modify-RT-PNR-multiple-passengers---add-seats-for-multiple-passengers</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1 Create RT pnr with multiple passengers" id="8a587af4-05a5-4baa-9e29-b58328685b56">
+  <con:testStep id="8a587af4-05a5-4baa-9e29-b58328685b56" name="1 Create RT pnr with multiple passengers" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>3b03766b-48eb-45c4-8b15-c8e2410a9268</con:targetTestCase>
@@ -19,7 +19,7 @@
         </con:property>
         <con:property>
           <con:name>LFID_ReturnSeg</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
@@ -27,19 +27,19 @@
         </con:property>
         <con:property>
           <con:name>fareid_ADT</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>fareid_CHD</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>fareid_ADT_returnSeg</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>fareid_CHD_returnSeg</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -55,7 +55,7 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Run [RetrieveSecurityToken]" id="2584f21b-a559-4c28-9181-3088760588e5">
+  <con:testStep id="2584f21b-a559-4c28-9181-3088760588e5" name="Run [RetrieveSecurityToken]" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>d61b0359-0047-44f9-ace3-0959b9cd799b</con:targetTestCase>
@@ -64,12 +64,12 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4e92025b-9618-48a3-a838-3ad497e92c00" name="2 RetrievePNR">
+  <con:testStep id="4e92025b-9618-48a3-a838-3ad497e92c00" name="2 RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request name="2 RetrievePNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2f8df430-f174-4a2d-85f5-3d44b98555f2">
+      <con:request id="2f8df430-f174-4a2d-85f5-3d44b98555f2" incomingWss="" name="2 RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -101,14 +101,14 @@
       </tem:RetrievePNR>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="8daeb2c3-129a-462a-a797-da2503d82d5a" name="Valid HTTP Status Codes">
+        <con:assertion id="8daeb2c3-129a-462a-a797-da2503d82d5a" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="a11dd47b-9984-420a-a903-e2fb2ec1b097" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="9b7cb1d4-ffb1-4cea-a57d-5b1fd7bbb209" name="Schema Compliance">
+        <con:assertion id="a11dd47b-9984-420a-a903-e2fb2ec1b097" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="9b7cb1d4-ffb1-4cea-a57d-5b1fd7bbb209" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -116,7 +116,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
@@ -126,10 +126,10 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer SeatInfo" id="acf7a4c9-a66f-43ae-ba98-2947686bcd0a">
+  <con:testStep id="acf7a4c9-a66f-43ae-ba98-2947686bcd0a" name="Transfer SeatInfo" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -141,7 +141,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -153,7 +153,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PhysicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -164,7 +164,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>CustomerKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -175,7 +175,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -186,7 +186,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -197,7 +197,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey_CHD</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -208,7 +208,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey_CHD</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -219,7 +219,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey_INF</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -230,7 +230,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey_INF</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -241,7 +241,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -252,7 +252,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicalFlightKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -263,7 +263,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PhysicalFlightKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -274,7 +274,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>CustomerKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -285,7 +285,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -296,7 +296,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -307,7 +307,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey_returnSeg_CHD</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -318,7 +318,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey_returnSeg_CHD</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -329,7 +329,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>AirLinePersonKey_returnSeg_INF</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -340,7 +340,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>SeatAssignmentKey_returnSeg_INF</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -351,7 +351,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LFID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -362,7 +362,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
+      <con:transfers disabled="false" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" useXQuery="false">
         <con:name>LFID_returnSeg</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -371,10 +371,10 @@ declare namespace ns1='http://tempuri.org/';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[a:Origin =  '${#TestSuite#Destination}']/a:LogicalFlightID[1]</con:sourcePath>
         <con:targetType>LFID_returnSeg</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath xsi:nil="true"/>
+        <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Depdate_onward</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -385,7 +385,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
+      <con:transfers disabled="false" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" useXQuery="false">
         <con:name>Depdate_return</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -394,10 +394,10 @@ declare namespace ns1='http://tempuri.org/';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[ a:Origin = '${#TestSuite#Destination}']/a:DepartureDate[1]</con:sourcePath>
         <con:targetType>Depdate_return</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath xsi:nil="true"/>
+        <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Currency</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2 RetrievePNR</con:sourceStep>
@@ -410,17 +410,17 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1b2f5449-91f7-4abd-a93a-467e81603480" name="RetrieveSeatAvailabilityList_onward">
+  <con:testStep id="1b2f5449-91f7-4abd-a93a-467e81603480" name="RetrieveSeatAvailabilityList_onward" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Flight</con:interface>
       <con:operation>RetrieveSeatAvailabilityList</con:operation>
-      <con:request name="RetrieveSeatAvailabilityList_onward" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8fb6a77f-4955-4275-939e-baee8dd36d7c">
+      <con:request id="8fb6a77f-4955-4275-939e-baee8dd36d7c" incomingWss="" name="RetrieveSeatAvailabilityList_onward" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint/>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">
    <soapenv:Header/>
    <soapenv:Body>
@@ -451,19 +451,19 @@ declare namespace ns1='http://tempuri.org/';
       </tem:RetrieveSeatAvailabilityList>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="24fbe4f0-3841-4afa-9655-6de15661f4f4" name="Valid HTTP Status Codes">
+        <con:assertion id="24fbe4f0-3841-4afa-9655-6de15661f4f4" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="babd4d08-9cb7-4c86-b933-9a6fa941c6e9" name="Response SLA">
+        <con:assertion id="babd4d08-9cb7-4c86-b933-9a6fa941c6e9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>3000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="602483d6-9db7-49fb-8c28-03beb76bc3b0" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="7ca0fae0-342f-4dd3-87a3-79ea487b55b6" name="Schema Compliance">
+        <con:assertion id="602483d6-9db7-49fb-8c28-03beb76bc3b0" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="7ca0fae0-342f-4dd3-87a3-79ea487b55b6" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -471,22 +471,22 @@ declare namespace ns1='http://tempuri.org/';
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="baa863da-b1c2-40da-9df6-31cccdb621f4" name="RetrieveSeatAvailabilityList_return">
+  <con:testStep id="baa863da-b1c2-40da-9df6-31cccdb621f4" name="RetrieveSeatAvailabilityList_return" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Flight</con:interface>
       <con:operation>RetrieveSeatAvailabilityList</con:operation>
-      <con:request name="RetrieveSeatAvailabilityList_return" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8fb6a77f-4955-4275-939e-baee8dd36d7c">
+      <con:request id="8fb6a77f-4955-4275-939e-baee8dd36d7c" incomingWss="" name="RetrieveSeatAvailabilityList_return" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint/>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">
    <soapenv:Header/>
    <soapenv:Body>
@@ -517,19 +517,19 @@ declare namespace ns1='http://tempuri.org/';
       </tem:RetrieveSeatAvailabilityList>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="24fbe4f0-3841-4afa-9655-6de15661f4f4" name="Valid HTTP Status Codes">
+        <con:assertion id="24fbe4f0-3841-4afa-9655-6de15661f4f4" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="babd4d08-9cb7-4c86-b933-9a6fa941c6e9" name="Response SLA">
+        <con:assertion id="babd4d08-9cb7-4c86-b933-9a6fa941c6e9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>3000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="602483d6-9db7-49fb-8c28-03beb76bc3b0" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="7ca0fae0-342f-4dd3-87a3-79ea487b55b6" name="Schema Compliance">
+        <con:assertion id="602483d6-9db7-49fb-8c28-03beb76bc3b0" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="7ca0fae0-342f-4dd3-87a3-79ea487b55b6" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -537,12 +537,12 @@ declare namespace ns1='http://tempuri.org/';
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="extract_Seatnumber_onward" id="5d717776-f2e6-440f-9562-84897eb505e2">
+  <con:testStep id="5d717776-f2e6-440f-9562-84897eb505e2" name="extract_Seatnumber_onward" type="groovy">
     <con:settings/>
     <con:config>
       <script>// script to get seats and seat charges for 1 ADT
@@ -643,7 +643,7 @@ testRunner.testCase.testSuite.setPropertyValue("RowSeat_CHD", RowSeat_CHD);
 testRunner.testCase.testSuite.setPropertyValue("RowNumber_CHD", RowNumber_CHD);</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="extract_Seatnumber_return" id="bff60a78-7692-49c4-94e4-d7cf35cc5482">
+  <con:testStep id="bff60a78-7692-49c4-94e4-d7cf35cc5482" name="extract_Seatnumber_return" type="groovy">
     <con:settings/>
     <con:config>
       <script>// script to get seats and seat charges for 1 ADT
@@ -760,23 +760,23 @@ testRunner.testCase.testSuite.setPropertyValue("RowSeat_returnSeg_CHD", RowSeat_
 testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_CHD", RowNumber_returnSeg_CHD);</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="b4b0b46e-4644-41e6-8ba5-544dc4bf14f9">
+  <con:testStep id="b4b0b46e-4644-41e6-8ba5-544dc4bf14f9" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="0da1e3e7-84a7-4d08-84b8-1a9eb5b62f3f" name="3 - SeatAssignment">
+  <con:testStep id="0da1e3e7-84a7-4d08-84b8-1a9eb5b62f3f" name="3 - SeatAssignment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Seating</con:interface>
       <con:operation>SeatAssignment</con:operation>
-      <con:request name="3 - SeatAssignment" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="708c8dd8-5d5d-453b-9f6a-36f5155c58e1">
+      <con:request id="708c8dd8-5d5d-453b-9f6a-36f5155c58e1" incomingWss="" name="3 - SeatAssignment" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint/>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request">
    <soapenv:Header/>
    <soapenv:Body>
@@ -878,17 +878,17 @@ testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_CHD", RowNum
       </tem:SeatAssignment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="a628d4ba-eae8-40ce-bc80-434899f97ab6" name="Valid HTTP Status Codes">
+        <con:assertion id="a628d4ba-eae8-40ce-bc80-434899f97ab6" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="08c79bab-3f16-4c52-ad90-48efbd8f68a4" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="7ab61fc5-61ee-427c-905c-5049775d81d9" name="Schema Compliance">
+        <con:assertion id="08c79bab-3f16-4c52-ad90-48efbd8f68a4" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="7ab61fc5-61ee-427c-905c-5049775d81d9" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
-        <con:assertion type="XPath Match" id="11ca4d6e-0899-4880-8e97-e5a20a950bc9" name="Match content of [b:ExceptionLevel]">
+        <con:assertion id="11ca4d6e-0899-4880-8e97-e5a20a950bc9" name="Match content of [b:ExceptionLevel]" type="XPath Match">
           <con:configuration>
             <path>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
@@ -905,7 +905,7 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Seating/SeatAssignment"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Seating/SeatAssignment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
@@ -915,12 +915,12 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="a124969f-27c3-445d-b598-b209ab3f9641" name="4 CreatePNR (Save)">
+  <con:testStep id="a124969f-27c3-445d-b598-b209ab3f9641" name="4 CreatePNR (Save)" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="4 CreatePNR (Save)" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="139a047a-77cb-4608-8843-c7988755af6e">
+      <con:request id="139a047a-77cb-4608-8843-c7988755af6e" incomingWss="" name="4 CreatePNR (Save)" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -952,14 +952,14 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:CreatePNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="33be8d64-181a-48d3-9547-3f5ab5b9bea7" name="Valid HTTP Status Codes">
+        <con:assertion id="33be8d64-181a-48d3-9547-3f5ab5b9bea7" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="fa002e6d-f11e-4aa1-8ec9-d595672964c3" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="ec4ea26c-a029-4df2-84b8-95cb0ec39306" name="Schema Compliance">
+        <con:assertion id="fa002e6d-f11e-4aa1-8ec9-d595672964c3" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="ec4ea26c-a029-4df2-84b8-95cb0ec39306" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -967,7 +967,7 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
@@ -984,7 +984,7 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1000,7 +1000,7 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>LFID_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>
@@ -1016,95 +1016,95 @@ declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>ReservationKey</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">&lt;a:Key i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"/></con:value>
+      <con:value>&lt;a:Key i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"/></con:value>
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightKey</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>CustomerKey</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ReservationKey_returnSeg</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">&lt;a:Key i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"/></con:value>
+      <con:value>&lt;a:Key i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"/></con:value>
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightKey_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>CustomerKey_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey_returnSeg</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey_INF</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey_INF</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey_CHD</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey_CHD</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey_returnSeg_CHD</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey_returnSeg_CHD</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>AirLinePersonKey_returnSeg_INF</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey_returnSeg_INF</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Depdate_onward</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Depdate_return</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Currency</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AED</con:value>
+      <con:value>AED</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

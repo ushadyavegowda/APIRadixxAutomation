@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="97c0f542-d03b-4588-9d42-f8703ea6258a" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/RemoveVoucherFromReservationInSession" name="RemoveVoucherFromReservationInSession" bindingOperationName="RemoveVoucherFromReservationInSession" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/RemoveVoucherFromReservationInSession" anonymous="optional" bindingOperationName="RemoveVoucherFromReservationInSession" id="97c0f542-d03b-4588-9d42-f8703ea6258a" inputName="" isOneWay="false" name="RemoveVoucherFromReservationInSession" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="97c0f542-d03b-4588-9d42-f8703ea6258afileName">RemoveVoucherFromReservationInSession</con:setting>
   </con:settings>

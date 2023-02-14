@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="5cc93a17-0bb9-4f79-afa7-1e0e40f0bf18" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/AddTaxes" name="AddTaxes" bindingOperationName="AddTaxes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/AddTaxes" anonymous="optional" bindingOperationName="AddTaxes" id="5cc93a17-0bb9-4f79-afa7-1e0e40f0bf18" inputName="" isOneWay="false" name="AddTaxes" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5cc93a17-0bb9-4f79-afa7-1e0e40f0bf18fileName">AddTaxes</con:setting>
   </con:settings>

@@ -1,7 +1,7 @@
 Prequisite_Step.xml
 0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
 0002_Create-OW--pnr-with-seat-and-ssr.xml
-Test3_Create-RT-PNR-without-seat-and-SSR.xml
+0003_Create-RT-PNR-without-seat-and-SSR.xml
 Test4_Create-RT-PNR-with-seat-and-SSR.xml
 Test5_Modify-OW-pnr-to-another-date.xml
 Test6_ModifyBooking-OW-pnr-to-add-passengers.xml

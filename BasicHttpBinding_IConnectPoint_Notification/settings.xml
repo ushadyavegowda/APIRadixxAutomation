@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="578134b8-0c68-4d3b-a8a4-2a0cd5c81e58" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_Notification" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Notification" soapVersion="1_1" anonymous="optional" definition="https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Notification.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="578134b8-0c68-4d3b-a8a4-2a0cd5c81e58fileName">BasicHttpBinding_IConnectPoint_Notification</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Notification.svc?wsdl">
+    <con:part>
+      <con:url>https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Notification.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Notification" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Response"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Notification_SendNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotification"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Notification_SendNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotificationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Notification">
+    <wsdl:operation name="SendNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Notification/SendNotification" message="tns:IConnectPoint_Notification_SendNotification_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Notification/SendNotificationResponse" message="tns:IConnectPoint_Notification_SendNotification_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Notification" type="tns:IConnectPoint_Notification">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SendNotification">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Notification/SendNotification" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Notification">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Notification" binding="tns:BasicHttpBinding_IConnectPoint_Notification">
+      <soap:address location="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Response"/>
+  <xs:element name="SendNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sendNotificationRequest" nillable="true" type="q1:SendNotification" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendNotificationResult" nillable="true" type="q2:SendNotification" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="SendNotification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:SendNotification.ActionTypes"/>
+          <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="VoucherRequest" nillable="true" type="tns:Voucher"/>
+          <xs:element name="ReservationInfo" nillable="true" type="q1:ReservationInfo"/>
+          <xs:element minOccurs="0" name="ProfileRequest" nillable="true" type="tns:Profile"/>
+          <xs:element minOccurs="0" name="ReceiptRequest" nillable="true" type="tns:Receipt"/>
+          <xs:element minOccurs="0" name="BookingChangeNoticeRequest" nillable="true" type="tns:BookingChangeNotice"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendNotification" nillable="true" type="tns:SendNotification"/>
+  <xs:simpleType name="SendNotification.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SendVoucherViaEmail"/>
+      <xs:enumeration value="SendReceiptViaEmail"/>
+      <xs:enumeration value="SendProfileViaEmail"/>
+      <xs:enumeration value="SendReceiptToSpecifiedEmailAddress"/>
+      <xs:enumeration value="SendBookingChangeNotice"/>
+      <xs:enumeration value="SendItineraryViaEmail"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SendNotification.ActionTypes" nillable="true" type="tns:SendNotification.ActionTypes"/>
+  <xs:complexType name="Voucher">
+    <xs:sequence>
+      <xs:element name="VoucherNumberFull" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Voucher" nillable="true" type="tns:Voucher"/>
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element name="ProfileID" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile"/>
+  <xs:complexType name="Receipt">
+    <xs:sequence>
+      <xs:element name="EmailAddresses" nillable="true" type="tns:ArrayOfEmailAddress"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Receipt" nillable="true" type="tns:Receipt"/>
+  <xs:complexType name="ArrayOfEmailAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailAddress" nillable="true" type="tns:EmailAddress"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmailAddress" nillable="true" type="tns:ArrayOfEmailAddress"/>
+  <xs:complexType name="EmailAddress">
+    <xs:sequence>
+      <xs:element name="Email" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailAddress" nillable="true" type="tns:EmailAddress"/>
+  <xs:complexType name="BookingChangeNotice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryType" type="q2:Enumerations.Channels" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element minOccurs="0" name="OverrideEmailAddresses" nillable="true" type="tns:Receipt"/>
+      <xs:element minOccurs="0" name="OverrideSmsNumbers" nillable="true" type="tns:ReceiptSms"/>
+      <xs:element minOccurs="0" name="BookingActionType" type="q3:Enumerations.BookingActionType" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element minOccurs="0" name="BookingSourceType" type="q4:Enumerations.BookingSourceType" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BookingChangeNotice" nillable="true" type="tns:BookingChangeNotice"/>
+  <xs:complexType name="ReceiptSms">
+    <xs:sequence>
+      <xs:element name="SmsNumbers" nillable="true" type="tns:ArrayOfSmsNumbers"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptSms" nillable="true" type="tns:ReceiptSms"/>
+  <xs:complexType name="ArrayOfSmsNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SmsNumbers" nillable="true" type="tns:SmsNumbers"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSmsNumbers" nillable="true" type="tns:ArrayOfSmsNumbers"/>
+  <xs:complexType name="SmsNumbers">
+    <xs:sequence>
+      <xs:element name="Sms" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SmsNumbers" nillable="true" type="tns:SmsNumbers"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:complexType name="ReservationInfo">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservationInfo" nillable="true" type="tns:ReservationInfo"/>
+  <xs:simpleType name="Enumerations.Channels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Email"/>
+      <xs:enumeration value="SMS"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.Channels" nillable="true" type="tns:Enumerations.Channels"/>
+  <xs:simpleType name="Enumerations.BookingActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CreatePnrBooking"/>
+      <xs:enumeration value="ModifyAddPax"/>
+      <xs:enumeration value="ModifyRemovePax"/>
+      <xs:enumeration value="ModifyAddSsr"/>
+      <xs:enumeration value="ModifyRemoveSsr"/>
+      <xs:enumeration value="ModifyChangeDate"/>
+      <xs:enumeration value="ModifyOutboundOrInbound"/>
+      <xs:enumeration value="CancelBooking"/>
+      <xs:enumeration value="PreDeparture"/>
+      <xs:enumeration value="FlightDelays"/>
+      <xs:enumeration value="OutstandingFareReminders"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.BookingActionType" nillable="true" type="tns:Enumerations.BookingActionType"/>
+  <xs:simpleType name="Enumerations.BookingSourceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ConsumerWebsite"/>
+      <xs:enumeration value="TaWebsite"/>
+      <xs:enumeration value="Mobile"/>
+      <xs:enumeration value="Enterprise"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.BookingSourceType" nillable="true" type="tns:Enumerations.BookingSourceType"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Notification.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:complexType name="SendNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="NotificationSent" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendNotification" nillable="true" type="tns:SendNotification"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Notification.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Notification.svc</con:endpoint>
+  </con:endpoints>
+</con:interface>

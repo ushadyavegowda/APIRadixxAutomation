@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="3d6707a2-3d1a-4d97-ba83-e3ec0a51aae5" isOneWay="false" action="http://tempuri.org/IConnectPoint_Seating/TrainSeatAssignment" name="TrainSeatAssignment" bindingOperationName="TrainSeatAssignment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3d6707a2-3d1a-4d97-ba83-e3ec0a51aae5fileName">TrainSeatAssignment</con:setting>
+  </con:settings>
+  <con:call id="ad99ec3a-baa4-498a-88d2-518303a0d0f5" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:TrainSeatAssignment>\r
+         <!--Optional:-->\r
+         <tem:TrainSeatAssignmentRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>?</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+            <rad1:TrainSeatAssignmentDetails>\r
+               <!--Zero or more repetitions:-->\r
+               <rad1:TrainSeatAssignmentDetail>\r
+                  <!--Optional:-->\r
+                  <rad1:LogicalFlightID>?</rad1:LogicalFlightID>\r
+                  <!--Optional:-->\r
+                  <rad1:PersonOrgID>?</rad1:PersonOrgID>\r
+                  <!--Optional:-->\r
+                  <rad1:PhysicalFlightID>?</rad1:PhysicalFlightID>\r
+                  <!--Optional:-->\r
+                  <rad1:RailCarID>?</rad1:RailCarID>\r
+                  <!--Optional:-->\r
+                  <rad1:RecordNumber>?</rad1:RecordNumber>\r
+                  <!--Optional:-->\r
+                  <rad1:RowNumber>?</rad1:RowNumber>\r
+                  <!--Optional:-->\r
+                  <rad1:Seat>?</rad1:Seat>\r
+               </rad1:TrainSeatAssignmentDetail>\r
+            </rad1:TrainSeatAssignmentDetails>\r
+         </tem:TrainSeatAssignmentRequest>\r
+      </tem:TrainSeatAssignment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Seating/TrainSeatAssignment"/>
+    <con:environmentSpec>
+      <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

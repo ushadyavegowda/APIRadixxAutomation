@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="17007069-adbe-4c1a-b3d9-2e311397bf93" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutes" name="RetrieveAirportRoutes" bindingOperationName="RetrieveAirportRoutes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="17007069-adbe-4c1a-b3d9-2e311397bf93fileName">RetrieveAirportRoutes</con:setting>
+  </con:settings>
+  <con:call id="8ebb50f6-d096-42d6-a957-16644a76d065" name="RetrieveAirportRoutes Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveAirportRoutes>\r
+         <!--Optional:-->\r
+         <tem:RetrieveAirportRoutesRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:LanguageCode>?</rad1:LanguageCode>\r
+         </tem:RetrieveAirportRoutesRequest>\r
+      </tem:RetrieveAirportRoutes>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutes"/>
+  </con:call>
+</con:operation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="26183fef-a4cb-4302-8e70-66fd4cb85dcd" isOneWay="false" action="http://tempuri.org/IConnectPoint_CheckIn/CheckIn" name="CheckIn" bindingOperationName="CheckIn" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="26183fef-a4cb-4302-8e70-66fd4cb85dcdfileName">CheckIn</con:setting>
+  </con:settings>
+  <con:call id="00b692e5-7b28-4ec8-828b-947cdc06fa8c" name="CheckIn Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.CheckIn.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.CheckIn.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:CheckIn>\r
+         <!--Optional:-->\r
+         <tem:CheckInRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>?</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+            <rad1:CheckInDetails>\r
+               <!--Zero or more repetitions:-->\r
+               <rad1:CheckInDetail>\r
+                  <rad1:ReservationKey>?</rad1:ReservationKey>\r
+                  <rad1:LogicalFlightKey>?</rad1:LogicalFlightKey>\r
+                  <rad1:PhysicalFlightKey>?</rad1:PhysicalFlightKey>\r
+                  <rad1:CustomerKey>?</rad1:CustomerKey>\r
+                  <rad1:AirLinePersonKey>?</rad1:AirLinePersonKey>\r
+                  <rad1:SeatAssignmentKey>?</rad1:SeatAssignmentKey>\r
+               </rad1:CheckInDetail>\r
+            </rad1:CheckInDetails>\r
+         </tem:CheckInRequest>\r
+      </tem:CheckIn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_CheckIn/CheckIn"/>
+  </con:call>
+</con:operation>

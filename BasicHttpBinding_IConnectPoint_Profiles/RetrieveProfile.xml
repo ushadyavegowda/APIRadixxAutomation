@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="45141f05-3c67-41fa-aa7d-2d4307bcc905" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile" name="RetrieveProfile" bindingOperationName="RetrieveProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="45141f05-3c67-41fa-aa7d-2d4307bcc905fileName">RetrieveProfile</con:setting>
+  </con:settings>
+  <con:call id="34a24b3b-debb-43ea-ac35-89e9af28f6ca" name="RetrieveProfile Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Profiles.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveProfile>\r
+         <!--Optional:-->\r
+         <tem:RetrieveProfileRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:PasswordInfo>\r
+               <rad1:Password>?</rad1:Password>\r
+            </rad1:PasswordInfo>\r
+            <rad1:EmailAddressInfo>\r
+               <rad1:EmailAddress>?</rad1:EmailAddress>\r
+            </rad1:EmailAddressInfo>\r
+            <rad1:UserNameInfo>\r
+               <rad1:UserName>?</rad1:UserName>\r
+            </rad1:UserNameInfo>\r
+            <rad1:StaffIDInfo>\r
+               <rad1:StaffID>?</rad1:StaffID>\r
+            </rad1:StaffIDInfo>\r
+         </tem:RetrieveProfileRequest>\r
+      </tem:RetrieveProfile>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile"/>
+  </con:call>
+</con:operation>

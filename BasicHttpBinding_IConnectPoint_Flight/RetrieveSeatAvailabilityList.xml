@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="153eda40-717d-4dda-9d0c-0f92be089876" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList" name="RetrieveSeatAvailabilityList" bindingOperationName="RetrieveSeatAvailabilityList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="153eda40-717d-4dda-9d0c-0f92be089876fileName">RetrieveSeatAvailabilityList</con:setting>
+  </con:settings>
+  <con:call id="70f90189-bdb4-4bb5-93e7-c9b358a985cd" name="RetrieveSeatAvailabilityList Request">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveSeatAvailabilityList>
+         <!--Optional:-->
+         <tem:RetrieveSeatAvailabilityListRequest>
+            <rad:SecurityGUID>?</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:LogicalFlightID>?</rad1:LogicalFlightID>
+            <rad1:DepartureDate>?</rad1:DepartureDate>
+            <rad1:CabinName>?</rad1:CabinName>
+            <rad1:Currency>?</rad1:Currency>
+            <rad1:UTCOffset>?</rad1:UTCOffset>
+            <!--Optional:-->
+            <rad1:FareBasisCode>?</rad1:FareBasisCode>
+            <!--Optional:-->
+            <rad1:ExcludePricing>?</rad1:ExcludePricing>
+         </tem:RetrieveSeatAvailabilityListRequest>
+      </tem:RetrieveSeatAvailabilityList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>

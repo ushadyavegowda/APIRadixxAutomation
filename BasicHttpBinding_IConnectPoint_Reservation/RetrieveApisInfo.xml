@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="f1341a67-c3c6-4ea7-a693-182a2b02b27b" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/RetrieveApisInfo" name="RetrieveApisInfo" bindingOperationName="RetrieveApisInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f1341a67-c3c6-4ea7-a693-182a2b02b27bfileName">RetrieveApisInfo</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

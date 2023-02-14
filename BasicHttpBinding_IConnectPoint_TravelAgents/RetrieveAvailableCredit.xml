@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="5baad237-18cb-4c10-a387-62a185721e64" isOneWay="false" action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableCredit" name="RetrieveAvailableCredit" bindingOperationName="RetrieveAvailableCredit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5baad237-18cb-4c10-a387-62a185721e64fileName">RetrieveAvailableCredit</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

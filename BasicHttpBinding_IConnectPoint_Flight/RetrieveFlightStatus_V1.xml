@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="dafda11b-01c2-433c-8a96-1f02db3b232f" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" name="RetrieveFlightStatus_V1" bindingOperationName="RetrieveFlightStatus_V1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dafda11b-01c2-433c-8a96-1f02db3b232ffileName">RetrieveFlightStatus_V1</con:setting>
+  </con:settings>
+  <con:call id="9210ac00-d8b7-4425-855f-432e000ee044" name="RetrieveFlightStatus_V1 Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveFlightStatus_V1>\r
+         <!--Optional:-->\r
+         <tem:RetrieveFlightStatusRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:SearchType>?</rad1:SearchType>\r
+            <!--Optional:-->\r
+            <rad1:Origin>?</rad1:Origin>\r
+            <!--Optional:-->\r
+            <rad1:Destination>?</rad1:Destination>\r
+            <!--Optional:-->\r
+            <rad1:FlightNumber>?</rad1:FlightNumber>\r
+            <rad1:DepartureDate>?</rad1:DepartureDate>\r
+         </tem:RetrieveFlightStatusRequest>\r
+      </tem:RetrieveFlightStatus_V1>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1"/>
+  </con:call>
+</con:operation>

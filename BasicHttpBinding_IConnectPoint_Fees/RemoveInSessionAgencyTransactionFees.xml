@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="b91e500c-0f43-4604-88bd-fbe2c85fcac1" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFees" name="RemoveInSessionAgencyTransactionFees" bindingOperationName="RemoveInSessionAgencyTransactionFees" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b91e500c-0f43-4604-88bd-fbe2c85fcac1fileName">RemoveInSessionAgencyTransactionFees</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="34e9ddf8-42f4-4bc9-80c3-cba9a1164856" isOneWay="false" action="http://tempuri.org/IConnectPoint_Security/GetGroupDataByUserid" name="GetGroupDataByUserid" bindingOperationName="GetGroupDataByUserid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="34e9ddf8-42f4-4bc9-80c3-cba9a1164856fileName">GetGroupDataByUserid</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

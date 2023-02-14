@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="f458dd86-3547-469e-b64d-b0aab1f53521" isOneWay="false" action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers" name="BoardOffLoadPassengers" bindingOperationName="BoardOffLoadPassengers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f458dd86-3547-469e-b64d-b0aab1f53521fileName">BoardOffLoadPassengers</con:setting>
+  </con:settings>
+  <con:call id="affc1857-9159-476e-8459-3827458fb591" name="BoardOffLoadPassengers Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.CheckIn.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.CheckIn.Request" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:BoardOffLoadPassengers>\r
+         <!--Optional:-->\r
+         <tem:BoardOffLoadPassengersRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>?</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+            <rad1:Origin>?</rad1:Origin>\r
+            <rad1:FlightNumber>?</rad1:FlightNumber>\r
+            <rad1:DepartureDate>?</rad1:DepartureDate>\r
+            <rad1:BoardingPassNumbers>\r
+               <!--Zero or more repetitions:-->\r
+               <arr:int>?</arr:int>\r
+            </rad1:BoardingPassNumbers>\r
+         </tem:BoardOffLoadPassengersRequest>\r
+      </tem:BoardOffLoadPassengers>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_CheckIn/BoardOffLoadPassengers"/>
+  </con:call>
+</con:operation>

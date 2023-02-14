@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" created="3.8.0" activeEnvironment="QAEnvi" name="CPTestAutomation" resourceRoot="${projectDir}" updated="3.43.1" encryptionMode="Not encrypted" projectVersion="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>LogonID</con:name>
+      <con:value>CP_1D_20Q4</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Password</con:name>
+      <con:value>R@d1xx!</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CarrierCode</con:name>
+      <con:value>1D</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TA_UserName</con:name>
+      <con:value>radixxta</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TA_password</con:name>
+      <con:value>R@dixxRe5!</con:value>
+    </con:property>
+    <con:property>
+      <con:name>URL</con:name>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="ff76c282-7c43-48ac-88d6-a00107f279b7" name="QAEnvi" index="0">
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Reservation">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Security">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Security.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Pricing">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Utilities">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Utilities.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Fees">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Fees.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Fulfillment">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Seating">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_TravelAgents">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="BasicHttpBinding_IConnectPoint_Flight">
+      <con:endpoint authProfile="No Authorization" wssType="" wssTimeToLive="" outgoingWss="" incomingWss="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>LogonID</con:name>
+      <con:value>CP_1D_20Q4</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Password</con:name>
+      <con:value>R@d1xx!</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CarrierCode</con:name>
+      <con:value>1D</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TA_UserName</con:name>
+      <con:value>radixxta</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TA_password</con:name>
+      <con:value>Debk!2nd</con:value>
+    </con:property>
+    <con:property>
+      <con:name>URL</con:name>
+      <con:value>https://rdxappint.radixxuat.com/RDX/</con:value>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags/>
+</con:soapui-project>

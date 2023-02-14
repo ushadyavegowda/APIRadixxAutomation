@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="328be1bb-40e6-4f84-96e9-668f2758a564" isOneWay="false" action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating" name="AdvanceSeating" bindingOperationName="AdvanceSeating" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="328be1bb-40e6-4f84-96e9-668f2758a564fileName">AdvanceSeating</con:setting>
+  </con:settings>
+  <con:call id="3da46961-1227-44b0-9fd2-3a07094c607b" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:rad3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AdvanceSeating>\r
+         <!--Optional:-->\r
+         <tem:AdvanceSeatingRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:Passengers>\r
+               <!--Zero or more repetitions:-->\r
+               <rad1:Passenger>\r
+                  <rad1:PersonOrgID>?</rad1:PersonOrgID>\r
+                  <rad1:FirstName>?</rad1:FirstName>\r
+                  <rad1:LastName>?</rad1:LastName>\r
+                  <rad1:MiddleName>?</rad1:MiddleName>\r
+                  <rad1:Age>?</rad1:Age>\r
+                  <rad1:DOB>?</rad1:DOB>\r
+                  <rad1:Gender>?</rad1:Gender>\r
+                  <rad1:Title>?</rad1:Title>\r
+                  <rad1:NationalityLaguageID>?</rad1:NationalityLaguageID>\r
+                  <rad1:RelationType>?</rad1:RelationType>\r
+                  <rad1:WBCID>?</rad1:WBCID>\r
+                  <rad1:PTCID>?</rad1:PTCID>\r
+                  <rad1:PTC>?</rad1:PTC>\r
+                  <rad1:UseInventory>?</rad1:UseInventory>\r
+                  <rad1:Address>\r
+                     <rad2:Address1>?</rad2:Address1>\r
+                     <rad2:Address2>?</rad2:Address2>\r
+                     <rad2:City>?</rad2:City>\r
+                     <rad2:State>?</rad2:State>\r
+                     <rad2:Postal>?</rad2:Postal>\r
+                     <rad2:Country>?</rad2:Country>\r
+                     <rad2:CountryCode>?</rad2:CountryCode>\r
+                     <rad2:AreaCode>?</rad2:AreaCode>\r
+                     <rad2:PhoneNumber>?</rad2:PhoneNumber>\r
+                     <rad2:Display>?</rad2:Display>\r
+                  </rad1:Address>\r
+                  <rad1:Company>?</rad1:Company>\r
+                  <rad1:Comments>?</rad1:Comments>\r
+                  <rad1:Passport>?</rad1:Passport>\r
+                  <rad1:Nationality>?</rad1:Nationality>\r
+                  <rad1:ProfileId>?</rad1:ProfileId>\r
+                  <rad1:ContactInfos>\r
+                     <!--Zero or more repetitions:-->\r
+                     <rad2:ContactInfo>\r
+                        <rad2:ContactID>?</rad2:ContactID>\r
+                        <rad2:PersonOrgID>?</rad2:PersonOrgID>\r
+                        <rad2:ContactField>?</rad2:ContactField>\r
+                        <rad2:ContactType>?</rad2:ContactType>\r
+                        <rad2:Extension>?</rad2:Extension>\r
+                        <rad2:CountryCode>?</rad2:CountryCode>\r
+                        <rad2:AreaCode>?</rad2:AreaCode>\r
+                        <rad2:PhoneNumber>?</rad2:PhoneNumber>\r
+                        <rad2:Display>?</rad2:Display>\r
+                        <rad2:PreferredContactMethod>?</rad2:PreferredContactMethod>\r
+                     </rad2:ContactInfo>\r
+                  </rad1:ContactInfos>\r
+                  <rad1:IsPrimaryTraveler>?</rad1:IsPrimaryTraveler>\r
+                  <rad1:Seats>\r
+                     <!--Zero or more repetitions:-->\r
+                     <rad1:Seat>\r
+                        <rad1:SeatHeldID>?</rad1:SeatHeldID>\r
+                        <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
+                        <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
+                        <rad1:PhysicalFlightID>?</rad1:PhysicalFlightID>\r
+                        <rad1:ActualDepartDate>?</rad1:ActualDepartDate>\r
+                        <rad1:FareClass>?</rad1:FareClass>\r
+                        <rad1:SeatRow>?</rad1:SeatRow>\r
+                        <rad1:Seat>?</rad1:Seat>\r
+                        <rad1:Action>?</rad1:Action>\r
+                        <rad1:RecordNumber>?</rad1:RecordNumber>\r
+                        <rad1:AssociatedSegmentID>?</rad1:AssociatedSegmentID>\r
+                        <rad1:HeldStatus>?</rad1:HeldStatus>\r
+                        <rad1:ActionResult>?</rad1:ActionResult>\r
+                        <rad1:HoldExpiration>?</rad1:HoldExpiration>\r
+                        <rad1:IsDirty>?</rad1:IsDirty>\r
+                     </rad1:Seat>\r
+                  </rad1:Seats>\r
+               </rad1:Passenger>\r
+            </rad1:Passengers>\r
+            <rad1:Exceptions>\r
+               <!--Zero or more repetitions:-->\r
+               <rad3:ExceptionInformation.Exception>\r
+                  <!--Optional:-->\r
+                  <rad3:ExceptionCode>?</rad3:ExceptionCode>\r
+                  <!--Optional:-->\r
+                  <rad3:ExceptionDescription>?</rad3:ExceptionDescription>\r
+                  <!--Optional:-->\r
+                  <rad3:ExceptionSource>?</rad3:ExceptionSource>\r
+                  <!--Optional:-->\r
+                  <rad3:ExceptionLevel>?</rad3:ExceptionLevel>\r
+               </rad3:ExceptionInformation.Exception>\r
+            </rad1:Exceptions>\r
+         </tem:AdvanceSeatingRequest>\r
+      </tem:AdvanceSeating>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating"/>
+    <con:environmentSpec>
+      <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

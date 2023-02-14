@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="650a1d75-9a09-4709-b4a5-699b28b1114a" isOneWay="false" action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote" name="RetrieveInsuranceQuote" bindingOperationName="RetrieveInsuranceQuote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="650a1d75-9a09-4709-b4a5-699b28b1114afileName">RetrieveInsuranceQuote</con:setting>
+  </con:settings>
+  <con:call id="9751cff7-968d-429e-91f1-9e2eb71942ec" name="RetrieveInsuranceQuote Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Insurance.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Insurance.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveInsuranceQuote>\r
+         <!--Optional:-->\r
+         <tem:QuoteRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:InsuranceTransactionInfo>\r
+               <rad1:TransactionID>?</rad1:TransactionID>\r
+               <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
+               <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
+               <rad1:AgreeToTerms>?</rad1:AgreeToTerms>\r
+               <rad1:ProcessPolicyRequestWithHeldQuote>?</rad1:ProcessPolicyRequestWithHeldQuote>\r
+               <rad1:User>?</rad1:User>\r
+            </rad1:InsuranceTransactionInfo>\r
+            <rad1:Trip>\r
+               <rad1:TripType>?</rad1:TripType>\r
+               <rad1:OriginatingIsoCountryCode>?</rad1:OriginatingIsoCountryCode>\r
+               <rad1:OriginatingAirport>?</rad1:OriginatingAirport>\r
+               <rad1:DestinationAirport>?</rad1:DestinationAirport>\r
+               <rad1:TransactionDate>?</rad1:TransactionDate>\r
+               <rad1:TripStartDate>?</rad1:TripStartDate>\r
+               <rad1:TripEndDate>?</rad1:TripEndDate>\r
+               <rad1:OriginatingAirportGMTOffset>?</rad1:OriginatingAirportGMTOffset>\r
+               <rad1:Segments>\r
+                  <!--Zero or more repetitions:-->\r
+                  <rad1:RequestSegment>\r
+                     <rad1:Origin>?</rad1:Origin>\r
+                     <rad1:Destination>?</rad1:Destination>\r
+                     <rad1:DepartureDate>?</rad1:DepartureDate>\r
+                     <rad1:ArrivalDate>?</rad1:ArrivalDate>\r
+                     <rad1:OriginOffsetFromGMT>?</rad1:OriginOffsetFromGMT>\r
+                     <rad1:DestinationOffsetFromGMT>?</rad1:DestinationOffsetFromGMT>\r
+                     <rad1:Insured>\r
+                        <!--Zero or more repetitions:-->\r
+                        <rad1:RequestInsured>\r
+                           <rad1:Title>?</rad1:Title>\r
+                           <rad1:FirstName>?</rad1:FirstName>\r
+                           <rad1:MiddleName>?</rad1:MiddleName>\r
+                           <rad1:LastName>?</rad1:LastName>\r
+                           <rad1:AlternateName>?</rad1:AlternateName>\r
+                           <rad1:RelationToInsured>?</rad1:RelationToInsured>\r
+                           <rad1:BirthDate>?</rad1:BirthDate>\r
+                           <rad1:Age>?</rad1:Age>\r
+                           <rad1:PassengerTypeCode>?</rad1:PassengerTypeCode>\r
+                           <rad1:Gender>?</rad1:Gender>\r
+                           <rad1:IsPrimaryInsured>?</rad1:IsPrimaryInsured>\r
+                           <rad1:MarketingOptIn>?</rad1:MarketingOptIn>\r
+                           <rad1:Beneficiary>\r
+                              <rad1:FirstName>?</rad1:FirstName>\r
+                              <rad1:LastName>?</rad1:LastName>\r
+                           </rad1:Beneficiary>\r
+                           <rad1:Address>\r
+                              <rad1:StreetLn1Nm>?</rad1:StreetLn1Nm>\r
+                              <rad1:StreetLn2Nm>?</rad1:StreetLn2Nm>\r
+                              <rad1:StreetLn3Nm>?</rad1:StreetLn3Nm>\r
+                              <rad1:CityNm>?</rad1:CityNm>\r
+                              <rad1:StateNm>?</rad1:StateNm>\r
+                              <rad1:ZipCd>?</rad1:ZipCd>\r
+                              <rad1:CntryNm>?</rad1:CntryNm>\r
+                              <rad1:HomePhoneNo>?</rad1:HomePhoneNo>\r
+                              <rad1:WorkPhoneNo>?</rad1:WorkPhoneNo>\r
+                              <rad1:CellPhoneNo>?</rad1:CellPhoneNo>\r
+                              <rad1:FaxNo>?</rad1:FaxNo>\r
+                              <rad1:EmailAddr>?</rad1:EmailAddr>\r
+                           </rad1:Address>\r
+                        </rad1:RequestInsured>\r
+                     </rad1:Insured>\r
+                  </rad1:RequestSegment>\r
+               </rad1:Segments>\r
+            </rad1:Trip>\r
+         </tem:QuoteRequest>\r
+      </tem:RetrieveInsuranceQuote>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsuranceQuote"/>
+  </con:call>
+</con:operation>

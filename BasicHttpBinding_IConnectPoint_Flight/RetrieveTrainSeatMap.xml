@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" name="RetrieveTrainSeatMap" bindingOperationName="RetrieveTrainSeatMap" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6fileName">RetrieveTrainSeatMap</con:setting>
+  </con:settings>
+  <con:call id="8435ac91-946e-4582-9307-f1d0229640b9" name="RetrieveTrainSeatMap Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveTrainSeatMap>\r
+         <!--Optional:-->\r
+         <tem:RetrieveTrainSeatMapRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:Currency>?</rad1:Currency>\r
+            <rad1:DepartureDate>?</rad1:DepartureDate>\r
+            <!--Optional:-->\r
+            <rad1:ExcludePricing>?</rad1:ExcludePricing>\r
+            <!--Optional:-->\r
+            <rad1:FareBasisCode>?</rad1:FareBasisCode>\r
+            <rad1:LogicalFlightID>?</rad1:LogicalFlightID>\r
+         </tem:RetrieveTrainSeatMapRequest>\r
+      </tem:RetrieveTrainSeatMap>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap"/>
+  </con:call>
+</con:operation>

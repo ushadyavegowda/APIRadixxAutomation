@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="3469d2e0-5301-4cf5-8507-2bcbc89a0748" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations" name="GetProfileReservations" bindingOperationName="GetProfileReservations" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3469d2e0-5301-4cf5-8507-2bcbc89a0748fileName">GetProfileReservations</con:setting>
+  </con:settings>
+  <con:call id="6d3991ad-7bb0-4973-94a8-eb17c506bf7f" name="GetProfileReservations Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Profiles.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetProfileReservations>\r
+         <!--Optional:-->\r
+         <tem:GetProfileReservationsRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:ProfileID>?</rad1:ProfileID>\r
+            <rad1:Active>?</rad1:Active>\r
+         </tem:GetProfileReservationsRequest>\r
+      </tem:GetProfileReservations>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations"/>
+  </con:call>
+</con:operation>

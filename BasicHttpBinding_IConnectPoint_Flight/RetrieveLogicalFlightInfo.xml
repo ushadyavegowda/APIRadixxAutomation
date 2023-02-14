@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="d5810c7f-e38c-4167-ba9c-801190e5d5da" isOneWay="false" action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo" name="RetrieveLogicalFlightInfo" bindingOperationName="RetrieveLogicalFlightInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d5810c7f-e38c-4167-ba9c-801190e5d5dafileName">RetrieveLogicalFlightInfo</con:setting>
+  </con:settings>
+  <con:call id="bcd5e664-e895-4e25-8091-07719d064768" name="RetrieveLogicalFlightInfo Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint xsi:nil="true"/>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveLogicalFlightInfo>\r
+         <!--Optional:-->\r
+         <tem:RetrieveLogicalFlightInfoRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:DepartureDate>?</rad1:DepartureDate>\r
+            <rad1:Destination>?</rad1:Destination>\r
+            <!--Optional:-->\r
+            <rad1:FlightNumber>?</rad1:FlightNumber>\r
+            <rad1:Origin>?</rad1:Origin>\r
+         </tem:RetrieveLogicalFlightInfoRequest>\r
+      </tem:RetrieveLogicalFlightInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo"/>
+  </con:call>
+</con:operation>

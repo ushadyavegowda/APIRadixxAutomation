@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="70b8f3f2-1ce9-492b-a053-fd9480de04f6" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/ProcessItemPayment" name="ProcessItemPayment" bindingOperationName="ProcessItemPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="70b8f3f2-1ce9-492b-a053-fd9480de04f6fileName">ProcessItemPayment</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

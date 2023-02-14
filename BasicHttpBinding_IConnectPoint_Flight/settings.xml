@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="5956272b-c1ab-4a10-a48f-3f852fb58d73" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_Flight" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Flight" soapVersion="1_1" anonymous="optional" definition="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5956272b-c1ab-4a10-a48f-3f852fb58d73fileName">BasicHttpBinding_IConnectPoint_Flight</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?wsdl">
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Flight" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xsd:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveSeatAvailabilityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSeatAvailabilityList"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveSeatAvailabilityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSeatAvailabilityListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveAirportRoutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAirportRoutes"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveAirportRoutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAirportRoutesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_UpdateLidAircraft_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLidAircraft"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_UpdateLidAircraft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLidAircraftResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_GetFlightScheduleInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightScheduleInformation"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_GetFlightScheduleInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightScheduleInformationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveAllConfirmations_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAllConfirmations"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveAllConfirmations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAllConfirmationsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveFlightStatus_V1_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFlightStatus_V1"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveFlightStatus_V1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFlightStatus_V1Response"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveSeatAvailabilityShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSeatAvailabilityShop"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveSeatAvailabilityShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSeatAvailabilityShopResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveLogicalFlightInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveLogicalFlightInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveLogicalFlightInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveLogicalFlightInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveFlightSeatMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFlightSeatMap"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveFlightSeatMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFlightSeatMapResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveTrainSeatMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTrainSeatMap"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Flight_RetrieveTrainSeatMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTrainSeatMapResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Flight">
+    <wsdl:operation name="RetrieveSeatAvailabilityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList" message="tns:IConnectPoint_Flight_RetrieveSeatAvailabilityList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityListResponse" message="tns:IConnectPoint_Flight_RetrieveSeatAvailabilityList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAirportRoutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutes" message="tns:IConnectPoint_Flight_RetrieveAirportRoutes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutesResponse" message="tns:IConnectPoint_Flight_RetrieveAirportRoutes_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLidAircraft">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" message="tns:IConnectPoint_Flight_UpdateLidAircraft_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraftResponse" message="tns:IConnectPoint_Flight_UpdateLidAircraft_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightScheduleInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/GetFlightScheduleInformation" message="tns:IConnectPoint_Flight_GetFlightScheduleInformation_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/GetFlightScheduleInformationResponse" message="tns:IConnectPoint_Flight_GetFlightScheduleInformation_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllConfirmations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" message="tns:IConnectPoint_Flight_RetrieveAllConfirmations_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmationsResponse" message="tns:IConnectPoint_Flight_RetrieveAllConfirmations_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFlightStatus_V1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" message="tns:IConnectPoint_Flight_RetrieveFlightStatus_V1_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1Response" message="tns:IConnectPoint_Flight_RetrieveFlightStatus_V1_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSeatAvailabilityShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" message="tns:IConnectPoint_Flight_RetrieveSeatAvailabilityShop_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShopResponse" message="tns:IConnectPoint_Flight_RetrieveSeatAvailabilityShop_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLogicalFlightInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo" message="tns:IConnectPoint_Flight_RetrieveLogicalFlightInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfoResponse" message="tns:IConnectPoint_Flight_RetrieveLogicalFlightInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFlightSeatMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightSeatMap" message="tns:IConnectPoint_Flight_RetrieveFlightSeatMap_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightSeatMapResponse" message="tns:IConnectPoint_Flight_RetrieveFlightSeatMap_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTrainSeatMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" message="tns:IConnectPoint_Flight_RetrieveTrainSeatMap_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMapResponse" message="tns:IConnectPoint_Flight_RetrieveTrainSeatMap_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Flight" type="tns:IConnectPoint_Flight">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrieveSeatAvailabilityList">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAirportRoutes">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLidAircraft">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightScheduleInformation">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/GetFlightScheduleInformation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllConfirmations">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFlightStatus_V1">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSeatAvailabilityShop">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLogicalFlightInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFlightSeatMap">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightSeatMap" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTrainSeatMap">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Flight">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Flight" binding="tns:BasicHttpBinding_IConnectPoint_Flight">
+      <soap:address location="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+  <xs:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+  <xs:element name="RetrieveSeatAvailabilityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSeatAvailabilityListRequest" nillable="true" type="q1:RetrieveSeatAvailabilityList" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSeatAvailabilityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSeatAvailabilityListResult" nillable="true" type="q2:ViewSeatAvailability" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAirportRoutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAirportRoutesRequest" nillable="true" type="q3:RetrieveAirportRoutes" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAirportRoutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAirportRoutesResult" nillable="true" type="q4:ViewAirportRoutes" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLidAircraft">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateLidAircraftRequest" nillable="true" type="q5:UpdateInventoryAirCraftLid" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLidAircraftResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateLidAircraftResult" nillable="true" type="q6:ViewUpdateLidAircraftCollection" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightScheduleInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFlightScheduleInformationRequest" nillable="true" type="q7:GetFlightScheduleInformation" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlightScheduleInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFlightScheduleInformationResult" nillable="true" type="q8:ViewFlightScheduleInformation" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAllConfirmations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAllConfirmationsRequest" nillable="true" type="q9:RetrieveAllConfirmations" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAllConfirmationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAllConfirmationsResult" nillable="true" type="q10:ViewAllConfirmations" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFlightStatus_V1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFlightStatusRequest" nillable="true" type="q11:RetrieveFlightStatus" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFlightStatus_V1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFlightStatus_V1Result" nillable="true" type="q12:ViewFlightStatus" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSeatAvailabilityShop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSeatAvailabilityListRequest" nillable="true" type="q13:RetrieveSeatAvailabilityShop" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSeatAvailabilityShopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSeatAvailabilityShopResult" nillable="true" type="q14:ViewSeatAvailability" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveLogicalFlightInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveLogicalFlightInfoRequest" nillable="true" type="q15:RetrieveLogicalFlightInfo" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveLogicalFlightInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveLogicalFlightInfoResult" nillable="true" type="q16:ViewLogicalFlightInfo" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFlightSeatMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFlightSeatMapRequest" nillable="true" type="q17:RetrieveFlightSeatMap" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFlightSeatMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFlightSeatMapResult" nillable="true" type="q18:ViewFlightSeatMap" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTrainSeatMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTrainSeatMapRequest" nillable="true" type="q19:RetrieveTrainSeatMap" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTrainSeatMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTrainSeatMapResult" nillable="true" type="q20:ViewTrainSeatMap" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">
+  <xs:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="RetrieveSeatAvailabilityList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="LogicalFlightID" type="xs:int"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element name="CabinName" nillable="true" type="xs:string"/>
+          <xs:element name="Currency" nillable="true" type="xs:string"/>
+          <xs:element name="UTCOffset" type="xs:long"/>
+          <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ExcludePricing" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSeatAvailabilityList" nillable="true" type="tns:RetrieveSeatAvailabilityList"/>
+  <xs:complexType name="RetrieveAirportRoutes">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:TransactionInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAirportRoutes" nillable="true" type="tns:RetrieveAirportRoutes"/>
+  <xs:complexType name="UpdateInventoryAirCraftLid">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q3:TransactionInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CabinValue" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DestinationAirportCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LidType" type="q3:Enumerations.TypeofLid"/>
+          <xs:element minOccurs="0" name="LidValue" type="xs:int"/>
+          <xs:element minOccurs="0" name="OriginAirportCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateInventoryAirCraftLid" nillable="true" type="tns:UpdateInventoryAirCraftLid"/>
+  <xs:complexType name="GetFlightScheduleInformation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q4:TransactionInfo" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="SearchType" type="tns:GetFlightScheduleInformation.SearchTypes"/>
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNumber" type="xs:int"/>
+          <xs:element name="StartSerachDate" type="xs:dateTime"/>
+          <xs:element name="EndSearchDate" type="xs:dateTime"/>
+          <xs:element name="IncludeCancelled" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetFlightScheduleInformation" nillable="true" type="tns:GetFlightScheduleInformation"/>
+  <xs:simpleType name="GetFlightScheduleInformation.SearchTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Route"/>
+      <xs:enumeration value="Flight"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetFlightScheduleInformation.SearchTypes" nillable="true" type="tns:GetFlightScheduleInformation.SearchTypes"/>
+  <xs:complexType name="RetrieveAllConfirmations">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q5:TransactionInfo" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="SearchType" type="tns:RetrieveAllConfirmations.SearchTypes"/>
+          <xs:element minOccurs="0" name="GetBookingsForSpecificFlight" nillable="true" type="tns:FlightDetails"/>
+          <xs:element minOccurs="0" name="GetBookingsForSpecificDateRange" nillable="true" type="tns:BookDateSearch"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAllConfirmations" nillable="true" type="tns:RetrieveAllConfirmations"/>
+  <xs:simpleType name="RetrieveAllConfirmations.SearchTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Flight"/>
+      <xs:enumeration value="DateRange"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveAllConfirmations.SearchTypes" nillable="true" type="tns:RetrieveAllConfirmations.SearchTypes"/>
+  <xs:complexType name="FlightDetails">
+    <xs:sequence>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="ActiveOnly" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightDetails" nillable="true" type="tns:FlightDetails"/>
+  <xs:complexType name="BookDateSearch">
+    <xs:sequence>
+      <xs:element name="BookingType" type="tns:BookDateSearch.BookingsType"/>
+      <xs:element name="StartSearchDate" type="xs:dateTime"/>
+      <xs:element name="EndSearchDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BookDateSearch" nillable="true" type="tns:BookDateSearch"/>
+  <xs:simpleType name="BookDateSearch.BookingsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All"/>
+      <xs:enumeration value="Created"/>
+      <xs:enumeration value="Modified"/>
+      <xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="FullPaidBookings"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BookDateSearch.BookingsType" nillable="true" type="tns:BookDateSearch.BookingsType"/>
+  <xs:complexType name="RetrieveFlightStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:TransactionInfo" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="SearchType" type="tns:RetrieveFlightStatus.SearchTypes"/>
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFlightStatus" nillable="true" type="tns:RetrieveFlightStatus"/>
+  <xs:simpleType name="RetrieveFlightStatus.SearchTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Route"/>
+      <xs:enumeration value="Flight"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveFlightStatus.SearchTypes" nillable="true" type="tns:RetrieveFlightStatus.SearchTypes"/>
+  <xs:complexType name="RetrieveSeatAvailabilityShop">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q7:TransactionInfoNoSession" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CabinName" nillable="true" type="xs:string"/>
+          <xs:element name="Currency" type="q7:Enumerations.CurrencyCodeTypes"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ExcludePricing" type="xs:boolean"/>
+          <xs:element name="LogicalFlightID" type="xs:int"/>
+          <xs:element name="UTCOffset" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSeatAvailabilityShop" nillable="true" type="tns:RetrieveSeatAvailabilityShop"/>
+  <xs:complexType name="RetrieveLogicalFlightInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q8:TransactionInfo" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element name="Destination" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+          <xs:element name="Origin" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveLogicalFlightInfo" nillable="true" type="tns:RetrieveLogicalFlightInfo"/>
+  <xs:complexType name="RetrieveFlightSeatMap">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q9:TransactionInfo" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CabinName" nillable="true" type="xs:string"/>
+          <xs:element name="Currency" nillable="true" type="xs:string"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ExcludePricing" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element name="LogicalFlightID" type="xs:int"/>
+          <xs:element name="UTCOffset" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFlightSeatMap" nillable="true" type="tns:RetrieveFlightSeatMap"/>
+  <xs:complexType name="RetrieveTrainSeatMap">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q10:TransactionInfo" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="Currency" nillable="true" type="xs:string"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ExcludePricing" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element name="LogicalFlightID" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveTrainSeatMap" nillable="true" type="tns:RetrieveTrainSeatMap"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:simpleType name="Enumerations.TypeofLid">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Aircraft"/>
+      <xs:enumeration value="Cabin"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.TypeofLid" nillable="true" type="tns:Enumerations.TypeofLid"/>
+  <xs:complexType name="TransactionInfoNoSession">
+    <xs:sequence>
+      <xs:element name="LogonID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element name="Password" nillable="true" type="xs:string"/>
+      <xs:element name="UserName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element name="TaPassword" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfoNoSession" nillable="true" type="tns:TransactionInfoNoSession"/>
+  <xs:simpleType name="Enumerations.CurrencyCodeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AED"/>
+      <xs:enumeration value="AFN"/>
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="AMD"/>
+      <xs:enumeration value="ANG"/>
+      <xs:enumeration value="AOA"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="AWG"/>
+      <xs:enumeration value="AZN"/>
+      <xs:enumeration value="BAM"/>
+      <xs:enumeration value="BBD"/>
+      <xs:enumeration value="BDT"/>
+      <xs:enumeration value="BGN"/>
+      <xs:enumeration value="BHD"/>
+      <xs:enumeration value="BIF"/>
+      <xs:enumeration value="BMD"/>
+      <xs:enumeration value="BND"/>
+      <xs:enumeration value="BOB"/>
+      <xs:enumeration value="BRL"/>
+      <xs:enumeration value="BSD"/>
+      <xs:enumeration value="BTN"/>
+      <xs:enumeration value="BWP"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="BZD"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="CDF"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="CLP"/>
+      <xs:enumeration value="CNY"/>
+      <xs:enumeration value="COP"/>
+      <xs:enumeration value="CRC"/>
+      <xs:enumeration value="CUP"/>
+      <xs:enumeration value="CVE"/>
+      <xs:enumeration value="CYP"/>
+      <xs:enumeration value="CZK"/>
+      <xs:enumeration value="DJF"/>
+      <xs:enumeration value="DKK"/>
+      <xs:enumeration value="DOP"/>
+      <xs:enumeration value="DZD"/>
+      <xs:enumeration value="EGP"/>
+      <xs:enumeration value="ERN"/>
+      <xs:enumeration value="ETB"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="FJD"/>
+      <xs:enumeration value="FKP"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="GEL"/>
+      <xs:enumeration value="GGP"/>
+      <xs:enumeration value="GHS"/>
+      <xs:enumeration value="GIP"/>
+      <xs:enumeration value="GMD"/>
+      <xs:enumeration value="GNF"/>
+      <xs:enumeration value="GTQ"/>
+      <xs:enumeration value="GYD"/>
+      <xs:enumeration value="HKD"/>
+      <xs:enumeration value="HNL"/>
+      <xs:enumeration value="HRK"/>
+      <xs:enumeration value="HTG"/>
+      <xs:enumeration value="HUF"/>
+      <xs:enumeration value="IDR"/>
+      <xs:enumeration value="ILS"/>
+      <xs:enumeration value="IMP"/>
+      <xs:enumeration value="INR"/>
+      <xs:enumeration value="IQD"/>
+      <xs:enumeration value="IRR"/>
+      <xs:enumeration value="ISK"/>
+      <xs:enumeration value="JEP"/>
+      <xs:enumeration value="JMD"/>
+      <xs:enumeration value="JOD"/>
+      <xs:enumeration value="JPY"/>
+      <xs:enumeration value="KES"/>
+      <xs:enumeration value="KGS"/>
+      <xs:enumeration value="KHR"/>
+      <xs:enumeration value="KMF"/>
+      <xs:enumeration value="KPW"/>
+      <xs:enumeration value="KWD"/>
+      <xs:enumeration value="KYD"/>
+      <xs:enumeration value="KZT"/>
+      <xs:enumeration value="LAK"/>
+      <xs:enumeration value="LBP"/>
+      <xs:enumeration value="LKR"/>
+      <xs:enumeration value="LRD"/>
+      <xs:enumeration value="LSL"/>
+      <xs:enumeration value="LTL"/>
+      <xs:enumeration value="LVL"/>
+      <xs:enumeration value="LYD"/>
+      <xs:enumeration value="MAD"/>
+      <xs:enumeration value="MDL"/>
+      <xs:enumeration value="MGA"/>
+      <xs:enumeration value="MKD"/>
+      <xs:enumeration value="MMK"/>
+      <xs:enumeration value="MNT"/>
+      <xs:enumeration value="MOP"/>
+      <xs:enumeration value="MRO"/>
+      <xs:enumeration value="MTL"/>
+      <xs:enumeration value="MUR"/>
+      <xs:enumeration value="MVR"/>
+      <xs:enumeration value="MWK"/>
+      <xs:enumeration value="MXN"/>
+      <xs:enumeration value="MYR"/>
+      <xs:enumeration value="MZN"/>
+      <xs:enumeration value="NAD"/>
+      <xs:enumeration value="NGN"/>
+      <xs:enumeration value="NIO"/>
+      <xs:enumeration value="NOK"/>
+      <xs:enumeration value="NPR"/>
+      <xs:enumeration value="NZD"/>
+      <xs:enumeration value="OMR"/>
+      <xs:enumeration value="PAB"/>
+      <xs:enumeration value="PEN"/>
+      <xs:enumeration value="PGK"/>
+      <xs:enumeration value="PHP"/>
+      <xs:enumeration value="PKR"/>
+      <xs:enumeration value="PLN"/>
+      <xs:enumeration value="PYG"/>
+      <xs:enumeration value="QAR"/>
+      <xs:enumeration value="RON"/>
+      <xs:enumeration value="RSD"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="RWF"/>
+      <xs:enumeration value="SAR"/>
+      <xs:enumeration value="SBD"/>
+      <xs:enumeration value="SCR"/>
+      <xs:enumeration value="SDG"/>
+      <xs:enumeration value="SEK"/>
+      <xs:enumeration value="SGD"/>
+      <xs:enumeration value="SHP"/>
+      <xs:enumeration value="SLL"/>
+      <xs:enumeration value="SOS"/>
+      <xs:enumeration value="SPL"/>
+      <xs:enumeration value="SRD"/>
+      <xs:enumeration value="STD"/>
+      <xs:enumeration value="SVC"/>
+      <xs:enumeration value="SYP"/>
+      <xs:enumeration value="SZL"/>
+      <xs:enumeration value="THB"/>
+      <xs:enumeration value="TJS"/>
+      <xs:enumeration value="TMM"/>
+      <xs:enumeration value="TND"/>
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="TRI"/>
+      <xs:enumeration value="TTD"/>
+      <xs:enumeration value="TVD"/>
+      <xs:enumeration value="TWD"/>
+      <xs:enumeration value="TZS"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="UGX"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="UYU"/>
+      <xs:enumeration value="UZS"/>
+      <xs:enumeration value="VEB"/>
+      <xs:enumeration value="VEF"/>
+      <xs:enumeration value="VND"/>
+      <xs:enumeration value="VUV"/>
+      <xs:enumeration value="WST"/>
+      <xs:enumeration value="XAF"/>
+      <xs:enumeration value="XAG"/>
+      <xs:enumeration value="XAU"/>
+      <xs:enumeration value="XCD"/>
+      <xs:enumeration value="XDR"/>
+      <xs:enumeration value="XOF"/>
+      <xs:enumeration value="XPD"/>
+      <xs:enumeration value="XPF"/>
+      <xs:enumeration value="XPT"/>
+      <xs:enumeration value="YER"/>
+      <xs:enumeration value="ZAR"/>
+      <xs:enumeration value="ZMK"/>
+      <xs:enumeration value="ZWD"/>
+      <xs:enumeration value="KRW"/>
+      <xs:enumeration value="ZMW"/>
+      <xs:enumeration value="SYS"/>
+      <xs:enumeration value="VES"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="BYN"/>
+      <xs:enumeration value="BOV"/>
+      <xs:enumeration value="CLF"/>
+      <xs:enumeration value="COU"/>
+      <xs:enumeration value="CUC"/>
+      <xs:enumeration value="MRU"/>
+      <xs:enumeration value="MXV"/>
+      <xs:enumeration value="STN"/>
+      <xs:enumeration value="XSU"/>
+      <xs:enumeration value="SSP"/>
+      <xs:enumeration value="CHW"/>
+      <xs:enumeration value="TRY"/>
+      <xs:enumeration value="TMT"/>
+      <xs:enumeration value="UYI"/>
+      <xs:enumeration value="UYW"/>
+      <xs:enumeration value="ZWL"/>
+      <xs:enumeration value="XBA"/>
+      <xs:enumeration value="XBB"/>
+      <xs:enumeration value="XBC"/>
+      <xs:enumeration value="XBD"/>
+      <xs:enumeration value="CNH"/>
+      <xs:enumeration value="RTG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.CurrencyCodeTypes" nillable="true" type="tns:Enumerations.CurrencyCodeTypes"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Response">
+  <xs:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:import schemaLocation="http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="ViewSeatAvailability">
+    <xs:sequence>
+      <xs:element name="PhysicalFlights" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+      <xs:element name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewSeatAvailability" nillable="true" type="tns:ViewSeatAvailability"/>
+  <xs:complexType name="ArrayOfPhysicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalFlight" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+  <xs:complexType name="PhysicalFlight">
+    <xs:sequence>
+      <xs:element name="PhysicalFlightID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element name="TailNum" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="IsCircularFlight" type="xs:boolean"/>
+      <xs:element name="LegOrder" type="xs:int"/>
+      <xs:element name="DisplayLegOnSeatmap" type="xs:boolean"/>
+      <xs:element name="SeatCodes" nillable="true" type="tns:ArrayOfSeatCode"/>
+      <xs:element name="Cabins" nillable="true" type="tns:ArrayOfCabin"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+  <xs:complexType name="ArrayOfSeatCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatCode" nillable="true" type="tns:SeatCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatCode" nillable="true" type="tns:ArrayOfSeatCode"/>
+  <xs:complexType name="SeatCode">
+    <xs:sequence>
+      <xs:element name="ServiceCode" nillable="true" type="xs:string"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+      <xs:element name="QuantityAvailable" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatCode" nillable="true" type="tns:SeatCode"/>
+  <xs:complexType name="ArrayOfCabin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cabin" nillable="true" type="tns:Cabin"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCabin" nillable="true" type="tns:ArrayOfCabin"/>
+  <xs:complexType name="Cabin">
+    <xs:sequence>
+      <xs:element name="CabinName" nillable="true" type="xs:string"/>
+      <xs:element name="SeatMaps" nillable="true" type="tns:ArrayOfSeatMap"/>
+      <xs:element name="SeatAssignments" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+      <xs:element name="SeatExceptions" nillable="true" type="tns:ArrayOfSeatException"/>
+      <xs:element name="SeatCharges" nillable="true" type="tns:ArrayOfSeatCharge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cabin" nillable="true" type="tns:Cabin"/>
+  <xs:complexType name="ArrayOfSeatMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatMap" nillable="true" type="tns:SeatMap"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatMap" nillable="true" type="tns:ArrayOfSeatMap"/>
+  <xs:complexType name="SeatMap">
+    <xs:sequence>
+      <xs:element name="RowNumber" type="xs:long"/>
+      <xs:element name="Seats" nillable="true" type="xs:string"/>
+      <xs:element name="WingSeats" nillable="true" type="xs:string"/>
+      <xs:element name="ExitSeats" nillable="true" type="xs:string"/>
+      <xs:element name="BlockedSeats" nillable="true" type="xs:string"/>
+      <xs:element name="PreBlockedSeats" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatMap" nillable="true" type="tns:SeatMap"/>
+  <xs:complexType name="ArrayOfSeatAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatAssignment" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+  <xs:complexType name="SeatAssignment">
+    <xs:sequence>
+      <xs:element name="RowNumber" type="xs:long"/>
+      <xs:element name="Seat" nillable="true" type="xs:string"/>
+      <xs:element name="PassengerTypeCode" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+  <xs:complexType name="ArrayOfSeatException">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatException" nillable="true" type="tns:SeatException"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatException" nillable="true" type="tns:ArrayOfSeatException"/>
+  <xs:complexType name="SeatException">
+    <xs:sequence>
+      <xs:element name="RowNumber" type="xs:long"/>
+      <xs:element name="Seat" nillable="true" type="xs:string"/>
+      <xs:element name="Status" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatException" nillable="true" type="tns:SeatException"/>
+  <xs:complexType name="ArrayOfSeatCharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatCharge" nillable="true" type="tns:SeatCharge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatCharge" nillable="true" type="tns:ArrayOfSeatCharge"/>
+  <xs:complexType name="SeatCharge">
+    <xs:sequence>
+      <xs:element name="RowNumber" type="xs:long"/>
+      <xs:element name="Seat" nillable="true" type="xs:string"/>
+      <xs:element name="ServiceCode" nillable="true" type="xs:string"/>
+      <xs:element name="Amount" type="xs:decimal"/>
+      <xs:element name="Currency" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatCharge" nillable="true" type="tns:SeatCharge"/>
+  <xs:complexType name="ViewAirportRoutes">
+    <xs:sequence>
+      <xs:element name="Routes" nillable="true" type="tns:ArrayOfRoute"/>
+      <xs:element name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAirportRoutes" nillable="true" type="tns:ViewAirportRoutes"/>
+  <xs:complexType name="ArrayOfRoute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Route" nillable="true" type="tns:Route"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoute" nillable="true" type="tns:ArrayOfRoute"/>
+  <xs:complexType name="Route">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginAirportCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginAirportDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginAirportMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginAirportCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationAirportCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationAirportDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationAirportMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationAirportCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ApproximateRouteDuration" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="AdvPaxInfoCollectionReq" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="OriginAirportOffsetFromGMT" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginAirportISOCountryCode3" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationAirportISOCountryCode3" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Route" nillable="true" type="tns:Route"/>
+  <xs:complexType name="ViewUpdateLidAircraftCollection">
+    <xs:sequence>
+      <xs:element name="UpdateLidAircraftList" nillable="true" type="tns:ArrayOfViewUpdateLidAircraft"/>
+      <xs:element name="Exceptions" nillable="true" type="q3:ExceptionInformation.Exceptions" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewUpdateLidAircraftCollection" nillable="true" type="tns:ViewUpdateLidAircraftCollection"/>
+  <xs:complexType name="ArrayOfViewUpdateLidAircraft">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewUpdateLidAircraft" nillable="true" type="tns:ViewUpdateLidAircraft"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewUpdateLidAircraft" nillable="true" type="tns:ArrayOfViewUpdateLidAircraft"/>
+  <xs:complexType name="ViewUpdateLidAircraft">
+    <xs:sequence>
+      <xs:element name="Status" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewUpdateLidAircraft" nillable="true" type="tns:ViewUpdateLidAircraft"/>
+  <xs:complexType name="ViewFlightScheduleInformation">
+    <xs:sequence>
+      <xs:element name="FlightSchedule" nillable="true" type="tns:ArrayOfFlightInformation"/>
+      <xs:element name="Exceptions" nillable="true" type="q4:ExceptionInformation.Exceptions" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFlightScheduleInformation" nillable="true" type="tns:ViewFlightScheduleInformation"/>
+  <xs:complexType name="ArrayOfFlightInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightInformation" nillable="true" type="tns:FlightInformation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightInformation" nillable="true" type="tns:ArrayOfFlightInformation"/>
+  <xs:complexType name="FlightInformation">
+    <xs:sequence>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="EstimatedDeparture" nillable="true" type="xs:string"/>
+      <xs:element name="EstimatedArrival" nillable="true" type="xs:string"/>
+      <xs:element name="ActualDeparture" nillable="true" type="xs:string"/>
+      <xs:element name="ActualArrival" nillable="true" type="xs:string"/>
+      <xs:element name="TimeAdjustor" type="xs:int"/>
+      <xs:element name="Stops" type="xs:int"/>
+      <xs:element name="Frequency" nillable="true" type="xs:string"/>
+      <xs:element name="Duration" nillable="true" type="xs:string"/>
+      <xs:element name="EffectiveDate" type="xs:dateTime"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightInformation" nillable="true" type="tns:FlightInformation"/>
+  <xs:complexType name="ViewAllConfirmations">
+    <xs:sequence>
+      <xs:element name="Bookings" nillable="true" type="tns:ArrayOfBooking"/>
+      <xs:element name="Exceptions" nillable="true" type="q5:ExceptionInformation.Exceptions" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAllConfirmations" nillable="true" type="tns:ViewAllConfirmations"/>
+  <xs:complexType name="ArrayOfBooking">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Booking" nillable="true" type="tns:Booking"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBooking" nillable="true" type="tns:ArrayOfBooking"/>
+  <xs:complexType name="Booking">
+    <xs:sequence>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Booking" nillable="true" type="tns:Booking"/>
+  <xs:complexType name="ViewFlightStatus">
+    <xs:sequence>
+      <xs:element name="FlightSegments" nillable="true" type="tns:ArrayOfSegments"/>
+      <xs:element name="Exceptions" nillable="true" type="q6:ExceptionInformation.Exceptions" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFlightStatus" nillable="true" type="tns:ViewFlightStatus"/>
+  <xs:complexType name="ArrayOfSegments">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Segments" nillable="true" type="tns:Segments"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSegments" nillable="true" type="tns:ArrayOfSegments"/>
+  <xs:complexType name="Segments">
+    <xs:sequence>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="Legs" nillable="true" type="tns:ArrayOfLegdetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Segments" nillable="true" type="tns:Segments"/>
+  <xs:complexType name="ArrayOfLegdetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Legdetails" nillable="true" type="tns:Legdetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLegdetails" nillable="true" type="tns:ArrayOfLegdetails"/>
+  <xs:complexType name="Legdetails">
+    <xs:sequence>
+      <xs:element name="Carrier" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FromAirport" nillable="true" type="xs:string"/>
+      <xs:element name="ToAirport" nillable="true" type="xs:string"/>
+      <xs:element name="ScheduledDepature" type="xs:dateTime"/>
+      <xs:element name="ScheduledArrival" type="xs:dateTime"/>
+      <xs:element name="EstimatedDeparture" type="xs:dateTime"/>
+      <xs:element name="EstimatedArrival" type="xs:dateTime"/>
+      <xs:element name="FlightStatus" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Legdetails" nillable="true" type="tns:Legdetails"/>
+  <xs:complexType name="ViewLogicalFlightInfo">
+    <xs:sequence>
+      <xs:element name="Exceptions" nillable="true" type="q7:ExceptionInformation.Exceptions" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element name="LogicalFlights" nillable="true" type="tns:ArrayOfLogicalFlightInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewLogicalFlightInfo" nillable="true" type="tns:ViewLogicalFlightInfo"/>
+  <xs:complexType name="ArrayOfLogicalFlightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogicalFlightInfo" nillable="true" type="tns:LogicalFlightInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogicalFlightInfo" nillable="true" type="tns:ArrayOfLogicalFlightInfo"/>
+  <xs:complexType name="LogicalFlightInfo">
+    <xs:sequence>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlightID" nillable="true" type="xs:long"/>
+      <xs:element name="LogicalFlightStatus" nillable="true" type="xs:string"/>
+      <xs:element name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="PhysicalFlights" nillable="true" type="tns:ArrayOfPhysicalFlightInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogicalFlightInfo" nillable="true" type="tns:LogicalFlightInfo"/>
+  <xs:complexType name="ArrayOfPhysicalFlightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalFlightInfo" nillable="true" type="tns:PhysicalFlightInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalFlightInfo" nillable="true" type="tns:ArrayOfPhysicalFlightInfo"/>
+  <xs:complexType name="PhysicalFlightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirCraftType" nillable="true" type="xs:string"/>
+      <xs:element name="Carrier" nillable="true" type="xs:string"/>
+      <xs:element name="EstimatedArrival" type="xs:dateTime"/>
+      <xs:element name="EstimatedDeparture" type="xs:dateTime"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FlightStatus" nillable="true" type="xs:string"/>
+      <xs:element name="FromAirport" nillable="true" type="xs:string"/>
+      <xs:element name="PhysicalFlightID" nillable="true" type="xs:long"/>
+      <xs:element name="ScheduledArrival" type="xs:dateTime"/>
+      <xs:element name="ScheduledDepature" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="SeatConfName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeatConfigID" nillable="true" type="xs:string"/>
+      <xs:element name="ToAirport" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlightInfo" nillable="true" type="tns:PhysicalFlightInfo"/>
+  <xs:complexType name="ViewFlightSeatMap">
+    <xs:sequence>
+      <xs:element name="PhysicalFlights" nillable="true" type="tns:ArrayOfPhysicalFlightMap"/>
+      <xs:element name="Rules" nillable="true" type="tns:RulesDisplay"/>
+      <xs:element name="Exceptions" nillable="true" type="q8:ExceptionInformation.Exceptions" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFlightSeatMap" nillable="true" type="tns:ViewFlightSeatMap"/>
+  <xs:complexType name="ArrayOfPhysicalFlightMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalFlightMap" nillable="true" type="tns:PhysicalFlightMap"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalFlightMap" nillable="true" type="tns:ArrayOfPhysicalFlightMap"/>
+  <xs:complexType name="PhysicalFlightMap">
+    <xs:sequence>
+      <xs:element name="PhysicalFlightID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="PhysicalFlightSeatMap" nillable="true" type="tns:PhysicalFlightSeatMapInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlightMap" nillable="true" type="tns:PhysicalFlightMap"/>
+  <xs:complexType name="PhysicalFlightSeatMapInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabinClasses" nillable="true" type="tns:ArrayOfCabinClassDisplay"/>
+      <xs:element minOccurs="0" name="Decks" nillable="true" type="tns:ArrayOfDeckDisplay"/>
+      <xs:element minOccurs="0" name="SeatCabins" nillable="true" type="tns:ArrayOfSeatCabinDisplay"/>
+      <xs:element minOccurs="0" name="SeatConfiguration" nillable="true" type="tns:SeatConfigurationDisplay"/>
+      <xs:element minOccurs="0" name="SeatWBZones" nillable="true" type="tns:ArrayOfSeatWBZoneDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlightSeatMapInfo" nillable="true" type="tns:PhysicalFlightSeatMapInfo"/>
+  <xs:complexType name="ArrayOfCabinClassDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CabinClassDisplay" nillable="true" type="tns:CabinClassDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCabinClassDisplay" nillable="true" type="tns:ArrayOfCabinClassDisplay"/>
+  <xs:complexType name="CabinClassDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CabinClass" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CabinClassId" type="xs:long"/>
+      <xs:element minOccurs="0" name="CabinOrder" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CabinClassDisplay" nillable="true" type="tns:CabinClassDisplay"/>
+  <xs:complexType name="ArrayOfDeckDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeckDisplay" nillable="true" type="tns:DeckDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeckDisplay" nillable="true" type="tns:ArrayOfDeckDisplay"/>
+  <xs:complexType name="DeckDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeckCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DeckId" type="xs:long"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeckDisplay" nillable="true" type="tns:DeckDisplay"/>
+  <xs:complexType name="ArrayOfSeatCabinDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatCabinDisplay" nillable="true" type="tns:SeatCabinDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatCabinDisplay" nillable="true" type="tns:ArrayOfSeatCabinDisplay"/>
+  <xs:complexType name="SeatCabinDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabinClassId" type="xs:long"/>
+      <xs:element minOccurs="0" name="CabinDisplayOrder" type="xs:long"/>
+      <xs:element minOccurs="0" name="Capacity" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatCabinId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatConfigId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatCabinDisplay" nillable="true" type="tns:SeatCabinDisplay"/>
+  <xs:complexType name="SeatConfigurationDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfigurationDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfigurationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Default" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IataAcType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LayoutName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:ArrayOfRowDisplay"/>
+      <xs:element minOccurs="0" name="SeatConfigurationId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatConfigurationDisplay" nillable="true" type="tns:SeatConfigurationDisplay"/>
+  <xs:complexType name="ArrayOfRowDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RowDisplay" nillable="true" type="tns:RowDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRowDisplay" nillable="true" type="tns:ArrayOfRowDisplay"/>
+  <xs:complexType name="RowDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeckId" type="xs:long"/>
+      <xs:element minOccurs="0" name="Restrictions" nillable="true" type="tns:ArrayOfRestrictionDisplay"/>
+      <xs:element minOccurs="0" name="RowId" type="xs:long"/>
+      <xs:element minOccurs="0" name="RowNumber" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatConfigId" type="xs:long"/>
+      <xs:element minOccurs="0" name="Seats" nillable="true" type="tns:ArrayOfSeatDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RowDisplay" nillable="true" type="tns:RowDisplay"/>
+  <xs:complexType name="ArrayOfRestrictionDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RestrictionDisplay" nillable="true" type="tns:RestrictionDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRestrictionDisplay" nillable="true" type="tns:ArrayOfRestrictionDisplay"/>
+  <xs:complexType name="RestrictionDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RestrictionActive" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictionCategory" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RestrictionComment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RestrictionId" type="xs:long"/>
+      <xs:element minOccurs="0" name="RestrictionItemId" type="xs:long"/>
+      <xs:element minOccurs="0" name="RestrictionItemType" type="xs:long"/>
+      <xs:element minOccurs="0" name="RestrictionNumber" type="xs:long"/>
+      <xs:element minOccurs="0" name="RestrictionType" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RestrictionDisplay" nillable="true" type="tns:RestrictionDisplay"/>
+  <xs:complexType name="ArrayOfSeatDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatDisplay" nillable="true" type="tns:SeatDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatDisplay" nillable="true" type="tns:ArrayOfSeatDisplay"/>
+  <xs:complexType name="SeatDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabinClassId" type="xs:long"/>
+      <xs:element minOccurs="0" name="IsSeatAvailable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Restrictions" nillable="true" type="tns:ArrayOfRestrictionDisplay"/>
+      <xs:element minOccurs="0" name="RowId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatAssignment" nillable="true" type="tns:SeatAssignDisplay"/>
+      <xs:element minOccurs="0" name="SeatAttributes" nillable="true" type="tns:ArrayOfSeatAttributeDisplay"/>
+      <xs:element minOccurs="0" name="SeatCabinId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatColumn" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeatHeld" nillable="true" type="tns:HeldSeatDisplay"/>
+      <xs:element minOccurs="0" name="SeatId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatOrder" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatPriceOffers" nillable="true" type="tns:ArrayOfSeatPriceOffer"/>
+      <xs:element minOccurs="0" name="SeatWBZoneId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ServiceCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceId" type="xs:long"/>
+      <xs:element minOccurs="0" name="WeightIndex" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatDisplay" nillable="true" type="tns:SeatDisplay"/>
+  <xs:complexType name="SeatAssignDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PerOrgId" type="xs:long"/>
+      <xs:element minOccurs="0" name="PtcId" type="xs:long"/>
+      <xs:element minOccurs="0" name="TravelsWithInf" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAssignDisplay" nillable="true" type="tns:SeatAssignDisplay"/>
+  <xs:complexType name="ArrayOfSeatAttributeDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatAttributeDisplay" nillable="true" type="tns:SeatAttributeDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatAttributeDisplay" nillable="true" type="tns:ArrayOfSeatAttributeDisplay"/>
+  <xs:complexType name="SeatAttributeDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="AllowSeating" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="AttributeCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AttributeDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AttributeId" type="xs:long"/>
+      <xs:element minOccurs="0" name="AttributeOrder" type="xs:long"/>
+      <xs:element minOccurs="0" name="IsCommercial" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IsMarketing" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IsOperational" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="SystemAttribute" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAttributeDisplay" nillable="true" type="tns:SeatAttributeDisplay"/>
+  <xs:complexType name="HeldSeatDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Held" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="PersonId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeatHoldId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeldSeatDisplay" nillable="true" type="tns:HeldSeatDisplay"/>
+  <xs:complexType name="ArrayOfSeatPriceOffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatPriceOffer" nillable="true" type="tns:SeatPriceOffer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatPriceOffer" nillable="true" type="tns:ArrayOfSeatPriceOffer"/>
+  <xs:complexType name="SeatPriceOffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ApplicablePersonOrgIds" nillable="true" type="q9:ArrayOflong" xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IsBundleOffer" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatPriceOffer" nillable="true" type="tns:SeatPriceOffer"/>
+  <xs:complexType name="ArrayOfSeatWBZoneDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatWBZoneDisplay" nillable="true" type="tns:SeatWBZoneDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatWBZoneDisplay" nillable="true" type="tns:ArrayOfSeatWBZoneDisplay"/>
+  <xs:complexType name="SeatWBZoneDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="AutoSeatPriority" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatConfigId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatWBZoneId" type="xs:long"/>
+      <xs:element minOccurs="0" name="WBZone" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ZoneReferenced" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatWBZoneDisplay" nillable="true" type="tns:SeatWBZoneDisplay"/>
+  <xs:complexType name="RulesDisplay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EXRPAR" nillable="true" type="tns:EXRPAR"/>
+      <xs:element minOccurs="0" name="EXRPTC" nillable="true" type="tns:EXRPTC"/>
+      <xs:element minOccurs="0" name="EXRRSR" nillable="true" type="tns:EXRRSR"/>
+      <xs:element minOccurs="0" name="MIAPSR" nillable="true" type="tns:MIAPSR"/>
+      <xs:element minOccurs="0" name="SEATAJ" nillable="true" type="tns:SEATAJ"/>
+      <xs:element minOccurs="0" name="SEATGT" nillable="true" type="tns:SEATGT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RulesDisplay" nillable="true" type="tns:RulesDisplay"/>
+  <xs:complexType name="EXRPAR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgeEndRange" type="xs:int"/>
+          <xs:element minOccurs="0" name="AgeStartRange" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EXRPAR" nillable="true" type="tns:EXRPAR"/>
+  <xs:complexType name="RuleBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReasonCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RuleCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleBase" nillable="true" type="tns:RuleBase"/>
+  <xs:complexType name="EXRPTC">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PtcIds" nillable="true" type="q10:ArrayOfstring" xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EXRPTC" nillable="true" type="tns:EXRPTC"/>
+  <xs:complexType name="EXRRSR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ssrs" nillable="true" type="q11:ArrayOfstring" xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EXRRSR" nillable="true" type="tns:EXRRSR"/>
+  <xs:complexType name="MIAPSR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MaxInfantAllowedPerRow" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MIAPSR" nillable="true" type="tns:MIAPSR"/>
+  <xs:complexType name="SEATAJ">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Dependents" nillable="true" type="q12:ArrayOfint" xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+          <xs:element minOccurs="0" name="LinkedPtcs" nillable="true" type="q13:ArrayOfstring" xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SEATAJ" nillable="true" type="tns:SEATAJ"/>
+  <xs:complexType name="SEATGT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuleBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Dependents" nillable="true" type="q14:ArrayOfint" xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+          <xs:element minOccurs="0" name="LinkedPtcs" nillable="true" type="q15:ArrayOfstring" xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SEATGT" nillable="true" type="tns:SEATGT"/>
+  <xs:complexType name="ViewTrainSeatMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q16:ExceptionInformation.Exceptions" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="PhysicalTrains" nillable="true" type="tns:ArrayOfPhysicalTrainMap"/>
+      <xs:element minOccurs="0" name="Rules" nillable="true" type="tns:RulesDisplay"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewTrainSeatMap" nillable="true" type="tns:ViewTrainSeatMap"/>
+  <xs:complexType name="ArrayOfPhysicalTrainMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalTrainMap" nillable="true" type="tns:PhysicalTrainMap"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalTrainMap" nillable="true" type="tns:ArrayOfPhysicalTrainMap"/>
+  <xs:complexType name="PhysicalTrainMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RailCars" nillable="true" type="tns:ArrayOfRailCar"/>
+      <xs:element minOccurs="0" name="TrainNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalTrainMap" nillable="true" type="tns:PhysicalTrainMap"/>
+  <xs:complexType name="ArrayOfRailCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RailCar" nillable="true" type="tns:RailCar"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRailCar" nillable="true" type="tns:ArrayOfRailCar"/>
+  <xs:complexType name="RailCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabinClasses" nillable="true" type="tns:ArrayOfCabinClassDisplay"/>
+      <xs:element minOccurs="0" name="Decks" nillable="true" type="tns:ArrayOfDeckDisplay"/>
+      <xs:element minOccurs="0" name="RailCarID" type="xs:long"/>
+      <xs:element minOccurs="0" name="RailCarSequence" type="xs:int"/>
+      <xs:element minOccurs="0" name="SeatCabins" nillable="true" type="tns:ArrayOfSeatCabinDisplay"/>
+      <xs:element minOccurs="0" name="SeatConfigId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SeatConfiguration" nillable="true" type="tns:SeatConfigurationDisplay"/>
+      <xs:element minOccurs="0" name="TrainConfigId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RailCar" nillable="true" type="tns:RailCar"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd6</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOflong">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="long" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflong" nillable="true" type="tns:ArrayOflong"/>
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+  <xs:complexType name="ArrayOfint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfint" nillable="true" type="tns:ArrayOfint"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://20q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Flight.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints/>
+</con:interface>

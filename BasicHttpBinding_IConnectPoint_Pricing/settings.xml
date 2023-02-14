@@ -1,0 +1,2581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="8ccbe28c-2b37-417f-b296-8d3cdc8b188c" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_Pricing" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Pricing" soapVersion="1_1" anonymous="optional" definition="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Pricing.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8ccbe28c-2b37-417f-b296-8d3cdc8b188cfileName">BasicHttpBinding_IConnectPoint_Pricing</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Pricing.svc?wsdl">
+    <con:part>
+      <con:url>https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Pricing.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Pricing" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FastFareSearch"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFastFareSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFastFareSearch"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFastFareSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFastFareSearchResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuote"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteDateRange"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteDateRangeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuote"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuoteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuotes"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuotesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveSystemFareQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSystemFareQuote"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveSystemFareQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSystemFareQuoteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteShop"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteShopResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteShopDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteShopDateRange"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareQuoteShopDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareQuoteShopDateRangeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFares_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFares"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFaresResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFaresShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFaresShop"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFaresShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFaresShopResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFaresSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFaresSession"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustFaresSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustFaresSessionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustSpecialServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustSpecialServices"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_AdjustSpecialServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustSpecialServicesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceSummaries_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceSummaries"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceSummaries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceSummariesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuoteShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuoteShop"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceQuoteShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceQuoteShopResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveAARQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAARQuote"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveAARQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAARQuoteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareBundleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareBundleDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveFareBundleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFareBundleDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceBundleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceBundleDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Pricing_RetrieveServiceBundleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveServiceBundleDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Pricing">
+    <wsdl:operation name="RetrieveFastFareSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFastFareSearch" message="tns:IConnectPoint_Pricing_RetrieveFastFareSearch_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFastFareSearchResponse" message="tns:IConnectPoint_Pricing_RetrieveFastFareSearch_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuote" message="tns:IConnectPoint_Pricing_RetrieveFareQuote_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteResponse" message="tns:IConnectPoint_Pricing_RetrieveFareQuote_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteDateRange" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteDateRange_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteDateRangeResponse" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteDateRange_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuote" message="tns:IConnectPoint_Pricing_RetrieveServiceQuote_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuoteResponse" message="tns:IConnectPoint_Pricing_RetrieveServiceQuote_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuotes" message="tns:IConnectPoint_Pricing_RetrieveServiceQuotes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuotesResponse" message="tns:IConnectPoint_Pricing_RetrieveServiceQuotes_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSystemFareQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveSystemFareQuote" message="tns:IConnectPoint_Pricing_RetrieveSystemFareQuote_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveSystemFareQuoteResponse" message="tns:IConnectPoint_Pricing_RetrieveSystemFareQuote_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShop" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteShop_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShopResponse" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteShop_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteShopDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShopDateRange" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteShopDateRange_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShopDateRangeResponse" message="tns:IConnectPoint_Pricing_RetrieveFareQuoteShopDateRange_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFares">
+      <wsdl:documentation><![CDATA[<summary>Adjusts the relevant fares based on the supplied values - returns only fares being adjusted</summary>
+ <param name="FarePriceAdjustmentRequest">payload to feed adjustment process.</param>
+ <seealso cref="M:AdjustFaresShop()" />
+ <seealso cref="M:AdjustFaresSession()" />]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFares" message="tns:IConnectPoint_Pricing_AdjustFares_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresResponse" message="tns:IConnectPoint_Pricing_AdjustFares_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFaresShop">
+      <wsdl:documentation><![CDATA[<summary>Sessionless version of AdjustFares - returns only fares being adjusted</summary>
+ <param name="FarePriceAdjustmentRequest">payload to feed adjustment process.</param>
+ <seealso cref="M:AdjustFares()" />
+ <seealso cref="M:AdjustFaresShop()" />]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresShop" message="tns:IConnectPoint_Pricing_AdjustFaresShop_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresShopResponse" message="tns:IConnectPoint_Pricing_AdjustFaresShop_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFaresSession">
+      <wsdl:documentation><![CDATA[<summary>Similar to AdjustFares except that it replaces the FareInformationId in session and returns a complete/session response</summary>
+ <param name="FarePriceAdjustmentRequest">payload to feed adjustment process.</param>
+ <seealso cref="M:AdjustFares()" />
+ <seealso cref="M:AdjustFaresShop()" />]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresSession" message="tns:IConnectPoint_Pricing_AdjustFaresSession_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresSessionResponse" message="tns:IConnectPoint_Pricing_AdjustFaresSession_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustSpecialServices">
+      <wsdl:documentation>&lt;summary>
+ adjusts the relevant ssr information based on the supplied values.
+ &lt;/summary>
+ &lt;param name="SpecialServiceAdjustmentRequest">payload to determine adjustments&lt;/param></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustSpecialServices" message="tns:IConnectPoint_Pricing_AdjustSpecialServices_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/AdjustSpecialServicesResponse" message="tns:IConnectPoint_Pricing_AdjustSpecialServices_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceSummaries">
+      <wsdl:documentation>&lt;summary>
+ gets the service summary info, this is for APIIBE-501
+ &lt;/summary>
+ &lt;param name="RetrieveServiceSummaryRequest">payload to determine response&lt;/param></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceSummaries" message="tns:IConnectPoint_Pricing_RetrieveServiceSummaries_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceSummariesResponse" message="tns:IConnectPoint_Pricing_RetrieveServiceSummaries_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuoteShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuoteShop" message="tns:IConnectPoint_Pricing_RetrieveServiceQuoteShop_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuoteShopResponse" message="tns:IConnectPoint_Pricing_RetrieveServiceQuoteShop_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAARQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" message="tns:IConnectPoint_Pricing_RetrieveAARQuote_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuoteResponse" message="tns:IConnectPoint_Pricing_RetrieveAARQuote_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareBundleDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareBundleDetails" message="tns:IConnectPoint_Pricing_RetrieveFareBundleDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareBundleDetailsResponse" message="tns:IConnectPoint_Pricing_RetrieveFareBundleDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceBundleDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetails" message="tns:IConnectPoint_Pricing_RetrieveServiceBundleDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetailsResponse" message="tns:IConnectPoint_Pricing_RetrieveServiceBundleDetails_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Pricing" type="tns:IConnectPoint_Pricing">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrieveFastFareSearch">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFastFareSearch" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuote">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteDateRange">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteDateRange" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuote">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuotes">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuotes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSystemFareQuote">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveSystemFareQuote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteShop">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShop" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareQuoteShopDateRange">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteShopDateRange" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFares">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/AdjustFares" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFaresShop">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresShop" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustFaresSession">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/AdjustFaresSession" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustSpecialServices">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/AdjustSpecialServices" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceSummaries">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceSummaries" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceQuoteShop">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuoteShop" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAARQuote">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFareBundleDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareBundleDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveServiceBundleDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Pricing">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Pricing" binding="tns:BasicHttpBinding_IConnectPoint_Pricing">
+      <soap:address location="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FastFareSearch"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails"/>
+  <xs:element name="RetrieveFastFareSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFastFareSearchRequest" nillable="true" type="q1:RetrieveFastFareSearch" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FastFareSearch"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFastFareSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFastFareSearchResult" nillable="true" type="q2:ViewFastFareSearch" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteRequest" nillable="true" type="q3:RetrieveFareQuote" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteResult" nillable="true" type="q4:ViewFareQuote" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteDateRangeRequest" nillable="true" type="q5:RetrieveFareQuoteByDateRange" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteDateRangeResult" nillable="true" type="q6:ViewFareQuote" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuoteRequest" nillable="true" type="q7:RetrieveServiceQuote" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuoteResult" nillable="true" type="q8:ViewServiceQuotes" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuotesRequest" nillable="true" type="q9:RetrieveServiceQuotes" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuotesResult" nillable="true" type="q10:ViewServiceQuotes" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSystemFareQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSystemFareQuoteRequest" nillable="true" type="q11:RetrieveSystemFareQuote" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSystemFareQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSystemFareQuoteResult" nillable="true" type="q12:ViewSystemFareQuote" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteShop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteShopRequest" nillable="true" type="q13:RetrieveFareQuoteShop" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteShopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteShopResult" nillable="true" type="q14:ViewFareQuote" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteShopDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteShopDateRangeRequest" nillable="true" type="q15:RetrieveFareQuoteShopByDateRange" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareQuoteShopDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareQuoteShopDateRangeResult" nillable="true" type="q16:ViewFareQuote" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFares">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FarePriceAdjustmentRequest" nillable="true" type="q17:FareAdjustment" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFaresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdjustFaresResult" nillable="true" type="q18:ViewFareQuote" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFaresShop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FarePriceAdjustmentRequest" nillable="true" type="q19:FareShopAdjustment" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFaresShopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdjustFaresShopResult" nillable="true" type="q20:ViewFareQuote" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFaresSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FarePriceAdjustmentRequest" nillable="true" type="q21:FareAdjustment" xmlns:q21="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustFaresSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdjustFaresSessionResult" nillable="true" type="q22:ViewFareQuote" xmlns:q22="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustSpecialServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SpecialServiceAdjustmentRequest" nillable="true" type="q23:SpecialServiceAdjustment" xmlns:q23="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustSpecialServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdjustSpecialServicesResult" nillable="true" type="q24:ViewServiceQuotes" xmlns:q24="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceSummaries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceSummaryRequest" nillable="true" type="q25:RetrieveServiceSummaryRequest" xmlns:q25="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceSummariesResult" nillable="true" type="q26:ServiceSummaryResponse" xmlns:q26="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuoteShop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuoteShopRequest" nillable="true" type="q27:RetrieveServiceQuotesShop" xmlns:q27="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceQuoteShopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceQuoteShopResult" nillable="true" type="q28:ViewServiceQuotes" xmlns:q28="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAARQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAARQuoteRequest" nillable="true" type="q29:RetrieveAARQuote" xmlns:q29="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAARQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAARQuoteResult" nillable="true" type="q30:ViewAARQuotes" xmlns:q30="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareBundleDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareBundleRequest" nillable="true" type="q31:RetrieveFareBundleDetailsRequest" xmlns:q31="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFareBundleDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFareBundleDetailsResult" nillable="true" type="q32:ViewFareBundleDetailsResponse" xmlns:q32="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceBundleDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceBundleRequest" nillable="true" type="q33:RetriveServiceBundleDetailsRequest" xmlns:q33="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveServiceBundleDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveServiceBundleDetailsResult" nillable="true" type="q34:ViewServiceBundleDetailsResponse" xmlns:q34="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FastFareSearch" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FastFareSearch">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+  <xs:complexType name="RetrieveFastFareSearch">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:CarrierInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="FastFareSearchInfo" nillable="true" type="tns:FastFareSearchInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFastFareSearch" nillable="true" type="tns:RetrieveFastFareSearch"/>
+  <xs:complexType name="FastFareSearchInfo">
+    <xs:sequence>
+      <xs:element name="CurrencyOfFastFareSearch" type="q2:Enumerations.CurrencyCodeTypes" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="PromotionalCode" nillable="true" type="xs:string"/>
+      <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+      <xs:element name="CabinToSearch" nillable="true" type="xs:string"/>
+      <xs:element name="InventoryTypeToSearch" type="q3:Enums.InventoryFilterMethodType" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xs:element name="FareFilterGrouping" type="q4:Enums.FareFilterGroupingsMethodType" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xs:element name="FareFilterTypeToSearch" type="q5:Enums.FareGroupMethodType" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xs:element name="DateSearchType" type="q6:Enums.DateSearchType" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xs:element name="FareSelectionType" type="q7:Enums.FareSelectionType" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+      <xs:element name="FastFareSearchTripDetails" nillable="true" type="tns:ArrayOfFastFareSearchTripDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FastFareSearchInfo" nillable="true" type="tns:FastFareSearchInfo"/>
+  <xs:complexType name="ArrayOfFastFareSearchTripDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FastFareSearchTripDetail" nillable="true" type="tns:FastFareSearchTripDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFastFareSearchTripDetail" nillable="true" type="tns:ArrayOfFastFareSearchTripDetail"/>
+  <xs:complexType name="FastFareSearchTripDetail">
+    <xs:sequence>
+      <xs:element name="DepartureLocation" nillable="true" type="xs:string"/>
+      <xs:element name="ArrivalLocation" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="NumberOfFlexibleDaysBefore" type="xs:int"/>
+      <xs:element name="NumberOfFlexibleDaysAfter" type="xs:int"/>
+      <xs:element name="DepartureDateBeginRange" type="xs:dateTime"/>
+      <xs:element name="DepartureDateEndRange" type="xs:dateTime"/>
+      <xs:element name="TripOrderIndex" type="xs:int"/>
+      <xs:element name="MinimumTripLength" type="xs:int"/>
+      <xs:element name="FastFareSearchTravelerInfos" nillable="true" type="tns:ArrayOfFastFareSearchTravelerInfo"/>
+      <xs:element minOccurs="0" name="OverrideEffectiveDate" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PrivateFareOption" nillable="true" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FastFareSearchTripDetail" nillable="true" type="tns:FastFareSearchTripDetail"/>
+  <xs:complexType name="ArrayOfFastFareSearchTravelerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FastFareSearchTravelerInfo" nillable="true" type="tns:FastFareSearchTravelerInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFastFareSearchTravelerInfo" nillable="true" type="tns:ArrayOfFastFareSearchTravelerInfo"/>
+  <xs:complexType name="FastFareSearchTravelerInfo">
+    <xs:sequence>
+      <xs:element name="PassengerTypeID" type="xs:int"/>
+      <xs:element name="TotalSeatsRequired" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FastFareSearchTravelerInfo" nillable="true" type="tns:FastFareSearchTravelerInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="CarrierInfo">
+    <xs:sequence>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierInfo" nillable="true" type="tns:CarrierInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:simpleType name="Enumerations.CurrencyCodeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AED"/>
+      <xs:enumeration value="AFN"/>
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="AMD"/>
+      <xs:enumeration value="ANG"/>
+      <xs:enumeration value="AOA"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="AWG"/>
+      <xs:enumeration value="AZN"/>
+      <xs:enumeration value="BAM"/>
+      <xs:enumeration value="BBD"/>
+      <xs:enumeration value="BDT"/>
+      <xs:enumeration value="BGN"/>
+      <xs:enumeration value="BHD"/>
+      <xs:enumeration value="BIF"/>
+      <xs:enumeration value="BMD"/>
+      <xs:enumeration value="BND"/>
+      <xs:enumeration value="BOB"/>
+      <xs:enumeration value="BRL"/>
+      <xs:enumeration value="BSD"/>
+      <xs:enumeration value="BTN"/>
+      <xs:enumeration value="BWP"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="BZD"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="CDF"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="CLP"/>
+      <xs:enumeration value="CNY"/>
+      <xs:enumeration value="COP"/>
+      <xs:enumeration value="CRC"/>
+      <xs:enumeration value="CUP"/>
+      <xs:enumeration value="CVE"/>
+      <xs:enumeration value="CYP"/>
+      <xs:enumeration value="CZK"/>
+      <xs:enumeration value="DJF"/>
+      <xs:enumeration value="DKK"/>
+      <xs:enumeration value="DOP"/>
+      <xs:enumeration value="DZD"/>
+      <xs:enumeration value="EGP"/>
+      <xs:enumeration value="ERN"/>
+      <xs:enumeration value="ETB"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="FJD"/>
+      <xs:enumeration value="FKP"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="GEL"/>
+      <xs:enumeration value="GGP"/>
+      <xs:enumeration value="GHS"/>
+      <xs:enumeration value="GIP"/>
+      <xs:enumeration value="GMD"/>
+      <xs:enumeration value="GNF"/>
+      <xs:enumeration value="GTQ"/>
+      <xs:enumeration value="GYD"/>
+      <xs:enumeration value="HKD"/>
+      <xs:enumeration value="HNL"/>
+      <xs:enumeration value="HRK"/>
+      <xs:enumeration value="HTG"/>
+      <xs:enumeration value="HUF"/>
+      <xs:enumeration value="IDR"/>
+      <xs:enumeration value="ILS"/>
+      <xs:enumeration value="IMP"/>
+      <xs:enumeration value="INR"/>
+      <xs:enumeration value="IQD"/>
+      <xs:enumeration value="IRR"/>
+      <xs:enumeration value="ISK"/>
+      <xs:enumeration value="JEP"/>
+      <xs:enumeration value="JMD"/>
+      <xs:enumeration value="JOD"/>
+      <xs:enumeration value="JPY"/>
+      <xs:enumeration value="KES"/>
+      <xs:enumeration value="KGS"/>
+      <xs:enumeration value="KHR"/>
+      <xs:enumeration value="KMF"/>
+      <xs:enumeration value="KPW"/>
+      <xs:enumeration value="KWD"/>
+      <xs:enumeration value="KYD"/>
+      <xs:enumeration value="KZT"/>
+      <xs:enumeration value="LAK"/>
+      <xs:enumeration value="LBP"/>
+      <xs:enumeration value="LKR"/>
+      <xs:enumeration value="LRD"/>
+      <xs:enumeration value="LSL"/>
+      <xs:enumeration value="LTL"/>
+      <xs:enumeration value="LVL"/>
+      <xs:enumeration value="LYD"/>
+      <xs:enumeration value="MAD"/>
+      <xs:enumeration value="MDL"/>
+      <xs:enumeration value="MGA"/>
+      <xs:enumeration value="MKD"/>
+      <xs:enumeration value="MMK"/>
+      <xs:enumeration value="MNT"/>
+      <xs:enumeration value="MOP"/>
+      <xs:enumeration value="MRO"/>
+      <xs:enumeration value="MTL"/>
+      <xs:enumeration value="MUR"/>
+      <xs:enumeration value="MVR"/>
+      <xs:enumeration value="MWK"/>
+      <xs:enumeration value="MXN"/>
+      <xs:enumeration value="MYR"/>
+      <xs:enumeration value="MZN"/>
+      <xs:enumeration value="NAD"/>
+      <xs:enumeration value="NGN"/>
+      <xs:enumeration value="NIO"/>
+      <xs:enumeration value="NOK"/>
+      <xs:enumeration value="NPR"/>
+      <xs:enumeration value="NZD"/>
+      <xs:enumeration value="OMR"/>
+      <xs:enumeration value="PAB"/>
+      <xs:enumeration value="PEN"/>
+      <xs:enumeration value="PGK"/>
+      <xs:enumeration value="PHP"/>
+      <xs:enumeration value="PKR"/>
+      <xs:enumeration value="PLN"/>
+      <xs:enumeration value="PYG"/>
+      <xs:enumeration value="QAR"/>
+      <xs:enumeration value="RON"/>
+      <xs:enumeration value="RSD"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="RWF"/>
+      <xs:enumeration value="SAR"/>
+      <xs:enumeration value="SBD"/>
+      <xs:enumeration value="SCR"/>
+      <xs:enumeration value="SDG"/>
+      <xs:enumeration value="SEK"/>
+      <xs:enumeration value="SGD"/>
+      <xs:enumeration value="SHP"/>
+      <xs:enumeration value="SLL"/>
+      <xs:enumeration value="SOS"/>
+      <xs:enumeration value="SPL"/>
+      <xs:enumeration value="SRD"/>
+      <xs:enumeration value="STD"/>
+      <xs:enumeration value="SVC"/>
+      <xs:enumeration value="SYP"/>
+      <xs:enumeration value="SZL"/>
+      <xs:enumeration value="THB"/>
+      <xs:enumeration value="TJS"/>
+      <xs:enumeration value="TMM"/>
+      <xs:enumeration value="TND"/>
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="TRI"/>
+      <xs:enumeration value="TTD"/>
+      <xs:enumeration value="TVD"/>
+      <xs:enumeration value="TWD"/>
+      <xs:enumeration value="TZS"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="UGX"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="UYU"/>
+      <xs:enumeration value="UZS"/>
+      <xs:enumeration value="VEB"/>
+      <xs:enumeration value="VEF"/>
+      <xs:enumeration value="VND"/>
+      <xs:enumeration value="VUV"/>
+      <xs:enumeration value="WST"/>
+      <xs:enumeration value="XAF"/>
+      <xs:enumeration value="XAG"/>
+      <xs:enumeration value="XAU"/>
+      <xs:enumeration value="XCD"/>
+      <xs:enumeration value="XDR"/>
+      <xs:enumeration value="XOF"/>
+      <xs:enumeration value="XPD"/>
+      <xs:enumeration value="XPF"/>
+      <xs:enumeration value="XPT"/>
+      <xs:enumeration value="YER"/>
+      <xs:enumeration value="ZAR"/>
+      <xs:enumeration value="ZMK"/>
+      <xs:enumeration value="ZWD"/>
+      <xs:enumeration value="KRW"/>
+      <xs:enumeration value="ZMW"/>
+      <xs:enumeration value="SYS"/>
+      <xs:enumeration value="VES"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="BYN"/>
+      <xs:enumeration value="BOV"/>
+      <xs:enumeration value="CLF"/>
+      <xs:enumeration value="COU"/>
+      <xs:enumeration value="CUC"/>
+      <xs:enumeration value="MRU"/>
+      <xs:enumeration value="MXV"/>
+      <xs:enumeration value="STN"/>
+      <xs:enumeration value="XSU"/>
+      <xs:enumeration value="SSP"/>
+      <xs:enumeration value="CHW"/>
+      <xs:enumeration value="TRY"/>
+      <xs:enumeration value="TMT"/>
+      <xs:enumeration value="UYI"/>
+      <xs:enumeration value="UYW"/>
+      <xs:enumeration value="ZWL"/>
+      <xs:enumeration value="XBA"/>
+      <xs:enumeration value="XBB"/>
+      <xs:enumeration value="XBC"/>
+      <xs:enumeration value="XBD"/>
+      <xs:enumeration value="CNH"/>
+      <xs:enumeration value="RTG"/>
+      <xs:enumeration value="PTS"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.CurrencyCodeTypes" nillable="true" type="tns:Enumerations.CurrencyCodeTypes"/>
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:simpleType name="Enumerations.ReservationChannelTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STANDARD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WEB">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GDS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TPAPI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DCS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXT_WEB">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PNRIMPORT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MOBILE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ALL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">999</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MYIDTRAVEL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="KIOSK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PNLIMPORT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.ReservationChannelTypes" nillable="true" type="tns:Enumerations.ReservationChannelTypes"/>
+  <xs:simpleType name="Enumerations.TaxTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard"/>
+      <xs:enumeration value="VAT"/>
+      <xs:enumeration value="FEE"/>
+      <xs:enumeration value="SVAT"/>
+      <xs:enumeration value="TAXONTAX">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MISC">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AGGREGATE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.TaxTypes" nillable="true" type="tns:Enumerations.TaxTypes"/>
+  <xs:complexType name="TransactionInfoNoSession">
+    <xs:sequence>
+      <xs:element name="LogonID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element name="Password" nillable="true" type="xs:string"/>
+      <xs:element name="UserName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element name="TaPassword" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfoNoSession" nillable="true" type="tns:TransactionInfoNoSession"/>
+  <xs:complexType name="BaseFareChargeInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeCommissionInCharge" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseFareChargeInfo" nillable="true" type="tns:BaseFareChargeInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service"/>
+  <xs:simpleType name="Enums.InventoryFilterMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Available"/>
+      <xs:enumeration value="All">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AvailablePreference">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">200</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.InventoryFilterMethodType" nillable="true" type="tns:Enums.InventoryFilterMethodType"/>
+  <xs:simpleType name="Enums.FareFilterGroupingsMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LowestFarePerDay"/>
+      <xs:enumeration value="LowestFarePerFlight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.FareFilterGroupingsMethodType" nillable="true" type="tns:Enums.FareFilterGroupingsMethodType"/>
+  <xs:simpleType name="Enums.FareGroupMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WebFareTypes"/>
+      <xs:enumeration value="FareClassFareBasis">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.FareGroupMethodType" nillable="true" type="tns:Enums.FareGroupMethodType"/>
+  <xs:simpleType name="Enums.DateSearchType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Flexible"/>
+      <xs:enumeration value="FlexibleByCabin"/>
+      <xs:enumeration value="DateRange"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.DateSearchType" nillable="true" type="tns:Enums.DateSearchType"/>
+  <xs:simpleType name="Enums.FareSelectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All"/>
+      <xs:enumeration value="OneWayOnly"/>
+      <xs:enumeration value="RoundTripOnly"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.FareSelectionType" nillable="true" type="tns:Enums.FareSelectionType"/>
+  <xs:simpleType name="Enums.FareFilterMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CombinabilityNestedRoundtripAllFares"/>
+      <xs:enumeration value="CombinabilityNestedRoundtripLowestFarePerDay"/>
+      <xs:enumeration value="CombinabilityNestedRoundtripLowestFarePerFareType"/>
+      <xs:enumeration value="CombinabilityNestedRoundtripLowestFarePerFlight"/>
+      <xs:enumeration value="CombinabilityNestedRoundtripOnlyAllFares">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CombinabilityNestedRoundtripOnlyLowestFarePerDay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CombinabilityNestedRoundtripOnlyLowestFarePerFareType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CombinabilityNestedRoundtripOnlyLowestFarePerFlight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityAllFares">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripLowestFarePerDay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripLowestFarePerFareType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripLowestFarePerFlight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripOnlyAllFares">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">120</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripOnlyLowestFarePerDay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">121</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripOnlyLowestFarePerFareType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">122</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoCombinabilityRoundtripOnlyLowestFarePerFlight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">123</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.FareFilterMethodType" nillable="true" type="tns:Enums.FareFilterMethodType"/>
+  <xs:complexType name="FareAdjustment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:IataNumberInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request">
+        <xs:sequence>
+          <xs:element name="FareAdjustmentDetails" nillable="true" type="tns:ArrayOfFareAdjustmentDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FareAdjustment" nillable="true" type="tns:FareAdjustment"/>
+  <xs:complexType name="ArrayOfFareAdjustmentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareAdjustmentDetail" nillable="true" type="tns:FareAdjustmentDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareAdjustmentDetail" nillable="true" type="tns:ArrayOfFareAdjustmentDetail"/>
+  <xs:complexType name="FareAdjustmentDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FareAdjustmentBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FareID" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FareAdjustmentDetail" nillable="true" type="tns:FareAdjustmentDetail"/>
+  <xs:complexType name="FareAdjustmentBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustmentType" type="tns:AdjustmentDetailType"/>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Level" type="tns:AdjustmentLevel"/>
+      <xs:element minOccurs="0" name="OutgoingFlightSegmentOrigin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RoundTrip" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareAdjustmentBase" nillable="true" type="tns:FareAdjustmentBase"/>
+  <xs:simpleType name="AdjustmentDetailType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PERCENTAGE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AMOUNT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REPLACE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdjustmentDetailType" nillable="true" type="tns:AdjustmentDetailType"/>
+  <xs:simpleType name="AdjustmentLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASE"/>
+      <xs:enumeration value="TOTAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdjustmentLevel" nillable="true" type="tns:AdjustmentLevel"/>
+  <xs:complexType name="FareShopAdjustment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:TransactionInfoNoSession" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyOfFareQuote" type="q2:Enumerations.CurrencyCodeTypes"/>
+          <xs:element name="FareAdjustmentDetails" nillable="true" type="tns:ArrayOfFareShopAdjustmentDetail"/>
+          <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element name="IncludeCommissionInCharge" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FareShopAdjustment" nillable="true" type="tns:FareShopAdjustment"/>
+  <xs:complexType name="ArrayOfFareShopAdjustmentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareShopAdjustmentDetail" nillable="true" type="tns:FareShopAdjustmentDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareShopAdjustmentDetail" nillable="true" type="tns:ArrayOfFareShopAdjustmentDetail"/>
+  <xs:complexType name="FareShopAdjustmentDetail">
+    <xs:sequence>
+      <xs:element name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element name="DateOfDeparture" type="xs:dateTime"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="FareClass" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FareID" type="xs:int"/>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Level" type="tns:AdjustmentLevel"/>
+      <xs:element name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OutgoingFlightSegmentOrigin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OverrideEffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OverrideFareAmount" type="xs:decimal"/>
+      <xs:element name="PassengerTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RoundTrip" type="xs:boolean"/>
+      <xs:element name="RoundTripFare" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareShopAdjustmentDetail" nillable="true" type="tns:FareShopAdjustmentDetail"/>
+  <xs:complexType name="SpecialServiceAdjustment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q3:IataNumberInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SSRAdjustmentDetails" nillable="true" type="tns:ArrayOfSpecialServiceAdjustmentDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpecialServiceAdjustment" nillable="true" type="tns:SpecialServiceAdjustment"/>
+  <xs:complexType name="ArrayOfSpecialServiceAdjustmentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialServiceAdjustmentDetail" nillable="true" type="tns:SpecialServiceAdjustmentDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialServiceAdjustmentDetail" nillable="true" type="tns:ArrayOfSpecialServiceAdjustmentDetail"/>
+  <xs:complexType name="SpecialServiceAdjustmentDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AdjustmentDetailBase">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpecialServiceAdjustmentDetail" nillable="true" type="tns:SpecialServiceAdjustmentDetail"/>
+  <xs:complexType name="AdjustmentDetailBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q4:ServiceQuote" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service">
+        <xs:sequence>
+          <xs:element name="Amount" type="xs:decimal"/>
+          <xs:element name="AdjustmentType" type="tns:AdjustmentDetailType"/>
+          <xs:element name="Level" type="tns:AdjustmentLevel"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AdjustmentDetailBase" nillable="true" type="tns:AdjustmentDetailBase"/>
+  <xs:complexType name="RetrieveServiceSummaryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q5:TransactionInfoNoSession" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveServiceSummaryRequest" nillable="true" type="tns:RetrieveServiceSummaryRequest"/>
+  <xs:complexType name="RetriveServiceBundleDetailsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:TransactionInfo" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ServiceBundleCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetriveServiceBundleDetailsRequest" nillable="true" type="tns:RetriveServiceBundleDetailsRequest"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd10</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/ConnectPoint.GalaxyBridge.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="IataNumberInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:BaseFareChargeInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IataNumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IataNumberInfo" nillable="true" type="tns:IataNumberInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd9</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="RetrieveServiceQuote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="LogicalFlightID" type="xs:int"/>
+          <xs:element name="DepartureDate" type="xs:dateTime"/>
+          <xs:element name="AirportCode" nillable="true" type="xs:string"/>
+          <xs:element name="ServiceCode" nillable="true" type="xs:string"/>
+          <xs:element name="Cabin" nillable="true" type="xs:string"/>
+          <xs:element name="Category" nillable="true" type="xs:string"/>
+          <xs:element name="Currency" type="q1:Enumerations.CurrencyCodeTypes"/>
+          <xs:element name="UTCOffset" type="xs:long"/>
+          <xs:element name="OperatingCarrierCode" nillable="true" type="xs:string"/>
+          <xs:element name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+          <xs:element name="FareClass" nillable="true" type="xs:string"/>
+          <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element name="ReservationChannel" type="q1:Enumerations.ReservationChannelTypes"/>
+          <xs:element minOccurs="0" name="ServiceTypes" nillable="true" type="q2:ArrayOfint" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveServiceQuote" nillable="true" type="tns:RetrieveServiceQuote"/>
+  <xs:complexType name="RetrieveServiceQuotes">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q3:TransactionInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="RetrieveServiceQuotes" nillable="true" type="tns:ArrayOfServiceQuote"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveServiceQuotes" nillable="true" type="tns:RetrieveServiceQuotes"/>
+  <xs:complexType name="ArrayOfServiceQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceQuote" nillable="true" type="tns:ServiceQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceQuote" nillable="true" type="tns:ArrayOfServiceQuote"/>
+  <xs:complexType name="ServiceQuote">
+    <xs:sequence>
+      <xs:element name="LogicalFlightID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="AirportCode" nillable="true" type="xs:string"/>
+      <xs:element name="ServiceCode" nillable="true" type="xs:string"/>
+      <xs:element name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element name="Category" nillable="true" type="xs:string"/>
+      <xs:element name="Currency" type="q4:Enumerations.CurrencyCodeTypes" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="UTCOffset" type="xs:long"/>
+      <xs:element name="OperatingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="FareClass" nillable="true" type="xs:string"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="ReservationChannel" type="q5:Enumerations.ReservationChannelTypes" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="DestinationAirportCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceTypes" nillable="true" type="q6:ArrayOfint" xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceQuote" nillable="true" type="tns:ServiceQuote"/>
+  <xs:complexType name="RetrieveServiceQuotesShop">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q7:TransactionInfoNoSession" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsRoundtrip" type="xs:boolean"/>
+          <xs:element name="RetrieveServiceQuotes" nillable="true" type="tns:ArrayOfServiceQuote"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveServiceQuotesShop" nillable="true" type="tns:RetrieveServiceQuotesShop"/>
+  <xs:complexType name="RetrieveAARQuote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q8:TransactionInfo" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="AARQuotes" nillable="true" type="tns:ArrayOfAARQuote"/>
+          <xs:element minOccurs="0" name="IsRoundTrip" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="PricingEvent" nillable="true" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAARQuote" nillable="true" type="tns:RetrieveAARQuote"/>
+  <xs:complexType name="ArrayOfAARQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AARQuote" nillable="true" type="tns:AARQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAARQuote" nillable="true" type="tns:ArrayOfAARQuote"/>
+  <xs:complexType name="AARQuote">
+    <xs:sequence>
+      <xs:element name="AARRequestPtcs" nillable="true" type="tns:ArrayOfAARRequestPtc"/>
+      <xs:element name="AirportCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string"/>
+      <xs:element name="Currency" type="q9:Enumerations.CurrencyCodeTypes" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="DestinationAirportCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FareClass" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceTypes" nillable="true" type="q10:ArrayOfint" xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="UTCOffset" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AARQuote" nillable="true" type="tns:AARQuote"/>
+  <xs:complexType name="ArrayOfAARRequestPtc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AARRequestPtc" nillable="true" type="tns:AARRequestPtc"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAARRequestPtc" nillable="true" type="tns:ArrayOfAARRequestPtc"/>
+  <xs:complexType name="AARRequestPtc">
+    <xs:sequence>
+      <xs:element name="PassengerTypeID" type="xs:int"/>
+      <xs:element name="Quantity" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AARRequestPtc" nillable="true" type="tns:AARRequestPtc"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd8</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfint" nillable="true" type="tns:ArrayOfint"/>
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="ViewFastFareSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="FareDetails" nillable="true" type="tns:ArrayOfFareDetail"/>
+      <xs:element minOccurs="0" name="FlightDetails" nillable="true" type="tns:ArrayOfFlightDetail"/>
+      <xs:element minOccurs="0" name="FlightLegDetails" nillable="true" type="tns:ArrayOfFlightLegDetailed"/>
+      <xs:element minOccurs="0" name="TripInfos" nillable="true" type="tns:ArrayOfTripInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFastFareSearch" nillable="true" type="tns:ViewFastFareSearch"/>
+  <xs:complexType name="ArrayOfFareDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareDetail" nillable="true" type="tns:FareDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareDetail" nillable="true" type="tns:ArrayOfFareDetail"/>
+  <xs:complexType name="FareDetail">
+    <xs:sequence>
+      <xs:element name="FareTypeIdentifier" type="xs:int"/>
+      <xs:element name="FCCode" nillable="true" type="xs:string"/>
+      <xs:element name="FBCode" nillable="true" type="xs:string"/>
+      <xs:element name="FareScheduleID" type="xs:int"/>
+      <xs:element name="PTCID" type="xs:int"/>
+      <xs:element name="FareTypeName" nillable="true" type="xs:string"/>
+      <xs:element name="BaseFareAmtInclTaxes" type="xs:decimal"/>
+      <xs:element name="BaseFareAmt" type="xs:decimal"/>
+      <xs:element name="FareAmtNoTaxes" type="xs:decimal"/>
+      <xs:element name="FareAmt" type="xs:decimal"/>
+      <xs:element name="DiscountAmt" type="xs:decimal"/>
+      <xs:element name="PrivateFare" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareDetail" nillable="true" type="tns:FareDetail"/>
+  <xs:complexType name="ArrayOfFlightDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightDetail" nillable="true" type="tns:FlightDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightDetail" nillable="true" type="tns:ArrayOfFlightDetail"/>
+  <xs:complexType name="FlightDetail">
+    <xs:sequence>
+      <xs:element name="FlightDetailIdentifier" type="xs:int"/>
+      <xs:element name="OriginLocation" nillable="true" type="xs:string"/>
+      <xs:element name="DestinationLocation" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="TotalFlightDuration" type="xs:decimal"/>
+      <xs:element name="SeatsAvailable" type="xs:int"/>
+      <xs:element name="LegDetailIdentifiers" nillable="true" type="tns:ArrayOfLegDetailIdentifier"/>
+      <xs:element name="LogicalFlightID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightDetail" nillable="true" type="tns:FlightDetail"/>
+  <xs:complexType name="ArrayOfLegDetailIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LegDetailIdentifier" nillable="true" type="tns:LegDetailIdentifier"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLegDetailIdentifier" nillable="true" type="tns:ArrayOfLegDetailIdentifier"/>
+  <xs:complexType name="LegDetailIdentifier">
+    <xs:sequence>
+      <xs:element name="LegIdentifier" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LegDetailIdentifier" nillable="true" type="tns:LegDetailIdentifier"/>
+  <xs:complexType name="ArrayOfFlightLegDetailed">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightLegDetailed" nillable="true" type="tns:FlightLegDetailed"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightLegDetailed" nillable="true" type="tns:ArrayOfFlightLegDetailed"/>
+  <xs:complexType name="FlightLegDetailed">
+    <xs:sequence>
+      <xs:element name="LegIdentifier" type="xs:int"/>
+      <xs:element name="OriginLocation" nillable="true" type="xs:string"/>
+      <xs:element name="ArrivalLocation" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FlightDuration" type="xs:decimal"/>
+      <xs:element name="AirCraftType" nillable="true" type="xs:string"/>
+      <xs:element name="AirCraftDescription" nillable="true" type="xs:string"/>
+      <xs:element name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="OperatingCarrier" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightLegDetailed" nillable="true" type="tns:FlightLegDetailed"/>
+  <xs:complexType name="ArrayOfTripInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TripInfo" nillable="true" type="tns:TripInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTripInfo" nillable="true" type="tns:ArrayOfTripInfo"/>
+  <xs:complexType name="TripInfo">
+    <xs:sequence>
+      <xs:element name="FlightDetailIdentifier" type="xs:int"/>
+      <xs:element name="FareTypeInfos" nillable="true" type="tns:ArrayOfFareTypeInfo"/>
+      <xs:element name="CombinedTripInfos" nillable="true" type="tns:ArrayOfCombinedTripInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TripInfo" nillable="true" type="tns:TripInfo"/>
+  <xs:complexType name="ArrayOfFareTypeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareTypeInfo" nillable="true" type="tns:FareTypeInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareTypeInfo" nillable="true" type="tns:ArrayOfFareTypeInfo"/>
+  <xs:complexType name="FareTypeInfo">
+    <xs:sequence>
+      <xs:element name="FareTypeIdentifier" type="xs:int"/>
+      <xs:element name="FareTypeName" nillable="true" type="xs:string"/>
+      <xs:element name="ApplicableFareInfos" nillable="true" type="tns:ArrayOfApplicableFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareTypeInfo" nillable="true" type="tns:FareTypeInfo"/>
+  <xs:complexType name="ArrayOfApplicableFareInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicableFareInfo" nillable="true" type="tns:ApplicableFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicableFareInfo" nillable="true" type="tns:ArrayOfApplicableFareInfo"/>
+  <xs:complexType name="ApplicableFareInfo">
+    <xs:sequence>
+      <xs:element name="FareDetailIdentifier" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicableFareInfo" nillable="true" type="tns:ApplicableFareInfo"/>
+  <xs:complexType name="ArrayOfCombinedTripInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinedTripInfo" nillable="true" type="tns:CombinedTripInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinedTripInfo" nillable="true" type="tns:ArrayOfCombinedTripInfo"/>
+  <xs:complexType name="CombinedTripInfo">
+    <xs:sequence>
+      <xs:element name="FlightDetailIdentifier" type="xs:int"/>
+      <xs:element name="FareTypeInfos" nillable="true" type="tns:ArrayOfFareTypeInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinedTripInfo" nillable="true" type="tns:CombinedTripInfo"/>
+  <xs:complexType name="ViewFareQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BogoPromotionApplied" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CommissionIncluded" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="FlightSegments" nillable="true" type="tns:ArrayOfFlightSegment"/>
+      <xs:element minOccurs="0" name="IsExternalPriced" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="LegDetails" nillable="true" type="tns:ArrayOfLegDetail"/>
+      <xs:element minOccurs="0" name="RequestedCorporationID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RequestedCurrencyOfFareQuote" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestedFareFilterMethod" type="xs:int"/>
+      <xs:element minOccurs="0" name="RequestedGroupMethod" type="xs:int"/>
+      <xs:element minOccurs="0" name="RequestedIataNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestedInventoryFilterMethod" type="xs:int"/>
+      <xs:element minOccurs="0" name="RequestedPromotionalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestedReservationChannel" type="xs:int"/>
+      <xs:element minOccurs="0" name="SegmentDetails" nillable="true" type="tns:ArrayOfSegmentDetail"/>
+      <xs:element minOccurs="0" name="TaxDetails" nillable="true" type="tns:ArrayOfTaxDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFareQuote" nillable="true" type="tns:ViewFareQuote"/>
+  <xs:complexType name="ArrayOfFlightSegment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightSegment" nillable="true" type="tns:FlightSegment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightSegment" nillable="true" type="tns:ArrayOfFlightSegment"/>
+  <xs:complexType name="FlightSegment">
+    <xs:sequence>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="LegCount" type="xs:int"/>
+      <xs:element name="International" type="xs:boolean"/>
+      <xs:element name="FareTypes" nillable="true" type="tns:ArrayOfFareType"/>
+      <xs:element name="FlightLegDetails" nillable="true" type="tns:ArrayOfFlightLegDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightSegment" nillable="true" type="tns:FlightSegment"/>
+  <xs:complexType name="ArrayOfFareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareType" nillable="true" type="tns:FareType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareType" nillable="true" type="tns:ArrayOfFareType"/>
+  <xs:complexType name="FareType">
+    <xs:sequence>
+      <xs:element name="FareTypeID" type="xs:int"/>
+      <xs:element name="FareTypeName" nillable="true" type="xs:string"/>
+      <xs:element name="FilterRemove" type="xs:boolean"/>
+      <xs:element name="FareInfos" nillable="true" type="tns:ArrayOfFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareType" nillable="true" type="tns:FareType"/>
+  <xs:complexType name="ArrayOfFareInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareInfo" nillable="true" type="tns:FareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareInfo" nillable="true" type="tns:ArrayOfFareInfo"/>
+  <xs:complexType name="FareInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseFareInfo">
+        <xs:sequence>
+          <xs:element name="ReturnFlightSegmentDetails" nillable="true" type="tns:ArrayOfReturnFlightSegmentDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FareInfo" nillable="true" type="tns:FareInfo"/>
+  <xs:complexType name="BaseFareInfo">
+    <xs:sequence>
+      <xs:element name="FareID" type="xs:int"/>
+      <xs:element name="FCCode" nillable="true" type="xs:string"/>
+      <xs:element name="FBCode" nillable="true" type="xs:string"/>
+      <xs:element name="BaseFareAmtNoTaxes" type="xs:decimal"/>
+      <xs:element name="BaseFareAmt" type="xs:decimal"/>
+      <xs:element name="FareAmtNoTaxes" type="xs:decimal"/>
+      <xs:element name="FareAmt" type="xs:decimal"/>
+      <xs:element name="BaseFareAmtInclTax" type="xs:decimal"/>
+      <xs:element name="FareAmtInclTax" type="xs:decimal"/>
+      <xs:element name="PvtFare" type="xs:boolean"/>
+      <xs:element name="PTCID" type="xs:int"/>
+      <xs:element name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element name="SeatsAvailable" type="xs:int"/>
+      <xs:element name="InfantSeatsAvailable" type="xs:int"/>
+      <xs:element name="FareScheduleID" type="xs:int"/>
+      <xs:element name="PromotionID" type="xs:int"/>
+      <xs:element name="RoundTrip" type="xs:int"/>
+      <xs:element name="DisplayFareAmt" type="xs:decimal"/>
+      <xs:element name="DisplayTaxSum" type="xs:decimal"/>
+      <xs:element name="SpecialMarketed" type="xs:boolean"/>
+      <xs:element name="WaitList" type="xs:boolean"/>
+      <xs:element name="SpaceAvailable" type="xs:boolean"/>
+      <xs:element name="PositiveSpace" type="xs:boolean"/>
+      <xs:element name="PromotionCatID" type="xs:int"/>
+      <xs:element name="CommissionAmount" type="xs:decimal"/>
+      <xs:element name="PromotionAmount" type="xs:decimal"/>
+      <xs:element name="ApplicableTaxDetails" nillable="true" type="tns:ArrayOfApplicableTaxDetail"/>
+      <xs:element minOccurs="0" name="BundleCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CombinableTrips" nillable="true" type="tns:ArrayOfCombinableTrip"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseFareInfo" nillable="true" type="tns:BaseFareInfo"/>
+  <xs:complexType name="ArrayOfApplicableTaxDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicableTaxDetail" nillable="true" type="tns:ApplicableTaxDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicableTaxDetail" nillable="true" type="tns:ArrayOfApplicableTaxDetail"/>
+  <xs:complexType name="ApplicableTaxDetail">
+    <xs:sequence>
+      <xs:element name="TaxID" type="xs:int"/>
+      <xs:element name="Amt" type="xs:decimal"/>
+      <xs:element name="InitiatingTaxID" type="xs:int"/>
+      <xs:element name="CommissionAmount" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicableTaxDetail" nillable="true" type="tns:ApplicableTaxDetail"/>
+  <xs:complexType name="ArrayOfCombinableTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinableTrip" nillable="true" type="tns:CombinableTrip"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinableTrip" nillable="true" type="tns:ArrayOfCombinableTrip"/>
+  <xs:complexType name="CombinableTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombinableFlights" nillable="true" type="tns:ArrayOfCombinableFlight"/>
+      <xs:element minOccurs="0" name="TripId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinableTrip" nillable="true" type="tns:CombinableTrip"/>
+  <xs:complexType name="ArrayOfCombinableFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinableFlight" nillable="true" type="tns:CombinableFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinableFlight" nillable="true" type="tns:ArrayOfCombinableFlight"/>
+  <xs:complexType name="CombinableFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombinableFareInfoDetails" nillable="true" type="tns:ArrayOfCombinableFareInfo"/>
+      <xs:element minOccurs="0" name="LFID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinableFlight" nillable="true" type="tns:CombinableFlight"/>
+  <xs:complexType name="ArrayOfCombinableFareInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CombinableFareInfo" nillable="true" type="tns:CombinableFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCombinableFareInfo" nillable="true" type="tns:ArrayOfCombinableFareInfo"/>
+  <xs:complexType name="CombinableFareInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FareID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CombinableFareInfo" nillable="true" type="tns:CombinableFareInfo"/>
+  <xs:complexType name="ArrayOfReturnFlightSegmentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReturnFlightSegmentDetail" nillable="true" type="tns:ReturnFlightSegmentDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReturnFlightSegmentDetail" nillable="true" type="tns:ArrayOfReturnFlightSegmentDetail"/>
+  <xs:complexType name="ReturnFlightSegmentDetail">
+    <xs:sequence>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="LegCount" type="xs:int"/>
+      <xs:element name="FlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="FlightTime" type="xs:double"/>
+      <xs:element name="CarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="International" type="xs:boolean"/>
+      <xs:element name="RoundTrip" type="xs:boolean"/>
+      <xs:element name="FilterRemove" type="xs:boolean"/>
+      <xs:element name="RetFareTypes" nillable="true" type="tns:ArrayOfRetFareType"/>
+      <xs:element name="FlightLegDetails" nillable="true" type="tns:ArrayOfFlightLegDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReturnFlightSegmentDetail" nillable="true" type="tns:ReturnFlightSegmentDetail"/>
+  <xs:complexType name="ArrayOfRetFareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetFareType" nillable="true" type="tns:RetFareType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetFareType" nillable="true" type="tns:ArrayOfRetFareType"/>
+  <xs:complexType name="RetFareType">
+    <xs:sequence>
+      <xs:element name="FareTypeID" type="xs:int"/>
+      <xs:element name="FareTypeName" nillable="true" type="xs:string"/>
+      <xs:element name="FilterRemove" type="xs:boolean"/>
+      <xs:element name="RetFareInfos" nillable="true" type="tns:ArrayOfRetFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetFareType" nillable="true" type="tns:RetFareType"/>
+  <xs:complexType name="ArrayOfRetFareInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetFareInfo" nillable="true" type="tns:RetFareInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetFareInfo" nillable="true" type="tns:ArrayOfRetFareInfo"/>
+  <xs:complexType name="RetFareInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseFareInfo">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetFareInfo" nillable="true" type="tns:RetFareInfo"/>
+  <xs:complexType name="ArrayOfFlightLegDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightLegDetail" nillable="true" type="tns:FlightLegDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightLegDetail" nillable="true" type="tns:ArrayOfFlightLegDetail"/>
+  <xs:complexType name="FlightLegDetail">
+    <xs:sequence>
+      <xs:element name="PFID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightLegDetail" nillable="true" type="tns:FlightLegDetail"/>
+  <xs:complexType name="ArrayOfLegDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LegDetail" nillable="true" type="tns:LegDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLegDetail" nillable="true" type="tns:ArrayOfLegDetail"/>
+  <xs:complexType name="LegDetail">
+    <xs:sequence>
+      <xs:element name="PFID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="International" type="xs:boolean"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="FlightTime" type="xs:double"/>
+      <xs:element name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="FromTerminal" nillable="true" type="xs:string"/>
+      <xs:element name="ToTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AircraftType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AircraftDescription" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DeiDisclosure" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AircraftLayoutName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NonStopLogicalFlightId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LegDetail" nillable="true" type="tns:LegDetail"/>
+  <xs:complexType name="ArrayOfSegmentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SegmentDetail" nillable="true" type="tns:SegmentDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSegmentDetail" nillable="true" type="tns:ArrayOfSegmentDetail"/>
+  <xs:complexType name="SegmentDetail">
+    <xs:sequence>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="CarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="ArrivalDate" type="xs:dateTime"/>
+      <xs:element name="Stops" type="xs:int"/>
+      <xs:element name="FlightTime" type="xs:double"/>
+      <xs:element name="AircraftType" nillable="true" type="xs:string"/>
+      <xs:element name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="OperatingFlightNum" nillable="true" type="xs:string"/>
+      <xs:element name="FlyMonday" type="xs:boolean"/>
+      <xs:element name="FlyTuesday" type="xs:boolean"/>
+      <xs:element name="FlyWednesday" type="xs:boolean"/>
+      <xs:element name="FlyThursday" type="xs:boolean"/>
+      <xs:element name="FlyFriday" type="xs:boolean"/>
+      <xs:element name="FlySaturday" type="xs:boolean"/>
+      <xs:element name="FlySunday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="AircraftDescription" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DeiDisclosure" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SegmentDetail" nillable="true" type="tns:SegmentDetail"/>
+  <xs:complexType name="ArrayOfTaxDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxDetail" nillable="true" type="tns:TaxDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxDetail" nillable="true" type="tns:ArrayOfTaxDetail"/>
+  <xs:complexType name="TaxDetail">
+    <xs:sequence>
+      <xs:element name="TaxID" type="xs:int"/>
+      <xs:element name="TaxCode" nillable="true" type="xs:string"/>
+      <xs:element name="CodeType" nillable="true" type="xs:string"/>
+      <xs:element name="TaxCurr" nillable="true" type="xs:string"/>
+      <xs:element name="TaxDesc" nillable="true" type="xs:string"/>
+      <xs:element name="TaxType" type="xs:int"/>
+      <xs:element name="IsVat" type="xs:boolean"/>
+      <xs:element name="IncludedInFare" type="xs:boolean"/>
+      <xs:element name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="ExchangeRate" type="xs:decimal"/>
+      <xs:element name="ExchangeDate" type="xs:dateTime"/>
+      <xs:element name="Commissionable" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxDetail" nillable="true" type="tns:TaxDetail"/>
+  <xs:complexType name="ViewServiceQuotes">
+    <xs:sequence>
+      <xs:element name="Exceptions" nillable="true" type="q3:ExceptionInformation.Exceptions" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element name="ServiceQuotes" nillable="true" type="tns:ArrayOfViewServiceQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewServiceQuotes" nillable="true" type="tns:ViewServiceQuotes"/>
+  <xs:complexType name="ArrayOfViewServiceQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewServiceQuote" nillable="true" type="tns:ViewServiceQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewServiceQuote" nillable="true" type="tns:ArrayOfViewServiceQuote"/>
+  <xs:complexType name="ViewServiceQuote">
+    <xs:sequence>
+      <xs:element name="LogicalFlightID" type="xs:int"/>
+      <xs:element name="ServiceID" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="MarketingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="CodeType" nillable="true" type="xs:string"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+      <xs:element name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element name="Amount" type="xs:decimal"/>
+      <xs:element name="AmountActive" type="xs:boolean"/>
+      <xs:element name="AmountType" nillable="true" type="xs:string"/>
+      <xs:element name="CategoryID" type="xs:int"/>
+      <xs:element name="SSRCode" nillable="true" type="xs:string"/>
+      <xs:element name="Display" type="xs:boolean"/>
+      <xs:element name="MaxCountServiceLevel" type="xs:int"/>
+      <xs:element name="Refundable" type="xs:boolean"/>
+      <xs:element name="PNLActive" type="xs:boolean"/>
+      <xs:element name="CutoffHours" type="xs:int"/>
+      <xs:element name="Commissionable" type="xs:boolean"/>
+      <xs:element name="DisplayOrder" type="xs:int"/>
+      <xs:element name="RevenueCategoryID" type="xs:int"/>
+      <xs:element name="IATAStandardCodeType" nillable="true" type="xs:string"/>
+      <xs:element name="ServiceActive" type="xs:boolean"/>
+      <xs:element name="MaxCountFlightLevel" type="xs:int"/>
+      <xs:element name="QuantityAvailable" type="xs:int"/>
+      <xs:element name="StartSalesDays" type="xs:int"/>
+      <xs:element name="ApplicableTaxes" nillable="true" type="tns:ArrayOfApplicableTax"/>
+      <xs:element minOccurs="0" name="BoardingPassSsrOrder" type="xs:int"/>
+      <xs:element minOccurs="0" name="ServiceType" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" nillable="true" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewServiceQuote" nillable="true" type="tns:ViewServiceQuote"/>
+  <xs:complexType name="ArrayOfApplicableTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicableTax" nillable="true" type="tns:ApplicableTax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicableTax" nillable="true" type="tns:ArrayOfApplicableTax"/>
+  <xs:complexType name="ApplicableTax">
+    <xs:sequence>
+      <xs:element name="TaxID" type="xs:int"/>
+      <xs:element name="CodeType" nillable="true" type="xs:string"/>
+      <xs:element name="TaxCode" nillable="true" type="xs:string"/>
+      <xs:element name="TaxDescription" nillable="true" type="xs:string"/>
+      <xs:element name="TaxType" type="q4:Enumerations.TaxTypes" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="TaxAmount" type="xs:decimal"/>
+      <xs:element name="TaxCurrenyCode" nillable="true" type="xs:string"/>
+      <xs:element name="AmountToApply" type="xs:decimal"/>
+      <xs:element name="TaxAmountType" nillable="true" type="xs:string"/>
+      <xs:element name="IsDefault" type="xs:boolean"/>
+      <xs:element name="TaxActive" type="xs:boolean"/>
+      <xs:element name="MinAmount" type="xs:decimal"/>
+      <xs:element name="MaxAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicableTax" nillable="true" type="tns:ApplicableTax"/>
+  <xs:complexType name="ViewSystemFareQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q5:ExceptionInformation.Exceptions" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="SystemFareQuote" nillable="true" type="tns:ArrayOfViewFareQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewSystemFareQuote" nillable="true" type="tns:ViewSystemFareQuote"/>
+  <xs:complexType name="ArrayOfViewFareQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewFareQuote" nillable="true" type="tns:ViewFareQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewFareQuote" nillable="true" type="tns:ArrayOfViewFareQuote"/>
+  <xs:complexType name="ServiceSummaryResponse">
+    <xs:sequence>
+      <xs:element name="Services" nillable="true" type="tns:ArrayOfServiceSummary"/>
+      <xs:element name="Exceptions" nillable="true" type="q6:ExceptionInformation.Exceptions" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceSummaryResponse" nillable="true" type="tns:ServiceSummaryResponse"/>
+  <xs:complexType name="ArrayOfServiceSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceSummary" nillable="true" type="tns:ServiceSummary"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceSummary" nillable="true" type="tns:ArrayOfServiceSummary"/>
+  <xs:complexType name="ServiceSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MarketingCarriers" nillable="true" type="q7:ArrayOfstring" xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="OperatingCarriers" nillable="true" type="q8:ArrayOfstring" xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element name="Code" nillable="true" type="xs:string"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceSummary" nillable="true" type="tns:ServiceSummary"/>
+  <xs:complexType name="ViewAARQuotes">
+    <xs:sequence>
+      <xs:element name="Exceptions" nillable="true" type="q9:ExceptionInformation.Exceptions" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element name="ServiceQuotes" nillable="true" type="tns:ArrayOfViewAARQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAARQuotes" nillable="true" type="tns:ViewAARQuotes"/>
+  <xs:complexType name="ArrayOfViewAARQuote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAARQuote" nillable="true" type="tns:ViewAARQuote"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAARQuote" nillable="true" type="tns:ArrayOfViewAARQuote"/>
+  <xs:complexType name="ViewAARQuote">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:decimal"/>
+      <xs:element name="ApplicableTaxes" nillable="true" type="tns:ArrayOfApplicableTax"/>
+      <xs:element minOccurs="0" name="BoardingPassSsrOrder" type="xs:int"/>
+      <xs:element name="CategoryID" type="xs:int"/>
+      <xs:element name="Commissionable" type="xs:boolean"/>
+      <xs:element name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element name="CutoffHours" type="xs:int"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+      <xs:element name="Display" type="xs:boolean"/>
+      <xs:element name="DisplayOrder" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime"/>
+      <xs:element name="IATAStandardCodeType" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlightID" type="xs:int"/>
+      <xs:element name="MarketingCarrier" nillable="true" type="xs:string"/>
+      <xs:element name="MaxCountFlightLevel" type="xs:int"/>
+      <xs:element name="MaxCountServiceLevel" type="xs:int"/>
+      <xs:element name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="PTCID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="PriceAmountID" type="xs:long"/>
+      <xs:element name="QuantityAvailable" type="xs:int"/>
+      <xs:element name="Refundable" type="xs:boolean"/>
+      <xs:element name="RevenueCategoryID" type="xs:int"/>
+      <xs:element name="SSRCode" nillable="true" type="xs:string"/>
+      <xs:element name="ServiceActive" type="xs:boolean"/>
+      <xs:element name="ServiceID" type="xs:int"/>
+      <xs:element name="StartSalesDays" type="xs:int"/>
+      <xs:element name="PNLActive" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ServiceType" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAARQuote" nillable="true" type="tns:ViewAARQuote"/>
+  <xs:complexType name="ViewFareBundleDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleGlCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleIataStdCodeType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleId" type="xs:long"/>
+      <xs:element minOccurs="0" name="BundleIsMaxinventory" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="BundleServiceDetails" nillable="true" type="tns:ArrayOfBundleServiceDetail"/>
+      <xs:element name="Exceptions" nillable="true" type="q10:ExceptionInformation.Exceptions" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFareBundleDetailsResponse" nillable="true" type="tns:ViewFareBundleDetailsResponse"/>
+  <xs:complexType name="ArrayOfBundleServiceDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BundleServiceDetail" nillable="true" type="tns:BundleServiceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBundleServiceDetail" nillable="true" type="tns:ArrayOfBundleServiceDetail"/>
+  <xs:complexType name="BundleServiceDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleGroupIndex" type="xs:int"/>
+      <xs:element minOccurs="0" name="BundleQtyGroupIndex" type="xs:int"/>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GlCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IsMaxinventory" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ServiceID" type="xs:long"/>
+      <xs:element minOccurs="0" name="SsrCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BundleServiceDetail" nillable="true" type="tns:BundleServiceDetail"/>
+  <xs:complexType name="ViewServiceBundleDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleGlCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleIataStdCodeType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BundleId" type="xs:long"/>
+      <xs:element minOccurs="0" name="BundleIsMaxinventory" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="BundleServiceDetails" nillable="true" type="tns:ArrayOfBundleServiceDetail"/>
+      <xs:element minOccurs="0" name="BundleType" type="xs:long"/>
+      <xs:element name="Exceptions" nillable="true" type="q11:ExceptionInformation.Exceptions" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="ServiceBundleCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewServiceBundleDetailsResponse" nillable="true" type="tns:ViewServiceBundleDetailsResponse"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd6</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd7</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="RetrieveFareQuote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyOfFareQuote" type="q1:Enumerations.CurrencyCodeTypes"/>
+          <xs:element name="PromotionalCode" nillable="true" type="xs:string"/>
+          <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element name="CorporationID" type="xs:int"/>
+          <xs:element name="FareFilterMethod" type="q2:Enums.FareFilterMethodType" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareGroupMethod" type="q3:Enums.FareGroupMethodType" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="InventoryFilterMethod" type="q4:Enums.InventoryFilterMethodType" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareQuoteDetails" nillable="true" type="tns:ArrayOfFareQuoteDetail"/>
+          <xs:element minOccurs="0" name="ProfileId" nillable="true" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFareQuote" nillable="true" type="tns:RetrieveFareQuote"/>
+  <xs:complexType name="ArrayOfFareQuoteDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareQuoteDetail" nillable="true" type="tns:FareQuoteDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareQuoteDetail" nillable="true" type="tns:ArrayOfFareQuoteDetail"/>
+  <xs:complexType name="FareQuoteDetail">
+    <xs:sequence>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="UseAirportsNotMetroGroups" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsAsRule" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsForFrom" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsForTo" type="xs:boolean"/>
+      <xs:element name="DateOfDeparture" type="xs:dateTime"/>
+      <xs:element name="FareTypeCategory" type="xs:int"/>
+      <xs:element name="FareClass" nillable="true" type="xs:string"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element name="OperatingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="NumberOfDaysBefore" type="xs:int"/>
+      <xs:element name="NumberOfDaysAfter" type="xs:int"/>
+      <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+      <xs:element name="TicketPackageID" nillable="true" type="xs:string"/>
+      <xs:element name="FareQuoteRequestInfos" nillable="true" type="tns:ArrayOfFareQuoteRequestInfo"/>
+      <xs:element minOccurs="0" name="OverrideEffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FareTypeCategories" nillable="true" type="q5:ArrayOfint" xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="ActionType" type="tns:EnumInterlineShoppingAction"/>
+      <xs:element minOccurs="0" name="LogicalFlightKey" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareQuoteDetail" nillable="true" type="tns:FareQuoteDetail"/>
+  <xs:complexType name="ArrayOfFareQuoteRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareQuoteRequestInfo" nillable="true" type="tns:FareQuoteRequestInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareQuoteRequestInfo" nillable="true" type="tns:ArrayOfFareQuoteRequestInfo"/>
+  <xs:complexType name="FareQuoteRequestInfo">
+    <xs:sequence>
+      <xs:element name="PassengerTypeID" type="xs:int"/>
+      <xs:element name="TotalSeatsRequired" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareQuoteRequestInfo" nillable="true" type="tns:FareQuoteRequestInfo"/>
+  <xs:simpleType name="EnumInterlineShoppingAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="NewBooking"/>
+      <xs:enumeration value="ReplaceFlightOnReservation"/>
+      <xs:enumeration value="AddFlightToReservation"/>
+      <xs:enumeration value="NoChange"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumInterlineShoppingAction" nillable="true" type="tns:EnumInterlineShoppingAction"/>
+  <xs:complexType name="RetrieveFareQuoteByDateRange">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:TransactionInfo" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyOfFareQuote" nillable="true" type="xs:string"/>
+          <xs:element name="PromotionalCode" nillable="true" type="xs:string"/>
+          <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element name="CorporationID" type="xs:int"/>
+          <xs:element name="FareFilterMethod" type="q7:Enums.FareFilterMethodType" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareGroupMethod" type="q8:Enums.FareGroupMethodType" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="InventoryFilterMethod" type="q9:Enums.InventoryFilterMethodType" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareQuoteDetails" nillable="true" type="tns:ArrayOfFareQuoteDetailDateRange"/>
+          <xs:element minOccurs="0" name="ProfileId" nillable="true" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFareQuoteByDateRange" nillable="true" type="tns:RetrieveFareQuoteByDateRange"/>
+  <xs:complexType name="ArrayOfFareQuoteDetailDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareQuoteDetailDateRange" nillable="true" type="tns:FareQuoteDetailDateRange"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareQuoteDetailDateRange" nillable="true" type="tns:ArrayOfFareQuoteDetailDateRange"/>
+  <xs:complexType name="FareQuoteDetailDateRange">
+    <xs:sequence>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="UseAirportsNotMetroGroups" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsAsRule" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsForFrom" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="UseAirportsNotMetroGroupsForTo" type="xs:boolean"/>
+      <xs:element name="DateOfDepartureStart" type="xs:dateTime"/>
+      <xs:element name="DateOfDepartureEnd" type="xs:dateTime"/>
+      <xs:element name="FareTypeCategory" type="xs:int"/>
+      <xs:element name="FareClass" nillable="true" type="xs:string"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element name="LFID" type="xs:int"/>
+      <xs:element name="OperatingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="MarketingCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+      <xs:element name="TicketPackageID" nillable="true" type="xs:string"/>
+      <xs:element name="FareQuoteRequestInfos" nillable="true" type="tns:ArrayOfFareQuoteRequestInfo"/>
+      <xs:element minOccurs="0" name="OverrideEffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FareTypeCategories" nillable="true" type="q10:ArrayOfint" xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="ActionType" type="tns:EnumInterlineShoppingAction"/>
+      <xs:element minOccurs="0" name="LogicalFlightKey" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareQuoteDetailDateRange" nillable="true" type="tns:FareQuoteDetailDateRange"/>
+  <xs:complexType name="RetrieveSystemFareQuote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetrieveFareQuote">
+        <xs:sequence>
+          <xs:element name="ReservationChannel" type="q11:Enumerations.ReservationChannelTypes" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSystemFareQuote" nillable="true" type="tns:RetrieveSystemFareQuote"/>
+  <xs:complexType name="RetrieveFareQuoteShop">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q12:TransactionInfoNoSession" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyOfFareQuote" type="q12:Enumerations.CurrencyCodeTypes"/>
+          <xs:element name="PromotionalCode" nillable="true" type="xs:string"/>
+          <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element name="CorporationID" type="xs:int"/>
+          <xs:element name="FareFilterMethod" type="q13:Enums.FareFilterMethodType" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareGroupMethod" type="q14:Enums.FareGroupMethodType" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="InventoryFilterMethod" type="q15:Enums.InventoryFilterMethodType" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareQuoteDetails" nillable="true" type="tns:ArrayOfFareQuoteDetail"/>
+          <xs:element minOccurs="0" name="ProfileId" nillable="true" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFareQuoteShop" nillable="true" type="tns:RetrieveFareQuoteShop"/>
+  <xs:complexType name="RetrieveFareQuoteShopByDateRange">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q16:TransactionInfoNoSession" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyOfFareQuote" nillable="true" type="xs:string"/>
+          <xs:element name="PromotionalCode" nillable="true" type="xs:string"/>
+          <xs:element name="IataNumberOfRequestor" nillable="true" type="xs:string"/>
+          <xs:element name="CorporationID" type="xs:int"/>
+          <xs:element name="FareFilterMethod" type="q17:Enums.FareFilterMethodType" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareGroupMethod" type="q18:Enums.FareGroupMethodType" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="InventoryFilterMethod" type="q19:Enums.InventoryFilterMethodType" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request"/>
+          <xs:element name="FareQuoteDetails" nillable="true" type="tns:ArrayOfFareQuoteDetailDateRange"/>
+          <xs:element minOccurs="0" name="ProfileId" nillable="true" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFareQuoteShopByDateRange" nillable="true" type="tns:RetrieveFareQuoteShopByDateRange"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd11</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="RetrieveFareBundleDetailsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BundleCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFareBundleDetailsRequest" nillable="true" type="tns:RetrieveFareBundleDetailsRequest"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

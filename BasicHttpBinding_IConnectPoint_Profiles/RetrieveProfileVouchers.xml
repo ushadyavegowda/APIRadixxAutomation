@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="09779eee-8274-4317-8336-e44d5c0281e9" isOneWay="false" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" name="RetrieveProfileVouchers" bindingOperationName="RetrieveProfileVouchers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="09779eee-8274-4317-8336-e44d5c0281e9fileName">RetrieveProfileVouchers</con:setting>
+  </con:settings>
+  <con:call id="f53f981a-8efa-49df-82fa-4593b5e74f54" name="RetrieveProfileVouchers Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Profiles.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RetrieveProfileVouchers>\r
+         <!--Optional:-->\r
+         <tem:RetrieveProfileVouchersRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:ActionType>?</rad1:ActionType>\r
+            <rad1:ActiveOnly>?</rad1:ActiveOnly>\r
+            <rad1:ProfileId>?</rad1:ProfileId>\r
+            <rad1:ProfileUserId>?</rad1:ProfileUserId>\r
+         </tem:RetrieveProfileVouchersRequest>\r
+      </tem:RetrieveProfileVouchers>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers"/>
+  </con:call>
+</con:operation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="56acc931-2bd8-4cc2-b885-ae2b90dc1597" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/Format3DSecureInformation" name="Format3DSecureInformation" bindingOperationName="Format3DSecureInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="56acc931-2bd8-4cc2-b885-ae2b90dc1597fileName">Format3DSecureInformation</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

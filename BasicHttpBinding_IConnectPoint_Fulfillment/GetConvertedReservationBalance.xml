@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="48b2c1d5-f902-4cf1-9633-64b9e2d888d6" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/GetConvertedReservationBalance" name="GetConvertedReservationBalance" bindingOperationName="GetConvertedReservationBalance" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="48b2c1d5-f902-4cf1-9633-64b9e2d888d6fileName">GetConvertedReservationBalance</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

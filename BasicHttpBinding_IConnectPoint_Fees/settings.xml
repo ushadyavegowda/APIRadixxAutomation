@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="f41948c8-b199-475e-8b55-59d454fed15a" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_Fees" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Fees" soapVersion="1_1" anonymous="optional" definition="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fees.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f41948c8-b199-475e-8b55-59d454fed15afileName">BasicHttpBinding_IConnectPoint_Fees</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fees.svc?wsdl">
+    <con:part>
+      <con:url>https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fees.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Fees" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Response"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Fees_AssessPaymentMethodFees_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssessPaymentMethodFees"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_AssessPaymentMethodFees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssessPaymentMethodFeesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RemoveInSessionPaymentFees_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveInSessionPaymentFees"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RemoveInSessionPaymentFees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveInSessionPaymentFeesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_AssessAgencyTransactionFees_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssessAgencyTransactionFees"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_AssessAgencyTransactionFees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssessAgencyTransactionFeesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RemoveInSessionAgencyTransactionFees_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveInSessionAgencyTransactionFees"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RemoveInSessionAgencyTransactionFees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveInSessionAgencyTransactionFeesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RetrievePaymentMethodsFees_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentMethodsFees"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Fees_RetrievePaymentMethodsFees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentMethodsFeesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Fees">
+    <wsdl:operation name="AssessPaymentMethodFees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Fees/AssessPaymentMethodFees" message="tns:IConnectPoint_Fees_AssessPaymentMethodFees_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Fees/AssessPaymentMethodFeesResponse" message="tns:IConnectPoint_Fees_AssessPaymentMethodFees_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInSessionPaymentFees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionPaymentFees" message="tns:IConnectPoint_Fees_RemoveInSessionPaymentFees_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionPaymentFeesResponse" message="tns:IConnectPoint_Fees_RemoveInSessionPaymentFees_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AssessAgencyTransactionFees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Fees/AssessAgencyTransactionFees" message="tns:IConnectPoint_Fees_AssessAgencyTransactionFees_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Fees/AssessAgencyTransactionFeesResponse" message="tns:IConnectPoint_Fees_AssessAgencyTransactionFees_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInSessionAgencyTransactionFees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFees" message="tns:IConnectPoint_Fees_RemoveInSessionAgencyTransactionFees_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFeesResponse" message="tns:IConnectPoint_Fees_RemoveInSessionAgencyTransactionFees_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentMethodsFees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RetrievePaymentMethodsFees" message="tns:IConnectPoint_Fees_RetrievePaymentMethodsFees_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Fees/RetrievePaymentMethodsFeesResponse" message="tns:IConnectPoint_Fees_RetrievePaymentMethodsFees_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Fees" type="tns:IConnectPoint_Fees">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AssessPaymentMethodFees">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Fees/AssessPaymentMethodFees" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInSessionPaymentFees">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionPaymentFees" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssessAgencyTransactionFees">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Fees/AssessAgencyTransactionFees" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInSessionAgencyTransactionFees">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Fees/RemoveInSessionAgencyTransactionFees" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentMethodsFees">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Fees/RetrievePaymentMethodsFees" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Fees">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Fees" binding="tns:BasicHttpBinding_IConnectPoint_Fees">
+      <soap:address location="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Response"/>
+  <xs:element name="AssessPaymentMethodFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssessPaymentMethodFeesRequest" nillable="true" type="q1:AssessPaymentMethodFees" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssessPaymentMethodFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssessPaymentMethodFeesResult" nillable="true" type="q2:ViewPNR" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveInSessionPaymentFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveInSessionPaymentFeesRequest" nillable="true" type="q3:RemoveInSessionPaymentFees" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveInSessionPaymentFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveInSessionPaymentFeesResult" nillable="true" type="q4:ViewPNR" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssessAgencyTransactionFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssessAgencyTransactionFeesRequest" nillable="true" type="q5:AssessAgencyTransactionFees" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssessAgencyTransactionFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssessAgencyTransactionFeesResult" nillable="true" type="q6:ViewPNR" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveInSessionAgencyTransactionFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveInSessionAgencyTransactionFeesRequest" nillable="true" type="q7:RemoveInSessionAgencyTransactionFees" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveInSessionAgencyTransactionFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveInSessionAgencyTransactionFeesResult" nillable="true" type="q8:ViewPNR" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePaymentMethodsFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrievePaymentMethodsFeesRequest" nillable="true" type="q9:RetrievePaymentMethodsFees" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePaymentMethodsFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrievePaymentMethodsFeesResult" nillable="true" type="q10:ViewPaymentMethodsFees" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="AssessPaymentMethodFees">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="PaymentsToAssessFee" nillable="true" type="tns:ArrayOfPaymentToAssessFee"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssessPaymentMethodFees" nillable="true" type="tns:AssessPaymentMethodFees"/>
+  <xs:complexType name="ArrayOfPaymentToAssessFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentToAssessFee" nillable="true" type="tns:PaymentToAssessFee"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentToAssessFee" nillable="true" type="tns:ArrayOfPaymentToAssessFee"/>
+  <xs:complexType name="PaymentToAssessFee">
+    <xs:sequence>
+      <xs:element name="PaymentMethod" type="q2:Enumerations.PaymentMethodTypes" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element minOccurs="0" name="PaymentMethodType" nillable="true" type="xs:string"/>
+      <xs:element name="CardNumber" nillable="true" type="xs:string"/>
+      <xs:element name="PaymentAmount" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentToAssessFee" nillable="true" type="tns:PaymentToAssessFee"/>
+  <xs:complexType name="RemoveInSessionPaymentFees">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q3:TransactionInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveInSessionPaymentFees" nillable="true" type="tns:RemoveInSessionPaymentFees"/>
+  <xs:complexType name="AssessAgencyTransactionFees">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q4:TransactionInfo" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="PaymentMethod" type="q4:Enumerations.PaymentMethodTypes"/>
+          <xs:element minOccurs="0" name="PaymentMethodType" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCurrency" type="q4:Enumerations.CurrencyCodeTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssessAgencyTransactionFees" nillable="true" type="tns:AssessAgencyTransactionFees"/>
+  <xs:complexType name="RemoveInSessionAgencyTransactionFees">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q5:TransactionInfo" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveInSessionAgencyTransactionFees" nillable="true" type="tns:RemoveInSessionAgencyTransactionFees"/>
+  <xs:complexType name="RetrievePaymentMethodsFees">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:TransactionInfo" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PaymentMethodTypes" nillable="true" type="q7:ArrayOfstring" xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+          <xs:element name="PaymentMethods" nillable="true" type="q6:ArrayOfEnumerations.PaymentMethodTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrievePaymentMethodsFees" nillable="true" type="tns:RetrievePaymentMethodsFees"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:simpleType name="Enumerations.PaymentMethodTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AMEX"/>
+      <xs:enumeration value="DCLB"/>
+      <xs:enumeration value="DSCV"/>
+      <xs:enumeration value="MSCD"/>
+      <xs:enumeration value="UATP"/>
+      <xs:enumeration value="VISA"/>
+      <xs:enumeration value="INVC"/>
+      <xs:enumeration value="SAPI"/>
+      <xs:enumeration value="TKNE"/>
+      <xs:enumeration value="CASH"/>
+      <xs:enumeration value="CHCK"/>
+      <xs:enumeration value="TCHK"/>
+      <xs:enumeration value="TCKT"/>
+      <xs:enumeration value="VCHR"/>
+      <xs:enumeration value="PL8R"/>
+      <xs:enumeration value="EFT"/>
+      <xs:enumeration value="OFCC"/>
+      <xs:enumeration value="IVRC"/>
+      <xs:enumeration value="ACCT"/>
+      <xs:enumeration value="KHPU"/>
+      <xs:enumeration value="BCHL"/>
+      <xs:enumeration value="MPPO"/>
+      <xs:enumeration value="DBIT"/>
+      <xs:enumeration value="ASIA"/>
+      <xs:enumeration value="ASIU"/>
+      <xs:enumeration value="OPST"/>
+      <xs:enumeration value="NONE"/>
+      <xs:enumeration value="RCS"/>
+      <xs:enumeration value="ZAP"/>
+      <xs:enumeration value="JCB"/>
+      <xs:enumeration value="NARJ"/>
+      <xs:enumeration value="CABL"/>
+      <xs:enumeration value="NAVD"/>
+      <xs:enumeration value="ARGC"/>
+      <xs:enumeration value="WPBH"/>
+      <xs:enumeration value="ACH"/>
+      <xs:enumeration value="AIRP"/>
+      <xs:enumeration value="BDSK"/>
+      <xs:enumeration value="DEBT"/>
+      <xs:enumeration value="INVO"/>
+      <xs:enumeration value="MAES"/>
+      <xs:enumeration value="TKPG"/>
+      <xs:enumeration value="UCC"/>
+      <xs:enumeration value="ZIPP"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.PaymentMethodTypes" nillable="true" type="tns:Enumerations.PaymentMethodTypes"/>
+  <xs:simpleType name="Enumerations.CurrencyCodeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AED"/>
+      <xs:enumeration value="AFN"/>
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="AMD"/>
+      <xs:enumeration value="ANG"/>
+      <xs:enumeration value="AOA"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="AWG"/>
+      <xs:enumeration value="AZN"/>
+      <xs:enumeration value="BAM"/>
+      <xs:enumeration value="BBD"/>
+      <xs:enumeration value="BDT"/>
+      <xs:enumeration value="BGN"/>
+      <xs:enumeration value="BHD"/>
+      <xs:enumeration value="BIF"/>
+      <xs:enumeration value="BMD"/>
+      <xs:enumeration value="BND"/>
+      <xs:enumeration value="BOB"/>
+      <xs:enumeration value="BRL"/>
+      <xs:enumeration value="BSD"/>
+      <xs:enumeration value="BTN"/>
+      <xs:enumeration value="BWP"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="BZD"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="CDF"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="CLP"/>
+      <xs:enumeration value="CNY"/>
+      <xs:enumeration value="COP"/>
+      <xs:enumeration value="CRC"/>
+      <xs:enumeration value="CUP"/>
+      <xs:enumeration value="CVE"/>
+      <xs:enumeration value="CYP"/>
+      <xs:enumeration value="CZK"/>
+      <xs:enumeration value="DJF"/>
+      <xs:enumeration value="DKK"/>
+      <xs:enumeration value="DOP"/>
+      <xs:enumeration value="DZD"/>
+      <xs:enumeration value="EGP"/>
+      <xs:enumeration value="ERN"/>
+      <xs:enumeration value="ETB"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="FJD"/>
+      <xs:enumeration value="FKP"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="GEL"/>
+      <xs:enumeration value="GGP"/>
+      <xs:enumeration value="GHS"/>
+      <xs:enumeration value="GIP"/>
+      <xs:enumeration value="GMD"/>
+      <xs:enumeration value="GNF"/>
+      <xs:enumeration value="GTQ"/>
+      <xs:enumeration value="GYD"/>
+      <xs:enumeration value="HKD"/>
+      <xs:enumeration value="HNL"/>
+      <xs:enumeration value="HRK"/>
+      <xs:enumeration value="HTG"/>
+      <xs:enumeration value="HUF"/>
+      <xs:enumeration value="IDR"/>
+      <xs:enumeration value="ILS"/>
+      <xs:enumeration value="IMP"/>
+      <xs:enumeration value="INR"/>
+      <xs:enumeration value="IQD"/>
+      <xs:enumeration value="IRR"/>
+      <xs:enumeration value="ISK"/>
+      <xs:enumeration value="JEP"/>
+      <xs:enumeration value="JMD"/>
+      <xs:enumeration value="JOD"/>
+      <xs:enumeration value="JPY"/>
+      <xs:enumeration value="KES"/>
+      <xs:enumeration value="KGS"/>
+      <xs:enumeration value="KHR"/>
+      <xs:enumeration value="KMF"/>
+      <xs:enumeration value="KPW"/>
+      <xs:enumeration value="KWD"/>
+      <xs:enumeration value="KYD"/>
+      <xs:enumeration value="KZT"/>
+      <xs:enumeration value="LAK"/>
+      <xs:enumeration value="LBP"/>
+      <xs:enumeration value="LKR"/>
+      <xs:enumeration value="LRD"/>
+      <xs:enumeration value="LSL"/>
+      <xs:enumeration value="LTL"/>
+      <xs:enumeration value="LVL"/>
+      <xs:enumeration value="LYD"/>
+      <xs:enumeration value="MAD"/>
+      <xs:enumeration value="MDL"/>
+      <xs:enumeration value="MGA"/>
+      <xs:enumeration value="MKD"/>
+      <xs:enumeration value="MMK"/>
+      <xs:enumeration value="MNT"/>
+      <xs:enumeration value="MOP"/>
+      <xs:enumeration value="MRO"/>
+      <xs:enumeration value="MTL"/>
+      <xs:enumeration value="MUR"/>
+      <xs:enumeration value="MVR"/>
+      <xs:enumeration value="MWK"/>
+      <xs:enumeration value="MXN"/>
+      <xs:enumeration value="MYR"/>
+      <xs:enumeration value="MZN"/>
+      <xs:enumeration value="NAD"/>
+      <xs:enumeration value="NGN"/>
+      <xs:enumeration value="NIO"/>
+      <xs:enumeration value="NOK"/>
+      <xs:enumeration value="NPR"/>
+      <xs:enumeration value="NZD"/>
+      <xs:enumeration value="OMR"/>
+      <xs:enumeration value="PAB"/>
+      <xs:enumeration value="PEN"/>
+      <xs:enumeration value="PGK"/>
+      <xs:enumeration value="PHP"/>
+      <xs:enumeration value="PKR"/>
+      <xs:enumeration value="PLN"/>
+      <xs:enumeration value="PYG"/>
+      <xs:enumeration value="QAR"/>
+      <xs:enumeration value="RON"/>
+      <xs:enumeration value="RSD"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="RWF"/>
+      <xs:enumeration value="SAR"/>
+      <xs:enumeration value="SBD"/>
+      <xs:enumeration value="SCR"/>
+      <xs:enumeration value="SDG"/>
+      <xs:enumeration value="SEK"/>
+      <xs:enumeration value="SGD"/>
+      <xs:enumeration value="SHP"/>
+      <xs:enumeration value="SLL"/>
+      <xs:enumeration value="SOS"/>
+      <xs:enumeration value="SPL"/>
+      <xs:enumeration value="SRD"/>
+      <xs:enumeration value="STD"/>
+      <xs:enumeration value="SVC"/>
+      <xs:enumeration value="SYP"/>
+      <xs:enumeration value="SZL"/>
+      <xs:enumeration value="THB"/>
+      <xs:enumeration value="TJS"/>
+      <xs:enumeration value="TMM"/>
+      <xs:enumeration value="TND"/>
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="TRI"/>
+      <xs:enumeration value="TTD"/>
+      <xs:enumeration value="TVD"/>
+      <xs:enumeration value="TWD"/>
+      <xs:enumeration value="TZS"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="UGX"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="UYU"/>
+      <xs:enumeration value="UZS"/>
+      <xs:enumeration value="VEB"/>
+      <xs:enumeration value="VEF"/>
+      <xs:enumeration value="VND"/>
+      <xs:enumeration value="VUV"/>
+      <xs:enumeration value="WST"/>
+      <xs:enumeration value="XAF"/>
+      <xs:enumeration value="XAG"/>
+      <xs:enumeration value="XAU"/>
+      <xs:enumeration value="XCD"/>
+      <xs:enumeration value="XDR"/>
+      <xs:enumeration value="XOF"/>
+      <xs:enumeration value="XPD"/>
+      <xs:enumeration value="XPF"/>
+      <xs:enumeration value="XPT"/>
+      <xs:enumeration value="YER"/>
+      <xs:enumeration value="ZAR"/>
+      <xs:enumeration value="ZMK"/>
+      <xs:enumeration value="ZWD"/>
+      <xs:enumeration value="KRW"/>
+      <xs:enumeration value="ZMW"/>
+      <xs:enumeration value="SYS"/>
+      <xs:enumeration value="VES"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="BYN"/>
+      <xs:enumeration value="BOV"/>
+      <xs:enumeration value="CLF"/>
+      <xs:enumeration value="COU"/>
+      <xs:enumeration value="CUC"/>
+      <xs:enumeration value="MRU"/>
+      <xs:enumeration value="MXV"/>
+      <xs:enumeration value="STN"/>
+      <xs:enumeration value="XSU"/>
+      <xs:enumeration value="SSP"/>
+      <xs:enumeration value="CHW"/>
+      <xs:enumeration value="TRY"/>
+      <xs:enumeration value="TMT"/>
+      <xs:enumeration value="UYI"/>
+      <xs:enumeration value="UYW"/>
+      <xs:enumeration value="ZWL"/>
+      <xs:enumeration value="XBA"/>
+      <xs:enumeration value="XBB"/>
+      <xs:enumeration value="XBC"/>
+      <xs:enumeration value="XBD"/>
+      <xs:enumeration value="CNH"/>
+      <xs:enumeration value="RTG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.CurrencyCodeTypes" nillable="true" type="tns:Enumerations.CurrencyCodeTypes"/>
+  <xs:complexType name="ArrayOfEnumerations.PaymentMethodTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enumerations.PaymentMethodTypes" type="tns:Enumerations.PaymentMethodTypes"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnumerations.PaymentMethodTypes" nillable="true" type="tns:ArrayOfEnumerations.PaymentMethodTypes"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd7</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base"/>
+  <xs:complexType name="ViewPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BookingAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CRSCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TravelGroupID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExternalAppID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="WebBookingID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PromotionalID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PromotionalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecieptLanguageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ReservationCurrency" type="q1:Enumerations.CurrencyCodeTypes" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element minOccurs="0" name="ProfileID" type="xs:long"/>
+      <xs:element minOccurs="0" name="PNRPin" type="xs:long"/>
+      <xs:element minOccurs="0" name="BookDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ReservationType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TodaysDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="LastModified" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ReservationExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CorporationID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityGuid" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HasTickets" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ValuePackageData" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UserIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ManageBookingAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricConfirmationNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationBalance" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ChangeFee" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="LogicalFlightCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="ActivePassengerCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="BalancedReservation" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ReservationFulfillmentRequiredByGMT" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ReservationFulfillmentRequiredByODT" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Airlines" nillable="true" type="tns:ArrayOfAirline"/>
+      <xs:element minOccurs="0" name="Payments" nillable="true" type="tns:ArrayOfPayment"/>
+      <xs:element minOccurs="0" name="History" nillable="true" type="tns:ArrayOfHistory"/>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfComment"/>
+      <xs:element minOccurs="0" name="GDSHistory" nillable="true" type="tns:ArrayOfGDSHistory"/>
+      <xs:element minOccurs="0" name="ReservationContacts" nillable="true" type="tns:ArrayOfReservationContact"/>
+      <xs:element minOccurs="0" name="ContactInfos" nillable="true" type="tns:ArrayOfContactInfo"/>
+      <xs:element minOccurs="0" name="Vouchers" nillable="true" type="tns:ArrayOfVoucher"/>
+      <xs:element minOccurs="0" name="Cars" nillable="true" type="tns:ArrayOfCar"/>
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:ArrayOfHotel"/>
+      <xs:element minOccurs="0" name="Packages" nillable="true" type="tns:ArrayOfPackage"/>
+      <xs:element name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="TotalCommission" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewPNR" nillable="true" type="tns:ViewPNR"/>
+  <xs:complexType name="ArrayOfAirline">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Airline" nillable="true" type="tns:Airline"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAirline" nillable="true" type="tns:ArrayOfAirline"/>
+  <xs:complexType name="Airline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlight" nillable="true" type="tns:ArrayOfLogicalFlight"/>
+      <xs:element name="OAFlights" nillable="true" type="tns:ArrayOfOAFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Airline" nillable="true" type="tns:Airline"/>
+  <xs:complexType name="ArrayOfLogicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogicalFlight" nillable="true" type="tns:LogicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogicalFlight" nillable="true" type="tns:ArrayOfLogicalFlight"/>
+  <xs:complexType name="LogicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PackageItemID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PackageItemName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PackageItemDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PackageItemBookDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PackageItemStartDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PackageItemEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="VendorId" type="xs:int"/>
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlights" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+      <xs:element minOccurs="0" name="FlightDisruptionAlert" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogicalFlight" nillable="true" type="tns:LogicalFlight"/>
+  <xs:complexType name="ArrayOfPhysicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalFlight" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+  <xs:complexType name="PhysicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="DestinationDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightOrder" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FlightDuration" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Trip" type="xs:int"/>
+      <xs:element minOccurs="0" name="Gate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TotalWeight" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer"/>
+      <xs:element minOccurs="0" name="FromTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ToTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AirCraftType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AirCraftDescription" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UTCDepartureOffset" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UTCArrivalOffset" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DeiDisclosure" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer"/>
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AirlinePersons" nillable="true" type="tns:ArrayOfAirlinePerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer"/>
+  <xs:complexType name="ArrayOfAirlinePerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AirlinePerson" nillable="true" type="tns:AirlinePerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAirlinePerson" nillable="true" type="tns:ArrayOfAirlinePerson"/>
+  <xs:complexType name="AirlinePerson">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="FFNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PaxActive" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="RecordLocator" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="OriginalRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="ContactInfo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DropoffID" type="xs:int"/>
+          <xs:element minOccurs="0" name="PickupID" type="xs:int"/>
+          <xs:element minOccurs="0" name="LapChildID" type="xs:int"/>
+          <xs:element minOccurs="0" name="FareClassCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="WebFareType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareBasisSched" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareAmount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="ResSegStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="SegSubStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="SelecteeStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="CheckinStatus" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="HasTickets" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+          <xs:element minOccurs="0" name="InterlinedSegment" type="xs:int"/>
+          <xs:element minOccurs="0" name="InterlinedCarrierCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ManualFare" type="xs:int"/>
+          <xs:element minOccurs="0" name="InventoryOverbooked" type="xs:int"/>
+          <xs:element minOccurs="0" name="TicketCouponNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketControl" type="xs:int"/>
+          <xs:element minOccurs="0" name="TicketControlOwner" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketControlModifiedDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="MarketingCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MarketingOptIn" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="EmergencyContactID" type="xs:int"/>
+          <xs:element minOccurs="0" name="DisclosedEmergencyContact" type="xs:int"/>
+          <xs:element minOccurs="0" name="CappsStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="ToRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="FromRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="StoreFrontID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="InsuranceConfNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="InsuranceTransID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="RedressNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KnownTravNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PrimaryPassenger" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="NameChangeCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="CrsCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SeatAssignments" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+          <xs:element minOccurs="0" name="Charges" nillable="true" type="tns:ArrayOfCharge"/>
+          <xs:element minOccurs="0" name="Bags" nillable="true" type="tns:ArrayOfBaggage"/>
+          <xs:element minOccurs="0" name="CheckInLocator" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareBundleCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Height" type="xs:int"/>
+          <xs:element minOccurs="0" name="PromotionType" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AirlinePerson" nillable="true" type="tns:AirlinePerson"/>
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Age" type="xs:int"/>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NationalityLaguageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RelationType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="WBCID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PTCID" type="xs:int"/>
+      <xs:element minOccurs="0" name="UseInventory" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Postal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProfileId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person"/>
+  <xs:complexType name="ArrayOfSeatAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatAssignment" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+  <xs:complexType name="SeatAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ActualDepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ScheduledDeparturetime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ScheduledArrivaltime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="BoardingPassNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Seat" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RowNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Gate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OldSeat" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OldRowNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Boarded" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CheckInAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CheckInDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CouponStatusIndicator" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BoardingSequence" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="BoardingPassPrinted" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerSSRCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerMemberTierLevel" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerMemberRating" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumberActionTracker" type="xs:int"/>
+      <xs:element minOccurs="0" name="ReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerInfoReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumberLAstModifiedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="SeatChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="SeatMarketingAttributes" nillable="true" type="tns:ArrayOfSeatAttribute"/>
+      <xs:element minOccurs="0" name="SeatCommercialAttributes" nillable="true" type="tns:ArrayOfSeatAttribute"/>
+      <xs:element minOccurs="0" name="RailCarID" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="RailCarSequence" nillable="true" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+  <xs:complexType name="ArrayOfSeatAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatAttribute" nillable="true" type="tns:SeatAttribute"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatAttribute" nillable="true" type="tns:ArrayOfSeatAttribute"/>
+  <xs:complexType name="SeatAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAttribute" nillable="true" type="tns:SeatAttribute"/>
+  <xs:complexType name="ArrayOfCharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Charge" nillable="true" type="tns:Charge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharge" nillable="true" type="tns:ArrayOfCharge"/>
+  <xs:complexType name="Charge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="OriginalChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CodeType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RefundPersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RefundType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="BillDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="RPM" type="xs:int"/>
+      <xs:element minOccurs="0" name="TaxID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ChargeComment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ChargeStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="IsRefundable" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="StatusReasonID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IsSSR" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="PaymentNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeInPenalty" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="TaxChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="TaxIncludedInFare" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Commission" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ResChannelId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CommissionDueRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CommissionDueResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NonRefundableResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NonRefundableRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RefundableResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RefundableRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PenaltyResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PenaltyRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Commissionable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="NonDiscountedResAmt" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NonDiscountedRptAmt" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Bundled" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="TaxIsRefundable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="TaxIsCommissionable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ServiceIsRefundable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ServiceIsCommissionable" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ReservationPaymentMaps" nillable="true" type="tns:ArrayOfReservationPaymentMap"/>
+      <xs:element minOccurs="0" name="PenaltyChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PenaltyTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="BoardingPassSsrOrder" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExtPenaltyRule" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Charge" nillable="true" type="tns:Charge"/>
+  <xs:complexType name="ArrayOfReservationPaymentMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationPaymentMap" nillable="true" type="tns:ReservationPaymentMap"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservationPaymentMap" nillable="true" type="tns:ArrayOfReservationPaymentMap"/>
+  <xs:complexType name="ReservationPaymentMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AmountApplied" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ReservationChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DatePaid" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OriginalReferencePaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RefundAmount" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservationPaymentMap" nillable="true" type="tns:ReservationPaymentMap"/>
+  <xs:complexType name="ArrayOfBaggage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Baggage" nillable="true" type="tns:Baggage"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaggage" nillable="true" type="tns:ArrayOfBaggage"/>
+  <xs:complexType name="Baggage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BagId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BagNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagWeight" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BagCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BagChecked" type="xs:int"/>
+      <xs:element minOccurs="0" name="Pet" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagActive" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagTagPrinted" type="xs:int"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Baggage" nillable="true" type="tns:Baggage"/>
+  <xs:complexType name="ArrayOfOAFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAFlight" nillable="true" type="tns:OAFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAFlight" nillable="true" type="tns:ArrayOfOAFlight"/>
+  <xs:complexType name="OAFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OALogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime"/>
+      <xs:element name="OAFlightPersons" nillable="true" type="tns:ArrayOfOAFlightPerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAFlight" nillable="true" type="tns:OAFlight"/>
+  <xs:complexType name="ArrayOfOAFlightPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAFlightPerson" nillable="true" type="tns:OAFlightPerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAFlightPerson" nillable="true" type="tns:ArrayOfOAFlightPerson"/>
+  <xs:complexType name="OAFlightPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ResSegStatus" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAFlightPerson" nillable="true" type="tns:OAFlightPerson"/>
+  <xs:complexType name="ArrayOfPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payment" nillable="true" type="tns:Payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayment" nillable="true" type="tns:ArrayOfPayment"/>
+  <xs:complexType name="Payment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CardHolder" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CVCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Authorizationcode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TerminalID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CurrencyPaid" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CheckNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValueCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionIndicator" type="xs:int"/>
+      <xs:element minOccurs="0" name="SettlementBatch" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AuthorizedAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="FFNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Miles" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentComment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BaseCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BaseAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DocumentReceivedBy" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BatchProcessStart" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="BatchProcessExtracted" type="xs:int"/>
+      <xs:element minOccurs="0" name="TicketCouponNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ATCANDateProcessed" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="TicketType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxOptOption" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxExported" type="xs:int"/>
+      <xs:element minOccurs="0" name="GcxExportedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="IATANum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProcessorID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProcessorName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalPaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Postal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DatePaid" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="UserData" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CardVerification" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GrossAmtResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="GrossAmtPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NetAmtResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CommissionDeductedResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CommissionDeductedPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptNetFrmResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptCommissionFromResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptCommissionFromPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RedeemedVoucherAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AncillaryData01" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData02" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData03" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData04" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData05" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MetaData" nillable="true" type="q3:ArrayOfPaymentMetaData" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payment" nillable="true" type="tns:Payment"/>
+  <xs:complexType name="ArrayOfHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="History" nillable="true" type="tns:History"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistory" nillable="true" type="tns:ArrayOfHistory"/>
+  <xs:complexType name="History">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HistoryID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="HistoryType" type="xs:int"/>
+      <xs:element minOccurs="0" name="ActivityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Passenger" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Segment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UserIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationChannelID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="History" nillable="true" type="tns:History"/>
+  <xs:complexType name="ArrayOfComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="tns:Comment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComment" nillable="true" type="tns:ArrayOfComment"/>
+  <xs:complexType name="Comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CommentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CommentLength" type="xs:int"/>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Comment" nillable="true" type="tns:Comment"/>
+  <xs:complexType name="ArrayOfGDSHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GDSHistory" nillable="true" type="tns:GDSHistory"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGDSHistory" nillable="true" type="tns:ArrayOfGDSHistory"/>
+  <xs:complexType name="GDSHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GDSMessageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordLocator" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MessageDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CRSCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GDSMessage" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GDSHistory" nillable="true" type="tns:GDSHistory"/>
+  <xs:complexType name="ArrayOfReservationContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationContact" nillable="true" type="tns:ReservationContact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservationContact" nillable="true" type="tns:ArrayOfReservationContact"/>
+  <xs:complexType name="ReservationContact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VendorID" type="xs:int"/>
+          <xs:element minOccurs="0" name="MarketingOptIn" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="RedressNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KnownTravNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactInfos" nillable="true" type="tns:ArrayOfContactInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReservationContact" nillable="true" type="tns:ReservationContact"/>
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInfo" nillable="true" type="tns:ArrayOfContactInfo"/>
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ContactField" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ContactType" type="xs:int"/>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AreaCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Display" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PreferredContactMethod" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+  <xs:complexType name="ArrayOfVoucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Voucher" nillable="true" type="tns:Voucher"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVoucher" nillable="true" type="tns:ArrayOfVoucher"/>
+  <xs:complexType name="Voucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReasonCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="SeriesNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="ChargeNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Sponsor" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="EffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BalanceAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NonTransferable" type="xs:int"/>
+      <xs:element minOccurs="0" name="BatchProcessStart" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="BatchProcessExtracted" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherType" type="xs:int"/>
+      <xs:element minOccurs="0" name="TripType" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeTaxes" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludePenalty" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeSSR" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeAuto" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeHotel" type="xs:int"/>
+      <xs:element minOccurs="0" name="STimeRestrict" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ETimeRestrict" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="SundayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="MondayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="TuesdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="WednesdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="ThursdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="FridayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="SaturdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherNumFull" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherPW" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TravelEffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="TravelExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="LogicalFlightsKey" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Voucher" nillable="true" type="tns:Voucher"/>
+  <xs:complexType name="ArrayOfCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar" nillable="true" type="tns:ArrayOfCar"/>
+  <xs:complexType name="Car">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Classification" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car"/>
+  <xs:complexType name="ArrayOfHotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel" nillable="true" type="tns:Hotel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotel" nillable="true" type="tns:ArrayOfHotel"/>
+  <xs:complexType name="Hotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotel" nillable="true" type="tns:Hotel"/>
+  <xs:complexType name="ArrayOfPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Package" nillable="true" type="tns:Package"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackage" nillable="true" type="tns:ArrayOfPackage"/>
+  <xs:complexType name="Package">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Package" nillable="true" type="tns:Package"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd6</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base">
+  <xs:complexType name="ArrayOfPaymentMetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMetaData" nillable="true" type="tns:PaymentMetaData"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMetaData" nillable="true" type="tns:ArrayOfPaymentMetaData"/>
+  <xs:complexType name="PaymentMetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KeyName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMetaData" nillable="true" type="tns:PaymentMetaData"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd8</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:complexType name="ViewPaymentMethodsFees">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="PaymentMethods" nillable="true" type="tns:ArrayOfPaymentMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewPaymentMethodsFees" nillable="true" type="tns:ViewPaymentMethodsFees"/>
+  <xs:complexType name="ArrayOfPaymentMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethod" nillable="true" type="tns:ArrayOfPaymentMethod"/>
+  <xs:complexType name="PaymentMethod">
+    <xs:sequence>
+      <xs:element name="PaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentMethodFees" nillable="true" type="tns:ArrayOfPaymentMethodFee"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+  <xs:complexType name="ArrayOfPaymentMethodFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethodFee" nillable="true" type="tns:PaymentMethodFee"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethodFee" nillable="true" type="tns:ArrayOfPaymentMethodFee"/>
+  <xs:complexType name="PaymentMethodFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FeeAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="FeeType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="MarketCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PTCId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="PricingEvent" type="xs:int"/>
+      <xs:element minOccurs="0" name="Refundable" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodFee" nillable="true" type="tns:PaymentMethodFee"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fees.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints/>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

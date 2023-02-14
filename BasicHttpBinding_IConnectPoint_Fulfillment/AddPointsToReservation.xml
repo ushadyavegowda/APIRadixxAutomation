@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="7f92265c-e36f-476b-904a-5ba66d970d09" isOneWay="false" action="http://tempuri.org/IConnectPoint_Fulfillment/AddPointsToReservation" name="AddPointsToReservation" bindingOperationName="AddPointsToReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7f92265c-e36f-476b-904a-5ba66d970d09fileName">AddPointsToReservation</con:setting>
+  </con:settings>
+  <con:call id="d7668f23-d69e-446e-a901-6e753a70c0bc" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:rad3="http://schemas.datacontract.org/2004/07/Radixx.Reservation.Base">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AddPointsToReservation>\r
+         <!--Optional:-->\r
+         <tem:AddPointsToReservationRequest>\r
+            <rad:TransactionInfo>\r
+               <rad1:SecurityGUID>?</rad1:SecurityGUID>\r
+               <rad1:CarrierCodes>\r
+                  <!--Zero or more repetitions:-->\r
+                  <rad1:CarrierCode>\r
+                     <rad1:AccessibleCarrierCode>?</rad1:AccessibleCarrierCode>\r
+                  </rad1:CarrierCode>\r
+               </rad1:CarrierCodes>\r
+               <!--Optional:-->\r
+               <rad1:ClientIPAddress>?</rad1:ClientIPAddress>\r
+               <!--Optional:-->\r
+               <rad1:HistoricUserName>?</rad1:HistoricUserName>\r
+            </rad:TransactionInfo>\r
+            <rad:ReservationInfo>\r
+               <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
+               <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
+            </rad:ReservationInfo>\r
+            <rad:PointsPaymentList>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:AddPointsPayment>\r
+                  <rad:PaymentAmount>?</rad:PaymentAmount>\r
+                  <rad:PaymentMethod>?</rad:PaymentMethod>\r
+                  <!--Optional:-->\r
+                  <rad:PaymentComment>?</rad:PaymentComment>\r
+                  <!--Optional:-->\r
+                  <rad:AccountNumber>?</rad:AccountNumber>\r
+                  <rad:UserID>?</rad:UserID>\r
+                  <rad:Payor>\r
+                     <rad2:PersonOrgID>?</rad2:PersonOrgID>\r
+                     <rad2:FirstName>?</rad2:FirstName>\r
+                     <rad2:LastName>?</rad2:LastName>\r
+                     <rad2:MiddleName>?</rad2:MiddleName>\r
+                     <rad2:Age>?</rad2:Age>\r
+                     <rad2:DOB>?</rad2:DOB>\r
+                     <rad2:Gender>?</rad2:Gender>\r
+                     <rad2:Title>?</rad2:Title>\r
+                     <rad2:NationalityLaguageID>?</rad2:NationalityLaguageID>\r
+                     <rad2:RelationType>?</rad2:RelationType>\r
+                     <rad2:WBCID>?</rad2:WBCID>\r
+                     <rad2:PTCID>?</rad2:PTCID>\r
+                     <rad2:PTC>?</rad2:PTC>\r
+                     <rad2:TravelsWithPersonOrgID>?</rad2:TravelsWithPersonOrgID>\r
+                     <rad2:RedressNumber>?</rad2:RedressNumber>\r
+                     <rad2:KnownTravelerNumber>?</rad2:KnownTravelerNumber>\r
+                     <rad2:MarketingOptIn>?</rad2:MarketingOptIn>\r
+                     <rad2:UseInventory>?</rad2:UseInventory>\r
+                     <rad2:Address>\r
+                        <rad2:Address1>?</rad2:Address1>\r
+                        <rad2:Address2>?</rad2:Address2>\r
+                        <rad2:City>?</rad2:City>\r
+                        <rad2:State>?</rad2:State>\r
+                        <rad2:Postal>?</rad2:Postal>\r
+                        <rad2:Country>?</rad2:Country>\r
+                        <rad2:CountryCode>?</rad2:CountryCode>\r
+                        <rad2:AreaCode>?</rad2:AreaCode>\r
+                        <rad2:PhoneNumber>?</rad2:PhoneNumber>\r
+                        <rad2:Display>?</rad2:Display>\r
+                     </rad2:Address>\r
+                     <rad2:Company>?</rad2:Company>\r
+                     <rad2:Comments>?</rad2:Comments>\r
+                     <rad2:Passport>?</rad2:Passport>\r
+                     <rad2:Nationality>?</rad2:Nationality>\r
+                     <rad2:ProfileId>?</rad2:ProfileId>\r
+                     <rad2:IsPrimaryPassenger>?</rad2:IsPrimaryPassenger>\r
+                     <rad2:ContactInfos>\r
+                        <!--Zero or more repetitions:-->\r
+                        <rad2:ContactInfo>\r
+                           <rad2:ContactID>?</rad2:ContactID>\r
+                           <rad2:PersonOrgID>?</rad2:PersonOrgID>\r
+                           <rad2:ContactField>?</rad2:ContactField>\r
+                           <rad2:ContactType>?</rad2:ContactType>\r
+                           <rad2:Extension>?</rad2:Extension>\r
+                           <rad2:CountryCode>?</rad2:CountryCode>\r
+                           <rad2:AreaCode>?</rad2:AreaCode>\r
+                           <rad2:PhoneNumber>?</rad2:PhoneNumber>\r
+                           <rad2:Display>?</rad2:Display>\r
+                           <rad2:PreferredContactMethod>?</rad2:PreferredContactMethod>\r
+                        </rad2:ContactInfo>\r
+                     </rad2:ContactInfos>\r
+                     <!--Optional:-->\r
+                     <rad2:FrequentFlyerNumber>?</rad2:FrequentFlyerNumber>\r
+                     <!--Optional:-->\r
+                     <rad2:Suffix>?</rad2:Suffix>\r
+                     <!--Optional:-->\r
+                     <rad2:Weight>?</rad2:Weight>\r
+                     <!--Optional:-->\r
+                     <rad2:Height>?</rad2:Height>\r
+                  </rad:Payor>\r
+                  <rad:DatePaid>?</rad:DatePaid>\r
+                  <!--Optional:-->\r
+                  <rad:MetaData>\r
+                     <!--Zero or more repetitions:-->\r
+                     <rad3:PaymentMetaData>\r
+                        <!--Optional:-->\r
+                        <rad3:KeyName>?</rad3:KeyName>\r
+                        <!--Optional:-->\r
+                        <rad3:Value>?</rad3:Value>\r
+                     </rad3:PaymentMetaData>\r
+                  </rad:MetaData>\r
+               </rad:AddPointsPayment>\r
+            </rad:PointsPaymentList>\r
+         </tem:AddPointsToReservationRequest>\r
+      </tem:AddPointsToReservation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Fulfillment/AddPointsToReservation"/>
+    <con:environmentSpec>
+      <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="c38d7552-82b6-4a9d-a102-850e08f8a90f" isOneWay="false" action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater" name="HoldQuoteToPurchaseLater" bindingOperationName="HoldQuoteToPurchaseLater" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c38d7552-82b6-4a9d-a102-850e08f8a90ffileName">HoldQuoteToPurchaseLater</con:setting>
+  </con:settings>
+  <con:call id="aede77af-4cee-4fb4-bfc6-2ff52f1f6f9f" name="HoldQuoteToPurchaseLater Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Insurance.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Insurance.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:HoldQuoteToPurchaseLater>\r
+         <!--Optional:-->\r
+         <tem:QuoteHoldRequest>\r
+            <rad:SecurityGUID>?</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>?</rad:HistoricUserName>\r
+            <rad1:InsuranceTransactionInfo>\r
+               <rad1:TransactionID>?</rad1:TransactionID>\r
+               <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
+               <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
+               <rad1:AgreeToTerms>?</rad1:AgreeToTerms>\r
+               <rad1:ProcessPolicyRequestWithHeldQuote>?</rad1:ProcessPolicyRequestWithHeldQuote>\r
+               <rad1:User>?</rad1:User>\r
+            </rad1:InsuranceTransactionInfo>\r
+         </tem:QuoteHoldRequest>\r
+      </tem:HoldQuoteToPurchaseLater>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Insurance/HoldQuoteToPurchaseLater"/>
+  </con:call>
+</con:operation>

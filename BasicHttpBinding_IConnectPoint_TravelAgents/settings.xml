@@ -1,0 +1,3050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="413ee6a9-a05a-4e15-976c-774c0cab0035" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_TravelAgents" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_TravelAgents" soapVersion="1_1" anonymous="optional" definition="https://rdxappint.radixxuat.com/rdx/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="413ee6a9-a05a-4e15-976c-774c0cab0035fileName">BasicHttpBinding_IConnectPoint_TravelAgents</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?wsdl">
+    <con:part>
+      <con:url>https://rdxappint.radixxuat.com/rdx/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_TravelAgents" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_LoginTravelAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTravelAgent"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_LoginTravelAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTravelAgentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAvailableCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAvailableCredit"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAvailableCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAvailableCreditResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAvailableAgencyCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAvailableAgencyCredit"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAvailableAgencyCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAvailableAgencyCreditResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveTravelAgencyPNRList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTravelAgencyPNRList"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveTravelAgencyPNRList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTravelAgencyPNRListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyCommission_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyCommission"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyCommission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyCommissionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyList"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgentList"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgentListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgencyCreditLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgencyCreditLimit"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgencyCreditLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgencyCreditLimitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveDisruptedAgencyPNRList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDisruptedAgencyPNRList"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveDisruptedAgencyPNRList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDisruptedAgencyPNRListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencywithCCInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencywithCCInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencywithCCInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencywithCCInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgentDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgentDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCommissionDashboardInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCommissionDashboardInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCommissionDashboardInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCommissionDashboardInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveTransactionDashboardInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTransactionDashboardInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveTransactionDashboardInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTransactionDashboardInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBalanceDashboardInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBalanceDashboardInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBalanceDashboardInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBalanceDashboardInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_CreateAgency_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAgency"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_CreateAgency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAgencyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgency_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgency"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgencyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_CreateAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAgent"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_CreateAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAgentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgent"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_ModifyAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAgentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_MoveAgencySessionDataToNewSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveAgencySessionDataToNewSecurityToken"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_MoveAgencySessionDataToNewSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveAgencySessionDataToNewSecurityTokenResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBookingHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookingHistory"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBookingHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookingHistoryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCumulativeBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCumulativeBalance"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCumulativeBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCumulativeBalanceResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCreditLimitHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCreditLimitHistory"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveCreditLimitHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCreditLimitHistoryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveFinanceAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFinanceAgents"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveFinanceAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveFinanceAgentsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveSubAgencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSubAgencies"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveSubAgencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSubAgenciesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveDistributorDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDistributorDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveDistributorDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDistributorDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_AssociateToReservation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssociateToReservation"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_AssociateToReservation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssociateToReservationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveChangedTAData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveChangedTAData"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveChangedTAData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveChangedTADataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyIncentiveReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyIncentiveReport"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyIncentiveReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyIncentiveReportResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveAgencyPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAgencyPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBookingsWithPaymentsPending_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookingsWithPaymentsPending"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_RetrieveBookingsWithPaymentsPending_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookingsWithPaymentsPendingResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_UpdateTopUpDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTopUpDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_UpdateTopUpDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTopUpDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_LoginTravelAgentSingleSignOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTravelAgentSingleSignOn"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_LoginTravelAgentSingleSignOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTravelAgentSingleSignOnResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_AgencyFundsTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgencyFundsTransfer"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_TravelAgents_AgencyFundsTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgencyFundsTransferResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_TravelAgents">
+    <wsdl:operation name="RetrieveAgencyDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyDetails" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyDetailsResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTravelAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgent" message="tns:IConnectPoint_TravelAgents_LoginTravelAgent_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgentResponse" message="tns:IConnectPoint_TravelAgents_LoginTravelAgent_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAvailableCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableCredit" message="tns:IConnectPoint_TravelAgents_RetrieveAvailableCredit_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableCreditResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAvailableCredit_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAvailableAgencyCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableAgencyCredit" message="tns:IConnectPoint_TravelAgents_RetrieveAvailableAgencyCredit_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableAgencyCreditResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAvailableAgencyCredit_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTravelAgencyPNRList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTravelAgencyPNRList" message="tns:IConnectPoint_TravelAgents_RetrieveTravelAgencyPNRList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTravelAgencyPNRListResponse" message="tns:IConnectPoint_TravelAgents_RetrieveTravelAgencyPNRList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyCommission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyCommission" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyCommission_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyCommissionResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyCommission_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyInfo" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyInfoResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyList" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyListResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgentList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentList" message="tns:IConnectPoint_TravelAgents_RetrieveAgentList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentListResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgentList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgencyCreditLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyCreditLimit" message="tns:IConnectPoint_TravelAgents_ModifyAgencyCreditLimit_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyCreditLimitResponse" message="tns:IConnectPoint_TravelAgents_ModifyAgencyCreditLimit_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDisruptedAgencyPNRList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDisruptedAgencyPNRList" message="tns:IConnectPoint_TravelAgents_RetrieveDisruptedAgencyPNRList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDisruptedAgencyPNRListResponse" message="tns:IConnectPoint_TravelAgents_RetrieveDisruptedAgencyPNRList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencywithCCInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencywithCCInfo" message="tns:IConnectPoint_TravelAgents_RetrieveAgencywithCCInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencywithCCInfoResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencywithCCInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentDetails" message="tns:IConnectPoint_TravelAgents_RetrieveAgentDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentDetailsResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgentDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCommissionDashboardInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCommissionDashboardInfo" message="tns:IConnectPoint_TravelAgents_RetrieveCommissionDashboardInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCommissionDashboardInfoResponse" message="tns:IConnectPoint_TravelAgents_RetrieveCommissionDashboardInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTransactionDashboardInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTransactionDashboardInfo" message="tns:IConnectPoint_TravelAgents_RetrieveTransactionDashboardInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTransactionDashboardInfoResponse" message="tns:IConnectPoint_TravelAgents_RetrieveTransactionDashboardInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBalanceDashboardInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBalanceDashboardInfo" message="tns:IConnectPoint_TravelAgents_RetrieveBalanceDashboardInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBalanceDashboardInfoResponse" message="tns:IConnectPoint_TravelAgents_RetrieveBalanceDashboardInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgency" message="tns:IConnectPoint_TravelAgents_CreateAgency_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgencyResponse" message="tns:IConnectPoint_TravelAgents_CreateAgency_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgency" message="tns:IConnectPoint_TravelAgents_ModifyAgency_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyResponse" message="tns:IConnectPoint_TravelAgents_ModifyAgency_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgent" message="tns:IConnectPoint_TravelAgents_CreateAgent_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgentResponse" message="tns:IConnectPoint_TravelAgents_CreateAgent_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgent" message="tns:IConnectPoint_TravelAgents_ModifyAgent_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgentResponse" message="tns:IConnectPoint_TravelAgents_ModifyAgent_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="MoveAgencySessionDataToNewSecurityToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/MoveAgencySessionDataToNewSecurityToken" message="tns:IConnectPoint_TravelAgents_MoveAgencySessionDataToNewSecurityToken_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/MoveAgencySessionDataToNewSecurityTokenResponse" message="tns:IConnectPoint_TravelAgents_MoveAgencySessionDataToNewSecurityToken_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookingHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingHistory" message="tns:IConnectPoint_TravelAgents_RetrieveBookingHistory_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingHistoryResponse" message="tns:IConnectPoint_TravelAgents_RetrieveBookingHistory_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCumulativeBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCumulativeBalance" message="tns:IConnectPoint_TravelAgents_RetrieveCumulativeBalance_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCumulativeBalanceResponse" message="tns:IConnectPoint_TravelAgents_RetrieveCumulativeBalance_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCreditLimitHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCreditLimitHistory" message="tns:IConnectPoint_TravelAgents_RetrieveCreditLimitHistory_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCreditLimitHistoryResponse" message="tns:IConnectPoint_TravelAgents_RetrieveCreditLimitHistory_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFinanceAgents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveFinanceAgents" message="tns:IConnectPoint_TravelAgents_RetrieveFinanceAgents_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveFinanceAgentsResponse" message="tns:IConnectPoint_TravelAgents_RetrieveFinanceAgents_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSubAgencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveSubAgencies" message="tns:IConnectPoint_TravelAgents_RetrieveSubAgencies_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveSubAgenciesResponse" message="tns:IConnectPoint_TravelAgents_RetrieveSubAgencies_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDistributorDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDistributorDetails" message="tns:IConnectPoint_TravelAgents_RetrieveDistributorDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDistributorDetailsResponse" message="tns:IConnectPoint_TravelAgents_RetrieveDistributorDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateToReservation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/AssociateToReservation" message="tns:IConnectPoint_TravelAgents_AssociateToReservation_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/AssociateToReservationResponse" message="tns:IConnectPoint_TravelAgents_AssociateToReservation_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveChangedTAData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveChangedTAData" message="tns:IConnectPoint_TravelAgents_RetrieveChangedTAData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveChangedTADataResponse" message="tns:IConnectPoint_TravelAgents_RetrieveChangedTAData_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyIncentiveReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyIncentiveReport" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyIncentiveReport_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyIncentiveReportResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyIncentiveReport_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyPNR" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyPNRResponse" message="tns:IConnectPoint_TravelAgents_RetrieveAgencyPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookingsWithPaymentsPending">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingsWithPaymentsPending" message="tns:IConnectPoint_TravelAgents_RetrieveBookingsWithPaymentsPending_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingsWithPaymentsPendingResponse" message="tns:IConnectPoint_TravelAgents_RetrieveBookingsWithPaymentsPending_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTopUpDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/UpdateTopUpDetails" message="tns:IConnectPoint_TravelAgents_UpdateTopUpDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/UpdateTopUpDetailsResponse" message="tns:IConnectPoint_TravelAgents_UpdateTopUpDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTravelAgentSingleSignOn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgentSingleSignOn" message="tns:IConnectPoint_TravelAgents_LoginTravelAgentSingleSignOn_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgentSingleSignOnResponse" message="tns:IConnectPoint_TravelAgents_LoginTravelAgentSingleSignOn_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AgencyFundsTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/AgencyFundsTransfer" message="tns:IConnectPoint_TravelAgents_AgencyFundsTransfer_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_TravelAgents/AgencyFundsTransferResponse" message="tns:IConnectPoint_TravelAgents_AgencyFundsTransfer_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_TravelAgents" type="tns:IConnectPoint_TravelAgents">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrieveAgencyDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTravelAgent">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgent" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAvailableCredit">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableCredit" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAvailableAgencyCredit">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAvailableAgencyCredit" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTravelAgencyPNRList">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTravelAgencyPNRList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyCommission">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyCommission" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyList">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgentList">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgencyCreditLimit">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyCreditLimit" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDisruptedAgencyPNRList">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDisruptedAgencyPNRList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencywithCCInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencywithCCInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgentDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgentDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCommissionDashboardInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCommissionDashboardInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTransactionDashboardInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTransactionDashboardInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBalanceDashboardInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBalanceDashboardInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgency">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgency" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgency">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgency" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgent">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/CreateAgent" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAgent">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgent" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveAgencySessionDataToNewSecurityToken">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/MoveAgencySessionDataToNewSecurityToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookingHistory">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingHistory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCumulativeBalance">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCumulativeBalance" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCreditLimitHistory">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveCreditLimitHistory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveFinanceAgents">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveFinanceAgents" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSubAgencies">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveSubAgencies" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDistributorDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDistributorDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateToReservation">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/AssociateToReservation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveChangedTAData">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveChangedTAData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyIncentiveReport">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyIncentiveReport" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAgencyPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookingsWithPaymentsPending">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingsWithPaymentsPending" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTopUpDetails">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/UpdateTopUpDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTravelAgentSingleSignOn">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgentSingleSignOn" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgencyFundsTransfer">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_TravelAgents/AgencyFundsTransfer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_TravelAgents">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_TravelAgents" binding="tns:BasicHttpBinding_IConnectPoint_TravelAgents">
+      <soap:address location="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response"/>
+  <xs:element name="RetrieveAgencyDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyDetailsRequest" nillable="true" type="q1:RetrieveAgencyDetails" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyDetailsResult" nillable="true" type="q2:ViewAgencyDetails" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTravelAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginTravelAgentRequest" nillable="true" type="q3:LoginTravelAgent" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTravelAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginTravelAgentResult" nillable="true" type="q4:LoginTravelAgentStatus" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAvailableCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAvailableCreditRequest" nillable="true" type="q5:RetrieveAvailableCredit" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAvailableCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAvailableCreditResult" nillable="true" type="q6:ViewAvailableCredit" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAvailableAgencyCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAvailableAgencyCreditRequest" nillable="true" type="q7:RetrieveAvailableAgencyCredit" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAvailableAgencyCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAvailableAgencyCreditResult" nillable="true" type="q8:ViewAvailableCredit" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTravelAgencyPNRList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTravelAgencyPNRListRequest" nillable="true" type="q9:RetrieveTravelAgencyPNRList" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTravelAgencyPNRListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTravelAgencyPNRListResult" nillable="true" type="q10:ViewTravelAgencyPNRList" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyCommission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyCommissionRequest" nillable="true" type="q11:RetrieveAgencyCommission" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyCommissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyCommissionResult" nillable="true" type="q12:ViewAgencyCommission" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retrieveAgencyInfoRequest" nillable="true" type="q13:RetrieveAgencyInfo" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyInfoResult" nillable="true" type="q14:ViewAgencyInfo" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retrieveAgencyListRequest" nillable="true" type="q15:RetrieveAgencyList" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyListResult" nillable="true" type="q16:ViewAgencyList" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgentList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retrieveAgentListRequest" nillable="true" type="q17:RetrieveAgentList" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgentListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgentListResult" nillable="true" type="q18:ViewAgentList" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgencyCreditLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyAgencyCreditLimitRequest" nillable="true" type="q19:ModifyAgencyCreditLimit" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgencyCreditLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyAgencyCreditLimitResult" nillable="true" type="q20:ViewModifyAgencyCreditLimit" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDisruptedAgencyPNRList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retrieveDisruptedAgencyPNRListRequest" nillable="true" type="q21:RetrieveDisruptedAgencyPNRList" xmlns:q21="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDisruptedAgencyPNRListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveDisruptedAgencyPNRListResult" nillable="true" type="q22:ViewDisruptedAgencyPNRList" xmlns:q22="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencywithCCInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencywithCCInfoRequest" nillable="true" type="q23:RetrieveAgencywithCCInfo" xmlns:q23="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencywithCCInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencywithCCInfoResult" nillable="true" type="q24:ViewAgencywithCCInfo" xmlns:q24="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgentDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgentDetailsRequest" nillable="true" type="q25:RetrieveAgentDetails" xmlns:q25="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgentDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgentDetailsResult" nillable="true" type="q26:ViewAgentDetails" xmlns:q26="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCommissionDashboardInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCommissionDashboardInfoRequest" nillable="true" type="q27:DashboardViewInfo" xmlns:q27="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCommissionDashboardInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCommissionDashboardInfoResult" nillable="true" type="q28:ViewCommissionInfo" xmlns:q28="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTransactionDashboardInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTransactionDashboardInfoRequest" nillable="true" type="q29:DashboardViewInfo" xmlns:q29="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTransactionDashboardInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTransactionDashboardInfoResult" nillable="true" type="q30:ViewTransactionInfo" xmlns:q30="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBalanceDashboardInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBalanceDashboardInfoRequest" nillable="true" type="q31:DashboardViewInfo" xmlns:q31="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBalanceDashboardInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBalanceDashboardInfoResult" nillable="true" type="q32:ViewBalanceInfo" xmlns:q32="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAgency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createAgencyRequest" nillable="true" type="q33:CreateAgency" xmlns:q33="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAgencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAgencyResult" nillable="true" type="q34:CreateAgency" xmlns:q34="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyAgencyRequest" nillable="true" type="q35:ModifyAgency" xmlns:q35="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyAgencyResult" nillable="true" type="q36:ModifyAgency" xmlns:q36="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAgentRequest" nillable="true" type="q37:CreateAgent" xmlns:q37="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAgentResult" nillable="true" type="q38:CreateAgent" xmlns:q38="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyAgentRequest" nillable="true" type="q39:ModifyAgent" xmlns:q39="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyAgentResult" nillable="true" type="q40:ModifyAgent" xmlns:q40="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveAgencySessionDataToNewSecurityToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MoveAgencySessionDataToNewSecurityTokenRequest" nillable="true" type="q41:MoveAgencySessionDataToNewSecurityToken" xmlns:q41="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveAgencySessionDataToNewSecurityTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MoveAgencySessionDataToNewSecurityTokenResult" nillable="true" type="q42:MoveAgencySessionDataToNewSecurityToken" xmlns:q42="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBookingHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBookingHistoryRequest" nillable="true" type="q43:RetrieveBookingHistory" xmlns:q43="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBookingHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBookingHistoryResult" nillable="true" type="q44:ViewBookingHistoryCollection" xmlns:q44="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCumulativeBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCumulativeBalanceRequest" nillable="true" type="q45:RetrieveCumulativeBalance" xmlns:q45="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCumulativeBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCumulativeBalanceResult" nillable="true" type="q46:ViewCumulativeBalanceCollection" xmlns:q46="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCreditLimitHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCreditLimitHistoryRequest" nillable="true" type="q47:RetrieveCreditLimitHistory" xmlns:q47="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCreditLimitHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveCreditLimitHistoryResult" nillable="true" type="q48:ViewCreditLimitHistoryCollection" xmlns:q48="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFinanceAgents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFinanceAgentsRequest" nillable="true" type="q49:RetrieveFinanceAgents" xmlns:q49="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveFinanceAgentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveFinanceAgentsResult" nillable="true" type="q50:ViewFinanceAgentsCollection" xmlns:q50="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSubAgencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSubAgenciesRequest" nillable="true" type="q51:RetrieveSubAgencies" xmlns:q51="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveSubAgenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSubAgenciesResult" nillable="true" type="q52:ViewSubAgenciesCollection" xmlns:q52="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDistributorDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveDistributorDetailsRequest" nillable="true" type="q53:RetrieveDistributorDetails" xmlns:q53="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDistributorDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveDistributorDetailsResult" nillable="true" type="q54:ViewDistributorDetailsCollection" xmlns:q54="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateToReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssociateToReservationRequest" nillable="true" type="q55:AssociateToReservation" xmlns:q55="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateToReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssociateToReservationResult" nillable="true" type="q56:ViewAssociateToReservationCollection" xmlns:q56="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveChangedTAData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveChangedTADataRequest" nillable="true" type="q57:RetrieveChangedTAData" xmlns:q57="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveChangedTADataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveChangedTADataResult" nillable="true" type="q58:ViewChangedTADataCollection" xmlns:q58="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyIncentiveReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyIncentiveReportRequest" nillable="true" type="q59:RetrieveAgencyIncentiveReport" xmlns:q59="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyIncentiveReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyIncentiveReportResult" nillable="true" type="q60:ViewAgencyIncentiveReportCollection" xmlns:q60="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveSearchPNRRequest" nillable="true" type="q61:RetrieveAgencyPNR" xmlns:q61="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAgencyPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAgencyPNRResult" nillable="true" type="q62:ViewAgencyPNRCollection" xmlns:q62="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBookingsWithPaymentsPending">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBookingsWithPaymentsPendingRequest" nillable="true" type="q63:RetrieveBookingsWithPaymentsPending" xmlns:q63="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBookingsWithPaymentsPendingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBookingsWithPaymentsPendingResult" nillable="true" type="q64:ViewBookingsWithPaymentsPendingCollection" xmlns:q64="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTopUpDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTopUpDetailsRequest" nillable="true" type="q65:UpdateTopUpDetails" xmlns:q65="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTopUpDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTopUpDetailsResult" nillable="true" type="q66:ViewUpdateTopUpDetailsColletion" xmlns:q66="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTravelAgentSingleSignOn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginTravelAgentRequest" nillable="true" type="q67:LoginTravelAgentSingleSignOn" xmlns:q67="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTravelAgentSingleSignOnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginTravelAgentSingleSignOnResult" nillable="true" type="q68:LoginTravelAgentStatusAndType" xmlns:q68="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgencyFundsTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgencyFundsTransferRequest" nillable="true" type="q69:AgencyFundsTransfer" xmlns:q69="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgencyFundsTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgencyFundsTransferResult" nillable="true" type="q70:AgencyFundsTransferStatus" xmlns:q70="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="RetrieveAgencyDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="IncludeChildAgents" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyDetails" nillable="true" type="tns:RetrieveAgencyDetails"/>
+  <xs:complexType name="LoginTravelAgent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:TransactionInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="UserName" nillable="true" type="xs:string"/>
+          <xs:element name="Password" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginTravelAgent" nillable="true" type="tns:LoginTravelAgent"/>
+  <xs:complexType name="RetrieveAvailableCredit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q3:TransactionInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAvailableCredit" nillable="true" type="tns:RetrieveAvailableCredit"/>
+  <xs:complexType name="RetrieveAvailableAgencyCredit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q4:TransactionInfo" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAvailableAgencyCredit" nillable="true" type="tns:RetrieveAvailableAgencyCredit"/>
+  <xs:complexType name="RetrieveTravelAgencyPNRList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q5:TransactionInfo" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:RetrieveTravelAgencyPNRList.ActionTypes"/>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="BookingAgent" nillable="true" type="xs:string"/>
+          <xs:element name="ExternalAppID" nillable="true" type="xs:string"/>
+          <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+          <xs:element name="LastName" nillable="true" type="xs:string"/>
+          <xs:element name="FirstName" nillable="true" type="xs:string"/>
+          <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+          <xs:element name="FlightDate" type="xs:dateTime"/>
+          <xs:element name="Origin" nillable="true" type="xs:string"/>
+          <xs:element name="Destination" nillable="true" type="xs:string"/>
+          <xs:element name="PaxEmail" nillable="true" type="xs:string"/>
+          <xs:element name="PaxPhone" nillable="true" type="xs:string"/>
+          <xs:element name="ProfileID" type="xs:long"/>
+          <xs:element name="TravelAgencyEmail" nillable="true" type="xs:string"/>
+          <xs:element name="TravelAgencyPhone" nillable="true" type="xs:string"/>
+          <xs:element name="IncludeActiveBookings" type="xs:boolean"/>
+          <xs:element name="IncludePastBookings" type="xs:boolean"/>
+          <xs:element name="IncludeCancelledBookings" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="IncludeChildAgencyBookings" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="BookedDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveTravelAgencyPNRList" nillable="true" type="tns:RetrieveTravelAgencyPNRList"/>
+  <xs:simpleType name="RetrieveTravelAgencyPNRList.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetrieveTravelAgentBookings"/>
+      <xs:enumeration value="RetrieveTravelAgencyBookings"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveTravelAgencyPNRList.ActionTypes" nillable="true" type="tns:RetrieveTravelAgencyPNRList.ActionTypes"/>
+  <xs:complexType name="RetrieveAgencyCommission">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:TransactionInfo" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="CurrencyCode" type="q6:Enumerations.CurrencyCodeTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyCommission" nillable="true" type="tns:RetrieveAgencyCommission"/>
+  <xs:complexType name="RetrieveAgencyInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q7:TransactionInfo" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyInfo" nillable="true" type="tns:RetrieveAgencyInfo"/>
+  <xs:complexType name="RetrieveAgencyList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q8:TransactionInfo" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgents" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyList" nillable="true" type="tns:RetrieveAgencyList"/>
+  <xs:complexType name="RetrieveAgentList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q9:TransactionInfo" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgents" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgentList" nillable="true" type="tns:RetrieveAgentList"/>
+  <xs:complexType name="ModifyAgencyCreditLimit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q10:TransactionInfo" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LoggedOnIATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NewCreditLimit" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="OriginalCreditLimit" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifyAgencyCreditLimit" nillable="true" type="tns:ModifyAgencyCreditLimit"/>
+  <xs:complexType name="RetrieveDisruptedAgencyPNRList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q11:TransactionInfo" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgents" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveDisruptedAgencyPNRList" nillable="true" type="tns:RetrieveDisruptedAgencyPNRList"/>
+  <xs:complexType name="RetrieveAgencywithCCInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q12:TransactionInfo" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencywithCCInfo" nillable="true" type="tns:RetrieveAgencywithCCInfo"/>
+  <xs:complexType name="RetrieveAgentDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q13:TransactionInfo" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgentDetails" nillable="true" type="tns:RetrieveAgentDetails"/>
+  <xs:complexType name="CreateAgency">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q14:TransactionInfo" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:CreateAgency.ActionTypes"/>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyAdress1" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyAdress2" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCity" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyState" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCurrency" nillable="true" type="xs:string"/>
+          <xs:element name="LegalName" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyPostalCode" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCountry" nillable="true" type="xs:string"/>
+          <xs:element name="ContactName" nillable="true" type="xs:string"/>
+          <xs:element name="AccountFirstName" nillable="true" type="xs:string"/>
+          <xs:element name="AccountLastName" nillable="true" type="xs:string"/>
+          <xs:element name="AccountEmail" nillable="true" type="xs:string"/>
+          <xs:element name="ContactInfos" nillable="true" type="tns:ArrayOfTAContactInfo"/>
+          <xs:element name="NumberOfBranches" type="xs:int"/>
+          <xs:element name="AgencyWebSiteUrl" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCreditLimit" type="xs:int"/>
+          <xs:element name="AgencyCreditLimitCurrency" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyFetExempt" type="xs:boolean"/>
+          <xs:element name="PreferrEmailReceipt" type="xs:boolean"/>
+          <xs:element name="PreferrFaxReceipt" type="xs:boolean"/>
+          <xs:element name="PreferrMailReceipt" type="xs:boolean"/>
+          <xs:element name="AgencyType" type="q14:Enumerations.TravelAgencyTypes"/>
+          <xs:element name="AccountUserName" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyRegion" type="xs:int"/>
+          <xs:element name="UseParentCreditLimit" type="xs:boolean"/>
+          <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAgency" nillable="true" type="tns:CreateAgency"/>
+  <xs:simpleType name="CreateAgency.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CreateChildAgency"/>
+      <xs:enumeration value="CreateChildAgencySingleSignOn"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreateAgency.ActionTypes" nillable="true" type="tns:CreateAgency.ActionTypes"/>
+  <xs:complexType name="ArrayOfTAContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TAContactInfo" nillable="true" type="tns:TAContactInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTAContactInfo" nillable="true" type="tns:ArrayOfTAContactInfo"/>
+  <xs:complexType name="TAContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginalContactFieldValue" nillable="true" type="xs:string"/>
+      <xs:element name="ContactField" nillable="true" type="xs:string"/>
+      <xs:element name="ContactType" type="q15:Enumerations.ContactTypes" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="PreferredContactMethod" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TAContactInfo" nillable="true" type="tns:TAContactInfo"/>
+  <xs:complexType name="ModifyAgency">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q16:TransactionInfo" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyAdress1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyAdress2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyCity" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyState" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyCurrency" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LegalName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyPostalCode" nillable="true" type="xs:string"/>
+          <xs:element name="TAContactInfos" nillable="true" type="tns:ArrayOfTAContactInfo"/>
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AccountFirstName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AccountLastName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyWebSiteUrl" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AgencyFetExempt" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="PreferrEmailReceipt" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="AgencyRegion" type="xs:int"/>
+          <xs:element minOccurs="0" name="PreferrFaxReceipt" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="PreferrMailReceipt" type="xs:boolean"/>
+          <xs:element name="AgencyStatus" type="q16:Enumerations.StatusTypes"/>
+          <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifyAgency" nillable="true" type="tns:ModifyAgency"/>
+  <xs:complexType name="CreateAgent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q17:TransactionInfo" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:CreateAgent.ActionTypes"/>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="Status" type="xs:int"/>
+          <xs:element name="AgentUsername" nillable="true" type="xs:string"/>
+          <xs:element name="AgentFirstName" nillable="true" type="xs:string"/>
+          <xs:element name="AgentLastName" nillable="true" type="xs:string"/>
+          <xs:element name="AgentAddress1" nillable="true" type="xs:string"/>
+          <xs:element name="AgentAddress2" nillable="true" type="xs:string"/>
+          <xs:element name="AgentCity" nillable="true" type="xs:string"/>
+          <xs:element name="AgentState" nillable="true" type="xs:string"/>
+          <xs:element name="AgentPostalCode" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCountry" nillable="true" type="xs:string"/>
+          <xs:element name="AgentEmail" nillable="true" type="xs:string"/>
+          <xs:element name="AgentDefaultRole" nillable="true" type="xs:string"/>
+          <xs:element name="TaContactInfos" nillable="true" type="tns:ArrayOfTAContactInfo"/>
+          <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAgent" nillable="true" type="tns:CreateAgent"/>
+  <xs:simpleType name="CreateAgent.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CreateAgent"/>
+      <xs:enumeration value="CreateAgentSingleSignOn"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreateAgent.ActionTypes" nillable="true" type="tns:CreateAgent.ActionTypes"/>
+  <xs:complexType name="ModifyAgent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q18:TransactionInfo" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:ModifyAgent.ActionTypes"/>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="Status" type="xs:int"/>
+          <xs:element name="AgentUsername" nillable="true" type="xs:string"/>
+          <xs:element name="AgentFirstName" nillable="true" type="xs:string"/>
+          <xs:element name="AgentLastName" nillable="true" type="xs:string"/>
+          <xs:element name="AgentAddress1" nillable="true" type="xs:string"/>
+          <xs:element name="AgentAddress2" nillable="true" type="xs:string"/>
+          <xs:element name="AgentCity" nillable="true" type="xs:string"/>
+          <xs:element name="AgentState" nillable="true" type="xs:string"/>
+          <xs:element name="AgentPostalCode" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyCountry" nillable="true" type="xs:string"/>
+          <xs:element name="AgentEmail" nillable="true" type="xs:string"/>
+          <xs:element name="TaContactInfos" nillable="true" type="tns:ArrayOfTAContactInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifyAgent" nillable="true" type="tns:ModifyAgent"/>
+  <xs:simpleType name="ModifyAgent.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ModifyAgent"/>
+      <xs:enumeration value="ModifyAgentStatus"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ModifyAgent.ActionTypes" nillable="true" type="tns:ModifyAgent.ActionTypes"/>
+  <xs:complexType name="MoveAgencySessionDataToNewSecurityToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q19:TransactionInfo" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MoveAgencySessionDataToNewSecurityToken" nillable="true" type="tns:MoveAgencySessionDataToNewSecurityToken"/>
+  <xs:complexType name="RetrieveBookingHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q20:TransactionInfo" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BookingDateFrom" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="BookingDateTo" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="BookingType" type="q20:Enumerations.PNRStatus"/>
+          <xs:element minOccurs="0" name="IATA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgency" type="q20:Enumerations.AnswerTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveBookingHistory" nillable="true" type="tns:RetrieveBookingHistory"/>
+  <xs:complexType name="RetrieveCumulativeBalance">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q21:TransactionInfo" xmlns:q21="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeChildAgent" type="q21:Enumerations.AnswerTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveCumulativeBalance" nillable="true" type="tns:RetrieveCumulativeBalance"/>
+  <xs:complexType name="RetrieveCreditLimitHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q22:TransactionInfo" xmlns:q22="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgent" type="q22:Enumerations.AnswerTypes"/>
+          <xs:element minOccurs="0" name="ReportDateFrom" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ReportDateTo" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveCreditLimitHistory" nillable="true" type="tns:RetrieveCreditLimitHistory"/>
+  <xs:complexType name="RetrieveFinanceAgents">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q23:TransactionInfo" xmlns:q23="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgencyInformation" nillable="true" type="q23:AgencyInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveFinanceAgents" nillable="true" type="tns:RetrieveFinanceAgents"/>
+  <xs:complexType name="RetrieveSubAgencies">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q24:TransactionInfo" xmlns:q24="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgencyInformation" nillable="true" type="q24:AgencyInfo"/>
+          <xs:element minOccurs="0" name="IncludeInactive" type="q24:Enumerations.AnswerTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSubAgencies" nillable="true" type="tns:RetrieveSubAgencies"/>
+  <xs:complexType name="RetrieveDistributorDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q25:TransactionInfo" xmlns:q25="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveDistributorDetails" nillable="true" type="tns:RetrieveDistributorDetails"/>
+  <xs:complexType name="AssociateToReservation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q26:TransactionInfo" xmlns:q26="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IATA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Override" type="q26:Enumerations.AnswerTypes"/>
+          <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssociateToReservation" nillable="true" type="tns:AssociateToReservation"/>
+  <xs:complexType name="RetrieveChangedTAData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q27:TransactionInfo" xmlns:q27="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="OutputFields" nillable="true" type="q27:ArrayOfEnumerations.AgencyFields"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveChangedTAData" nillable="true" type="tns:RetrieveChangedTAData"/>
+  <xs:complexType name="RetrieveAgencyIncentiveReport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q28:TransactionInfo" xmlns:q28="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgencyCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ChargeCodes" nillable="true" type="tns:ArrayOfChargeCode"/>
+          <xs:element minOccurs="0" name="DepartureEndDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="DepartureStartDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="EmailId" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PaymentEndDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="PaymentStartDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ReportType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SegmentStatus" nillable="true" type="q28:ArrayOfEnumerations.SegmentStatus"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyIncentiveReport" nillable="true" type="tns:RetrieveAgencyIncentiveReport"/>
+  <xs:complexType name="ArrayOfChargeCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChargeCode" nillable="true" type="tns:ChargeCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChargeCode" nillable="true" type="tns:ArrayOfChargeCode"/>
+  <xs:complexType name="ChargeCode">
+    <xs:sequence>
+      <xs:element name="CodeType" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChargeCode" nillable="true" type="tns:ChargeCode"/>
+  <xs:complexType name="RetrieveAgencyPNR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q29:TransactionInfo" xmlns:q29="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionType" type="tns:RetrieveAgencyPNR.ActionTypes"/>
+          <xs:element minOccurs="0" name="BookingReferenceNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepartureDate" nillable="true" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgencies" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PaymentReferenceNumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAgencyPNR" nillable="true" type="tns:RetrieveAgencyPNR"/>
+  <xs:simpleType name="RetrieveAgencyPNR.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SearchByBookingConfirmationNumber"/>
+      <xs:enumeration value="SearchByGenericInfo"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveAgencyPNR.ActionTypes" nillable="true" type="tns:RetrieveAgencyPNR.ActionTypes"/>
+  <xs:complexType name="RetrieveBookingsWithPaymentsPending">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q30:TransactionInfo" xmlns:q30="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IncludeChildAgency" type="q30:Enumerations.AnswerTypes"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveBookingsWithPaymentsPending" nillable="true" type="tns:RetrieveBookingsWithPaymentsPending"/>
+  <xs:complexType name="UpdateTopUpDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q31:TransactionInfo" xmlns:q31="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TopUpDetails" nillable="true" type="tns:ArrayOfTopUpDetails"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateTopUpDetails" nillable="true" type="tns:UpdateTopUpDetails"/>
+  <xs:complexType name="ArrayOfTopUpDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopUpDetails" nillable="true" type="tns:TopUpDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopUpDetails" nillable="true" type="tns:ArrayOfTopUpDetails"/>
+  <xs:complexType name="TopUpDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Credit_Amt" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Credit_Currency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Deposit_Nfn_Num" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IATA" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopUpDetails" nillable="true" type="tns:TopUpDetails"/>
+  <xs:complexType name="LoginTravelAgentSingleSignOn">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q32:TransactionInfo" xmlns:q32="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="UserName" nillable="true" type="xs:string"/>
+          <xs:element name="Email" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginTravelAgentSingleSignOn" nillable="true" type="tns:LoginTravelAgentSingleSignOn"/>
+  <xs:complexType name="AgencyFundsTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q33:TransactionInfo" xmlns:q33="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:AgencyFundsTransfer.ActionTypes"/>
+          <xs:element name="Amount" type="xs:decimal"/>
+          <xs:element name="ChildIATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="ParentIATANumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgencyFundsTransfer" nillable="true" type="tns:AgencyFundsTransfer"/>
+  <xs:simpleType name="AgencyFundsTransfer.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ParentAgencyToChildAgency"/>
+      <xs:enumeration value="ChildAgencyToParentAgency"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AgencyFundsTransfer.ActionTypes" nillable="true" type="tns:AgencyFundsTransfer.ActionTypes"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:simpleType name="Enumerations.CurrencyCodeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AED"/>
+      <xs:enumeration value="AFN"/>
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="AMD"/>
+      <xs:enumeration value="ANG"/>
+      <xs:enumeration value="AOA"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="AWG"/>
+      <xs:enumeration value="AZN"/>
+      <xs:enumeration value="BAM"/>
+      <xs:enumeration value="BBD"/>
+      <xs:enumeration value="BDT"/>
+      <xs:enumeration value="BGN"/>
+      <xs:enumeration value="BHD"/>
+      <xs:enumeration value="BIF"/>
+      <xs:enumeration value="BMD"/>
+      <xs:enumeration value="BND"/>
+      <xs:enumeration value="BOB"/>
+      <xs:enumeration value="BRL"/>
+      <xs:enumeration value="BSD"/>
+      <xs:enumeration value="BTN"/>
+      <xs:enumeration value="BWP"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="BZD"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="CDF"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="CLP"/>
+      <xs:enumeration value="CNY"/>
+      <xs:enumeration value="COP"/>
+      <xs:enumeration value="CRC"/>
+      <xs:enumeration value="CUP"/>
+      <xs:enumeration value="CVE"/>
+      <xs:enumeration value="CYP"/>
+      <xs:enumeration value="CZK"/>
+      <xs:enumeration value="DJF"/>
+      <xs:enumeration value="DKK"/>
+      <xs:enumeration value="DOP"/>
+      <xs:enumeration value="DZD"/>
+      <xs:enumeration value="EGP"/>
+      <xs:enumeration value="ERN"/>
+      <xs:enumeration value="ETB"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="FJD"/>
+      <xs:enumeration value="FKP"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="GEL"/>
+      <xs:enumeration value="GGP"/>
+      <xs:enumeration value="GHS"/>
+      <xs:enumeration value="GIP"/>
+      <xs:enumeration value="GMD"/>
+      <xs:enumeration value="GNF"/>
+      <xs:enumeration value="GTQ"/>
+      <xs:enumeration value="GYD"/>
+      <xs:enumeration value="HKD"/>
+      <xs:enumeration value="HNL"/>
+      <xs:enumeration value="HRK"/>
+      <xs:enumeration value="HTG"/>
+      <xs:enumeration value="HUF"/>
+      <xs:enumeration value="IDR"/>
+      <xs:enumeration value="ILS"/>
+      <xs:enumeration value="IMP"/>
+      <xs:enumeration value="INR"/>
+      <xs:enumeration value="IQD"/>
+      <xs:enumeration value="IRR"/>
+      <xs:enumeration value="ISK"/>
+      <xs:enumeration value="JEP"/>
+      <xs:enumeration value="JMD"/>
+      <xs:enumeration value="JOD"/>
+      <xs:enumeration value="JPY"/>
+      <xs:enumeration value="KES"/>
+      <xs:enumeration value="KGS"/>
+      <xs:enumeration value="KHR"/>
+      <xs:enumeration value="KMF"/>
+      <xs:enumeration value="KPW"/>
+      <xs:enumeration value="KWD"/>
+      <xs:enumeration value="KYD"/>
+      <xs:enumeration value="KZT"/>
+      <xs:enumeration value="LAK"/>
+      <xs:enumeration value="LBP"/>
+      <xs:enumeration value="LKR"/>
+      <xs:enumeration value="LRD"/>
+      <xs:enumeration value="LSL"/>
+      <xs:enumeration value="LTL"/>
+      <xs:enumeration value="LVL"/>
+      <xs:enumeration value="LYD"/>
+      <xs:enumeration value="MAD"/>
+      <xs:enumeration value="MDL"/>
+      <xs:enumeration value="MGA"/>
+      <xs:enumeration value="MKD"/>
+      <xs:enumeration value="MMK"/>
+      <xs:enumeration value="MNT"/>
+      <xs:enumeration value="MOP"/>
+      <xs:enumeration value="MRO"/>
+      <xs:enumeration value="MTL"/>
+      <xs:enumeration value="MUR"/>
+      <xs:enumeration value="MVR"/>
+      <xs:enumeration value="MWK"/>
+      <xs:enumeration value="MXN"/>
+      <xs:enumeration value="MYR"/>
+      <xs:enumeration value="MZN"/>
+      <xs:enumeration value="NAD"/>
+      <xs:enumeration value="NGN"/>
+      <xs:enumeration value="NIO"/>
+      <xs:enumeration value="NOK"/>
+      <xs:enumeration value="NPR"/>
+      <xs:enumeration value="NZD"/>
+      <xs:enumeration value="OMR"/>
+      <xs:enumeration value="PAB"/>
+      <xs:enumeration value="PEN"/>
+      <xs:enumeration value="PGK"/>
+      <xs:enumeration value="PHP"/>
+      <xs:enumeration value="PKR"/>
+      <xs:enumeration value="PLN"/>
+      <xs:enumeration value="PYG"/>
+      <xs:enumeration value="QAR"/>
+      <xs:enumeration value="RON"/>
+      <xs:enumeration value="RSD"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="RWF"/>
+      <xs:enumeration value="SAR"/>
+      <xs:enumeration value="SBD"/>
+      <xs:enumeration value="SCR"/>
+      <xs:enumeration value="SDG"/>
+      <xs:enumeration value="SEK"/>
+      <xs:enumeration value="SGD"/>
+      <xs:enumeration value="SHP"/>
+      <xs:enumeration value="SLL"/>
+      <xs:enumeration value="SOS"/>
+      <xs:enumeration value="SPL"/>
+      <xs:enumeration value="SRD"/>
+      <xs:enumeration value="STD"/>
+      <xs:enumeration value="SVC"/>
+      <xs:enumeration value="SYP"/>
+      <xs:enumeration value="SZL"/>
+      <xs:enumeration value="THB"/>
+      <xs:enumeration value="TJS"/>
+      <xs:enumeration value="TMM"/>
+      <xs:enumeration value="TND"/>
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="TRI"/>
+      <xs:enumeration value="TTD"/>
+      <xs:enumeration value="TVD"/>
+      <xs:enumeration value="TWD"/>
+      <xs:enumeration value="TZS"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="UGX"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="UYU"/>
+      <xs:enumeration value="UZS"/>
+      <xs:enumeration value="VEB"/>
+      <xs:enumeration value="VEF"/>
+      <xs:enumeration value="VND"/>
+      <xs:enumeration value="VUV"/>
+      <xs:enumeration value="WST"/>
+      <xs:enumeration value="XAF"/>
+      <xs:enumeration value="XAG"/>
+      <xs:enumeration value="XAU"/>
+      <xs:enumeration value="XCD"/>
+      <xs:enumeration value="XDR"/>
+      <xs:enumeration value="XOF"/>
+      <xs:enumeration value="XPD"/>
+      <xs:enumeration value="XPF"/>
+      <xs:enumeration value="XPT"/>
+      <xs:enumeration value="YER"/>
+      <xs:enumeration value="ZAR"/>
+      <xs:enumeration value="ZMK"/>
+      <xs:enumeration value="ZWD"/>
+      <xs:enumeration value="KRW"/>
+      <xs:enumeration value="ZMW"/>
+      <xs:enumeration value="SYS"/>
+      <xs:enumeration value="VES"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="BYN"/>
+      <xs:enumeration value="BOV"/>
+      <xs:enumeration value="CLF"/>
+      <xs:enumeration value="COU"/>
+      <xs:enumeration value="CUC"/>
+      <xs:enumeration value="MRU"/>
+      <xs:enumeration value="MXV"/>
+      <xs:enumeration value="STN"/>
+      <xs:enumeration value="XSU"/>
+      <xs:enumeration value="SSP"/>
+      <xs:enumeration value="CHW"/>
+      <xs:enumeration value="TRY"/>
+      <xs:enumeration value="TMT"/>
+      <xs:enumeration value="UYI"/>
+      <xs:enumeration value="UYW"/>
+      <xs:enumeration value="ZWL"/>
+      <xs:enumeration value="XBA"/>
+      <xs:enumeration value="XBB"/>
+      <xs:enumeration value="XBC"/>
+      <xs:enumeration value="XBD"/>
+      <xs:enumeration value="CNH"/>
+      <xs:enumeration value="RTG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.CurrencyCodeTypes" nillable="true" type="tns:Enumerations.CurrencyCodeTypes"/>
+  <xs:simpleType name="Enumerations.ARTransactionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BeginningBalance"/>
+      <xs:enumeration value="Payment"/>
+      <xs:enumeration value="Confirmation"/>
+      <xs:enumeration value="OnAccountPayment"/>
+      <xs:enumeration value="CreditMemo"/>
+      <xs:enumeration value="BadDebtWriteoff"/>
+      <xs:enumeration value="Invoice"/>
+      <xs:enumeration value="Undefined">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.ARTransactionTypes" nillable="true" type="tns:Enumerations.ARTransactionTypes"/>
+  <xs:simpleType name="Enumerations.ContactTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HomePhone"/>
+      <xs:enumeration value="WorkPhone"/>
+      <xs:enumeration value="MobilePhone"/>
+      <xs:enumeration value="Pager"/>
+      <xs:enumeration value="Email"/>
+      <xs:enumeration value="Fax"/>
+      <xs:enumeration value="SSN"/>
+      <xs:enumeration value="InboundFlightInfo"/>
+      <xs:enumeration value="OutboundFlightInfo"/>
+      <xs:enumeration value="ExtraFlightInfo"/>
+      <xs:enumeration value="TaUserType"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.ContactTypes" nillable="true" type="tns:Enumerations.ContactTypes"/>
+  <xs:simpleType name="Enumerations.TravelAgencyTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Corporation"/>
+      <xs:enumeration value="ParentTravelAgent"/>
+      <xs:enumeration value="ChildTravelAgent"/>
+      <xs:enumeration value="AtoCto"/>
+      <xs:enumeration value="ChildCtoAtoAgent"/>
+      <xs:enumeration value="Undefined">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.TravelAgencyTypes" nillable="true" type="tns:Enumerations.TravelAgencyTypes"/>
+  <xs:simpleType name="Enumerations.StatusTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inactive"/>
+      <xs:enumeration value="Active"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.StatusTypes" nillable="true" type="tns:Enumerations.StatusTypes"/>
+  <xs:simpleType name="Enumerations.PNRStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="Flown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Confirm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="All">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PaymentOutstanding">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.PNRStatus" nillable="true" type="tns:Enumerations.PNRStatus"/>
+  <xs:simpleType name="Enumerations.AnswerTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No"/>
+      <xs:enumeration value="Yes"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.AnswerTypes" nillable="true" type="tns:Enumerations.AnswerTypes"/>
+  <xs:complexType name="AgencyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IATA" nillable="true" type="xs:string"/>
+      <xs:element name="Authentication_ID" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgencyInfo" nillable="true" type="tns:AgencyInfo"/>
+  <xs:complexType name="ArrayOfEnumerations.AgencyFields">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enumerations.AgencyFields" type="tns:Enumerations.AgencyFields"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnumerations.AgencyFields" nillable="true" type="tns:ArrayOfEnumerations.AgencyFields"/>
+  <xs:simpleType name="Enumerations.AgencyFields">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="AgencyCompany"/>
+      <xs:enumeration value="AgencyEmail"/>
+      <xs:enumeration value="AgencyAddress1"/>
+      <xs:enumeration value="AgencyAddress2"/>
+      <xs:enumeration value="AgencyCity"/>
+      <xs:enumeration value="AgencyCountry"/>
+      <xs:enumeration value="AgencyIATA"/>
+      <xs:enumeration value="AgencyParentalIATA"/>
+      <xs:enumeration value="AgencyPhoneNumber"/>
+      <xs:enumeration value="AgencyFaxNumber"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.AgencyFields" nillable="true" type="tns:Enumerations.AgencyFields"/>
+  <xs:complexType name="ArrayOfEnumerations.SegmentStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enumerations.SegmentStatus" type="tns:Enumerations.SegmentStatus"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnumerations.SegmentStatus" nillable="true" type="tns:ArrayOfEnumerations.SegmentStatus"/>
+  <xs:simpleType name="Enumerations.SegmentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="Active"/>
+      <xs:enumeration value="WaitList"/>
+      <xs:enumeration value="StandBy"/>
+      <xs:enumeration value="CheckedIn"/>
+      <xs:enumeration value="Boarded"/>
+      <xs:enumeration value="Flying"/>
+      <xs:enumeration value="Flown"/>
+      <xs:enumeration value="Hold"/>
+      <xs:enumeration value="NoShow"/>
+      <xs:enumeration value="Confirm"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumerations.SegmentStatus" nillable="true" type="tns:Enumerations.SegmentStatus"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="ViewAgencyDetails">
+    <xs:sequence>
+      <xs:element name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element name="ViewAgencyDetailItems" nillable="true" type="tns:ArrayOfViewAgencyDetailsItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyDetails" nillable="true" type="tns:ViewAgencyDetails"/>
+  <xs:complexType name="ArrayOfViewAgencyDetailsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAgencyDetailsItem" nillable="true" type="tns:ViewAgencyDetailsItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAgencyDetailsItem" nillable="true" type="tns:ArrayOfViewAgencyDetailsItem"/>
+  <xs:complexType name="ViewAgencyDetailsItem">
+    <xs:sequence>
+      <xs:element name="IataCode" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+      <xs:element name="LegalName" nillable="true" type="xs:string"/>
+      <xs:element name="Firstname" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="Address1" nillable="true" type="xs:string"/>
+      <xs:element name="Address2" nillable="true" type="xs:string"/>
+      <xs:element name="City" nillable="true" type="xs:string"/>
+      <xs:element name="State" nillable="true" type="xs:string"/>
+      <xs:element name="ZipCode" nillable="true" type="xs:string"/>
+      <xs:element name="Country" nillable="true" type="xs:string"/>
+      <xs:element name="Phone" nillable="true" type="xs:string"/>
+      <xs:element name="Mobile" nillable="true" type="xs:string"/>
+      <xs:element name="Fax" nillable="true" type="xs:string"/>
+      <xs:element name="Email" nillable="true" type="xs:string"/>
+      <xs:element name="Currency" nillable="true" type="xs:string"/>
+      <xs:element name="Contact" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FundsProvidedByIATA" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyDetailsItem" nillable="true" type="tns:ViewAgencyDetailsItem"/>
+  <xs:complexType name="LoginTravelAgentStatus">
+    <xs:sequence>
+      <xs:element name="LoggedIn" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginTravelAgentStatus" nillable="true" type="tns:LoginTravelAgentStatus"/>
+  <xs:complexType name="ViewAvailableCredit">
+    <xs:sequence>
+      <xs:element name="AvailableCredit" type="xs:decimal"/>
+      <xs:element name="Exceptions" nillable="true" type="q3:ExceptionInformation.Exceptions" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAvailableCredit" nillable="true" type="tns:ViewAvailableCredit"/>
+  <xs:complexType name="ViewTravelAgencyPNRList">
+    <xs:sequence>
+      <xs:element name="TravelAgencyPNRList" nillable="true" type="tns:ArrayOfTravelAgencyPNR"/>
+      <xs:element name="Exceptions" nillable="true" type="q4:ExceptionInformation.Exceptions" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewTravelAgencyPNRList" nillable="true" type="tns:ViewTravelAgencyPNRList"/>
+  <xs:complexType name="ArrayOfTravelAgencyPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TravelAgencyPNR" nillable="true" type="tns:TravelAgencyPNR"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTravelAgencyPNR" nillable="true" type="tns:ArrayOfTravelAgencyPNR"/>
+  <xs:complexType name="TravelAgencyPNR">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="BookDate" type="xs:dateTime"/>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="ReservationCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlightID" type="xs:long"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FromAirport" nillable="true" type="xs:string"/>
+      <xs:element name="ToAirport" nillable="true" type="xs:string"/>
+      <xs:element name="Stops" type="xs:int"/>
+      <xs:element name="ReservationSegmentStatus" type="xs:int"/>
+      <xs:element name="BookingAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TicketingTimeLimit" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ReservationBalance" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Passengers" nillable="true" type="tns:ArrayOfPassenger"/>
+      <xs:element minOccurs="0" name="HistoricConfirmationNum" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TravelAgencyPNR" nillable="true" type="tns:TravelAgencyPNR"/>
+  <xs:complexType name="ArrayOfPassenger">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Passenger" nillable="true" type="tns:Passenger"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPassenger" nillable="true" type="tns:ArrayOfPassenger"/>
+  <xs:complexType name="Passenger">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Passenger" nillable="true" type="tns:Passenger"/>
+  <xs:complexType name="ViewAgencyCommission">
+    <xs:sequence>
+      <xs:element name="TravelAgencyCommissions" nillable="true" type="tns:ArrayOfTravelAgencyCommission"/>
+      <xs:element name="Exceptions" nillable="true" type="q5:ExceptionInformation.Exceptions" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyCommission" nillable="true" type="tns:ViewAgencyCommission"/>
+  <xs:complexType name="ArrayOfTravelAgencyCommission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TravelAgencyCommission" nillable="true" type="tns:TravelAgencyCommission"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTravelAgencyCommission" nillable="true" type="tns:ArrayOfTravelAgencyCommission"/>
+  <xs:complexType name="TravelAgencyCommission">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:decimal"/>
+      <xs:element name="IsPercentage" type="xs:boolean"/>
+      <xs:element name="MinAmount" type="xs:decimal"/>
+      <xs:element name="MaxAmount" type="xs:decimal"/>
+      <xs:element name="PaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element name="AssessAsFee" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TravelAgencyCommission" nillable="true" type="tns:TravelAgencyCommission"/>
+  <xs:complexType name="ViewAgencyInfo">
+    <xs:sequence>
+      <xs:element name="IataCode" nillable="true" type="xs:string"/>
+      <xs:element name="PersonOrgId" nillable="true" type="xs:string"/>
+      <xs:element name="ContactName" nillable="true" type="xs:string"/>
+      <xs:element name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element name="ParentIataCode" nillable="true" type="xs:string"/>
+      <xs:element name="AccountNumber" nillable="true" type="xs:string"/>
+      <xs:element name="AccountName" nillable="true" type="xs:string"/>
+      <xs:element name="AccountExpiration" type="xs:dateTime"/>
+      <xs:element name="Commission" type="xs:decimal"/>
+      <xs:element name="CreditLimit" type="xs:decimal"/>
+      <xs:element name="FetExempt" type="xs:boolean"/>
+      <xs:element name="BankNumber" nillable="true" type="xs:string"/>
+      <xs:element name="TravelAgentStatus" nillable="true" type="xs:string"/>
+      <xs:element name="ConsortTravalAgentId" type="xs:int"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="AccountId" nillable="true" type="xs:string"/>
+      <xs:element name="FederalId" nillable="true" type="xs:string"/>
+      <xs:element name="EmailReceipt" type="xs:boolean"/>
+      <xs:element name="FaxReceipt" type="xs:boolean"/>
+      <xs:element name="MailReceipt" type="xs:boolean"/>
+      <xs:element name="Comments" nillable="true" type="xs:string"/>
+      <xs:element name="Prepaid" type="xs:boolean"/>
+      <xs:element name="TravelAgentTypeId" type="xs:int"/>
+      <xs:element name="CanViewAllPnrs" type="xs:boolean"/>
+      <xs:element name="Address1" nillable="true" type="xs:string"/>
+      <xs:element name="Address2" nillable="true" type="xs:string"/>
+      <xs:element name="CompanyName" nillable="true" type="xs:string"/>
+      <xs:element name="City" nillable="true" type="xs:string"/>
+      <xs:element name="State" nillable="true" type="xs:string"/>
+      <xs:element name="ZipCode" nillable="true" type="xs:string"/>
+      <xs:element name="Country" nillable="true" type="xs:string"/>
+      <xs:element name="Phone" nillable="true" type="xs:string"/>
+      <xs:element name="Email" nillable="true" type="xs:string"/>
+      <xs:element name="Fax" nillable="true" type="xs:string"/>
+      <xs:element name="TravelAgentUserName" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q6:ExceptionInformation.Exceptions" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyInfo" nillable="true" type="tns:ViewAgencyInfo"/>
+  <xs:complexType name="ViewAgencyList">
+    <xs:sequence>
+      <xs:element name="ViewAgencyInfos" nillable="true" type="tns:ArrayOfViewAgencyListItem"/>
+      <xs:element name="Exceptions" nillable="true" type="q7:ExceptionInformation.Exceptions" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyList" nillable="true" type="tns:ViewAgencyList"/>
+  <xs:complexType name="ArrayOfViewAgencyListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAgencyListItem" nillable="true" type="tns:ViewAgencyListItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAgencyListItem" nillable="true" type="tns:ArrayOfViewAgencyListItem"/>
+  <xs:complexType name="ViewAgencyListItem">
+    <xs:sequence>
+      <xs:element name="IataCode" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+      <xs:element name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element name="AvailableBalance" type="xs:decimal"/>
+      <xs:element name="NumberOfBookings" type="xs:int"/>
+      <xs:element name="TravelAgentStatus" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q8:ExceptionInformation.Exceptions" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyListItem" nillable="true" type="tns:ViewAgencyListItem"/>
+  <xs:complexType name="ViewAgentList">
+    <xs:sequence>
+      <xs:element name="ViewAgents" nillable="true" type="tns:ArrayOfViewAgent"/>
+      <xs:element name="Exceptions" nillable="true" type="q9:ExceptionInformation.Exceptions" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgentList" nillable="true" type="tns:ViewAgentList"/>
+  <xs:complexType name="ArrayOfViewAgent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAgent" nillable="true" type="tns:ViewAgent"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAgent" nillable="true" type="tns:ArrayOfViewAgent"/>
+  <xs:complexType name="ViewAgent">
+    <xs:sequence>
+      <xs:element name="IataCode" nillable="true" type="xs:string"/>
+      <xs:element name="UserId" nillable="true" type="xs:string"/>
+      <xs:element name="Username" nillable="true" type="xs:string"/>
+      <xs:element name="Country" nillable="true" type="xs:string"/>
+      <xs:element name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element name="Address" nillable="true" type="xs:string"/>
+      <xs:element name="Address1" nillable="true" type="xs:string"/>
+      <xs:element name="City" nillable="true" type="xs:string"/>
+      <xs:element name="EmailAddress" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="PostalCode" nillable="true" type="xs:string"/>
+      <xs:element name="State" nillable="true" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element name="TelephoneNumber" nillable="true" type="xs:string"/>
+      <xs:element name="MobileNumber" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q10:ExceptionInformation.Exceptions" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="TravelAgentType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgent" nillable="true" type="tns:ViewAgent"/>
+  <xs:complexType name="ViewModifyAgencyCreditLimit">
+    <xs:sequence>
+      <xs:element name="Status" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q11:ExceptionInformation.Exceptions" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewModifyAgencyCreditLimit" nillable="true" type="tns:ViewModifyAgencyCreditLimit"/>
+  <xs:complexType name="ViewDisruptedAgencyPNRList">
+    <xs:sequence>
+      <xs:element name="ViewDisruptedAgencyPNRs" nillable="true" type="tns:ArrayOfViewDisruptedAgencyPNR"/>
+      <xs:element name="Exceptions" nillable="true" type="q12:ExceptionInformation.Exceptions" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewDisruptedAgencyPNRList" nillable="true" type="tns:ViewDisruptedAgencyPNRList"/>
+  <xs:complexType name="ArrayOfViewDisruptedAgencyPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewDisruptedAgencyPNR" nillable="true" type="tns:ViewDisruptedAgencyPNR"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewDisruptedAgencyPNR" nillable="true" type="tns:ArrayOfViewDisruptedAgencyPNR"/>
+  <xs:complexType name="ViewDisruptedAgencyPNR">
+    <xs:sequence>
+      <xs:element name="BookingRef" nillable="true" type="xs:string"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Destination" nillable="true" type="xs:string"/>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element name="NotificationComments" nillable="true" type="xs:string"/>
+      <xs:element name="NotifyPAXFlag" nillable="true" type="xs:string"/>
+      <xs:element name="Origin" nillable="true" type="xs:string"/>
+      <xs:element name="PrimaryPAXEmailId" nillable="true" type="xs:string"/>
+      <xs:element name="PrimaryPAXTelephoneNumber" nillable="true" type="xs:string"/>
+      <xs:element name="PrimaryPassengerName" nillable="true" type="xs:string"/>
+      <xs:element name="RecordId" nillable="true" type="xs:string"/>
+      <xs:element name="Status" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q13:ExceptionInformation.Exceptions" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewDisruptedAgencyPNR" nillable="true" type="tns:ViewDisruptedAgencyPNR"/>
+  <xs:complexType name="ViewAgencywithCCInfo">
+    <xs:sequence>
+      <xs:element name="IataCode" nillable="true" type="xs:string"/>
+      <xs:element name="PersonOrgId" nillable="true" type="xs:string"/>
+      <xs:element name="ContactName" nillable="true" type="xs:string"/>
+      <xs:element name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element name="ParentIataCode" nillable="true" type="xs:string"/>
+      <xs:element name="Commission" type="xs:decimal"/>
+      <xs:element name="CreditLimit" type="xs:decimal"/>
+      <xs:element name="FetExempt" type="xs:boolean"/>
+      <xs:element name="BankNumber" nillable="true" type="xs:string"/>
+      <xs:element name="TravelAgentStatus" nillable="true" type="xs:string"/>
+      <xs:element name="ConsortTravalAgentId" type="xs:int"/>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string"/>
+      <xs:element name="AccountId" nillable="true" type="xs:string"/>
+      <xs:element name="FederalId" nillable="true" type="xs:string"/>
+      <xs:element name="EmailReceipt" type="xs:boolean"/>
+      <xs:element name="FaxReceipt" type="xs:boolean"/>
+      <xs:element name="MailReceipt" type="xs:boolean"/>
+      <xs:element name="Comments" nillable="true" type="xs:string"/>
+      <xs:element name="Prepaid" type="xs:boolean"/>
+      <xs:element name="TravelAgentTypeId" type="xs:int"/>
+      <xs:element name="CanViewAllPnrs" type="xs:boolean"/>
+      <xs:element name="Address1" nillable="true" type="xs:string"/>
+      <xs:element name="Address2" nillable="true" type="xs:string"/>
+      <xs:element name="CompanyName" nillable="true" type="xs:string"/>
+      <xs:element name="City" nillable="true" type="xs:string"/>
+      <xs:element name="State" nillable="true" type="xs:string"/>
+      <xs:element name="ZipCode" nillable="true" type="xs:string"/>
+      <xs:element name="Country" nillable="true" type="xs:string"/>
+      <xs:element name="Phone" nillable="true" type="xs:string"/>
+      <xs:element name="Email" nillable="true" type="xs:string"/>
+      <xs:element name="Fax" nillable="true" type="xs:string"/>
+      <xs:element name="TravelAgentUserName" nillable="true" type="xs:string"/>
+      <xs:element name="CreditCardAccounts" nillable="true" type="tns:ArrayOfAgencyCreditCardInfo"/>
+      <xs:element name="Exceptions" nillable="true" type="q14:ExceptionInformation.Exceptions" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencywithCCInfo" nillable="true" type="tns:ViewAgencywithCCInfo"/>
+  <xs:complexType name="ArrayOfAgencyCreditCardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgencyCreditCardInfo" nillable="true" type="tns:AgencyCreditCardInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgencyCreditCardInfo" nillable="true" type="tns:ArrayOfAgencyCreditCardInfo"/>
+  <xs:complexType name="AgencyCreditCardInfo">
+    <xs:sequence>
+      <xs:element name="AccountNumber" nillable="true" type="xs:string"/>
+      <xs:element name="AccountName" nillable="true" type="xs:string"/>
+      <xs:element name="AccountExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgencyCreditCardInfo" nillable="true" type="tns:AgencyCreditCardInfo"/>
+  <xs:complexType name="ViewAgentDetails">
+    <xs:sequence>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element name="UserId" nillable="true" type="xs:string"/>
+      <xs:element name="Firstname" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="Address1" nillable="true" type="xs:string"/>
+      <xs:element name="Address2" nillable="true" type="xs:string"/>
+      <xs:element name="City" nillable="true" type="xs:string"/>
+      <xs:element name="State" nillable="true" type="xs:string"/>
+      <xs:element name="Country" nillable="true" type="xs:string"/>
+      <xs:element name="ZipCode" nillable="true" type="xs:string"/>
+      <xs:element name="Phone" nillable="true" type="xs:string"/>
+      <xs:element name="Mobile" nillable="true" type="xs:string"/>
+      <xs:element name="EmailId" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q15:ExceptionInformation.Exceptions" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgentDetails" nillable="true" type="tns:ViewAgentDetails"/>
+  <xs:complexType name="CreateAgency">
+    <xs:sequence>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyStatus" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q16:ExceptionInformation.Exceptions" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAgency" nillable="true" type="tns:CreateAgency"/>
+  <xs:complexType name="ModifyAgency">
+    <xs:sequence>
+      <xs:element name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q17:ExceptionInformation.Exceptions" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModifyAgency" nillable="true" type="tns:ModifyAgency"/>
+  <xs:complexType name="CreateAgent">
+    <xs:sequence>
+      <xs:element name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q18:ExceptionInformation.Exceptions" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAgent" nillable="true" type="tns:CreateAgent"/>
+  <xs:complexType name="ModifyAgent">
+    <xs:sequence>
+      <xs:element name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q19:ExceptionInformation.Exceptions" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModifyAgent" nillable="true" type="tns:ModifyAgent"/>
+  <xs:complexType name="MoveAgencySessionDataToNewSecurityToken">
+    <xs:sequence>
+      <xs:element name="NewSecurityToken" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q20:ExceptionInformation.Exceptions" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoveAgencySessionDataToNewSecurityToken" nillable="true" type="tns:MoveAgencySessionDataToNewSecurityToken"/>
+  <xs:complexType name="ViewBookingHistoryCollection">
+    <xs:sequence>
+      <xs:element name="BookingHistoryList" nillable="true" type="tns:ArrayOfViewBookingHistory"/>
+      <xs:element name="Exceptions" nillable="true" type="q21:ExceptionInformation.Exceptions" xmlns:q21="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewBookingHistoryCollection" nillable="true" type="tns:ViewBookingHistoryCollection"/>
+  <xs:complexType name="ArrayOfViewBookingHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewBookingHistory" nillable="true" type="tns:ViewBookingHistory"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewBookingHistory" nillable="true" type="tns:ArrayOfViewBookingHistory"/>
+  <xs:complexType name="ViewBookingHistory">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="Title" nillable="true" type="xs:string"/>
+      <xs:element name="PassengerCount" type="xs:int"/>
+      <xs:element name="RouteFrom" nillable="true" type="xs:string"/>
+      <xs:element name="RouteTo" nillable="true" type="xs:string"/>
+      <xs:element name="BookDateGMT" type="xs:dateTime"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="BookingAgent" nillable="true" type="xs:string"/>
+      <xs:element name="BookingType" type="q22:Enumerations.PNRStatus" xmlns:q22="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewBookingHistory" nillable="true" type="tns:ViewBookingHistory"/>
+  <xs:complexType name="ViewCumulativeBalanceCollection">
+    <xs:sequence>
+      <xs:element name="CumulativeBalanceList" nillable="true" type="tns:ArrayOfViewCumulativeBalance"/>
+      <xs:element name="Exceptions" nillable="true" type="q23:ExceptionInformation.Exceptions" xmlns:q23="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewCumulativeBalanceCollection" nillable="true" type="tns:ViewCumulativeBalanceCollection"/>
+  <xs:complexType name="ArrayOfViewCumulativeBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewCumulativeBalance" nillable="true" type="tns:ViewCumulativeBalance"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewCumulativeBalance" nillable="true" type="tns:ArrayOfViewCumulativeBalance"/>
+  <xs:complexType name="ViewCumulativeBalance">
+    <xs:sequence>
+      <xs:element name="TotalCharges" type="xs:decimal"/>
+      <xs:element name="TotalPayments" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewCumulativeBalance" nillable="true" type="tns:ViewCumulativeBalance"/>
+  <xs:complexType name="ViewCreditLimitHistoryCollection">
+    <xs:sequence>
+      <xs:element name="ViewCreditLimitHistoryList" nillable="true" type="tns:ArrayOfViewCreditLimitHistory"/>
+      <xs:element name="Exceptions" nillable="true" type="q24:ExceptionInformation.Exceptions" xmlns:q24="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewCreditLimitHistoryCollection" nillable="true" type="tns:ViewCreditLimitHistoryCollection"/>
+  <xs:complexType name="ArrayOfViewCreditLimitHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewCreditLimitHistory" nillable="true" type="tns:ViewCreditLimitHistory"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewCreditLimitHistory" nillable="true" type="tns:ArrayOfViewCreditLimitHistory"/>
+  <xs:complexType name="ViewCreditLimitHistory">
+    <xs:sequence>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+      <xs:element name="UserID" nillable="true" type="xs:string"/>
+      <xs:element name="CreditLimitAdded" type="xs:decimal"/>
+      <xs:element name="CreditLimit" type="xs:decimal"/>
+      <xs:element name="AgencyCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="TransactionDate" type="xs:dateTime"/>
+      <xs:element name="TransactionType" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewCreditLimitHistory" nillable="true" type="tns:ViewCreditLimitHistory"/>
+  <xs:complexType name="ViewFinanceAgentsCollection">
+    <xs:sequence>
+      <xs:element name="FinanceAgentsList" nillable="true" type="tns:ArrayOfViewFinanceAgents"/>
+      <xs:element name="Exceptions" nillable="true" type="q25:ExceptionInformation.Exceptions" xmlns:q25="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFinanceAgentsCollection" nillable="true" type="tns:ViewFinanceAgentsCollection"/>
+  <xs:complexType name="ArrayOfViewFinanceAgents">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewFinanceAgents" nillable="true" type="tns:ViewFinanceAgents"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewFinanceAgents" nillable="true" type="tns:ArrayOfViewFinanceAgents"/>
+  <xs:complexType name="ViewFinanceAgents">
+    <xs:sequence>
+      <xs:element name="AgentName" nillable="true" type="xs:string"/>
+      <xs:element name="IATA" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewFinanceAgents" nillable="true" type="tns:ViewFinanceAgents"/>
+  <xs:complexType name="ViewSubAgenciesCollection">
+    <xs:sequence>
+      <xs:element name="SubAgenciesList" nillable="true" type="tns:ArrayOfViewSubAgencies"/>
+      <xs:element name="Exceptions" nillable="true" type="q26:ExceptionInformation.Exceptions" xmlns:q26="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewSubAgenciesCollection" nillable="true" type="tns:ViewSubAgenciesCollection"/>
+  <xs:complexType name="ArrayOfViewSubAgencies">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewSubAgencies" nillable="true" type="tns:ViewSubAgencies"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewSubAgencies" nillable="true" type="tns:ArrayOfViewSubAgencies"/>
+  <xs:complexType name="ViewSubAgencies">
+    <xs:sequence>
+      <xs:element name="AgencyIATA" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewSubAgencies" nillable="true" type="tns:ViewSubAgencies"/>
+  <xs:complexType name="ViewDistributorDetailsCollection">
+    <xs:sequence>
+      <xs:element name="ViewDistributorDetailsList" nillable="true" type="tns:ArrayOfViewDistributorDetails"/>
+      <xs:element name="Exceptions" nillable="true" type="q27:ExceptionInformation.Exceptions" xmlns:q27="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewDistributorDetailsCollection" nillable="true" type="tns:ViewDistributorDetailsCollection"/>
+  <xs:complexType name="ArrayOfViewDistributorDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewDistributorDetails" nillable="true" type="tns:ViewDistributorDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewDistributorDetails" nillable="true" type="tns:ArrayOfViewDistributorDetails"/>
+  <xs:complexType name="ViewDistributorDetails">
+    <xs:sequence>
+      <xs:element name="DistributorName" nillable="true" type="xs:string"/>
+      <xs:element name="DistributorIATA" nillable="true" type="xs:string"/>
+      <xs:element name="DistributorEmail" nillable="true" type="xs:string"/>
+      <xs:element name="DistributorCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="DistributorCountry" nillable="true" type="xs:string"/>
+      <xs:element name="DistributorStatus" type="q28:Enumerations.StatusTypes" xmlns:q28="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewDistributorDetails" nillable="true" type="tns:ViewDistributorDetails"/>
+  <xs:complexType name="ViewAssociateToReservationCollection">
+    <xs:sequence>
+      <xs:element name="AssociateToReservationList" nillable="true" type="tns:ArrayOfViewAssociateToReservation"/>
+      <xs:element name="Exceptions" nillable="true" type="q29:ExceptionInformation.Exceptions" xmlns:q29="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAssociateToReservationCollection" nillable="true" type="tns:ViewAssociateToReservationCollection"/>
+  <xs:complexType name="ArrayOfViewAssociateToReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAssociateToReservation" nillable="true" type="tns:ViewAssociateToReservation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAssociateToReservation" nillable="true" type="tns:ArrayOfViewAssociateToReservation"/>
+  <xs:complexType name="ViewAssociateToReservation">
+    <xs:sequence>
+      <xs:element name="Result" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IATA" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAssociateToReservation" nillable="true" type="tns:ViewAssociateToReservation"/>
+  <xs:complexType name="ViewChangedTADataCollection">
+    <xs:sequence>
+      <xs:element name="ChangedTADataList" nillable="true" type="tns:ArrayOfViewChangedTAData"/>
+      <xs:element name="Exceptions" nillable="true" type="q30:ExceptionInformation.Exceptions" xmlns:q30="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewChangedTADataCollection" nillable="true" type="tns:ViewChangedTADataCollection"/>
+  <xs:complexType name="ArrayOfViewChangedTAData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewChangedTAData" nillable="true" type="tns:ViewChangedTAData"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewChangedTAData" nillable="true" type="tns:ArrayOfViewChangedTAData"/>
+  <xs:complexType name="ViewChangedTAData">
+    <xs:sequence>
+      <xs:element name="AgencyCompany" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyEmail" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyAddress1" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyAddress2" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyCity" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyCountry" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyIATA" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyParentalIATA" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyPhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyFaxNumber" nillable="true" type="xs:string"/>
+      <xs:element name="AgencyFieldChangedDate" type="xs:dateTime"/>
+      <xs:element name="ChangedFields" nillable="true" type="q31:ArrayOfEnumerations.AgencyFields" xmlns:q31="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewChangedTAData" nillable="true" type="tns:ViewChangedTAData"/>
+  <xs:complexType name="ViewAgencyIncentiveReportCollection">
+    <xs:sequence>
+      <xs:element name="ViewAgencyIncentiveReportList" nillable="true" type="tns:ArrayOfViewAgencyIncentiveReport"/>
+      <xs:element name="Exceptions" nillable="true" type="q32:ExceptionInformation.Exceptions" xmlns:q32="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyIncentiveReportCollection" nillable="true" type="tns:ViewAgencyIncentiveReportCollection"/>
+  <xs:complexType name="ArrayOfViewAgencyIncentiveReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAgencyIncentiveReport" nillable="true" type="tns:ViewAgencyIncentiveReport"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAgencyIncentiveReport" nillable="true" type="tns:ArrayOfViewAgencyIncentiveReport"/>
+  <xs:complexType name="ViewAgencyIncentiveReport">
+    <xs:sequence>
+      <xs:element name="ParentIATA" nillable="true" type="xs:string"/>
+      <xs:element name="IATANum" nillable="true" type="xs:string"/>
+      <xs:element name="ReportedCurrency" nillable="true" type="xs:string"/>
+      <xs:element name="ReportedAmount" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyIncentiveReport" nillable="true" type="tns:ViewAgencyIncentiveReport"/>
+  <xs:complexType name="ViewAgencyPNRCollection">
+    <xs:sequence>
+      <xs:element name="TravelAgencyPNRList" nillable="true" type="tns:ArrayOfAgencyPNR"/>
+      <xs:element name="Exceptions" nillable="true" type="q33:ExceptionInformation.Exceptions" xmlns:q33="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAgencyPNRCollection" nillable="true" type="tns:ViewAgencyPNRCollection"/>
+  <xs:complexType name="ArrayOfAgencyPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgencyPNR" nillable="true" type="tns:AgencyPNR"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgencyPNR" nillable="true" type="tns:ArrayOfAgencyPNR"/>
+  <xs:complexType name="AgencyPNR">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="BookDate" type="xs:dateTime"/>
+      <xs:element name="Email" nillable="true" type="xs:string"/>
+      <xs:element name="Adress1" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentReferenceNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgencyPNR" nillable="true" type="tns:AgencyPNR"/>
+  <xs:complexType name="ViewBookingsWithPaymentsPendingCollection">
+    <xs:sequence>
+      <xs:element name="BookingsWithPaymentsPendingList" nillable="true" type="tns:ArrayOfViewBookingsWithPaymentsPending"/>
+      <xs:element name="Exceptions" nillable="true" type="q34:ExceptionInformation.Exceptions" xmlns:q34="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewBookingsWithPaymentsPendingCollection" nillable="true" type="tns:ViewBookingsWithPaymentsPendingCollection"/>
+  <xs:complexType name="ArrayOfViewBookingsWithPaymentsPending">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewBookingsWithPaymentsPending" nillable="true" type="tns:ViewBookingsWithPaymentsPending"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewBookingsWithPaymentsPending" nillable="true" type="tns:ArrayOfViewBookingsWithPaymentsPending"/>
+  <xs:complexType name="ViewBookingsWithPaymentsPending">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="LastName" nillable="true" type="xs:string"/>
+      <xs:element name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element name="Title" nillable="true" type="xs:string"/>
+      <xs:element name="CountryCode" nillable="true" type="xs:string"/>
+      <xs:element name="PhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element name="Amount" type="xs:decimal"/>
+      <xs:element name="Currency" nillable="true" type="xs:string"/>
+      <xs:element name="PaymentDue" type="xs:dateTime"/>
+      <xs:element name="DepartureAirport" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewBookingsWithPaymentsPending" nillable="true" type="tns:ViewBookingsWithPaymentsPending"/>
+  <xs:complexType name="ViewUpdateTopUpDetailsColletion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q35:ExceptionInformation.Exceptions" xmlns:q35="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xs:element minOccurs="0" name="UpdateTopUpDetailsList" nillable="true" type="tns:ArrayOfViewUpdateTopUpDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewUpdateTopUpDetailsColletion" nillable="true" type="tns:ViewUpdateTopUpDetailsColletion"/>
+  <xs:complexType name="ArrayOfViewUpdateTopUpDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewUpdateTopUpDetails" nillable="true" type="tns:ViewUpdateTopUpDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewUpdateTopUpDetails" nillable="true" type="tns:ArrayOfViewUpdateTopUpDetails"/>
+  <xs:complexType name="ViewUpdateTopUpDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deposit_Nfn_Num" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="InvoiceNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewUpdateTopUpDetails" nillable="true" type="tns:ViewUpdateTopUpDetails"/>
+  <xs:complexType name="LoginTravelAgentStatusAndType">
+    <xs:sequence>
+      <xs:element name="LoggedIn" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="TravelAgentType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Exceptions" nillable="true" type="q36:ExceptionInformation.Exceptions" xmlns:q36="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginTravelAgentStatusAndType" nillable="true" type="tns:LoginTravelAgentStatusAndType"/>
+  <xs:complexType name="AgencyFundsTransferStatus">
+    <xs:sequence>
+      <xs:element name="Result" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q37:ExceptionInformation.Exceptions" xmlns:q37="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgencyFundsTransferStatus" nillable="true" type="tns:AgencyFundsTransferStatus"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd6</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="DashboardViewInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="AgencyIATANumber" nillable="true" type="xs:string"/>
+          <xs:element name="AgencyName" nillable="true" type="xs:string"/>
+          <xs:element name="RequestedStartDate" type="xs:dateTime"/>
+          <xs:element name="RequestedEndDate" type="xs:dateTime"/>
+          <xs:element name="IncludeChildAgentInfo" type="xs:boolean"/>
+          <xs:element name="EmailAddress" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DashboardViewInfo" nillable="true" type="tns:DashboardViewInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd7</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Dashboard.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="ViewCommissionInfo">
+    <xs:sequence>
+      <xs:element name="AgencyCommissions" nillable="true" type="tns:ArrayOfCommissionInfo"/>
+      <xs:element name="TotalCommissions" type="xs:decimal"/>
+      <xs:element name="TotalFares" type="xs:decimal"/>
+      <xs:element name="Exceptions" nillable="true" type="q1:ExceptionInformation.Exceptions" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewCommissionInfo" nillable="true" type="tns:ViewCommissionInfo"/>
+  <xs:complexType name="ArrayOfCommissionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommissionInfo" nillable="true" type="tns:CommissionInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommissionInfo" nillable="true" type="tns:ArrayOfCommissionInfo"/>
+  <xs:complexType name="CommissionInfo">
+    <xs:sequence>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="BookingUserName" nillable="true" type="xs:string"/>
+      <xs:element name="OriginatingAirport" nillable="true" type="xs:string"/>
+      <xs:element name="DestinationAirport" nillable="true" type="xs:string"/>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="PaymentDate" type="xs:dateTime"/>
+      <xs:element name="PaymentUserName" nillable="true" type="xs:string"/>
+      <xs:element name="BookingCurrency" type="q2:Enumerations.CurrencyCodeTypes" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="BookingAmount" type="xs:decimal"/>
+      <xs:element name="PaymentCurrency" type="q3:Enumerations.CurrencyCodeTypes" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="PaymentAmount" type="xs:decimal"/>
+      <xs:element name="AgencyCommission" type="xs:decimal"/>
+      <xs:element name="PassengerCount" type="xs:int"/>
+      <xs:element name="TransactionNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommissionInfo" nillable="true" type="tns:CommissionInfo"/>
+  <xs:complexType name="ViewTransactionInfo">
+    <xs:sequence>
+      <xs:element name="AgencyTransactions" nillable="true" type="tns:ArrayOfTransactionInfo"/>
+      <xs:element name="BeginningBalance" type="xs:decimal"/>
+      <xs:element name="TotalDeposits" type="xs:int"/>
+      <xs:element name="TotalCredits" type="xs:int"/>
+      <xs:element name="TotalDebits" type="xs:int"/>
+      <xs:element name="EndingBalance" type="xs:decimal"/>
+      <xs:element name="Exceptions" nillable="true" type="q4:ExceptionInformation.Exceptions" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewTransactionInfo" nillable="true" type="tns:ViewTransactionInfo"/>
+  <xs:complexType name="ArrayOfTransactionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransactionInfo" nillable="true" type="tns:ArrayOfTransactionInfo"/>
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="InvoiceNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="BookingUserName" nillable="true" type="xs:string"/>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="TransactionIATA" nillable="true" type="xs:string"/>
+      <xs:element name="PaymentUserName" nillable="true" type="xs:string"/>
+      <xs:element name="TransactionDate" type="xs:dateTime"/>
+      <xs:element name="TransactionType" type="q5:Enumerations.ARTransactionTypes" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="TransactionCurrency" type="q6:Enumerations.CurrencyCodeTypes" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="TransactionAmount" type="xs:decimal"/>
+      <xs:element name="TransactionBalance" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ViewBalanceInfo">
+    <xs:sequence>
+      <xs:element name="AgencyBalances" nillable="true" type="tns:ArrayOfBalanceInfo"/>
+      <xs:element name="TotalChargesForRange" type="xs:decimal"/>
+      <xs:element name="TotalChargesFromInception" type="xs:decimal"/>
+      <xs:element name="TotalPaymentsForRange" type="xs:decimal"/>
+      <xs:element name="TotalPaymentsFromInception" type="xs:decimal"/>
+      <xs:element name="OverallBalanceForRange" type="xs:decimal"/>
+      <xs:element name="OverallBalanceFromInception" type="xs:decimal"/>
+      <xs:element name="Exceptions" nillable="true" type="q7:ExceptionInformation.Exceptions" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewBalanceInfo" nillable="true" type="tns:ViewBalanceInfo"/>
+  <xs:complexType name="ArrayOfBalanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceInfo" nillable="true" type="tns:BalanceInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBalanceInfo" nillable="true" type="tns:ArrayOfBalanceInfo"/>
+  <xs:complexType name="BalanceInfo">
+    <xs:sequence>
+      <xs:element name="InvoiceNumber" nillable="true" type="xs:string"/>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element name="BookingUserName" nillable="true" type="xs:string"/>
+      <xs:element name="OriginatingAirport" nillable="true" type="xs:string"/>
+      <xs:element name="DestinationAirport" nillable="true" type="xs:string"/>
+      <xs:element name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element name="BookingDate" type="xs:dateTime"/>
+      <xs:element name="BookingCurrency" type="q8:Enumerations.CurrencyCodeTypes" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="BookingAmount" type="xs:decimal"/>
+      <xs:element name="PaymentDate" type="xs:dateTime"/>
+      <xs:element name="PaymentUserName" nillable="true" type="xs:string"/>
+      <xs:element name="PaymentReference" type="xs:int"/>
+      <xs:element name="PaymentCurrency" type="q9:Enumerations.CurrencyCodeTypes" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element name="PaymentAmount" type="xs:decimal"/>
+      <xs:element name="PassengerCount" type="xs:int"/>
+      <xs:element name="SegmentCount" type="xs:int"/>
+      <xs:element name="PrimaryPassengerName" nillable="true" type="xs:string"/>
+      <xs:element name="BalanceDue" type="xs:decimal"/>
+      <xs:element name="DepositDate" type="xs:dateTime"/>
+      <xs:element name="DepositAmount" type="xs:decimal"/>
+      <xs:element name="DepartureDate" type="xs:dateTime"/>
+      <xs:element name="Comments" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BalanceInfo" nillable="true" type="tns:BalanceInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints/>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="90400f7b-2b61-4eed-b1ed-594c3f315512" isOneWay="false" action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" name="ModifyPNR" bindingOperationName="ModifyPNR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="90400f7b-2b61-4eed-b1ed-594c3f315512fileName">ModifyPNR</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

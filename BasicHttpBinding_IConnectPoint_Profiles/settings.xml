@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="42afa777-2402-4c39-bcf7-ccb19c3418fa" wsaVersion="NONE" name="BasicHttpBinding_IConnectPoint_Profiles" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Profiles" soapVersion="1_1" anonymous="optional" definition="https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Profiles.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="42afa777-2402-4c39-bcf7-ccb19c3418fafileName">BasicHttpBinding_IConnectPoint_Profiles</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Profiles.svc?wsdl">
+    <con:part>
+      <con:url>https://rdxappint.radixxuat.com/RDX/Radixx.ConnectPoint/ConnectPoint.Profiles.svc?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Profiles" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+      <xsd:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_CreateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_CreateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ForgottenPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForgottenPassword"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ForgottenPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForgottenPasswordResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfileReservations_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfileReservations"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfileReservations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfileReservationsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfileVouchers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfileVouchers"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_RetrieveProfileVouchers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveProfileVouchersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ModifyProfilePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyProfilePassword"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ModifyProfilePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyProfilePasswordResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_CheckForExistingProfileEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForExistingProfileEmail"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_CheckForExistingProfileEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForExistingProfileEmailResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_GetProfileReservations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileReservations"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_GetProfileReservations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileReservationsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ValidateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Profiles_ValidateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateProfileResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Profiles">
+    <wsdl:operation name="RetrieveProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile" message="tns:IConnectPoint_Profiles_RetrieveProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileResponse" message="tns:IConnectPoint_Profiles_RetrieveProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/CreateProfile" message="tns:IConnectPoint_Profiles_CreateProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/CreateProfileResponse" message="tns:IConnectPoint_Profiles_CreateProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ForgottenPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ForgottenPassword" message="tns:IConnectPoint_Profiles_ForgottenPassword_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ForgottenPasswordResponse" message="tns:IConnectPoint_Profiles_ForgottenPassword_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProfileReservations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileReservations" message="tns:IConnectPoint_Profiles_RetrieveProfileReservations_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileReservationsResponse" message="tns:IConnectPoint_Profiles_RetrieveProfileReservations_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProfileVouchers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" message="tns:IConnectPoint_Profiles_RetrieveProfileVouchers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchersResponse" message="tns:IConnectPoint_Profiles_RetrieveProfileVouchers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyProfilePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ModifyProfilePassword" message="tns:IConnectPoint_Profiles_ModifyProfilePassword_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ModifyProfilePasswordResponse" message="tns:IConnectPoint_Profiles_ModifyProfilePassword_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForExistingProfileEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail" message="tns:IConnectPoint_Profiles_CheckForExistingProfileEmail_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmailResponse" message="tns:IConnectPoint_Profiles_CheckForExistingProfileEmail_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileReservations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations" message="tns:IConnectPoint_Profiles_GetProfileReservations_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservationsResponse" message="tns:IConnectPoint_Profiles_GetProfileReservations_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ValidateProfile" message="tns:IConnectPoint_Profiles_ValidateProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Profiles/ValidateProfileResponse" message="tns:IConnectPoint_Profiles_ValidateProfile_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Profiles" type="tns:IConnectPoint_Profiles">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrieveProfile">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/CreateProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForgottenPassword">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/ForgottenPassword" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProfileReservations">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileReservations" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProfileVouchers">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfileVouchers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyProfilePassword">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/ModifyProfilePassword" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForExistingProfileEmail">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/CheckForExistingProfileEmail" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileReservations">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateProfile">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Profiles/ValidateProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Profiles">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Profiles" binding="tns:BasicHttpBinding_IConnectPoint_Profiles">
+      <soap:address location="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd0</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+  <xs:element name="RetrieveProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileRequest" nillable="true" type="q1:RetrieveProfile" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileResult" nillable="true" type="q2:ViewProfile" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateProfileRequest" nillable="true" type="q3:CreateProfile" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateProfileResult" nillable="true" type="q4:ViewProfile" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgottenPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ForgottenPasswordRequest" nillable="true" type="q5:ForgottenPassword" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgottenPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ForgottenPasswordResult" nillable="true" type="q6:ForgottenPassword" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveProfileReservations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileReservationsRequest" nillable="true" type="q7:RetrieveProfileReservations" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveProfileReservationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileReservationsResult" nillable="true" type="q8:RetrieveProfileReservations" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveProfileVouchers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileVouchersRequest" nillable="true" type="q9:RetrieveProfileVouchers" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveProfileVouchersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveProfileVouchersResult" nillable="true" type="q10:ProfileVouchers" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProfilePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyProfilePasswordRequest" nillable="true" type="q11:ModifyProfilePassword" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProfilePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyProfilePasswordResult" nillable="true" type="q12:ModifyProfilePassword" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckForExistingProfileEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckForExistingProfileEmailRequest" nillable="true" type="q13:CheckForExistingProfileEmail" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckForExistingProfileEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckForExistingProfileEmailResult" nillable="true" type="q14:CheckForExistingProfileEmail" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileReservations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfileReservationsRequest" nillable="true" type="q15:GetProfileReservations" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileReservationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfileReservationsResult" nillable="true" type="q16:GetProfileReservations" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateProfileRequest" nillable="true" type="q17:ValidateProfile" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateProfileResult" nillable="true" type="q18:ProfileStatus" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd2</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Request">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+  <xs:complexType name="RetrieveProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:RetrieveProfile.ActionTypes"/>
+          <xs:element name="PasswordInfo" nillable="true" type="tns:PasswordInfo"/>
+          <xs:element name="EmailAddressInfo" nillable="true" type="tns:EmailAddressInfo"/>
+          <xs:element name="UserNameInfo" nillable="true" type="tns:UserNameInfo"/>
+          <xs:element name="StaffIDInfo" nillable="true" type="tns:StaffIDInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveProfile" nillable="true" type="tns:RetrieveProfile"/>
+  <xs:simpleType name="RetrieveProfile.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetrieveProfileByEmailAddress"/>
+      <xs:enumeration value="RetrieveProfileByUserName"/>
+      <xs:enumeration value="RetrieveProfileByStaffID"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveProfile.ActionTypes" nillable="true" type="tns:RetrieveProfile.ActionTypes"/>
+  <xs:complexType name="PasswordInfo">
+    <xs:sequence>
+      <xs:element name="Password" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PasswordInfo" nillable="true" type="tns:PasswordInfo"/>
+  <xs:complexType name="EmailAddressInfo">
+    <xs:sequence>
+      <xs:element name="EmailAddress" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailAddressInfo" nillable="true" type="tns:EmailAddressInfo"/>
+  <xs:complexType name="UserNameInfo">
+    <xs:sequence>
+      <xs:element name="UserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserNameInfo" nillable="true" type="tns:UserNameInfo"/>
+  <xs:complexType name="StaffIDInfo">
+    <xs:sequence>
+      <xs:element name="StaffID" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffIDInfo" nillable="true" type="tns:StaffIDInfo"/>
+  <xs:complexType name="CreateProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:TransactionInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:CreateProfile.ActionTypes"/>
+          <xs:element name="ProfileInfo" nillable="true" type="q2:ProfileInfo"/>
+          <xs:element name="Profile" nillable="true" type="q3:Profile" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="Address" nillable="true" type="q4:ArrayOfAddress" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="ContactInfo" nillable="true" type="q5:ArrayOfContactInfo" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="Identification" nillable="true" type="q6:ArrayOfIdentification" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="Payment" nillable="true" type="q7:ArrayOfPayment" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="Preference" nillable="true" type="q8:ArrayOfPreference" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="Company" nillable="true" type="q9:ArrayOfCompany" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+          <xs:element name="BuddyList" nillable="true" type="q10:ArrayOfBuddyList" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateProfile" nillable="true" type="tns:CreateProfile"/>
+  <xs:simpleType name="CreateProfile.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CreateProfile"/>
+      <xs:enumeration value="CreateProfileAddress"/>
+      <xs:enumeration value="CreateProfileContactInfo"/>
+      <xs:enumeration value="CreateProfileIdentification"/>
+      <xs:enumeration value="CreateProfilePreference"/>
+      <xs:enumeration value="CreateProfilePayment"/>
+      <xs:enumeration value="CreateProfileCompany"/>
+      <xs:enumeration value="CreateProfileBuddyList"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreateProfile.ActionTypes" nillable="true" type="tns:CreateProfile.ActionTypes"/>
+  <xs:complexType name="ForgottenPassword">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q11:TransactionInfo" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:ForgottenPassword.ActionTypes"/>
+          <xs:element name="LanguageCode" nillable="true" type="xs:string"/>
+          <xs:element name="EmailAddressInfo" nillable="true" type="tns:EmailAddressInfo"/>
+          <xs:element name="UserNameInfo" nillable="true" type="tns:UserNameInfo"/>
+          <xs:element name="StaffIDInfo" nillable="true" type="tns:StaffIDInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgottenPassword" nillable="true" type="tns:ForgottenPassword"/>
+  <xs:simpleType name="ForgottenPassword.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProfileEmailSendPasswordViaEmail"/>
+      <xs:enumeration value="ProfileUserIdSendPasswordViaEmail"/>
+      <xs:enumeration value="ProfileStaffIdSendPasswordViaEmail"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ForgottenPassword.ActionTypes" nillable="true" type="tns:ForgottenPassword.ActionTypes"/>
+  <xs:complexType name="RetrieveProfileReservations">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q12:TransactionInfo" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:RetrieveProfileReservations.ActionTypes"/>
+          <xs:element minOccurs="0" name="ProfileID" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveProfileReservations" nillable="true" type="tns:RetrieveProfileReservations"/>
+  <xs:simpleType name="RetrieveProfileReservations.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetrieveAllProfileReservations"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveProfileReservations.ActionTypes" nillable="true" type="tns:RetrieveProfileReservations.ActionTypes"/>
+  <xs:complexType name="RetrieveProfileVouchers">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q13:TransactionInfo" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:RetrieveProfileVouchers.ActionTypes"/>
+          <xs:element name="ActiveOnly" type="xs:boolean"/>
+          <xs:element name="ProfileId" type="xs:long"/>
+          <xs:element name="ProfileUserId" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveProfileVouchers" nillable="true" type="tns:RetrieveProfileVouchers"/>
+  <xs:simpleType name="RetrieveProfileVouchers.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetrieveProfileVouchers"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetrieveProfileVouchers.ActionTypes" nillable="true" type="tns:RetrieveProfileVouchers.ActionTypes"/>
+  <xs:complexType name="ModifyProfilePassword">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q14:TransactionInfo" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ProfileId" type="xs:long"/>
+          <xs:element name="PasswordInfo" nillable="true" type="tns:PasswordInfo"/>
+          <xs:element name="NewPasswordInfo" nillable="true" type="tns:NewPasswordInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifyProfilePassword" nillable="true" type="tns:ModifyProfilePassword"/>
+  <xs:complexType name="NewPasswordInfo">
+    <xs:sequence>
+      <xs:element name="NewPassword" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewPasswordInfo" nillable="true" type="tns:NewPasswordInfo"/>
+  <xs:complexType name="CheckForExistingProfileEmail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q15:TransactionInfo" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="EmailAddressInfo" nillable="true" type="tns:EmailAddressInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckForExistingProfileEmail" nillable="true" type="tns:CheckForExistingProfileEmail"/>
+  <xs:complexType name="GetProfileReservations">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q16:TransactionInfo" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:RetrieveProfileReservations.ActionTypes"/>
+          <xs:element name="ProfileID" type="xs:long"/>
+          <xs:element name="Active" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetProfileReservations" nillable="true" type="tns:GetProfileReservations"/>
+  <xs:complexType name="ValidateProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q17:TransactionInfo" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:sequence>
+          <xs:element name="ActionType" type="tns:ValidateProfile.ActionTypes"/>
+          <xs:element name="UserNameInfo" nillable="true" type="tns:UserNameInfo"/>
+          <xs:element name="EmailAddressInfo" nillable="true" type="tns:EmailAddressInfo"/>
+          <xs:element name="PasswordInfo" nillable="true" type="tns:PasswordInfo"/>
+          <xs:element name="ActivateProfile" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidateProfile" nillable="true" type="tns:ValidateProfile"/>
+  <xs:simpleType name="ValidateProfile.ActionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValidateProfileByEmailAddress"/>
+      <xs:enumeration value="ValidateProfileByUserName"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidateProfile.ActionTypes" nillable="true" type="tns:ValidateProfile.ActionTypes"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd3</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="SecurityGUID" nillable="true" type="xs:string"/>
+      <xs:element name="CarrierCodes" nillable="true" type="tns:ArrayOfCarrierCode"/>
+      <xs:element minOccurs="0" name="ClientIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricUserName" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInfo" nillable="true" type="tns:TransactionInfo"/>
+  <xs:complexType name="ArrayOfCarrierCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrierCode" nillable="true" type="tns:ArrayOfCarrierCode"/>
+  <xs:complexType name="CarrierCode">
+    <xs:sequence>
+      <xs:element name="AccessibleCarrierCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarrierCode" nillable="true" type="tns:CarrierCode"/>
+  <xs:complexType name="ProfileInfo">
+    <xs:sequence>
+      <xs:element name="ProfileID" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileInfo" nillable="true" type="tns:ProfileInfo"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd5</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base">
+  <xs:complexType name="Profile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProfileID" type="xs:long"/>
+          <xs:element minOccurs="0" name="ProfileType" type="xs:int"/>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LastLogIn" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="CreateChannel" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MealPrefID" type="xs:int"/>
+          <xs:element minOccurs="0" name="SeatingPrefID" type="xs:int"/>
+          <xs:element minOccurs="0" name="LanguageID" type="xs:int"/>
+          <xs:element minOccurs="0" name="LoyaltyPgmID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SecurityQuestion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PassengerTypeCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="ActivationCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="StaffID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile"/>
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Height" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BusinessTitle" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NationalityLaguageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Age" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person"/>
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress"/>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AddressTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AddressName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Default" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address"/>
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInfo" nillable="true" type="tns:ArrayOfContactInfo"/>
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ContactTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ContactValue" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+  <xs:complexType name="ArrayOfIdentification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Identification" nillable="true" type="tns:Identification"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdentification" nillable="true" type="tns:ArrayOfIdentification"/>
+  <xs:complexType name="Identification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdentificationID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdentificationTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdentificationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IdentificationValue" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IdentificationInfo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IssueDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="IssueAgency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IssuePlace" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Identification" nillable="true" type="tns:Identification"/>
+  <xs:complexType name="ArrayOfPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payment" nillable="true" type="tns:Payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayment" nillable="true" type="tns:ArrayOfPayment"/>
+  <xs:complexType name="Payment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CardHolderName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payment" nillable="true" type="tns:Payment"/>
+  <xs:complexType name="ArrayOfPreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Preference" nillable="true" type="tns:Preference"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreference" nillable="true" type="tns:ArrayOfPreference"/>
+  <xs:complexType name="Preference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PreferenceID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PreferenceTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PreferenceName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PreferenceValue" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Preference" nillable="true" type="tns:Preference"/>
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompany" nillable="true" type="tns:ArrayOfCompany"/>
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int"/>
+      <xs:element minOccurs="0" name="JobTitle" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IndustrySector" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanySize" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyLocation" type="xs:int"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company"/>
+  <xs:complexType name="ArrayOfBuddyList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BuddyList" nillable="true" type="tns:BuddyList"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuddyList" nillable="true" type="tns:ArrayOfBuddyList"/>
+  <xs:complexType name="BuddyList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuddyListID" type="xs:int"/>
+      <xs:element minOccurs="0" name="BuddyTypeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuddyList" nillable="true" type="tns:BuddyList"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd4</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Response">
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base"/>
+  <xs:import schemaLocation="http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:complexType name="ViewProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:Profile" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Profile.Base">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="q1:ArrayOfAddress"/>
+          <xs:element minOccurs="0" name="ContactInfo" nillable="true" type="q1:ArrayOfContactInfo"/>
+          <xs:element minOccurs="0" name="Identification" nillable="true" type="q1:ArrayOfIdentification"/>
+          <xs:element minOccurs="0" name="Payment" nillable="true" type="q1:ArrayOfPayment"/>
+          <xs:element minOccurs="0" name="Preference" nillable="true" type="q1:ArrayOfPreference"/>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="q1:ArrayOfCompany"/>
+          <xs:element minOccurs="0" name="BuddyList" nillable="true" type="q1:ArrayOfBuddyList"/>
+          <xs:element name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewProfile" nillable="true" type="tns:ViewProfile"/>
+  <xs:complexType name="ForgottenPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q3:ExceptionInformation.Exceptions" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ForgottenPassword" nillable="true" type="tns:ForgottenPassword"/>
+  <xs:complexType name="RetrieveProfileReservations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProfileReservation" nillable="true" type="tns:ArrayOfRetrieveProfileReservation"/>
+      <xs:element name="Exceptions" nillable="true" type="q4:ExceptionInformation.Exceptions" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveProfileReservations" nillable="true" type="tns:RetrieveProfileReservations"/>
+  <xs:complexType name="ArrayOfRetrieveProfileReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetrieveProfileReservation" nillable="true" type="tns:RetrieveProfileReservation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetrieveProfileReservation" nillable="true" type="tns:ArrayOfRetrieveProfileReservation"/>
+  <xs:complexType name="RetrieveProfileReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrimaryPassengerLastname" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NumPassengers" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstSectorOrigin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstSectorDestination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BookingDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FirstSectorDepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveProfileReservation" nillable="true" type="tns:RetrieveProfileReservation"/>
+  <xs:complexType name="ProfileVouchers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProfileVouchers" nillable="true" type="tns:ArrayOfProfileVoucher"/>
+      <xs:element name="Exceptions" nillable="true" type="q5:ExceptionInformation.Exceptions" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileVouchers" nillable="true" type="tns:ProfileVouchers"/>
+  <xs:complexType name="ArrayOfProfileVoucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileVoucher" nillable="true" type="tns:ProfileVoucher"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileVoucher" nillable="true" type="tns:ArrayOfProfileVoucher"/>
+  <xs:complexType name="ProfileVoucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProfileId" type="xs:long"/>
+      <xs:element minOccurs="0" name="VoucherNum" type="xs:int"/>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReasonCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherReason" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeriesNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Sponsor" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherType" type="xs:int"/>
+      <xs:element minOccurs="0" name="TripType" type="xs:int"/>
+      <xs:element minOccurs="0" name="EffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="TravelEffectiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="TravelExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="StartTimeRestrict" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="EndTimeRestrict" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BalanceAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NonTransferable" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludesTaxes" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IncludesSsr" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IncludesAuto" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IncludesHotel" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IncludesPenalties" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictSunday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictMonday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictTueday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictWednesday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictThursday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictFriday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RestrictSaturday" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="VoucherNumberFull" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MinimumValue" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="WebBookingOnly" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherComments" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileVoucher" nillable="true" type="tns:ProfileVoucher"/>
+  <xs:complexType name="ModifyProfilePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Exceptions" nillable="true" type="q6:ExceptionInformation.Exceptions" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModifyProfilePassword" nillable="true" type="tns:ModifyProfilePassword"/>
+  <xs:complexType name="CheckForExistingProfileEmail">
+    <xs:sequence>
+      <xs:element name="ActionSuccessful" type="xs:boolean"/>
+      <xs:element name="Exceptions" nillable="true" type="q7:ExceptionInformation.Exceptions" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckForExistingProfileEmail" nillable="true" type="tns:CheckForExistingProfileEmail"/>
+  <xs:complexType name="GetProfileReservations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetProfileReservations" nillable="true" type="tns:ArrayOfGetProfileReservation"/>
+      <xs:element name="Exceptions" nillable="true" type="q8:ExceptionInformation.Exceptions" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetProfileReservations" nillable="true" type="tns:GetProfileReservations"/>
+  <xs:complexType name="ArrayOfGetProfileReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetProfileReservation" nillable="true" type="tns:GetProfileReservation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetProfileReservation" nillable="true" type="tns:ArrayOfGetProfileReservation"/>
+  <xs:complexType name="GetProfileReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BookingDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PrimaryPassengerLastname" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NumPassengers" type="xs:int"/>
+      <xs:element minOccurs="0" name="FlightSegments" nillable="true" type="tns:ArrayOfFlightSegment"/>
+      <xs:element minOccurs="0" name="Payments" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetProfileReservation" nillable="true" type="tns:GetProfileReservation"/>
+  <xs:complexType name="ArrayOfFlightSegment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightSegment" nillable="true" type="tns:FlightSegment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightSegment" nillable="true" type="tns:ArrayOfFlightSegment"/>
+  <xs:complexType name="FlightSegment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PassengerStatus" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightSegment" nillable="true" type="tns:FlightSegment"/>
+  <xs:complexType name="ProfileStatus">
+    <xs:sequence>
+      <xs:element name="ProfileStatus" nillable="true" type="xs:string"/>
+      <xs:element name="Exceptions" nillable="true" type="q9:ExceptionInformation.Exceptions" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileStatus" nillable="true" type="tns:ProfileStatus"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd6</con:url>
+      <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+  <xs:complexType name="ExceptionInformation.Exceptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exceptions" nillable="true" type="tns:ExceptionInformation.Exceptions"/>
+  <xs:complexType name="ExceptionInformation.Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExceptionLevel" type="tns:ExceptionLevels"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionInformation.Exception" nillable="true" type="tns:ExceptionInformation.Exception"/>
+  <xs:simpleType name="ExceptionLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionLevels" nillable="true" type="tns:ExceptionLevels"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+    <con:part>
+      <con:url>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Profiles.svc?xsd=xsd1</con:url>
+      <con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content>
+      <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Profiles.svc</con:endpoint>
+  </con:endpoints>
+</con:interface>

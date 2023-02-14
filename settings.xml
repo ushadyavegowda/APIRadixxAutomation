@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" created="3.8.0" activeEnvironment="QAEnvi" name="CPTestAutomation" resourceRoot="${projectDir}" updated="3.43.1" encryptionMode="Not encrypted" projectVersion="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+  <con:settings>
+    <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">APITests_Dynamic-readyapi-project</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
   <con:properties>
@@ -33,7 +35,6 @@
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests

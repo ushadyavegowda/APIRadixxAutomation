@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="7b7fb999-fee8-4be8-b2b8-faae6da0c829" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Pranitha" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7b7fb999-fee8-4be8-b2b8-faae6da0c829fileName">Pranitha</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

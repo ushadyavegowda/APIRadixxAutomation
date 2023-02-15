@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo" anonymous="optional" bindingOperationName="RetrieveLogicalFlightInfo" id="d5810c7f-e38c-4167-ba9c-801190e5d5da" inputName="" isOneWay="false" name="RetrieveLogicalFlightInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveLogicalFlightInfo" anonymous="optional" bindingOperationName="RetrieveLogicalFlightInfo" id="d5810c7f-e38c-4167-ba9c-801190e5d5da" inputName="" isOneWay="false" name="RetrieveLogicalFlightInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d5810c7f-e38c-4167-ba9c-801190e5d5dafileName">RetrieveLogicalFlightInfo</con:setting>
   </con:settings>

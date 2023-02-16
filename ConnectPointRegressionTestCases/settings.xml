@@ -8,7 +8,7 @@
   <con:properties>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-02-16</con:value>
+      <con:value>2023-02-19</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
@@ -84,7 +84,7 @@
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>78abdf99ie59of6am6s52984d01790effe5dbe989f4a</con:value>
+      <con:value>0cb3d8f97ama756dfflc2eg4d588825c356e9ad738e3</con:value>
     </con:property>
     <con:property>
       <con:name>IATANumber</con:name>
@@ -285,6 +285,34 @@
     <con:property>
       <con:name>p_BirthCountry</con:name>
       <con:value>356</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_CarrierCode</con:name>
+      <con:value>WG</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_FlightNumber</con:name>
+      <con:value>1590</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_Origin</con:name>
+      <con:value>YUL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_Destination</con:name>
+      <con:value>CDG</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_FarebasisCode</con:name>
+      <con:value>B</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_ScheduledDepartureTime</con:name>
+      <con:value>T12:30:00.000+05:00</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_ScheduledArrivalTime</con:name>
+      <con:value>T15:30:00.000+05:00</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

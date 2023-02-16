@@ -1582,11 +1582,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128826</con:value>
+      <con:value>128858</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
@@ -1594,11 +1594,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>fareid_returnSeg</con:name>
-      <con:value/>
+      <con:value>49</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_returnSeg</con:name>
-      <con:value/>
+      <con:value>172426</con:value>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>

@@ -3,6 +3,47 @@
   <con:settings>
     <con:setting id="1aaf87e7-045b-4c65-8c5f-9824f3e777b5fileName">EvaluateModificationOfPNR</con:setting>
   </con:settings>
+  <con:call id="efe427d6-6da4-4fb6-8c21-2998570c2e22" name="Request 1">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:EvaluateModificationOfPNR>
+         <!--Optional:-->
+         <tem:EvaluateModificationOfPNRRequest>
+            <rad:SecurityGUID>?</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>?</rad:SeriesNumber>
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <rad1:ActionType>?</rad1:ActionType>
+            <rad1:LogicalFlightKeyToRemove>?</rad1:LogicalFlightKeyToRemove>
+            <rad1:PersonOrgIdentifierToRemove>?</rad1:PersonOrgIdentifierToRemove>
+         </tem:EvaluateModificationOfPNRRequest>
+      </tem:EvaluateModificationOfPNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
       <con:authProfile>Inherit From Parent</con:authProfile>

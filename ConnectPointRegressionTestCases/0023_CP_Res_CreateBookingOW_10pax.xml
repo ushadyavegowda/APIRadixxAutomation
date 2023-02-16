@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="91b8da0c-c2a4-492c-9153-57e8ef4e0da9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0023_CP_Res_CreateBookingOW_10pax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="91b8da0c-c2a4-492c-9153-57e8ef4e0da9fileName">0023_CP_Res_CreateBookingOW_10pax</con:setting>
+  </con:settings>
+  <con:testStep id="ee8089cd-1c3f-4971-8d19-858b09b16de8" name="RetrieveSecuirtyToken and Input parameters" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

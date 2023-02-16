@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveSystemFareQuote" anonymous="optional" bindingOperationName="RetrieveSystemFareQuote" id="45ce411f-04eb-4489-b397-6ac3bcb1aded" inputName="" isOneWay="false" name="RetrieveSystemFareQuote" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveSystemFareQuote" anonymous="optional" bindingOperationName="RetrieveSystemFareQuote" id="45ce411f-04eb-4489-b397-6ac3bcb1aded" inputName="" isOneWay="false" name="RetrieveSystemFareQuote" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="45ce411f-04eb-4489-b397-6ac3bcb1adedfileName">RetrieveSystemFareQuote</con:setting>
   </con:settings>

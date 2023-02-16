@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/Format3DSecureInformation" anonymous="optional" bindingOperationName="Format3DSecureInformation" id="56acc931-2bd8-4cc2-b885-ae2b90dc1597" inputName="" isOneWay="false" name="Format3DSecureInformation" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/Format3DSecureInformation" anonymous="optional" bindingOperationName="Format3DSecureInformation" id="56acc931-2bd8-4cc2-b885-ae2b90dc1597" inputName="" isOneWay="false" name="Format3DSecureInformation" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="56acc931-2bd8-4cc2-b885-ae2b90dc1597fileName">Format3DSecureInformation</con:setting>
   </con:settings>

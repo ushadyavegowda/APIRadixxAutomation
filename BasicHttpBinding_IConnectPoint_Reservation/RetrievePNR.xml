@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" anonymous="optional" bindingOperationName="RetrievePNR" id="4ecf2e2b-f379-43af-934c-b30be9efee10" inputName="" isOneWay="false" name="RetrievePNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" anonymous="optional" bindingOperationName="RetrievePNR" id="4ecf2e2b-f379-43af-934c-b30be9efee10" inputName="" isOneWay="false" name="RetrievePNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4ecf2e2b-f379-43af-934c-b30be9efee10fileName">RetrievePNR</con:setting>
   </con:settings>

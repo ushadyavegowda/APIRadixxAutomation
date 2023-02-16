@@ -129,7 +129,7 @@ ConnectPointRegressionTestCases\Prequisite_Step.xml
 ConnectPointRegressionTestCases\0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
 ConnectPointRegressionTestCases\0002_Create-OW--pnr-with-seat-and-ssr.xml
 ConnectPointRegressionTestCases\0003_Create-RT-PNR-without-seat-and-SSR.xml
-ConnectPointRegressionTestCases\Test4_Create-RT-PNR-with-seat-and-SSR.xml
+ConnectPointRegressionTestCases\0004_Create-RT-PNR-with-seat-and-SSR.xml
 ConnectPointRegressionTestCases\Test5_Modify-OW-pnr-to-another-date.xml
 ConnectPointRegressionTestCases\Test6_ModifyBooking-OW-pnr-to-add-passengers.xml
 ConnectPointRegressionTestCases\Test7_Modify-OW-pnr-to-add-flight-segments.xml

@@ -179,18 +179,18 @@
             <a:Passengers>
                <a:Person>
                   <a:PersonOrgID>-386566648</a:PersonOrgID>
-                  <a:FirstName>ADT PAX</a:FirstName>
-                  <a:LastName>FIELD</a:LastName>
-                  <a:MiddleName>TEST</a:MiddleName>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>44</a:Age>
-                  <a:DOB>1974-10-23T00:00:00</a:DOB>
-                  <a:Gender>Female</a:Gender>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
                   <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483648</a:WBCID>
                   <a:PTCID>1</a:PTCID>
-                  <a:PTC>1</a:PTC>
+                  <a:PTC>${#TestSuite#p_PTC}</a:PTC>
                   <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>
                   <a:RedressNumber i:nil="true"/>
                   <a:KnownTravelerNumber i:nil="true"/>
@@ -211,7 +211,7 @@
                   <a:Company i:nil="true"/>
                   <a:Comments i:nil="true"/>
                   <a:Passport i:nil="true"/>
-                  <a:Nationality>232</a:Nationality>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-2147483648</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos>
@@ -269,12 +269,12 @@
                </a:Person>
                <a:Person>
                   <a:PersonOrgID>-386566649</a:PersonOrgID>
-                  <a:FirstName>CHD PAX</a:FirstName>
-                  <a:LastName>FIELD</a:LastName>
-                  <a:MiddleName>TESTTT</a:MiddleName>
+                  <a:FirstName>${#TestSuite#p_FirstNameCHD} </a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastNameCHD}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>9</a:Age>
-                  <a:DOB>2010-10-23T00:00:00</a:DOB>
-                  <a:Gender>Female</a:Gender>
+                  <a:DOB>${#TestSuite#p_DOB_CHD}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
                   <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
@@ -301,7 +301,7 @@
                   <a:Company i:nil="true"/>
                   <a:Comments i:nil="true"/>
                   <a:Passport i:nil="true"/>
-                  <a:Nationality>232</a:Nationality>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-2147483648</a:ProfileId>
                   <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>
                   <a:ContactInfos>
@@ -323,12 +323,12 @@
                </a:Person>
                <a:Person>
                   <a:PersonOrgID>-386566650</a:PersonOrgID>
-                  <a:FirstName>INF PAX</a:FirstName>
-                  <a:LastName>FIELD</a:LastName>
-                  <a:MiddleName>TESTT</a:MiddleName>
+                  <a:FirstName>${#TestSuite#p_FirstNameINF}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastNameINF}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName} </a:MiddleName>
                   <a:Age>1</a:Age>
-                  <a:DOB>2019-10-23T00:00:00</a:DOB>
-                  <a:Gender>Female</a:Gender>
+                  <a:DOB>${#TestSuite#p_DOB_INF}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
                   <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
@@ -355,7 +355,7 @@
                   <a:Company i:nil="true"/>
                   <a:Comments i:nil="true"/>
                   <a:Passport i:nil="true"/>
-                  <a:Nationality>232</a:Nationality>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-2147483648</a:ProfileId>
                   <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>
                   <a:ContactInfos>

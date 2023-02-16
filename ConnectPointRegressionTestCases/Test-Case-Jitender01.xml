@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5e61e651-6770-461b-b562-36b0dc12e0ec" keepSession="false" name="Test Case Jitender01" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5e61e651-6770-461b-b562-36b0dc12e0ecfileName">Test-Case-Jitender01</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="1d90032a-c661-45d1-bdf0-29109dc782fb" keepSession="false" name="Jitender-AddPax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1d90032a-c661-45d1-bdf0-29109dc782fbfileName">Jitender-AddPax</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

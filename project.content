@@ -146,3 +146,4 @@ ConnectPointRegressionTestCases\Create-OW-pnr-withSSR.xml
 ConnectPointRegressionTestCases\test.xml
 ConnectPointRegressionTestCases\Test-Case-Jitender01.xml
 ConnectPointRegressionTestCases\Jitender-AddPax.xml
+ConnectPointRegressionTestCases\0031_CP_Res_CreateOWbooking-1ADT1CHD1INF_NoPayment.xml

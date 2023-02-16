@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2dc4148f-3c3b-4a7f-b83e-e67865156a92" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0019_CP_Res_CreateBooking_APISinfo" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="2dc4148f-3c3b-4a7f-b83e-e67865156a92" keepSession="false" name="0019_CP_Res_CreateBooking_APISinfo" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2dc4148f-3c3b-4a7f-b83e-e67865156a92fileName">0019_CP_Res_CreateBooking_APISinfo</con:setting>
   </con:settings>
@@ -209,10 +209,10 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer FareId" id="6e56219d-c03c-4dde-bf37-ea4fae5b9578">
+  <con:testStep id="6e56219d-c03c-4dde-bf37-ea4fae5b9578" name="Transfer FareId" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrieveFareQuote-1ADT</con:sourceStep>
@@ -477,10 +477,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer ResBalance" id="74f6202f-d81c-4159-9278-036245e846d0">
+  <con:testStep id="74f6202f-d81c-4159-9278-036245e846d0" name="Transfer ResBalance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. SummaryPNR</con:sourceStep>
@@ -839,10 +839,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer PNR and balance" id="5685d632-6c8f-41c0-8456-684815b24251">
+  <con:testStep id="5685d632-6c8f-41c0-8456-684815b24251" name="Transfer PNR and balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ConfirmationNumber</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
@@ -854,7 +854,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
@@ -1393,10 +1393,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer RecordNumber" id="0fd7aaf3-b2e3-48bb-8d3f-f04fb7534eb2">
+  <con:testStep id="0fd7aaf3-b2e3-48bb-8d3f-f04fb7534eb2" name="Transfer RecordNumber" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:RecordNumber</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>7. RetrievePNR</con:sourceStep>
@@ -1408,7 +1408,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:PhysicalFlightID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>7. RetrievePNR</con:sourceStep>
@@ -1420,7 +1420,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FlightNumber</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>7. RetrievePNR</con:sourceStep>
@@ -1434,12 +1434,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1a2d23d9-b36a-4849-bf78-d8677175db03" name="8. AddUpdateApisInfo">
+  <con:testStep id="1a2d23d9-b36a-4849-bf78-d8677175db03" name="8. AddUpdateApisInfo" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>AddUpdateApisInfo</con:operation>
-      <con:request name="8. AddUpdateApisInfo" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b">
+      <con:request id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b" incomingWss="" name="8. AddUpdateApisInfo" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1542,14 +1542,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:AddUpdateApisInfo>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="56ba807d-9f5e-4a4f-a5fa-ef3ff2594caf" name="Valid HTTP Status Codes">
+        <con:assertion id="56ba807d-9f5e-4a4f-a5fa-ef3ff2594caf" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="b96ec215-8788-46b5-a24a-4ed244dd69d5" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="d297d844-8aa2-4388-a4af-32e566bacb2e" name="Schema Compliance">
+        <con:assertion id="b96ec215-8788-46b5-a24a-4ed244dd69d5" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="d297d844-8aa2-4388-a4af-32e566bacb2e" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -1557,7 +1557,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/AddUpdateApisInfo"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/AddUpdateApisInfo" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>

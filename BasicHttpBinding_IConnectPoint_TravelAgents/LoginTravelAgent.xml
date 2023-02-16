@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgent" anonymous="optional" bindingOperationName="LoginTravelAgent" id="c3a56739-d908-4f09-9a66-336a4d5d6408" inputName="" isOneWay="false" name="LoginTravelAgent" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgent" anonymous="optional" bindingOperationName="LoginTravelAgent" id="c3a56739-d908-4f09-9a66-336a4d5d6408" inputName="" isOneWay="false" name="LoginTravelAgent" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c3a56739-d908-4f09-9a66-336a4d5d6408fileName">LoginTravelAgent</con:setting>
   </con:settings>

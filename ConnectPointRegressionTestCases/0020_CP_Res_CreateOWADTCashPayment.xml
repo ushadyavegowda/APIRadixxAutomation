@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="9763fcf1-4eff-44e6-86bf-f59b1886f8e2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0020_CP_Res_CreateOWADTCashPayment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="9763fcf1-4eff-44e6-86bf-f59b1886f8e2" keepSession="false" name="0020_CP_Res_CreateOWADTCashPayment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9763fcf1-4eff-44e6-86bf-f59b1886f8e2fileName">0020_CP_Res_CreateOWADTCashPayment</con:setting>
   </con:settings>
@@ -209,10 +209,10 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer FareId" id="0df89417-1731-4596-8397-a658c2320f8b">
+  <con:testStep id="0df89417-1731-4596-8397-a658c2320f8b" name="Transfer FareId" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrieveFareQuote-1ADT</con:sourceStep>
@@ -477,10 +477,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer ResBalance" id="fa20b374-9ce5-4587-a6aa-f121b2dcb081">
+  <con:testStep id="fa20b374-9ce5-4587-a6aa-f121b2dcb081" name="Transfer ResBalance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. SummaryPNR</con:sourceStep>
@@ -662,7 +662,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="c58fc4ee-7668-44ec-ae6e-b8a8a6884fc3">
+  <con:testStep id="c58fc4ee-7668-44ec-ae6e-b8a8a6884fc3" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
@@ -845,10 +845,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer PNR and balance" id="e2535def-98d0-468f-a640-4afe10f16890">
+  <con:testStep id="e2535def-98d0-468f-a640-4afe10f16890" name="Transfer PNR and balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
@@ -860,7 +860,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>

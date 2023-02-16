@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="feb55476-01b3-499f-b413-7a91e7ec4552" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0021_CP_Res_ModifyOWbooking" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="feb55476-01b3-499f-b413-7a91e7ec4552" keepSession="false" name="0021_CP_Res_ModifyOWbooking" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="feb55476-01b3-499f-b413-7a91e7ec4552fileName">0021_CP_Res_ModifyOWbooking</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="Create 1ADT PNR" id="0678aa20-e615-49fc-8076-d6377433d838">
+  <con:testStep id="0678aa20-e615-49fc-8076-d6377433d838" name="Create 1ADT PNR" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>9763fcf1-4eff-44e6-86bf-f59b1886f8e2</con:targetTestCase>
@@ -96,10 +96,10 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer fare info" id="7ffe066b-ff9c-43f3-ac54-e6ae8ee13ecb">
+  <con:testStep id="7ffe066b-ff9c-43f3-ac54-e6ae8ee13ecb" name="Transfer fare info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LFID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
@@ -111,7 +111,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareBasis</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
@@ -122,7 +122,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareClass</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
@@ -133,7 +133,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Cabin</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
@@ -343,10 +343,10 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 1" id="1469eb3f-d9b8-40ac-b20f-0e24837725da">
+  <con:testStep id="1469eb3f-d9b8-40ac-b20f-0e24837725da" name="PropertyTransfer 1" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote-1ADT</con:sourceStep>
@@ -360,12 +360,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="46635ece-3a8e-4ef0-881b-947259c92f58" name="3. ModifyPNR (AddADTPax)">
+  <con:testStep id="46635ece-3a8e-4ef0-881b-947259c92f58" name="3. ModifyPNR (AddADTPax)" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request name="3. ModifyPNR (AddADTPax)" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="038757d6-4560-4547-8865-bd832b740a15">
+      <con:request id="038757d6-4560-4547-8865-bd832b740a15" incomingWss="" name="3. ModifyPNR (AddADTPax)" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -435,27 +435,27 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:ModifyPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="988868db-975e-477b-82fe-db228f842677" name="Valid HTTP Status Codes">
+        <con:assertion id="988868db-975e-477b-82fe-db228f842677" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="fe3e92df-d86d-441e-b602-d5e8a341cdfe" name="Not SOAP Fault"/>
+        <con:assertion id="fe3e92df-d86d-441e-b602-d5e8a341cdfe" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 2" id="10d6fd64-576e-43c0-99e2-c4cd3581295a">
+  <con:testStep id="10d6fd64-576e-43c0-99e2-c4cd3581295a" name="PropertyTransfer 2" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. ModifyPNR (AddADTPax)</con:sourceStep>

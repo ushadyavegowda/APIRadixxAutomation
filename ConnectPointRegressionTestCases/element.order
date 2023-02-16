@@ -2,7 +2,7 @@ Prequisite_Step.xml
 0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
 0002_Create-OW--pnr-with-seat-and-ssr.xml
 0003_Create-RT-PNR-without-seat-and-SSR.xml
-Test4_Create-RT-PNR-with-seat-and-SSR.xml
+0004_Create-RT-PNR-with-seat-and-SSR.xml
 Test5_Modify-OW-pnr-to-another-date.xml
 Test6_ModifyBooking-OW-pnr-to-add-passengers.xml
 Test7_Modify-OW-pnr-to-add-flight-segments.xml
@@ -20,5 +20,8 @@ Create-OW-pnr-withSSR.xml
 0020_CP_Res_CreateOWADTCashPayment.xml
 0021_CP_Res_ModifyOWbooking.xml
 0022_CP_Res_Modify_AddINF.xml
+test.xml
+Test-Case-Jitender01.xml
+Jitender-AddPax.xml
 0031_CP_Res_CreateOWbooking-1ADT1CHD1INF_NoPayment.xml
 0023_CP_Res_CreateBookingOW_10pax.xml

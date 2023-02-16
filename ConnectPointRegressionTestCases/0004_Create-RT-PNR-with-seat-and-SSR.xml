@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="true" failTestCaseOnErrors="true" id="f690de01-d201-4280-9603-09b01fc5f837" keepSession="false" maxResults="0" name="Test4_Create RT PNR with seat and SSR" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="f690de01-d201-4280-9603-09b01fc5f837" keepSession="false" maxResults="0" name="0004_Create RT PNR with seat and SSR" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="f690de01-d201-4280-9603-09b01fc5f837fileName">Test4_Create-RT-PNR-with-seat-and-SSR</con:setting>
+    <con:setting id="f690de01-d201-4280-9603-09b01fc5f837fileName">0004_Create-RT-PNR-with-seat-and-SSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep id="11a9af26-e827-46a5-b014-4e90d031de22" name="1 RetrieveSecuirtyToken and Input parameters" type="calltestcase">

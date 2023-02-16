@@ -143,3 +143,4 @@ ConnectPointRegressionTestCases\Test14_Create-TA-booking.xml
 ConnectPointRegressionTestCases\Test15_Modify-TA-booking-to-another-date.xml
 ConnectPointRegressionTestCases\Test1_Create-a-OW-boking---ADT-passenger---CASH-payment.xml
 ConnectPointRegressionTestCases\Create-OW-pnr-withSSR.xml
+ConnectPointRegressionTestCases\0031_CP_Res_CreateOWbooking-1ADT1CHD1INF_NoPayment.xml

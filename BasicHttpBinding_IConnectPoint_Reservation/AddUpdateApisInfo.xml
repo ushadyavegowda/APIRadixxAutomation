@@ -3,6 +3,116 @@
   <con:settings>
     <con:setting id="1cacdafc-9a26-4b1c-9029-222ac79e2f09fileName">AddUpdateApisInfo</con:setting>
   </con:settings>
+  <con:call id="a3a28ea6-526f-47f3-9895-b8085ef0015e" name="Request 1">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddUpdateApisInfo>
+         <!--Optional:-->
+         <tem:AddApisInfoRequest>
+            <rad:SecurityGUID>?</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:SeriesNumber>?</rad1:SeriesNumber>
+            <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>
+            <rad1:ApisInfos>
+               <!--Zero or more repetitions:-->
+               <rad1:ApisInformation>
+                  <rad1:ApisInfoIndex>?</rad1:ApisInfoIndex>
+                  <rad1:RecordNumber>?</rad1:RecordNumber>
+                  <rad1:LastName>?</rad1:LastName>
+                  <rad1:FirstName>?</rad1:FirstName>
+                  <!--Optional:-->
+                  <rad1:MiddleName>?</rad1:MiddleName>
+                  <!--Optional:-->
+                  <rad1:BirthDate>?</rad1:BirthDate>
+                  <!--Optional:-->
+                  <rad1:Gender>?</rad1:Gender>
+                  <!--Optional:-->
+                  <rad1:Citizenship>?</rad1:Citizenship>
+                  <!--Optional:-->
+                  <rad1:ResidenceCountry>?</rad1:ResidenceCountry>
+                  <!--Optional:-->
+                  <rad1:HomeAddress>?</rad1:HomeAddress>
+                  <!--Optional:-->
+                  <rad1:HomeCity>?</rad1:HomeCity>
+                  <!--Optional:-->
+                  <rad1:HomeState>?</rad1:HomeState>
+                  <!--Optional:-->
+                  <rad1:HomePostal>?</rad1:HomePostal>
+                  <!--Optional:-->
+                  <rad1:DestinationAddress>?</rad1:DestinationAddress>
+                  <!--Optional:-->
+                  <rad1:DestinationCity>?</rad1:DestinationCity>
+                  <!--Optional:-->
+                  <rad1:DestinationState>?</rad1:DestinationState>
+                  <!--Optional:-->
+                  <rad1:DestinationPostal>?</rad1:DestinationPostal>
+                  <!--Optional:-->
+                  <rad1:DestinationCountry>?</rad1:DestinationCountry>
+                  <!--Optional:-->
+                  <rad1:Embarkation>?</rad1:Embarkation>
+                  <!--Optional:-->
+                  <rad1:BirthCity>?</rad1:BirthCity>
+                  <!--Optional:-->
+                  <rad1:BirthState>?</rad1:BirthState>
+                  <!--Optional:-->
+                  <rad1:BirthCountry>?</rad1:BirthCountry>
+                  <!--Optional:-->
+                  <rad1:Status>?</rad1:Status>
+                  <!--Optional:-->
+                  <rad1:DocumentType1>?</rad1:DocumentType1>
+                  <!--Optional:-->
+                  <rad1:DocumentNumber>?</rad1:DocumentNumber>
+                  <!--Optional:-->
+                  <rad1:IssueCountry1>?</rad1:IssueCountry1>
+                  <!--Optional:-->
+                  <rad1:ExpirationDate1>?</rad1:ExpirationDate1>
+                  <!--Optional:-->
+                  <rad1:DocumentType2>?</rad1:DocumentType2>
+                  <!--Optional:-->
+                  <rad1:DocumentNumber2>?</rad1:DocumentNumber2>
+                  <!--Optional:-->
+                  <rad1:IssueCountry2>?</rad1:IssueCountry2>
+                  <!--Optional:-->
+                  <rad1:ExpirationDate2>?</rad1:ExpirationDate2>
+                  <!--Optional:-->
+                  <rad1:ResultCode>?</rad1:ResultCode>
+                  <rad1:PhysicalFlightId>?</rad1:PhysicalFlightId>
+                  <rad1:ActualDepartureDate>?</rad1:ActualDepartureDate>
+                  <rad1:FlightNumber>?</rad1:FlightNumber>
+                  <!--Optional:-->
+                  <rad1:Debarkation>?</rad1:Debarkation>
+                  <!--Optional:-->
+                  <rad1:Arrival>?</rad1:Arrival>
+                  <rad1:DocumentScanned1>?</rad1:DocumentScanned1>
+                  <rad1:DocumentScanned2>?</rad1:DocumentScanned2>
+               </rad1:ApisInformation>
+            </rad1:ApisInfos>
+         </tem:AddApisInfoRequest>
+      </tem:AddUpdateApisInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/AddUpdateApisInfo"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
       <con:authProfile>Inherit From Parent</con:authProfile>

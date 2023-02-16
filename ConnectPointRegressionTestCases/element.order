@@ -16,3 +16,7 @@ Test14_Create-TA-booking.xml
 Test15_Modify-TA-booking-to-another-date.xml
 Test1_Create-a-OW-boking---ADT-passenger---CASH-payment.xml
 Create-OW-pnr-withSSR.xml
+0019_CP_Res_CreateBooking_APISinfo.xml
+0020_CP_Res_CreateOWADTCashPayment.xml
+0021_CP_Res_ModifyOWbooking.xml
+0022_CP_Res_Modify_AddINF.xml

@@ -29,6 +29,18 @@
     <con:property>
       <con:name>URL</con:name>
     </con:property>
+    <con:property>
+      <con:name>FareID</con:name>
+      <con:value>FareID</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value>ResBalance</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PNR</con:name>
+      <con:value>PNR</con:value>
+    </con:property>
   </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
@@ -115,6 +127,18 @@
     <con:property>
       <con:name>URL</con:name>
       <con:value>https://rdxappint.radixxuat.com/RDX/</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FareID</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>PNR</con:name>
+      <con:value/>
     </con:property>
     <con:databaseConnectionContainer/>
     <con:jmsConnectionContainer/>

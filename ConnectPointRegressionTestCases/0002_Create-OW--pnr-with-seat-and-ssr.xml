@@ -694,8 +694,8 @@ declare namespace ns1='http://tempuri.org/';
                <rad1:PaymentToAssessFee>
                   <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
                   <rad1:CardNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:PaymentAmount>${4. SummaryPNR_Add SSR#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';\r
-declare namespace ns1='http://tempuri.org/';\r
+                  <rad1:PaymentAmount>${4. SummaryPNR_Add SSR#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace ns1='http://tempuri.org/';
 //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad1:PaymentAmount>
                </rad1:PaymentToAssessFee>
             </rad1:PaymentsToAssessFee>

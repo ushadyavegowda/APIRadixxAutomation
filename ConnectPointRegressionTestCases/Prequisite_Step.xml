@@ -225,9 +225,11 @@ testRunner.testCase.testSuite.setPropertyValue("p_FirstName", "Radixx");
 testRunner.testCase.testSuite.setPropertyValue("p_LastName", "Tester");
 testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
 testRunner.testCase.testSuite.setPropertyValue("p_DOB", "1974-10-23");
+testRunner.testCase.testSuite.setPropertyValue("p_Age", "44");
 testRunner.testCase.testSuite.setPropertyValue("p_Gender", "Male");
 testRunner.testCase.testSuite.setPropertyValue("p_PTC", "ADT");
-testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "232");
+testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "840");
+testRunner.testCase.testSuite.setPropertyValue("p_Citizenship", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Language", "1");
 testRunner.testCase.testSuite.setPropertyValue("p_PhoneNumber", "+46701497931");
 testRunner.testCase.testSuite.setPropertyValue("p_Email", "test@radixx.com");
@@ -244,6 +246,30 @@ testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
 testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");
 testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
 testRunner.testCase.testSuite.setPropertyValue("p_DOB_INF",p_DOB_INF.format("yyyy-MM-dd"));
+
+
+//APIS info - 1 ADT
+
+testRunner.testCase.testSuite.setPropertyValue("p_DocType1", "1");
+testRunner.testCase.testSuite.setPropertyValue("p_DocNumber1", "AAAA1111");
+testRunner.testCase.testSuite.setPropertyValue("p_IssueCountry1", "124");
+testRunner.testCase.testSuite.setPropertyValue("p_ExpiryDate1", "2030-01-01");
+testRunner.testCase.testSuite.setPropertyValue("p_DocType2", "2");
+testRunner.testCase.testSuite.setPropertyValue("p_DocNumber2", "BBBB1111");
+testRunner.testCase.testSuite.setPropertyValue("p_IssueCountry2", "356");
+testRunner.testCase.testSuite.setPropertyValue("p_ExpiryDate2", "2032-01-01");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthCity", "YVR");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthState", "TN");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthCountry", "356");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeAddress", "6310 HAZELTINE NATIONAL DR");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeCity", "ORLANDO");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeState", "FL");
+testRunner.testCase.testSuite.setPropertyValue("p_HomePostal", "32822");
+testRunner.testCase.testSuite.setPropertyValue("p_DestAddress", "MILENIA");
+testRunner.testCase.testSuite.setPropertyValue("p_DestCity", "BWI");
+testRunner.testCase.testSuite.setPropertyValue("p_DestState", "TN");
+testRunner.testCase.testSuite.setPropertyValue("p_DestPostal", "8989");
+testRunner.testCase.testSuite.setPropertyValue("p_DestCountry", "120");
 
 //Seat
 testRunner.testCase.testSuite.setPropertyValue("RowSeat", "A");

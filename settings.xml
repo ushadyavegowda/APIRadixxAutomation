@@ -81,7 +81,7 @@
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Fees.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_Fulfillment" type="SOAP">
-      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_Seating" type="SOAP">
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>

@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="8e83e1d9-cd92-4285-87f8-913bd109a3c3fileName">BasicHttpBinding_IConnectPoint_Fulfillment</con:setting>
   </con:settings>
-  <con:definitionCache rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc?wsdl" type="TEXT">
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc?wsdl">
     <con:part>
       <con:url>https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc?wsdl</con:url>
       <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Fulfillment" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
@@ -2171,9 +2171,7 @@
       <con:type>http://www.w3.org/2001/XMLSchema</con:type>
     </con:part>
   </con:definitionCache>
-  <con:endpoints>
-    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-  </con:endpoints>
+  <con:endpoints></con:endpoints>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
       <con:authProfile>Inherit From Parent</con:authProfile>

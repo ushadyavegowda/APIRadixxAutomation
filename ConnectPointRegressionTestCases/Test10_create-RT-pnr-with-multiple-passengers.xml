@@ -316,271 +316,271 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">\r
-   <s:Body>\r
-      <SummaryPNR xmlns="http://tempuri.org/">\r
-         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r
-            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>\r
-            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <CarrierCode>\r
-                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>\r
-               </CarrierCode>\r
-            </CarrierCodes>\r
-            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>\r
-            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">radixx</HistoricUserName>\r
-            <a:ActionType>GetSummary</a:ActionType>\r
-            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <b:SeriesNumber>299</b:SeriesNumber>\r
-               <b:ConfirmationNumber i:nil="true"/>\r
-            </a:ReservationInfo>\r
-            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>\r
-            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>\r
-            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>\r
-            <a:IATANum>${empty}</a:IATANum>\r
-            <a:User>${empty}</a:User>\r
-            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>\r
-            <a:PromoCode i:nil="true"/>\r
-            <a:ExternalBookingID>${empty}</a:ExternalBookingID>\r
-            <a:Address>\r
-               <a:Address1>${empty}</a:Address1>\r
-               <a:Address2>${empty}</a:Address2>\r
-               <a:City>${empty}</a:City>\r
-               <a:State>N</a:State>\r
-               <a:Postal>${empty}</a:Postal>\r
-               <a:Country>0</a:Country>\r
-               <a:CountryCode>${empty}</a:CountryCode>\r
-               <a:AreaCode>${empty}</a:AreaCode>\r
-               <a:PhoneNumber>+46701497931</a:PhoneNumber>\r
-               <a:Display>${empty}</a:Display>\r
-            </a:Address>\r
-            <a:ContactInfos i:nil="true"/>\r
-            <a:Passengers>\r
-               <a:Person>\r
-                  <a:PersonOrgID>-386566650</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstNameCHD}</a:FirstName>\r
-                  <a:LastName>${#TestSuite#p_LastNameCHD}</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>6</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB_CHD}</a:DOB>\r
-                  <a:Gender>Female</a:Gender>\r
-                  <a:Title>MSTR</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Son</a:RelationType>\r
-                  <a:WBCID>-386566650</a:WBCID>\r
-                  <a:PTCID>6</a:PTCID>\r
-                  <a:PTC>CHD</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-386566650</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber>${empty}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1>${empty}</a:Address1>\r
-                     <a:Address2>${empty}</a:Address2>\r
-                     <a:City>${empty}</a:City>\r
-                     <a:State>${empty}</a:State>\r
-                     <a:Postal>${empty}</a:Postal>\r
-                     <a:Country>${empty}</a:Country>\r
-                     <a:CountryCode>${empty}</a:CountryCode>\r
-                     <a:AreaCode>${empty}</a:AreaCode>\r
-                     <a:PhoneNumber>${empty}</a:PhoneNumber>\r
-                     <a:Display>${empty}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company>${empty}</a:Company>\r
-                  <a:Comments>${empty}</a:Comments>\r
-                  <a:Passport>${empty}</a:Passport>\r
-                  <a:Nationality>${empty}</a:Nationality>\r
-                  <a:ProfileId>-386566650</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true"/>\r
-                  <a:FrequentFlyerNumber>${empty}</a:FrequentFlyerNumber>\r
-                  <a:Suffix>${empty}</a:Suffix>\r
-               </a:Person>\r
-               <a:Person>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>44</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>Female</a:Gender>\r
-                  <a:Title>MRS</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483648</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>1</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber>${empty}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true"/>\r
-                     <a:Address2 i:nil="true"/>\r
-                     <a:City i:nil="true"/>\r
-                     <a:State i:nil="true"/>\r
-                     <a:Postal i:nil="true"/>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true"/>\r
-                     <a:AreaCode i:nil="true"/>\r
-                     <a:PhoneNumber i:nil="true"/>\r
-                     <a:Display i:nil="true"/>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true"/>\r
-                  <a:Comments i:nil="true"/>\r
-                  <a:Passport i:nil="true"/>\r
-                  <a:Nationality>232</a:Nationality>\r
-                  <a:ProfileId>-2147483648</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>+46701497931</a:ContactField>\r
-                        <a:ContactType>HomePhone</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>22AAAAA0000A1Z5</a:ContactField>\r
-                        <a:ContactType>SSN</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>kim.lindeberg@ezy.se</a:ContactField>\r
-                        <a:ContactType>Email</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>+46701497931</a:ContactField>\r
-                        <a:ContactType>MobilePhone</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                  </a:ContactInfos>\r
-                  <a:FrequentFlyerNumber i:nil="true"/>\r
-                  <a:Suffix i:nil="true"/>\r
-               </a:Person>\r
-               <a:Person>\r
-                  <a:PersonOrgID>-386566649</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstNameINF}</a:FirstName>\r
-                  <a:LastName>${#TestSuite#p_LastNameINF}</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>1</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB_INF}</a:DOB>\r
-                  <a:Gender>Female</a:Gender>\r
-                  <a:Title>MSTR</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483648</a:WBCID>\r
-                  <a:PTCID>5</a:PTCID>\r
-                  <a:PTC>INF</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber>${empty}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1>${empty}</a:Address1>\r
-                     <a:Address2>${empty}</a:Address2>\r
-                     <a:City>${empty}</a:City>\r
-                     <a:State>${empty}</a:State>\r
-                     <a:Postal>${empty}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode>${empty}</a:CountryCode>\r
-                     <a:AreaCode>${empty}</a:AreaCode>\r
-                     <a:PhoneNumber>${empty}</a:PhoneNumber>\r
-                     <a:Display>${empty}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company>${empty}</a:Company>\r
-                  <a:Comments>${empty}</a:Comments>\r
-                  <a:Passport>${empty}</a:Passport>\r
-                  <a:Nationality>232</a:Nationality>\r
-                  <a:ProfileId>-2147483648</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>+46701497931</a:ContactField>\r
-                        <a:ContactType>HomePhone</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                  </a:ContactInfos>\r
-                  <a:FrequentFlyerNumber i:nil="true"/>\r
-                  <a:Suffix i:nil="true"/>\r
-               </a:Person>\r
-            </a:Passengers>\r
-            <a:Segments>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566650</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid_CHD}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-               </a:Segment>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566650</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid_CHD_returnSeg}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-               </a:Segment>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid_ADT}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-               </a:Segment>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid_ADT_returnSeg}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-               </a:Segment>\r
-            </a:Segments>\r
-            <a:Payments i:nil="true"/>\r
-            <a:Comment i:nil="true"/>\r
-            <a:ReferralID i:nil="true"/>\r
-         </SummaryPnrRequest>\r
-      </SummaryPNR>\r
-   </s:Body>\r
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <SummaryPNR xmlns="http://tempuri.org/">
+         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>
+            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <CarrierCode>
+                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>
+               </CarrierCode>
+            </CarrierCodes>
+            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>
+            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">radixx</HistoricUserName>
+            <a:ActionType>GetSummary</a:ActionType>
+            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <b:SeriesNumber>299</b:SeriesNumber>
+               <b:ConfirmationNumber i:nil="true"/>
+            </a:ReservationInfo>
+            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>
+            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>
+            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>
+            <a:IATANum>${empty}</a:IATANum>
+            <a:User>${empty}</a:User>
+            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>
+            <a:PromoCode i:nil="true"/>
+            <a:ExternalBookingID>${empty}</a:ExternalBookingID>
+            <a:Address>
+               <a:Address1>${empty}</a:Address1>
+               <a:Address2>${empty}</a:Address2>
+               <a:City>${empty}</a:City>
+               <a:State>N</a:State>
+               <a:Postal>${empty}</a:Postal>
+               <a:Country>0</a:Country>
+               <a:CountryCode>${empty}</a:CountryCode>
+               <a:AreaCode>${empty}</a:AreaCode>
+               <a:PhoneNumber>+46701497931</a:PhoneNumber>
+               <a:Display>${empty}</a:Display>
+            </a:Address>
+            <a:ContactInfos i:nil="true"/>
+            <a:Passengers>
+               <a:Person>
+                  <a:PersonOrgID>-386566650</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstNameCHD}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastNameCHD}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>6</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB_CHD}</a:DOB>
+                  <a:Gender>Female</a:Gender>
+                  <a:Title>MSTR</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Son</a:RelationType>
+                  <a:WBCID>-386566650</a:WBCID>
+                  <a:PTCID>6</a:PTCID>
+                  <a:PTC>CHD</a:PTC>
+                  <a:TravelsWithPersonOrgID>-386566650</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${empty}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${empty}</a:Address1>
+                     <a:Address2>${empty}</a:Address2>
+                     <a:City>${empty}</a:City>
+                     <a:State>${empty}</a:State>
+                     <a:Postal>${empty}</a:Postal>
+                     <a:Country>${empty}</a:Country>
+                     <a:CountryCode>${empty}</a:CountryCode>
+                     <a:AreaCode>${empty}</a:AreaCode>
+                     <a:PhoneNumber>${empty}</a:PhoneNumber>
+                     <a:Display>${empty}</a:Display>
+                  </a:Address>
+                  <a:Company>${empty}</a:Company>
+                  <a:Comments>${empty}</a:Comments>
+                  <a:Passport>${empty}</a:Passport>
+                  <a:Nationality>${empty}</a:Nationality>
+                  <a:ProfileId>-386566650</a:ProfileId>
+                  <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${empty}</a:FrequentFlyerNumber>
+                  <a:Suffix>${empty}</a:Suffix>
+               </a:Person>
+               <a:Person>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>44</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>Female</a:Gender>
+                  <a:Title>MRS</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483648</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>1</a:PTC>
+                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${empty}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
+                  </a:Address>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
+                  <a:Nationality>232</a:Nationality>
+                  <a:ProfileId>-2147483648</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>+46701497931</a:ContactField>
+                        <a:ContactType>HomePhone</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>22AAAAA0000A1Z5</a:ContactField>
+                        <a:ContactType>SSN</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>kim.lindeberg@ezy.se</a:ContactField>
+                        <a:ContactType>Email</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>+46701497931</a:ContactField>
+                        <a:ContactType>MobilePhone</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                  </a:ContactInfos>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
+               </a:Person>
+               <a:Person>
+                  <a:PersonOrgID>-386566649</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstNameINF}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastNameINF}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>1</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB_INF}</a:DOB>
+                  <a:Gender>Female</a:Gender>
+                  <a:Title>MSTR</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483648</a:WBCID>
+                  <a:PTCID>5</a:PTCID>
+                  <a:PTC>INF</a:PTC>
+                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${empty}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${empty}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${empty}</a:Address1>
+                     <a:Address2>${empty}</a:Address2>
+                     <a:City>${empty}</a:City>
+                     <a:State>${empty}</a:State>
+                     <a:Postal>${empty}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${empty}</a:CountryCode>
+                     <a:AreaCode>${empty}</a:AreaCode>
+                     <a:PhoneNumber>${empty}</a:PhoneNumber>
+                     <a:Display>${empty}</a:Display>
+                  </a:Address>
+                  <a:Company>${empty}</a:Company>
+                  <a:Comments>${empty}</a:Comments>
+                  <a:Passport>${empty}</a:Passport>
+                  <a:Nationality>232</a:Nationality>
+                  <a:ProfileId>-2147483648</a:ProfileId>
+                  <a:IsPrimaryPassenger>false</a:IsPrimaryPassenger>
+                  <a:ContactInfos>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>+46701497931</a:ContactField>
+                        <a:ContactType>HomePhone</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                  </a:ContactInfos>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
+               </a:Person>
+            </a:Passengers>
+            <a:Segments>
+               <a:Segment>
+                  <a:PersonOrgID>-386566650</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid_CHD}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+               </a:Segment>
+               <a:Segment>
+                  <a:PersonOrgID>-386566650</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid_CHD_returnSeg}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+               </a:Segment>
+               <a:Segment>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid_ADT}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+               </a:Segment>
+               <a:Segment>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid_ADT_returnSeg}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+               </a:Segment>
+            </a:Segments>
+            <a:Payments i:nil="true"/>
+            <a:Comment i:nil="true"/>
+            <a:ReferralID i:nil="true"/>
+         </SummaryPnrRequest>
+      </SummaryPNR>
+   </s:Body>
 </s:Envelope>]]></con:request>
         <con:assertion id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match" type="XPath Match">

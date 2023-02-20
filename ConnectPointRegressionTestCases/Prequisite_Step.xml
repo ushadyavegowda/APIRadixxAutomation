@@ -181,29 +181,14 @@ log.info(securityToken)</script>
       <script>// importing the Java methods
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import groovy.time.TimeCategory
-import  java.lang.Integer;
 
-def DepartureDate = new Date().plus(0)
+
+def DepartureDate = new Date().plus(3)
 def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
 
-
-//ADT DOB
-def age = 44;
-SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-Calendar a = Calendar.getInstance();
-a.add(Calendar.YEAR, -age);
-ADT_DOB = sdf.format(a.getTime());
-log.info("Age: " + ADT_DOB)
-
-def Child_age = 5;
-Calendar c = Calendar.getInstance();
-c.add(Calendar.YEAR, -Child_age);
-CHD_DOB = sdf.format(c.getTime());
-log.info("Child Age: " + CHD_DOB)
 
 //DOB
 def p_DOB_INF= new Date().minus(120)
@@ -237,40 +222,55 @@ testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
 
 //Passenger Info
-def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-def p_Email = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-
-//log.info(PassengerName1.toUpperCase())
-testRunner.testCase.testSuite.setPropertyValue("p_FirstName", FirstName.toUpperCase());
-testRunner.testCase.testSuite.setPropertyValue("p_LastName", LastName.toUpperCase());
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase());
-testRunner.testCase.testSuite.setPropertyValue("p_Title", "Ms");
-testRunner.testCase.testSuite.setPropertyValue("p_DOB", ADT_DOB);
-testRunner.testCase.testSuite.setPropertyValue("p_Age",age.toString());
+testRunner.testCase.testSuite.setPropertyValue("p_FirstName", "Radixx");
+testRunner.testCase.testSuite.setPropertyValue("p_LastName", "Tester");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB", "1974-10-23");
+testRunner.testCase.testSuite.setPropertyValue("p_Age", "44");
 testRunner.testCase.testSuite.setPropertyValue("p_Gender", "Male");
 testRunner.testCase.testSuite.setPropertyValue("p_PTC", "ADT");
-testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "232");
+testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "840");
+testRunner.testCase.testSuite.setPropertyValue("p_Citizenship", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Language", "1");
 testRunner.testCase.testSuite.setPropertyValue("p_PhoneNumber", "+46701497931");
-testRunner.testCase.testSuite.setPropertyValue("p_Email",p_Email.concat("@radixx.com"));
+testRunner.testCase.testSuite.setPropertyValue("p_Email", "test@radixx.com");
+testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
+testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
 testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SEAT");
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", FirstName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD", LastName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", CHD_DOB);
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", "RadixxCHD");
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD", "TesterCHD");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", "2015-10-23");
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", FirstName.toUpperCase().concat("INF"));
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", LastName.toUpperCase().concat("INF"));
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("INF"));
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
 testRunner.testCase.testSuite.setPropertyValue("p_DOB_INF",p_DOB_INF.format("yyyy-MM-dd"));
 
-//FareQuote and Summary
 
-testRunner.testCase.testSuite.setPropertyValue("LanguageCode","en");
-testRunner.testCase.testSuite.setPropertyValue("PersonOrgID","-1");
+//APIS info - 1 ADT
+
+testRunner.testCase.testSuite.setPropertyValue("p_DocType1", "1");
+testRunner.testCase.testSuite.setPropertyValue("p_DocNumber1", "AAAA1111");
+testRunner.testCase.testSuite.setPropertyValue("p_IssueCountry1", "124");
+testRunner.testCase.testSuite.setPropertyValue("p_ExpiryDate1", "2030-01-01");
+testRunner.testCase.testSuite.setPropertyValue("p_DocType2", "2");
+testRunner.testCase.testSuite.setPropertyValue("p_DocNumber2", "BBBB1111");
+testRunner.testCase.testSuite.setPropertyValue("p_IssueCountry2", "356");
+testRunner.testCase.testSuite.setPropertyValue("p_ExpiryDate2", "2032-01-01");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthCity", "YVR");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthState", "TN");
+testRunner.testCase.testSuite.setPropertyValue("p_BirthCountry", "356");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeAddress", "6310 HAZELTINE NATIONAL DR");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeCity", "ORLANDO");
+testRunner.testCase.testSuite.setPropertyValue("p_HomeState", "FL");
+testRunner.testCase.testSuite.setPropertyValue("p_HomePostal", "32822");
+testRunner.testCase.testSuite.setPropertyValue("p_DestAddress", "MILENIA");
+testRunner.testCase.testSuite.setPropertyValue("p_DestCity", "BWI");
+testRunner.testCase.testSuite.setPropertyValue("p_DestState", "TN");
+testRunner.testCase.testSuite.setPropertyValue("p_DestPostal", "8989");
+testRunner.testCase.testSuite.setPropertyValue("p_DestCountry", "120");
 
 //Seat
 testRunner.testCase.testSuite.setPropertyValue("RowSeat", "A");
@@ -287,39 +287,20 @@ testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_INF", "5");
 testRunner.testCase.testSuite.setPropertyValue("RowSeat_returnSeg_CHD", "C");
 testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_CHD", "5");
 
-//IEP call
-testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
-testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
-def ExpDate = new Date().plus(100)
-testRunner.testCase.testSuite.setPropertyValue("ExpirationDate", ExpDate.format("yyyy-MM-dd"));
-def ExchangeRateDate = new Date()
-testRunner.testCase.testSuite.setPropertyValue("ExchangeRateDate", ExchangeRateDate.format("yyyy-MM-dd"));
-testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
-testRunner.testCase.testSuite.setPropertyValue("TransactionStatus", "NOTYETPROCESSED");
-testRunner.testCase.testSuite.setPropertyValue("BillingCountry", "840");
-testRunner.testCase.testSuite.setPropertyValue("ProcessorName", "OPPY");
-testRunner.testCase.testSuite.setPropertyValue("SeriesNumber", "299");
-testRunner.testCase.testSuite.setPropertyValue("UserName", "radixx");
-testRunner.testCase.testSuite.setPropertyValue("Reference", "Test");
-testRunner.testCase.testSuite.setPropertyValue("Comments", "Test");
-testRunner.testCase.testSuite.setPropertyValue("CheckNumber", "123");
-testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
-testRunner.testCase.testSuite.setPropertyValue("AuthorizationCode", "t1");
-testRunner.testCase.testSuite.setPropertyValue("PaymentReference", "t2");
-testRunner.testCase.testSuite.setPropertyValue("ResponseMessage", "t3");
+//add OAL Flight Segment
+testRunner.testCase.testSuite.setPropertyValue("OAL_CarrierCode", "WG");
+testRunner.testCase.testSuite.setPropertyValue("OAL_FlightNumber","1590");
+testRunner.testCase.testSuite.setPropertyValue("OAL_Origin", "YUL");
+testRunner.testCase.testSuite.setPropertyValue("OAL_Destination", "CDG");
+testRunner.testCase.testSuite.setPropertyValue("OAL_FarebasisCode", "B");
+testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledDepartureTime", "T12:30:00.000+05:00");
+testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledArrivalTime", "T15:30:00.000+05:00");
 
-//Address
 
-testRunner.testCase.testSuite.setPropertyValue("Address1", "123 Elm Street");
-testRunner.testCase.testSuite.setPropertyValue("City", "Maitland");
-testRunner.testCase.testSuite.setPropertyValue("State", "FL");
-testRunner.testCase.testSuite.setPropertyValue("Postal", "32751");
-testRunner.testCase.testSuite.setPropertyValue("Country", "usa");
-testRunner.testCase.testSuite.setPropertyValue("ID", "1");
+
 
 log.info(DepartureDate)
-log.info(ModifyDate)
-log.info(ExpDate)</script>
+log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
   <con:properties/>

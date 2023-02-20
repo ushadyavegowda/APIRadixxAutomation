@@ -126,12 +126,16 @@ BasicHttpBinding_IConnectPoint_Profiles\ValidateProfile.xml
 BasicHttpBinding_IConnectPoint_CheckIn\BoardOffLoadPassengers.xml
 BasicHttpBinding_IConnectPoint_CheckIn\CheckIn.xml
 ConnectPointRegressionTestCases\Prequisite_Step.xml
+ConnectPointRegressionTestCases\LoginSteps_TA.xml
 ConnectPointRegressionTestCases\0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
-ConnectPointRegressionTestCases\0001_CP_Res_Create-OW-ADT-Pax-CASH-payment-2.xml
+ConnectPointRegressionTestCases\0002_CP_Res_ModifyOW-ADTPax-ReplaceFlight.xml
+ConnectPointRegressionTestCases\0003_CP_Res_Cancel-OW-ADTPax.xml
+ConnectPointRegressionTestCases\0004_CP_Res_Create-OW-ADT-Pax-VISA-payment.xml
+ConnectPointRegressionTestCases\0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment.xml
+ConnectPointRegressionTestCases\0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment.xml
 ConnectPointRegressionTestCases\0002_Create-OW--pnr-with-seat-and-ssr.xml
 ConnectPointRegressionTestCases\0003_Create-RT-PNR-without-seat-and-SSR.xml
 ConnectPointRegressionTestCases\0004_Create-RT-PNR-with-seat-and-SSR.xml
-ConnectPointRegressionTestCases\Test5_Modify-OW-pnr-to-another-date.xml
 ConnectPointRegressionTestCases\Test6_ModifyBooking-OW-pnr-to-add-passengers.xml
 ConnectPointRegressionTestCases\Test7_Modify-OW-pnr-to-add-flight-segments.xml
 ConnectPointRegressionTestCases\Test8_modify-Round-trip-pnr-to-diff-date---both-inbound-and-outbound.xml
@@ -140,7 +144,6 @@ ConnectPointRegressionTestCases\Test10_create-RT-pnr-with-multiple-passengers.xm
 ConnectPointRegressionTestCases\Test11_modify-RT-pnr-to-add-segment-for-multiple-passengers.xml
 ConnectPointRegressionTestCases\Test12_modify-RT-pnr---add-SSR.xml
 ConnectPointRegressionTestCases\Test13_modify-RT-PNR-multiple-passengers---add-seats-for-multiple-passengers.xml
-ConnectPointRegressionTestCases\Test14_Create-TA-booking.xml
 ConnectPointRegressionTestCases\Test15_Modify-TA-booking-to-another-date.xml
 ConnectPointRegressionTestCases\Test1_Create-a-OW-boking---ADT-passenger---CASH-payment.xml
 ConnectPointRegressionTestCases\Create-OW-pnr-withSSR.xml

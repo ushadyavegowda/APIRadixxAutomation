@@ -4,7 +4,7 @@
     <con:setting id="36d11e84-de53-43bb-84d3-7dc0d202d3d3fileName">Test15_Modify-TA-booking-to-another-date</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="a67dbc0c-93e3-49d7-92c9-f7f4898ae350" name="1. LoginTA" type="calltestcase">
+  <con:testStep id="a67dbc0c-93e3-49d7-92c9-f7f4898ae350" name="1. LoginTA" type="calltestcase" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>

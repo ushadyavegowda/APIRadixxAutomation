@@ -137,137 +137,137 @@ testRunner.testCase.setPropertyValue("p_Gender", "Male");</script>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:ModifyPNR>\r
-         <!--Optional:-->\r
-         <tem:ModifyPnrRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>?</rad:HistoricUserName>\r
-            <rad1:ActionType>AddPassengerToReservation</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber>${Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>\r
-            </rad1:ReservationInfo>\r
-            <rad1:FareInformationID>1</rad1:FareInformationID>\r
-            <rad1:LogicalFlightKeyToReplace>?</rad1:LogicalFlightKeyToReplace>\r
-            <rad1:LogicalFlightKeyToRemove>?</rad1:LogicalFlightKeyToRemove>\r
-            <rad1:PersonOrgIdentifierToRemove>-214</rad1:PersonOrgIdentifierToRemove>\r
-            <rad1:PassengersToAdd>\r
-               <!--Zero or more repetitions:-->\r
-               <rad1:ModifyPNR.Passenger>\r
-                  <rad1:PersonOrgID>-3</rad1:PersonOrgID>\r
-                  <rad1:FirstName>${#TestCase#p_FirstName}</rad1:FirstName>\r
-                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>\r
-                  <rad1:MiddleName>${#TestCase#p_MiddleName}</rad1:MiddleName>\r
-                  <rad1:Age>44</rad1:Age>\r
-                  <rad1:DOB>${#TestCase#p_DOB}</rad1:DOB>\r
-                  <rad1:Gender>Female</rad1:Gender>\r
-                  <rad1:Title>Miss</rad1:Title>\r
-                  <rad1:NationalityLaguageID>1</rad1:NationalityLaguageID>\r
-                  <rad1:RelationType>Daughter</rad1:RelationType>\r
-                  <rad1:WBCID>-214</rad1:WBCID>\r
-                  <rad1:PTCID>1</rad1:PTCID>\r
-                  <rad1:PTC>${Run Test Case#p_PTC}</rad1:PTC>\r
-                  <rad1:UseInventory>true</rad1:UseInventory>\r
-                  <rad1:Address>\r
-                     <rad1:Address1>6310 Hazeltine National Dr</rad1:Address1>\r
-                     <rad1:Address2>Suite 100</rad1:Address2>\r
-                     <rad1:City>Orlando</rad1:City>\r
-                     <rad1:State>FL</rad1:State>\r
-                     <rad1:Postal>32822</rad1:Postal>\r
-                     <rad1:Country>US</rad1:Country>\r
-                     <rad1:CountryCode>1</rad1:CountryCode>\r
-                     <rad1:AreaCode>407</rad1:AreaCode>\r
-                     <rad1:PhoneNumber>1234567</rad1:PhoneNumber>\r
-                     <rad1:Display>Home</rad1:Display>\r
-                  </rad1:Address>\r
-                  <rad1:Company>Radixx</rad1:Company>\r
-                  <rad1:Comments xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:Passport>123456789</rad1:Passport>\r
-                  <rad1:Nationality>US</rad1:Nationality>\r
-                  <rad1:ProfileId>-2147483648</rad1:ProfileId>\r
-                  <rad1:ContactInfos>\r
-                     <rad1:ContactInfo>\r
-                        <rad1:ContactID>-214</rad1:ContactID>\r
-                        <rad1:PersonOrgID>-2</rad1:PersonOrgID>\r
-                        <rad1:ContactField>${#TestSuite#p_Email}</rad1:ContactField>\r
-                        <rad1:ContactType>Email</rad1:ContactType>\r
-                        <rad1:Extension>?</rad1:Extension>\r
-                        <rad1:CountryCode>?</rad1:CountryCode>\r
-                        <rad1:AreaCode>?</rad1:AreaCode>\r
-                        <rad1:PhoneNumber>?</rad1:PhoneNumber>\r
-                        <rad1:Display>?</rad1:Display>\r
-                        <rad1:PreferredContactMethod>false</rad1:PreferredContactMethod>\r
-                     </rad1:ContactInfo>\r
-                  </rad1:ContactInfos>\r
-                  <rad1:DropOffID>-2147483648</rad1:DropOffID>\r
-                  <rad1:PickUpID>-2147483648</rad1:PickUpID>\r
-                  <rad1:LapChildID>-2147483648</rad1:LapChildID>\r
-                  <rad1:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:SelecteeStatus>-214</rad1:SelecteeStatus>\r
-                  <rad1:StoreFrontID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:TravelsWithPersonOrgID>-2147483648</rad1:TravelsWithPersonOrgID>\r
-                  <rad1:RedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:KnownTravelerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:FlightInformations>\r
-                     <rad1:ModifyPNR.FlightInformation>\r
-                        <rad1:LogicalFlightID>${Run_Test1 Create OW booking without SSR and seat#LFID}</rad1:LogicalFlightID>\r
-                        <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>\r
-                        <rad1:FareInformationID>${Run_Test1 Create OW booking without SSR and seat#fareid}</rad1:FareInformationID>\r
-                        <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                        <rad1:CRSCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                     </rad1:ModifyPNR.FlightInformation>\r
-                  </rad1:FlightInformations>\r
-               </rad1:ModifyPNR.Passenger>\r
-            </rad1:PassengersToAdd>\r
-            <rad1:PassengersToUpdate>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:PassengersToUpdate>\r
-            <rad1:SpecialServices>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:SpecialServices>\r
-            <rad1:SpecialServicesToCancel>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:SpecialServicesToCancel>\r
-            <rad1:ContactInformationToAdd>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:ContactInformationToAdd>\r
-            <rad1:ContactInformationToUpdate>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:ContactInformationToUpdate>\r
-            <rad1:CommentToAdd>\r
-               <rad1:CommentID>-214</rad1:CommentID>\r
-               <rad1:Comment>Modify by adding passenger Test</rad1:Comment>\r
-            </rad1:CommentToAdd>\r
-            <!--Optional:-->\r
-            <rad1:EmergencyContactsToAddToSegments>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:EmergencyContactsToAddToSegments>\r
-            <!--Optional:-->\r
-            <rad1:PassengerSegmentsToUpdateRecordLocator>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:PassengerSegmentsToUpdateRecordLocator>\r
-            <!--Optional:-->\r
-            <rad1:UpdateTravelsWithPassenger>\r
-               <!--Zero or more repetitions:-->\r
-            </rad1:UpdateTravelsWithPassenger>\r
-            <rad1:IsFlightDisruptionModify>false</rad1:IsFlightDisruptionModify>\r
-            <!--Optional:-->\r
-         </tem:ModifyPnrRequest>\r
-      </tem:ModifyPNR>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ModifyPNR>
+         <!--Optional:-->
+         <tem:ModifyPnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:ActionType>AddPassengerToReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <rad1:FareInformationID>1</rad1:FareInformationID>
+            <rad1:LogicalFlightKeyToReplace>?</rad1:LogicalFlightKeyToReplace>
+            <rad1:LogicalFlightKeyToRemove>?</rad1:LogicalFlightKeyToRemove>
+            <rad1:PersonOrgIdentifierToRemove>-214</rad1:PersonOrgIdentifierToRemove>
+            <rad1:PassengersToAdd>
+               <!--Zero or more repetitions:-->
+               <rad1:ModifyPNR.Passenger>
+                  <rad1:PersonOrgID>-3</rad1:PersonOrgID>
+                  <rad1:FirstName>${#TestCase#p_FirstName}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleName}</rad1:MiddleName>
+                  <rad1:Age>44</rad1:Age>
+                  <rad1:DOB>${#TestCase#p_DOB}</rad1:DOB>
+                  <rad1:Gender>Female</rad1:Gender>
+                  <rad1:Title>Miss</rad1:Title>
+                  <rad1:NationalityLaguageID>1</rad1:NationalityLaguageID>
+                  <rad1:RelationType>Daughter</rad1:RelationType>
+                  <rad1:WBCID>-214</rad1:WBCID>
+                  <rad1:PTCID>1</rad1:PTCID>
+                  <rad1:PTC>${Run Test Case#p_PTC}</rad1:PTC>
+                  <rad1:UseInventory>true</rad1:UseInventory>
+                  <rad1:Address>
+                     <rad1:Address1>6310 Hazeltine National Dr</rad1:Address1>
+                     <rad1:Address2>Suite 100</rad1:Address2>
+                     <rad1:City>Orlando</rad1:City>
+                     <rad1:State>FL</rad1:State>
+                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Country>US</rad1:Country>
+                     <rad1:CountryCode>1</rad1:CountryCode>
+                     <rad1:AreaCode>407</rad1:AreaCode>
+                     <rad1:PhoneNumber>1234567</rad1:PhoneNumber>
+                     <rad1:Display>Home</rad1:Display>
+                  </rad1:Address>
+                  <rad1:Company>Radixx</rad1:Company>
+                  <rad1:Comments xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:Passport>123456789</rad1:Passport>
+                  <rad1:Nationality>US</rad1:Nationality>
+                  <rad1:ProfileId>-2147483648</rad1:ProfileId>
+                  <rad1:ContactInfos>
+                     <rad1:ContactInfo>
+                        <rad1:ContactID>-214</rad1:ContactID>
+                        <rad1:PersonOrgID>-2</rad1:PersonOrgID>
+                        <rad1:ContactField>${#TestSuite#p_Email}</rad1:ContactField>
+                        <rad1:ContactType>Email</rad1:ContactType>
+                        <rad1:Extension>?</rad1:Extension>
+                        <rad1:CountryCode>?</rad1:CountryCode>
+                        <rad1:AreaCode>?</rad1:AreaCode>
+                        <rad1:PhoneNumber>?</rad1:PhoneNumber>
+                        <rad1:Display>?</rad1:Display>
+                        <rad1:PreferredContactMethod>false</rad1:PreferredContactMethod>
+                     </rad1:ContactInfo>
+                  </rad1:ContactInfos>
+                  <rad1:DropOffID>-2147483648</rad1:DropOffID>
+                  <rad1:PickUpID>-2147483648</rad1:PickUpID>
+                  <rad1:LapChildID>-2147483648</rad1:LapChildID>
+                  <rad1:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:SelecteeStatus>-214</rad1:SelecteeStatus>
+                  <rad1:StoreFrontID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:TravelsWithPersonOrgID>-2147483648</rad1:TravelsWithPersonOrgID>
+                  <rad1:RedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:KnownTravelerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:FlightInformations>
+                     <rad1:ModifyPNR.FlightInformation>
+                        <rad1:LogicalFlightID>${Run_Test1 Create OW booking without SSR and seat#LFID}</rad1:LogicalFlightID>
+                        <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
+                        <rad1:FareInformationID>${Run_Test1 Create OW booking without SSR and seat#fareid}</rad1:FareInformationID>
+                        <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        <rad1:CRSCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     </rad1:ModifyPNR.FlightInformation>
+                  </rad1:FlightInformations>
+               </rad1:ModifyPNR.Passenger>
+            </rad1:PassengersToAdd>
+            <rad1:PassengersToUpdate>
+               <!--Zero or more repetitions:-->
+            </rad1:PassengersToUpdate>
+            <rad1:SpecialServices>
+               <!--Zero or more repetitions:-->
+            </rad1:SpecialServices>
+            <rad1:SpecialServicesToCancel>
+               <!--Zero or more repetitions:-->
+            </rad1:SpecialServicesToCancel>
+            <rad1:ContactInformationToAdd>
+               <!--Zero or more repetitions:-->
+            </rad1:ContactInformationToAdd>
+            <rad1:ContactInformationToUpdate>
+               <!--Zero or more repetitions:-->
+            </rad1:ContactInformationToUpdate>
+            <rad1:CommentToAdd>
+               <rad1:CommentID>-214</rad1:CommentID>
+               <rad1:Comment>Modify by adding passenger Test</rad1:Comment>
+            </rad1:CommentToAdd>
+            <!--Optional:-->
+            <rad1:EmergencyContactsToAddToSegments>
+               <!--Zero or more repetitions:-->
+            </rad1:EmergencyContactsToAddToSegments>
+            <!--Optional:-->
+            <rad1:PassengerSegmentsToUpdateRecordLocator>
+               <!--Zero or more repetitions:-->
+            </rad1:PassengerSegmentsToUpdateRecordLocator>
+            <!--Optional:-->
+            <rad1:UpdateTravelsWithPassenger>
+               <!--Zero or more repetitions:-->
+            </rad1:UpdateTravelsWithPassenger>
+            <rad1:IsFlightDisruptionModify>false</rad1:IsFlightDisruptionModify>
+            <!--Optional:-->
+         </tem:ModifyPnrRequest>
+      </tem:ModifyPNR>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>

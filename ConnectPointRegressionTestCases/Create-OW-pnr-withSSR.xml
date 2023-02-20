@@ -1653,7 +1653,81 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="6db3b7e8-4b36-4ce2-aad6-9a06a24c9000" name="Transfer SSR details" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+        <con:name>s_ServiceID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]}</con:sourcePath>
+        <con:targetType>s_ServiceID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_SSRCategory</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]}</con:sourcePath>
+        <con:targetType>s_SSRCategory</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_Amount</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]}</con:sourcePath>
+        <con:targetType>s_Amount</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ServiceCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]}</con:sourcePath>
+        <con:targetType>ServiceCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+        <con:name>s_ServiceID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]}</con:sourcePath>
+        <con:targetType>s_ServiceID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_SSRCategory</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]}</con:sourcePath>
+        <con:targetType>s_SSRCategory</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_Amount</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]}</con:sourcePath>
+        <con:targetType>s_Amount</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ServiceCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]}</con:sourcePath>
+        <con:targetType>ServiceCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>

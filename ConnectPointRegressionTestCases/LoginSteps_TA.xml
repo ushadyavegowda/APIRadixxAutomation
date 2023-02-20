@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="809a7889-dd40-418b-b477-10592e534550" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="LoginSteps_TA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="809a7889-dd40-418b-b477-10592e534550fileName">LoginSteps_TA</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="1.SecurityToken_inputData" id="8dbb8e2a-3752-4927-8fb5-4794c2d824a8">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="e5ea41ca-c941-434a-aa06-7dbd4b6b4a48" name="2 LoginTravelAgent">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_TravelAgents</con:interface>
+      <con:operation>LoginTravelAgent</con:operation>
+      <con:request name="2 LoginTravelAgent" id="25076ffc-2712-4dce-8830-d6752a6c2abe">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:LoginTravelAgent>
+         <!--Optional:-->
+         <tem:LoginTravelAgentRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode><rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode></rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:IATANumber>${#TestSuite#IATANumber}</rad1:IATANumber>
+            <rad1:UserName>${#Project#TA_UserName}</rad1:UserName>
+            <rad1:Password>${#Project#TA_password}</rad1:Password>
+         </tem:LoginTravelAgentRequest>
+      </tem:LoginTravelAgent>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="af528474-2a3c-4e80-a0b1-85e5f1a0e045" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="2545e7e7-ec9f-4244-b3d4-f286f50ccda4" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="0b1bee43-a152-4532-aac1-ff5426fd22d5" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_TravelAgents/LoginTravelAgent" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="027adf41-e46e-45cb-a0d6-bb309750b8b4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="4fd815c9-f8f3-4eab-b438-b17de1b5ccd9" name="3 RetrieveAgencyCommission">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_TravelAgents</con:interface>
+      <con:operation>RetrieveAgencyCommission</con:operation>
+      <con:request name="3 RetrieveAgencyCommission" id="46fa6265-234f-42b9-af8d-f67634fdaf8f">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveAgencyCommission>
+         <!--Optional:-->
+         <tem:RetrieveAgencyCommissionRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:CurrencyCode>${#TestSuite#currency}</rad1:CurrencyCode>
+         </tem:RetrieveAgencyCommissionRequest>
+      </tem:RetrieveAgencyCommission>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="80473a34-dcb0-4bf0-8a45-167fb419e38a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="7c76e3e4-af9d-4884-8567-dfc8eecc0bae" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="5c9d2a14-a2e6-4d1f-8e21-7dac9e775aca" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyCommission" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="027adf41-e46e-45cb-a0d6-bb309750b8b4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>12cc317a-e37f-4d16-ad71-c2283021c86c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="027adf41-e46e-45cb-a0d6-bb309750b8b4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -55,7 +55,7 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="2584f21b-a559-4c28-9181-3088760588e5" name="Run [RetrieveSecurityToken]" type="calltestcase">
+  <con:testStep id="2584f21b-a559-4c28-9181-3088760588e5" name="Run [RetrieveSecurityToken]" type="calltestcase" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>d61b0359-0047-44f9-ace3-0959b9cd799b</con:targetTestCase>

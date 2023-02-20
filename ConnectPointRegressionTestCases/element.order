@@ -1,10 +1,14 @@
 Prequisite_Step.xml
+LoginSteps_TA.xml
 0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
-0001_CP_Res_Create-OW-ADT-Pax-CASH-payment-2.xml
+0002_CP_Res_ModifyOW-ADTPax-ReplaceFlight.xml
+0003_CP_Res_Cancel-OW-ADTPax.xml
+0004_CP_Res_Create-OW-ADT-Pax-VISA-payment.xml
+0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment.xml
+0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment.xml
 0002_Create-OW--pnr-with-seat-and-ssr.xml
 0003_Create-RT-PNR-without-seat-and-SSR.xml
 0004_Create-RT-PNR-with-seat-and-SSR.xml
-Test5_Modify-OW-pnr-to-another-date.xml
 Test6_ModifyBooking-OW-pnr-to-add-passengers.xml
 Test7_Modify-OW-pnr-to-add-flight-segments.xml
 Test8_modify-Round-trip-pnr-to-diff-date---both-inbound-and-outbound.xml
@@ -13,7 +17,6 @@ Test10_create-RT-pnr-with-multiple-passengers.xml
 Test11_modify-RT-pnr-to-add-segment-for-multiple-passengers.xml
 Test12_modify-RT-pnr---add-SSR.xml
 Test13_modify-RT-PNR-multiple-passengers---add-seats-for-multiple-passengers.xml
-Test14_Create-TA-booking.xml
 Test15_Modify-TA-booking-to-another-date.xml
 Test1_Create-a-OW-boking---ADT-passenger---CASH-payment.xml
 Create-OW-pnr-withSSR.xml

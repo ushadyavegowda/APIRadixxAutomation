@@ -24,100 +24,100 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Pricing.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:RetrieveFareQuote>\r
-         <!--Optional:-->\r
-         <tem:RetrieveFareQuoteRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <rad1:CurrencyOfFareQuote>${#TestSuite#currency}</rad1:CurrencyOfFareQuote>\r
-            <rad1:PromotionalCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <rad1:IataNumberOfRequestor xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <rad1:CorporationID>0</rad1:CorporationID>\r
-            <rad1:FareFilterMethod>NoCombinabilityAllFares</rad1:FareFilterMethod>\r
-            <rad1:FareGroupMethod>FareClassFareBasis</rad1:FareGroupMethod>\r
-            <rad1:InventoryFilterMethod>All</rad1:InventoryFilterMethod>\r
-            <rad1:FareQuoteDetails>\r
-               <!--Zero or more repetitions:-->\r
-               <rad1:FareQuoteDetail>\r
-                  <rad1:Origin>${#TestSuite#Origin}</rad1:Origin>\r
-                  <rad1:Destination>${#TestSuite#Destination}</rad1:Destination>\r
-                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>\r
-                  <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>\r
-                  <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>\r
-                  <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>\r
-                  <rad1:DateOfDeparture>${#TestSuite#DepartureDate}</rad1:DateOfDeparture>\r
-                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>\r
-                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:LFID>-1</rad1:LFID>\r
-                  <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>\r
-                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>\r
-                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>\r
-                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>\r
-                  <rad1:LanguageCode>en</rad1:LanguageCode>\r
-                  <rad1:TicketPackageID>${empty}</rad1:TicketPackageID>\r
-                  <rad1:FareQuoteRequestInfos>\r
-                     <rad1:FareQuoteRequestInfo>\r
-                        <rad1:PassengerTypeID>1</rad1:PassengerTypeID>\r
-                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>\r
-                     </rad1:FareQuoteRequestInfo>\r
-                  </rad1:FareQuoteRequestInfos>\r
-               </rad1:FareQuoteDetail>\r
-               <rad1:FareQuoteDetail>\r
-                  <rad1:Origin>${#TestSuite#Destination}</rad1:Origin>\r
-                  <rad1:Destination>${#TestSuite#Origin}</rad1:Destination>\r
-                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>\r
-                  <!--Optional:-->\r
-                  <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>\r
-                  <!--Optional:-->\r
-                  <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>\r
-                  <!--Optional:-->\r
-                  <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>\r
-                  <rad1:DateOfDeparture>${#TestSuite#ReturnDate}</rad1:DateOfDeparture>\r
-                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>\r
-                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-                  <rad1:LFID>-1</rad1:LFID>\r
-                  <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>\r
-                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>\r
-                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>\r
-                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>\r
-                  <rad1:LanguageCode>en</rad1:LanguageCode>\r
-                  <rad1:TicketPackageID>${empty}</rad1:TicketPackageID>\r
-                  <rad1:FareQuoteRequestInfos>\r
-                     <!--Zero or more repetitions:-->\r
-                     <rad1:FareQuoteRequestInfo>\r
-                        <rad1:PassengerTypeID>1</rad1:PassengerTypeID>\r
-                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>\r
-                     </rad1:FareQuoteRequestInfo>\r
-                  </rad1:FareQuoteRequestInfos>\r
-                  <!--Optional:-->\r
-                  <!--Optional:-->\r
-                  <rad1:FareTypeCategories>\r
-                     <!--Zero or more repetitions:-->\r
-                     <arr:int>1</arr:int>\r
-                  </rad1:FareTypeCategories>\r
-               </rad1:FareQuoteDetail>\r
-            </rad1:FareQuoteDetails>\r
-            <!--Optional:-->\r
-            <rad1:ProfileId>0</rad1:ProfileId>\r
-         </tem:RetrieveFareQuoteRequest>\r
-      </tem:RetrieveFareQuote>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveFareQuote>
+         <!--Optional:-->
+         <tem:RetrieveFareQuoteRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:CurrencyOfFareQuote>${#TestSuite#currency}</rad1:CurrencyOfFareQuote>
+            <rad1:PromotionalCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:IataNumberOfRequestor xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:CorporationID>0</rad1:CorporationID>
+            <rad1:FareFilterMethod>NoCombinabilityAllFares</rad1:FareFilterMethod>
+            <rad1:FareGroupMethod>FareClassFareBasis</rad1:FareGroupMethod>
+            <rad1:InventoryFilterMethod>All</rad1:InventoryFilterMethod>
+            <rad1:FareQuoteDetails>
+               <!--Zero or more repetitions:-->
+               <rad1:FareQuoteDetail>
+                  <rad1:Origin>${#TestSuite#Origin}</rad1:Origin>
+                  <rad1:Destination>${#TestSuite#Destination}</rad1:Destination>
+                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
+                  <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
+                  <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
+                  <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
+                  <rad1:DateOfDeparture>${#TestSuite#DepartureDate}</rad1:DateOfDeparture>
+                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
+                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:LFID>-1</rad1:LFID>
+                  <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>
+                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>
+                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>
+                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>
+                  <rad1:LanguageCode>en</rad1:LanguageCode>
+                  <rad1:TicketPackageID>${empty}</rad1:TicketPackageID>
+                  <rad1:FareQuoteRequestInfos>
+                     <rad1:FareQuoteRequestInfo>
+                        <rad1:PassengerTypeID>1</rad1:PassengerTypeID>
+                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>
+                     </rad1:FareQuoteRequestInfo>
+                  </rad1:FareQuoteRequestInfos>
+               </rad1:FareQuoteDetail>
+               <rad1:FareQuoteDetail>
+                  <rad1:Origin>${#TestSuite#Destination}</rad1:Origin>
+                  <rad1:Destination>${#TestSuite#Origin}</rad1:Destination>
+                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
+                  <rad1:DateOfDeparture>${#TestSuite#ReturnDate}</rad1:DateOfDeparture>
+                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
+                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:LFID>-1</rad1:LFID>
+                  <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>
+                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>
+                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>
+                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>
+                  <rad1:LanguageCode>en</rad1:LanguageCode>
+                  <rad1:TicketPackageID>${empty}</rad1:TicketPackageID>
+                  <rad1:FareQuoteRequestInfos>
+                     <!--Zero or more repetitions:-->
+                     <rad1:FareQuoteRequestInfo>
+                        <rad1:PassengerTypeID>1</rad1:PassengerTypeID>
+                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>
+                     </rad1:FareQuoteRequestInfo>
+                  </rad1:FareQuoteRequestInfos>
+                  <!--Optional:-->
+                  <!--Optional:-->
+                  <rad1:FareTypeCategories>
+                     <!--Zero or more repetitions:-->
+                     <arr:int>1</arr:int>
+                  </rad1:FareTypeCategories>
+               </rad1:FareQuoteDetail>
+            </rad1:FareQuoteDetails>
+            <!--Optional:-->
+            <rad1:ProfileId>0</rad1:ProfileId>
+         </tem:RetrieveFareQuoteRequest>
+      </tem:RetrieveFareQuote>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="c1f8f955-ad53-4d9f-aece-902a9e63b8af" type="SOAP Response"/>
         <con:assertion id="c92c3915-fe4a-4433-9401-58ef95ba0671" name="Check for existence of [a:FareID]" type="XPath Match">
@@ -329,126 +329,126 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">\r
-   <s:Body>\r
-      <SummaryPNR xmlns="http://tempuri.org/">\r
-         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r
-            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>\r
-            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <CarrierCode>\r
-                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>\r
-               </CarrierCode>\r
-            </CarrierCodes>\r
-            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>\r
-            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">radixx</HistoricUserName>\r
-            <a:ActionType>GetSummary</a:ActionType>\r
-            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <b:SeriesNumber>299</b:SeriesNumber>\r
-               <b:ConfirmationNumber i:nil="true"/>\r
-            </a:ReservationInfo>\r
-            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>\r
-            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>\r
-            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>\r
-            <a:IATANum i:nil="true"/>\r
-            <a:User i:nil="true"/>\r
-            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>\r
-            <a:PromoCode>-2147483648</a:PromoCode>\r
-            <a:ExternalBookingID i:nil="true"/>\r
-            <a:Address>\r
-               <a:Address1 i:nil="true"/>\r
-               <a:Address2 i:nil="true"/>\r
-               <a:City i:nil="true"/>\r
-               <a:State>N</a:State>\r
-               <a:Postal i:nil="true"/>\r
-               <a:Country>0</a:Country>\r
-               <a:CountryCode i:nil="true"/>\r
-               <a:AreaCode i:nil="true"/>\r
-               <a:PhoneNumber>+46701497931</a:PhoneNumber>\r
-               <a:Display i:nil="true"/>\r
-            </a:Address>\r
-            <a:ContactInfos i:nil="true"/>\r
-            <a:Passengers>\r
-               <a:Person>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>44</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>Female</a:Gender>\r
-                  <a:Title i:nil="true"/>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483648</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>1</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true"/>\r
-                  <a:KnownTravelerNumber i:nil="true"/>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true"/>\r
-                     <a:Address2 i:nil="true"/>\r
-                     <a:City i:nil="true"/>\r
-                     <a:State i:nil="true"/>\r
-                     <a:Postal i:nil="true"/>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true"/>\r
-                     <a:AreaCode i:nil="true"/>\r
-                     <a:PhoneNumber i:nil="true"/>\r
-                     <a:Display i:nil="true"/>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true"/>\r
-                  <a:Comments i:nil="true"/>\r
-                  <a:Passport i:nil="true"/>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-2147483648</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos>\r
-                     <a:ContactInfo>\r
-                        <a:ContactID>-2147483648</a:ContactID>\r
-                        <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                        <a:ContactField>+46701497931</a:ContactField>\r
-                        <a:ContactType>HomePhone</a:ContactType>\r
-                        <a:Extension i:nil="true"/>\r
-                        <a:CountryCode i:nil="true"/>\r
-                        <a:AreaCode i:nil="true"/>\r
-                        <a:PhoneNumber i:nil="true"/>\r
-                        <a:Display i:nil="true"/>\r
-                        <a:PreferredContactMethod>true</a:PreferredContactMethod>\r
-                     </a:ContactInfo>\r
-                  </a:ContactInfos>\r
-                  <a:FrequentFlyerNumber i:nil="true"/>\r
-                  <a:Suffix i:nil="true"/>\r
-               </a:Person>\r
-            </a:Passengers>\r
-            <a:Segments>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-               </a:Segment>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-386566648</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#fareid_returnSeg}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:RecordLocator i:nil="true"/>\r
-                  <a:SpecialServices i:nil="true"/>\r
-                  <a:Seats i:nil="true"/>\r
-                  <a:CRSCode i:nil="true"/>\r
-               </a:Segment>\r
-            </a:Segments>\r
-            <a:Payments i:nil="true"/>\r
-            <a:Comment i:nil="true"/>\r
-            <a:ReferralID i:nil="true"/>\r
-         </SummaryPnrRequest>\r
-      </SummaryPNR>\r
-   </s:Body>\r
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <SummaryPNR xmlns="http://tempuri.org/">
+         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>
+            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <CarrierCode>
+                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>
+               </CarrierCode>
+            </CarrierCodes>
+            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>
+            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">radixx</HistoricUserName>
+            <a:ActionType>GetSummary</a:ActionType>
+            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <b:SeriesNumber>299</b:SeriesNumber>
+               <b:ConfirmationNumber i:nil="true"/>
+            </a:ReservationInfo>
+            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>
+            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>
+            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>
+            <a:IATANum i:nil="true"/>
+            <a:User i:nil="true"/>
+            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>
+            <a:PromoCode>-2147483648</a:PromoCode>
+            <a:ExternalBookingID i:nil="true"/>
+            <a:Address>
+               <a:Address1 i:nil="true"/>
+               <a:Address2 i:nil="true"/>
+               <a:City i:nil="true"/>
+               <a:State>N</a:State>
+               <a:Postal i:nil="true"/>
+               <a:Country>0</a:Country>
+               <a:CountryCode i:nil="true"/>
+               <a:AreaCode i:nil="true"/>
+               <a:PhoneNumber>+46701497931</a:PhoneNumber>
+               <a:Display i:nil="true"/>
+            </a:Address>
+            <a:ContactInfos i:nil="true"/>
+            <a:Passengers>
+               <a:Person>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>44</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>Female</a:Gender>
+                  <a:Title i:nil="true"/>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483648</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>1</a:PTC>
+                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
+                  </a:Address>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-2147483648</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos>
+                     <a:ContactInfo>
+                        <a:ContactID>-2147483648</a:ContactID>
+                        <a:PersonOrgID>-386566648</a:PersonOrgID>
+                        <a:ContactField>+46701497931</a:ContactField>
+                        <a:ContactType>HomePhone</a:ContactType>
+                        <a:Extension i:nil="true"/>
+                        <a:CountryCode i:nil="true"/>
+                        <a:AreaCode i:nil="true"/>
+                        <a:PhoneNumber i:nil="true"/>
+                        <a:Display i:nil="true"/>
+                        <a:PreferredContactMethod>true</a:PreferredContactMethod>
+                     </a:ContactInfo>
+                  </a:ContactInfos>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
+               </a:Person>
+            </a:Passengers>
+            <a:Segments>
+               <a:Segment>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+               </a:Segment>
+               <a:Segment>
+                  <a:PersonOrgID>-386566648</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#fareid_returnSeg}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:RecordLocator i:nil="true"/>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+                  <a:CRSCode i:nil="true"/>
+               </a:Segment>
+            </a:Segments>
+            <a:Payments i:nil="true"/>
+            <a:Comment i:nil="true"/>
+            <a:ReferralID i:nil="true"/>
+         </SummaryPnrRequest>
+      </SummaryPNR>
+   </s:Body>
 </s:Envelope>]]></con:request>
         <con:assertion id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match" type="XPath Match">

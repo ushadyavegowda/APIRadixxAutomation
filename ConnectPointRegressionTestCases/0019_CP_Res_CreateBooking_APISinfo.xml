@@ -1746,7 +1746,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>357.00</con:value>
+      <con:value>348.50</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -1754,11 +1754,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>357.00</con:value>
+      <con:value>348.50</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>WQEVMI</con:value>
+      <con:value>XZSDTT</con:value>
     </con:property>
     <con:property>
       <con:name>RecordNumber</con:name>
@@ -1766,11 +1766,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>95803</con:value>
+      <con:value>103867</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNum</con:name>
-      <con:value>913</con:value>
+      <con:value>699</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

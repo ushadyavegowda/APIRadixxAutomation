@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="091f37f8-c93e-4393-8ee6-0904ac566d29" keepSession="false" name="0009_CP_Res_Modify-AddServicebundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="091f37f8-c93e-4393-8ee6-0904ac566d29fileName">0009_CP_Res_Modify-AddServicebundle</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="1. Login" id="4a2eea2f-f97e-4d4f-aff7-0f408aad9ccb" disabled="true">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="1. Run 0009_CP_res_modify Add passenger Test case" id="f49d0798-fa4e-446d-bc03-ee4adeb55b8e">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>75188f55-f076-43f5-b391-3dd60d793fdc</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>securityToken</con:name>
+          <con:value>61ca84bapc2cx3ba6009t4eb649da9e912c4c8c08a7f</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>36635</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ModifyDate</con:name>
+          <con:value>2021-08-27</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+          <con:value>AWIYOPTWO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+          <con:value>LRUVUVTWO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+          <con:value>LRUVUVTWOT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_DOB</con:name>
+          <con:value>1998-02-21</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_Gender</con:name>
+          <con:value>Male</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName1</con:name>
+          <con:value>RadixxTwo</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName2</con:name>
+          <con:value>TesteTwor</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName3</con:name>
+          <con:value>Automation</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_Age</con:name>
+          <con:value>25</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PersonOrgID</con:name>
+          <con:value>-3</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Address1</con:name>
+          <con:value>123 Elm Street</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Address2</con:name>
+          <con:value>Suite 150</con:value>
+        </con:property>
+        <con:property>
+          <con:name>City</con:name>
+          <con:value>32822</con:value>
+        </con:property>
+        <con:property>
+          <con:name>State</con:name>
+          <con:value>FL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Postal</con:name>
+          <con:value>32751</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Country</con:name>
+          <con:value>USA</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CountryCode</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>AreaCode</con:name>
+          <con:value>407</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PhoneNumber</con:name>
+          <con:value>1234567</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Display</con:name>
+          <con:value>Home</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ID</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CommentID</con:name>
+          <con:value>-214</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Company</con:name>
+          <con:value>Radixx</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Passport</con:name>
+          <con:value>52958485</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Nationality</con:name>
+          <con:value>US</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Balance</con:name>
+          <con:value>1629</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PNR</con:name>
+          <con:value>J4QV5N</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>securityToken</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>ModifyDate</con:entry>
+        <con:entry>p_FirstName</con:entry>
+        <con:entry>p_LastName</con:entry>
+        <con:entry>p_MiddleName</con:entry>
+        <con:entry>p_DOB</con:entry>
+        <con:entry>p_Gender</con:entry>
+        <con:entry>p_FirstName1</con:entry>
+        <con:entry>p_LastName2</con:entry>
+        <con:entry>p_MiddleName3</con:entry>
+        <con:entry>p_Age</con:entry>
+        <con:entry>PersonOrgID</con:entry>
+        <con:entry>Address1</con:entry>
+        <con:entry>Address2</con:entry>
+        <con:entry>City</con:entry>
+        <con:entry>State</con:entry>
+        <con:entry>Postal</con:entry>
+        <con:entry>Country</con:entry>
+        <con:entry>CountryCode</con:entry>
+        <con:entry>AreaCode</con:entry>
+        <con:entry>PhoneNumber</con:entry>
+        <con:entry>Display</con:entry>
+        <con:entry>ID</con:entry>
+        <con:entry>CommentID</con:entry>
+        <con:entry>Company</con:entry>
+        <con:entry>Passport</con:entry>
+        <con:entry>Nationality</con:entry>
+        <con:entry>Balance</con:entry>
+        <con:entry>PNR</con:entry>
+      </con:returnProperties>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="65ac91d5-6a6f-4121-aec4-6ccbece05b5e" name="2. RetrivePNR" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>RetrievePNR</con:operation>
+      <con:request id="4d262156-e890-40d5-96f3-6bb863343380" name="2. RetrivePNR">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrievePNR>
+         <!--Optional:-->
+         <tem:RetrievePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ActionType>GetReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${1. Run 0009_CP_res_modify Add passenger Test case#PNR}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+         </tem:RetrievePnrRequest>
+      </tem:RetrievePNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="f856b47b-72c9-4d02-8372-1c10ce969f0b" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="5bcdc6a3-3aae-4041-90e1-830e8573f9e9" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="0ca8f7e8-31f3-4e86-b115-80c103c4570d" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="69271050-612d-429f-a7b2-79cd1e38e550" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="66fbc361-a3b7-436d-9d49-e928cda2115f" name="Property Transfer" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>PersonOrgID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrivePNR</con:sourceStep>
+        <con:sourcePath>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:PersonOrgID[1]}</con:sourcePath>
+        <con:targetType>PersonOrgID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>PhysicalFlightID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrivePNR</con:sourceStep>
+        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace ns1='http://tempuri.org/';
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[a:Origin = '${#TestSuite#Origin}']/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
+        <con:targetType>PhysicalFlightID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>LFID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrivePNR</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:LogicalFlightID[1]</con:sourcePath>
+        <con:targetType>LFID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="f3bb69cd-c5b6-421c-b835-7e77e0b3666c" name="3 RetrieveAARQuote" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
+      <con:operation>RetrieveAARQuote</con:operation>
+      <con:request id="54501837-f6a9-4255-9cde-5dcda727641b" name="3 RetrieveAARQuote">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveAARQuote>
+         <!--Optional:-->
+         <tem:RetrieveAARQuoteRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#CarrierCode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:AARQuotes>
+               <!--Zero or more repetitions:-->
+               <rad1:AARQuote>
+                  <rad1:AARRequestPtcs>
+                     <!--Zero or more repetitions:-->
+                     <rad1:AARRequestPtc>
+                        <rad1:PassengerTypeID>1</rad1:PassengerTypeID>
+                        <rad1:Quantity>1</rad1:Quantity>
+                     </rad1:AARRequestPtc>
+                  </rad1:AARRequestPtcs>
+                  <rad1:AirportCode>${#TestSuite#Origin}</rad1:AirportCode>
+                  <!--Optional:-->
+                  <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <!--Optional:-->
+                  <rad1:Category xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:Currency>${#TestSuite#currency}</rad1:Currency>
+                  <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
+                  <rad1:DestinationAirportCode>${#TestSuite#Destination}</rad1:DestinationAirportCode>
+                  <!--Optional:-->
+                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <!--Optional:-->
+                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:LogicalFlightID>${#TestCase#LFID}</rad1:LogicalFlightID>
+                  <!--Optional:-->
+                  <rad1:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <!--Optional:-->
+                  <rad1:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <!--Optional:-->
+                  <rad1:ServiceCode>${#TestSuite#ServiceCode}</rad1:ServiceCode>
+                  <!--Optional:-->
+                  <rad1:ServiceTypes>
+                     <!--Zero or more repetitions:-->
+                     
+                  </rad1:ServiceTypes>
+                  <!--Optional:-->
+               </rad1:AARQuote>
+            </rad1:AARQuotes>
+            <!--Optional:-->
+            <rad1:IsRoundTrip>false</rad1:IsRoundTrip>
+            <!--Optional:-->
+            <rad1:PricingEvent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+         </tem:RetrieveAARQuoteRequest>
+      </tem:RetrieveAARQuote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="c3473c48-719c-49f1-8a18-232638cc5c1d" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="55e7de09-b919-4aed-a6e4-da3e0aaf0029" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>1500</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="d10548f7-5529-4dbd-ba2d-b1af1fbd7ac7" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="4a47412e-b6d5-473a-84af-df1ae8677116" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="3677fb3c-a655-4d18-a3e1-b5a43676bbdd" name="Transfer SSR Info" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_ServiceID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]</con:sourcePath>
+        <con:targetType>s_ServiceID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_SSRCategory</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]</con:sourcePath>
+        <con:targetType>s_SSRCategory</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_Amount</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]</con:sourcePath>
+        <con:targetType>s_Amount</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ServiceCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]</con:sourcePath>
+        <con:targetType>ServiceCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="95d73f1d-150a-41cb-8584-2833fef450ec" name="4 - RetrieveServiceBundleDetails">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
+      <con:operation>RetrieveServiceBundleDetails</con:operation>
+      <con:request name="4 - RetrieveServiceBundleDetails" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a69e7f49-39b0-49aa-baae-ca4a91681a3b">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://oicappint.radixxuat.com/oic/Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveServiceBundleDetails>
+         <!--Optional:-->
+         <tem:RetrieveServiceBundleRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#CarrierCode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <!--Optional:-->
+            <rad1:ServiceBundleCode>${#TestSuite#ServiceCode}</rad1:ServiceBundleCode>
+         </tem:RetrieveServiceBundleRequest>
+      </tem:RetrieveServiceBundleDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="69d955db-e0fe-4d6a-a1ad-ee0e52f0530d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="8fdb6c02-ce36-4c20-b43b-0156e5a28d98" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="99edc82f-e7ab-40b0-b6ae-bd8d0ef66956" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetails"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="89b616d7-3c9a-46b9-96e4-24d1bb46d503">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="737d0278-cc56-448f-a51b-f8521097282a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="16e0aa4f-59a9-4113-92e8-6b0970a296f2" name="5 ModifyPNR_Add SSR" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>ModifyPNR</con:operation>
+      <con:request id="291e0f31-a000-4516-a88f-1b14c2908bcc" name="5 ModifyPNR_Add SSR">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ModifyPNR>
+         <!--Optional:-->
+         <tem:ModifyPnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#CarrierCode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>${#TestSuite#UserName}</rad:HistoricUserName>
+            <rad1:ActionType>AddSpecialServiceToReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${1. Run 0009_CP_res_modify Add passenger Test case#PNR}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <rad1:FareInformationID>-215</rad1:FareInformationID>
+            <rad1:LogicalFlightKeyToReplace xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:LogicalFlightKeyToRemove xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:PersonOrgIdentifierToRemove>-214</rad1:PersonOrgIdentifierToRemove>
+            <rad1:PassengersToAdd xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:PassengersToUpdate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:SpecialServices>
+               <rad1:SpecialService>
+                  <rad1:CodeType>${#TestCase#ServiceCode}</rad1:CodeType>
+                  <rad1:ServiceID>${#TestCase#s_ServiceID}</rad1:ServiceID>
+                  <rad1:SSRCategory>${#TestCase#s_SSRCategory}</rad1:SSRCategory>
+                  <rad1:LogicalFlightID>${#TestCase#LFID}</rad1:LogicalFlightID>
+                  <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
+                  <rad1:Amount>${#TestCase#s_Amount}</rad1:Amount>
+                  <rad1:OverrideAmount>true</rad1:OverrideAmount>
+                  <rad1:CurrencyCode>${#TestSuite#currency}</rad1:CurrencyCode>
+                  <rad1:Commissionable>false</rad1:Commissionable>
+                  <rad1:Refundable>false</rad1:Refundable>
+                  <rad1:ChargeComment>${empty}</rad1:ChargeComment>
+                  <rad1:PersonOrgID>${#TestCase#PersonOrgID}</rad1:PersonOrgID>
+                  <rad1:PhysicalFlightID>${#TestCase#PhysicalFlightID}</rad1:PhysicalFlightID>
+                  <rad1:OverrideAmtReason>${empty}</rad1:OverrideAmtReason>
+                  <rad1:ExtPenaltyRule>${empty}</rad1:ExtPenaltyRule>
+                  <rad1:ExtIsRePriceFixed>${empty}</rad1:ExtIsRePriceFixed>
+                  <rad1:ExtRePriceSourceName>${empty}</rad1:ExtRePriceSourceName>
+                  <rad1:ExtRePriceValue>${empty}</rad1:ExtRePriceValue>
+                  <rad1:ExtRePriceValueReason>${empty}</rad1:ExtRePriceValueReason>
+                  <rad1:ServiceBundleCode>${empty}</rad1:ServiceBundleCode>
+               </rad1:SpecialService>
+            </rad1:SpecialServices>
+            <rad1:SpecialServicesToCancel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ContactInformationToAdd xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ContactInformationToUpdate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:CommentToAdd>
+               <rad1:CommentID>0</rad1:CommentID>
+               <rad1:Comment>ADD SSR</rad1:Comment>
+            </rad1:CommentToAdd>
+            <rad1:IsFlightDisruptionModify>false</rad1:IsFlightDisruptionModify>
+            <!--Optional:-->
+            <rad1:FlightDisruptionModify>true</rad1:FlightDisruptionModify>
+         </tem:ModifyPnrRequest>
+      </tem:ModifyPNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="6a02a208-edf0-4f8c-a3d4-68ebe406992f" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>500</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="5a05fb18-2462-494f-86a8-7a2626076d9f" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="924354b4-35e4-4dc2-8554-99f8a5473989" name="Transfer Balance" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>Balance</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5 ModifyPNR_Add SSR</con:sourceStep>
+        <con:targetType>Balance</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="ba927afd-c7f6-44a6-91df-a3fce6ec3b7b" name="Delay after modify call" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="5986559b-cc2f-476d-99e5-921809d58aa8" name="5 InsertExternalProcessedPayment_CASH" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
+      <con:operation>InsertExternalProcessedPayment</con:operation>
+      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="5 InsertExternalProcessedPayment_CASH">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:InsertExternalProcessedPayment>
+         <!--Optional:-->
+         <tem:ExternalProcessedPaymentRequest>
+            <rad:TransactionInfo>
+               <rad1:SecurityGUID>${#TestSuite#securityToken}</rad1:SecurityGUID>
+               <rad1:CarrierCodes>
+                  <!--Zero or more repetitions:-->
+                  <rad1:CarrierCode>
+                     <rad1:AccessibleCarrierCode>${#TestSuite#carriercode}</rad1:AccessibleCarrierCode>
+                  </rad1:CarrierCode>
+               </rad1:CarrierCodes>
+               <!--Optional:-->
+               <rad1:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <!--Optional:-->
+               <rad1:HistoricUserName>${#TestSuite#UserName}</rad1:HistoricUserName>
+            </rad:TransactionInfo>
+            <rad:ReservationInfo>
+               <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
+               <rad1:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad1:ConfirmationNumber>
+            </rad:ReservationInfo>
+            <rad:ExternalPayments>
+               <!--Zero or more repetitions:-->
+               <rad:InsertExternalProcessedPayment>
+                  <rad:BaseAmount>${#TestCase#Balance}</rad:BaseAmount>
+                  <rad:BaseCurrency>${#TestSuite#currency}</rad:BaseCurrency>
+                  <rad:CardHolder>${#TestSuite#p_FirstName}</rad:CardHolder>
+                  <rad:CardNumber>${#TestSuite#NotApplicable}</rad:CardNumber>
+                  <rad:CheckNumber>${#TestSuite#CheckNumber}</rad:CheckNumber>
+                  <rad:CurrencyPaid>${#TestSuite#currency}</rad:CurrencyPaid>
+                  <rad:CVCode>${empty}</rad:CVCode>
+                  <rad:DatePaid>${#TestSuite#DepartureDate}</rad:DatePaid>
+                  <rad:DocumentReceivedBy>${#TestSuite#p_FirstName}</rad:DocumentReceivedBy>
+                  <rad:ExpirationDate>${#TestSuite#ExpirationDate}</rad:ExpirationDate>
+                  <rad:ExchangeRate>0</rad:ExchangeRate>
+                  <rad:ExchangeRateDate>${#TestSuite#ExchangeRateDate}</rad:ExchangeRateDate>
+                  <rad:FFNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:PaymentComment>${#TestSuite#Comments}</rad:PaymentComment>
+                  <rad:PaymentAmount>${#TestCase#Balance}</rad:PaymentAmount>
+                  <rad:PaymentMethod>${#TestSuite#PaymentMethod}</rad:PaymentMethod>
+                  <rad:PaymentMethodType>${#TestSuite#PaymentMethod}</rad:PaymentMethodType>
+                  <rad:Reference>${#TestSuite#Comments}</rad:Reference>
+                  <rad:TerminalID>2</rad:TerminalID>
+                  <rad:UserData>${#TestSuite#Comments}</rad:UserData>
+                  <rad:UserID>${#TestSuite#UserName}</rad:UserID>
+                  <rad:IataNumber>${empty}</rad:IataNumber>
+                  <rad:ValueCode>${empty}</rad:ValueCode>
+                  <rad:VoucherNumber>-214</rad:VoucherNumber>
+                  <rad:IsTACreditCard>false</rad:IsTACreditCard>
+                  <rad:GcxID>${#TestSuite#ID}</rad:GcxID>
+                  <rad:GcxOptOption>${#TestSuite#ID}</rad:GcxOptOption>
+                  <rad:OriginalCurrency>${#TestSuite#currency}</rad:OriginalCurrency>
+                  <rad:OriginalAmount>${#TestCase#Balance}</rad:OriginalAmount>
+                  <rad:TransactionStatus>APPROVED</rad:TransactionStatus>
+                  <rad:AuthorizationCode>${#TestSuite#AuthorizationCode}</rad:AuthorizationCode>
+                  <rad:PaymentReference>${#TestSuite#PaymentReference}</rad:PaymentReference>
+                  <rad:ResponseMessage>${#TestSuite#ResponseMessage}</rad:ResponseMessage>
+                  <rad:CardCurrency>${#TestSuite#currency}</rad:CardCurrency>
+                  <rad:BillingCountry>${#TestSuite#BillingCountry}</rad:BillingCountry>
+                  <rad:FingerPrintingSessionID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:Payor>
+                     <rad2:PersonOrgID>${#TestSuite#PersonOrgID}</rad2:PersonOrgID>
+                     <rad2:FirstName>${#TestSuite#p_FirstName}</rad2:FirstName>
+                     <rad2:LastName>${#TestSuite#p_LastName}</rad2:LastName>
+                     <rad2:MiddleName>${#TestSuite#p_MiddleName}</rad2:MiddleName>
+                     <rad2:Age>${#TestSuite#p_Age}</rad2:Age>
+                     <rad2:DOB>${#TestSuite#p_DOB}</rad2:DOB>
+                     <rad2:Gender>Female</rad2:Gender>
+                     <rad2:Title>${#TestSuite#p_Title}</rad2:Title>
+                     <rad2:NationalityLaguageID>${#TestSuite#ID}</rad2:NationalityLaguageID>
+                     <rad2:RelationType>Self</rad2:RelationType>
+                     <rad2:WBCID>${#TestSuite#ID}</rad2:WBCID>
+                     <rad2:PTCID>${#TestSuite#ID}</rad2:PTCID>
+                     <rad2:PTC>${#TestSuite#ID}</rad2:PTC>
+                     <rad2:TravelsWithPersonOrgID>-2147483648</rad2:TravelsWithPersonOrgID>
+                     <rad2:RedressNumber>${#TestSuite#NotApplicable}</rad2:RedressNumber>
+                     <rad2:KnownTravelerNumber>${#TestSuite#NotApplicable}</rad2:KnownTravelerNumber>
+                     <rad2:MarketingOptIn>true</rad2:MarketingOptIn>
+                     <rad2:UseInventory>false</rad2:UseInventory>
+                     <rad2:Address>
+                        <rad2:Address1>${#TestSuite#Address1}</rad2:Address1>
+                        <rad2:Address2>${empty}</rad2:Address2>
+                        <rad2:City>${#TestSuite#City}</rad2:City>
+                        <rad2:State>${#TestSuite#State}</rad2:State>
+                        <rad2:Postal>${#TestSuite#Postal}</rad2:Postal>
+                        <rad2:Country>${#TestSuite#Country}</rad2:Country>
+                        <rad2:CountryCode>${empty}</rad2:CountryCode>
+                        <rad2:AreaCode>${empty}</rad2:AreaCode>
+                        <rad2:PhoneNumber>${empty}</rad2:PhoneNumber>
+                        <rad2:Display>${empty}</rad2:Display>
+                     </rad2:Address>
+                     <rad2:Company>${empty}</rad2:Company>
+                     <rad2:Comments>${empty}</rad2:Comments>
+                     <rad2:Passport>${empty}</rad2:Passport>
+                     <rad2:Nationality>${empty}</rad2:Nationality>
+                     <rad2:ProfileId>-214</rad2:ProfileId>
+                     <rad2:IsPrimaryPassenger>true</rad2:IsPrimaryPassenger>
+                     <rad2:ContactInfos>
+                        <!--Zero or more repetitions:-->
+                        <!--<rad2:ContactInfo>
+                           <rad2:ContactID>1</rad2:ContactID>
+                           <rad2:PersonOrgID>-1</rad2:PersonOrgID>
+                           <rad2:ContactField>666-71-4896#</rad2:ContactField>
+                           <rad2:ContactType>SSN</rad2:ContactType>
+                           <rad2:Extension>${empty}</rad2:Extension>
+                           <rad2:CountryCode>${empty}</rad2:CountryCode>
+                           <rad2:AreaCode>${empty}</rad2:AreaCode>
+                           <rad2:PhoneNumber>${empty}</rad2:PhoneNumber>
+                           <rad2:Display>${empty}</rad2:Display>
+                           <rad2:PreferredContactMethod>false</rad2:PreferredContactMethod>
+                        </rad2:ContactInfo>-->
+                     </rad2:ContactInfos>
+                     <!--Optional:-->
+                     <rad2:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </rad:Payor>
+                  <!--Optional:-->
+                  <rad:Result>${empty}</rad:Result>
+                  <!--Optional:-->
+                  <rad:TransactionID>${empty}</rad:TransactionID>
+                  <!--Optional:-->
+                  <rad:ResponseCode>${empty}</rad:ResponseCode>
+                  <!--Optional:-->
+                  <rad:AncillaryData01>${empty}</rad:AncillaryData01>
+                  <!--Optional:-->
+                  <rad:AncillaryData02>${empty}</rad:AncillaryData02>
+                  <!--Optional:-->
+                  <rad:AncillaryData03>${empty}</rad:AncillaryData03>
+                  <!--Optional:-->
+                  <rad:AncillaryData04>${empty}</rad:AncillaryData04>
+                  <!--Optional:-->
+                  <rad:AncillaryData05>${empty}</rad:AncillaryData05>
+                  <!--Optional:-->
+                  <rad:ProcessorID>${empty}</rad:ProcessorID>
+                  <!--Optional:-->
+                  <rad:MerchantID>${#TestSuite#NotApplicable}</rad:MerchantID>
+                  <!--Optional:-->
+                  <rad:ProcessorName>${#TestSuite#ProcessorName}</rad:ProcessorName>
+               </rad:InsertExternalProcessedPayment>
+            </rad:ExternalPayments>
+         </tem:ExternalProcessedPaymentRequest>
+      </tem:InsertExternalProcessedPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="a2eabbf9-162d-4551-b815-c47d65cba4b6" type="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f4f8d182-e94d-420f-973e-79d7b7fd4447">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="488e5be0-d9d9-4916-bcbf-a47f3fa6db42">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="43f54844-b6cd-4ffa-800d-588a2745aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="bb30b505-1d54-4495-84e4-6bea7c3e4011" name="Property ReservationPaymentID" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+        <con:name>ReservationPaymentID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
+        <con:targetType>ReservationPaymentID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+        <con:name>ReservationPaymentID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
+        <con:targetType>ReservationPaymentID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="6b508182-a62c-4678-9830-2c3d19020f8d" name="Delay after IEP" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="46a1bf71-1eb2-47f8-8883-3da958cabc8d" name="7. Save PNR" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>CreatePNR</con:operation>
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="7. Save PNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:CreatePNR>\r
+         <!--Optional:-->\r
+         <tem:CreatePnrRequest>\r
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
+            <rad1:ActionType>SaveReservation</rad1:ActionType>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>299</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+         </tem:CreatePnrRequest>\r
+      </tem:CreatePNR>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
+        <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
+          <con:configuration>
+            <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
+declare namespace ns1='http://tempuri.org/';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:Exceptions[1]/b:ExceptionInformation.Exception[1]/b:ExceptionLevel[1]</path>
+            <content>Success</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f4f8d182-e94d-420f-973e-79d7b7fd4447">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="488e5be0-d9d9-4916-bcbf-a47f3fa6db42">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="43f54844-b6cd-4ffa-800d-588a2745aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>securityToken</con:name>
+      <con:value>61ca84bapc2cx3ba6009t4eb649da9e912c4c8c08a7f</con:value>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>172426</con:value>
+    </con:property>
+    <con:property>
+      <con:name>s_Amount</con:name>
+      <con:value>12.50</con:value>
+    </con:property>
+    <con:property>
+      <con:name>s_SSRCategory</con:name>
+      <con:value>6</con:value>
+    </con:property>
+    <con:property>
+      <con:name>s_ServiceID</con:name>
+      <con:value>221</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ServiceCode</con:name>
+      <con:value>SBUN</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PersonOrgID</con:name>
+      <con:value>59927</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PhysicalFlightID</con:name>
+      <con:value>96404</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Balance</con:name>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>04430319-f52d-4a22-b2cc-f7a4834ed654</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>aa990439-c722-4e96-897f-c87e54820a8b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c7660546-e893-4964-93e0-89d5cf869a59</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a3bc64f5-531d-4372-886e-69560def1170</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8959e591-5a91-4c00-a49c-242b547e8687</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>50aa05b7-2e92-43c1-a96a-52cc326ca2f0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>746181d7-5551-40dd-a6e4-e4afc6f2b8dc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>589aa828-2477-4708-b7ef-e7385b9ee974</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a4d35464-67bb-4400-8a77-9a326a9c747e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>169a39f9-0a57-4f17-b1ea-69ec4a9644d5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a715e29e-a8ec-4e1c-9d7a-7df784adf454</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>780a4428-6fc3-4996-96d2-8604a83b6c41</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>83c29122-ff96-4ff8-9de6-657d24a3bc0a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c8960cdf-f0ce-40d4-9bec-885d5a545697</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e878f543-74a4-49bc-bffb-8ba58f83a713</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c0587292-48f2-4809-a5e6-a594895ff3a2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f028767d-b081-4d44-8b61-ff7c8daa7864</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5ae0e4d3-9cb2-43c2-aa74-59ff6ee98144</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>59c05599-5bb4-4a12-a9b4-ba9f569e973c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>40030498-257c-458d-af43-7e261713acfe</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>81a6036b-436e-437c-829b-38e0a540577d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d926db6f-de8c-4625-8709-d6b8e687dc69</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>92be862a-a159-4756-80b4-3668a2cc4a3c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4570241e-4053-46f7-9c09-a4463d2e9498</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>55d98e0d-319e-41bc-b81d-a4e55db4d219</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c1e2c99b-63dc-4655-9ba4-3073a236dd54</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>73630f1c-d175-4cc8-af37-8bb8ab60915e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>52dee9e9-10aa-4895-b9c5-8d7bd01bc227</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>16cf7f64-104b-46be-a00c-6c7d6473a0eb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>bad441ab-e0f4-4396-a17e-5a256e937546</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>70ca31d7-e595-4eea-93cd-a03729aad093</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

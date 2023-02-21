@@ -8,19 +8,19 @@
   <con:properties>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-02-20</con:value>
+      <con:value>2023-02-22</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-02-26</con:value>
+      <con:value>2023-02-27</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
-      <con:value>YVR</con:value>
+      <con:value>YYZ</con:value>
     </con:property>
     <con:property>
       <con:name>Destination</con:name>
-      <con:value>YYZ</con:value>
+      <con:value>YVR</con:value>
     </con:property>
     <con:property>
       <con:name>flightnum</con:name>
@@ -40,19 +40,19 @@
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>BPAOLAADT</con:value>
+      <con:value>LPUPISADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>LFLGNMADT</con:value>
+      <con:value>AQSGDBADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>YPTDDZINF</con:value>
+      <con:value>RQVJADINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1979-02-20</con:value>
+      <con:value>1979-02-21</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -76,7 +76,7 @@
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>
-      <con:value>test@radixx.com</con:value>
+      <con:value>YFLSWL@radixx.com</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -84,7 +84,7 @@
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>2c487faadep0oad4y4lj93qeo3w9dae61b615e095cab</con:value>
+      <con:value>c4e9080cd0qb7iib2384zbj2o9m8d654be9b4a71a83d</con:value>
     </con:property>
     <con:property>
       <con:name>IATANumber</con:name>
@@ -96,11 +96,11 @@
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-02-26</con:value>
+      <con:value>2023-02-27</con:value>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value>SEAT</con:value>
+      <con:value>SBUN</con:value>
     </con:property>
     <con:property>
       <con:name>RowSeat</con:name>
@@ -120,35 +120,35 @@
     </con:property>
     <con:property>
       <con:name>ModifyDate_returnSeg</con:name>
-      <con:value>2023-03-07</con:value>
+      <con:value>2023-03-08</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHD</con:name>
-      <con:value>BPAOLACHD</con:value>
+      <con:value>LPUPISCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameCHD</con:name>
-      <con:value>LFLGNMCHD</con:value>
+      <con:value>AQSGDBCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_CHD</con:name>
-      <con:value>2017-02-20</con:value>
+      <con:value>2017-02-21</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameINF</con:name>
-      <con:value>BPAOLAINF</con:value>
+      <con:value>LPUPISINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameINF</con:name>
-      <con:value>LFLGNMINF</con:value>
+      <con:value>AQSGDBINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_INF</con:name>
-      <con:value>2022-10-23</con:value>
+      <con:value>2022-10-24</con:value>
     </con:property>
     <con:property>
       <con:name>Date_NewSeg</con:name>
-      <con:value>2023-03-08</con:value>
+      <con:value>2023-03-09</con:value>
     </con:property>
     <con:property>
       <con:name>New_Segment</con:name>
@@ -192,7 +192,7 @@
     </con:property>
     <con:property>
       <con:name>ExpirationDate</con:name>
-      <con:value>2023-05-31</con:value>
+      <con:value>2023-06-01</con:value>
     </con:property>
     <con:property>
       <con:name>p_Age</con:name>
@@ -200,7 +200,7 @@
     </con:property>
     <con:property>
       <con:name>TransactionStatus</con:name>
-      <con:value>NOTYETPROCESSED</con:value>
+      <con:value>APPROVED</con:value>
     </con:property>
     <con:property>
       <con:name>BillingCountry</con:name>
@@ -260,7 +260,7 @@
     </con:property>
     <con:property>
       <con:name>ExchangeRateDate</con:name>
-      <con:value>2023-02-20</con:value>
+      <con:value>2023-02-21</con:value>
     </con:property>
     <con:property>
       <con:name>ID</con:name>

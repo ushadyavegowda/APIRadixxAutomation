@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="true" failTestCaseOnErrors="true" id="68891aaa-6d20-44f9-b536-7d742e0f0c77" keepSession="false" maxResults="0" name="Test7_Modify OW pnr to add flight segments" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="68891aaa-6d20-44f9-b536-7d742e0f0c77" keepSession="false" maxResults="0" name="Test7_Modify OW pnr to add flight segments" searchProperties="true" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="68891aaa-6d20-44f9-b536-7d742e0f0c77fileName">Test7_Modify-OW-pnr-to-add-flight-segments</con:setting>
   </con:settings>

@@ -172,8 +172,8 @@ testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 log.info(securityToken)
 
 /* Flight Infromation*/ 
-def origin = "YVR"
-def destination = "YYZ"
+def origin = "YYZ"
+def destination = "YVR"
 def new_Segment = "NRT"
 def flightnum = "204"
 def carriercode = "1D"
@@ -181,7 +181,7 @@ def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
 
-def DepartureDate = new Date().plus(0)
+def DepartureDate = new Date().plus(1)
 def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
@@ -244,7 +244,8 @@ testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Citizenship", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Language", "1");
 testRunner.testCase.testSuite.setPropertyValue("p_PhoneNumber", "+46701497931");
-testRunner.testCase.testSuite.setPropertyValue("p_Email", "test@radixx.com");
+def Email = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+testRunner.testCase.testSuite.setPropertyValue("p_Email",Email.toUpperCase().concat("@radixx.com"));
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
 testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SEAT");
@@ -267,7 +268,7 @@ testRunner.testCase.testSuite.setPropertyValue("ExpirationDate", ExpDate.format(
 def ExchangeRateDate = new Date()
 testRunner.testCase.testSuite.setPropertyValue("ExchangeRateDate", ExchangeRateDate.format("yyyy-MM-dd"));
 testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
-testRunner.testCase.testSuite.setPropertyValue("TransactionStatus", "NOTYETPROCESSED");
+testRunner.testCase.testSuite.setPropertyValue("TransactionStatus", "APPROVED");
 testRunner.testCase.testSuite.setPropertyValue("BillingCountry", "840");
 testRunner.testCase.testSuite.setPropertyValue("CountryCode", "840");
 testRunner.testCase.testSuite.setPropertyValue("ProcessorName", "OPPY");
@@ -340,6 +341,9 @@ testRunner.testCase.testSuite.setPropertyValue("OAL_Destination", "CDG");
 testRunner.testCase.testSuite.setPropertyValue("OAL_FarebasisCode", "B");
 testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledDepartureTime", "T12:30:00.000+05:00");
 testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledArrivalTime", "T15:30:00.000+05:00");
+
+//SSR
+testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SBUN");
 
 
 log.info(DepartureDate)

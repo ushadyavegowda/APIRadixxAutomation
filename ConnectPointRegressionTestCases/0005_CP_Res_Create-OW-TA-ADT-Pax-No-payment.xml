@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="bb69e7f5-e0ef-4c24-ab35-ae6439f25a8c" keepSession="false" name="0005_CP_Res_Create OW TA ADT Pax No payment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="affae135-9a38-43dc-8410-7e1e7279ac8f" keepSession="false" name="0005_CP_Res_Create OW TA ADT Pax No payment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="bb69e7f5-e0ef-4c24-ab35-ae6439f25a8cfileName">0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment</con:setting>
+    <con:setting id="affae135-9a38-43dc-8410-7e1e7279ac8ffileName">0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1.LoginTA" id="0c91fd0f-5a66-4a9f-aa6e-855cd9fadb80">
+  <con:testStep id="c4a28fd1-02a1-4800-96dd-a7fd2011ec9e" name="1. LoginTA" type="calltestcase" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>809a7889-dd40-418b-b477-10592e534550</con:targetTestCase>
+      <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>
       <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="69b561c7-7eb7-4f26-b101-c6750f290c63" name="2 RetrieveFareQuote" type="request">
+  <con:testStep id="81901b49-e57f-4c48-9ce8-928ce430828c" name="2 RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -84,7 +84,7 @@
                   <!--Optional:-->
                   <rad1:FareTypeCategories>
                      <!--Zero or more repetitions:-->
-                     
+                     <arr:int>1</arr:int>
                   </rad1:FareTypeCategories>
                </rad1:FareQuoteDetail>
             </rad1:FareQuoteDetails>
@@ -119,13 +119,13 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="31174277-27a8-40e8-9bc5-fe1bafd146ba" name="Delay after FQ" type="delay">
+  <con:testStep id="75060778-e2af-4ea6-86a0-f04b4c82d987" name="Delay 2" type="delay">
     <con:settings/>
     <con:config>
-      <delay>2000</delay>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="28cd6e21-4fa4-499c-9dbf-e4f167a875ed" name="Transfer FareId" type="transfer">
+  <con:testStep id="3ee8b9d8-0371-43d0-bb9d-b104e8200fcf" name="Transfer FareId" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -154,7 +154,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="a63f12fe-6799-46fa-8de3-3b04b051acb9" name="3 SummaryPNR - Get Summary" type="request">
+  <con:testStep id="116059f4-362f-4122-8021-56420ff69b07" name="3 SummaryPNR - Get Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -165,105 +165,105 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-   <s:Body>
-      <SummaryPNR xmlns="http://tempuri.org/">
-         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>
-            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
-               <CarrierCode>
-                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>
-               </CarrierCode>
-            </CarrierCodes>
-            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>
-            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">web</HistoricUserName>
-            <a:ActionType>GetSummary</a:ActionType>
-            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
-               <b:SeriesNumber>${#TestSuite#SeriesNumber}</b:SeriesNumber>
-               <b:ConfirmationNumber i:nil="true"/>
-            </a:ReservationInfo>
-            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>
-            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>
-            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>
-            <a:IATANum>${#TestSuite#IATANumber}</a:IATANum>
-            <a:User i:nil="true"/>
-            <a:ReceiptLanguageID>${#TestSuite#ID}</a:ReceiptLanguageID>
-            <a:PromoCode>${empty}</a:PromoCode>
-            <a:ExternalBookingID i:nil="true"/>
-            <a:Address>
-               <a:Address1 i:nil="true"/>
-               <a:Address2 i:nil="true"/>
-               <a:City i:nil="true"/>
-               <a:State i:nil="true"/>
-               <a:Postal i:nil="true"/>
-               <a:Country i:nil="true"/>
-               <a:CountryCode i:nil="true"/>
-               <a:AreaCode i:nil="true"/>
-               <a:PhoneNumber>${#TestSuite#p_PhoneNumber}</a:PhoneNumber>
-               <a:Display i:nil="true"/>
-            </a:Address>
-            <a:ContactInfos i:nil="true"/>
-            <a:Passengers>
-               <a:Person>
-                  <a:PersonOrgID>${#TestSuite#PersonOrgID}</a:PersonOrgID>
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
-                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
-                  <a:Age>${#TestSuite#p_Age}</a:Age>
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title i:nil="true"/>
-                  <a:NationalityLaguageID>${#TestSuite#ID}</a:NationalityLaguageID>
-                  <a:RelationType>Self</a:RelationType>
-                  <a:WBCID>-2147483648</a:WBCID>
-                  <a:PTCID>1</a:PTCID>
-                  <a:PTC>${#TestSuite#p_PTC}</a:PTC>
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber i:nil="true"/>
-                  <a:KnownTravelerNumber i:nil="true"/>
-                  <a:MarketingOptIn>true</a:MarketingOptIn>
-                  <a:UseInventory>true</a:UseInventory>
-                  <a:Address>
-                     <a:Address1 i:nil="true"/>
-                     <a:Address2 i:nil="true"/>
-                     <a:City i:nil="true"/>
-                     <a:State i:nil="true"/>
-                     <a:Postal i:nil="true"/>
-                     <a:Country>0</a:Country>
-                     <a:CountryCode i:nil="true"/>
-                     <a:AreaCode i:nil="true"/>
-                     <a:PhoneNumber i:nil="true"/>
-                     <a:Display i:nil="true"/>
-                  </a:Address>
-                  <a:Company i:nil="true"/>
-                  <a:Comments i:nil="true"/>
-                  <a:Passport i:nil="true"/>
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
-                  <a:ProfileId>-21474836</a:ProfileId>
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
-                  <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber i:nil="true"/>
-                  <a:Suffix i:nil="true"/>
-               </a:Person>
-            </a:Passengers>
-            <a:Segments>
-               <a:Segment>
-                  <a:PersonOrgID>${#TestSuite#PersonOrgID}</a:PersonOrgID>
-                  <a:FareInformationID>${#TestCase#fareid}</a:FareInformationID>
-                  <a:MarketingCode>${#TestSuite#ID}</a:MarketingCode>
-                  <a:StoreFrontID>${#TestSuite#ID}</a:StoreFrontID>
-                  <a:RecordLocator i:nil="true"/>
-                  <a:SpecialServices i:nil="true"/>
-                  <a:Seats i:nil="true"/>
-                  <a:CRSCode i:nil="true"/>
-               </a:Segment>
-            </a:Segments>
-            <a:Payments i:nil="true"/>
-            <a:Comment i:nil="true"/>
-            <a:ReferralID i:nil="true"/>
-         </SummaryPnrRequest>
-      </SummaryPNR>
-   </s:Body>
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <s:Body>\r
+      <SummaryPNR xmlns="http://tempuri.org/">\r
+         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r
+            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>\r
+            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
+               <CarrierCode>\r
+                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>\r
+               </CarrierCode>\r
+            </CarrierCodes>\r
+            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>\r
+            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">web</HistoricUserName>\r
+            <a:ActionType>GetSummary</a:ActionType>\r
+            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
+               <b:SeriesNumber>299</b:SeriesNumber>\r
+               <b:ConfirmationNumber i:nil="true"/>\r
+            </a:ReservationInfo>\r
+            <a:SecurityToken>${#TestSuite#securityToken}</a:SecurityToken>\r
+            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>\r
+            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>\r
+            <a:IATANum>${#TestSuite#IATANumber}</a:IATANum>\r
+            <a:User i:nil="true"/>\r
+            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>\r
+            <a:PromoCode>${empty}</a:PromoCode>\r
+            <a:ExternalBookingID i:nil="true"/>\r
+            <a:Address>\r
+               <a:Address1 i:nil="true"/>\r
+               <a:Address2 i:nil="true"/>\r
+               <a:City i:nil="true"/>\r
+               <a:State i:nil="true"/>\r
+               <a:Postal i:nil="true"/>\r
+               <a:Country i:nil="true"/>\r
+               <a:CountryCode i:nil="true"/>\r
+               <a:AreaCode i:nil="true"/>\r
+               <a:PhoneNumber>${#TestSuite#p_PhoneNumber}</a:PhoneNumber>\r
+               <a:Display i:nil="true"/>\r
+            </a:Address>\r
+            <a:ContactInfos i:nil="true"/>\r
+            <a:Passengers>\r
+               <a:Person>\r
+                  <a:PersonOrgID>-1</a:PersonOrgID>\r
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
+                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>\r
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
+                  <a:Age>44</a:Age>\r
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
+                  <a:Title i:nil="true"/>\r
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
+                  <a:RelationType>Self</a:RelationType>\r
+                  <a:WBCID>-2147483648</a:WBCID>\r
+                  <a:PTCID>1</a:PTCID>\r
+                  <a:PTC>${#TestSuite#p_PTC}</a:PTC>\r
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
+                  <a:RedressNumber i:nil="true"/>\r
+                  <a:KnownTravelerNumber i:nil="true"/>\r
+                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
+                  <a:UseInventory>true</a:UseInventory>\r
+                  <a:Address>\r
+                     <a:Address1 i:nil="true"/>\r
+                     <a:Address2 i:nil="true"/>\r
+                     <a:City i:nil="true"/>\r
+                     <a:State i:nil="true"/>\r
+                     <a:Postal i:nil="true"/>\r
+                     <a:Country>0</a:Country>\r
+                     <a:CountryCode i:nil="true"/>\r
+                     <a:AreaCode i:nil="true"/>\r
+                     <a:PhoneNumber i:nil="true"/>\r
+                     <a:Display i:nil="true"/>\r
+                  </a:Address>\r
+                  <a:Company i:nil="true"/>\r
+                  <a:Comments i:nil="true"/>\r
+                  <a:Passport i:nil="true"/>\r
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
+                  <a:ProfileId>-21474836</a:ProfileId>\r
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
+                  <a:ContactInfos i:nil="true"/>\r
+                  <a:FrequentFlyerNumber i:nil="true"/>\r
+                  <a:Suffix i:nil="true"/>\r
+               </a:Person>\r
+            </a:Passengers>\r
+            <a:Segments>\r
+               <a:Segment>\r
+                  <a:PersonOrgID>-1</a:PersonOrgID>\r
+                  <a:FareInformationID>${#TestCase#fareid}</a:FareInformationID>\r
+                  <a:MarketingCode>1</a:MarketingCode>\r
+                  <a:StoreFrontID>1</a:StoreFrontID>\r
+                  <a:RecordLocator i:nil="true"/>\r
+                  <a:SpecialServices i:nil="true"/>\r
+                  <a:Seats i:nil="true"/>\r
+                  <a:CRSCode i:nil="true"/>\r
+               </a:Segment>\r
+            </a:Segments>\r
+            <a:Payments i:nil="true"/>\r
+            <a:Comment i:nil="true"/>\r
+            <a:ReferralID i:nil="true"/>\r
+         </SummaryPnrRequest>\r
+      </SummaryPNR>\r
+   </s:Body>\r
 </s:Envelope>]]></con:request>
         <con:assertion id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match" type="XPath Match">
@@ -405,13 +405,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="68b026e8-105a-452f-9be5-84a28603fd6a" name="Delay afer summary" type="delay">
+  <con:testStep id="ea8557da-7f2a-4d87-8258-280546c9955a" name="Delay 3" type="delay">
     <con:settings/>
     <con:config>
-      <delay>2000</delay>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="1eab82b0-407c-4cb6-b63d-d9b7520b9ae2" name="4 AssessPaymentFee" type="request">
+  <con:testStep id="ea06bece-8ccd-41d4-95bb-8bbea769e2d9" name="4 AssessPaymentFee" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
@@ -438,14 +438,14 @@ declare namespace ns1='http://tempuri.org/';
             <!--Optional:-->
             <rad:ClientIPAddress>::1</rad:ClientIPAddress>
             <!--Optional:-->
-            <rad:HistoricUserName>${#TestSuite#UserName}</rad:HistoricUserName>
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>
             <rad1:PaymentsToAssessFee>
                <!--Zero or more repetitions:-->
                <rad1:PaymentToAssessFee>
                   <rad1:PaymentMethod>${#TestSuite#PaymentMethodTA}</rad1:PaymentMethod>
                   <rad1:CardNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:PaymentAmount>${3 SummaryPNR - Get Summary#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-declare namespace ns1='http://tempuri.org/';
+                  <rad1:PaymentAmount>${3 SummaryPNR - Get Summary#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';\r
+declare namespace ns1='http://tempuri.org/';\r
 //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad1:PaymentAmount>
                </rad1:PaymentToAssessFee>
             </rad1:PaymentsToAssessFee>
@@ -581,7 +581,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="772ee094-1275-4e2b-ae38-d2d0d7549ab2" name="Transfer balance" type="transfer">
+  <con:testStep id="b0fed294-5302-4888-904a-bd20c4a75b21" name="Transfer balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -598,7 +598,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="c214bd77-6194-4b32-aa61-34850f7e71da" name="5 PNRPaymentRequest" type="request">
+  <con:testStep id="0fed7269-15a3-4ff5-a886-9fb7fb3eb1cb" name="5 PNRPaymentRequest" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -624,10 +624,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <!--Optional:-->
                <rad1:ClientIPAddress>${empty}</rad1:ClientIPAddress>
                <!--Optional:-->
-               <rad1:HistoricUserName>${#TestSuite#UserName}</rad1:HistoricUserName>
+               <rad1:HistoricUserName>radixx</rad1:HistoricUserName>
             </rad:TransactionInfo>
             <rad:ReservationInfo>
-               <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
+               <rad1:SeriesNumber>299</rad1:SeriesNumber>
                <rad1:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </rad:ReservationInfo>
             <rad:PNRPayments>
@@ -636,15 +636,15 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad:BaseAmount>${#TestCase#Balance}</rad:BaseAmount>
                   <rad:BaseCurrency>${#TestSuite#currency}</rad:BaseCurrency>
                   <rad:CardHolder>${#TestSuite#p_FirstName}</rad:CardHolder>
-                  <rad:CardNumber>${#TestSuite#NotApplicable}</rad:CardNumber>
+                  <rad:CardNumber>NA</rad:CardNumber>
                   <rad:CheckNumber>0</rad:CheckNumber>
                   <rad:CurrencyPaid>${#TestSuite#currency}</rad:CurrencyPaid>
-                  <rad:CVCode>${empty}</rad:CVCode>
-                  <rad:DatePaid>${#TestSuite#DepartureDate}</rad:DatePaid>
+                  <rad:CVCode>123</rad:CVCode>
+                  <rad:DatePaid>2020-10-15</rad:DatePaid>
                   <rad:DocumentReceivedBy>${empty}</rad:DocumentReceivedBy>
-                  <rad:ExpirationDate>${#TestSuite#ExpirationDate}</rad:ExpirationDate>
+                  <rad:ExpirationDate>2021-07-29</rad:ExpirationDate>
                   <rad:ExchangeRate>1</rad:ExchangeRate>
-                  <rad:ExchangeRateDate>${#TestSuite#ExchangeRateDate}</rad:ExchangeRateDate>
+                  <rad:ExchangeRateDate>2020-10-15</rad:ExchangeRateDate>
                   <rad:FFNumber>${empty}</rad:FFNumber>
                   <rad:PaymentComment>${empty}</rad:PaymentComment>
                   <rad:PaymentAmount>${#TestCase#Balance}</rad:PaymentAmount>
@@ -656,69 +656,69 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad:UserData>${empty}</rad:UserData>
                   <rad:UserID>anjaly</rad:UserID>
                   <rad:IataNumber>${#TestSuite#IATANumber}</rad:IataNumber>
-                  <rad:ValueCode>${#TestSuite#ID}</rad:ValueCode>
+                  <rad:ValueCode>1</rad:ValueCode>
                   <rad:VoucherNumber>-1</rad:VoucherNumber>
                   <rad:IsTACreditCard>false</rad:IsTACreditCard>
-                  <rad:GcxID>${#TestSuite#ID}</rad:GcxID>
-                  <rad:GcxOptOption>${#TestSuite#ID}</rad:GcxOptOption>
+                  <rad:GcxID>1</rad:GcxID>
+                  <rad:GcxOptOption>1</rad:GcxOptOption>
                   <rad:OriginalCurrency>${#TestSuite#currency}</rad:OriginalCurrency>
                   <rad:OriginalAmount>${#TestCase#Balance}</rad:OriginalAmount>
                   <rad:TransactionStatus>APPROVED</rad:TransactionStatus>
-                  <rad:AuthorizationCode>${#TestSuite#AuthorizationCode}</rad:AuthorizationCode>
-                  <rad:PaymentReference>${#TestSuite#PaymentReference}</rad:PaymentReference>
-                  <rad:ResponseMessage>${#TestSuite#ResponseMessage}</rad:ResponseMessage>
+                  <rad:AuthorizationCode>test</rad:AuthorizationCode>
+                  <rad:PaymentReference>test</rad:PaymentReference>
+                  <rad:ResponseMessage>test</rad:ResponseMessage>
                   <rad:CardCurrency>${#TestSuite#currency}</rad:CardCurrency>
-                  <rad:BillingCountry>${#TestSuite#BillingCountry}</rad:BillingCountry>
-                  <rad:FingerPrintingSessionID>${#TestSuite#ID}</rad:FingerPrintingSessionID>
+                  <rad:BillingCountry>840</rad:BillingCountry>
+                  <rad:FingerPrintingSessionID>1</rad:FingerPrintingSessionID>
                   <rad:Payor>
-                     <rad2:PersonOrgID>${#TestSuite#PersonOrgID}</rad2:PersonOrgID>
+                     <rad2:PersonOrgID>-1</rad2:PersonOrgID>
                      <rad2:FirstName>${#TestSuite#p_FirstName}</rad2:FirstName>
                      <rad2:LastName>${#TestSuite#p_LastName}</rad2:LastName>
                      <rad2:MiddleName>${#TestSuite#p_MiddleName}</rad2:MiddleName>
-                     <rad2:Age>${#TestSuite#p_Age}</rad2:Age>
+                     <rad2:Age>44</rad2:Age>
                      <rad2:DOB>${#TestSuite#p_DOB}</rad2:DOB>
                      <rad2:Gender>Female</rad2:Gender>
-                     <rad2:Title>${#TestSuite#p_Title}</rad2:Title>
-                     <rad2:NationalityLaguageID>${#TestSuite#ID}</rad2:NationalityLaguageID>
+                     <rad2:Title>Ms</rad2:Title>
+                     <rad2:NationalityLaguageID>840</rad2:NationalityLaguageID>
                      <rad2:RelationType>Self</rad2:RelationType>
                      <rad2:WBCID>-1</rad2:WBCID>
                      <rad2:PTCID>1</rad2:PTCID>
                      <rad2:PTC>${#TestSuite#p_PTC}</rad2:PTC>
-                     <rad2:TravelsWithPersonOrgID>${#TestSuite#PersonOrgID}</rad2:TravelsWithPersonOrgID>
-                     <rad2:RedressNumber>${#TestSuite#Comments}</rad2:RedressNumber>
+                     <rad2:TravelsWithPersonOrgID>-369</rad2:TravelsWithPersonOrgID>
+                     <rad2:RedressNumber>NA</rad2:RedressNumber>
                      <rad2:KnownTravelerNumber>16</rad2:KnownTravelerNumber>
                      <rad2:MarketingOptIn>false</rad2:MarketingOptIn>
                      <rad2:UseInventory>true</rad2:UseInventory>
                      <rad2:Address>
-                        <rad2:Address1>${#TestSuite#Address1}</rad2:Address1>
-                        <rad2:Address2>${#TestSuite#Address2}</rad2:Address2>
-                        <rad2:City>${#TestSuite#City}</rad2:City>
-                        <rad2:State>${#TestSuite#State}</rad2:State>
-                        <rad2:Postal>${#TestSuite#Postal}</rad2:Postal>
-                        <rad2:Country>${#TestSuite#Country}</rad2:Country>
-                        <rad2:CountryCode>${#TestSuite#CountryCode}</rad2:CountryCode>
-                        <rad2:AreaCode>${empty}</rad2:AreaCode>
-                        <rad2:PhoneNumber>${#TestSuite#p_PhoneNumber}</rad2:PhoneNumber>
-                        <rad2:Display>${empty}</rad2:Display>
+                        <rad2:Address1>20 N. Orange Avenue</rad2:Address1>
+                        <rad2:Address2>Suite 150</rad2:Address2>
+                        <rad2:City>Orlando</rad2:City>
+                        <rad2:State>FL</rad2:State>
+                        <rad2:Postal>32801</rad2:Postal>
+                        <rad2:Country>USA</rad2:Country>
+                        <rad2:CountryCode>840</rad2:CountryCode>
+                        <rad2:AreaCode>001</rad2:AreaCode>
+                        <rad2:PhoneNumber>2515105619</rad2:PhoneNumber>
+                        <rad2:Display>2515105619</rad2:Display>
                      </rad2:Address>
-                     <rad2:Company>${#TestSuite#UserName}</rad2:Company>
+                     <rad2:Company>Radixx</rad2:Company>
                      <rad2:Comments>${empty}</rad2:Comments>
                      <rad2:Passport>${empty}</rad2:Passport>
-                     <rad2:Nationality>${empty}</rad2:Nationality>
+                     <rad2:Nationality>840</rad2:Nationality>
                      <rad2:ProfileId>-214</rad2:ProfileId>
                      <rad2:IsPrimaryPassenger>false</rad2:IsPrimaryPassenger>
                      <rad2:ContactInfos>
                         <!--Zero or more repetitions:-->
                         <rad2:ContactInfo>
                            <rad2:ContactID>-1</rad2:ContactID>
-                           <rad2:PersonOrgID>${#TestSuite#PersonOrgID}</rad2:PersonOrgID>
+                           <rad2:PersonOrgID>-1</rad2:PersonOrgID>
                            <rad2:ContactField>0012515105619</rad2:ContactField>
                            <rad2:ContactType>HomePhone</rad2:ContactType>
                            <rad2:Extension>${empty}</rad2:Extension>
-                           <rad2:CountryCode>${#TestSuite#CountryCode}</rad2:CountryCode>
+                           <rad2:CountryCode>840</rad2:CountryCode>
                            <rad2:AreaCode>${empty}</rad2:AreaCode>
-                           <rad2:PhoneNumber>${#TestSuite#p_PhoneNumber}</rad2:PhoneNumber>
-                           <rad2:Display>${empty}</rad2:Display>
+                           <rad2:PhoneNumber>0012515105619</rad2:PhoneNumber>
+                           <rad2:Display>2515105619</rad2:Display>
                            <rad2:PreferredContactMethod>true</rad2:PreferredContactMethod>
                         </rad2:ContactInfo>
                      </rad2:ContactInfos>
@@ -746,9 +746,9 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <!--Optional:-->
                   <rad:ProcessorID>${empty}</rad:ProcessorID>
                   <!--Optional:-->
-                  <rad:MerchantID>${#TestSuite#ID}</rad:MerchantID>
+                  <rad:MerchantID>1</rad:MerchantID>
                   <!--Optional:-->
-                  <rad:ProcessorName>${#TestSuite#ProcessorName}</rad:ProcessorName>
+                  <rad:ProcessorName>OPPY</rad:ProcessorName>
                </rad:ProcessPNRPayment>
             </rad:PNRPayments>
             <!--Optional:-->
@@ -787,13 +787,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="8e584e63-81ad-4db5-a144-94bd1fab03bd" name="Delay" type="delay">
+  <con:testStep id="649ee926-2dcc-4abc-9da7-50c7b8ab34e2" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="db6b7ff5-7720-4e15-9cad-00056631038c" name="6 CreatePNR (Commit)" type="request">
+  <con:testStep id="c7ae617b-05a6-457a-b752-3f1ce025be57" name="6 CreatePNR (Commit)" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -855,7 +855,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="58821900-9e9c-4518-b4ee-7fa91ddb6f09" name="Transfer PNR" type="transfer">
+  <con:testStep id="8373126a-791a-417c-8f32-815659cafca3" name="Transfer PNR" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -1023,6 +1023,11 @@ declare namespace ns1='http://tempuri.org/';
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>68b026e8-105a-452f-9be5-84a28603fd6a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3fc2d793-d6ab-4016-8632-9f23c7481469</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

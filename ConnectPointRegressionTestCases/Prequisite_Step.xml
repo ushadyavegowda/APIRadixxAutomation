@@ -183,11 +183,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-def DepartureDate = new Date().plus(0)
+def DepartureDate = new Date().plus(3)
 def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
+
 
 //DOB
 def p_DOB_INF= new Date().minus(120)
@@ -285,6 +286,17 @@ testRunner.testCase.testSuite.setPropertyValue("RowSeat_returnSeg_INF", "B");
 testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_INF", "5");
 testRunner.testCase.testSuite.setPropertyValue("RowSeat_returnSeg_CHD", "C");
 testRunner.testCase.testSuite.setPropertyValue("RowNumber_returnSeg_CHD", "5");
+
+//add OAL Flight Segment
+testRunner.testCase.testSuite.setPropertyValue("OAL_CarrierCode", "WG");
+testRunner.testCase.testSuite.setPropertyValue("OAL_FlightNumber","1590");
+testRunner.testCase.testSuite.setPropertyValue("OAL_Origin", "YUL");
+testRunner.testCase.testSuite.setPropertyValue("OAL_Destination", "CDG");
+testRunner.testCase.testSuite.setPropertyValue("OAL_FarebasisCode", "B");
+testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledDepartureTime", "T12:30:00.000+05:00");
+testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledArrivalTime", "T15:30:00.000+05:00");
+
+
 
 
 log.info(DepartureDate)

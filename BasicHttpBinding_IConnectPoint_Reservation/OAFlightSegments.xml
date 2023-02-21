@@ -1,8 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/OAFlightSegments" anonymous="optional" bindingOperationName="OAFlightSegments" id="2294f777-fe09-4cdb-aa5a-65d6066a7946" inputName="" isOneWay="false" name="OAFlightSegments" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/OAFlightSegments" anonymous="optional" bindingOperationName="OAFlightSegments" id="2294f777-fe09-4cdb-aa5a-65d6066a7946" inputName="" isOneWay="false" name="OAFlightSegments" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2294f777-fe09-4cdb-aa5a-65d6066a7946fileName">OAFlightSegments</con:setting>
   </con:settings>
+  <con:call id="d7407eca-ff07-48ec-8013-39f0c331b973" name="Request 1">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:OAFlightSegments>
+         <!--Optional:-->
+         <tem:OAFlightSegmentsRequest>
+            <rad:SecurityGUID>?</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:ActionType>?</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>?</rad:SeriesNumber>
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <!--Optional:-->
+            <rad1:OALFlightKeyToRemove>?</rad1:OALFlightKeyToRemove>
+            <!--Optional:-->
+            <rad1:OALPaxRecordNumbersToRemove>
+               <!--Zero or more repetitions:-->
+               <arr:int>?</arr:int>
+            </rad1:OALPaxRecordNumbersToRemove>
+            <!--Optional:-->
+            <rad1:OALSegmentsToAdd>
+               <!--Zero or more repetitions:-->
+               <rad1:OALSegment>
+                  <rad1:OALCarrierCode>?</rad1:OALCarrierCode>
+                  <rad1:OALFlightNumber>?</rad1:OALFlightNumber>
+                  <rad1:OALDepartureDate>?</rad1:OALDepartureDate>
+                  <rad1:OALOrigin>?</rad1:OALOrigin>
+                  <rad1:OALDestination>?</rad1:OALDestination>
+                  <rad1:OALScheduledDepartureTime>?</rad1:OALScheduledDepartureTime>
+                  <rad1:OALScheduledArrivalTime>?</rad1:OALScheduledArrivalTime>
+                  <rad1:OALAirlinePersons>
+                     <!--Zero or more repetitions:-->
+                     <rad1:OALAirlinePerson>
+                        <rad1:PersonOrgID>?</rad1:PersonOrgID>
+                        <rad1:FareClass>?</rad1:FareClass>
+                     </rad1:OALAirlinePerson>
+                  </rad1:OALAirlinePersons>
+               </rad1:OALSegment>
+            </rad1:OALSegmentsToAdd>
+         </tem:OAFlightSegmentsRequest>
+      </tem:OAFlightSegments>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/OAFlightSegments" mustUnderstand="NONE" version="200508"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
       <con:authProfile>Inherit From Parent</con:authProfile>

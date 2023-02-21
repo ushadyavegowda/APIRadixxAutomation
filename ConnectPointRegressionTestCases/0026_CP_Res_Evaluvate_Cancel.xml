@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="5a3faaf9-ffae-4f41-b37a-f5044782dafa" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0026_CP_Res_Evaluvate_Cancel" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5a3faaf9-ffae-4f41-b37a-f5044782dafa" keepSession="false" name="0026_CP_Res_Evaluvate_Cancel" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5a3faaf9-ffae-4f41-b37a-f5044782dafafileName">0026_CP_Res_Evaluvate_Cancel</con:setting>
   </con:settings>
@@ -96,10 +96,10 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 1" id="2585125a-35de-40fb-b682-c875e2ac0c25">
+  <con:testStep id="2585125a-35de-40fb-b682-c875e2ac0c25" name="PropertyTransfer 1" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PersonOrgID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
@@ -113,12 +113,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="34e7aaa9-7844-42e2-b0ee-1440cdf6e26c" name="2. EvaluateModificationOfPNR">
+  <con:testStep id="34e7aaa9-7844-42e2-b0ee-1440cdf6e26c" name="2. EvaluateModificationOfPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>EvaluateModificationOfPNR</con:operation>
-      <con:request name="2. EvaluateModificationOfPNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="957eb392-9501-40c8-814d-8077c8673ebd">
+      <con:request id="957eb392-9501-40c8-814d-8077c8673ebd" incomingWss="" name="2. EvaluateModificationOfPNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -152,14 +152,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:EvaluateModificationOfPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="6d406e0f-0b7e-4dfb-8552-3be87969648e" name="Valid HTTP Status Codes">
+        <con:assertion id="6d406e0f-0b7e-4dfb-8552-3be87969648e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="c894c1da-51bf-4869-81f3-b7c47bd95dbe" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="aae09443-dc9e-4a4b-ac30-cfec89e6dc02" name="Schema Compliance">
+        <con:assertion id="c894c1da-51bf-4869-81f3-b7c47bd95dbe" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="aae09443-dc9e-4a4b-ac30-cfec89e6dc02" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -167,7 +167,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>

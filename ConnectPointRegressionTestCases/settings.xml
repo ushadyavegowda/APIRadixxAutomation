@@ -286,6 +286,34 @@
       <con:name>p_BirthCountry</con:name>
       <con:value>356</con:value>
     </con:property>
+    <con:property>
+      <con:name>OAL_CarrierCode</con:name>
+      <con:value>WG</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_FlightNumber</con:name>
+      <con:value>1590</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_Origin</con:name>
+      <con:value>YUL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_Destination</con:name>
+      <con:value>CDG</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_FarebasisCode</con:name>
+      <con:value>B</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_ScheduledDepartureTime</con:name>
+      <con:value>T12:30:00.000+05:00</con:value>
+    </con:property>
+    <con:property>
+      <con:name>OAL_ScheduledArrivalTime</con:name>
+      <con:value>T15:30:00.000+05:00</con:value>
+    </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>

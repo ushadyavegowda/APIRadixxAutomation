@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f76528fa-fc56-469d-b061-cbc6bfa97623" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="LoginDCS" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f76528fa-fc56-469d-b061-cbc6bfa97623fileName">LoginDCS</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Login" id="0a1077c7-b2a6-4877-bc66-ffdf78c772c7">
+    <con:settings/>
+    <con:config service="IAuthenticationSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2/Login" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Login" id="e43b3305-0767-434e-8740-6fcad67abba3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://rdxdcsint.radixxuat.com</con:endpoint>
+        <con:request>{\r
+   "Param" : {\r
+      "UserName" : "${#Project#DCSUsername}",\r
+      "Password" : "${#Project#DCSPassword}",\r
+      "IpAddress" : "",\r
+      "LicenseKey" : "",\r
+      "CultureLCID" : 0\r
+   },\r
+   "SecurityToken" : "",\r
+   "CorrId" : ""\r
+}</con:request>
+        <con:originalUri>http://20q4dcsuat.radixxuat.com/20Q4/Radixx.Ecosystem.Gtwy/Authentication.svc/v2/Login</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="86bd62fd-f22f-45ce-a99e-f75bc49145ad" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="GroovyScript_DCSSecToken" id="7d38d990-b6cd-47d2-88e6-d64f7085d6c2">
+    <con:settings/>
+    <con:config>
+      <script>// importing the Java methods
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+//
+//def DepartureDate = new Date().plus(1)
+//def ModifyDate = new Date().plus(2)
+
+
+def DcsSecToken = context.expand( '${Login#Response#$[\'SecurityToken\']}' )
+testRunner.testCase.testSuite.setPropertyValue("DcsSecToken", DcsSecToken);
+log.info(DcsSecToken)</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

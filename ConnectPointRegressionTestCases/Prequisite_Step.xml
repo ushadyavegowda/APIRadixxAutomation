@@ -4,12 +4,12 @@
     <con:setting id="19b662e5-acaa-4c2d-b343-9c8f079d4d2cfileName">Prequisite_Step</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="93c16e07-4dd5-4c85-9ca2-62f3497b8927" name="1. RetrieveSecuirtyToken" type="request">
+  <con:testStep id="93c16e07-4dd5-4c85-9ca2-62f3497b8927" name="1. RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request id="4ae458c3-17a0-4bf7-88ff-227035d525d4" name="1. RetrieveSecuirtyToken">
+      <con:request id="4ae458c3-17a0-4bf7-88ff-227035d525d4" name="1. RetrieveSecurityToken">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -169,7 +169,7 @@ import java.util.Date;
 //
 //def DepartureDate = new Date().plus(1)
 //def ModifyDate = new Date().plus(2)
-def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
 testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 
 log.info(securityToken)</script>
@@ -200,9 +200,20 @@ def destination = "YYZ"
 def new_Segment = "NRT"
 def flightnum = "699"
 def carriercode = "1D"
+def FBC = "EOW"
 def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
+
+def generator = { String alphabet, int n ->
+  new Random().with {
+    (1..n).collect { alphabet[ nextInt( alphabet.length() ) ] }.join()
+  }
+}
+FirstNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+LastNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+testRunner.testCase.testSuite.setPropertyValue("FirstNameRandom", FirstNameRandom);
+testRunner.testCase.testSuite.setPropertyValue("LasttNameRandom", LastNameRandom);
 
 
 //Date and flight info
@@ -217,6 +228,7 @@ testRunner.testCase.testSuite.setPropertyValue("Destination", destination);
 testRunner.testCase.testSuite.setPropertyValue("New_Segment", new_Segment);
 testRunner.testCase.testSuite.setPropertyValue("flightnum", flightnum);
 testRunner.testCase.testSuite.setPropertyValue("carriercode", carriercode);
+testRunner.testCase.testSuite.setPropertyValue("FBC", FBC);
 testRunner.testCase.testSuite.setPropertyValue("currency", currency);
 testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
@@ -310,7 +322,7 @@ log.info(ModifyDate)</script>
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
 testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 
 log.info(securityToken)
@@ -483,7 +495,12 @@ log.info(DepartureDate)
 log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>FirstNameRandom</con:name>
+      <con:value>aA4DOmm0pvjF7p1</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">

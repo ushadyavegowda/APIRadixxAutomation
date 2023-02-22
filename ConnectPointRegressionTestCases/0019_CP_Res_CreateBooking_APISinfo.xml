@@ -7,17 +7,83 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="LoginDCS" id="76cdfd49-da10-4676-8024-ad642e3411ec">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f76528fa-fc56-469d-b061-cbc6bfa97623</con:targetTestCase>
       <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="dea8fb70-7504-4150-aca0-256df73d4571" name="1. RetrieveFareQuote-1ADT" type="request">
+  <con:testStep type="restrequest" name="1 - GetLFID" id="19642ebd-6830-434e-a8bb-abf190cf5c17">
+    <con:settings/>
+    <con:config service="IDepartureControlSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="1 - GetLFID" id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://rdxdcsint.radixxuat.com</con:endpoint>
+        <con:request>{\r
+   "Param" : {\r
+      "FlightOriginDate" : "${#TestSuite#DepartureDate}",\r
+      "Origin" : "${#TestSuite#Origin}",\r
+      "Destination" : "${#TestSuite#Destination}",\r
+      "FlightNumber" : "${#TestSuite#flightnum}",\r
+      "CarrierCode" : "${#TestSuite#carriercode}",\r
+      "ApplicationUserId" : "${#Project#DCSUsername}",\r
+      "ApplicationId" : "AutomationAPI"\r
+   },\r
+   "SecurityToken" : "${#TestSuite#DcsSecToken}",\r
+   "CorrId" : "string"\r
+}</con:request>
+        <con:originalUri>https://rdxdcsuat.radixxuat.com/RDX/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="Transfer LFID" id="f3320f2a-6594-4d21-ab0d-b1254c6d591f">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>LogicalFlightId</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>1 - GetLFID</con:sourceStep>
+        <con:sourcePath>$['LogicalFlightId']</con:sourcePath>
+        <con:targetType>LFID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="dea8fb70-7504-4150-aca0-256df73d4571" name="2. RetrieveFareQuote-1ADT" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveFareQuote</con:operation>
-      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="1. RetrieveFareQuote-1ADT">
+      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="2. RetrieveFareQuote-1ADT">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -48,9 +114,9 @@
                   <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:FareBasisCode>${#TestSuite#FBC}</rad:FareBasisCode>
                   <rad:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:LFID>-1</rad:LFID>
+                  <rad:LFID>${#TestCase#LFID}</rad:LFID>
                   <rad:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore>
@@ -215,7 +281,7 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>1. RetrieveFareQuote-1ADT</con:sourceStep>
+        <con:sourceStep>2. RetrieveFareQuote-1ADT</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
@@ -226,12 +292,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="62353da4-e8b0-4790-9be2-ce1dac60fbb1" name="2. SummaryPNR" type="request">
+  <con:testStep id="62353da4-e8b0-4790-9be2-ce1dac60fbb1" name="3. SummaryPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>SummaryPNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" incomingWss="" name="2. SummaryPNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" incomingWss="" name="3. SummaryPNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -483,7 +549,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2. SummaryPNR</con:sourceStep>
+        <con:sourceStep>3. SummaryPNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
@@ -494,12 +560,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="fd6c8d23-2606-4bcf-9b71-385e2a124c97" name="3. AssessPaymentMethodFees" type="request">
+  <con:testStep id="fd6c8d23-2606-4bcf-9b71-385e2a124c97" name="4. AssessPaymentMethodFees" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
       <con:operation>AssessPaymentMethodFees</con:operation>
-      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="3. AssessPaymentMethodFees">
+      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="4. AssessPaymentMethodFees">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -662,12 +728,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="6612e59c-9d4e-46c6-93e0-453c7c3b1625" name="4. CreatePNR - Commit Summary" type="request">
+  <con:testStep id="6612e59c-9d4e-46c6-93e0-453c7c3b1625" name="5. CreatePNR - Commit Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="4. CreatePNR - Commit Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="5. CreatePNR - Commit Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -845,7 +911,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ConfirmationNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
+        <con:sourceStep>5. CreatePNR - Commit Summary</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
@@ -857,7 +923,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
+        <con:sourceStep>5. CreatePNR - Commit Summary</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
@@ -868,12 +934,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="fdcba1ae-057e-4a2a-a040-26a0b4ae2fc8" name="5. InsertExternalProcessedPayment" type="request">
+  <con:testStep id="fdcba1ae-057e-4a2a-a040-26a0b4ae2fc8" name="6. InsertExternalProcessedPayment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>InsertExternalProcessedPayment</con:operation>
-      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="5. InsertExternalProcessedPayment">
+      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="6. InsertExternalProcessedPayment">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1154,12 +1220,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="1ac477c9-8c12-4b78-bc98-1c9bd4fede7e" name="6. CreatePNR - SaveReservation" type="request">
+  <con:testStep id="1ac477c9-8c12-4b78-bc98-1c9bd4fede7e" name="7. CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="6. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="7. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1331,12 +1397,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="38a0db91-946a-481c-8d05-8f7c66755a0d" name="7. RetrievePNR" type="request">
+  <con:testStep id="38a0db91-946a-481c-8d05-8f7c66755a0d" name="8. RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request id="2f8df430-f174-4a2d-85f5-3d44b98555f2" incomingWss="" name="7. RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request id="2f8df430-f174-4a2d-85f5-3d44b98555f2" incomingWss="" name="8. RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1399,7 +1465,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:RecordNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:RecordNumber[1]</con:sourcePath>
@@ -1411,7 +1477,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:PhysicalFlightID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
@@ -1423,7 +1489,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FlightNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:FlightNumber[1]</con:sourcePath>
@@ -1434,12 +1500,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="1a2d23d9-b36a-4849-bf78-d8677175db03" name="8. AddUpdateApisInfo" type="request">
+  <con:testStep id="1a2d23d9-b36a-4849-bf78-d8677175db03" name="9. AddUpdateApisInfo" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>AddUpdateApisInfo</con:operation>
-      <con:request id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b" incomingWss="" name="8. AddUpdateApisInfo" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b" incomingWss="" name="9. AddUpdateApisInfo" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1562,12 +1628,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="d63304ba-71b7-4dc9-8d8a-f71b21c2b119" name="9. CreatePNR - SaveReservation" type="request">
+  <con:testStep id="d63304ba-71b7-4dc9-8d8a-f71b21c2b119" name="10. CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="9. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="10. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1746,7 +1812,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>348.50</con:value>
+      <con:value>189.34</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -1754,11 +1820,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>348.50</con:value>
+      <con:value>189.34</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>XZSDTT</con:value>
+      <con:value>SEMQPX</con:value>
     </con:property>
     <con:property>
       <con:name>RecordNumber</con:name>
@@ -1766,11 +1832,15 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>103867</con:value>
+      <con:value>103877</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNum</con:name>
       <con:value>699</con:value>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>186583</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

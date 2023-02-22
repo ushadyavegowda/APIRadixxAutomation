@@ -14,15 +14,18 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>357.00</con:value>
+          <con:value>189.34</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>RM7FNI</con:value>
+          <con:value>G3IB0E</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>357.00</con:value>
+          <con:value>189.34</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -343,7 +346,7 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="b15b5d21-132b-4c74-9140-d4cd90835a97" name="PropertyTransfer 1" type="transfer">
+  <con:testStep id="b15b5d21-132b-4c74-9140-d4cd90835a97" name="Transfer FareID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -452,7 +455,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="dfdb29ae-8ca0-4d76-9133-ed63c95d438a" name="PropertyTransfer 2" type="transfer">
+  <con:testStep id="dfdb29ae-8ca0-4d76-9133-ed63c95d438a" name="Transfer Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -935,7 +938,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:properties>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>164695</con:value>
+      <con:value>186583</con:value>
     </con:property>
     <con:property>
       <con:name>FareBasis</con:name>
@@ -955,7 +958,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>122.00</con:value>
+      <con:value>61.00</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

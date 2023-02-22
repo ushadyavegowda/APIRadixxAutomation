@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/RetrievePassengersByFlight" path="/RetrievePassengersByFlight" id="81bc0f4b-1e30-41a6-995f-c5fd3b8f2e42" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="81bc0f4b-1e30-41a6-995f-c5fd3b8f2e42fileName">%2FRetrievePassengersByFlight</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="c09ce876-7289-432f-baaf-758ea75fc9f0" method="POST">
+    <con:description>RetrievePassengersByFlight
+RetrievePassengersByFlight</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",
+    "AirportCode" : "string",
+    "CarrierCode" : "string",
+    "FlightNumber" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="d4782335-0623-4d6b-8f11-119c3365e055" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "AirportCode" : "string",\r
+    "CarrierCode" : "string",\r
+    "FlightNumber" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

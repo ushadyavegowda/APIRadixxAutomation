@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/UpdateFlightStatus" path="/UpdateFlightStatus" id="fb3c0d22-3c79-401d-8d22-4dc8d7c52100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fb3c0d22-3c79-401d-8d22-4dc8d7c52100fileName">%2FUpdateFlightStatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="9beb7f0d-f054-4b31-a340-21d9748896fe" method="POST">
+    <con:description>UpdateFlightStatus
+UpdateFlightStatus</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",
+    "DepartureAirport" : "string",
+    "CarrierCode" : "string",
+    "OperatingFlightNumber" : "string",
+    "FlightStatus" : "string",
+    "Username" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="feb19588-ada4-489e-99e7-719a4a2a111c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "DepartureAirport" : "string",\r
+    "CarrierCode" : "string",\r
+    "OperatingFlightNumber" : "string",\r
+    "FlightStatus" : "string",\r
+    "Username" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

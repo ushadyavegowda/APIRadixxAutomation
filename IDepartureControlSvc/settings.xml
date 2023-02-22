@@ -1,0 +1,4790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="38b81eb5-1f56-43e8-9314-3ee775edb918" name="IDepartureControlSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/departurecontrol" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>IDepartureControlSvc</con:description>
+  <con:settings>
+    <con:setting id="38b81eb5-1f56-43e8-9314-3ee775edb918fileName">IDepartureControlSvc</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/departurecontrol">
+    <con:part>
+      <con:url>https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/departurecontrol</con:url>
+      <con:content>{
+  "swagger": "2.0",
+  "info": {
+    "title": "IDepartureControlSvc",
+    "description": "IDepartureControlSvc",
+    "version": "20.12.5.1"
+  },
+  "host": "20q4dcsuat.radixxuat.com",
+  "basePath": "/20Q4/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/RetrieveFlightSchedules": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RetrieveFlightSchedules",
+        "description": "RetrieveFlightSchedules",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "ToDepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "Destination": {
+                      "type": "string"
+                    },
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "Origin": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Flights": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "FlightCheckInStatus": {
+                        "type": "string"
+                      },
+                      "MarketingAirlineCode": {
+                        "type": "string"
+                      },
+                      "MarketingFlightNumber": {
+                        "type": "string"
+                      },
+                      "BoardingTime": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "BoardingGate": {
+                        "type": "string"
+                      },
+                      "ArrivalGate": {
+                        "type": "string"
+                      },
+                      "FlightDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "BoardDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      },
+                      "Carrier": {
+                        "type": "string"
+                      },
+                      "SeatConfigId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "FlightStatus": {
+                        "type": "string"
+                      },
+                      "ScheduledDepartTime": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "EstimatedDepartTime": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "ScheduledArrivalTime": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "EstimatedArrivalTime": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "ThruLegs": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightOriginDateLt": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "ArrivalDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "Origin": {
+                              "type": "string"
+                            },
+                            "Destination": {
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Carrier": {
+                              "type": "string"
+                            },
+                            "FlightStatus": {
+                              "type": "string"
+                            },
+                            "SchArrival": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "SchDeparture": {
+                              "format": "date-time",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RetrievePassengersByFlight": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RetrievePassengersByFlight",
+        "description": "RetrievePassengersByFlight",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "AirportCode": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "FlightNumber": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Passengers": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "PaxID": {
+                        "type": "string"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "Row": {
+                        "type": "string"
+                      },
+                      "Itinerary": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "EstDepartureTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "EstArrivalTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FareClass": {
+                              "type": "string"
+                            },
+                            "BoardingGate": {
+                              "type": "string"
+                            },
+                            "ArrivalGate": {
+                              "type": "string"
+                            },
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightOriginDateLt": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "ArrivalDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "Origin": {
+                              "type": "string"
+                            },
+                            "Destination": {
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Carrier": {
+                              "type": "string"
+                            },
+                            "FlightStatus": {
+                              "type": "string"
+                            },
+                            "SchArrival": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "SchDeparture": {
+                              "format": "date-time",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "FrequentFlyerNum": {
+                        "type": "string"
+                      },
+                      "RecordLocator": {
+                        "type": "string"
+                      },
+                      "RecordNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Status": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "FoidInfo": {
+                        "type": "string"
+                      },
+                      "InfantPaxId": {
+                        "type": "string"
+                      },
+                      "PassengerTypeCode": {
+                        "type": "string"
+                      },
+                      "Services": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxServiceKey": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PersonOrgId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "SsrCode": {
+                              "type": "string"
+                            },
+                            "FreeText": {
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "format": "double",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "PersonOrgId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "PtcId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Ptc": {
+                        "type": "string"
+                      },
+                      "PtcGroup": {
+                        "type": "string"
+                      },
+                      "TicketNumber": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CheckInLocator": {
+                        "type": "string"
+                      },
+                      "Currency": {
+                        "type": "string"
+                      },
+                      "KnownTravelerNumber": {
+                        "type": "string"
+                      },
+                      "RedressId": {
+                        "type": "string"
+                      },
+                      "BoardingPassNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Documents": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "IssueCountry": {
+                              "type": "string"
+                            },
+                            "DocumentNumber": {
+                              "type": "string"
+                            },
+                            "ExpirationDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "DocumentType": {
+                              "type": "string"
+                            },
+                            "DocumentTypeCode": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Destinations": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Address": {
+                              "type": "string"
+                            },
+                            "Address2": {
+                              "type": "string"
+                            },
+                            "City": {
+                              "type": "string"
+                            },
+                            "State": {
+                              "type": "string"
+                            },
+                            "Postal": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "IsRoundTripBooking": {
+                        "type": "boolean"
+                      },
+                      "ResSegStatus": {
+                        "type": "string"
+                      },
+                      "LanguageCode": {
+                        "type": "string"
+                      },
+                      "BalanceDue": {
+                        "format": "double",
+                        "type": "integer"
+                      },
+                      "ConfirmationNum": {
+                        "type": "string"
+                      },
+                      "FirstName": {
+                        "type": "string"
+                      },
+                      "MiddleName": {
+                        "type": "string"
+                      },
+                      "LastName": {
+                        "type": "string"
+                      },
+                      "Title": {
+                        "type": "string"
+                      },
+                      "Suffix": {
+                        "type": "string"
+                      },
+                      "Gender": {
+                        "type": "string"
+                      },
+                      "DateOfBirth": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Contacts": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Value": {
+                              "type": "string"
+                            },
+                            "PreferredContactMethod": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PreferenceOrder": {
+                              "format": "int32",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "Weight": {
+                        "type": "string"
+                      },
+                      "Nationality": {
+                        "type": "string"
+                      },
+                      "BirthCountry": {
+                        "type": "string"
+                      },
+                      "ResidenceCountry": {
+                        "type": "string"
+                      },
+                      "Address": {
+                        "type": "string"
+                      },
+                      "Address2": {
+                        "type": "string"
+                      },
+                      "Country": {
+                        "type": "string"
+                      },
+                      "State": {
+                        "type": "string"
+                      },
+                      "City": {
+                        "type": "string"
+                      },
+                      "ZipCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RetrievePassengersByName": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RetrievePassengersByName",
+        "description": "RetrievePassengersByName",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "AirportCode": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "FlightNumber": {
+                      "type": "string"
+                    },
+                    "LastName": {
+                      "type": "string"
+                    },
+                    "FirstName": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Passengers": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "PaxID": {
+                        "type": "string"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "Row": {
+                        "type": "string"
+                      },
+                      "Itinerary": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "EstDepartureTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "EstArrivalTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FareClass": {
+                              "type": "string"
+                            },
+                            "BoardingGate": {
+                              "type": "string"
+                            },
+                            "ArrivalGate": {
+                              "type": "string"
+                            },
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightOriginDateLt": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "ArrivalDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "Origin": {
+                              "type": "string"
+                            },
+                            "Destination": {
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Carrier": {
+                              "type": "string"
+                            },
+                            "FlightStatus": {
+                              "type": "string"
+                            },
+                            "SchArrival": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "SchDeparture": {
+                              "format": "date-time",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "FrequentFlyerNum": {
+                        "type": "string"
+                      },
+                      "RecordLocator": {
+                        "type": "string"
+                      },
+                      "RecordNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Status": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "FoidInfo": {
+                        "type": "string"
+                      },
+                      "InfantPaxId": {
+                        "type": "string"
+                      },
+                      "PassengerTypeCode": {
+                        "type": "string"
+                      },
+                      "Services": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxServiceKey": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PersonOrgId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "SsrCode": {
+                              "type": "string"
+                            },
+                            "FreeText": {
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "format": "double",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "PersonOrgId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "PtcId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Ptc": {
+                        "type": "string"
+                      },
+                      "PtcGroup": {
+                        "type": "string"
+                      },
+                      "TicketNumber": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CheckInLocator": {
+                        "type": "string"
+                      },
+                      "Currency": {
+                        "type": "string"
+                      },
+                      "KnownTravelerNumber": {
+                        "type": "string"
+                      },
+                      "RedressId": {
+                        "type": "string"
+                      },
+                      "BoardingPassNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Documents": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "IssueCountry": {
+                              "type": "string"
+                            },
+                            "DocumentNumber": {
+                              "type": "string"
+                            },
+                            "ExpirationDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "DocumentType": {
+                              "type": "string"
+                            },
+                            "DocumentTypeCode": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Destinations": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Address": {
+                              "type": "string"
+                            },
+                            "Address2": {
+                              "type": "string"
+                            },
+                            "City": {
+                              "type": "string"
+                            },
+                            "State": {
+                              "type": "string"
+                            },
+                            "Postal": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "IsRoundTripBooking": {
+                        "type": "boolean"
+                      },
+                      "ResSegStatus": {
+                        "type": "string"
+                      },
+                      "LanguageCode": {
+                        "type": "string"
+                      },
+                      "BalanceDue": {
+                        "format": "double",
+                        "type": "integer"
+                      },
+                      "ConfirmationNum": {
+                        "type": "string"
+                      },
+                      "FirstName": {
+                        "type": "string"
+                      },
+                      "MiddleName": {
+                        "type": "string"
+                      },
+                      "LastName": {
+                        "type": "string"
+                      },
+                      "Title": {
+                        "type": "string"
+                      },
+                      "Suffix": {
+                        "type": "string"
+                      },
+                      "Gender": {
+                        "type": "string"
+                      },
+                      "DateOfBirth": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Contacts": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Value": {
+                              "type": "string"
+                            },
+                            "PreferredContactMethod": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PreferenceOrder": {
+                              "format": "int32",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "Weight": {
+                        "type": "string"
+                      },
+                      "Nationality": {
+                        "type": "string"
+                      },
+                      "BirthCountry": {
+                        "type": "string"
+                      },
+                      "ResidenceCountry": {
+                        "type": "string"
+                      },
+                      "Address": {
+                        "type": "string"
+                      },
+                      "Address2": {
+                        "type": "string"
+                      },
+                      "Country": {
+                        "type": "string"
+                      },
+                      "State": {
+                        "type": "string"
+                      },
+                      "City": {
+                        "type": "string"
+                      },
+                      "ZipCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RetrievePaxAndSeatsByFlight": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RetrievePaxAndSeatsByFlight",
+        "description": "RetrievePaxAndSeatsByFlight",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "AirportCode": {
+                      "type": "string"
+                    },
+                    "FlightNumber": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Passengers": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "PaxID": {
+                        "type": "string"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "Row": {
+                        "type": "string"
+                      },
+                      "Itinerary": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "EstDepartureTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "EstArrivalTime": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FareClass": {
+                              "type": "string"
+                            },
+                            "BoardingGate": {
+                              "type": "string"
+                            },
+                            "ArrivalGate": {
+                              "type": "string"
+                            },
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightOriginDateLt": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "ArrivalDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "Origin": {
+                              "type": "string"
+                            },
+                            "Destination": {
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Carrier": {
+                              "type": "string"
+                            },
+                            "FlightStatus": {
+                              "type": "string"
+                            },
+                            "SchArrival": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "SchDeparture": {
+                              "format": "date-time",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "FrequentFlyerNum": {
+                        "type": "string"
+                      },
+                      "RecordLocator": {
+                        "type": "string"
+                      },
+                      "RecordNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Status": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "FoidInfo": {
+                        "type": "string"
+                      },
+                      "InfantPaxId": {
+                        "type": "string"
+                      },
+                      "PassengerTypeCode": {
+                        "type": "string"
+                      },
+                      "Services": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxServiceKey": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PersonOrgId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "SsrCode": {
+                              "type": "string"
+                            },
+                            "FreeText": {
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "format": "double",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "PersonOrgId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "PtcId": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Ptc": {
+                        "type": "string"
+                      },
+                      "PtcGroup": {
+                        "type": "string"
+                      },
+                      "TicketNumber": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CheckInLocator": {
+                        "type": "string"
+                      },
+                      "Currency": {
+                        "type": "string"
+                      },
+                      "KnownTravelerNumber": {
+                        "type": "string"
+                      },
+                      "RedressId": {
+                        "type": "string"
+                      },
+                      "BoardingPassNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Documents": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "IssueCountry": {
+                              "type": "string"
+                            },
+                            "DocumentNumber": {
+                              "type": "string"
+                            },
+                            "ExpirationDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "DocumentType": {
+                              "type": "string"
+                            },
+                            "DocumentTypeCode": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Destinations": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "FlightNumber": {
+                              "type": "string"
+                            },
+                            "Address": {
+                              "type": "string"
+                            },
+                            "Address2": {
+                              "type": "string"
+                            },
+                            "City": {
+                              "type": "string"
+                            },
+                            "State": {
+                              "type": "string"
+                            },
+                            "Postal": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "IsRoundTripBooking": {
+                        "type": "boolean"
+                      },
+                      "ResSegStatus": {
+                        "type": "string"
+                      },
+                      "LanguageCode": {
+                        "type": "string"
+                      },
+                      "BalanceDue": {
+                        "format": "double",
+                        "type": "integer"
+                      },
+                      "ConfirmationNum": {
+                        "type": "string"
+                      },
+                      "FirstName": {
+                        "type": "string"
+                      },
+                      "MiddleName": {
+                        "type": "string"
+                      },
+                      "LastName": {
+                        "type": "string"
+                      },
+                      "Title": {
+                        "type": "string"
+                      },
+                      "Suffix": {
+                        "type": "string"
+                      },
+                      "Gender": {
+                        "type": "string"
+                      },
+                      "DateOfBirth": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Contacts": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "PaxId": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Value": {
+                              "type": "string"
+                            },
+                            "PreferredContactMethod": {
+                              "format": "int32",
+                              "type": "integer"
+                            },
+                            "PreferenceOrder": {
+                              "format": "int32",
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "Weight": {
+                        "type": "string"
+                      },
+                      "Nationality": {
+                        "type": "string"
+                      },
+                      "BirthCountry": {
+                        "type": "string"
+                      },
+                      "ResidenceCountry": {
+                        "type": "string"
+                      },
+                      "Address": {
+                        "type": "string"
+                      },
+                      "Address2": {
+                        "type": "string"
+                      },
+                      "Country": {
+                        "type": "string"
+                      },
+                      "State": {
+                        "type": "string"
+                      },
+                      "City": {
+                        "type": "string"
+                      },
+                      "ZipCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "AssignedSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "Cabin": {
+                        "type": "string"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "PtcId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "TravelsWithInf": {
+                        "type": "boolean"
+                      },
+                      "ConfirmationNum": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "HeldSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SeatHoldId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "Held": {
+                        "type": "boolean"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "AvailSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "Cabin": {
+                        "type": "string"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Restrictions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "RestrictionId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionItemType": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionItemId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionCategory": {
+                        "type": "string"
+                      },
+                      "RestrictionType": {
+                        "type": "string"
+                      },
+                      "RestrictionNumber": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionComment": {
+                        "type": "string"
+                      },
+                      "RestrictionActive": {
+                        "type": "boolean"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "BlockedSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "SeatId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RowId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "SeatOrder": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "SeatCabinId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CabinClassId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "SeatWBZoneId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "ServiceId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "ServiceCode": {
+                        "type": "string"
+                      },
+                      "ServiceDescription": {
+                        "type": "string"
+                      },
+                      "WeightIndex": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      },
+                      "SeatAttributes": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "AttributeId": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "AttributeCode": {
+                              "type": "string"
+                            },
+                            "AttributeDescription": {
+                              "type": "string"
+                            },
+                            "AttributeOrder": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "AllowSeating": {
+                              "type": "boolean"
+                            },
+                            "Active": {
+                              "type": "boolean"
+                            },
+                            "SystemAttribute": {
+                              "type": "boolean"
+                            },
+                            "IsOperational": {
+                              "type": "boolean"
+                            },
+                            "IsCommercial": {
+                              "type": "boolean"
+                            },
+                            "IsMarketing": {
+                              "type": "boolean"
+                            },
+                            "CreatedDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "CreatedBy": {
+                              "type": "string"
+                            },
+                            "LastModifiedDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "LastModifiedBy": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Restrictions": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "RestrictionId": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "RestrictionItemType": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "RestrictionItemId": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "RestrictionCategory": {
+                              "type": "string"
+                            },
+                            "RestrictionType": {
+                              "type": "string"
+                            },
+                            "RestrictionNumber": {
+                              "format": "int64",
+                              "type": "integer"
+                            },
+                            "RestrictionComment": {
+                              "type": "string"
+                            },
+                            "RestrictionActive": {
+                              "type": "boolean"
+                            },
+                            "CreatedDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "CreatedBy": {
+                              "type": "string"
+                            },
+                            "LastModifiedDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "LastModifiedBy": {
+                              "type": "string"
+                            },
+                            "DepartureDate": {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "Origin": {
+                              "type": "string"
+                            },
+                            "Destination": {
+                              "type": "string"
+                            },
+                            "CarrierCode": {
+                              "type": "string"
+                            },
+                            "OperatingFlightNumber": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetSeatMap": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetSeatMap",
+        "description": "GetSeatMap",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "SeatConfigurationId": {
+                      "format": "int64",
+                      "type": "integer"
+                    },
+                    "NeedIsReferenced": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Item": {
+                  "properties": {
+                    "SeatConfigurationId": {
+                      "format": "int64",
+                      "type": "integer"
+                    },
+                    "IataAcType": {
+                      "type": "string"
+                    },
+                    "Carrier": {
+                      "type": "string"
+                    },
+                    "LayoutName": {
+                      "type": "string"
+                    },
+                    "Default": {
+                      "type": "boolean"
+                    },
+                    "ConfigurationName": {
+                      "type": "string"
+                    },
+                    "ConfigurationDescription": {
+                      "type": "string"
+                    },
+                    "CreatedDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "CreatedBy": {
+                      "type": "string"
+                    },
+                    "LastModifiedDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "LastModifiedBy": {
+                      "type": "string"
+                    },
+                    "ReferencedInBooking": {
+                      "type": "boolean"
+                    },
+                    "Rows": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "RowId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "SeatConfigId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "RowNumber": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "DeckId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "CreatedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "CreatedBy": {
+                            "type": "string"
+                          },
+                          "LastModifiedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "LastModifiedBy": {
+                            "type": "string"
+                          },
+                          "Seats": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "SeatId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "RowId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "SeatColumn": {
+                                  "type": "string"
+                                },
+                                "SeatOrder": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "SeatCabinId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "CabinClassId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "SeatWBZoneId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "ServiceId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "ServiceCode": {
+                                  "type": "string"
+                                },
+                                "ServiceDescription": {
+                                  "type": "string"
+                                },
+                                "WeightIndex": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "CreatedDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "CreatedBy": {
+                                  "type": "string"
+                                },
+                                "LastModifiedDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "LastModifiedBy": {
+                                  "type": "string"
+                                },
+                                "SeatAttributes": {
+                                  "type": "array",
+                                  "items": {
+                                    "properties": {
+                                      "AttributeId": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "AttributeCode": {
+                                        "type": "string"
+                                      },
+                                      "AttributeDescription": {
+                                        "type": "string"
+                                      },
+                                      "AttributeOrder": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "AllowSeating": {
+                                        "type": "boolean"
+                                      },
+                                      "Active": {
+                                        "type": "boolean"
+                                      },
+                                      "SystemAttribute": {
+                                        "type": "boolean"
+                                      },
+                                      "IsOperational": {
+                                        "type": "boolean"
+                                      },
+                                      "IsCommercial": {
+                                        "type": "boolean"
+                                      },
+                                      "IsMarketing": {
+                                        "type": "boolean"
+                                      },
+                                      "CreatedDate": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                      },
+                                      "CreatedBy": {
+                                        "type": "string"
+                                      },
+                                      "LastModifiedDate": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                      },
+                                      "LastModifiedBy": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Restrictions": {
+                                  "type": "array",
+                                  "items": {
+                                    "properties": {
+                                      "RestrictionId": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "RestrictionItemType": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "RestrictionItemId": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "RestrictionCategory": {
+                                        "type": "string"
+                                      },
+                                      "RestrictionType": {
+                                        "type": "string"
+                                      },
+                                      "RestrictionNumber": {
+                                        "format": "int64",
+                                        "type": "integer"
+                                      },
+                                      "RestrictionComment": {
+                                        "type": "string"
+                                      },
+                                      "RestrictionActive": {
+                                        "type": "boolean"
+                                      },
+                                      "CreatedDate": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                      },
+                                      "CreatedBy": {
+                                        "type": "string"
+                                      },
+                                      "LastModifiedDate": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                      },
+                                      "LastModifiedBy": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Restrictions": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "RestrictionId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "RestrictionItemType": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "RestrictionItemId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "RestrictionCategory": {
+                                  "type": "string"
+                                },
+                                "RestrictionType": {
+                                  "type": "string"
+                                },
+                                "RestrictionNumber": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "RestrictionComment": {
+                                  "type": "string"
+                                },
+                                "RestrictionActive": {
+                                  "type": "boolean"
+                                },
+                                "CreatedDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "CreatedBy": {
+                                  "type": "string"
+                                },
+                                "LastModifiedDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "LastModifiedBy": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Decks": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "DeckId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "DeckCode": {
+                        "type": "string"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "SeatCabins": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SeatCabinId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "SeatConfigId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CabinClassId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CabinDisplayOrder": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "Capacity": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "CabinClasses": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "CabinClassId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "Cabin": {
+                        "type": "string"
+                      },
+                      "CabinClass": {
+                        "type": "string"
+                      },
+                      "CabinOrder": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "SeatWBZones": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SeatWBZoneId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "SeatConfigId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "WBZone": {
+                        "type": "string"
+                      },
+                      "AutoSeatPriority": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "Active": {
+                        "type": "boolean"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      },
+                      "ZoneReferenced": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetConvertedPaymentAmount": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetConvertedPaymentAmount",
+        "description": "GetConvertedPaymentAmount",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "PaymentCurrency": {
+                      "type": "string"
+                    },
+                    "PaxServices": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "TypeCode": {
+                            "type": "string"
+                          },
+                          "Amount": {
+                            "properties": {
+                              "CurCode": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "format": "double",
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "OriginalAmount": {
+                            "properties": {
+                              "CurCode": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "format": "double",
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "ServiceTaxList": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "TaxId": {
+                                  "format": "int64",
+                                  "type": "integer"
+                                },
+                                "Amount": {
+                                  "properties": {
+                                    "CurCode": {
+                                      "type": "string"
+                                    },
+                                    "Value": {
+                                      "format": "double",
+                                      "type": "integer"
+                                    }
+                                  }
+                                },
+                                "OriginalAmount": {
+                                  "properties": {
+                                    "CurCode": {
+                                      "type": "string"
+                                    },
+                                    "Value": {
+                                      "format": "double",
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ApplicationUserId": {
+                      "type": "string"
+                    },
+                    "ApplicationId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "PaymentAmount": {
+                  "format": "double",
+                  "type": "integer"
+                },
+                "ExchangeRateDate": {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                "ExchangeRate": {
+                  "format": "double",
+                  "type": "integer"
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetAllSeatConfigurations": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetAllSeatConfigurations",
+        "description": "GetAllSeatConfigurations",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Items": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SeatConfigurationId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "IataAcType": {
+                        "type": "string"
+                      },
+                      "Carrier": {
+                        "type": "string"
+                      },
+                      "LayoutName": {
+                        "type": "string"
+                      },
+                      "Default": {
+                        "type": "boolean"
+                      },
+                      "ConfigurationName": {
+                        "type": "string"
+                      },
+                      "ConfigurationDescription": {
+                        "type": "string"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      },
+                      "ReferencedInBooking": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetSeatOverlays": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetSeatOverlays",
+        "description": "GetSeatOverlays",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "Origin": {
+                      "type": "string"
+                    },
+                    "Destination": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "OperatingFlightNumber": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "AssignedSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "Cabin": {
+                        "type": "string"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "PtcId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "TravelsWithInf": {
+                        "type": "boolean"
+                      },
+                      "ConfirmationNum": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "HeldSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SeatHoldId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "Held": {
+                        "type": "boolean"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "AvailSeats": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "Cabin": {
+                        "type": "string"
+                      },
+                      "RowNum": {
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "Seat": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Restrictions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "RestrictionId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionItemType": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionItemId": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionCategory": {
+                        "type": "string"
+                      },
+                      "RestrictionType": {
+                        "type": "string"
+                      },
+                      "RestrictionNumber": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "RestrictionComment": {
+                        "type": "string"
+                      },
+                      "RestrictionActive": {
+                        "type": "boolean"
+                      },
+                      "CreatedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "CreatedBy": {
+                        "type": "string"
+                      },
+                      "LastModifiedDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "LastModifiedBy": {
+                        "type": "string"
+                      },
+                      "DepartureDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "Origin": {
+                        "type": "string"
+                      },
+                      "Destination": {
+                        "type": "string"
+                      },
+                      "CarrierCode": {
+                        "type": "string"
+                      },
+                      "OperatingFlightNumber": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetLogicalFlightAndDepartDate": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetLogicalFlightAndDepartDate",
+        "description": "GetLogicalFlightAndDepartDate",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "FlightOriginDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "Origin": {
+                      "type": "string"
+                    },
+                    "Destination": {
+                      "type": "string"
+                    },
+                    "FlightNumber": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "ApplicationUserId": {
+                      "type": "string"
+                    },
+                    "ApplicationId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "ActualDepartDate": {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                "LogicalFlightId": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/UpdateFlightStatus": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "UpdateFlightStatus",
+        "description": "UpdateFlightStatus",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "DepartureAirport": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "OperatingFlightNumber": {
+                      "type": "string"
+                    },
+                    "FlightStatus": {
+                      "type": "string"
+                    },
+                    "Username": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/UpdatePassengerDetails": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "UpdatePassengerDetails",
+        "description": "UpdatePassengerDetails",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "DepartureAirport": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "OperatingFlightNumber": {
+                      "type": "string"
+                    },
+                    "PassengersInfo": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "PaxID": {
+                            "type": "string"
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "KnownTravellerNumber": {
+                            "type": "string"
+                          },
+                          "RedressNumber": {
+                            "type": "string"
+                          },
+                          "PaxInfo": {
+                            "properties": {
+                              "Gender": {
+                                "type": "string"
+                              },
+                              "BirthDate": {
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              "BirthCountry": {
+                                "type": "string"
+                              },
+                              "Nationality": {
+                                "type": "string"
+                              },
+                              "ResidenceCountry": {
+                                "type": "string"
+                              },
+                              "Weight": {
+                                "format": "double",
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "DestinationAddress": {
+                            "properties": {
+                              "CityName": {
+                                "type": "string"
+                              },
+                              "CountryCode": {
+                                "type": "string"
+                              },
+                              "PostalCode": {
+                                "type": "string"
+                              },
+                              "StateName": {
+                                "type": "string"
+                              },
+                              "StreetAddress1": {
+                                "type": "string"
+                              },
+                              "StreetAddress2": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "DocumentInfo": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "FirstName": {
+                                  "type": "string"
+                                },
+                                "LastName": {
+                                  "type": "string"
+                                },
+                                "MiddleName": {
+                                  "type": "string"
+                                },
+                                "DocumentType": {
+                                  "type": "string"
+                                },
+                                "DocumentNumber": {
+                                  "type": "string"
+                                },
+                                "IssuingCountryCode": {
+                                  "type": "string"
+                                },
+                                "ExpiryDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "DocumentScanned": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "ContactInfo": {
+                            "properties": {
+                              "PostalAddress": {
+                                "properties": {
+                                  "StreetAddress1": {
+                                    "type": "string"
+                                  },
+                                  "StreetAddress2": {
+                                    "type": "string"
+                                  },
+                                  "CityName": {
+                                    "type": "string"
+                                  },
+                                  "StateName": {
+                                    "type": "string"
+                                  },
+                                  "PostalCode": {
+                                    "type": "string"
+                                  },
+                                  "CountryCode": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "ContactTypeList": {
+                                "type": "array",
+                                "items": {
+                                  "properties": {
+                                    "ContactTypeText": {
+                                      "type": "string"
+                                    },
+                                    "ContactValueText": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ApplicationUserId": {
+                      "type": "string"
+                    },
+                    "ApplicationId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/UpdateFlightDetails": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "UpdateFlightDetails",
+        "description": "UpdateFlightDetails",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "DepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "DepartureAirport": {
+                      "type": "string"
+                    },
+                    "CarrierCode": {
+                      "type": "string"
+                    },
+                    "OperatingFlightNumber": {
+                      "type": "string"
+                    },
+                    "Username": {
+                      "type": "string"
+                    },
+                    "EstimatedDepartureTime": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "EstimatedArrivalTime": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "TimeOutOfGate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "TimeOffGround": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "TimeOnGround": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "TimeAtGate": {
+                      "format": "date-time",
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/UpdatePassengerStatus": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "UpdatePassengerStatus",
+        "description": "UpdatePassengerStatus",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "PassengerStatusList": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "DepartureDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "DepartureAirport": {
+                            "type": "string"
+                          },
+                          "Carrier": {
+                            "type": "string"
+                          },
+                          "OperatingFlightNumber": {
+                            "type": "string"
+                          },
+                          "PaxId": {
+                            "type": "string"
+                          },
+                          "ConfirmationNumber": {
+                            "type": "string"
+                          },
+                          "UpdateStatusAction": {
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "BoardingPassNumber": {
+                            "format": "double",
+                            "type": "integer"
+                          },
+                          "UserId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AddBaggage": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "AddBaggage",
+        "description": "AddBaggage",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "Passengers": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "Itinerary": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "Bags": {
+                                  "type": "array",
+                                  "items": {
+                                    "properties": {
+                                      "BagNumber": {
+                                        "type": "string"
+                                      },
+                                      "Weight": {
+                                        "format": "double",
+                                        "type": "integer"
+                                      },
+                                      "Unit": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "DepartureDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "Origin": {
+                                  "type": "string"
+                                },
+                                "Destination": {
+                                  "type": "string"
+                                },
+                                "CarrierCode": {
+                                  "type": "string"
+                                },
+                                "OperatingFlightNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "RecordNum": {
+                            "format": "int32",
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RemoveBaggage": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RemoveBaggage",
+        "description": "RemoveBaggage",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "Passengers": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "Itinerary": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "Bags": {
+                                  "type": "array",
+                                  "items": {
+                                    "properties": {
+                                      "BagNumber": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "DepartureDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "Origin": {
+                                  "type": "string"
+                                },
+                                "Destination": {
+                                  "type": "string"
+                                },
+                                "CarrierCode": {
+                                  "type": "string"
+                                },
+                                "OperatingFlightNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "RecordNum": {
+                            "format": "int32",
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AddSeat": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "AddSeat",
+        "description": "AddSeat",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "Passengers": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "Itinerary": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "Seat": {
+                                  "type": "string"
+                                },
+                                "Row": {
+                                  "format": "int32",
+                                  "type": "integer"
+                                },
+                                "DepartureDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "Origin": {
+                                  "type": "string"
+                                },
+                                "Destination": {
+                                  "type": "string"
+                                },
+                                "CarrierCode": {
+                                  "type": "string"
+                                },
+                                "OperatingFlightNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "RecordNum": {
+                            "format": "int32",
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RemoveSeat": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "RemoveSeat",
+        "description": "RemoveSeat",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "Passengers": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "Itinerary": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "DepartureDate": {
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                "Origin": {
+                                  "type": "string"
+                                },
+                                "Destination": {
+                                  "type": "string"
+                                },
+                                "CarrierCode": {
+                                  "type": "string"
+                                },
+                                "OperatingFlightNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "RecordNum": {
+                            "format": "int32",
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AddPayment": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "AddPayment",
+        "description": "AddPayment",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "Payments": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "PaymentInfoId": {
+                            "type": "string"
+                          },
+                          "PaymentMethodCode": {
+                            "type": "string"
+                          },
+                          "BaseAmount": {
+                            "properties": {
+                              "CurCode": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "format": "double",
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "Amount": {
+                            "properties": {
+                              "CurCode": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "format": "double",
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "ExchangeRate": {
+                            "format": "double",
+                            "type": "integer"
+                          },
+                          "ExchangeRateDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "Comment": {
+                            "type": "string"
+                          },
+                          "PayerRefId": {
+                            "type": "string"
+                          },
+                          "PaxServiceRefIds": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "Payer": {
+                            "properties": {
+                              "PayerId": {
+                                "type": "string"
+                              },
+                              "Individual": {
+                                "properties": {
+                                  "Birthdate": {
+                                    "type": "string"
+                                  },
+                                  "BirthplaceText": {
+                                    "type": "string"
+                                  },
+                                  "GenderCode": {
+                                    "type": "string"
+                                  },
+                                  "GivenName": {
+                                    "type": "string"
+                                  },
+                                  "MiddleName": {
+                                    "type": "string"
+                                  },
+                                  "SuffixName": {
+                                    "type": "string"
+                                  },
+                                  "SurName": {
+                                    "type": "string"
+                                  },
+                                  "TitleName": {
+                                    "type": "string"
+                                  },
+                                  "Weight": {
+                                    "format": "double",
+                                    "type": "integer"
+                                  }
+                                }
+                              },
+                              "ContactInfo": {
+                                "properties": {
+                                  "PostalAddress": {
+                                    "properties": {
+                                      "StreetAddress1": {
+                                        "type": "string"
+                                      },
+                                      "StreetAddress2": {
+                                        "type": "string"
+                                      },
+                                      "CityName": {
+                                        "type": "string"
+                                      },
+                                      "StateName": {
+                                        "type": "string"
+                                      },
+                                      "PostalCode": {
+                                        "type": "string"
+                                      },
+                                      "CountryCode": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "ContactTypeList": {
+                                    "type": "array",
+                                    "items": {
+                                      "properties": {
+                                        "ContactTypeText": {
+                                          "type": "string"
+                                        },
+                                        "ContactValueText": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Passengers": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "Itinerary": {
+                                  "type": "array",
+                                  "items": {
+                                    "properties": {
+                                      "DepartureDate": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                      },
+                                      "Origin": {
+                                        "type": "string"
+                                      },
+                                      "Destination": {
+                                        "type": "string"
+                                      },
+                                      "CarrierCode": {
+                                        "type": "string"
+                                      },
+                                      "OperatingFlightNumber": {
+                                        "type": "string"
+                                      },
+                                      "Services": {
+                                        "type": "array",
+                                        "items": {
+                                          "properties": {
+                                            "TypeCode": {
+                                              "type": "string"
+                                            },
+                                            "FreeFormText": {
+                                              "type": "string"
+                                            },
+                                            "CurrencyCode": {
+                                              "type": "string"
+                                            },
+                                            "Amount": {
+                                              "properties": {
+                                                "CurCode": {
+                                                  "type": "string"
+                                                },
+                                                "Value": {
+                                                  "format": "double",
+                                                  "type": "integer"
+                                                }
+                                              }
+                                            },
+                                            "OriginalAmount": {
+                                              "properties": {
+                                                "CurCode": {
+                                                  "type": "string"
+                                                },
+                                                "Value": {
+                                                  "format": "double",
+                                                  "type": "integer"
+                                                }
+                                              }
+                                            },
+                                            "ServiceTaxList": {
+                                              "type": "array",
+                                              "items": {
+                                                "properties": {
+                                                  "PaxServiceTaxId": {
+                                                    "type": "string"
+                                                  },
+                                                  "TaxId": {
+                                                    "format": "int64",
+                                                    "type": "integer"
+                                                  },
+                                                  "CodeType": {
+                                                    "type": "string"
+                                                  },
+                                                  "Description": {
+                                                    "type": "string"
+                                                  },
+                                                  "Amount": {
+                                                    "properties": {
+                                                      "CurCode": {
+                                                        "type": "string"
+                                                      },
+                                                      "Value": {
+                                                        "format": "double",
+                                                        "type": "integer"
+                                                      }
+                                                    }
+                                                  },
+                                                  "OriginalAmount": {
+                                                    "properties": {
+                                                      "CurCode": {
+                                                        "type": "string"
+                                                      },
+                                                      "Value": {
+                                                        "format": "double",
+                                                        "type": "integer"
+                                                      }
+                                                    }
+                                                  },
+                                                  "ExchangeRateDate": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                  },
+                                                  "ExchangeRate": {
+                                                    "format": "double",
+                                                    "type": "integer"
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "PriceAmountId": {
+                                              "type": "string"
+                                            },
+                                            "PaxServiceId": {
+                                              "type": "string"
+                                            },
+                                            "ExchangeRateDate": {
+                                              "format": "date-time",
+                                              "type": "string"
+                                            },
+                                            "ExchangeRate": {
+                                              "format": "double",
+                                              "type": "integer"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "CheckinLocator": {
+                                  "type": "string"
+                                },
+                                "RecordNum": {
+                                  "format": "int32",
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ApplicationUserId": {
+                      "type": "string"
+                    },
+                    "ApplicationId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Services": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "PaxServiceKey": {
+                        "type": "string"
+                      },
+                      "PaxSegmentRefId": {
+                        "type": "string"
+                      },
+                      "DatedOperatingLegRefId": {
+                        "type": "string"
+                      },
+                      "CodeType": {
+                        "type": "string"
+                      },
+                      "Amount": {
+                        "properties": {
+                          "CurCode": {
+                            "type": "string"
+                          },
+                          "Value": {
+                            "format": "double",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "OriginalAmount": {
+                        "properties": {
+                          "CurCode": {
+                            "type": "string"
+                          },
+                          "Value": {
+                            "format": "double",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "FreeFormComment": {
+                        "type": "string"
+                      },
+                      "PriceAmountId": {
+                        "type": "string"
+                      },
+                      "PaxServiceId": {
+                        "type": "string"
+                      },
+                      "ExchangeRateDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "ExchangeRate": {
+                        "format": "double",
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetServices": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "GetServices",
+        "description": "GetServices",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Services": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "SsrCode": {
+                        "type": "string"
+                      },
+                      "CategoryDescription": {
+                        "type": "string"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "Priceable": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CancelZeroChargeService": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "CancelZeroChargeService",
+        "description": "CancelZeroChargeService",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "Services": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "PaxID": {
+                            "type": "string"
+                          },
+                          "PaxServiceKey": {
+                            "type": "string"
+                          },
+                          "CodeType": {
+                            "type": "string"
+                          },
+                          "ApplicationUserId": {
+                            "type": "string"
+                          },
+                          "ApplicationId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ReaccomPassengers": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "ReaccomPassengers",
+        "description": "ReaccomPassengers",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "Origin": {
+                      "type": "string"
+                    },
+                    "OriginalFlightNumber": {
+                      "type": "string"
+                    },
+                    "OriginalCarrier": {
+                      "type": "string"
+                    },
+                    "OriginalDepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "NewFlightNumber": {
+                      "type": "string"
+                    },
+                    "NewCarrier": {
+                      "type": "string"
+                    },
+                    "NewDepartureDate": {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "Passengers": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "PaxId": {
+                            "type": "string"
+                          },
+                          "CheckinLocator": {
+                            "type": "string"
+                          },
+                          "Cabin": {
+                            "type": "string"
+                          },
+                          "Row": {
+                            "type": "string"
+                          },
+                          "Seat": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "ApplicationUserId": {
+                      "type": "string"
+                    },
+                    "ApplicationId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "PaxList": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "OldPaxId": {
+                        "type": "string"
+                      },
+                      "NewPaxId": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Operations"
+    }
+  ]
+}</con:content>
+      <con:type>https://swagger.io/swagger2/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>${#Project#RestEndpoint}</con:endpoint>
+  </con:endpoints>
+</con:interface>

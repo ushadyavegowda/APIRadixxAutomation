@@ -7,17 +7,83 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="LoginDCS" id="1a2bd46e-39a1-4f36-b92c-ac9e9a1a0a56">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f76528fa-fc56-469d-b061-cbc6bfa97623</con:targetTestCase>
       <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="211c3ecc-0fcb-4a31-8f22-af3d348abce6" name="1. RetrieveFareQuote-10ADT" type="request">
+  <con:testStep type="restrequest" name="1 - GetLFID" id="06663534-6829-4d8e-97b2-53b8050d4ddf">
+    <con:settings/>
+    <con:config service="IDepartureControlSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="1 - GetLFID" id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://rdxdcsint.radixxuat.com</con:endpoint>
+        <con:request>{\r
+   "Param" : {\r
+      "FlightOriginDate" : "${#TestSuite#DepartureDate}",\r
+      "Origin" : "${#TestSuite#Origin}",\r
+      "Destination" : "${#TestSuite#Destination}",\r
+      "FlightNumber" : "${#TestSuite#flightnum}",\r
+      "CarrierCode" : "${#TestSuite#carriercode}",\r
+      "ApplicationUserId" : "${#Project#DCSUsername}",\r
+      "ApplicationId" : "AutomationAPI"\r
+   },\r
+   "SecurityToken" : "${#TestSuite#DcsSecToken}",\r
+   "CorrId" : "string"\r
+}</con:request>
+        <con:originalUri>https://rdxdcsuat.radixxuat.com/RDX/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="Transfer LFID" id="4603e9b3-d022-401b-a64b-7e83f74a5f3e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>LogicalFlightId</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>1 - GetLFID</con:sourceStep>
+        <con:sourcePath>$['LogicalFlightId']</con:sourcePath>
+        <con:targetType>LFID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="211c3ecc-0fcb-4a31-8f22-af3d348abce6" name="2. RetrieveFareQuote-10ADT" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveFareQuote</con:operation>
-      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="1. RetrieveFareQuote-10ADT">
+      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="2. RetrieveFareQuote-10ADT">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -48,9 +114,9 @@
                   <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:FareBasisCode>${#TestSuite#FBC}</rad:FareBasisCode>
                   <rad:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:LFID>-1</rad:LFID>
+                  <rad:LFID>${#TestCase#LFID}</rad:LFID>
                   <rad:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore>
@@ -215,7 +281,7 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FareID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>1. RetrieveFareQuote-10ADT</con:sourceStep>
+        <con:sourceStep>2. RetrieveFareQuote-10ADT</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
@@ -226,487 +292,486 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="2f841168-7428-4b36-bdee-5af1dfb318b0" name="2. SummaryPNR" type="request">
+  <con:testStep id="2f841168-7428-4b36-bdee-5af1dfb318b0" name="3. SummaryPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>SummaryPNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" incomingWss="" name="2. SummaryPNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="2be439c7-3902-4fc8-90ff-9b581f5f466e" incomingWss="" name="3. SummaryPNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<?xml version="1.0" encoding="UTF-8"?>\r
-<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">\r
-   <s:Body>\r
-      <SummaryPNR xmlns="http://tempuri.org/">\r
-         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r
-            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>\r
-            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <CarrierCode>\r
-                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>\r
-               </CarrierCode>\r
-            </CarrierCodes>\r
-            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>\r
-            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">web</HistoricUserName>\r
-            <a:ActionType>GetSummary</a:ActionType>\r
-            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">\r
-               <b:SeriesNumber>299</b:SeriesNumber>\r
-               <b:ConfirmationNumber i:nil="true">${Data Source#ConfirmationNumber}</b:ConfirmationNumber>\r
-            </a:ReservationInfo>\r
-            <a:SecurityToken>${#TestCase#securityToken}</a:SecurityToken>\r
-            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>\r
-            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>\r
-            <a:IATANum i:nil="true">${Data Source#IATANum}</a:IATANum>\r
-            <a:User i:nil="true">${Data Source#User}</a:User>\r
-            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>\r
-            <a:PromoCode>${empty}</a:PromoCode>\r
-            <a:ExternalBookingID i:nil="true">${Data Source#ExternalBookingID}</a:ExternalBookingID>\r
-            <a:Address>\r
-               <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-               <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-               <a:City i:nil="true">${Data Source#City}</a:City>\r
-               <a:State i:nil="true">${Data Source#State}</a:State>\r
-               <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-               <a:Country i:nil="true">${Data Source#Country}</a:Country>\r
-               <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-               <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-               <a:PhoneNumber>${#TestSuite#p_PhoneNumber}</a:PhoneNumber>\r
-               <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-            </a:Address>\r
-            <a:ContactInfos i:nil="true" />\r
-            <a:Passengers>\r
-               <a:Person>\r
-                  <a:PersonOrgID>-1</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>ONE</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483648</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474836</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-2</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>TWO</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483647</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474835</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-3</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>THREE</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483646</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474834</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-4</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>FOUR</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483645</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474833</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-5</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>FIVE</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483644</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474832</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-6</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>SIX</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483643</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474831</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-7</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>SEVEN</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483642</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474830</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-8</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>EIGHT</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483641</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474829</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-9</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>NINE</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483640</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474828</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-			   <a:Person>\r
-                  <a:PersonOrgID>-10</a:PersonOrgID>\r
-                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>\r
-                  <a:LastName>TEN</a:LastName>\r
-                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>\r
-                  <a:Age>${#TestSuite#p_Age}</a:Age>\r
-                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>\r
-                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>\r
-                  <a:Title i:nil="true">${Data Source#Title}</a:Title>\r
-                  <a:NationalityLaguageID>1</a:NationalityLaguageID>\r
-                  <a:RelationType>Self</a:RelationType>\r
-                  <a:WBCID>-2147483639</a:WBCID>\r
-                  <a:PTCID>1</a:PTCID>\r
-                  <a:PTC>ADT</a:PTC>\r
-                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>\r
-                  <a:RedressNumber i:nil="true">${Data Source#RedressNumber}</a:RedressNumber>\r
-                  <a:KnownTravelerNumber i:nil="true">${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>\r
-                  <a:MarketingOptIn>true</a:MarketingOptIn>\r
-                  <a:UseInventory>true</a:UseInventory>\r
-                  <a:Address>\r
-                     <a:Address1 i:nil="true">${Data Source#Address1}</a:Address1>\r
-                     <a:Address2 i:nil="true">${Data Source#Address2}</a:Address2>\r
-                     <a:City i:nil="true">${Data Source#City}</a:City>\r
-                     <a:State i:nil="true">${Data Source#State}</a:State>\r
-                     <a:Postal i:nil="true">${Data Source#Postal}</a:Postal>\r
-                     <a:Country>0</a:Country>\r
-                     <a:CountryCode i:nil="true">${Data Source#CountryCode}</a:CountryCode>\r
-                     <a:AreaCode i:nil="true">${Data Source#AreaCode}</a:AreaCode>\r
-                     <a:PhoneNumber i:nil="true">${Data Source#PhoneNumber}</a:PhoneNumber>\r
-                     <a:Display i:nil="true">${Data Source#Display}</a:Display>\r
-                  </a:Address>\r
-                  <a:Company i:nil="true">${Data Source#Company}</a:Company>\r
-                  <a:Comments i:nil="true">${Data Source#Comments}</a:Comments>\r
-                  <a:Passport i:nil="true">${Data Source#Passport}</a:Passport>\r
-                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>\r
-                  <a:ProfileId>-21474827</a:ProfileId>\r
-                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>\r
-                  <a:ContactInfos i:nil="true" />\r
-                  <a:FrequentFlyerNumber i:nil="true">${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>\r
-                  <a:Suffix i:nil="true">${Data Source#Suffix}</a:Suffix>\r
-               </a:Person>\r
-            </a:Passengers>\r
-            <a:Segments>\r
-               <a:Segment>\r
-                  <a:PersonOrgID>-1</a:PersonOrgID>\r
-                  <a:FareInformationID>${#TestCase#FareId}</a:FareInformationID>\r
-                  <a:MarketingCode>1</a:MarketingCode>\r
-                  <a:StoreFrontID>1</a:StoreFrontID>\r
-                  <a:RecordLocator i:nil="true">${Data Source#RecordLocator}</a:RecordLocator>\r
-                  <a:SpecialServices i:nil="true" />\r
-                  <a:Seats i:nil="true" />\r
-                  <a:CRSCode i:nil="true">${Data Source#CRSCode}</a:CRSCode>\r
-               </a:Segment>\r
-            </a:Segments>\r
-            <a:Payments i:nil="true" />\r
-            <a:Comment i:nil="true">${Data Source#Comment}</a:Comment>\r
-            <a:ReferralID i:nil="true">${Data Source#ReferralID}</a:ReferralID>\r
-         </SummaryPnrRequest>\r
-      </SummaryPNR>\r
-   </s:Body>\r
-</s:Envelope>\r]]></con:request>
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <SummaryPNR xmlns="http://tempuri.org/">
+         <SummaryPnrRequest xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>
+            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <CarrierCode>
+                  <AccessibleCarrierCode>${#TestSuite#carriercode}</AccessibleCarrierCode>
+               </CarrierCode>
+            </CarrierCodes>
+            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">::1</ClientIPAddress>
+            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">web</HistoricUserName>
+            <a:ActionType>GetSummary</a:ActionType>
+            <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <b:SeriesNumber>299</b:SeriesNumber>
+               <b:ConfirmationNumber>${Data Source#ConfirmationNumber}</b:ConfirmationNumber>
+            </a:ReservationInfo>
+            <a:SecurityToken>${#TestCase#securityToken}</a:SecurityToken>
+            <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>
+            <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>
+            <a:IATANum>${Data Source#IATANum}</a:IATANum>
+            <a:User>${Data Source#User}</a:User>
+            <a:ReceiptLanguageID>1</a:ReceiptLanguageID>
+            <a:PromoCode>${empty}</a:PromoCode>
+            <a:ExternalBookingID>${Data Source#ExternalBookingID}</a:ExternalBookingID>
+            <a:Address>
+               <a:Address1>${Data Source#Address1}</a:Address1>
+               <a:Address2>${Data Source#Address2}</a:Address2>
+               <a:City>${Data Source#City}</a:City>
+               <a:State>${Data Source#State}</a:State>
+               <a:Postal>${Data Source#Postal}</a:Postal>
+               <a:Country>${Data Source#Country}</a:Country>
+               <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+               <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+               <a:PhoneNumber>${#TestSuite#p_PhoneNumber}</a:PhoneNumber>
+               <a:Display>${Data Source#Display}</a:Display>
+            </a:Address>
+            <a:ContactInfos i:nil="true"/>
+            <a:Passengers>
+               <a:Person>
+                  <a:PersonOrgID>-1</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>ONE</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483648</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474836</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-2</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>TWO</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483647</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474835</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-3</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>THREE</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483646</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474834</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-4</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>FOUR</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483645</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474833</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-5</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>FIVE</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483644</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474832</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-6</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>SIX</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483643</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474831</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-7</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>SEVEN</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483642</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474830</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-8</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>EIGHT</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483641</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474829</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-9</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>NINE</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483640</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474828</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+			   <a:Person>
+                  <a:PersonOrgID>-10</a:PersonOrgID>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
+                  <a:LastName>TEN</a:LastName>
+                  <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
+                  <a:Age>${#TestSuite#p_Age}</a:Age>
+                  <a:DOB>${#TestSuite#p_DOB}</a:DOB>
+                  <a:Gender>${#TestSuite#p_Gender}</a:Gender>
+                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:NationalityLaguageID>1</a:NationalityLaguageID>
+                  <a:RelationType>Self</a:RelationType>
+                  <a:WBCID>-2147483639</a:WBCID>
+                  <a:PTCID>1</a:PTCID>
+                  <a:PTC>ADT</a:PTC>
+                  <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
+                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
+                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:MarketingOptIn>true</a:MarketingOptIn>
+                  <a:UseInventory>true</a:UseInventory>
+                  <a:Address>
+                     <a:Address1>${Data Source#Address1}</a:Address1>
+                     <a:Address2>${Data Source#Address2}</a:Address2>
+                     <a:City>${Data Source#City}</a:City>
+                     <a:State>${Data Source#State}</a:State>
+                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Country>0</a:Country>
+                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
+                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
+                     <a:Display>${Data Source#Display}</a:Display>
+                  </a:Address>
+                  <a:Company>${Data Source#Company}</a:Company>
+                  <a:Comments>${Data Source#Comments}</a:Comments>
+                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
+                  <a:ProfileId>-21474827</a:ProfileId>
+                  <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
+                  <a:ContactInfos i:nil="true"/>
+                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
+                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+               </a:Person>
+            </a:Passengers>
+            <a:Segments>
+               <a:Segment>
+                  <a:PersonOrgID>-1</a:PersonOrgID>
+                  <a:FareInformationID>${#TestCase#FareId}</a:FareInformationID>
+                  <a:MarketingCode>1</a:MarketingCode>
+                  <a:StoreFrontID>1</a:StoreFrontID>
+                  <a:RecordLocator>${Data Source#RecordLocator}</a:RecordLocator>
+                  <a:SpecialServices i:nil="true"/>
+                  <a:Seats i:nil="true"/>
+                  <a:CRSCode>${Data Source#CRSCode}</a:CRSCode>
+               </a:Segment>
+            </a:Segments>
+            <a:Payments i:nil="true"/>
+            <a:Comment>${Data Source#Comment}</a:Comment>
+            <a:ReferralID>${Data Source#ReferralID}</a:ReferralID>
+         </SummaryPnrRequest>
+      </SummaryPNR>
+   </s:Body>
+</s:Envelope>]]></con:request>
         <con:assertion id="17a69fe6-8bb2-48de-b2f3-0b1d2de12236" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="aa1ac3cc-4719-439c-87ae-d23dd79f63f5" name="XPath Match" type="XPath Match">
           <con:configuration>
@@ -853,7 +918,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2. SummaryPNR</con:sourceStep>
+        <con:sourceStep>3. SummaryPNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
@@ -864,12 +929,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="3e2205b1-3543-4737-8100-44cef0e38c15" name="3. AssessPaymentMethodFees" type="request">
+  <con:testStep id="3e2205b1-3543-4737-8100-44cef0e38c15" name="4. AssessPaymentMethodFees" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
       <con:operation>AssessPaymentMethodFees</con:operation>
-      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="3. AssessPaymentMethodFees">
+      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="4. AssessPaymentMethodFees">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1032,12 +1097,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="d10ba4b4-e45f-494e-80f1-62a21ae195fc" name="4. CreatePNR - Commit Summary" type="request">
+  <con:testStep id="d10ba4b4-e45f-494e-80f1-62a21ae195fc" name="5. CreatePNR - Commit Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="4. CreatePNR - Commit Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="5. CreatePNR - Commit Summary" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1215,7 +1280,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ConfirmationNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
+        <con:sourceStep>5. CreatePNR - Commit Summary</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
@@ -1227,7 +1292,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:ReservationBalance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. CreatePNR - Commit Summary</con:sourceStep>
+        <con:sourceStep>5. CreatePNR - Commit Summary</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
@@ -1238,12 +1303,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="b31efd28-b02a-41cf-9463-5c41e853904f" name="5. InsertExternalProcessedPayment" type="request">
+  <con:testStep id="b31efd28-b02a-41cf-9463-5c41e853904f" name="6. InsertExternalProcessedPayment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>InsertExternalProcessedPayment</con:operation>
-      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="5. InsertExternalProcessedPayment">
+      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="6. InsertExternalProcessedPayment">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1524,12 +1589,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="36cd34e5-9103-44a0-a1f9-e327985b2a2e" name="6. CreatePNR - SaveReservation" type="request">
+  <con:testStep id="36cd34e5-9103-44a0-a1f9-e327985b2a2e" name="7. CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="6. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="7. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1701,12 +1766,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="dc97504e-d2b4-47b8-bf5a-c6da5f43f3f1" name="7. RetrievePNR" type="request">
+  <con:testStep id="dc97504e-d2b4-47b8-bf5a-c6da5f43f3f1" name="8. RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request id="2f8df430-f174-4a2d-85f5-3d44b98555f2" incomingWss="" name="7. RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request id="2f8df430-f174-4a2d-85f5-3d44b98555f2" incomingWss="" name="8. RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1769,7 +1834,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:RecordNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:RecordNumber[1]</con:sourcePath>
@@ -1781,7 +1846,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>a:PhysicalFlightID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
@@ -1793,7 +1858,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FlightNumber</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7. RetrievePNR</con:sourceStep>
+        <con:sourceStep>8. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:FlightNumber[1]</con:sourcePath>
@@ -1804,12 +1869,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="6fe56d00-34b7-425f-b1eb-78ac8f3cf80f" name="8. AddUpdateApisInfo" type="request">
+  <con:testStep id="6fe56d00-34b7-425f-b1eb-78ac8f3cf80f" name="9. AddUpdateApisInfo" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>AddUpdateApisInfo</con:operation>
-      <con:request id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b" incomingWss="" name="8. AddUpdateApisInfo" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request id="4e9ccb93-13f0-4b6f-b53c-19f0d3bba00b" incomingWss="" name="9. AddUpdateApisInfo" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1932,12 +1997,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="2c9ed0f4-b8bf-499a-bd72-f364d558d0c1" name="9. CreatePNR - SaveReservation" type="request">
+  <con:testStep id="2c9ed0f4-b8bf-499a-bd72-f364d558d0c1" name="10. CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="9. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="10. CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -2116,7 +2181,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>3570.00</con:value>
+      <con:value>1893.40</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -2124,23 +2189,27 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>3570.00</con:value>
+      <con:value>1893.40</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>8VIF5H</con:value>
+      <con:value>SGRZEU</con:value>
     </con:property>
     <con:property>
       <con:name>RecordNumber</con:name>
-      <con:value>8</con:value>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>95803</con:value>
+      <con:value>103877</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNum</con:name>
-      <con:value>913</con:value>
+      <con:value>699</con:value>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>186583</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

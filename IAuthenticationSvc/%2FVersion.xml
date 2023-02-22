@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/Version" path="/Version" id="64985d4a-2938-4813-9baf-d4de4ce0d466" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="64985d4a-2938-4813-9baf-d4de4ce0d466fileName">%2FVersion</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="2849fc4b-929d-4963-8a01-0d09a2703017" method="POST">
+    <con:description>Gets the version of this service
+Version</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>"string"</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="757e338f-b9ec-4ab5-bc01-e9b8f32634eb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/UpdatePassengerDetails" path="/UpdatePassengerDetails" id="8342a6d5-be4c-40bb-8bd8-a4d207e7463d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8342a6d5-be4c-40bb-8bd8-a4d207e7463dfileName">%2FUpdatePassengerDetails</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="1b7d908e-14e3-4cc6-8377-ecae0dd88457" method="POST">
+    <con:description>UpdatePassengerDetails
+UpdatePassengerDetails</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",
+    "DepartureAirport" : "string",
+    "CarrierCode" : "string",
+    "OperatingFlightNumber" : "string",
+    "PassengersInfo" : [ {
+      "PaxID" : "string",
+      "CheckinLocator" : "string",
+      "KnownTravellerNumber" : "string",
+      "RedressNumber" : "string",
+      "PaxInfo" : {
+        "Gender" : "string",
+        "BirthDate" : "2015-07-20T15:49:04-07:00",
+        "BirthCountry" : "string",
+        "Nationality" : "string",
+        "ResidenceCountry" : "string",
+        "Weight" : 0
+      },
+      "DestinationAddress" : {
+        "CityName" : "string",
+        "CountryCode" : "string",
+        "PostalCode" : "string",
+        "StateName" : "string",
+        "StreetAddress1" : "string",
+        "StreetAddress2" : "string"
+      },
+      "DocumentInfo" : [ {
+        "FirstName" : "string",
+        "LastName" : "string",
+        "MiddleName" : "string",
+        "DocumentType" : "string",
+        "DocumentNumber" : "string",
+        "IssuingCountryCode" : "string",
+        "ExpiryDate" : "2015-07-20T15:49:04-07:00",
+        "DocumentScanned" : true
+      } ],
+      "ContactInfo" : {
+        "PostalAddress" : {
+          "StreetAddress1" : "string",
+          "StreetAddress2" : "string",
+          "CityName" : "string",
+          "StateName" : "string",
+          "PostalCode" : "string",
+          "CountryCode" : "string"
+        },
+        "ContactTypeList" : [ {
+          "ContactTypeText" : "string",
+          "ContactValueText" : "string"
+        } ]
+      }
+    } ],
+    "ApplicationUserId" : "string",
+    "ApplicationId" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="e3cf3aed-976f-44e2-87c3-0a065cf95428" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "DepartureAirport" : "string",\r
+    "CarrierCode" : "string",\r
+    "OperatingFlightNumber" : "string",\r
+    "PassengersInfo" : [ {\r
+      "PaxID" : "string",\r
+      "CheckinLocator" : "string",\r
+      "KnownTravellerNumber" : "string",\r
+      "RedressNumber" : "string",\r
+      "PaxInfo" : {\r
+        "Gender" : "string",\r
+        "BirthDate" : "2015-07-20T15:49:04-07:00",\r
+        "BirthCountry" : "string",\r
+        "Nationality" : "string",\r
+        "ResidenceCountry" : "string",\r
+        "Weight" : 0\r
+      },\r
+      "DestinationAddress" : {\r
+        "CityName" : "string",\r
+        "CountryCode" : "string",\r
+        "PostalCode" : "string",\r
+        "StateName" : "string",\r
+        "StreetAddress1" : "string",\r
+        "StreetAddress2" : "string"\r
+      },\r
+      "DocumentInfo" : [ {\r
+        "FirstName" : "string",\r
+        "LastName" : "string",\r
+        "MiddleName" : "string",\r
+        "DocumentType" : "string",\r
+        "DocumentNumber" : "string",\r
+        "IssuingCountryCode" : "string",\r
+        "ExpiryDate" : "2015-07-20T15:49:04-07:00",\r
+        "DocumentScanned" : true\r
+      } ],\r
+      "ContactInfo" : {\r
+        "PostalAddress" : {\r
+          "StreetAddress1" : "string",\r
+          "StreetAddress2" : "string",\r
+          "CityName" : "string",\r
+          "StateName" : "string",\r
+          "PostalCode" : "string",\r
+          "CountryCode" : "string"\r
+        },\r
+        "ContactTypeList" : [ {\r
+          "ContactTypeText" : "string",\r
+          "ContactValueText" : "string"\r
+        } ]\r
+      }\r
+    } ],\r
+    "ApplicationUserId" : "string",\r
+    "ApplicationId" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

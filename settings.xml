@@ -30,16 +30,20 @@
       <con:name>URL</con:name>
     </con:property>
     <con:property>
-      <con:name>FareID</con:name>
-      <con:value>FareID</con:value>
+      <con:name>DCSUsername</con:name>
     </con:property>
     <con:property>
-      <con:name>ResBalance</con:name>
-      <con:value>ResBalance</con:value>
+      <con:name>DCSPassword</con:name>
     </con:property>
     <con:property>
-      <con:name>PNR</con:name>
-      <con:value>PNR</con:value>
+      <con:name>RestEndpoint</con:name>
+    </con:property>
+    <con:property>
+      <con:name>ENV</con:name>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>LFID</con:value>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -112,6 +116,12 @@
     <con:service name="BasicHttpBinding_IConnectPoint_Flight" type="SOAP">
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
     </con:service>
+    <con:service type="REST" name="IDepartureControlSvc">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#RestEndpoint}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="IAuthenticationSvc">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#RestEndpoint}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>LogonID</con:name>
       <con:value>CP_1D_20Q4</con:value>
@@ -137,15 +147,23 @@
       <con:value>https://rdxappint.radixxuat.com/RDX/</con:value>
     </con:property>
     <con:property>
-      <con:name>FareID</con:name>
-      <con:value/>
+      <con:name>DCSUsername</con:name>
+      <con:value>radixx</con:value>
     </con:property>
     <con:property>
-      <con:name>ResBalance</con:name>
-      <con:value/>
+      <con:name>DCSPassword</con:name>
+      <con:value>R@dixxRe5!</con:value>
     </con:property>
     <con:property>
-      <con:name>PNR</con:name>
+      <con:name>RestEndpoint</con:name>
+      <con:value>http://rdxdcsint.radixxuat.com</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ENV</con:name>
+      <con:value>RDX</con:value>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
       <con:value/>
     </con:property>
     <con:databaseConnectionContainer>

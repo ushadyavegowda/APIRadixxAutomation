@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/UnblockSeats" path="/UnblockSeats" id="4861979e-19d8-4dd7-ad1a-af0034b22e8e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4861979e-19d8-4dd7-ad1a-af0034b22e8efileName">%2FUnblockSeats</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="2671965f-7a69-459d-9243-1497003b8f78" method="POST">
+    <con:description>UnblockSeats
+UnblockSeats</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "CarrierCode" : "string",
+    "FlightNumber" : "string",
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",
+    "DepartureAirport" : "string",
+    "ArrivalAirport" : "string",
+    "SeatDetails" : [ {
+      "Row" : 0,
+      "Seat" : "string"
+    } ]
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="5179570f-de33-42f6-8548-0d8bae86509f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsint.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "CarrierCode" : "string",\r
+    "FlightNumber" : "string",\r
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",\r
+    "DepartureAirport" : "string",\r
+    "ArrivalAirport" : "string",\r
+    "SeatDetails" : [ {\r
+      "Row" : 0,\r
+      "Seat" : "string"\r
+    } ]\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

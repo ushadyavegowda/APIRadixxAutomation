@@ -43,7 +43,15 @@
     </con:property>
   </con:properties>
   <con:wssContainer/>
-  <con:databaseConnectionContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>RDXINT</con:name>
+      <con:driver>oracle.jdbc.driver.OracleDriver</con:driver>
+      <con:connectionString>jdbc:oracle:thin:RARDXINT1_APP/PASS_VALUE@RDXINT1DBA.radixxhost.net:1521/RARDXINT1</con:connectionString>
+      <con:password>sardxint1app</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
@@ -140,7 +148,15 @@
       <con:name>PNR</con:name>
       <con:value/>
     </con:property>
-    <con:databaseConnectionContainer/>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>RDXINT</con:name>
+        <con:driver xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">oracle.jdbc.driver.OracleDriver</con:driver>
+        <con:connectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">jdbc:oracle:thin:RARDXINT1_APP/PASS_VALUE@RDXINT1DBA.radixxhost.net:1521/RARDXINT1</con:connectionString>
+        <con:password>sardxint1app</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
   <con:authRepository/>

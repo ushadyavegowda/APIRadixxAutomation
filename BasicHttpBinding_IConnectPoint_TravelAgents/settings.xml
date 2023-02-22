@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" anonymous="optional" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_TravelAgents" definition="https://rdxappint.radixxuat.com/rdx/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?wsdl" id="413ee6a9-a05a-4e15-976c-774c0cab0035" name="BasicHttpBinding_IConnectPoint_TravelAgents" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:WsdlInterface" anonymous="optional" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_TravelAgents" definition="https://rdxappint.radixxuat.com/rdx/Radixx.Connectpoint/ConnectPoint.TravelAgents.svc?wsdl" id="413ee6a9-a05a-4e15-976c-774c0cab0035" name="BasicHttpBinding_IConnectPoint_TravelAgents" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="413ee6a9-a05a-4e15-976c-774c0cab0035fileName">BasicHttpBinding_IConnectPoint_TravelAgents</con:setting>
   </con:settings>

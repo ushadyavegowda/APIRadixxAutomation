@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="false" failTestCaseOnErrors="true" id="8493c21b-095b-44d6-aa3c-e143256105d3" keepSession="false" maxResults="0" name="Test13_modify RT PNR multiple passengers - add seats for multiple passengers" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" failOnError="false" failTestCaseOnErrors="true" id="8493c21b-095b-44d6-aa3c-e143256105d3" keepSession="false" maxResults="0" name="Test13_modify RT PNR multiple passengers - add seats for multiple passengers" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8493c21b-095b-44d6-aa3c-e143256105d3fileName">Test13_modify-RT-PNR-multiple-passengers---add-seats-for-multiple-passengers</con:setting>
   </con:settings>
@@ -55,7 +55,7 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="2584f21b-a559-4c28-9181-3088760588e5" name="Run [RetrieveSecurityToken]" type="calltestcase">
+  <con:testStep disabled="true" id="2584f21b-a559-4c28-9181-3088760588e5" name="Run [RetrieveSecurityToken]" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>d61b0359-0047-44f9-ace3-0959b9cd799b</con:targetTestCase>

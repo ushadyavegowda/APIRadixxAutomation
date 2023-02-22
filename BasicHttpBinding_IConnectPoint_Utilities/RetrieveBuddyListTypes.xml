@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveBuddyListTypes" anonymous="optional" bindingOperationName="RetrieveBuddyListTypes" id="e154296c-3e75-470e-a599-95e53bd39943" inputName="" isOneWay="false" name="RetrieveBuddyListTypes" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveBuddyListTypes" anonymous="optional" bindingOperationName="RetrieveBuddyListTypes" id="e154296c-3e75-470e-a599-95e53bd39943" inputName="" isOneWay="false" name="RetrieveBuddyListTypes" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e154296c-3e75-470e-a599-95e53bd39943fileName">RetrieveBuddyListTypes</con:setting>
   </con:settings>

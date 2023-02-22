@@ -1,5 +1,15 @@
 Prequisite_Step.xml
+LoginSteps_TA.xml
 0001_CP_Res_Create-OW-ADT-Pax-CASH-payment.xml
+0002_CP_Res_ModifyOW-ADTPax-ReplaceFlight.xml
+0003_CP_Res_Cancel-OW-ADTPax.xml
+0004_CP_Res_Create-OW-ADT-Pax-VISA-payment.xml
+0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment.xml
+0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment.xml
+0007_CP_Res_Create-OW-ADT-Pax-No-payment.xml
+0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR.xml
+0009_CP_Res_Modify-add-new-passenger.xml
+0009_CP_Res_Modify-AddServicebundle.xml
 0002_Create-OW--pnr-with-seat-and-ssr.xml
 0003_Create-RT-PNR-without-seat-and-SSR.xml
 0004_Create-RT-PNR-with-seat-and-SSR.xml

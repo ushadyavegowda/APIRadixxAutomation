@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="true" failTestCaseOnErrors="true" id="cf5b1ad3-fb89-4aac-815a-27e9a1e5acbd" keepSession="false" maxResults="0" name="0003_Create RT PNR without seat and SSR" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" failOnError="true" failTestCaseOnErrors="true" id="cf5b1ad3-fb89-4aac-815a-27e9a1e5acbd" keepSession="false" maxResults="0" name="0003_Create RT PNR without seat and SSR" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="cf5b1ad3-fb89-4aac-815a-27e9a1e5acbdfileName">0003_Create-RT-PNR-without-seat-and-SSR</con:setting>
   </con:settings>
@@ -1107,8 +1107,6 @@ declare namespace ns1='http://tempuri.org/';
                            <rad2:Display>${empty}</rad2:Display>
                            <rad2:PreferredContactMethod>false</rad2:PreferredContactMethod>
                         </rad2:ContactInfo>-->
-                        
-                        
                      </rad2:ContactInfos>
                      <!--Optional:-->
                      <rad2:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1276,8 +1274,8 @@ declare namespace ns1='http://tempuri.org/';
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
-        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
-declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace ns1='http://tempuri.org/';
 //ns1:InsertExternalProcessedPaymentResponse[1]/ns1:InsertExternalProcessedPaymentResult[1]/a:Payments[1]/a:Payment[1]/a:ReservationPaymentID[1]</con:sourcePath>
         <con:targetType>ReservationPaymentID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -1303,70 +1301,70 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:UpdateExternalProcessedPaymentDetails>
-         <!--Optional:-->
-         <tem:UpdateExternalProcessedPaymentDetailsRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:UpdatePayments>
-               <!--Optional:-->
-               <rad1:AuthorizationCode>123</rad1:AuthorizationCode>
-               <!--Optional:-->
-               <rad1:CVCode>123</rad1:CVCode>
-               <!--Optional:-->
-               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>
-               <!--Optional:-->
-               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>
-               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid><rad1:ExpirationDate>2024-02-20</rad1:ExpirationDate><rad1:MerchantID>12</rad1:MerchantID>
-               <!--Optional:-->
-               
-               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount><rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
-               <!--Optional:-->
-               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>
-               <!--Optional:-->
-               <rad1:ResponseCode>${empty}</rad1:ResponseCode>
-               <!--Optional:-->
-               <rad1:ResponseMessage>rejected</rad1:ResponseMessage>
-               <!--Optional:-->
-               <rad1:Result>${empty}</rad1:Result>
-               <!--Optional:-->
-               <rad1:TransactionID>${empty}</rad1:TransactionID>
-               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>
-            </rad1:UpdatePayments>
-         </tem:UpdateExternalProcessedPaymentDetailsRequest>
-      </tem:UpdateExternalProcessedPaymentDetails>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:UpdateExternalProcessedPaymentDetails>\r
+         <!--Optional:-->\r
+         <tem:UpdateExternalProcessedPaymentDetailsRequest>\r
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>299</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+            <rad1:UpdatePayments>\r
+               <!--Optional:-->\r
+               <rad1:AuthorizationCode>123</rad1:AuthorizationCode>\r
+               <!--Optional:-->\r
+               <rad1:CVCode>123</rad1:CVCode>\r
+               <!--Optional:-->\r
+               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>\r
+               <!--Optional:-->\r
+               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>\r
+               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid>\r
+               <rad1:ExpirationDate>2024-02-20</rad1:ExpirationDate>\r
+               <rad1:MerchantID>12</rad1:MerchantID>\r
+               <!--Optional:-->\r
+               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount>\r
+               <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>\r
+               <!--Optional:-->\r
+               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>\r
+               <!--Optional:-->\r
+               <rad1:ResponseCode>${empty}</rad1:ResponseCode>\r
+               <!--Optional:-->\r
+               <rad1:ResponseMessage>rejected</rad1:ResponseMessage>\r
+               <!--Optional:-->\r
+               <rad1:Result>${empty}</rad1:Result>\r
+               <!--Optional:-->\r
+               <rad1:TransactionID>${empty}</rad1:TransactionID>\r
+               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>\r
+            </rad1:UpdatePayments>\r
+         </tem:UpdateExternalProcessedPaymentDetailsRequest>\r
+      </tem:UpdateExternalProcessedPaymentDetails>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="61b0b4e3-d985-4935-812e-37025fbb062c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>

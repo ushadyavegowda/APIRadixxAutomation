@@ -101,7 +101,7 @@
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Fees.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_Fulfillment" type="SOAP">
-      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_Seating" type="SOAP">
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
@@ -130,7 +130,7 @@
     </con:property>
     <con:property>
       <con:name>TA_password</con:name>
-      <con:value>Debk!2nd</con:value>
+      <con:value>R@dixxRe5!</con:value>
     </con:property>
     <con:property>
       <con:name>URL</con:name>
@@ -151,8 +151,8 @@
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>RDXINT</con:name>
-        <con:driver xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">oracle.jdbc.driver.OracleDriver</con:driver>
-        <con:connectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">jdbc:oracle:thin:RARDXINT1_APP/PASS_VALUE@RDXINT1DBA.radixxhost.net:1521/RARDXINT1</con:connectionString>
+        <con:driver>oracle.jdbc.driver.OracleDriver</con:driver>
+        <con:connectionString>jdbc:oracle:thin:RARDXINT1_APP/PASS_VALUE@RDXINT1DBA.radixxhost.net:1521/RARDXINT1</con:connectionString>
         <con:password>sardxint1app</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>

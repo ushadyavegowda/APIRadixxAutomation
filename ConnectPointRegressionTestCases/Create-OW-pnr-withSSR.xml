@@ -906,107 +906,107 @@ declare namespace ns1='http://tempuri.org/';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:InsertExternalProcessedPayment>
-         <!--Optional:-->
-         <tem:ExternalProcessedPaymentRequest>
-            <rad:TransactionInfo>
-               <rad1:SecurityGUID>${#TestSuite#securityToken}</rad1:SecurityGUID>
-               <rad1:CarrierCodes>
-                  <!--Zero or more repetitions:-->
-                  <rad1:CarrierCode>
-                     <rad1:AccessibleCarrierCode>${#TestSuite#carriercode}</rad1:AccessibleCarrierCode>
-                  </rad1:CarrierCode>
-               </rad1:CarrierCodes>
-               <!--Optional:-->
-               <rad1:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:HistoricUserName>radixx</rad1:HistoricUserName>
-            </rad:TransactionInfo>
-            <rad:ReservationInfo>
-               <rad1:SeriesNumber>299</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${#TestCase#PNR}</rad1:ConfirmationNumber>
-            </rad:ReservationInfo>
-            <rad:ExternalPayments>
-               <!--Zero or more repetitions:-->
-               <rad:InsertExternalProcessedPayment>
-                  <rad:BaseAmount>${#TestCase#Balance}</rad:BaseAmount>
-                  <rad:BaseCurrency>${#TestSuite#currency}</rad:BaseCurrency>
-                  <rad:CardHolder>${#TestSuite#p_FirstName}</rad:CardHolder>
-                  <rad:CardNumber>na</rad:CardNumber>
-                  <rad:CheckNumber>123</rad:CheckNumber>
-                  <rad:CurrencyPaid>${#TestSuite#currency}</rad:CurrencyPaid>
-                  <rad:CVCode>123</rad:CVCode>
-                  <rad:DatePaid>${#TestSuite#DepartureDate}</rad:DatePaid>
-                  <rad:DocumentReceivedBy>${#TestSuite#p_FirstName}</rad:DocumentReceivedBy>
-                  <rad:ExpirationDate>2024-04-01</rad:ExpirationDate>
-                  <rad:ExchangeRate>0</rad:ExchangeRate>
-                  <rad:ExchangeRateDate>${#TestSuite#DepartureDate}</rad:ExchangeRateDate>
-                  <rad:FFNumber>${empty}</rad:FFNumber>
-                  <rad:PaymentComment>test</rad:PaymentComment>
-                  <rad:PaymentAmount>${#TestCase#Balance}</rad:PaymentAmount>
-                  <rad:PaymentMethod>${#TestSuite#PaymentMethod}</rad:PaymentMethod>
-                  <rad:PaymentMethodType>${#TestSuite#PaymentMethod}</rad:PaymentMethodType>
-                  <rad:Reference>test</rad:Reference>
-                  <rad:TerminalID>2</rad:TerminalID>
-                  <rad:UserData>test</rad:UserData>
-                  <rad:UserID>radixx</rad:UserID>
-                  <rad:IataNumber>${empty}</rad:IataNumber>
-                  <rad:ValueCode>${empty}</rad:ValueCode>
-                  <rad:VoucherNumber>-214</rad:VoucherNumber>
-                  <rad:IsTACreditCard>false</rad:IsTACreditCard>
-                  <rad:GcxID>1</rad:GcxID>
-                  <rad:GcxOptOption>1</rad:GcxOptOption>
-                  <rad:OriginalCurrency>${#TestSuite#currency}</rad:OriginalCurrency>
-                  <rad:OriginalAmount>${#TestCase#Balance}</rad:OriginalAmount>
-                  <rad:TransactionStatus>NOTYETPROCESSED</rad:TransactionStatus>
-                  <rad:AuthorizationCode>t1</rad:AuthorizationCode>
-                  <rad:PaymentReference>t2</rad:PaymentReference>
-                  <rad:ResponseMessage>t3</rad:ResponseMessage>
-                  <rad:CardCurrency>${#TestSuite#currency}</rad:CardCurrency>
-                  <rad:BillingCountry>840</rad:BillingCountry>
-                  <rad:FingerPrintingSessionID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:Payor>
-                     <rad2:PersonOrgID>-1</rad2:PersonOrgID>
-                     <rad2:FirstName>${#TestSuite#p_FirstName}</rad2:FirstName>
-                     <rad2:LastName>${#TestSuite#p_LastName}</rad2:LastName>
-                     <rad2:MiddleName>${#TestSuite#p_MiddleName}</rad2:MiddleName>
-                     <rad2:Age>44</rad2:Age>
-                     <rad2:DOB>${#TestSuite#p_DOB}</rad2:DOB>
-                     <rad2:Gender>${#TestSuite#p_Gender}</rad2:Gender>
-                     <rad2:Title>Ms</rad2:Title>
-                     <rad2:NationalityLaguageID>${#TestSuite#p_Nationality}</rad2:NationalityLaguageID>
-                     <rad2:RelationType>Self</rad2:RelationType>
-                     <rad2:WBCID>1</rad2:WBCID>
-                     <rad2:PTCID>1</rad2:PTCID>
-                     <rad2:PTC>${#TestSuite#p_PTC}</rad2:PTC>
-                     <rad2:TravelsWithPersonOrgID>-2147483648</rad2:TravelsWithPersonOrgID>
-                     <rad2:RedressNumber>na</rad2:RedressNumber>
-                     <rad2:KnownTravelerNumber>na</rad2:KnownTravelerNumber>
-                     <rad2:MarketingOptIn>true</rad2:MarketingOptIn>
-                     <rad2:UseInventory>false</rad2:UseInventory>
-                     <rad2:Address>
-                        <rad2:Address1>${empty}</rad2:Address1>
-                        <rad2:Address2>${empty}</rad2:Address2>
-                        <rad2:City>${empty}</rad2:City>
-                        <rad2:State>${empty}</rad2:State>
-                        <rad2:Postal>${empty}</rad2:Postal>
-                        <rad2:Country>${empty}</rad2:Country>
-                        <rad2:CountryCode>${empty}</rad2:CountryCode>
-                        <rad2:AreaCode>${empty}</rad2:AreaCode>
-                        <rad2:PhoneNumber>${empty}</rad2:PhoneNumber>
-                        <rad2:Display>${empty}</rad2:Display>
-                     </rad2:Address>
-                     <rad2:Company>${empty}</rad2:Company>
-                     <rad2:Comments>${empty}</rad2:Comments>
-                     <rad2:Passport>${empty}</rad2:Passport>
-                     <rad2:Nationality>${empty}</rad2:Nationality>
-                     <rad2:ProfileId>-214</rad2:ProfileId>
-                     <rad2:IsPrimaryPassenger>true</rad2:IsPrimaryPassenger>
-                     <rad2:ContactInfos>
-                        <!--Zero or more repetitions:-->
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:InsertExternalProcessedPayment>\r
+         <!--Optional:-->\r
+         <tem:ExternalProcessedPaymentRequest>\r
+            <rad:TransactionInfo>\r
+               <rad1:SecurityGUID>${#TestSuite#securityToken}</rad1:SecurityGUID>\r
+               <rad1:CarrierCodes>\r
+                  <!--Zero or more repetitions:-->\r
+                  <rad1:CarrierCode>\r
+                     <rad1:AccessibleCarrierCode>${#TestSuite#carriercode}</rad1:AccessibleCarrierCode>\r
+                  </rad1:CarrierCode>\r
+               </rad1:CarrierCodes>\r
+               <!--Optional:-->\r
+               <rad1:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:HistoricUserName>radixx</rad1:HistoricUserName>\r
+            </rad:TransactionInfo>\r
+            <rad:ReservationInfo>\r
+               <rad1:SeriesNumber>299</rad1:SeriesNumber>\r
+               <rad1:ConfirmationNumber>${#TestCase#PNR}</rad1:ConfirmationNumber>\r
+            </rad:ReservationInfo>\r
+            <rad:ExternalPayments>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:InsertExternalProcessedPayment>\r
+                  <rad:BaseAmount>${#TestCase#Balance}</rad:BaseAmount>\r
+                  <rad:BaseCurrency>${#TestSuite#currency}</rad:BaseCurrency>\r
+                  <rad:CardHolder>${#TestSuite#p_FirstName}</rad:CardHolder>\r
+                  <rad:CardNumber>na</rad:CardNumber>\r
+                  <rad:CheckNumber>123</rad:CheckNumber>\r
+                  <rad:CurrencyPaid>${#TestSuite#currency}</rad:CurrencyPaid>\r
+                  <rad:CVCode>123</rad:CVCode>\r
+                  <rad:DatePaid>${#TestSuite#DepartureDate}</rad:DatePaid>\r
+                  <rad:DocumentReceivedBy>${#TestSuite#p_FirstName}</rad:DocumentReceivedBy>\r
+                  <rad:ExpirationDate>2024-04-01</rad:ExpirationDate>\r
+                  <rad:ExchangeRate>0</rad:ExchangeRate>\r
+                  <rad:ExchangeRateDate>${#TestSuite#DepartureDate}</rad:ExchangeRateDate>\r
+                  <rad:FFNumber>${empty}</rad:FFNumber>\r
+                  <rad:PaymentComment>test</rad:PaymentComment>\r
+                  <rad:PaymentAmount>${#TestCase#Balance}</rad:PaymentAmount>\r
+                  <rad:PaymentMethod>${#TestSuite#PaymentMethod}</rad:PaymentMethod>\r
+                  <rad:PaymentMethodType>${#TestSuite#PaymentMethod}</rad:PaymentMethodType>\r
+                  <rad:Reference>test</rad:Reference>\r
+                  <rad:TerminalID>2</rad:TerminalID>\r
+                  <rad:UserData>test</rad:UserData>\r
+                  <rad:UserID>radixx</rad:UserID>\r
+                  <rad:IataNumber>${empty}</rad:IataNumber>\r
+                  <rad:ValueCode>${empty}</rad:ValueCode>\r
+                  <rad:VoucherNumber>-214</rad:VoucherNumber>\r
+                  <rad:IsTACreditCard>false</rad:IsTACreditCard>\r
+                  <rad:GcxID>1</rad:GcxID>\r
+                  <rad:GcxOptOption>1</rad:GcxOptOption>\r
+                  <rad:OriginalCurrency>${#TestSuite#currency}</rad:OriginalCurrency>\r
+                  <rad:OriginalAmount>${#TestCase#Balance}</rad:OriginalAmount>\r
+                  <rad:TransactionStatus>NOTYETPROCESSED</rad:TransactionStatus>\r
+                  <rad:AuthorizationCode>t1</rad:AuthorizationCode>\r
+                  <rad:PaymentReference>t2</rad:PaymentReference>\r
+                  <rad:ResponseMessage>t3</rad:ResponseMessage>\r
+                  <rad:CardCurrency>${#TestSuite#currency}</rad:CardCurrency>\r
+                  <rad:BillingCountry>840</rad:BillingCountry>\r
+                  <rad:FingerPrintingSessionID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+                  <rad:Payor>\r
+                     <rad2:PersonOrgID>-1</rad2:PersonOrgID>\r
+                     <rad2:FirstName>${#TestSuite#p_FirstName}</rad2:FirstName>\r
+                     <rad2:LastName>${#TestSuite#p_LastName}</rad2:LastName>\r
+                     <rad2:MiddleName>${#TestSuite#p_MiddleName}</rad2:MiddleName>\r
+                     <rad2:Age>44</rad2:Age>\r
+                     <rad2:DOB>${#TestSuite#p_DOB}</rad2:DOB>\r
+                     <rad2:Gender>${#TestSuite#p_Gender}</rad2:Gender>\r
+                     <rad2:Title>Ms</rad2:Title>\r
+                     <rad2:NationalityLaguageID>${#TestSuite#p_Nationality}</rad2:NationalityLaguageID>\r
+                     <rad2:RelationType>Self</rad2:RelationType>\r
+                     <rad2:WBCID>1</rad2:WBCID>\r
+                     <rad2:PTCID>1</rad2:PTCID>\r
+                     <rad2:PTC>${#TestSuite#p_PTC}</rad2:PTC>\r
+                     <rad2:TravelsWithPersonOrgID>-2147483648</rad2:TravelsWithPersonOrgID>\r
+                     <rad2:RedressNumber>na</rad2:RedressNumber>\r
+                     <rad2:KnownTravelerNumber>na</rad2:KnownTravelerNumber>\r
+                     <rad2:MarketingOptIn>true</rad2:MarketingOptIn>\r
+                     <rad2:UseInventory>false</rad2:UseInventory>\r
+                     <rad2:Address>\r
+                        <rad2:Address1>${empty}</rad2:Address1>\r
+                        <rad2:Address2>${empty}</rad2:Address2>\r
+                        <rad2:City>${empty}</rad2:City>\r
+                        <rad2:State>${empty}</rad2:State>\r
+                        <rad2:Postal>${empty}</rad2:Postal>\r
+                        <rad2:Country>${empty}</rad2:Country>\r
+                        <rad2:CountryCode>${empty}</rad2:CountryCode>\r
+                        <rad2:AreaCode>${empty}</rad2:AreaCode>\r
+                        <rad2:PhoneNumber>${empty}</rad2:PhoneNumber>\r
+                        <rad2:Display>${empty}</rad2:Display>\r
+                     </rad2:Address>\r
+                     <rad2:Company>${empty}</rad2:Company>\r
+                     <rad2:Comments>${empty}</rad2:Comments>\r
+                     <rad2:Passport>${empty}</rad2:Passport>\r
+                     <rad2:Nationality>${empty}</rad2:Nationality>\r
+                     <rad2:ProfileId>-214</rad2:ProfileId>\r
+                     <rad2:IsPrimaryPassenger>true</rad2:IsPrimaryPassenger>\r
+                     <rad2:ContactInfos>\r
+                        <!--Zero or more repetitions:-->\r
                         <!--<rad2:ContactInfo>
                            <rad2:ContactID>1</rad2:ContactID>
                            <rad2:PersonOrgID>-1</rad2:PersonOrgID>
@@ -1018,40 +1018,38 @@ declare namespace ns1='http://tempuri.org/';
                            <rad2:PhoneNumber>${empty}</rad2:PhoneNumber>
                            <rad2:Display>${empty}</rad2:Display>
                            <rad2:PreferredContactMethod>false</rad2:PreferredContactMethod>
-                        </rad2:ContactInfo>-->
-                        
-                        
-                     </rad2:ContactInfos>
-                     <!--Optional:-->
-                     <rad2:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  </rad:Payor>
-                  <!--Optional:-->
-                  <rad:Result>${empty}</rad:Result>
-                  <!--Optional:-->
-                  <rad:TransactionID>${empty}</rad:TransactionID>
-                  <!--Optional:-->
-                  <rad:ResponseCode>${empty}</rad:ResponseCode>
-                  <!--Optional:-->
-                  <rad:AncillaryData01>${empty}</rad:AncillaryData01>
-                  <!--Optional:-->
-                  <rad:AncillaryData02>${empty}</rad:AncillaryData02>
-                  <!--Optional:-->
-                  <rad:AncillaryData03>${empty}</rad:AncillaryData03>
-                  <!--Optional:-->
-                  <rad:AncillaryData04>${empty}</rad:AncillaryData04>
-                  <!--Optional:-->
-                  <rad:AncillaryData05>${empty}</rad:AncillaryData05>
-                  <!--Optional:-->
-                  <rad:ProcessorID>${empty}</rad:ProcessorID>
-                  <!--Optional:-->
-                  <rad:MerchantID>na</rad:MerchantID>
-                  <!--Optional:-->
-                  <rad:ProcessorName>OPPY</rad:ProcessorName>
-               </rad:InsertExternalProcessedPayment>
-            </rad:ExternalPayments>
-         </tem:ExternalProcessedPaymentRequest>
-      </tem:InsertExternalProcessedPayment>
-   </soapenv:Body>
+                        </rad2:ContactInfo>-->\r
+                     </rad2:ContactInfos>\r
+                     <!--Optional:-->\r
+                     <rad2:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+                  </rad:Payor>\r
+                  <!--Optional:-->\r
+                  <rad:Result>${empty}</rad:Result>\r
+                  <!--Optional:-->\r
+                  <rad:TransactionID>${empty}</rad:TransactionID>\r
+                  <!--Optional:-->\r
+                  <rad:ResponseCode>${empty}</rad:ResponseCode>\r
+                  <!--Optional:-->\r
+                  <rad:AncillaryData01>${empty}</rad:AncillaryData01>\r
+                  <!--Optional:-->\r
+                  <rad:AncillaryData02>${empty}</rad:AncillaryData02>\r
+                  <!--Optional:-->\r
+                  <rad:AncillaryData03>${empty}</rad:AncillaryData03>\r
+                  <!--Optional:-->\r
+                  <rad:AncillaryData04>${empty}</rad:AncillaryData04>\r
+                  <!--Optional:-->\r
+                  <rad:AncillaryData05>${empty}</rad:AncillaryData05>\r
+                  <!--Optional:-->\r
+                  <rad:ProcessorID>${empty}</rad:ProcessorID>\r
+                  <!--Optional:-->\r
+                  <rad:MerchantID>na</rad:MerchantID>\r
+                  <!--Optional:-->\r
+                  <rad:ProcessorName>OPPY</rad:ProcessorName>\r
+               </rad:InsertExternalProcessedPayment>\r
+            </rad:ExternalPayments>\r
+         </tem:ExternalProcessedPaymentRequest>\r
+      </tem:InsertExternalProcessedPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="a2eabbf9-162d-4551-b815-c47d65cba4b6" type="SOAP Response"/>
         <con:credentials>
@@ -1188,8 +1186,8 @@ declare namespace ns1='http://tempuri.org/';
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5 InsertExternalProcessedPayment</con:sourceStep>
-        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
-declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace ns1='http://tempuri.org/';
 //ns1:InsertExternalProcessedPaymentResponse[1]/ns1:InsertExternalProcessedPaymentResult[1]/a:Payments[1]/a:Payment[1]/a:ReservationPaymentID[1]</con:sourcePath>
         <con:targetType>ReservationPaymentID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -1215,70 +1213,70 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:UpdateExternalProcessedPaymentDetails>
-         <!--Optional:-->
-         <tem:UpdateExternalProcessedPaymentDetailsRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:UpdatePayments>
-               <!--Optional:-->
-               <rad1:AuthorizationCode>123</rad1:AuthorizationCode>
-               <!--Optional:-->
-               <rad1:CVCode>123</rad1:CVCode>
-               <!--Optional:-->
-               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>
-               <!--Optional:-->
-               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>
-               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid><rad1:ExpirationDate>2024-02-20</rad1:ExpirationDate><rad1:MerchantID>12</rad1:MerchantID>
-               <!--Optional:-->
-               
-               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount><rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
-               <!--Optional:-->
-               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>
-               <!--Optional:-->
-               <rad1:ResponseCode>${empty}</rad1:ResponseCode>
-               <!--Optional:-->
-               <rad1:ResponseMessage>rejected</rad1:ResponseMessage>
-               <!--Optional:-->
-               <rad1:Result>${empty}</rad1:Result>
-               <!--Optional:-->
-               <rad1:TransactionID>${empty}</rad1:TransactionID>
-               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>
-            </rad1:UpdatePayments>
-         </tem:UpdateExternalProcessedPaymentDetailsRequest>
-      </tem:UpdateExternalProcessedPaymentDetails>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:UpdateExternalProcessedPaymentDetails>\r
+         <!--Optional:-->\r
+         <tem:UpdateExternalProcessedPaymentDetailsRequest>\r
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>299</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+            <rad1:UpdatePayments>\r
+               <!--Optional:-->\r
+               <rad1:AuthorizationCode>123</rad1:AuthorizationCode>\r
+               <!--Optional:-->\r
+               <rad1:CVCode>123</rad1:CVCode>\r
+               <!--Optional:-->\r
+               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>\r
+               <!--Optional:-->\r
+               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>\r
+               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid>\r
+               <rad1:ExpirationDate>2024-02-20</rad1:ExpirationDate>\r
+               <rad1:MerchantID>12</rad1:MerchantID>\r
+               <!--Optional:-->\r
+               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount>\r
+               <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>\r
+               <!--Optional:-->\r
+               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <!--Optional:-->\r
+               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
+               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>\r
+               <!--Optional:-->\r
+               <rad1:ResponseCode>${empty}</rad1:ResponseCode>\r
+               <!--Optional:-->\r
+               <rad1:ResponseMessage>rejected</rad1:ResponseMessage>\r
+               <!--Optional:-->\r
+               <rad1:Result>${empty}</rad1:Result>\r
+               <!--Optional:-->\r
+               <rad1:TransactionID>${empty}</rad1:TransactionID>\r
+               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>\r
+            </rad1:UpdatePayments>\r
+         </tem:UpdateExternalProcessedPaymentDetailsRequest>\r
+      </tem:UpdateExternalProcessedPaymentDetails>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="61b0b4e3-d985-4935-812e-37025fbb062c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
@@ -1655,7 +1653,81 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="6db3b7e8-4b36-4ce2-aad6-9a06a24c9000" name="Transfer SSR details" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_ServiceID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]}</con:sourcePath>
+        <con:targetType>s_ServiceID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_SSRCategory</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]}</con:sourcePath>
+        <con:targetType>s_SSRCategory</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_Amount</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]}</con:sourcePath>
+        <con:targetType>s_Amount</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ServiceCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]}</con:sourcePath>
+        <con:targetType>ServiceCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_ServiceID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]}</con:sourcePath>
+        <con:targetType>s_ServiceID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_SSRCategory</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]}</con:sourcePath>
+        <con:targetType>s_SSRCategory</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>s_Amount</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]}</con:sourcePath>
+        <con:targetType>s_Amount</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ServiceCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
+        <con:sourcePath>${3. RetrieveAARQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]}</con:sourcePath>
+        <con:targetType>ServiceCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>

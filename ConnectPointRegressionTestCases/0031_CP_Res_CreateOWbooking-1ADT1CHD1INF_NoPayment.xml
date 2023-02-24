@@ -602,11 +602,11 @@
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'APRIL23_Regression'
+def tfolder = 'RegAprilRelease'
  
 //context.expand( '${#TestSuite#JIRA folder}' )
  
-def dirpath = "C:/Download/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()

@@ -1861,7 +1861,7 @@ def suite = context.testCase.testSuite;
 def kase = context.testCase
 def tfolder = 'DEC22_QAT_RQ_RS'
 //context.expand( '${#TestSuite#JIRA folder}' )
-def dirpath = "C:/Users/SG0222238/Downloads/Brightline/${tfolder}/${kase.name}"
+def dirpath = "\\dsauto01.radixxhost.net\CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()
@@ -1892,11 +1892,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>19361.00</con:value>
+      <con:value>499.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128862</con:value>
+      <con:value>128869</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1904,7 +1904,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>OZ4FMB</con:value>
+      <con:value>3X3CGC</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>

@@ -453,54 +453,54 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:OAFlightSegments>\r
-         <!--Optional:-->\r
-         <tem:OAFlightSegmentsRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>X0</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>299</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
-            <rad1:ActionType>AddOALSegmentsToReservation</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber>${empty}</rad:ConfirmationNumber>\r
-            </rad1:ReservationInfo>\r
-            <!--Optional:-->\r
-            <rad1:OALFlightKeyToRemove>${empty}</rad1:OALFlightKeyToRemove>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <rad1:OALSegmentsToAdd>\r
-               <!--Zero or more repetitions:-->\r
-               <rad1:OALSegment>\r
-                  <rad1:OALCarrierCode>${#TestSuite#OAL_CarrierCode}</rad1:OALCarrierCode>\r
-                  <rad1:OALFlightNumber>${#TestSuite#OAL_FlightNumber}</rad1:OALFlightNumber>\r
-                  <rad1:OALDepartureDate>${#TestSuite#DepartureDate}</rad1:OALDepartureDate>\r
-                  <rad1:OALOrigin>${#TestSuite#OAL_Origin}</rad1:OALOrigin>\r
-                  <rad1:OALDestination>${#TestSuite#OAL_Destination}</rad1:OALDestination>\r
-                  <rad1:OALScheduledDepartureTime>${#TestSuite#DepartureDate}${#TestSuite#OAL_ScheduledDepartureTime}</rad1:OALScheduledDepartureTime>\r
-                  <rad1:OALScheduledArrivalTime>${#TestSuite#DepartureDate}${#TestSuite#OAL_ScheduledArrivalTime}</rad1:OALScheduledArrivalTime>\r
-                  <rad1:OALAirlinePersons>\r
-                     <!--Zero or more repetitions:-->\r
-                     <rad1:OALAirlinePerson>\r
-                        <rad1:PersonOrgID>-1</rad1:PersonOrgID>\r
-                        <rad1:FareClass>${#TestSuite#OAL_FarebasisCode}</rad1:FareClass>\r
-                     </rad1:OALAirlinePerson>\r
-                  </rad1:OALAirlinePersons>\r
-               </rad1:OALSegment>\r
-            </rad1:OALSegmentsToAdd>\r
-         </tem:OAFlightSegmentsRequest>\r
-      </tem:OAFlightSegments>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:OAFlightSegments>
+         <!--Optional:-->
+         <tem:OAFlightSegmentsRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>X0</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>299</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>
+            <rad1:ActionType>AddOALSegmentsToReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${empty}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <!--Optional:-->
+            <rad1:OALFlightKeyToRemove>${empty}</rad1:OALFlightKeyToRemove>
+            <!--Optional:-->
+            <!--Optional:-->
+            <rad1:OALSegmentsToAdd>
+               <!--Zero or more repetitions:-->
+               <rad1:OALSegment>
+                  <rad1:OALCarrierCode>${#TestSuite#OAL_CarrierCode}</rad1:OALCarrierCode>
+                  <rad1:OALFlightNumber>${#TestSuite#OAL_FlightNumber}</rad1:OALFlightNumber>
+                  <rad1:OALDepartureDate>${#TestSuite#DepartureDate}</rad1:OALDepartureDate>
+                  <rad1:OALOrigin>${#TestSuite#OAL_Origin}</rad1:OALOrigin>
+                  <rad1:OALDestination>${#TestSuite#OAL_Destination}</rad1:OALDestination>
+                  <rad1:OALScheduledDepartureTime>${#TestSuite#DepartureDate}${#TestSuite#OAL_ScheduledDepartureTime}</rad1:OALScheduledDepartureTime>
+                  <rad1:OALScheduledArrivalTime>${#TestSuite#DepartureDate}${#TestSuite#OAL_ScheduledArrivalTime}</rad1:OALScheduledArrivalTime>
+                  <rad1:OALAirlinePersons>
+                     <!--Zero or more repetitions:-->
+                     <rad1:OALAirlinePerson>
+                        <rad1:PersonOrgID>-1</rad1:PersonOrgID>
+                        <rad1:FareClass>${#TestSuite#OAL_FarebasisCode}</rad1:FareClass>
+                     </rad1:OALAirlinePerson>
+                  </rad1:OALAirlinePersons>
+               </rad1:OALSegment>
+            </rad1:OALSegmentsToAdd>
+         </tem:OAFlightSegmentsRequest>
+      </tem:OAFlightSegments>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="ae78316c-0bcb-4ffa-8adf-1eb0ba24cb12" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
@@ -602,11 +602,11 @@
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'APRIL23_Regression'
+def tfolder = 'RegAprilRelease'
  
 //context.expand( '${#TestSuite#JIRA folder}' )
  
-def dirpath = "C:/Download/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()
@@ -637,7 +637,7 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186571</con:value>
+      <con:value>186587</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -645,7 +645,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>777.26</con:value>
+      <con:value>1016</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

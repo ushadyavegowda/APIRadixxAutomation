@@ -29,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>KFZ944</con:value>
+          <con:value>LH7AR2</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -37,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-19</con:value>
+          <con:value>-28</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1270,240 +1270,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="3ded283a-1425-47ed-8a81-3ba438875713" name="Property ReservationPaymentID" type="transfer">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>ReservationPaymentID</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
-        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
-        <con:targetType>ReservationPaymentID</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="b9370a5c-c614-46a7-8906-89dd13ae08a2" name="6 UpdateExternalProcessedPaymentDetails" type="request" disabled="true">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
-      <con:operation>UpdateExternalProcessedPaymentDetails</con:operation>
-      <con:request id="e67a35c9-3d18-4153-b563-dc96962ec9ea" name="6 UpdateExternalProcessedPaymentDetails">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:UpdateExternalProcessedPaymentDetails>
-         <!--Optional:-->
-         <tem:UpdateExternalProcessedPaymentDetailsRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:UpdatePayments>
-               <!--Optional:-->
-               <rad1:AuthorizationCode>123</rad1:AuthorizationCode>
-               <!--Optional:-->
-               <rad1:CVCode>123</rad1:CVCode>
-               <!--Optional:-->
-               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>
-               <!--Optional:-->
-               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>
-               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid><rad1:ExpirationDate>2024-02-20</rad1:ExpirationDate><rad1:MerchantID>12</rad1:MerchantID>
-               <!--Optional:-->
-               
-               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount><rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
-               <!--Optional:-->
-               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>
-               <!--Optional:-->
-               <rad1:ResponseCode>${empty}</rad1:ResponseCode>
-               <!--Optional:-->
-               <rad1:ResponseMessage>rejected</rad1:ResponseMessage>
-               <!--Optional:-->
-               <rad1:Result>${empty}</rad1:Result>
-               <!--Optional:-->
-               <rad1:TransactionID>${empty}</rad1:TransactionID>
-               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>
-            </rad1:UpdatePayments>
-         </tem:UpdateExternalProcessedPaymentDetailsRequest>
-      </tem:UpdateExternalProcessedPaymentDetails>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion id="61b0b4e3-d985-4935-812e-37025fbb062c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3a956b3a-995e-49fc-be39-83d1b1ec479d" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>1000</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3385cbea-1429-458a-8fda-3654404018fb" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c02e737b-5493-4596-a7af-1a6851f9e3d1" name="Schema Compliance" type="Schema Compliance">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fulfillment/UpdateExternalProcessedPaymentDetails" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-        <con:environmentSpec>
-          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:request>
-    </con:config>
-  </con:testStep>
   <con:testStep id="0a85a1d1-4801-4745-a025-ca0bbdbdafd4" name="Delay after IEP" type="delay">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="dab54d9c-9628-4586-81e7-ccf25241b410" name="7 UpdateExternalProcessedPaymentDetails" type="request">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
-      <con:operation>UpdateExternalProcessedPaymentDetails</con:operation>
-      <con:request id="e67a35c9-3d18-4153-b563-dc96962ec9ea" name="7 UpdateExternalProcessedPaymentDetails">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:UpdateExternalProcessedPaymentDetails>
-         <!--Optional:-->
-         <tem:UpdateExternalProcessedPaymentDetailsRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:UpdatePayments>
-               <!--Optional:-->
-               <rad1:AuthorizationCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CVCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>
-               <!--Optional:-->
-               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>
-               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid>
-               
-               <rad1:ExpirationDate>${#TestSuite#ExpirationDate}</rad1:ExpirationDate><rad1:MerchantID>${#TestSuite#ID}</rad1:MerchantID>
-               <!--Optional:-->
-               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount>
-               <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
-               <!--Optional:-->
-               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>
-               <!--Optional:-->
-               <rad1:ResponseCode>${empty}</rad1:ResponseCode>
-               <!--Optional:-->
-               <rad1:ResponseMessage>${#TestSuite#Comments}</rad1:ResponseMessage>
-               <!--Optional:-->
-               <rad1:Result>${empty}</rad1:Result>
-               <!--Optional:-->
-               <rad1:TransactionID>${empty}</rad1:TransactionID>
-               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>
-            </rad1:UpdatePayments>
-         </tem:UpdateExternalProcessedPaymentDetailsRequest>
-      </tem:UpdateExternalProcessedPaymentDetails>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion id="61b0b4e3-d985-4935-812e-37025fbb062c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3a956b3a-995e-49fc-be39-83d1b1ec479d" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>1500</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3385cbea-1429-458a-8fda-3654404018fb" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c02e737b-5493-4596-a7af-1a6851f9e3d1" name="Schema Compliance" type="Schema Compliance">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fulfillment/UpdateExternalProcessedPaymentDetails" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-        <con:environmentSpec>
-          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="9838d6c8-c066-4bb3-88cc-6207c6540063" name="Delay after UEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
@@ -1520,31 +1287,31 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:CreatePNR>\r
-         <!--Optional:-->\r
-         <tem:CreatePnrRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
-            <rad1:ActionType>SaveReservation</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>\r
-            </rad1:ReservationInfo>\r
-         </tem:CreatePnrRequest>\r
-      </tem:CreatePNR>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CreatePNR>
+         <!--Optional:-->
+         <tem:CreatePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>
+            <rad1:ActionType>SaveReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+         </tem:CreatePnrRequest>
+      </tem:CreatePNR>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
@@ -1684,6 +1451,12 @@ declare namespace ns1='http://tempuri.org/';
           </con:entry>
         </con:environmentSpec>
       </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="9838d6c8-c066-4bb3-88cc-6207c6540063" name="Delay after PNR" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="30cfc609-38ce-4a83-b11b-6446705ef2a5" name="Groovy Script_to copyRQ and RS" type="groovy">

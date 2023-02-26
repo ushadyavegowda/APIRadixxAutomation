@@ -163,7 +163,7 @@ ConnectPointRegressionTestCases\0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment.xml
 ConnectPointRegressionTestCases\0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment.xml
 ConnectPointRegressionTestCases\0007_CP_Res_Create-OW-ADT-Pax-No-payment.xml
 ConnectPointRegressionTestCases\0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR.xml
-ConnectPointRegressionTestCases\0009_Prequisite_CP_Res_Modify-add-new-passenger.xml
+ConnectPointRegressionTestCases\0009_Prequisite_Modify-add-new-passenger.xml
 ConnectPointRegressionTestCases\0009_CP_Res_Modify-AddServicebundle.xml
 ConnectPointRegressionTestCases\Test5_Modify-OW-pnr-to-another-date.xml
 ConnectPointRegressionTestCases\Test6_ModifyBooking-OW-pnr-to-add-passengers.xml

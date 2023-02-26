@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="ec065487-b1a1-4f01-8d98-a6ce3bf393aa" keepSession="false" name="0009_Prequisite_CP_Res_Modify add new passenger" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="3688b777-a462-49bf-83d2-6e18f6da13ba" keepSession="false" name="0009_Prequisite_Modify add new passenger" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="ec065487-b1a1-4f01-8d98-a6ce3bf393aafileName">0009_Prequisite_CP_Res_Modify-add-new-passenger</con:setting>
+    <con:setting id="3688b777-a462-49bf-83d2-6e18f6da13bafileName">0009_Prequisite_Modify-add-new-passenger</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="97f89f9d-0fe0-4def-9e92-9512d0484133" name="1. Run_Test1 Create OW booking without SSR and seat" type="calltestcase">
+  <con:testStep id="5d022708-e442-49d7-9bfa-6b08ff02079a" name="1. Run_Test1 Create OW booking without SSR and seat" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -24,13 +24,13 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="25b919ae-ab94-4627-939a-15885481e31c" name="Delay after Step 1" type="delay">
+  <con:testStep id="25d44298-8ede-4861-aa25-725f8a70d528" name="Delay after Step 1" type="delay">
     <con:settings/>
     <con:config>
       <delay>3000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="f2fcc834-1b6a-47d5-9948-de00a18ec04b" name="InputValues" type="groovy">
+  <con:testStep id="253d95ac-4e64-49c7-b9e9-6ee1eceb833a" name="InputValues" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -80,7 +80,7 @@ testRunner.testCase.setPropertyValue("ID", "1");
 testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="3b6d2a56-4942-4abd-a82f-25e075d0f1f1" name="2. RetrivePNR" type="request">
+  <con:testStep id="dc8d3f1e-c4f6-41ae-a929-3b2086506e8b" name="2. RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -147,13 +147,13 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="fd2e6808-0176-4890-8ce2-453103c41f3d" name="Delay after RetrivePNR" type="delay">
+  <con:testStep id="68748e42-dafe-4623-9544-933b2e006a73" name="Delay after RetrivePNR" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="e49bd0e6-56ea-4540-a463-fd80d93caa71" name="3. ModifyPNR_Add Pax" type="request">
+  <con:testStep id="4760c0b0-019f-4ba7-b83c-a0db72937bc1" name="3. ModifyPNR_Add Pax" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -326,7 +326,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Balance Transfer" id="376b3c32-786c-45f3-bcd8-b7c167318321">
+  <con:testStep type="transfer" name="Balance Transfer" id="b8afdda7-0938-4e65-8cd3-55e8f1ea5e18">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
@@ -341,13 +341,13 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="2b84dc1b-d5f1-4108-8179-3e39c6c092dd" name="Delay after Modify" type="delay">
+  <con:testStep id="e0784532-525b-4211-b5f7-90c295c55935" name="Delay after Modify" type="delay">
     <con:settings/>
     <con:config>
       <delay>3000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="135d715d-d0d1-46b6-a7d0-7727860e3662" name="4. AssessPaymentMethodFees" type="request">
+  <con:testStep id="bcba2bdd-51a1-4a2c-ae53-bb17050ae218" name="4. AssessPaymentMethodFees" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
@@ -522,7 +522,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Balance Transfer AssessPaymentMethod" id="a6ed1f49-1a8b-4c57-802a-231eb022319a">
+  <con:testStep type="transfer" name="Balance Transfer AssessPaymentMethod" id="d5353246-c735-4262-a901-755f23ed1d90">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
@@ -537,13 +537,13 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="b73dee0c-6194-40a3-9c8d-3fe5dbb2e373" name="Delay after AccessPaymentMethod" type="delay">
+  <con:testStep id="5bc97372-5c40-406c-8a8d-2115a01988c3" name="Delay after AccessPaymentMethod" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="4543d14b-7e05-43ac-b1f0-511246a5a4c7" name="5 InsertExternalProcessedPayment_CASH" type="request">
+  <con:testStep id="3dd3cebc-f150-441c-9efd-79b6d03f801e" name="5 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -827,13 +827,13 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="7572f856-8528-4d87-aa92-360fa29d2871" name="Delay after IEP" type="delay">
+  <con:testStep id="4fb3d79a-680b-40ee-b036-e299021c806d" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="29b82795-52c7-49b6-9106-c5982304984d" name="6 Save PNR" type="request">
+  <con:testStep id="1110d16c-b96c-460a-b02b-cffb2cce9c26" name="6 Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1010,7 +1010,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PNR Transfer" id="237425f7-702b-431c-bc9f-8aaf067289eb">
+  <con:testStep type="transfer" name="PNR Transfer" id="b0e3f614-7b4f-4882-bf30-127bad8c206a">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">

@@ -1551,44 +1551,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="7d690c1d-e0e5-409d-b146-4c0df383774e" name="Groovy Script_to copyRQ and RS" type="groovy">
-    <con:settings/>
-    <con:config>
-      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
-def project = context.testCase.testSuite.project;
-def suite = context.testCase.testSuite;
-def kase = context.testCase
-def tfolder = 'DEC22_QAT_RQ_RS'
-//context.expand( '${#TestSuite#JIRA folder}' )
-def dirpath = "C:/Users/SG0222238/Downloads/Brightline/${tfolder}/${kase.name}"
-log.info(dirpath)
-def Dir = new File(dirpath)
-if(!Dir.exists()) Dir.mkdirs()
-//log.info (kase);
-for(def i=0; i &lt; kase.testStepCount -1 ; i++)
-{   
-    log.info(i);
-        def step = kase.getTestStepAt(i).name
-        log.info(step)
-        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
-        {
-        def filepath =  "${dirpath}/${step}_reqres.xml"
-        def m = new File(filepath)
-                    
-        def str = '${' + step + '#RawRequest}'
-          def req = context.expand(str)
-         log.info(req)
-          
-          m.write(req,"UTF-8")
-          def resp = '${' + step + '#Response}'
-          def res = context.expand( resp )
-          m.append("\n\n\n\n\n", "UTF-8")
-          m.append(res, "UTF-8")
-        }
-}</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="9164f423-0176-4593-a646-b799c64ea2e9" name="Groovy Script_to copyRQ and RS 2" type="groovy">
+  <con:testStep id="9164f423-0176-4593-a646-b799c64ea2e9" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1627,11 +1590,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>19361.00</con:value>
+      <con:value>499.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128862</con:value>
+      <con:value>128871</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1639,7 +1602,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>RQ2JXF</con:value>
+      <con:value>QMA8PY</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1647,7 +1610,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-11</con:value>
+      <con:value>-31</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/UpdateTopUpDetails" anonymous="optional" bindingOperationName="UpdateTopUpDetails" id="c320d849-5cbe-486b-afd4-e46bc26f7249" inputName="" isOneWay="false" name="UpdateTopUpDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/UpdateTopUpDetails" anonymous="optional" bindingOperationName="UpdateTopUpDetails" id="c320d849-5cbe-486b-afd4-e46bc26f7249" inputName="" isOneWay="false" name="UpdateTopUpDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c320d849-5cbe-486b-afd4-e46bc26f7249fileName">UpdateTopUpDetails</con:setting>
   </con:settings>

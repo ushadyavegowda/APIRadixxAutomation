@@ -1547,16 +1547,22 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="29a8a848-bc89-483a-9259-6af07a4c08c6" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="bc1e28d3-3417-42b7-95bc-e574610aa534" name="Delay after CreatePNR" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>3000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'DEC22_QAT_RQ_RS'
-//context.expand( '${#TestSuite#JIRA folder}' )
-def dirpath = "C:/Users/SG0222238/Downloads/Brightline/${tfolder}/${kase.name}"
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()
@@ -1587,11 +1593,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>19361.00</con:value>
+      <con:value>378.65</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128862</con:value>
+      <con:value>173807</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1599,7 +1605,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>OZ4FMB</con:value>
+      <con:value>YXW1XV</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1607,7 +1613,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-6</con:value>
+      <con:value>-24</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

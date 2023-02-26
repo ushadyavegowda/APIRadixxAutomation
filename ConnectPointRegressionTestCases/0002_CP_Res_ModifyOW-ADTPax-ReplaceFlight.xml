@@ -17,11 +17,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>19361.00</con:value>
+          <con:value>328.65</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128862</con:value>
+          <con:value>172506</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -29,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>KK83EM</con:value>
+          <con:value>96XNNW</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -37,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-5</con:value>
+          <con:value>-14</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -689,10 +689,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>3. SummaryPNR - Get Summary</con:sourceStep>
-        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-declare namespace ns1='http://tempuri.org/';
-//ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
+        <con:sourceStep>5. AssessPaymentMethodFees</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:AssessPaymentMethodFeesResponse[1]/ns1:AssessPaymentMethodFeesResult[1]/a:ReservationBalance[1]</con:sourcePath>
         <con:targetType>Balance</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:type>XPATH</con:type>
@@ -982,21 +982,6 @@ declare namespace ns1='http://tempuri.org/';
           </con:entry>
         </con:environmentSpec>
       </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="3ded283a-1425-47ed-8a81-3ba438875713" name="Property ReservationPaymentID" type="transfer">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>ReservationPaymentID</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
-        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
-        <con:targetType>ReservationPaymentID</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
     </con:config>
   </con:testStep>
   <con:testStep id="0a85a1d1-4801-4745-a025-ca0bbdbdafd4" name="Delay after IEP" type="delay">
@@ -1294,6 +1279,78 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="b8e14656-9136-4058-86cc-a20dae7064ce" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="30cfc609-38ce-4a83-b11b-6446705ef2a5" name="Groovy Script_to copyRQ and RS 2" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property userSpecific="true">
       <con:name>Balance</con:name>
@@ -1349,7 +1406,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>135362:2/20/2023 3:00:00 PM</con:value>
+      <con:value>172506:2/24/2023 12:10:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
@@ -2074,11 +2131,6 @@ declare namespace ns1='http://tempuri.org/';
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>081c114b-69e5-4f54-87b1-ad8cd2cc18e8</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3ded283a-1425-47ed-8a81-3ba438875713</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

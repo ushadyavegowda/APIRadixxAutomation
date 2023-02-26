@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="b5909c08-7fa5-4718-9155-84f35f4ca4c9" name="/Logout" path="/Logout" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b5909c08-7fa5-4718-9155-84f35f4ca4c9fileName">%2FLogout</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="96ef58ab-2682-4cab-bf12-608ffc2a00ca" method="POST" name="POST">
+    <con:description>Removes a session
+Logout</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "Reason" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="e49e9b43-8096-4e3c-9502-138cc1be9ee5" mediaType="application/json" name="Request 1">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "Reason" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

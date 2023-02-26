@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="b4fc6a8b-2de6-4cd5-8428-46f1a7929ccc" name="/Login" path="/Login" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b4fc6a8b-2de6-4cd5-8428-46f1a7929cccfileName">%2FLogin</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="0d6d1211-7431-41e9-9716-d4ccd663f1d2" method="POST" name="POST">
+    <con:description>Creates a session and provides a SecurityToken
+Login</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "UserName" : "string",
+    "Password" : "string",
+    "IpAddress" : "string",
+    "LicenseKey" : "string",
+    "CultureLCID" : 0
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="f72548d9-f5fd-4acc-a5c8-dec427dfd0e4" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "UserName" : "string",\r
+    "Password" : "string",\r
+    "IpAddress" : "string",\r
+    "LicenseKey" : "string",\r
+    "CultureLCID" : 0\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="f5b39132-909c-495c-8ff9-08c0c54a0758" name="/GetSeatMap" path="/GetSeatMap" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f5b39132-909c-495c-8ff9-08c0c54a0758fileName">%2FGetSeatMap</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="5e1ddace-28c2-4f7f-8c94-dde0088be27a" method="POST" name="POST">
+    <con:description>GetSeatMap
+GetSeatMap</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "SeatConfigurationId" : 0,
+    "NeedIsReferenced" : true
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="008e225d-e467-401b-839d-0e535b0fc503" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "SeatConfigurationId" : 0,\r
+    "NeedIsReferenced" : true\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

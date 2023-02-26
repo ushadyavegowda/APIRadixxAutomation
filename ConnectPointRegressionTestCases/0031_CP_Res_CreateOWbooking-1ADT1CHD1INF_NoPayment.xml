@@ -8,7 +8,11 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -598,11 +602,11 @@
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'APRIL23_Regression'
+def tfolder = 'RegAprilRelease'
  
 //context.expand( '${#TestSuite#JIRA folder}' )
  
-def dirpath = "C:/Download/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()

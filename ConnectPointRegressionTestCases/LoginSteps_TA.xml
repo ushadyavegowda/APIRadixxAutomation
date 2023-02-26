@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="809a7889-dd40-418b-b477-10592e534550" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="LoginSteps_TA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="809a7889-dd40-418b-b477-10592e534550" keepSession="false" name="LoginSteps_TA" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="809a7889-dd40-418b-b477-10592e534550fileName">LoginSteps_TA</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1.SecurityToken_inputData" id="8dbb8e2a-3752-4927-8fb5-4794c2d824a8">
+  <con:testStep id="8dbb8e2a-3752-4927-8fb5-4794c2d824a8" name="1.SecurityToken_inputData" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="e5ea41ca-c941-434a-aa06-7dbd4b6b4a48" name="2 LoginTravelAgent">
+  <con:testStep id="e5ea41ca-c941-434a-aa06-7dbd4b6b4a48" name="2 LoginTravelAgent" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_TravelAgents</con:interface>
       <con:operation>LoginTravelAgent</con:operation>
-      <con:request name="2 LoginTravelAgent" id="25076ffc-2712-4dce-8830-d6752a6c2abe">
+      <con:request id="25076ffc-2712-4dce-8830-d6752a6c2abe" name="2 LoginTravelAgent">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -46,14 +50,14 @@
       </tem:LoginTravelAgent>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="af528474-2a3c-4e80-a0b1-85e5f1a0e045" name="Valid HTTP Status Codes">
+        <con:assertion id="af528474-2a3c-4e80-a0b1-85e5f1a0e045" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="2545e7e7-ec9f-4244-b3d4-f286f50ccda4" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="0b1bee43-a152-4532-aac1-ff5426fd22d5" name="Schema Compliance">
+        <con:assertion id="2545e7e7-ec9f-4244-b3d4-f286f50ccda4" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="0b1bee43-a152-4532-aac1-ff5426fd22d5" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -74,12 +78,12 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4fd815c9-f8f3-4eab-b438-b17de1b5ccd9" name="3 RetrieveAgencyCommission">
+  <con:testStep id="4fd815c9-f8f3-4eab-b438-b17de1b5ccd9" name="3 RetrieveAgencyCommission" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_TravelAgents</con:interface>
       <con:operation>RetrieveAgencyCommission</con:operation>
-      <con:request name="3 RetrieveAgencyCommission" id="46fa6265-234f-42b9-af8d-f67634fdaf8f">
+      <con:request id="46fa6265-234f-42b9-af8d-f67634fdaf8f" name="3 RetrieveAgencyCommission">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -107,14 +111,14 @@
       </tem:RetrieveAgencyCommission>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="80473a34-dcb0-4bf0-8a45-167fb419e38a" name="Valid HTTP Status Codes">
+        <con:assertion id="80473a34-dcb0-4bf0-8a45-167fb419e38a" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="7c76e3e4-af9d-4884-8567-dfc8eecc0bae" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="5c9d2a14-a2e6-4d1f-8e21-7dac9e775aca" name="Schema Compliance">
+        <con:assertion id="7c76e3e4-af9d-4884-8567-dfc8eecc0bae" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="5c9d2a14-a2e6-4d1f-8e21-7dac9e775aca" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>

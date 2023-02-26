@@ -14,15 +14,18 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>357.00</con:value>
+          <con:value>189.34</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>W0L5LE</con:value>
+          <con:value>ER4W5M</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>357.00</con:value>
+          <con:value>189.34</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -352,7 +355,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:properties>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>58769</con:value>
+      <con:value>60506</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="6477127a-a56a-4869-b13f-aa7c3977ad38" name="/UpdatePassengerStatus" path="/UpdatePassengerStatus" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6477127a-a56a-4869-b13f-aa7c3977ad38fileName">%2FUpdatePassengerStatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="30ac9f3c-6890-4adb-8099-11b5aef587cb" method="POST" name="POST">
+    <con:description>UpdatePassengerStatus
+UpdatePassengerStatus</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "PassengerStatusList" : [ {
+      "DepartureDate" : "2015-07-20T15:49:04-07:00",
+      "DepartureAirport" : "string",
+      "Carrier" : "string",
+      "OperatingFlightNumber" : "string",
+      "PaxId" : "string",
+      "ConfirmationNumber" : "string",
+      "UpdateStatusAction" : 0,
+      "BoardingPassNumber" : 0,
+      "UserId" : "string"
+    } ]
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="54b156bc-f39a-4869-af33-25aafe9be952" mediaType="application/json" name="Request 1">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "PassengerStatusList" : [ {\r
+      "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+      "DepartureAirport" : "string",\r
+      "Carrier" : "string",\r
+      "OperatingFlightNumber" : "string",\r
+      "PaxId" : "string",\r
+      "ConfirmationNumber" : "string",\r
+      "UpdateStatusAction" : 0,\r
+      "BoardingPassNumber" : 0,\r
+      "UserId" : "string"\r
+    } ]\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -4,12 +4,12 @@
     <con:setting id="19b662e5-acaa-4c2d-b343-9c8f079d4d2cfileName">Prequisite_Step</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="93c16e07-4dd5-4c85-9ca2-62f3497b8927" name="1. RetrieveSecuirtyToken" type="request">
+  <con:testStep id="93c16e07-4dd5-4c85-9ca2-62f3497b8927" name="1. RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request id="4ae458c3-17a0-4bf7-88ff-227035d525d4" name="1. RetrieveSecuirtyToken">
+      <con:request id="4ae458c3-17a0-4bf7-88ff-227035d525d4" name="1. RetrieveSecurityToken">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -159,6 +159,22 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="3d624e87-3216-425c-a55a-3c5925bebdb4" name="Groovy Script_securityToken" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>// importing the Java methods
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+//
+//def DepartureDate = new Date().plus(1)
+//def ModifyDate = new Date().plus(2)
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
+
+log.info(securityToken)</script>
+    </con:config>
+  </con:testStep>
   <con:testStep id="d8523e1d-5331-40b9-9cb2-9cbd163428a6" name="Groovy Script_input TestSuite" type="groovy">
     <con:settings/>
     <con:config>
@@ -166,46 +182,38 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
-testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 
-log.info(securityToken)
-
-/* Flight Infromation*/ 
-def origin = "YYZ"
-def destination = "YVR"
-def new_Segment = "NRT"
-def flightnum = "204"
-def carriercode = "1D"
-def currency = "CAD"
-def paycurrency = "CAD"
-def IATANumber = "1000"
-
-def DepartureDate = new Date().plus(1)
+def DepartureDate = new Date().plus(3)
 def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
 
+
 //DOB
-SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//ADT age
-int age = 44;
-Calendar a  = Calendar.getInstance();
-a.add(Calendar.YEAR,- age);
-ADT_DOB= sdf.format(a.getTime());
-
-//CHD age
-int ChdAge = 6;
-Calendar c  = Calendar.getInstance();
-c.add(Calendar.YEAR,- ChdAge);
-p_DOB_CHD= sdf.format(c.getTime());
-
-//INF age
 def p_DOB_INF= new Date().minus(120)
 
 
+/* Perf prod*/ 
+def origin = "YVR"
+def destination = "YYZ"
+def new_Segment = "NRT"
+def flightnum = "699"
+def carriercode = "1D"
+def FBC = "EOW"
+def currency = "CAD"
+def paycurrency = "CAD"
+def IATANumber = "1000"
 
+def generator = { String alphabet, int n ->
+  new Random().with {
+    (1..n).collect { alphabet[ nextInt( alphabet.length() ) ] }.join()
+  }
+}
+FirstNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+LastNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+testRunner.testCase.testSuite.setPropertyValue("FirstNameRandom", FirstNameRandom);
+testRunner.testCase.testSuite.setPropertyValue("LasttNameRandom", LastNameRandom);
 
 
 //Date and flight info
@@ -220,80 +228,38 @@ testRunner.testCase.testSuite.setPropertyValue("Destination", destination);
 testRunner.testCase.testSuite.setPropertyValue("New_Segment", new_Segment);
 testRunner.testCase.testSuite.setPropertyValue("flightnum", flightnum);
 testRunner.testCase.testSuite.setPropertyValue("carriercode", carriercode);
+testRunner.testCase.testSuite.setPropertyValue("FBC", FBC);
 testRunner.testCase.testSuite.setPropertyValue("currency", currency);
 testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
 
-//Summary and FQ
-testRunner.testCase.testSuite.setPropertyValue("LanguageCode", "en");
-
-
 //Passenger Info
-def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-testRunner.testCase.testSuite.setPropertyValue("p_FirstName", FirstName.toUpperCase().concat("ADT"));
-testRunner.testCase.testSuite.setPropertyValue("p_LastName", LastName.toUpperCase().concat("ADT"));
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("ADT"));
-testRunner.testCase.testSuite.setPropertyValue("p_Title", "Ms");
-testRunner.testCase.testSuite.setPropertyValue("p_DOB", ADT_DOB);
-testRunner.testCase.testSuite.setPropertyValue("p_Age", age.toString());
+testRunner.testCase.testSuite.setPropertyValue("p_FirstName", "Radixx");
+testRunner.testCase.testSuite.setPropertyValue("p_LastName", "Tester");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB", "1974-10-23");
+testRunner.testCase.testSuite.setPropertyValue("p_Age", "44");
 testRunner.testCase.testSuite.setPropertyValue("p_Gender", "Male");
 testRunner.testCase.testSuite.setPropertyValue("p_PTC", "ADT");
 testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Citizenship", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Language", "1");
 testRunner.testCase.testSuite.setPropertyValue("p_PhoneNumber", "+46701497931");
-def Email = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
-testRunner.testCase.testSuite.setPropertyValue("p_Email",Email.toUpperCase().concat("@radixx.com"));
+testRunner.testCase.testSuite.setPropertyValue("p_Email", "test@radixx.com");
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
 testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SEAT");
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", FirstName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD",  LastName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName",MiddleName.toUpperCase().concat("CHD"));
-testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", p_DOB_CHD);
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", "RadixxCHD");
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD", "TesterCHD");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", "2015-10-23");
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", FirstName.toUpperCase().concat("INF"));
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", LastName.toUpperCase().concat("INF"));
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("INF"));
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
 testRunner.testCase.testSuite.setPropertyValue("p_DOB_INF",p_DOB_INF.format("yyyy-MM-dd"));
 
-//IEP call
-testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
-testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
-def ExpDate = new Date().plus(100)
-testRunner.testCase.testSuite.setPropertyValue("ExpirationDate", ExpDate.format("yyyy-MM-dd"));
-def ExchangeRateDate = new Date()
-testRunner.testCase.testSuite.setPropertyValue("ExchangeRateDate", ExchangeRateDate.format("yyyy-MM-dd"));
-testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
-testRunner.testCase.testSuite.setPropertyValue("TransactionStatus", "APPROVED");
-testRunner.testCase.testSuite.setPropertyValue("BillingCountry", "840");
-testRunner.testCase.testSuite.setPropertyValue("CountryCode", "840");
-testRunner.testCase.testSuite.setPropertyValue("ProcessorName", "OPPY");
-testRunner.testCase.testSuite.setPropertyValue("SeriesNumber", "299");
-testRunner.testCase.testSuite.setPropertyValue("UserName", "radixx");
-testRunner.testCase.testSuite.setPropertyValue("Reference", "Test");
-testRunner.testCase.testSuite.setPropertyValue("Comments", "Test");
-testRunner.testCase.testSuite.setPropertyValue("CheckNumber", "123");
-testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
-testRunner.testCase.testSuite.setPropertyValue("AuthorizationCode", "t1");
-testRunner.testCase.testSuite.setPropertyValue("PaymentReference", "t2");
-testRunner.testCase.testSuite.setPropertyValue("ResponseMessage", "t3");
-
-//VISA
-testRunner.testCase.testSuite.setPropertyValue("CardNumber", "4111111111111111");
-testRunner.testCase.testSuite.setPropertyValue("CVCode", "123");
-
-//IEP Address
-testRunner.testCase.testSuite.setPropertyValue("Address1", "123 Elm Street");
-testRunner.testCase.testSuite.setPropertyValue("Address2", "Suite 150");
-testRunner.testCase.testSuite.setPropertyValue("City", "Maitland");
-testRunner.testCase.testSuite.setPropertyValue("State", "FL");
-testRunner.testCase.testSuite.setPropertyValue("Postal", "32751");
-testRunner.testCase.testSuite.setPropertyValue("Country", "usa");
-testRunner.testCase.testSuite.setPropertyValue("ID", "1");
 
 //APIS info - 1 ADT
 
@@ -342,22 +308,21 @@ testRunner.testCase.testSuite.setPropertyValue("OAL_FarebasisCode", "B");
 testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledDepartureTime", "T12:30:00.000+05:00");
 testRunner.testCase.testSuite.setPropertyValue("OAL_ScheduledArrivalTime", "T15:30:00.000+05:00");
 
-//SSR
-testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SBUN");
+
 
 
 log.info(DepartureDate)
 log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="96599a60-a8df-4dd2-a572-64af748ae87e" name="Groovy Script_Ref_do not delete" type="groovy" disabled="true">
+  <con:testStep disabled="true" id="96599a60-a8df-4dd2-a572-64af748ae87e" name="Groovy Script_Ref_do not delete" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
 testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 
 log.info(securityToken)
@@ -530,7 +495,12 @@ log.info(DepartureDate)
 log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>FirstNameRandom</con:name>
+      <con:value>aA4DOmm0pvjF7p1</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">

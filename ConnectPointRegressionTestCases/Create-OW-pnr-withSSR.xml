@@ -8,7 +8,11 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -1653,7 +1657,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="6db3b7e8-4b36-4ce2-aad6-9a06a24c9000" name="Transfer SSR details" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
@@ -1690,7 +1694,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>
@@ -1727,7 +1731,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. RetrieveAARQuote</con:sourceStep>

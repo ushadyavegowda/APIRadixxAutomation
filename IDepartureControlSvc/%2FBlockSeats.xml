@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="fceb9abc-f556-40a2-8a0f-fdc4ab099046" name="/BlockSeats" path="/BlockSeats" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fceb9abc-f556-40a2-8a0f-fdc4ab099046fileName">%2FBlockSeats</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="3a9af96f-89f0-4e4c-a671-e005384c361a" method="POST" name="POST">
+    <con:description>BlockSeats
+BlockSeats</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "CarrierCode" : "string",
+    "FlightNumber" : "string",
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",
+    "DepartureAirport" : "string",
+    "ArrivalAirport" : "string",
+    "SeatDetails" : [ {
+      "Row" : 0,
+      "Seat" : "string"
+    } ]
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="bc4031af-f92f-4457-b3dd-d5aed364b9b9" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsint.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "CarrierCode" : "string",\r
+    "FlightNumber" : "string",\r
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",\r
+    "DepartureAirport" : "string",\r
+    "ArrivalAirport" : "string",\r
+    "SeatDetails" : [ {\r
+      "Row" : 0,\r
+      "Seat" : "string"\r
+    } ]\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -8,7 +8,11 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>FirstNameRandom</con:name>
+        </con:property>
+      </con:properties>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -83,14 +87,14 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Simple Contains" id="ea685aa8-313a-4711-8911-ff0fd80f1167" name="Contains">
+        <con:assertion id="ea685aa8-313a-4711-8911-ff0fd80f1167" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>false</ignoreCase>
             <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Schema Compliance" id="0d5dcc74-672f-4b0a-b6d5-eef60e4d1164" name="Schema Compliance">
+        <con:assertion id="0d5dcc74-672f-4b0a-b6d5-eef60e4d1164" name="Schema Compliance" type="Schema Compliance">
           <con:configuration>
             <definition/>
           </con:configuration>
@@ -374,14 +378,14 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Simple Contains" id="bdebae04-2409-4968-be9f-ac37ae052ef3" name="Contains">
+        <con:assertion id="bdebae04-2409-4968-be9f-ac37ae052ef3" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>false</ignoreCase>
             <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Schema Compliance" id="b93ff9b7-3cea-4ce9-8954-3ff20e51159d" name="Schema Compliance">
+        <con:assertion id="b93ff9b7-3cea-4ce9-8954-3ff20e51159d" name="Schema Compliance" type="Schema Compliance">
           <con:configuration>
             <definition/>
           </con:configuration>
@@ -577,7 +581,7 @@ declare namespace ns1='http://tempuri.org/';
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
-        <con:assertion type="Simple Contains" id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains">
+        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>false</ignoreCase>
@@ -778,7 +782,7 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Simple Contains" id="c2d13e9e-f279-482e-9449-b26fced9744f" name="Contains">
+        <con:assertion id="c2d13e9e-f279-482e-9449-b26fced9744f" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>true</ignoreCase>
@@ -1092,14 +1096,14 @@ declare namespace ns1='http://tempuri.org/';
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="a2eabbf9-162d-4551-b815-c47d65cba4b6" type="SOAP Response"/>
-        <con:assertion type="Simple Contains" id="d9d0e1a3-0ab9-4b1b-a009-73ed22616c75" name="Contains">
+        <con:assertion id="d9d0e1a3-0ab9-4b1b-a009-73ed22616c75" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>true</ignoreCase>
             <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Schema Compliance" id="9a17bcd8-ddd9-4a83-9f08-9b4aa6253cf6" name="Schema Compliance">
+        <con:assertion id="9a17bcd8-ddd9-4a83-9f08-9b4aa6253cf6" name="Schema Compliance" type="Schema Compliance">
           <con:configuration>
             <definition/>
           </con:configuration>
@@ -1234,7 +1238,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="350b0636-9a7c-4368-b67a-b3dc6b1d7223" name="Transfer ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 InsertExternalProcessedPayment_VISA</con:sourceStep>
@@ -1342,7 +1346,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:assertion id="c02e737b-5493-4596-a7af-1a6851f9e3d1" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
-        <con:assertion type="Simple Contains" id="6e1072d0-efb6-4b73-86e4-7c57240a5f9d" name="Contains">
+        <con:assertion id="6e1072d0-efb6-4b73-86e4-7c57240a5f9d" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>true</ignoreCase>

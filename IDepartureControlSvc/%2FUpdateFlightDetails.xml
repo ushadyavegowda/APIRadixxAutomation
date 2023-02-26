@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="83fc5f64-311f-4a47-a2a6-b2ed45d2db27" name="/UpdateFlightDetails" path="/UpdateFlightDetails" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="83fc5f64-311f-4a47-a2a6-b2ed45d2db27fileName">%2FUpdateFlightDetails</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="df8eae8e-30ee-4188-9371-9ee6cf7ed071" method="POST" name="POST">
+    <con:description>UpdateFlightDetails
+UpdateFlightDetails</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",
+    "DepartureAirport" : "string",
+    "CarrierCode" : "string",
+    "OperatingFlightNumber" : "string",
+    "Username" : "string",
+    "EstimatedDepartureTime" : "2015-07-20T15:49:04-07:00",
+    "EstimatedArrivalTime" : "2015-07-20T15:49:04-07:00",
+    "TimeOutOfGate" : "2015-07-20T15:49:04-07:00",
+    "TimeOffGround" : "2015-07-20T15:49:04-07:00",
+    "TimeOnGround" : "2015-07-20T15:49:04-07:00",
+    "TimeAtGate" : "2015-07-20T15:49:04-07:00"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="f9e0f7a7-0dad-4d15-a3ba-1934759c2b81" mediaType="application/json" name="Request 1">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "DepartureAirport" : "string",\r
+    "CarrierCode" : "string",\r
+    "OperatingFlightNumber" : "string",\r
+    "Username" : "string",\r
+    "EstimatedDepartureTime" : "2015-07-20T15:49:04-07:00",\r
+    "EstimatedArrivalTime" : "2015-07-20T15:49:04-07:00",\r
+    "TimeOutOfGate" : "2015-07-20T15:49:04-07:00",\r
+    "TimeOffGround" : "2015-07-20T15:49:04-07:00",\r
+    "TimeOnGround" : "2015-07-20T15:49:04-07:00",\r
+    "TimeAtGate" : "2015-07-20T15:49:04-07:00"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

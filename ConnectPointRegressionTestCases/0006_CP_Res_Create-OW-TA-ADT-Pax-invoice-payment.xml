@@ -4,7 +4,16 @@
     <con:setting id="bb69e7f5-e0ef-4c24-ab35-ae6439f25a8cfileName">0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1.LoginTA" id="0c91fd0f-5a66-4a9f-aa6e-855cd9fadb80">
+  <con:testStep id="3fc2d793-d6ab-4016-8632-9f23c7481469" name="1. LoginTA" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="0c91fd0f-5a66-4a9f-aa6e-855cd9fadb80" name="1.LoginTA" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>809a7889-dd40-418b-b477-10592e534550</con:targetTestCase>
@@ -154,7 +163,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="a63f12fe-6799-46fa-8de3-3b04b051acb9" name="3 SummaryPNR - Get Summary" type="request" disabled="true">
+  <con:testStep disabled="true" id="a63f12fe-6799-46fa-8de3-3b04b051acb9" name="3 SummaryPNR - Get Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1162,7 +1171,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
@@ -1178,6 +1187,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
   </con:properties>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>f95b8d3f-650c-468f-9781-34df05c2a3e5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>f95b8d3f-650c-468f-9781-34df05c2a3e5</con:testStepId>
     <con:status>NONE</con:status>

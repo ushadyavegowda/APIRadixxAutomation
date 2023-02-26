@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="0fec8693-5199-4dcf-a344-c6cace604b37" name="/ReaccomPassengers" path="/ReaccomPassengers" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0fec8693-5199-4dcf-a344-c6cace604b37fileName">%2FReaccomPassengers</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="4ed72f7d-2a7a-4930-9ad9-e8743d9e7692" method="POST" name="POST">
+    <con:description>ReaccomPassengers
+ReaccomPassengers</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "Origin" : "string",
+    "OriginalFlightNumber" : "string",
+    "OriginalCarrier" : "string",
+    "OriginalDepartureDate" : "2015-07-20T15:49:04-07:00",
+    "NewFlightNumber" : "string",
+    "NewCarrier" : "string",
+    "NewDepartureDate" : "2015-07-20T15:49:04-07:00",
+    "Passengers" : [ {
+      "PaxId" : "string",
+      "CheckinLocator" : "string",
+      "Cabin" : "string",
+      "Row" : "string",
+      "Seat" : "string"
+    } ],
+    "ApplicationUserId" : "string",
+    "ApplicationId" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="b724331e-6689-44dc-bad7-68003c7f7f02" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "Origin" : "string",\r
+    "OriginalFlightNumber" : "string",\r
+    "OriginalCarrier" : "string",\r
+    "OriginalDepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "NewFlightNumber" : "string",\r
+    "NewCarrier" : "string",\r
+    "NewDepartureDate" : "2015-07-20T15:49:04-07:00",\r
+    "Passengers" : [ {\r
+      "PaxId" : "string",\r
+      "CheckinLocator" : "string",\r
+      "Cabin" : "string",\r
+      "Row" : "string",\r
+      "Seat" : "string"\r
+    } ],\r
+    "ApplicationUserId" : "string",\r
+    "ApplicationId" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -4,7 +4,66 @@
     <con:setting id="b288fa0d-d894-499e-b551-dba9ab404c7bfileName">0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1. Run_0001_CP_Res_Create OW ADT Pax CASH payment" id="074ec58d-afcb-4fbf-b642-b72aa4513a91">
+  <con:testStep id="cc292aee-69bd-430c-9b3b-901dd8ec379e" name="Create RT Booking" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>cf5b1ad3-fb89-4aac-815a-27e9a1e5acbd</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>Balance</con:name>
+          <con:value>6549.56</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>128826</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>PNR</con:name>
+          <con:value>C5ZLMT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid_returnSeg</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>LFID_returnSeg</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>s_ServiceID</con:name>
+          <con:value>43</con:value>
+        </con:property>
+        <con:property>
+          <con:name>s_SSRCategory</con:name>
+          <con:value>42</con:value>
+        </con:property>
+        <con:property>
+          <con:name>s_Amount</con:name>
+          <con:value>25</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReservationPaymentID</con:name>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>Balance</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>fareid</con:entry>
+        <con:entry>PNR</con:entry>
+        <con:entry>fareid_returnSeg</con:entry>
+        <con:entry>LFID_returnSeg</con:entry>
+        <con:entry>s_ServiceID</con:entry>
+        <con:entry>s_SSRCategory</con:entry>
+        <con:entry>s_Amount</con:entry>
+      </con:returnProperties>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="074ec58d-afcb-4fbf-b642-b72aa4513a91" name="1. Run_0001_CP_Res_Create OW ADT Pax CASH payment" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
@@ -133,6 +192,17 @@
 declare namespace ns1='http://tempuri.org/';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[a:Origin = '${#TestSuite#Origin}']/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
         <con:targetType>PhysicalFlightID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>PhysicalFlightID_ReturnSeg</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>RetrivePNR</con:sourceStep>
+        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+declare namespace ns1='http://tempuri.org/';
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[a:Origin = '${#TestSuite#Destination}']/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
+        <con:targetType>PhysicalFlightID_ReturnSeg</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
@@ -578,7 +648,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="3020b8ec-53e7-49df-9d30-bc88c2dc039d" name="Transfer Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
@@ -588,7 +658,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
@@ -598,7 +668,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
@@ -608,7 +678,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
@@ -618,7 +688,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
@@ -923,7 +993,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="9cf17fac-a037-4030-a4f3-3104d38fd5b8" name="Property ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
@@ -933,7 +1003,7 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
@@ -1272,6 +1342,10 @@ declare namespace ns1='http://tempuri.org/';
     <con:property>
       <con:name>PhysicalFlightID</con:name>
       <con:value>96404</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PhysicalFlightID_ReturnSeg</con:name>
+      <con:value>186904</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

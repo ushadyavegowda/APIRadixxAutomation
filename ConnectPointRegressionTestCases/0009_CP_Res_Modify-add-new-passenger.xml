@@ -347,10 +347,10 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Balance Transfer" id="abec0934-a031-4268-8ec7-8374d4fb6130">
+  <con:testStep id="abec0934-a031-4268-8ec7-8374d4fb6130" name="Balance Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. ModifyPNR_Add Pax</con:sourceStep>
@@ -409,7 +409,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
-        <con:assertion type="Simple Contains" id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains">
+        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>false</ignoreCase>
@@ -543,10 +543,10 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Balance Transfer AssessPaymentMethod" id="830f6ca0-62b0-4a96-9168-d5cb9e872fab">
+  <con:testStep id="830f6ca0-62b0-4a96-9168-d5cb9e872fab" name="Balance Transfer AssessPaymentMethod" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. ModifyPNR_Add Pax</con:sourceStep>
@@ -1031,10 +1031,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PNR Transfer" id="0d1e1a83-85c0-4825-a6e3-dbad89e3820e">
+  <con:testStep id="0d1e1a83-85c0-4825-a6e3-dbad89e3820e" name="PNR Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 Save PNR</con:sourceStep>

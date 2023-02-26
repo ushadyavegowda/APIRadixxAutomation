@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="7fab0876-6c69-4e9b-90bf-6d315b4ad722" name="/AddBaggage" path="/AddBaggage" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7fab0876-6c69-4e9b-90bf-6d315b4ad722fileName">%2FAddBaggage</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="ea394e33-af36-4b86-a4b9-10e69091466f" method="POST" name="POST">
+    <con:description>AddBaggage
+AddBaggage</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "UserName" : "string",
+    "Passengers" : [ {
+      "Itinerary" : [ {
+        "Bags" : [ {
+          "BagNumber" : "string",
+          "Weight" : 0,
+          "Unit" : "string"
+        } ],
+        "DepartureDate" : "2015-07-20T15:49:04-07:00",
+        "Origin" : "string",
+        "Destination" : "string",
+        "CarrierCode" : "string",
+        "OperatingFlightNumber" : "string"
+      } ],
+      "CheckinLocator" : "string",
+      "RecordNum" : 0
+    } ]
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="a6c5edc4-76e0-4b72-b8c6-62605132c52a" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+   "Param" : {\r
+      "UserName" : "string",\r
+      "Passengers" : [\r
+         {\r
+            "Itinerary" : [\r
+               {\r
+                  "Bags" : [\r
+                     {\r
+                        "BagNumber" : "string",\r
+                        "Weight" : 0,\r
+                        "Unit" : "string"\r
+                     }\r
+                  ],\r
+                  "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+                  "Origin" : "string",\r
+                  "Destination" : "string",\r
+                  "CarrierCode" : "string",\r
+                  "OperatingFlightNumber" : "string"\r
+               }\r
+            ],\r
+            "CheckinLocator" : "string",\r
+            "RecordNum" : 0\r
+         }\r
+      ]\r
+   },\r
+   "SecurityToken" : "string",\r
+   "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

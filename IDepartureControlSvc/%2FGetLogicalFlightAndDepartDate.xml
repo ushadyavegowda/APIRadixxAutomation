@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="403f09a4-9c81-4272-9b2f-bc28a713e7de" name="/GetLogicalFlightAndDepartDate" path="/GetLogicalFlightAndDepartDate" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="403f09a4-9c81-4272-9b2f-bc28a713e7defileName">%2FGetLogicalFlightAndDepartDate</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="9272d2d4-2a16-4fdb-9339-3e7ded78909c" method="POST" name="POST">
+    <con:description>GetLogicalFlightAndDepartDate
+GetLogicalFlightAndDepartDate</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",
+    "Origin" : "string",
+    "Destination" : "string",
+    "FlightNumber" : "string",
+    "CarrierCode" : "string",
+    "ApplicationUserId" : "string",
+    "ApplicationId" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="07ad27bc-e438-4639-994f-31bfbdb830fd" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "FlightOriginDate" : "2015-07-20T15:49:04-07:00",\r
+    "Origin" : "string",\r
+    "Destination" : "string",\r
+    "FlightNumber" : "string",\r
+    "CarrierCode" : "string",\r
+    "ApplicationUserId" : "string",\r
+    "ApplicationId" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -4,7 +4,7 @@
     <con:setting id="affae135-9a38-43dc-8410-7e1e7279ac8ffileName">0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="c4a28fd1-02a1-4800-96dd-a7fd2011ec9e" name="1. LoginTA" type="calltestcase" disabled="true">
+  <con:testStep disabled="true" id="c4a28fd1-02a1-4800-96dd-a7fd2011ec9e" name="1. LoginTA" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>

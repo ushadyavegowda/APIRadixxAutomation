@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="e2d358f8-e650-447b-bae0-8dec2eeb2680" name="/AddPayment" path="/AddPayment" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e2d358f8-e650-447b-bae0-8dec2eeb2680fileName">%2FAddPayment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="b6aa5ddf-e1fc-4ddf-8bdb-5924301120b5" method="POST" name="POST">
+    <con:description>AddPayment
+AddPayment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "Param" : {
+    "Payments" : [ {
+      "PaymentInfoId" : "string",
+      "PaymentMethodCode" : "string",
+      "BaseAmount" : {
+        "CurCode" : "string",
+        "Value" : 0
+      },
+      "Amount" : {
+        "CurCode" : "string",
+        "Value" : 0
+      },
+      "ExchangeRate" : 0,
+      "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",
+      "Comment" : "string",
+      "PayerRefId" : "string",
+      "PaxServiceRefIds" : [ "string" ],
+      "Payer" : {
+        "PayerId" : "string",
+        "Individual" : {
+          "Birthdate" : "string",
+          "BirthplaceText" : "string",
+          "GenderCode" : "string",
+          "GivenName" : "string",
+          "MiddleName" : "string",
+          "SuffixName" : "string",
+          "SurName" : "string",
+          "TitleName" : "string",
+          "Weight" : 0
+        },
+        "ContactInfo" : {
+          "PostalAddress" : {
+            "StreetAddress1" : "string",
+            "StreetAddress2" : "string",
+            "CityName" : "string",
+            "StateName" : "string",
+            "PostalCode" : "string",
+            "CountryCode" : "string"
+          },
+          "ContactTypeList" : [ {
+            "ContactTypeText" : "string",
+            "ContactValueText" : "string"
+          } ]
+        }
+      },
+      "Passengers" : [ {
+        "Itinerary" : [ {
+          "DepartureDate" : "2015-07-20T15:49:04-07:00",
+          "Origin" : "string",
+          "Destination" : "string",
+          "CarrierCode" : "string",
+          "OperatingFlightNumber" : "string",
+          "Services" : [ {
+            "TypeCode" : "string",
+            "FreeFormText" : "string",
+            "CurrencyCode" : "string",
+            "Amount" : {
+              "CurCode" : "string",
+              "Value" : 0
+            },
+            "OriginalAmount" : {
+              "CurCode" : "string",
+              "Value" : 0
+            },
+            "ServiceTaxList" : [ {
+              "PaxServiceTaxId" : "string",
+              "TaxId" : 0,
+              "CodeType" : "string",
+              "Description" : "string",
+              "Amount" : {
+                "CurCode" : "string",
+                "Value" : 0
+              },
+              "OriginalAmount" : {
+                "CurCode" : "string",
+                "Value" : 0
+              },
+              "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",
+              "ExchangeRate" : 0
+            } ],
+            "PriceAmountId" : "string",
+            "PaxServiceId" : "string",
+            "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",
+            "ExchangeRate" : 0
+          } ]
+        } ],
+        "CheckinLocator" : "string",
+        "RecordNum" : 0
+      } ]
+    } ],
+    "ApplicationUserId" : "string",
+    "ApplicationId" : "string"
+  },
+  "SecurityToken" : "string",
+  "CorrId" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="4580ef12-d3eb-4b43-8a49-667b2d9eb2bb" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+      <con:request>{\r
+  "Param" : {\r
+    "Payments" : [ {\r
+      "PaymentInfoId" : "string",\r
+      "PaymentMethodCode" : "string",\r
+      "BaseAmount" : {\r
+        "CurCode" : "string",\r
+        "Value" : 0\r
+      },\r
+      "Amount" : {\r
+        "CurCode" : "string",\r
+        "Value" : 0\r
+      },\r
+      "ExchangeRate" : 0,\r
+      "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",\r
+      "Comment" : "string",\r
+      "PayerRefId" : "string",\r
+      "PaxServiceRefIds" : [ "string" ],\r
+      "Payer" : {\r
+        "PayerId" : "string",\r
+        "Individual" : {\r
+          "Birthdate" : "string",\r
+          "BirthplaceText" : "string",\r
+          "GenderCode" : "string",\r
+          "GivenName" : "string",\r
+          "MiddleName" : "string",\r
+          "SuffixName" : "string",\r
+          "SurName" : "string",\r
+          "TitleName" : "string",\r
+          "Weight" : 0\r
+        },\r
+        "ContactInfo" : {\r
+          "PostalAddress" : {\r
+            "StreetAddress1" : "string",\r
+            "StreetAddress2" : "string",\r
+            "CityName" : "string",\r
+            "StateName" : "string",\r
+            "PostalCode" : "string",\r
+            "CountryCode" : "string"\r
+          },\r
+          "ContactTypeList" : [ {\r
+            "ContactTypeText" : "string",\r
+            "ContactValueText" : "string"\r
+          } ]\r
+        }\r
+      },\r
+      "Passengers" : [ {\r
+        "Itinerary" : [ {\r
+          "DepartureDate" : "2015-07-20T15:49:04-07:00",\r
+          "Origin" : "string",\r
+          "Destination" : "string",\r
+          "CarrierCode" : "string",\r
+          "OperatingFlightNumber" : "string",\r
+          "Services" : [ {\r
+            "TypeCode" : "string",\r
+            "FreeFormText" : "string",\r
+            "CurrencyCode" : "string",\r
+            "Amount" : {\r
+              "CurCode" : "string",\r
+              "Value" : 0\r
+            },\r
+            "OriginalAmount" : {\r
+              "CurCode" : "string",\r
+              "Value" : 0\r
+            },\r
+            "ServiceTaxList" : [ {\r
+              "PaxServiceTaxId" : "string",\r
+              "TaxId" : 0,\r
+              "CodeType" : "string",\r
+              "Description" : "string",\r
+              "Amount" : {\r
+                "CurCode" : "string",\r
+                "Value" : 0\r
+              },\r
+              "OriginalAmount" : {\r
+                "CurCode" : "string",\r
+                "Value" : 0\r
+              },\r
+              "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",\r
+              "ExchangeRate" : 0\r
+            } ],\r
+            "PriceAmountId" : "string",\r
+            "PaxServiceId" : "string",\r
+            "ExchangeRateDate" : "2015-07-20T15:49:04-07:00",\r
+            "ExchangeRate" : 0\r
+          } ]\r
+        } ],\r
+        "CheckinLocator" : "string",\r
+        "RecordNum" : 0\r
+      } ]\r
+    } ],\r
+    "ApplicationUserId" : "string",\r
+    "ApplicationId" : "string"\r
+  },\r
+  "SecurityToken" : "string",\r
+  "CorrId" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

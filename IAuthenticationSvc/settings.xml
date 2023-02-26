@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/authentication" id="e82d3e4c-0e83-4661-9be2-9fd07c35821b" name="IAuthenticationSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description>Provides methods related to authentication</con:description>
+  <con:settings>
+    <con:setting id="e82d3e4c-0e83-4661-9be2-9fd07c35821bfileName">IAuthenticationSvc</con:setting>
+  </con:settings>
+  <con:definitionCache rootPart="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/authentication" type="TEXT">
+    <con:part>
+      <con:url>https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/authentication</con:url>
+      <con:content>{
+  "swagger": "2.0",
+  "info": {
+    "title": "IAuthenticationSvc",
+    "description": "Provides methods related to authentication",
+    "version": "20.12.5.1"
+  },
+  "host": "20q4dcsuat.radixxuat.com",
+  "basePath": "/20Q4/Radixx.Ecosystem.Gtwy/Authentication.svc/v2",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/Login": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Login",
+        "description": "Creates a session and provides a SecurityToken",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "required": [
+                    "UserName",
+                    "Password",
+                    "IpAddress",
+                    "LicenseKey"
+                  ],
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "Password": {
+                      "type": "string"
+                    },
+                    "IpAddress": {
+                      "type": "string"
+                    },
+                    "LicenseKey": {
+                      "type": "string"
+                    },
+                    "CultureLCID": {
+                      "format": "int32",
+                      "type": "integer"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "SessionTimeoutInMinutes": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "Licensing": {
+                  "properties": {
+                    "LicenseKey": {
+                      "type": "string"
+                    },
+                    "Licenses": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "LicenseKey": {
+                            "type": "string"
+                          },
+                          "CarrierCode": {
+                            "type": "string"
+                          },
+                          "EnvironmentInfoIndex": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "Version": {
+                            "type": "string"
+                          },
+                          "InstallUrl": {
+                            "type": "string"
+                          },
+                          "CompanyName": {
+                            "type": "string"
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "Active": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "Executable": {
+                            "type": "string"
+                          },
+                          "ConnectionId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "LastModifiedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "ServerId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "LastModifiedUser": {
+                            "type": "string"
+                          },
+                          "UrlGroupingId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "LoggingConnectionId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "ApplicationId": {
+                            "format": "int64",
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    },
+                    "Environments": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "EnvironmentInfoIndex": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "EnvironmentName": {
+                            "type": "string"
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "Active": {
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "LastModifiedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "LastModifiedUser": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "Urls": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "UrlGroupingId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "ApplicationId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "Url": {
+                            "type": "string"
+                          },
+                          "Active": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "LastModifiedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "LastModifiedUser": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "Applications": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "ApplicationId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "ApplicationName": {
+                            "type": "string"
+                          },
+                          "Active": {
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "ResChannelId": {
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "LastModifiedDate": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "LastModifiedUser": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "AccountStatus": {
+                  "enum": [
+                    "Success",
+                    "UserLocked",
+                    "UserOrPwdNotFound",
+                    "ChangePassword"
+                  ],
+                  "type": "string"
+                },
+                "MessageResult": {
+                  "type": "string"
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Logout": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Logout",
+        "description": "Removes a session",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "Reason": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "required": [
+                "SecurityToken"
+              ],
+              "properties": {
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ChangePassword": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "ChangePassword",
+        "description": "Changes the password for the given user",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "Param": {
+                  "properties": {
+                    "UserName": {
+                      "type": "string"
+                    },
+                    "OldPassword": {
+                      "type": "string"
+                    },
+                    "NewPassword": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "SecurityToken": {
+                  "type": "string"
+                },
+                "CorrId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "ChangePasswordStatus": {
+                  "enum": [
+                    "PasswordChanged",
+                    "BlankFieldsEntered",
+                    "LowerCase",
+                    "UpperCase",
+                    "Numerals",
+                    "Alpha",
+                    "Length",
+                    "Symbols",
+                    "Illegal",
+                    "WeakPassword",
+                    "PasswordMatchesPrevious",
+                    "ErrorOccured"
+                  ],
+                  "type": "string"
+                },
+                "Success": {
+                  "type": "boolean"
+                },
+                "Exceptions": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "ExceptionId": {
+                        "type": "string"
+                      },
+                      "Type": {
+                        "enum": [
+                          "BusinessRule",
+                          "License",
+                          "Information",
+                          "Security",
+                          "SystemError",
+                          "Warning",
+                          "Validation",
+                          "Unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "Message": {
+                        "type": "string"
+                      },
+                      "ExceptionCode": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Version": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Version",
+        "description": "Gets the version of this service",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Operations"
+    }
+  ]
+}</con:content>
+      <con:type>https://swagger.io/swagger2/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>${#Project#RestEndpoint}</con:endpoint>
+  </con:endpoints>
+</con:interface>

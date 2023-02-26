@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="3602b96c-11ed-4e5b-bf17-61c2fdc92485" keepSession="false" name="test" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3602b96c-11ed-4e5b-bf17-61c2fdc92485fileName">test</con:setting>
+  </con:settings>
+  <con:testStep id="c6492de0-0dd0-49e6-b3d1-1b052627e6c8" name="SOAP Request" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Seating</con:interface>
+      <con:operation>SeatAssignment</con:operation>
+      <con:request id="10c0f5d6-b35a-4fad-8da6-a16bb76f509e" name="SOAP Request">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SeatAssignment>
+         <!--Optional:-->
+         <tem:SeatAssignmentRequest>
+            <rad:SecurityGUID>?</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:ActionType>?</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>?</rad:SeriesNumber>
+               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <rad1:SeatAssignmentDetails>
+               <!--Zero or more repetitions:-->
+               <rad1:SeatAssignmentDetail>
+                  <rad1:ReservationKey>?</rad1:ReservationKey>
+                  <rad1:LogicalFlightKey>?</rad1:LogicalFlightKey>
+                  <rad1:PhysicalFlightKey>?</rad1:PhysicalFlightKey>
+                  <rad1:CustomerKey>?</rad1:CustomerKey>
+                  <rad1:AirLinePersonKey>?</rad1:AirLinePersonKey>
+                  <rad1:SeatAssignmentKey>?</rad1:SeatAssignmentKey>
+                  <rad1:Seat>?</rad1:Seat>
+                  <rad1:RowNumber>?</rad1:RowNumber>
+                  <rad1:OldSeat>?</rad1:OldSeat>
+                  <rad1:OldRowNumber>?</rad1:OldRowNumber>
+               </rad1:SeatAssignmentDetail>
+            </rad1:SeatAssignmentDetails>
+         </tem:SeatAssignmentRequest>
+      </tem:SeatAssignment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="d6a6a518-8664-44bf-96c1-70ea6a814ad0" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="67e09dfb-fa5d-4e66-94b7-1b7171ba8cb9" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="e8aaff78-5072-405e-b466-bc2435d4b48c" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="1e731d05-e0e2-4b77-a9a0-84610d308372" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Seating/SeatAssignment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

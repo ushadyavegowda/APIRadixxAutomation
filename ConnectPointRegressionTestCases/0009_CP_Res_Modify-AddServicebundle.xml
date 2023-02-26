@@ -16,7 +16,7 @@
   <con:testStep type="calltestcase" name="1. Run 0009_CP_res_modify Add passenger Test case" id="fad4402c-6e70-411e-bb1b-585425560d8a">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>dc4bab5c-616c-4f25-82fa-9efb6f5f689a</con:targetTestCase>
+      <con:targetTestCase>3688b777-a462-49bf-83d2-6e18f6da13ba</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>securityToken</con:name>
@@ -32,19 +32,19 @@
         </con:property>
         <con:property>
           <con:name>p_FirstName</con:name>
-          <con:value>AWIYOPTWO</con:value>
+          <con:value>WVHQERTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_LastName</con:name>
-          <con:value>LRUVUVTWO</con:value>
+          <con:value>ZALBNMTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_MiddleName</con:name>
-          <con:value>LRUVUVTWOT</con:value>
+          <con:value>ZALBNMTWOT</con:value>
         </con:property>
         <con:property>
           <con:name>p_DOB</con:name>
-          <con:value>1998-02-21</con:value>
+          <con:value>1998-02-26</con:value>
         </con:property>
         <con:property>
           <con:name>p_Gender</con:name>
@@ -124,7 +124,7 @@
         </con:property>
         <con:property>
           <con:name>Passport</con:name>
-          <con:value>52958485</con:value>
+          <con:value>34737403</con:value>
         </con:property>
         <con:property>
           <con:name>Nationality</con:name>
@@ -132,11 +132,11 @@
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1629</con:value>
+          <con:value>999</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>J4QV5N</con:value>
+          <con:value>3SDOZH</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>

@@ -4,13 +4,34 @@
     <con:setting id="3688b777-a462-49bf-83d2-6e18f6da13bafileName">0009_Prequisite_Modify-add-new-passenger</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="5d022708-e442-49d7-9bfa-6b08ff02079a" name="1. Run_Test1 Create OW booking without SSR and seat" type="calltestcase">
+  <con:testStep type="calltestcase" name="1. Run 0001_CP" id="c6772800-6cf2-432a-8e58-520f4203438a">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>FirstNameRandom</con:name>
+          <con:name>Balance</con:name>
+          <con:value>499.50</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>128871</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PNR</con:name>
+          <con:value>A11QBQ</con:value>
+        </con:property>
+        <con:property>
+          <con:name>securityToken</con:name>
+          <con:value>be85c905a2f584z6hbj5g8dbzam7t9f79c82e6f7c0e4</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReservationPaymentID</con:name>
+          <con:value>-50</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -111,7 +132,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Run 0001_CP#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -184,7 +205,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
             <rad1:ActionType>AddPassengerToReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Run 0001_CP#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:FareInformationID>1</rad1:FareInformationID>
             <rad1:LogicalFlightKeyToReplace>?</rad1:LogicalFlightKeyToReplace>
@@ -250,9 +271,9 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
                   <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FlightInformations>
                      <rad1:ModifyPNR.FlightInformation>
-                        <rad1:LogicalFlightID>${1. Run_Test1 Create OW booking without SSR and seat#LFID}</rad1:LogicalFlightID>
+                        <rad1:LogicalFlightID>${1. Run 0001_CP#LFID}</rad1:LogicalFlightID>
                         <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
-                        <rad1:FareInformationID>${1. Run_Test1 Create OW booking without SSR and seat#fareid}</rad1:FareInformationID>
+                        <rad1:FareInformationID>${1. Run 0001_CP#fareid}</rad1:FareInformationID>
                         <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <rad1:CRSCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                      </rad1:ModifyPNR.FlightInformation>
@@ -575,7 +596,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
             </rad:TransactionInfo>
             <rad:ReservationInfo>
                <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad1:ConfirmationNumber>
+               <rad1:ConfirmationNumber>${1. Run 0001_CP#PNR}</rad1:ConfirmationNumber>
             </rad:ReservationInfo>
             <rad:ExternalPayments>
                <!--Zero or more repetitions:-->
@@ -864,7 +885,7 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Run 0001_CP#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -1034,7 +1055,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>36635</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
@@ -1042,19 +1063,19 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>FCUKCSTWO</con:value>
+      <con:value>HEGEHETWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>PUVZZJTWO</con:value>
+      <con:value>AEVLLWTWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>PUVZZJTWOT</con:value>
+      <con:value>AEVLLWTWOT</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1998-02-21</con:value>
+      <con:value>1998-02-26</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -1134,7 +1155,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>Passport</con:name>
-      <con:value>00388059</con:value>
+      <con:value>43411206</con:value>
     </con:property>
     <con:property>
       <con:name>Nationality</con:name>
@@ -1142,7 +1163,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1629</con:value>
+      <con:value>999</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>

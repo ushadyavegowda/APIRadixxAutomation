@@ -4,10 +4,10 @@
     <con:setting id="affae135-9a38-43dc-8410-7e1e7279ac8ffileName">0005_CP_Res_Create-OW-TA-ADT-Pax-No-payment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep disabled="true" id="c4a28fd1-02a1-4800-96dd-a7fd2011ec9e" name="1. LoginTA" type="calltestcase">
+  <con:testStep id="6f7d86d3-4645-478d-a7bc-1ff30303d049" name="1.LoginTA" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>
+      <con:targetTestCase>809a7889-dd40-418b-b477-10592e534550</con:targetTestCase>
       <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
@@ -122,7 +122,7 @@
   <con:testStep id="75060778-e2af-4ea6-86a0-f04b4c82d987" name="Delay 2" type="delay">
     <con:settings/>
     <con:config>
-      <delay>1000</delay>
+      <delay>3000</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="3ee8b9d8-0371-43d0-bb9d-b104e8200fcf" name="Transfer FareId" type="transfer">

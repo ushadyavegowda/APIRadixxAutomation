@@ -10,45 +10,6 @@
       <con:properties/>
     </con:config>
   </con:testStep>
-  <con:testStep id="df36e6e5-e62f-4c71-abc8-4841e3f9896e" name="1. Run_Test1 Create OW booking without SSR and seat" type="calltestcase">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>Balance</con:name>
-          <con:value>2568.50</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LFID</con:name>
-          <con:value>128826</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>PNR</con:name>
-          <con:value>27CSPK</con:value>
-        </con:property>
-        <con:property>
-          <con:name>securityToken</con:name>
-          <con:value>be85c905a2f584z6hbj5g8dbzam7t9f79c82e6f7c0e4</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ReservationPaymentID</con:name>
-        </con:property>
-      </con:properties>
-      <con:returnProperties>
-        <con:entry>Balance</con:entry>
-        <con:entry>LFID</con:entry>
-        <con:entry>fareid</con:entry>
-        <con:entry>PNR</con:entry>
-        <con:entry>securityToken</con:entry>
-      </con:returnProperties>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
   <con:testStep id="636bab21-1512-4a37-bd40-f6d1e679e176" name="1. Run_0001_CP_Res_Create OW ADT Pax CASH payment" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -56,11 +17,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>328.65</con:value>
+          <con:value>499.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>172506</con:value>
+          <con:value>128871</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -68,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>96XNNW</con:value>
+          <con:value>KFZ944</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -76,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-14</con:value>
+          <con:value>-19</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1324,7 +1285,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="b9370a5c-c614-46a7-8906-89dd13ae08a2" name="6 UpdateExternalProcessedPaymentDetails" type="request">
+  <con:testStep id="b9370a5c-c614-46a7-8906-89dd13ae08a2" name="6 UpdateExternalProcessedPaymentDetails" type="request" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -1725,43 +1686,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="b8e14656-9136-4058-86cc-a20dae7064ce" name="Groovy Script_to copyRQ and RS" type="groovy">
-    <con:settings/>
-    <con:config>
-      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
-def project = context.testCase.testSuite.project;
-def suite = context.testCase.testSuite;
-def kase = context.testCase
-def tfolder = 'RegAprilRelease'
-def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
-log.info(dirpath)
-def Dir = new File(dirpath)
-if(!Dir.exists()) Dir.mkdirs()
-//log.info (kase);
-for(def i=0; i &lt; kase.testStepCount -1 ; i++)
-{   
-    log.info(i);
-        def step = kase.getTestStepAt(i).name
-        log.info(step)
-        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
-        {
-        def filepath =  "${dirpath}/${step}_reqres.xml"
-        def m = new File(filepath)
-                    
-        def str = '${' + step + '#RawRequest}'
-          def req = context.expand(str)
-         log.info(req)
-          
-          m.write(req,"UTF-8")
-          def resp = '${' + step + '#Response}'
-          def res = context.expand( resp )
-          m.append("\n\n\n\n\n", "UTF-8")
-          m.append(res, "UTF-8")
-        }
-}</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="30cfc609-38ce-4a83-b11b-6446705ef2a5" name="Groovy Script_to copyRQ and RS 2" type="groovy">
+  <con:testStep id="30cfc609-38ce-4a83-b11b-6446705ef2a5" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1852,7 +1777,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>172506:2/24/2023 12:10:00 AM</con:value>
+      <con:value>128871:3/1/2023 1:00:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

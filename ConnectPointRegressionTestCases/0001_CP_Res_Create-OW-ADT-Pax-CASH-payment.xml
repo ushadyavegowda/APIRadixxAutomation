@@ -939,7 +939,7 @@ declare namespace ns1='http://tempuri.org/';
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="336ba78c-a9db-45f7-8c73-f465350d0b7b" name="5 InsertExternalProcessedPayment" type="request">
+  <con:testStep id="336ba78c-a9db-45f7-8c73-f465350d0b7b" name="5 InsertExternalProcessedPayment" type="request" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -1841,52 +1841,17 @@ declare namespace ns1='http://tempuri.org/';
   <con:testStep id="65717279-35f7-4e76-9b04-f81bd6be5c3c" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>test</con:name>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>7 CreatePNR - SaveReservation</con:sourceStep>
-        <con:sourcePath>${7 CreatePNR - SaveReservation#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</con:sourcePath>
+        <con:sourceStep>8 CreatePNR - SaveReservation</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
+        <con:targetType>PNR</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="29a8a848-bc89-483a-9259-6af07a4c08c6" name="Groovy Script_to copyRQ and RS" type="groovy">
-    <con:settings/>
-    <con:config>
-      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
-def project = context.testCase.testSuite.project;
-def suite = context.testCase.testSuite;
-def kase = context.testCase
-def tfolder = 'DEC22_QAT_RQ_RS'
-//context.expand( '${#TestSuite#JIRA folder}' )
-def dirpath = "\\dsauto01.radixxhost.net\CP_RQ_RS/${tfolder}/${kase.name}"
-log.info(dirpath)
-def Dir = new File(dirpath)
-if(!Dir.exists()) Dir.mkdirs()
-//log.info (kase);
-for(def i=0; i &lt; kase.testStepCount -1 ; i++)
-{   
-    log.info(i);
-        def step = kase.getTestStepAt(i).name
-        log.info(step)
-        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
-        {
-        def filepath =  "${dirpath}/${step}_reqres.xml"
-        def m = new File(filepath)
-                    
-        def str = '${' + step + '#RawRequest}'
-          def req = context.expand(str)
-         log.info(req)
-          
-          m.write(req,"UTF-8")
-          def resp = '${' + step + '#Response}'
-          def res = context.expand( resp )
-          m.append("\n\n\n\n\n", "UTF-8")
-          m.append(res, "UTF-8")
-        }
-}</script>
     </con:config>
   </con:testStep>
   <con:testStep id="bc1e28d3-3417-42b7-95bc-e574610aa534" name="Delay after CreatePNR" type="delay">
@@ -1895,7 +1860,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
       <delay>3000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS 2" type="groovy">
+  <con:testStep id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy" disabled="true">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1935,11 +1900,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>378.65</con:value>
+      <con:value>499.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>173807</con:value>
+      <con:value>128871</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1947,7 +1912,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>YXW1XV</con:value>
+      <con:value>4G569Q</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1955,7 +1920,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-24</con:value>
+      <con:value>-17</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

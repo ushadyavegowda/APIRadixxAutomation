@@ -4,15 +4,6 @@
     <con:setting id="bb69e7f5-e0ef-4c24-ab35-ae6439f25a8cfileName">0006_CP_Res_Create-OW-TA-ADT-Pax-invoice-payment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="3fc2d793-d6ab-4016-8632-9f23c7481469" name="1. LoginTA" type="calltestcase">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>2bec46d5-f676-4921-97ce-13ca5190abbc</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
   <con:testStep id="0c91fd0f-5a66-4a9f-aa6e-855cd9fadb80" name="1.LoginTA" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1047,10 +1038,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="8e584e63-81ad-4db5-a144-94bd1fab03bd" name="Delay" type="delay">
+  <con:testStep id="8e584e63-81ad-4db5-a144-94bd1fab03bd" name="Delay After PaymentRequest" type="delay">
     <con:settings/>
     <con:config>
-      <delay>1000</delay>
+      <delay>3000</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="db6b7ff5-7720-4e15-9cad-00056631038c" name="6 CreatePNR (Commit)" type="request">
@@ -1113,6 +1104,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           </con:entry>
         </con:environmentSpec>
       </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="466c1711-c74b-40e0-9695-03f8018481e6" name="Delay After PNR" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>3000</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="58821900-9e9c-4518-b4ee-7fa91ddb6f09" name="Transfer PNR" type="transfer">

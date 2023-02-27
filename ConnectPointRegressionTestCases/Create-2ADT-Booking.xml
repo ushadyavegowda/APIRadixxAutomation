@@ -7,11 +7,7 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:properties></con:properties>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -345,7 +341,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <a:Person>
                   <a:PersonOrgID>-1</a:PersonOrgID>
                   <a:FirstName>${#TestSuite#FirstNameRandom}</a:FirstName>
-                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
+                  <a:LastName>ONE</a:LastName>
                   <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
@@ -386,7 +382,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
 			   <a:Person>
                   <a:PersonOrgID>-2</a:PersonOrgID>
                   <a:FirstName>${#TestSuite#FirstNameRandom}</a:FirstName>
-                  <a:LastName>${#TestSuite#p_LastName}</a:LastName>
+                  <a:LastName>TWO</a:LastName>
                   <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
@@ -1451,19 +1447,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>378.68</con:value>
+      <con:value>2543.00</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>3V0PKW</con:value>
+      <con:value>WXJYTD</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>378.68</con:value>
+      <con:value>2543.0</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186583</con:value>
+      <con:value>186593</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

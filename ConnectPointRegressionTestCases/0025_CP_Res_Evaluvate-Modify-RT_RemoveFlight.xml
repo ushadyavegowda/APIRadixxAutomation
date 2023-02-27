@@ -1,43 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5a3faaf9-ffae-4f41-b37a-f5044782dafa" keepSession="false" name="0026_CP_Res_Evaluvate_Cancel" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="9c2bb185-679b-4718-9a4a-265d06857a9f" keepSession="false" name="0025_CP_Res_Evaluvate Modify RT_RemoveFlight" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="5a3faaf9-ffae-4f41-b37a-f5044782dafafileName">0026_CP_Res_Evaluvate_Cancel</con:setting>
+    <con:setting id="9c2bb185-679b-4718-9a4a-265d06857a9ffileName">0025_CP_Res_Evaluvate-Modify-RT_RemoveFlight</con:setting>
   </con:settings>
-  <con:testStep id="574de73d-89e3-481a-aef7-cf85dad10e9a" name="Create 1ADT PNR" type="calltestcase">
+  <con:testStep type="calltestcase" name="Create RT booking" id="a533b7be-9e13-4c2c-9eed-d7c0ba638445">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>9763fcf1-4eff-44e6-86bf-f59b1886f8e2</con:targetTestCase>
+      <con:targetTestCase>55aeefc8-298e-40ac-8331-46c5663fc36a</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>FareId</con:name>
+          <con:name>FareId_Onward</con:name>
           <con:value>1</con:value>
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>1271.50</con:value>
+          <con:value>871.15</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>WZ9ATR</con:value>
+          <con:value>9GA8V5</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1271.5</con:value>
+          <con:value>871.15</con:value>
         </con:property>
         <con:property>
-          <con:name>LFID</con:name>
+          <con:name>LFID_Onward</con:name>
+          <con:value>186593</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID_Return</con:name>
+          <con:value>176860</con:value>
+        </con:property>
+        <con:property>
+          <con:name>FareId_Return</con:name>
+          <con:value>4</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
-        <con:entry>FareId</con:entry>
+        <con:entry>FareId_Onward</con:entry>
         <con:entry>ResBalance</con:entry>
         <con:entry>PNR</con:entry>
         <con:entry>Balance</con:entry>
+        <con:entry>LFID_Onward</con:entry>
+        <con:entry>LFID_Return</con:entry>
+        <con:entry>FareId_Return</con:entry>
       </con:returnProperties>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="eb339e97-24ce-462e-ad20-0614e4db1e8b" name="1. RetrievePNR" type="request">
+  <con:testStep id="682c428a-37de-44a3-be58-54b342d6ed4d" name="1. RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -68,7 +80,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${Create 1ADT PNR#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Create RT booking#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -99,24 +111,24 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="2585125a-35de-40fb-b682-c875e2ac0c25" name="Transfer PersonOrgId" type="transfer">
+  <con:testStep id="59ef6389-a6a2-45d5-8cb3-2d265a5fa868" name="Transfer LFKey" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>PersonOrgID</con:name>
+        <con:name>LFKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>1. RetrievePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:PersonOrgID[1]</con:sourcePath>
-        <con:targetType>PersonOrgID</con:targetType>
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[2]/a:Key[1]</con:sourcePath>
+        <con:targetType>LFKey</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="34e7aaa9-7844-42e2-b0ee-1440cdf6e26c" name="2. EvaluateModificationOfPNR" type="request">
+  <con:testStep id="b49b88de-a72e-47c0-a99e-9ed858225dcc" name="2. EvaluateModificationOfPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -146,11 +158,11 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${Create 1ADT PNR#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Create RT booking#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
-            <rad1:ActionType>EvaluateCancelReservation</rad1:ActionType>
-            <rad1:LogicalFlightKeyToRemove xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:PersonOrgIdentifierToRemove>${#TestCase#PersonOrgID}</rad1:PersonOrgIdentifierToRemove>
+            <rad1:ActionType>EvaluateRemoveFlightFromReservation</rad1:ActionType>
+            <rad1:LogicalFlightKeyToRemove>${#TestCase#LFKey}</rad1:LogicalFlightKeyToRemove>
+            <rad1:PersonOrgIdentifierToRemove>-123</rad1:PersonOrgIdentifierToRemove>
          </tem:EvaluateModificationOfPNRRequest>
       </tem:EvaluateModificationOfPNR>
    </soapenv:Body>
@@ -175,7 +187,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="37a9b575-c951-4f13-afbc-5c941314f678" name="3. CreatePNR - SaveReservation" type="request">
+  <con:testStep id="5ae82902-db35-4974-a260-18b1aa26a453" name="3. CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -206,7 +218,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${Create 1ADT PNR#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Create RT booking#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -354,8 +366,8 @@ declare namespace ns1='http://tempuri.org/';
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>PersonOrgID</con:name>
-      <con:value>61604</con:value>
+      <con:name>LFKey</con:name>
+      <con:value>186593:3/2/2023 9:00:00 AM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

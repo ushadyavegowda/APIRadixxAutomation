@@ -204,6 +204,8 @@ def FBC = "EOW"
 def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
+def FlightNumReturn = "765"
+
 
 def generator = { String alphabet, int n ->
   new Random().with {
@@ -232,6 +234,7 @@ testRunner.testCase.testSuite.setPropertyValue("FBC", FBC);
 testRunner.testCase.testSuite.setPropertyValue("currency", currency);
 testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
+testRunner.testCase.testSuite.setPropertyValue("FlightNumReturn", FlightNumReturn);
 
 //Passenger Info
 testRunner.testCase.testSuite.setPropertyValue("p_FirstName", "Radixx");
@@ -495,12 +498,7 @@ log.info(DepartureDate)
 log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>FirstNameRandom</con:name>
-      <con:value>aA4DOmm0pvjF7p1</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties></con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">

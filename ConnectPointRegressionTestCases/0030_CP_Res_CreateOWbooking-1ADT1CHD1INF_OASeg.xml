@@ -8,7 +8,7 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties></con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -588,6 +588,23 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="PNR Transfer" id="1b57db26-3238-4e9d-afd1-c4ffe7830955">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>PNR</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>CreatePNR-commit</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
+        <con:targetType>PNR</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="e2644c7d-3b9d-4ddf-b058-9c5068666b76" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
@@ -633,7 +650,7 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186587</con:value>
+      <con:value>196715</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -642,6 +659,10 @@ m.append(res, "UTF-8")
     <con:property>
       <con:name>Balance</con:name>
       <con:value>1016</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PNR</con:name>
+      <con:value>887XHJ</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

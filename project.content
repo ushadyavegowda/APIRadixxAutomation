@@ -183,3 +183,4 @@ ConnectPointRegressionTestCases\0030_CP_Res_CreateOWbooking-1ADT1CHD1INF_OASeg.x
 ConnectPointRegressionTestCases\0031_CP_Res_CreateOWbooking-1ADT1CHD1INF_NoPayment.xml
 ConnectPointRegressionTestCases\Create-2ADT-Booking.xml
 ConnectPointRegressionTestCases\Create-RT-booking.xml
+ConnectPointRegressionTestCases\0029_CP_Res_ModifyOWbooking_Remove--Passenger-on-OA.xml

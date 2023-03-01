@@ -204,7 +204,7 @@ def FBC = "EOW"
 def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
-def FlightNumReturn = "765"
+def FlightNumReturn = "203"
 
 
 def generator = { String alphabet, int n ->
@@ -262,6 +262,12 @@ testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
 testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");
 testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
 testRunner.testCase.testSuite.setPropertyValue("p_DOB_INF",p_DOB_INF.format("yyyy-MM-dd"));
+
+
+testRunner.testCase.testSuite.setPropertyValue("p_FirstName_2ndPax", "RadixxSecond");
+testRunner.testCase.testSuite.setPropertyValue("p_LastName_2ndPax", "Tester");
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName_2ndPax", "Automation");
+
 
 
 //APIS info - 1 ADT
@@ -498,7 +504,7 @@ log.info(DepartureDate)
 log.info(ModifyDate)</script>
     </con:config>
   </con:testStep>
-  <con:properties></con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">

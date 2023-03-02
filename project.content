@@ -186,3 +186,5 @@ ConnectPointRegressionTestCases\Create-RT-booking.xml
 ConnectPointRegressionTestCases\0029_CP_Res_ModifyOWbooking_Remove--Passenger-on-OA.xml
 ConnectPointRegressionTestCases\0028_CP_Res_ModifyOWbooking_Remove-OA-segment.xml
 ConnectPointRegressionTestCases\0035_CP_Res_CreateRTbooking-2ADT1CHD1INF_NoPayment.xml
+ConnectPointRegressionTestCases\0034_Prequisite_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_ReplaceFlight.xml
+ConnectPointRegressionTestCases\0034_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_ReplaceFlight.xml

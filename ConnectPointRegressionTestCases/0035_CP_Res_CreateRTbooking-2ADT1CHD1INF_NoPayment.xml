@@ -834,9 +834,6 @@ m.append(res, "UTF-8")
       <con:value>186597</con:value>
     </con:property>
     <con:property>
-      <con:name/>
-    </con:property>
-    <con:property>
       <con:name>LFID_Return</con:name>
       <con:value>192965</con:value>
     </con:property>

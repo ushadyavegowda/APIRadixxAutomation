@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="c70c583e-5d92-4d37-abba-2a03f80bc08ffileName">0011_CP_Res_ModifyRemoveServiceBundle</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="0010_CP_CreatebookingAddServicebundle" id="0ce8128b-4f85-4157-a033-976c6d99a3bb">
+  <con:testStep id="0ce8128b-4f85-4157-a033-976c6d99a3bb" name="0010_CP_CreatebookingAddServicebundle" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>a13432c5-0b3d-4803-bca9-51aa4bc984e6</con:targetTestCase>
@@ -69,10 +69,10 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer-PNR" id="7da8f9c0-5446-42e6-b482-a8932d6fe12b">
+  <con:testStep id="7da8f9c0-5446-42e6-b482-a8932d6fe12b" name="Property Transfer-PNR" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>PNR</con:sourceType>
         <con:sourceStep>0010_CP_CreatebookingAddServicebundle</con:sourceStep>
@@ -338,7 +338,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
@@ -349,7 +349,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PhysicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
@@ -362,12 +362,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" name="ModifyPNR_RemoveServiceBundleFromReservation" id="db65b82b-ea7d-4edf-a486-0fdef44d98bc">
+  <con:testStep id="db65b82b-ea7d-4edf-a486-0fdef44d98bc" name="ModifyPNR_RemoveServiceBundleFromReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request name="ModifyPNR_RemoveServiceBundleFromReservation" id="7d392638-d846-4a2e-be67-8df46cd232ca">
+      <con:request id="7d392638-d846-4a2e-be67-8df46cd232ca" name="ModifyPNR_RemoveServiceBundleFromReservation">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -437,23 +437,23 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:ModifyPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="67561941-93f0-4b70-9f71-d26f47442b4a"/>
-        <con:assertion type="Schema Compliance" id="b189f6c9-6387-403f-ac91-6981b3966882" disabled="true">
+        <con:assertion id="67561941-93f0-4b70-9f71-d26f47442b4a" type="SOAP Response"/>
+        <con:assertion disabled="true" id="b189f6c9-6387-403f-ac91-6981b3966882" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="f0a393b5-0556-4fc9-a8ed-3d001422e99b"/>
-        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="acccc1ef-2d41-4779-8eb2-14895093a656">
+        <con:assertion id="f0a393b5-0556-4fc9-a8ed-3d001422e99b" type="SOAP Fault Assertion"/>
+        <con:assertion id="acccc1ef-2d41-4779-8eb2-14895093a656" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" name="Response SLA" id="a38fe971-aec9-4a1c-9263-4ef06590aca8">
+        <con:assertion id="a38fe971-aec9-4a1c-9263-4ef06590aca8" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>60000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="0db18a86-b895-4ad6-a1b2-44d507378e02" name="Match content of [b:ExceptionDescription]">
+        <con:assertion id="0db18a86-b895-4ad6-a1b2-44d507378e02" name="Match content of [b:ExceptionDescription]" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -465,7 +465,7 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="8ea71c60-275b-4cfe-90b1-82ad0f80db8f" name="Match content of [b:ExceptionCode]">
+        <con:assertion id="8ea71c60-275b-4cfe-90b1-82ad0f80db8f" name="Match content of [b:ExceptionCode]" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -477,7 +477,7 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="0c9c7bdd-2d02-417e-9edf-298423898e27" name="Match content of [b:ExceptionLevel]">
+        <con:assertion id="0c9c7bdd-2d02-417e-9edf-298423898e27" name="Match content of [b:ExceptionLevel]" type="XPath Match">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -709,7 +709,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="0e57d324-939e-4b3b-8d44-7e0714323854" name="4 ModifyPNR_RemoveSSR" type="request" disabled="true">
+  <con:testStep disabled="true" id="0e57d324-939e-4b3b-8d44-7e0714323854" name="4 ModifyPNR_RemoveSSR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -992,7 +992,7 @@ declare namespace ns1='http://tempuri.org/';
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="80a142e8-40f1-4817-bd85-353f4fab6656" name="Groovy Script_to copyRQ and RS" type="groovy" disabled="true">
+  <con:testStep disabled="true" id="80a142e8-40f1-4817-bd85-353f4fab6656" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

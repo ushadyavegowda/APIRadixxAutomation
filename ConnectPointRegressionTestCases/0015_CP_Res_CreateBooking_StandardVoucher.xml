@@ -741,12 +741,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="8bafd96b-ccc5-4fb1-8c9f-00743a3a067e" name="5 - Add Voucher">
+  <con:testStep id="8bafd96b-ccc5-4fb1-8c9f-00743a3a067e" name="5 - Add Voucher" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>AddVoucherToReservation</con:operation>
-      <con:request name="5 - Add Voucher" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="330ce0ff-438c-4963-b02a-7878bc585719">
+      <con:request id="330ce0ff-438c-4963-b02a-7878bc585719" incomingWss="" name="5 - Add Voucher" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -776,14 +776,14 @@ declare namespace ns1='http://tempuri.org/';
       </tem:AddVoucherToReservation>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="b5f6ed53-e0df-4dea-9f6e-d6fc4bdc38f3" name="Valid HTTP Status Codes">
+        <con:assertion id="b5f6ed53-e0df-4dea-9f6e-d6fc4bdc38f3" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="9d8cb1d3-568a-42b0-85b9-de668d5e86ed" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="4618aba7-811d-491e-ab08-9859e5f42320" name="Schema Compliance">
+        <con:assertion id="9d8cb1d3-568a-42b0-85b9-de668d5e86ed" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="4618aba7-811d-491e-ab08-9859e5f42320" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -791,7 +791,7 @@ declare namespace ns1='http://tempuri.org/';
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Fulfillment/AddVoucherToReservation"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fulfillment/AddVoucherToReservation" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="89b616d7-3c9a-46b9-96e4-24d1bb46d503">

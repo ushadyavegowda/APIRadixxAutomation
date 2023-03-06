@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveSystemOptionValue" anonymous="optional" bindingOperationName="RetrieveSystemOptionValue" id="3c411217-8a58-44e1-b33e-d200feb69e56" inputName="" isOneWay="false" name="RetrieveSystemOptionValue" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveSystemOptionValue" anonymous="optional" bindingOperationName="RetrieveSystemOptionValue" id="3c411217-8a58-44e1-b33e-d200feb69e56" inputName="" isOneWay="false" name="RetrieveSystemOptionValue" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3c411217-8a58-44e1-b33e-d200feb69e56fileName">RetrieveSystemOptionValue</con:setting>
   </con:settings>

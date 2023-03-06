@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Seating/TrainSeatAssignment" anonymous="optional" bindingOperationName="TrainSeatAssignment" id="3d6707a2-3d1a-4d97-ba83-e3ec0a51aae5" inputName="" isOneWay="false" name="TrainSeatAssignment" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Seating/TrainSeatAssignment" anonymous="optional" bindingOperationName="TrainSeatAssignment" id="3d6707a2-3d1a-4d97-ba83-e3ec0a51aae5" inputName="" isOneWay="false" name="TrainSeatAssignment" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3d6707a2-3d1a-4d97-ba83-e3ec0a51aae5fileName">TrainSeatAssignment</con:setting>
   </con:settings>

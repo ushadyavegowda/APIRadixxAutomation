@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/ProcessFlightDisruptionAlert" anonymous="optional" bindingOperationName="ProcessFlightDisruptionAlert" id="64858f7a-0c45-4704-b08a-2102723edf65" inputName="" isOneWay="false" name="ProcessFlightDisruptionAlert" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/ProcessFlightDisruptionAlert" anonymous="optional" bindingOperationName="ProcessFlightDisruptionAlert" id="64858f7a-0c45-4704-b08a-2102723edf65" inputName="" isOneWay="false" name="ProcessFlightDisruptionAlert" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="64858f7a-0c45-4704-b08a-2102723edf65fileName">ProcessFlightDisruptionAlert</con:setting>
   </con:settings>

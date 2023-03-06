@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="c70c583e-5d92-4d37-abba-2a03f80bc08f" keepSession="false" name="0011_CP_Res_ModifyRemoveServiceBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6dc733cf-2c13-4e65-a71b-fc07227e77b8" keepSession="false" name="0011_CP_Res_ModifyRemoveServiceBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="c70c583e-5d92-4d37-abba-2a03f80bc08ffileName">0011_CP_Res_ModifyRemoveServiceBundle</con:setting>
+    <con:setting id="6dc733cf-2c13-4e65-a71b-fc07227e77b8fileName">0011_CP_Res_ModifyRemoveServiceBundle</con:setting>
   </con:settings>
-  <con:testStep id="0ce8128b-4f85-4157-a033-976c6d99a3bb" name="0010_CP_CreatebookingAddServicebundle" type="calltestcase">
+  <con:testStep type="calltestcase" name="0010_CP_CreatebookingAddServicebundle" id="fa2ba614-4287-4483-a43a-51e65dc0eb9b">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>a13432c5-0b3d-4803-bca9-51aa4bc984e6</con:targetTestCase>
+      <con:targetTestCase>f8a8a231-c3aa-4992-a28f-9d80a50b3835</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1684.50</con:value>
+          <con:value>512.00</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>196727</con:value>
+          <con:value>128874</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -22,7 +22,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>HJ56MJ</con:value>
+          <con:value>JU2GXD</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -30,7 +30,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-68</con:value>
+          <con:value>-51</con:value>
         </con:property>
         <con:property>
           <con:name>S_Amount</con:name>
@@ -50,7 +50,7 @@
         </con:property>
         <con:property>
           <con:name>PhysicalFlightID</con:name>
-          <con:value>108732</con:value>
+          <con:value>86301</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -69,10 +69,10 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="7da8f9c0-5446-42e6-b482-a8932d6fe12b" name="Property Transfer-PNR" type="transfer">
+  <con:testStep type="transfer" name="Property Transfer-PNR" id="43540842-36dd-4676-a164-7fabd73d9dfe">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>PNR</con:name>
         <con:sourceType>PNR</con:sourceType>
         <con:sourceStep>0010_CP_CreatebookingAddServicebundle</con:sourceStep>
@@ -84,7 +84,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="afe3b05d-0464-4d7a-b71b-acdb30889694" name="Run Security Token" type="request">
+  <con:testStep id="dfdd8189-1c2b-44a2-8a87-db1b4ab4bf31" name="Run Security Token" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -137,7 +137,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="09d9bf7b-617b-4173-88b9-56ad4a801d5b" name="2. RetrivePNR" type="request">
+  <con:testStep id="a4b0aabf-32ce-499f-9891-84618515e548" name="2. RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -204,7 +204,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="773fcf15-c9b1-4ae6-b344-c42cde4e9bed" name="Get ChargeKey and AirlinePersonOrg Key" type="groovy">
+  <con:testStep id="d9f97d34-45b8-4762-af18-dbf0bbf2223d" name="Get ChargeKey and AirlinePersonOrg Key" type="groovy">
     <con:settings/>
     <con:config>
       <script>import groovy.util.*
@@ -268,7 +268,7 @@ log.info(response.trim())
      // log.info(doc)</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="141c8ac1-742c-47b4-a18a-5f75b08b7f00" name="Preperties to Remove SSR" type="transfer">
+  <con:testStep id="de78f006-44c8-4333-8e96-6ef8d7adbcf6" name="Preperties to Remove SSR" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -338,7 +338,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>LogicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
@@ -349,7 +349,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>PhysicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
@@ -362,12 +362,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="db65b82b-ea7d-4edf-a486-0fdef44d98bc" name="ModifyPNR_RemoveServiceBundleFromReservation" type="request">
+  <con:testStep type="request" name="ModifyPNR_RemoveServiceBundleFromReservation" id="2d8fd35b-bdff-4451-91cc-761b1946aee0">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request id="7d392638-d846-4a2e-be67-8df46cd232ca" name="ModifyPNR_RemoveServiceBundleFromReservation">
+      <con:request name="ModifyPNR_RemoveServiceBundleFromReservation" id="7d392638-d846-4a2e-be67-8df46cd232ca">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -382,12 +382,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:SecurityGUID>${Run Security Token#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </rad:CarrierCodes>
             <!--Optional:-->
-            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
             <!--Optional:-->
-            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
+            <rad:HistoricUserName>?</rad:HistoricUserName>
             <rad1:ActionType>RemoveSpecialServiceFromReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
@@ -437,23 +437,23 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:ModifyPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion id="67561941-93f0-4b70-9f71-d26f47442b4a" type="SOAP Response"/>
-        <con:assertion disabled="true" id="b189f6c9-6387-403f-ac91-6981b3966882" type="Schema Compliance">
+        <con:assertion type="SOAP Response" id="67561941-93f0-4b70-9f71-d26f47442b4a"/>
+        <con:assertion type="Schema Compliance" id="b189f6c9-6387-403f-ac91-6981b3966882" disabled="true">
           <con:configuration/>
         </con:assertion>
-        <con:assertion id="f0a393b5-0556-4fc9-a8ed-3d001422e99b" type="SOAP Fault Assertion"/>
-        <con:assertion id="acccc1ef-2d41-4779-8eb2-14895093a656" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+        <con:assertion type="SOAP Fault Assertion" id="f0a393b5-0556-4fc9-a8ed-3d001422e99b"/>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="acccc1ef-2d41-4779-8eb2-14895093a656">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="a38fe971-aec9-4a1c-9263-4ef06590aca8" name="Response SLA" type="Response SLA Assertion">
+        <con:assertion type="Response SLA Assertion" name="Response SLA" id="a38fe971-aec9-4a1c-9263-4ef06590aca8">
           <con:configuration>
             <SLA>60000</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="0db18a86-b895-4ad6-a1b2-44d507378e02" name="Match content of [b:ExceptionDescription]" type="XPath Match">
+        <con:assertion type="XPath Match" id="0db18a86-b895-4ad6-a1b2-44d507378e02" name="Match content of [b:ExceptionDescription]">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -465,7 +465,7 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="8ea71c60-275b-4cfe-90b1-82ad0f80db8f" name="Match content of [b:ExceptionCode]" type="XPath Match">
+        <con:assertion type="XPath Match" id="8ea71c60-275b-4cfe-90b1-82ad0f80db8f" name="Match content of [b:ExceptionCode]">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -477,7 +477,7 @@ declare namespace ns1='http://tempuri.org/';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="0c9c7bdd-2d02-417e-9edf-298423898e27" name="Match content of [b:ExceptionLevel]" type="XPath Match">
+        <con:assertion type="XPath Match" id="0c9c7bdd-2d02-417e-9edf-298423898e27" name="Match content of [b:ExceptionLevel]">
           <con:configuration>
             <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
@@ -709,7 +709,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep disabled="true" id="0e57d324-939e-4b3b-8d44-7e0714323854" name="4 ModifyPNR_RemoveSSR" type="request">
+  <con:testStep id="7d190d7e-25f1-4052-bcab-ed01ebe4fd95" name="4 ModifyPNR_RemoveSSR" type="request" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -803,13 +803,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="d264902f-8b47-4603-88af-5530a6d6d9ae" name="Delay after modify call" type="delay">
+  <con:testStep id="36f745dc-19c3-4974-a8f4-e4cfe8003e36" name="Delay after modify call" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="c7093f74-2c97-477a-8d1d-cadf93a5d179" name="7. Save PNR" type="request">
+  <con:testStep id="904b4640-a238-436b-8548-e214c3f0ea03" name="7. Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -986,13 +986,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="ec18422e-4738-46d8-b167-4cbd5c2fbc97" name="Delay after PNR" type="delay">
+  <con:testStep id="aaa3a2e9-3e18-4d25-b83a-2c9021c56125" name="Delay after PNR" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep disabled="true" id="80a142e8-40f1-4817-bd85-353f4fab6656" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="b2d7b553-a955-432d-9619-8f59cf2908ef" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1000,6 +1000,7 @@ def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
 def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
 def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
@@ -1031,7 +1032,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>HJ56MJ</con:value>
+      <con:value>JU2GXD</con:value>
     </con:property>
     <con:property>
       <con:name>AirlineKey</con:name>
@@ -1039,31 +1040,31 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196727</con:value>
+      <con:value>128874</con:value>
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>108732</con:value>
+      <con:value>86301</con:value>
     </con:property>
     <con:property>
       <con:name>CustomerKey</con:name>
-      <con:value>3417a49a-2c5a-4051-a619-8a9c3e46528c</con:value>
+      <con:value>3310f106-3585-49b1-a7c2-55ca398db67e</con:value>
     </con:property>
     <con:property>
       <con:name>AirlinePerKey</con:name>
-      <con:value>65047:1</con:value>
+      <con:value>62733:1</con:value>
     </con:property>
     <con:property>
       <con:name>ChargeKey</con:name>
-      <con:value>584388</con:value>
+      <con:value>555996</con:value>
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>196727:3/9/2023 7:00:00 AM</con:value>
+      <con:value>128874:3/4/2023 1:00:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightKey</con:name>
-      <con:value>196727:108732:3/9/2023 7:00:00 AM</con:value>
+      <con:value>128874:86301:3/4/2023 1:00:00 AM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

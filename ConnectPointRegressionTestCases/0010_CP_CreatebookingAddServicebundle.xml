@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="false" failTestCaseOnErrors="true" id="a13432c5-0b3d-4803-bca9-51aa4bc984e6" keepSession="false" maxResults="0" name="0010_CP_CreatebookingAddServicebundle" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="false" failTestCaseOnErrors="true" id="f8a8a231-c3aa-4992-a28f-9d80a50b3835" keepSession="false" maxResults="0" name="0010_CP_CreatebookingAddServicebundle" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="a13432c5-0b3d-4803-bca9-51aa4bc984e6fileName">0010_CP_CreatebookingAddServicebundle</con:setting>
+    <con:setting id="f8a8a231-c3aa-4992-a28f-9d80a50b3835fileName">0010_CP_CreatebookingAddServicebundle</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="1cdd6add-b749-43da-8b7e-7edd4bdbf420" name="1. RetrieveSecuirtyToken" type="calltestcase">
+  <con:testStep id="e5029e32-0436-44a4-baec-a5c2f74592a8" name="1. RetrieveSecuirtyToken" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -13,7 +13,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="e053537b-033c-4be2-b15d-7d88fbca7e93" name="2. RetrieveFareQuote" type="request">
+  <con:testStep id="3238ba59-7345-4867-a20d-e3f209683b1a" name="2. RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -222,7 +222,7 @@ exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegm
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="2c98e032-cfc9-4534-b516-dadb739b641f" name="Transfer LFID PHFLID and FareDetails" type="transfer">
+  <con:testStep id="7683cd37-00bc-47d2-b97e-c1f2a7e3dfc3" name="Transfer LFID PHFLID and FareDetails" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -263,7 +263,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="4375d624-e338-4180-af60-b8919a984115" name="3 RetrieveAARQuote" type="request">
+  <con:testStep id="7382656f-5f72-4d4d-886f-32457a2b5c77" name="3 RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -365,7 +365,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="72aeba2d-68a6-43c7-8f0a-6c35684ecd9d" name="Transfer SSR Info" type="transfer">
+  <con:testStep id="04daf0f2-d3a0-4a13-9f76-204e82701972" name="Transfer SSR Info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -415,7 +415,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="1c471b0f-f662-4102-9495-e03cd1525e6c" name="3. SummaryPNR - Get Summary" type="request">
+  <con:testStep id="cd39f608-67de-4b8f-8ccf-508854498508" name="3. SummaryPNR - Get Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -691,7 +691,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="d6621866-05ba-41b2-b3d0-14755d50c06e" name="Transfer Summary Balance" type="transfer">
+  <con:testStep id="3c771c1f-8572-4d84-b3c2-3fb179b3e65b" name="Transfer Summary Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -708,13 +708,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="4bb67400-890c-461a-ae26-c3bceda9482d" name="Delay after Summary call" type="delay">
+  <con:testStep id="e83cb8a2-32cd-4a6e-a2b2-7b09d86e957b" name="Delay after Summary call" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="758b7e02-9bca-401d-b681-3b62278afffb" name="4. AssessPaymentMethodFees" type="request">
+  <con:testStep id="c89cc272-e4cf-4910-8c6c-7eb072911eb6" name="4. AssessPaymentMethodFees" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
@@ -889,7 +889,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="ba91c94d-4e23-4982-b564-6846c9f5be55" name="Transfer balance" type="transfer">
+  <con:testStep id="02b73245-9fb6-48d3-96e9-a919c97e0284" name="Transfer balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -906,7 +906,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="cdb9c0da-613f-446b-843b-94e8264becb6" name="5. CreatePNR - Commit Summary" type="request">
+  <con:testStep id="abe4ed95-5513-4724-87ea-d5538ddc9ee6" name="5. CreatePNR - Commit Summary" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1090,7 +1090,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="d0ceb93e-d5af-4be8-b2ed-052adc655255" name="Transfer PNR" type="transfer">
+  <con:testStep id="d349bf8e-0f62-4af8-b7be-5990cedbc42b" name="Transfer PNR" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -1107,13 +1107,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="a66aef91-b2f8-4093-8181-4edcab688b95" name="Delay after commit summary" type="delay">
+  <con:testStep id="52751136-1fb7-44e8-b274-31f83c6f545d" name="Delay after commit summary" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="03595fbd-aaf6-47cc-8ce2-55b5604d19ef" name="6 InsertExternalProcessedPayment_CASH" type="request">
+  <con:testStep id="2ec6de9b-8803-4c1d-bdd9-e309e7b59b04" name="6 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -1409,7 +1409,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="e244941b-5249-40a2-a02d-3c0d17acc99e" name="Transfer ReservationPaymentID" type="transfer">
+  <con:testStep id="b1f234b0-9eb5-42dd-80fd-2e501cea61e1" name="Transfer ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -1423,13 +1423,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="d9196565-d022-448b-9e8c-cf5fb0f0bf4e" name="Delay after IEP" type="delay">
+  <con:testStep id="de470cf0-4959-4aac-9d9f-84042c5ee831" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="74c6a5be-dcf4-4126-950e-bb8f36a46a81" name="8 CreatePNR - SaveReservation" type="request">
+  <con:testStep id="77fab24b-198a-4470-bd3f-4b30a0035497" name="8 CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1606,7 +1606,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="05894569-4f50-4d12-835e-56749b7b8852" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="f433a055-fe4b-4fb2-9675-8dbf85592dfd" name="Groovy Script_to copyRQ and RS" type="groovy" disabled="true">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1614,6 +1614,7 @@ def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
 def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
 def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
@@ -1645,11 +1646,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1684.50</con:value>
+      <con:value>512.00</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196727</con:value>
+      <con:value>128873</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1657,7 +1658,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>M0V7NF</con:value>
+      <con:value>DHD782</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1665,7 +1666,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-58</con:value>
+      <con:value>-38</con:value>
     </con:property>
     <con:property>
       <con:name>S_Amount</con:name>
@@ -1685,7 +1686,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>108732</con:value>
+      <con:value>86300</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

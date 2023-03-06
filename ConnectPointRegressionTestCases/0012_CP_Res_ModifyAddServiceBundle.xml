@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="9a49840b-0716-49a1-8922-412067a89191" keepSession="false" name="0012_CP_Res_ModifyAddServiceBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="d9b825ff-07a9-4122-a97a-d11a4c2f210d" keepSession="false" name="0012_CP_Res_ModifyAddServiceBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="9a49840b-0716-49a1-8922-412067a89191fileName">0012_CP_Res_ModifyAddServiceBundle</con:setting>
+    <con:setting id="d9b825ff-07a9-4122-a97a-d11a4c2f210dfileName">0012_CP_Res_ModifyAddServiceBundle</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="74f3879d-8479-4e75-8682-7c3eb082c3e9" name="1. Run Test 0001" type="calltestcase">
+  <con:testStep id="3c6cb6ca-e43d-4683-8195-848270b7ca90" name="1. Run Test 0001" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>61247.00</con:value>
+          <con:value>499.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>196818</con:value>
+          <con:value>128873</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value/>
+          <con:value>7N6GT7</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-81</con:value>
+          <con:value>-2</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -45,7 +45,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="2ef5dd5b-d4bd-47fc-ba06-d0efcfbc8bb0" name="2. RetrivePNR" type="request">
+  <con:testStep id="952dffa2-008a-4e3c-bdf6-bc8226d6c4dc" name="2. RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -112,7 +112,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="576fb9c8-374c-4423-8f63-7446d242c537" name="Property Transfer" type="transfer">
+  <con:testStep id="7b5f72a7-e89d-4bed-9345-5ed483998f5f" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -138,7 +138,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="6bff6c87-a29d-4eea-b864-8779fa0191ca" name="3 RetrieveAARQuote" type="request">
+  <con:testStep id="6537d4be-b1c9-4e8c-9648-14538260d554" name="3 RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -241,7 +241,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="81729390-f5f8-45c4-acdd-b8ae6a418f6f" name="Transfer SSR Info" type="transfer">
+  <con:testStep id="656f0cf8-db57-4d3e-8173-25348066fd7e" name="Transfer SSR Info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -291,7 +291,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="ea2a6f5b-0505-468e-a42b-f990e225e382" name="4 ModifyPNR_Add SSR" type="request">
+  <con:testStep id="2909b45b-242a-48f6-8aeb-be786d9f3c7a" name="4 ModifyPNR_Add SSR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -398,7 +398,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="730a9675-09f7-4c40-9969-29e72011dd49" name="Transfer Balance" type="transfer">
+  <con:testStep id="c450f9c5-175c-4ee2-bdbe-140469a6260e" name="Transfer Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -414,13 +414,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="78092a64-1ec7-4877-8f6b-fff058636e8c" name="Delay after modify call" type="delay">
+  <con:testStep id="351dfcf7-e603-4140-a78e-04048d2080b6" name="Delay after modify call" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="1747b3e0-5352-4e2a-8866-45f84c62dfec" name="6 InsertExternalProcessedPayment_CASH" type="request">
+  <con:testStep id="57b936f1-fde0-4dbd-91ac-c9dfa1137777" name="6 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -704,13 +704,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="f6b4a5d8-638d-4690-aa12-1e1f95e8cc39" name="Delay after IEP" type="delay">
+  <con:testStep id="89812afc-6a87-4826-b469-a0047302c4ff" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="66c9c4db-c6b0-40a4-8771-9261422b748b" name="7. Save PNR" type="request">
+  <con:testStep id="4827ca04-1f2e-42b9-8ad1-bdf0bcd2e697" name="7. Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -887,13 +887,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="9b8307a0-c94e-4207-8fb6-9661763746d5" name="Delay after PNR" type="delay">
+  <con:testStep id="cc65330f-aa11-4979-b78f-978de7a47da3" name="Delay after PNR" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="cf4c1614-950e-4828-a9be-ebca62ecd57b" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep disabled="true" id="aa314f06-d999-486e-811a-c180d83b00e0" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -901,6 +901,7 @@ def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
 def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
 def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)

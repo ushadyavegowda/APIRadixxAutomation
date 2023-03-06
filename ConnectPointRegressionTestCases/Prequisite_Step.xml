@@ -256,7 +256,7 @@ testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SEAT");
 testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", "RadixxCHD");
 testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD", "TesterCHD");
 testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
-testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", "2015-10-23");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", "2019-10-23");
 
 testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
 testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");

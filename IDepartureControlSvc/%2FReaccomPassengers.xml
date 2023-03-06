@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="0fec8693-5199-4dcf-a344-c6cace604b37" name="/ReaccomPassengers" path="/ReaccomPassengers" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="0fec8693-5199-4dcf-a344-c6cace604b37" name="/ReaccomPassengers" path="/ReaccomPassengers" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="0fec8693-5199-4dcf-a344-c6cace604b37fileName">%2FReaccomPassengers</con:setting>
   </con:settings>

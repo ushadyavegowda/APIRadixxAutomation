@@ -4,18 +4,18 @@
     <con:setting id="5811f03a-c701-4332-98b5-04eba3ff91e3fileName">0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1. Run Test 0001" id="a06462b9-1b07-467b-9596-8c3cb1ec01eb">
+  <con:testStep id="a06462b9-1b07-467b-9596-8c3cb1ec01eb" name="1. Run Test 0001" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>499.50</con:value>
+          <con:value>19913.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128871</con:value>
+          <con:value>128873</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>KSXI61</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-24</con:value>
+          <con:value>-20</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -401,7 +401,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
   <con:testStep id="599ffb2d-6cc8-4906-b880-17f2b6789e11" name="Transfer Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceStep>4 ModifyPNR_Add SSR</con:sourceStep>
         <con:targetStep>5 AssessPaymentMethodFees</con:targetStep>
@@ -456,7 +456,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
-        <con:assertion type="Simple Contains" id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains">
+        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
           <con:configuration>
             <token>Successful Transaction</token>
             <ignoreCase>false</ignoreCase>
@@ -590,10 +590,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Balance Transfer AssessPaymentMethod" id="42787582-0b58-4153-8936-8b68b2ea5522">
+  <con:testStep id="42787582-0b58-4153-8936-8b68b2ea5522" name="Balance Transfer AssessPaymentMethod" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. ModifyPNR_Add Pax</con:sourceStep>
@@ -898,7 +898,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
   <con:testStep id="a5b961e3-6c76-4da3-906a-1de098437341" name="Property ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
@@ -908,7 +908,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false" disabled="true">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>

@@ -539,10 +539,10 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 1" id="9d51f1eb-af27-43a3-ba6a-1da305852987">
+  <con:testStep id="9d51f1eb-af27-43a3-ba6a-1da305852987" name="PropertyTransfer 1" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+      <con:transfers failOnError="true" setNullOnMissingSource="true" transferTextContent="true">
         <con:name>a:PersonOrgID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3. SummaryPNR</con:sourceStep>
@@ -556,12 +556,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="56994bb6-7ba4-4fb8-a43f-3aafbe8a519d" name="4. OAFlightSegments">
+  <con:testStep id="56994bb6-7ba4-4fb8-a43f-3aafbe8a519d" name="4. OAFlightSegments" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>OAFlightSegments</con:operation>
-      <con:request name="4. OAFlightSegments" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="537e4996-37a6-4ab4-9c4e-52000582255d">
+      <con:request id="537e4996-37a6-4ab4-9c4e-52000582255d" incomingWss="" name="4. OAFlightSegments" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -617,14 +617,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </tem:OAFlightSegments>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="1d4a27ce-5f74-4dd9-8f87-3856bad200f1" name="Valid HTTP Status Codes">
+        <con:assertion id="1d4a27ce-5f74-4dd9-8f87-3856bad200f1" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="0205153c-ef36-4544-88a2-cd927cb0045d" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="2c0aff2e-b258-48ee-aafe-3d48daf74a9c" name="Schema Compliance">
+        <con:assertion id="0205153c-ef36-4544-88a2-cd927cb0045d" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="2c0aff2e-b258-48ee-aafe-3d48daf74a9c" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>

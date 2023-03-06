@@ -17,11 +17,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>499.50</con:value>
+          <con:value>19913.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128871</con:value>
+          <con:value>128873</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -29,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>92PK4V</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -37,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-30</con:value>
+          <con:value>-19</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>

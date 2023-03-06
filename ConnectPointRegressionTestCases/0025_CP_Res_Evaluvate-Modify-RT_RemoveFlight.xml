@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="9c2bb185-679b-4718-9a4a-265d06857a9ffileName">0025_CP_Res_Evaluvate-Modify-RT_RemoveFlight</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="Create RT booking" id="a533b7be-9e13-4c2c-9eed-d7c0ba638445">
+  <con:testStep id="a533b7be-9e13-4c2c-9eed-d7c0ba638445" name="Create RT booking" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>55aeefc8-298e-40ac-8331-46c5663fc36a</con:targetTestCase>

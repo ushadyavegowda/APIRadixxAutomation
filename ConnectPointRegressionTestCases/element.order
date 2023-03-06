@@ -25,7 +25,16 @@ Create-OW-pnr-withSSR.xml
 0025_CP_Res_Evaluvate-Modify-RT_RemoveFlight.xml
 0026_CP_Res_Evaluvate_Cancel.xml
 0027_CP_Res_CreateOWbooking_Add-OA-segment.xml
+0028_CP_Res_ModifyOWbooking_Remove-OA-segment.xml
+0029_CP_Res_ModifyOWbooking_Remove--Passenger-on-OA.xml
 0030_CP_Res_CreateOWbooking-1ADT1CHD1INF_OASeg.xml
 0031_CP_Res_CreateOWbooking-1ADT1CHD1INF_NoPayment.xml
+0032_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_add-special-service.xml
+0033_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_add-Seg.xml
+0034_Prequisite_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_ReplaceFlight.xml
+0034_CP_Res_Modify-OW--1ADT-1-CHD-1INF-passenger_ReplaceFlight.xml
+0035_CP_Res_CreateRTbooking-2ADT1CHD1INF_NoPayment.xml
+0036_Prequisite_CP_Res_ModifyRTbooking-2ADT1CHD1INF_ReplaceFlight.xml
+0036_CP_Res_ModifyRTbooking-2ADT1CHD1INF_ReplaceFlight.xml
 Create-2ADT-Booking.xml
 Create-RT-booking.xml

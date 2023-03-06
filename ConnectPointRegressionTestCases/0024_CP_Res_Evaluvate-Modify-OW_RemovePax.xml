@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="0ec994fe-69a5-434c-a5fd-4d6f923649e8fileName">0024_CP_Res_Evaluvate-Modify-OW_RemovePax</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="Create 2ADT PNR" id="d698c5e5-efae-4bb8-b3a0-edd977bb8462">
+  <con:testStep id="d698c5e5-efae-4bb8-b3a0-edd977bb8462" name="Create 2ADT PNR" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>126b4f3b-f087-4fb1-b2bd-a1efbf400c12</con:targetTestCase>

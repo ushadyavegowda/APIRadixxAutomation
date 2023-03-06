@@ -885,18 +885,6 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:upgraded>true</con:upgraded>
       </con:transfers>
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-        <con:name>PhysicalFlightKey</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2. RetrivePNR</con:sourceStep>
-        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
-declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Key[1]</con:sourcePath>
-        <con:targetType>PhysicalFlightID</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>LogicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
@@ -908,14 +896,15 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:upgraded>true</con:upgraded>
       </con:transfers>
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-        <con:name>SeatAssignmentKey</con:name>
+        <con:name>PhysicalFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:SeatAssignments[1]/a:SeatAssignment[1]/a:Key[1]</con:sourcePath>
-        <con:targetType>SeatAssignmentKey</con:targetType>
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Key[1]</con:sourcePath>
+        <con:targetType>PhysicalFlightKey</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
@@ -937,6 +926,17 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:Key[1]</con:sourcePath>
         <con:targetType>AirlinePersonKey</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>SeatAssignmentKey</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrivePNR</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:SeatAssignments[1]/a:SeatAssignment[1]/a:Key[1]</con:sourcePath>
+        <con:targetType>SeatAssignmentKey</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
@@ -1070,13 +1070,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
-            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
             <!--Optional:-->
-            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
+            <rad:HistoricUserName>?</rad:HistoricUserName>
             <rad1:ActionType>AssignPassengerSeat</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${6 - RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:SeatAssignmentDetails>
                <!--Zero or more repetitions:-->
@@ -1154,7 +1154,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>?</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${#TestCase#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -1347,11 +1347,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>499.50</con:value>
+      <con:value>1672.00</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196719</con:value>
+      <con:value>196727</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1359,7 +1359,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>JDBSNN</con:value>
+      <con:value>X9KNTR</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1367,30 +1367,31 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>196719:108724:3/5/2023 7:00:00 AM</con:value>
+      <con:value>108732</con:value>
     </con:property>
     <con:property>
       <con:name>AirlineKey</con:name>
-      <con:value>299:JDBSNN</con:value>
+      <con:value>299:X9KNTR</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightKey</con:name>
+      <con:value>196727:108732:3/9/2023 7:00:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>196719:3/5/2023 7:00:00 AM</con:value>
+      <con:value>196727:3/9/2023 7:00:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>SeatAssignmentKey</con:name>
-      <con:value>108724:63737</con:value>
+      <con:value>108732:65120</con:value>
     </con:property>
     <con:property>
       <con:name>CustomerKey</con:name>
-      <con:value>e8975b13-4feb-48fb-90b4-e577efb95a8c</con:value>
+      <con:value>60411032-f513-4597-9cc6-1c6e79fca3ab</con:value>
     </con:property>
     <con:property>
       <con:name>AirlinePersonKey</con:name>
-      <con:value>63737:1</con:value>
+      <con:value>65120:1</con:value>
     </con:property>
     <con:property>
       <con:name>RowNum</con:name>

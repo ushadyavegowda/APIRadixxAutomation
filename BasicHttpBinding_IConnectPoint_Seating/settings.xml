@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="3b95da42-02d0-44b2-b886-3ce8e5268957fileName">BasicHttpBinding_IConnectPoint_Seating</con:setting>
   </con:settings>
-  <con:definitionCache rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Seating.svc?wsdl" type="TEXT">
+  <con:definitionCache type="TEXT" rootPart="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Seating.svc?wsdl">
     <con:part>
       <con:url>https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Seating.svc?wsdl</con:url>
       <con:content><![CDATA[<wsdl:definitions name="ConnectPoint_Seating" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
@@ -266,6 +266,7 @@
       <xs:element name="RowNumber" nillable="true" type="xs:string"/>
       <xs:element name="OldSeat" nillable="true" type="xs:string"/>
       <xs:element name="OldRowNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IsExtraSeat" type="xs:boolean"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SeatAssignmentDetail" nillable="true" type="tns:SeatAssignmentDetail"/>
@@ -360,6 +361,7 @@
       <xs:enumeration value="Male"/>
       <xs:enumeration value="Female"/>
       <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Unspecified"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Enumerations.GenderTypes" nillable="true" type="tns:Enumerations.GenderTypes"/>
@@ -600,6 +602,7 @@
       <xs:enumeration value="XBD"/>
       <xs:enumeration value="CNH"/>
       <xs:enumeration value="RTG"/>
+      <xs:enumeration value="PTS"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Enumerations.CurrencyCodeTypes" nillable="true" type="tns:Enumerations.CurrencyCodeTypes"/>
@@ -750,6 +753,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
+      <xs:element minOccurs="0" name="IsExternalPriced" type="xs:boolean"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ViewPNR" nillable="true" type="tns:ViewPNR"/>
@@ -811,6 +815,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
+      <xs:element minOccurs="0" name="MarketingFlightNumber" nillable="true" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LogicalFlight" nillable="true" type="tns:LogicalFlight"/>
@@ -882,6 +887,15 @@
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" name="DeiDisclosure" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MarketingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NonStopLogicalFlightId" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="FlightDisruptionAlert" nillable="true" type="xs:string">
         <xs:annotation>
           <xs:appinfo>
             <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
@@ -967,6 +981,7 @@
           <xs:element minOccurs="0" name="FareBundleCode" nillable="true" type="xs:string"/>
           <xs:element minOccurs="0" name="Height" type="xs:int"/>
           <xs:element minOccurs="0" name="PromotionType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ExternalRecordLocator" nillable="true" type="xs:string"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1567,7 +1582,9 @@
       <con:type>http://www.w3.org/2001/XMLSchema</con:type>
     </con:part>
   </con:definitionCache>
-  <con:endpoints/>
+  <con:endpoints>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
+  </con:endpoints>
   <con:environmentSpec>
     <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
       <con:authProfile>Inherit From Parent</con:authProfile>

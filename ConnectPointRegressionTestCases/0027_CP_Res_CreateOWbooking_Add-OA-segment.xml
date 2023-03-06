@@ -7,7 +7,7 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties></con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -539,6 +539,23 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="9d51f1eb-af27-43a3-ba6a-1da305852987">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+        <con:name>a:PersonOrgID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3. SummaryPNR</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:Customers[1]/a:Customer[1]/a:AirlinePersons[1]/a:AirlinePerson[1]/a:PersonOrgID[1]</con:sourcePath>
+        <con:targetType>PersonOrgID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="56994bb6-7ba4-4fb8-a43f-3aafbe8a519d" name="4. OAFlightSegments">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -590,8 +607,8 @@ declare namespace ns1='http://tempuri.org/';
                   <rad1:OALAirlinePersons>
                      <!--Zero or more repetitions:-->
                      <rad1:OALAirlinePerson>
-                        <rad1:PersonOrgID>?</rad1:PersonOrgID>
-                        <rad1:FareClass>?</rad1:FareClass>
+                        <rad1:PersonOrgID>${#TestCase#PersonOrgID}</rad1:PersonOrgID>
+                        <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                      </rad1:OALAirlinePerson>
                   </rad1:OALAirlinePersons>
                </rad1:OALSegment>
@@ -1500,7 +1517,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186593</con:value>
+      <con:value>186601</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PersonOrgID</con:name>
+      <con:value>-1</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

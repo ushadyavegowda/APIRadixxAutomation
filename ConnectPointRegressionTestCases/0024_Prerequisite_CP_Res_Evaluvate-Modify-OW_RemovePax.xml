@@ -340,7 +340,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <a:Passengers>
                <a:Person>
                   <a:PersonOrgID>-1</a:PersonOrgID>
-                  <a:FirstName>${#TestSuite#FirstNameRandom}</a:FirstName>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
                   <a:LastName>ONE</a:LastName>
                   <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>${#TestSuite#p_Age}</a:Age>
@@ -381,7 +381,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-2</a:PersonOrgID>
-                  <a:FirstName>${#TestSuite#FirstNameRandom}</a:FirstName>
+                  <a:FirstName>${#TestSuite#p_FirstName}</a:FirstName>
                   <a:LastName>TWO</a:LastName>
                   <a:MiddleName>${#TestSuite#p_MiddleName}</a:MiddleName>
                   <a:Age>${#TestSuite#p_Age}</a:Age>
@@ -1447,19 +1447,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>2543.00</con:value>
+      <con:value>3295.00</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>WXJYTD</con:value>
+      <con:value>KTP6H8</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2543.0</con:value>
+      <con:value>3295.0</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186593</con:value>
+      <con:value>186607</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

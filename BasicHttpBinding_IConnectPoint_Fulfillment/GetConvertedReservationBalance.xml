@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/GetConvertedReservationBalance" anonymous="optional" bindingOperationName="GetConvertedReservationBalance" id="48b2c1d5-f902-4cf1-9633-64b9e2d888d6" inputName="" isOneWay="false" name="GetConvertedReservationBalance" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/GetConvertedReservationBalance" anonymous="optional" bindingOperationName="GetConvertedReservationBalance" id="48b2c1d5-f902-4cf1-9633-64b9e2d888d6" inputName="" isOneWay="false" name="GetConvertedReservationBalance" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="48b2c1d5-f902-4cf1-9633-64b9e2d888d6fileName">GetConvertedReservationBalance</con:setting>
   </con:settings>

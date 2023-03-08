@@ -14,15 +14,15 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>1595.00</con:value>
+          <con:value>1271.50</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>R9LVGM</con:value>
+          <con:value>6UEUO2</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1595.0</con:value>
+          <con:value>1271.5</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
@@ -1000,7 +1000,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:properties>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186607</con:value>
+      <con:value>186593</con:value>
     </con:property>
     <con:property>
       <con:name>FareBasis</con:name>
@@ -1020,7 +1020,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1595.00</con:value>
+      <con:value>1271.50</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

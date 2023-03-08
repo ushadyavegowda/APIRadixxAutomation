@@ -84,7 +84,7 @@
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>ec14d3d7vag1cbpvdcgdg4ob97d19e5a79f6d62005a4</con:value>
+      <con:value>dc59c3c7d2yimb4ce0v4m8z3o0v9ddc7d3e3b209655f</con:value>
     </con:property>
     <con:property>
       <con:name>IATANumber</con:name>
@@ -432,11 +432,11 @@
     </con:property>
     <con:property>
       <con:name>FirstNameRandom</con:name>
-      <con:value>Gb50ku</con:value>
+      <con:value>x8UODO</con:value>
     </con:property>
     <con:property>
       <con:name>LasttNameRandom</con:name>
-      <con:value>CRVDOb</con:value>
+      <con:value>yInfaq</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNumReturn</con:name>
@@ -483,12 +483,8 @@
       <con:value>2023-03-13</con:value>
     </con:property>
     <con:property>
-      <con:name>ebr1</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>ebr2</con:name>
-      <con:value/>
+      <con:name>ExternalBookingReference</con:name>
+      <con:value>LZ4728</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

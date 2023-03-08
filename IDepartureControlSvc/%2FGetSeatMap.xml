@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="f5b39132-909c-495c-8ff9-08c0c54a0758" name="/GetSeatMap" path="/GetSeatMap" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="f5b39132-909c-495c-8ff9-08c0c54a0758" name="/GetSeatMap" path="/GetSeatMap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f5b39132-909c-495c-8ff9-08c0c54a0758fileName">%2FGetSeatMap</con:setting>
   </con:settings>

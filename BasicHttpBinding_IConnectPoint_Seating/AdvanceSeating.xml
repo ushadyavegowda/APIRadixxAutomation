@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating" anonymous="optional" bindingOperationName="AdvanceSeating" id="328be1bb-40e6-4f84-96e9-668f2758a564" inputName="" isOneWay="false" name="AdvanceSeating" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating" anonymous="optional" bindingOperationName="AdvanceSeating" id="328be1bb-40e6-4f84-96e9-668f2758a564" inputName="" isOneWay="false" name="AdvanceSeating" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="328be1bb-40e6-4f84-96e9-668f2758a564fileName">AdvanceSeating</con:setting>
   </con:settings>
   <con:call id="3da46961-1227-44b0-9fd2-3a07094c607b" name="Request 1">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint/>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:rad3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r

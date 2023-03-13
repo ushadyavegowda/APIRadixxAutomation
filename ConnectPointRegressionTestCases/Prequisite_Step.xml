@@ -166,8 +166,10 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+
 testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
+
 
 def DepartureDate = new Date().plus(3)
 def ReturnDate = new Date().plus(6)

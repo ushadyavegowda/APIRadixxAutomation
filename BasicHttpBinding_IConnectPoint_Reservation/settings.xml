@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" anonymous="optional" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Reservation" definition="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Reservation.svc?wsdl" id="7f88e26e-b2f0-4962-a01d-855ce4b9712e" name="BasicHttpBinding_IConnectPoint_Reservation" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:WsdlInterface" anonymous="optional" bindingName="{http://tempuri.org/}BasicHttpBinding_IConnectPoint_Reservation" definition="https://rdxappint.radixxuat.com/rdx/Radixx.ConnectPoint/ConnectPoint.Reservation.svc?wsdl" id="7f88e26e-b2f0-4962-a01d-855ce4b9712e" name="BasicHttpBinding_IConnectPoint_Reservation" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7f88e26e-b2f0-4962-a01d-855ce4b9712efileName">BasicHttpBinding_IConnectPoint_Reservation</con:setting>
   </con:settings>

@@ -159,22 +159,6 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="3d624e87-3216-425c-a55a-3c5925bebdb4" name="Groovy Script_securityToken" type="groovy">
-    <con:settings/>
-    <con:config>
-      <script>// importing the Java methods
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-//
-//def DepartureDate = new Date().plus(1)
-//def ModifyDate = new Date().plus(2)
-def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
-testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
-
-log.info(securityToken)</script>
-    </con:config>
-  </con:testStep>
   <con:testStep id="d8523e1d-5331-40b9-9cb2-9cbd163428a6" name="Groovy Script_input TestSuite" type="groovy">
     <con:settings/>
     <con:config>
@@ -182,6 +166,8 @@ log.info(securityToken)</script>
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+def securityToken = context.expand( '${1. RetrieveSecuirtyToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
 
 def DepartureDate = new Date().plus(3)
 def ReturnDate = new Date().plus(6)
@@ -190,9 +176,21 @@ def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
 def CS_DepartureDate = new Date().plus(5)
 
-
-//DOB
+//DOB	
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");	
+//ADT age	
+int age = 44;	
+Calendar a  = Calendar.getInstance();	
+a.add(Calendar.YEAR,- age);	
+ADT_DOB= sdf.format(a.getTime());	
+//CHD age	
+int ChdAge = 6;	
+Calendar c  = Calendar.getInstance();	
+c.add(Calendar.YEAR,- ChdAge);	
+p_DOB_CHD= sdf.format(c.getTime());	
+//INF age	
 def p_DOB_INF= new Date().minus(120)
+
 
 
 /* Perf prod*/ 
@@ -229,6 +227,8 @@ ebr2 = ebr( (('0'..'9')).join(), 4 )
 ExternalBookingReference = ebr1 + ebr2
 testRunner.testCase.testSuite.setPropertyValue("ExternalBookingReference",ExternalBookingReference);
 
+	//Summary and FQ	
+testRunner.testCase.testSuite.setPropertyValue("LanguageCode", "en");
 
 //Date and flight info
 testRunner.testCase.testSuite.setPropertyValue("DepartureDate", DepartureDate.format("yyyy-MM-dd"));
@@ -249,30 +249,35 @@ testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
 testRunner.testCase.testSuite.setPropertyValue("FlightNumReturn", FlightNumReturn);
 
 //Passenger Info
-testRunner.testCase.testSuite.setPropertyValue("p_FirstName", "Radixx");
-testRunner.testCase.testSuite.setPropertyValue("p_LastName", "Tester");
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
-testRunner.testCase.testSuite.setPropertyValue("p_DOB", "1974-10-23");
-testRunner.testCase.testSuite.setPropertyValue("p_Age", "44");
+def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+testRunner.testCase.testSuite.setPropertyValue("p_FirstName", FirstName.toUpperCase().concat("ADT"));
+testRunner.testCase.testSuite.setPropertyValue("p_LastName", LastName.toUpperCase().concat("ADT"));
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("ADT"));
+testRunner.testCase.testSuite.setPropertyValue("p_Title", "Ms");
+testRunner.testCase.testSuite.setPropertyValue("p_DOB", ADT_DOB);
+testRunner.testCase.testSuite.setPropertyValue("p_Age", age.toString());
 testRunner.testCase.testSuite.setPropertyValue("p_Gender", "Male");
 testRunner.testCase.testSuite.setPropertyValue("p_PTC", "ADT");
 testRunner.testCase.testSuite.setPropertyValue("p_Nationality", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Citizenship", "840");
 testRunner.testCase.testSuite.setPropertyValue("p_Language", "1");
 testRunner.testCase.testSuite.setPropertyValue("p_PhoneNumber", "+46701497931");
-testRunner.testCase.testSuite.setPropertyValue("p_Email", "test@radixx.com");
+def Email = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+testRunner.testCase.testSuite.setPropertyValue("p_Email",Email.toUpperCase().concat("@radixx.com"));
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
 testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
 testRunner.testCase.testSuite.setPropertyValue("ServiceCode", "SEAT");
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", "RadixxCHD");
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD", "TesterCHD");
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
-testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", "2019-10-23");
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameCHD", FirstName.toUpperCase().concat("CHD"));
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameCHD",  LastName.toUpperCase().concat("CHD"));
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName",MiddleName.toUpperCase().concat("CHD"));
+testRunner.testCase.testSuite.setPropertyValue("p_DOB_CHD", p_DOB_CHD);
 
-testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", "RadixxINF");
-testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", "TesterINF");
-testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", "Automation");
+testRunner.testCase.testSuite.setPropertyValue("p_FirstNameINF", FirstName.toUpperCase().concat("INF"));
+testRunner.testCase.testSuite.setPropertyValue("p_LastNameINF", LastName.toUpperCase().concat("INF"));
+testRunner.testCase.testSuite.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("INF"));
 testRunner.testCase.testSuite.setPropertyValue("p_DOB_INF",p_DOB_INF.format("yyyy-MM-dd"));
 
 
@@ -341,7 +346,40 @@ testRunner.testCase.testSuite.setPropertyValue("CS_DepartureDate", CS_DepartureD
 //SSR info
 testRunner.testCase.testSuite.setPropertyValue("SSR", "CNDY");
 
+//IEP call
+testRunner.testCase.testSuite.setPropertyValue("PaymentMethod", "CASH");
+testRunner.testCase.testSuite.setPropertyValue("PaymentMethodTA", "INVC");
+def ExpDate = new Date().plus(100)
+testRunner.testCase.testSuite.setPropertyValue("ExpirationDate", ExpDate.format("yyyy-MM-dd"));
+def ExchangeRateDate = new Date()
+testRunner.testCase.testSuite.setPropertyValue("ExchangeRateDate", ExchangeRateDate.format("yyyy-MM-dd"));
+testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
+testRunner.testCase.testSuite.setPropertyValue("TransactionStatus", "APPROVED");
+testRunner.testCase.testSuite.setPropertyValue("BillingCountry", "840");
+testRunner.testCase.testSuite.setPropertyValue("CountryCode", "840");
+testRunner.testCase.testSuite.setPropertyValue("ProcessorName", "OPPY");
+testRunner.testCase.testSuite.setPropertyValue("SeriesNumber", "299");
+testRunner.testCase.testSuite.setPropertyValue("UserName", "radixx");
+testRunner.testCase.testSuite.setPropertyValue("Reference", "Test");
+testRunner.testCase.testSuite.setPropertyValue("Comments", "Test");
+testRunner.testCase.testSuite.setPropertyValue("CheckNumber", "123");
+testRunner.testCase.testSuite.setPropertyValue("NotApplicable", "na");
+testRunner.testCase.testSuite.setPropertyValue("AuthorizationCode", "t1");
+testRunner.testCase.testSuite.setPropertyValue("PaymentReference", "t2");
+testRunner.testCase.testSuite.setPropertyValue("ResponseMessage", "t3");
 
+//VISA
+testRunner.testCase.testSuite.setPropertyValue("CardNumber", "4111111111111111");
+testRunner.testCase.testSuite.setPropertyValue("CVCode", "123");
+
+//IEP Address
+testRunner.testCase.testSuite.setPropertyValue("Address1", "123 Elm Street");
+testRunner.testCase.testSuite.setPropertyValue("Address2", "Suite 150");
+testRunner.testCase.testSuite.setPropertyValue("City", "Maitland");
+testRunner.testCase.testSuite.setPropertyValue("State", "FL");
+testRunner.testCase.testSuite.setPropertyValue("Postal", "32751");
+testRunner.testCase.testSuite.setPropertyValue("Country", "usa");
+testRunner.testCase.testSuite.setPropertyValue("ID", "1");
 
 
 

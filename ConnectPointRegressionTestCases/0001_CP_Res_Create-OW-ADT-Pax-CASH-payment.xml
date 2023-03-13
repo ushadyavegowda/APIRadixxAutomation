@@ -1916,7 +1916,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-17</con:value>
+      <con:value>-30</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

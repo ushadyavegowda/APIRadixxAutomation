@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/departurecontrol" id="38b81eb5-1f56-43e8-9314-3ee775edb918" name="IDepartureControlSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:interface xsi:type="con:RestService" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/departurecontrol" id="38b81eb5-1f56-43e8-9314-3ee775edb918" name="IDepartureControlSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:description>IDepartureControlSvc</con:description>
   <con:settings>
     <con:setting id="38b81eb5-1f56-43e8-9314-3ee775edb918fileName">IDepartureControlSvc</con:setting>

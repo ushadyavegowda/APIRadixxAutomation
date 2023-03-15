@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/AssociateToReservation" anonymous="optional" bindingOperationName="AssociateToReservation" id="9b2d2b6b-1a51-41f7-b0b4-88b1326af191" inputName="" isOneWay="false" name="AssociateToReservation" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/AssociateToReservation" anonymous="optional" bindingOperationName="AssociateToReservation" id="9b2d2b6b-1a51-41f7-b0b4-88b1326af191" inputName="" isOneWay="false" name="AssociateToReservation" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9b2d2b6b-1a51-41f7-b0b4-88b1326af191fileName">AssociateToReservation</con:setting>
   </con:settings>

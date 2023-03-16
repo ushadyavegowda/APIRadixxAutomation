@@ -4,7 +4,201 @@
     <con:setting id="1bf28282-62fc-4888-a6c8-f319b0fbe345fileName">0054_CP_Interline_CancelRes</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="request" id="50afbe0b-baad-4f98-b352-c10d75e597df" name="1.RetrieveSecurityToken">
+  <con:testStep type="calltestcase" name="1. Pre_ReqTestCase0053" id="3d7946c4-e3b5-4e9b-9451-1426b3b6fe3b">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7ab41546-f4e1-4abe-a130-db4150a636fd</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>securityToken</con:name>
+          <con:value>aa9f071988454f7w8861641c71dbs66d8fj160k4l6a8</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ConfrimationNum</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+        <con:property>
+          <con:name>NewConfirmationNum</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+        <con:property>
+          <con:name>Origin</con:name>
+          <con:value>YUL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Destination</con:name>
+          <con:value>NCE</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DepartureDate</con:name>
+          <con:value>2023-03-20</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReturnDate</con:name>
+          <con:value>2023-03-24</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ResBalance</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LogicFlightKey</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+        <con:property>
+          <con:name>TripId</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>1098816320</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PhysicalFlightID</con:name>
+          <con:value>-1625504109</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_Email</con:name>
+          <con:value>radix@radixx.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_age</con:name>
+          <con:value>44</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_age</con:name>
+          <con:value>6</con:value>
+        </con:property>
+        <con:property>
+          <con:name>currency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>paycurrency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ModifyDate</con:name>
+          <con:value>2023-03-26</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeAddress</con:name>
+          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeCity</con:name>
+          <con:value>ORLANDO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeState</con:name>
+          <con:value>FL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomePostal</con:name>
+          <con:value>32822</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+          <con:value>ZXRNVNADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+          <con:value>LNHLPRADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+          <con:value>LYSGZDADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_DOB</con:name>
+          <con:value>1979-03-16</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameTwo</con:name>
+          <con:value>ZXRNVNADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameTwo</con:name>
+          <con:value>LNHLPRADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfOne</con:name>
+          <con:value>ZXRNVNINF</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfOne</con:name>
+          <con:value>LNHLPRINF</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameCHDOne</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameCHDone</con:name>
+        </con:property>
+        <con:property>
+          <con:name>CHD_DOB</con:name>
+          <con:value>2017-03-16</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyFirstName</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyMiddleName</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyLastName</con:name>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>p_HomeAddress</con:entry>
+        <con:entry>p_HomeCity</con:entry>
+        <con:entry>p_HomeState</con:entry>
+        <con:entry>p_HomePostal</con:entry>
+        <con:entry>p_Email</con:entry>
+        <con:entry>ADT_age</con:entry>
+        <con:entry>CHD_age</con:entry>
+        <con:entry>p_FirstNameInfCHD</con:entry>
+        <con:entry>p_LastNameInfCHD</con:entry>
+        <con:entry>p_FirstNameCHD</con:entry>
+        <con:entry>p_MiddleNameInfCHD</con:entry>
+        <con:entry>fareid</con:entry>
+        <con:entry>p_MiddleNameCHD</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>currency</con:entry>
+        <con:entry>PhysicalFlightID</con:entry>
+        <con:entry>ResBalance</con:entry>
+        <con:entry>DepartureDate</con:entry>
+        <con:entry>ReturnDate</con:entry>
+        <con:entry>ModifyDate</con:entry>
+        <con:entry>Origin</con:entry>
+        <con:entry>Destination</con:entry>
+        <con:entry>paycurrency</con:entry>
+        <con:entry>p_FirstName</con:entry>
+        <con:entry>p_LastName</con:entry>
+        <con:entry>p_MiddleName</con:entry>
+        <con:entry>p_FirstNameTwo</con:entry>
+        <con:entry>p_LastNameTwo</con:entry>
+        <con:entry>p_MiddleNameTwo</con:entry>
+        <con:entry>p_LastNameCHD</con:entry>
+        <con:entry>p_FirstNameInfOne</con:entry>
+        <con:entry>p_LastNameInfOne</con:entry>
+        <con:entry>p_MiddleNameInfOne</con:entry>
+        <con:entry>ADT_DOB</con:entry>
+        <con:entry>CHD_DOB</con:entry>
+        <con:entry>securityToken</con:entry>
+        <con:entry>TripId</con:entry>
+        <con:entry>ConfrimationNum</con:entry>
+        <con:entry>LogicFlightKey</con:entry>
+        <con:entry>SdConfirmationNum</con:entry>
+      </con:returnProperties>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="50afbe0b-baad-4f98-b352-c10d75e597df" name="1.RetrieveSecurityToken" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -75,10 +269,10 @@
       <tem:RetrievePNR>
          <!--Optional:-->
          <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Pre_ReqTestCase0053#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -87,7 +281,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#[ConnectPointRegressionTestCases#0053_CP_Interline_ModifyNameChange_1ADT+1CHD+1INF]#SdConfirmationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Pre_ReqTestCase0053#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -128,7 +322,7 @@
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
-        <con:targetType>ConfirmationN</con:targetType>
+        <con:targetType xsi:nil="true"/>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
@@ -152,10 +346,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <tem:CancelPNR>
          <!--Optional:-->
          <tem:CancelPnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Pre_ReqTestCase0053#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -214,11 +408,11 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Pre_ReqTestCase0053#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
@@ -301,11 +495,6 @@ m.append(res, "UTF-8")
 }</script>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>ConfirmationN</con:name>
-      <con:value>6Z7JHE</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties></con:properties>
   <con:reportParameters/>
 </con:testCase>

@@ -78,9 +78,10 @@ def destination = "NCE"
 def securityToken = context.expand( '${1.RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
 testRunner.testCase.setPropertyValue("securityToken", securityToken);
 
-//"YYZ""YVR"  YUL""NCE"
+
 def currency = "CAD"
 def paycurrency = "CAD"
+
 
 
 //Date and flight info
@@ -97,21 +98,18 @@ def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 //pax one
-testRunner.testCase.setPropertyValue("p_FirstName", FirstName.toUpperCase().concat("ADT"));
-testRunner.testCase.setPropertyValue("p_LastName", LastName.toUpperCase().concat("ADT"));
-testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("ADT"));
+testRunner.testCase.setPropertyValue("p_FirstName", "BobADL");
+testRunner.testCase.setPropertyValue("p_LastName", "Young");
+testRunner.testCase.setPropertyValue("p_MiddleName", "Mol");
 //PaX two
-testRunner.testCase.setPropertyValue("p_FirstNameTwo", FirstName.toUpperCase().concat("ADT"));
-testRunner.testCase.setPropertyValue("p_LastNameTwo", LastName.toUpperCase().concat("ADT"));
-testRunner.testCase.setPropertyValue("p_MiddleNameTwo", MiddleName.toUpperCase().concat("ADT"));
+testRunner.testCase.setPropertyValue("p_FirstNameTwo", "Mechile");
+testRunner.testCase.setPropertyValue("p_MiddleNameTwo", "Corry");
 //CHD
-testRunner.testCase.setPropertyValue("p_FirstNameCHD", FirstName.toUpperCase().concat("CHD"));
-testRunner.testCase.setPropertyValue("p_LastNameCHD", LastName.toUpperCase().concat("CHD"));
-testRunner.testCase.setPropertyValue("p_MiddleNameCHD", MiddleName.toUpperCase().concat("CHD"));
+testRunner.testCase.setPropertyValue("p_FirstNameCHDOne", "TomCHD");
+testRunner.testCase.setPropertyValue("p_MiddleNameCHDone", "Chris");
 //infant
-testRunner.testCase.setPropertyValue("p_FirstNameInfOne", FirstName.toUpperCase().concat("INF"));
-testRunner.testCase.setPropertyValue("p_LastNameInfOne", LastName.toUpperCase().concat("INF"));
-testRunner.testCase.setPropertyValue("p_MiddleNameInfOne", MiddleName.toUpperCase().concat("INF"));
+testRunner.testCase.setPropertyValue("p_FirstNameInfOne", "EllahInf");
+testRunner.testCase.setPropertyValue("p_MiddleNameInfOne", "Lucy")
 
 
 //******************************DOB	
@@ -128,7 +126,7 @@ c.add(Calendar.YEAR,- ChdAge);
 CHD_DOB= sdf.format(c.getTime());	
 //INF age	
 def p_DOB_INF= new Date().minus(120)
-testRunner.testCase.setPropertyValue("ADT_age", "44");
+testRunner.testCase.setPropertyValue("ADT_age", "25");
 testRunner.testCase.setPropertyValue("CHD_age", "6");
 testRunner.testCase.setPropertyValue("ADT_DOB", ADT_DOB);
 testRunner.testCase.setPropertyValue("CHD_DOB", CHD_DOB);
@@ -436,7 +434,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <rad1:Person>
                   <rad1:PersonOrgID>-2</rad1:PersonOrgID>
                   <rad1:FirstName>${#TestCase#p_FirstNameTwo}</rad1:FirstName>
-                  <rad1:LastName>${#TestCase#p_LastNameTwo}</rad1:LastName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
                   <rad1:MiddleName>${#TestCase#p_MiddleNameTwo}</rad1:MiddleName>
                   <rad1:Age>${#TestCase#ADT_age}</rad1:Age>
                   <rad1:DOB>${#TestCase#ADT_DOB}</rad1:DOB>
@@ -495,7 +493,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <rad1:Person>
                   <rad1:PersonOrgID>-3</rad1:PersonOrgID>
                   <rad1:FirstName>${#TestCase#p_FirstNameInfOne}</rad1:FirstName>
-                  <rad1:LastName>${#TestCase#p_LastNameInfOne}</rad1:LastName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
                   <rad1:MiddleName>${#TestCase#p_MiddleNameInfOne}</rad1:MiddleName>
                   <rad1:Age>1</rad1:Age>
                   <rad1:DOB>2022-04-20</rad1:DOB>
@@ -555,7 +553,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <rad1:Person>
                   <rad1:PersonOrgID>-4</rad1:PersonOrgID>
                   <rad1:FirstName>${#TestCase#p_FirstNameCHD}</rad1:FirstName>
-                  <rad1:LastName>${#TestCase#p_LastNameCHD}</rad1:LastName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
                   <rad1:MiddleName>${#TestCase#p_MiddleNameCHD}</rad1:MiddleName>
                   <rad1:Age>${#TestCase#CHD_age}</rad1:Age>
                   <rad1:DOB>${#TestCase#CHD_DOB}</rad1:DOB>
@@ -663,7 +661,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
-        <con:targetType>ResBalance</con:targetType>
+        <con:targetType xsi:nil="true"/>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
@@ -690,7 +688,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
@@ -735,181 +733,6 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="e831a206-c92f-412f-855a-95e489c12f95" name="4. AssessPaymentMethodFees" type="request">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
-      <con:operation>AssessPaymentMethodFees</con:operation>
-      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="4. AssessPaymentMethodFees">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Fees.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:AssessPaymentMethodFees>
-         <!--Optional:-->
-         <tem:AssessPaymentMethodFeesRequest>
-            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
-            <!--Optional:-->
-            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
-            <rad1:PaymentsToAssessFee>
-               <!--Zero or more repetitions:-->
-               <rad1:PaymentToAssessFee>
-                  <rad1:PaymentMethod>CASH</rad1:PaymentMethod>
-                  <rad1:CardNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:PaymentAmount>${#TestCase#ResBalance}</rad1:PaymentAmount>
-               </rad1:PaymentToAssessFee>
-            </rad1:PaymentsToAssessFee>
-         </tem:AssessPaymentMethodFeesRequest>
-      </tem:AssessPaymentMethodFees>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
-        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
-          <con:configuration>
-            <token>Successful Transaction</token>
-            <ignoreCase>false</ignoreCase>
-            <useRegEx>false</useRegEx>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-        <con:environmentSpec>
-          <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f4f8d182-e94d-420f-973e-79d7b7fd4447">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="488e5be0-d9d9-4916-bcbf-a47f3fa6db42">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="43f54844-b6cd-4ffa-800d-588a2745aa74">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:request>
-    </con:config>
-  </con:testStep>
   <con:testStep id="5a6dd949-89ec-4f42-8f6d-fd25a7ccf3e0" name="5.CreatePNR-commit" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -931,7 +754,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
@@ -1200,7 +1023,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
@@ -1285,156 +1108,136 @@ m.append(res, "UTF-8")
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>p_HomeAddress</con:name>
-      <con:value>6310 HAZELTINE NATIONAL DR</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_HomeCity</con:name>
-      <con:value>ORLANDO</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_HomeState</con:name>
-      <con:value>FL</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_HomePostal</con:name>
-      <con:value>32822</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_Email</con:name>
-      <con:value>radix@radixx.com</con:value>
-    </con:property>
-    <con:property>
-      <con:name>ADT_age</con:name>
-      <con:value>44</con:value>
-    </con:property>
-    <con:property>
-      <con:name>CHD_age</con:name>
-      <con:value>6</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_FirstNameInfCHD</con:name>
-      <con:value>UCHBQYCHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_LastNameInfCHD</con:name>
-      <con:value>DOTVYVCHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_FirstNameCHD</con:name>
-      <con:value>TQFFNJCHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_MiddleNameInfCHD</con:name>
-      <con:value>UBKTVACHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>fareid</con:name>
-      <con:value>1</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_MiddleNameCHD</con:name>
-      <con:value>OAQYHHCHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>LFID</con:name>
-      <con:value>1098816320</con:value>
-    </con:property>
-    <con:property>
-      <con:name>currency</con:name>
-      <con:value>CAD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>PhysicalFlightID</con:name>
-      <con:value>-1625504109</con:value>
-    </con:property>
-    <con:property>
-      <con:name>ResBalance</con:name>
-      <con:value>0</con:value>
-    </con:property>
-    <con:property>
-      <con:name>DepartureDate</con:name>
-      <con:value>2023-03-20</con:value>
-    </con:property>
-    <con:property>
-      <con:name>ReturnDate</con:name>
-      <con:value>2023-03-24</con:value>
-    </con:property>
-    <con:property>
-      <con:name>ModifyDate</con:name>
-      <con:value>2023-03-26</con:value>
-    </con:property>
-    <con:property>
-      <con:name>Origin</con:name>
-      <con:value>YUL</con:value>
-    </con:property>
-    <con:property>
-      <con:name>Destination</con:name>
-      <con:value>NCE</con:value>
-    </con:property>
-    <con:property>
-      <con:name>paycurrency</con:name>
-      <con:value>CAD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_FirstName</con:name>
-      <con:value>TQFFNJADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_LastName</con:name>
-      <con:value>VLZGZTADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_MiddleName</con:name>
-      <con:value>OAQYHHADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_FirstNameTwo</con:name>
-      <con:value>TQFFNJADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_LastNameTwo</con:name>
-      <con:value>VLZGZTADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_MiddleNameTwo</con:name>
-      <con:value>OAQYHHADT</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_LastNameCHD</con:name>
-      <con:value>VLZGZTCHD</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_FirstNameInfOne</con:name>
-      <con:value>TQFFNJINF</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_LastNameInfOne</con:name>
-      <con:value>VLZGZTINF</con:value>
-    </con:property>
-    <con:property>
-      <con:name>p_MiddleNameInfOne</con:name>
-      <con:value>OAQYHHINF</con:value>
-    </con:property>
-    <con:property>
-      <con:name>ADT_DOB</con:name>
-      <con:value>1979-03-16</con:value>
-    </con:property>
-    <con:property>
-      <con:name>CHD_DOB</con:name>
-      <con:value>2017-03-16</con:value>
-    </con:property>
-    <con:property>
       <con:name>securityToken</con:name>
-      <con:value>a66ca5722ei466yevd64k994a58792fc417303b1072a</con:value>
-    </con:property>
-    <con:property>
-      <con:name>TripId</con:name>
-      <con:value>1</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>DepartureDate</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ReturnDate</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>Origin</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>Destination</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>PhysicalFlightID</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>TripId</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>fareid</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ModifyDate</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>paycurrency</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>currency</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>CarrierCode</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstName</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_LastName</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleName</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameTwo</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameTwo</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameCHDOne</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameCHDone</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameInfOne</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameInfOne</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ADT_age</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>CHD_age</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ADT_DOB</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>CHD_DOB</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_Email</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeAddress</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeCity</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeState</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>p_HomePostal</con:name>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

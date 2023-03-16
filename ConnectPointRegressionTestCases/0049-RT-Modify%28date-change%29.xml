@@ -18,156 +18,106 @@
       <con:targetTestCase>8d35b7b8-3174-4a59-9823-953c726b95a0</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>p_HomeAddress</con:name>
-          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+          <con:name>securityToken</con:name>
         </con:property>
         <con:property>
-          <con:name>p_HomeCity</con:name>
-          <con:value>ORLANDO</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeState</con:name>
-          <con:value>FL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomePostal</con:name>
-          <con:value>32822</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_Email</con:name>
-          <con:value>radix@radixx.com</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_age</con:name>
-          <con:value>44</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_age</con:name>
-          <con:value>6</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameInfCHD</con:name>
-          <con:value>UCHBQYCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastNameInfCHD</con:name>
-          <con:value>DOTVYVCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameCHD</con:name>
-          <con:value>DZSJGZCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameInfCHD</con:name>
-          <con:value>UBKTVACHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameCHD</con:name>
-          <con:value>GADKVCCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LFID</con:name>
-          <con:value>812192035</con:value>
-        </con:property>
-        <con:property>
-          <con:name>currency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>PhysicalFlightID</con:name>
-          <con:value>-1425536421</con:value>
+          <con:name>ConfrimationNum</con:name>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>0</con:value>
         </con:property>
         <con:property>
           <con:name>DepartureDate</con:name>
-          <con:value>2023-03-16</con:value>
         </con:property>
         <con:property>
           <con:name>ReturnDate</con:name>
-          <con:value>2023-03-24</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ModifyDate</con:name>
-          <con:value>2023-03-26</con:value>
         </con:property>
         <con:property>
           <con:name>Origin</con:name>
-          <con:value>YUL</con:value>
         </con:property>
         <con:property>
           <con:name>Destination</con:name>
-          <con:value>NCE</con:value>
         </con:property>
         <con:property>
-          <con:name>paycurrency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstName</con:name>
-          <con:value>DZSJGZADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastName</con:name>
-          <con:value>SKDTAAADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleName</con:name>
-          <con:value>GADKVCADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameTwo</con:name>
-          <con:value>DZSJGZADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastNameTwo</con:name>
-          <con:value>SKDTAAADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameTwo</con:name>
-          <con:value>GADKVCADT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastNameCHD</con:name>
-          <con:value>SKDTAACHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameInfOne</con:name>
-          <con:value>DZSJGZINF</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastNameInfOne</con:name>
-          <con:value>SKDTAAINF</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameInfOne</con:name>
-          <con:value>GADKVCINF</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_DOB</con:name>
-          <con:value>1979-03-16</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_DOB</con:name>
-          <con:value>2017-03-16</con:value>
-        </con:property>
-        <con:property>
-          <con:name>securityToken</con:name>
-          <con:value>e6d51967522441b0a578523f6cn41766j3sea1ca5e0a</con:value>
+          <con:name>PhysicalFlightID</con:name>
         </con:property>
         <con:property>
           <con:name>TripId</con:name>
           <con:value>1</con:value>
         </con:property>
         <con:property>
-          <con:name>ConfrimationNum</con:name>
-          <con:value xsi:nil="true"/>
+          <con:name>LFID</con:name>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+        </con:property>
+        <con:property>
+          <con:name>ModifyDate</con:name>
+        </con:property>
+        <con:property>
+          <con:name>paycurrency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>currency</con:name>
+        </con:property>
+        <con:property>
+          <con:name>CarrierCode</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameTwo</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameTwo</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameCHDOne</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameCHDone</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfOne</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfOne</con:name>
+        </con:property>
+        <con:property>
+          <con:name>ADT_age</con:name>
+        </con:property>
+        <con:property>
+          <con:name>CHD_age</con:name>
+        </con:property>
+        <con:property>
+          <con:name>ADT_DOB</con:name>
+        </con:property>
+        <con:property>
+          <con:name>CHD_DOB</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_Email</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeAddress</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeCity</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeState</con:name>
+        </con:property>
+        <con:property>
+          <con:name>p_HomePostal</con:name>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -213,7 +163,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="7f1efe27-2dd3-41d5-a5eb-2ff93c962611" name="1.RetrieveSecurityToken">
+  <con:testStep type="request" id="7f1efe27-2dd3-41d5-a5eb-2ff93c962611" name="1.RetrieveSecurityToken" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -268,7 +218,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="97bbf94c-edbc-4682-b5d4-2a01209bff88" name="InputValues" type="groovy">
+  <con:testStep id="97bbf94c-edbc-4682-b5d4-2a01209bff88" name="InputValues" type="groovy" disabled="true">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -319,10 +269,10 @@ testRunner.testCase.setPropertyValue("paycurrency", paycurrency);</script>
       <tem:RetrievePNR>
          <!--Optional:-->
          <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Prequisite Run Test#48#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -406,9 +356,9 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
    <soapenv:Body>
       <tem:RetrieveFareQuote>
          <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestCase#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${1. Prequisite Run Test#48#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
-            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">CAD</rad:CurrencyOfFareQuote>
+            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">${#[ConnectPointRegressionTestCases#0048_CP_Interline_Create_2ADT+1CHD+1INF]#currency}</rad:CurrencyOfFareQuote>
             <rad:PromotionalCode xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
             <rad:IataNumberOfRequestor xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
             <rad:CorporationID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:CorporationID>
@@ -417,13 +367,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
             <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
                <rad:FareQuoteDetail>
-                  <rad:Origin>YUL</rad:Origin>
-                  <rad:Destination>NCE</rad:Destination>
+                  <rad:Origin>${1. Prequisite Run Test#48#Origin}</rad:Origin>
+                  <rad:Destination>${1. Prequisite Run Test#48#Destination}</rad:Destination>
                   <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>2023-03-19</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${1. Prequisite Run Test#48#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -443,13 +393,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${#TestCase#FirstLogicFlightID}</rad:LogicalFlightKey>
                </rad:FareQuoteDetail>
                <rad:FareQuoteDetail>
-                  <rad:Origin>NCE</rad:Origin>
-                  <rad:Destination>YUL</rad:Destination>
+                  <rad:Origin>${1. Prequisite Run Test#48#Destination}</rad:Origin>
+                  <rad:Destination>${1. Prequisite Run Test#48#Origin}</rad:Destination>
                   <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>2023-03-23</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${1. Prequisite Run Test#48#ReturnDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -517,8 +467,8 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <tem:ModifyPNR>
          <!--Optional:-->
          <tem:ModifyPnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
-            <rad:CarrierCodes><rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode></rad:CarrierCodes>
+            <rad:SecurityGUID>${1. Prequisite Run Test#48#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes><rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode></rad:CarrierCodes>
             <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
             <!--Optional:-->
             <rad:HistoricUserName>${empty}</rad:HistoricUserName>
@@ -599,11 +549,11 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Prequisite Run Test#48#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
@@ -662,7 +612,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
          <!--Optional:-->
          <tem:ExternalProcessedPaymentRequest>
             <rad:TransactionInfo>
-               <rad1:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityGUID>
+               <rad1:SecurityGUID>${1. Prequisite Run Test#48#securityToken}</rad1:SecurityGUID>
                <rad1:CarrierCodes>
                   <!--Zero or more repetitions:-->
                   <rad1:CarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -840,7 +790,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${1. Prequisite Run Test#48#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -931,43 +881,43 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>f319b82791814w86f960dda176mefa68i1v06f8e26af</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-03-19</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-03-23</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-03-25</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
-      <con:value>YUL</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Destination</con:name>
-      <con:value>NCE</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>currency</con:name>
-      <con:value>CAD</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>paycurrency</con:name>
-      <con:value>CAD</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>FirstLogicFlightID</con:name>
-      <con:value>-758993967</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>SLogicFlightID</con:name>
-      <con:value>-1458178171</con:value>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

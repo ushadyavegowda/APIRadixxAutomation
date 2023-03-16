@@ -2094,7 +2094,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128874</con:value>
+      <con:value>186625</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -2130,7 +2130,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>86301</con:value>
+      <con:value>103919</con:value>
     </con:property>
     <con:property>
       <con:name>physicalFlightKey</con:name>

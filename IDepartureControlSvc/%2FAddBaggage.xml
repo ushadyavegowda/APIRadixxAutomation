@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="7fab0876-6c69-4e9b-90bf-6d315b4ad722" name="/AddBaggage" path="/AddBaggage" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="7fab0876-6c69-4e9b-90bf-6d315b4ad722" name="/AddBaggage" path="/AddBaggage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7fab0876-6c69-4e9b-90bf-6d315b4ad722fileName">%2FAddBaggage</con:setting>
   </con:settings>

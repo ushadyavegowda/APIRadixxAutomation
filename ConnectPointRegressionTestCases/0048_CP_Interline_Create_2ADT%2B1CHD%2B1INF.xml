@@ -1,8 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="8d35b7b8-3174-4a59-9823-953c726b95a0" keepSession="false" maxResults="0" name="0048 External RT 2ADT+1CHD+1INF" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="8d35b7b8-3174-4a59-9823-953c726b95a0" keepSession="false" maxResults="0" name="0048_CP_Interline_Create_2ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="8d35b7b8-3174-4a59-9823-953c726b95a0fileName">0048-External-RT-2ADT%2B1CHD%2B1INF</con:setting>
+    <con:setting id="8d35b7b8-3174-4a59-9823-953c726b95a0fileName">0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF</con:setting>
   </con:settings>
+  <con:testStep id="470c744f-9a4f-4d74-966f-833b9f3a7c1c" name="1. RetrieveSecuirtyToken" type="calltestcase" disabled="true">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="4b8682b7-fb60-4a28-8c5c-0dcbc043ba79" name="1.RetrieveSecurityToken">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
+      <con:operation>RetrieveSecurityToken</con:operation>
+      <con:request name="1.RetrieveSecurityToken" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Security.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveSecurityToken>
+         <!--Optional:-->
+         <tem:RetrieveSecurityTokenRequest>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <rad1:LogonID>CP_1D_INT</rad1:LogonID>
+            <rad1:Password>R@d1xx!</rad1:Password>
+         </tem:RetrieveSecurityTokenRequest>
+      </tem:RetrieveSecurityToken>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
   <con:testStep id="7203044a-a87b-4d7b-a3c4-92a2c5c4e1a2" name="InputValues" type="groovy">
     <con:settings/>
     <con:config>
@@ -10,14 +74,21 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-def DepartureDate = new Date().plus(3)
-def ReturnDate = new Date().plus(6)
-def ModifyDate = new Date().plus(6)
+def DepartureDate = new Date().plus(4)
+def ReturnDate = new Date().plus(8)
+def ModifyDate = new Date().plus(10)
 
 
 /* Perf prod*/ 
 def origin = "YUL"
 def destination = "NCE"
+
+def securityToken = context.expand( '${1.RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+testRunner.testCase.setPropertyValue("securityToken", securityToken);
+
+//"YYZ""YVR"  YUL""NCE"
+def currency = "CAD"
+def paycurrency = "CAD"
 
 
 //Date and flight info
@@ -26,18 +97,61 @@ testRunner.testCase.setPropertyValue("ReturnDate", ReturnDate.format("yyyy-MM-dd
 testRunner.testCase.setPropertyValue("ModifyDate", ModifyDate.format("yyyy-MM-dd"));
 testRunner.testCase.setPropertyValue("Origin", origin);
 testRunner.testCase.setPropertyValue("Destination", destination);
+testRunner.testCase.setPropertyValue("currency", currency);
+testRunner.testCase.setPropertyValue("paycurrency", paycurrency);
 
-
-//Passenger Info
+//************Passenger Info
 def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+//pax one
 testRunner.testCase.setPropertyValue("p_FirstName", FirstName.toUpperCase().concat("ADT"));
 testRunner.testCase.setPropertyValue("p_LastName", LastName.toUpperCase().concat("ADT"));
-testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("ADT"));</script>
+testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().concat("ADT"));
+//PaX two
+testRunner.testCase.setPropertyValue("p_FirstNameTwo", FirstName.toUpperCase().concat("ADT"));
+testRunner.testCase.setPropertyValue("p_LastNameTwo", LastName.toUpperCase().concat("ADT"));
+testRunner.testCase.setPropertyValue("p_MiddleNameTwo", MiddleName.toUpperCase().concat("ADT"));
+//CHD
+testRunner.testCase.setPropertyValue("p_FirstNameCHD", FirstName.toUpperCase().concat("CHD"));
+testRunner.testCase.setPropertyValue("p_LastNameCHD", LastName.toUpperCase().concat("CHD"));
+testRunner.testCase.setPropertyValue("p_MiddleNameCHD", MiddleName.toUpperCase().concat("CHD"));
+//infant
+testRunner.testCase.setPropertyValue("p_FirstNameInfOne", FirstName.toUpperCase().concat("INF"));
+testRunner.testCase.setPropertyValue("p_LastNameInfOne", LastName.toUpperCase().concat("INF"));
+testRunner.testCase.setPropertyValue("p_MiddleNameInfOne", MiddleName.toUpperCase().concat("INF"));
+
+
+//******************************DOB	
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");	
+//ADT age	
+int age = 44;	
+Calendar a  = Calendar.getInstance();	
+a.add(Calendar.YEAR,- age);	
+ADT_DOB= sdf.format(a.getTime());	
+//CHD age	
+int ChdAge = 6;	
+Calendar c  = Calendar.getInstance();	
+c.add(Calendar.YEAR,- ChdAge);	
+CHD_DOB= sdf.format(c.getTime());	
+//INF age	
+def p_DOB_INF= new Date().minus(120)
+testRunner.testCase.setPropertyValue("ADT_age", "44");
+testRunner.testCase.setPropertyValue("CHD_age", "6");
+testRunner.testCase.setPropertyValue("ADT_DOB", ADT_DOB);
+testRunner.testCase.setPropertyValue("CHD_DOB", CHD_DOB);
+//testRunner.testCase.setPropertyValue("p_DOB_INF", p_DOB_INF);
+
+
+//APIS info - 1 ADT
+testRunner.testCase.setPropertyValue("p_Email","radix@radixx.com");
+testRunner.testCase.setPropertyValue("p_HomeAddress", "6310 HAZELTINE NATIONAL DR");
+testRunner.testCase.setPropertyValue("p_HomeCity", "ORLANDO");
+testRunner.testCase.setPropertyValue("p_HomeState", "FL");
+testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="400893f7-2221-41a3-a659-5726f301d430" name="1. Login" type="calltestcase">
+  <con:testStep id="400893f7-2221-41a3-a659-5726f301d430" name="1. Login" type="calltestcase" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -63,7 +177,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       <tem:RetrieveFareQuote>
          <!--Optional:-->
          <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                
@@ -72,7 +186,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             <rad:ClientIPAddress>::1</rad:ClientIPAddress>
             <!--Optional:-->
             <rad:HistoricUserName>Web</rad:HistoricUserName>
-            <rad1:CurrencyOfFareQuote>CAD</rad1:CurrencyOfFareQuote>
+            <rad1:CurrencyOfFareQuote>${#TestCase#currency}</rad1:CurrencyOfFareQuote>
             <rad1:PromotionalCode>${empty}</rad1:PromotionalCode>
             <rad1:IataNumberOfRequestor xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <rad1:CorporationID>-214</rad1:CorporationID>
@@ -81,16 +195,16 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             <rad1:InventoryFilterMethod>Available</rad1:InventoryFilterMethod>
             <rad1:FareQuoteDetails>
                <rad1:FareQuoteDetail>
-                  <rad1:Origin>YUL</rad1:Origin>
-                  <rad1:Destination>NCE</rad1:Destination>
+                  <rad1:Origin>${#TestCase#Origin}</rad1:Origin>
+                  <rad1:Destination>${#TestCase#Destination}</rad1:Destination>
                   <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
                   <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
                   <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
                   <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
-                  <rad1:DateOfDeparture>2023-02-10</rad1:DateOfDeparture>
+                  <rad1:DateOfDeparture>${#TestCase#DepartureDate}</rad1:DateOfDeparture>
                   <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
-                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:FareClass>${empty}</rad1:FareClass>
+                  <rad1:FareBasisCode>${empty}</rad1:FareBasisCode>
                   <rad1:Cabin>${empty}</rad1:Cabin>
                   <rad1:LFID>0</rad1:LFID>
                   <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>
@@ -107,13 +221,13 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
                </rad1:FareQuoteDetail>
                <rad1:FareQuoteDetail>
-                  <rad1:Origin>NCE</rad1:Origin>
-                  <rad1:Destination>YUL</rad1:Destination>
+                  <rad1:Origin>${#TestCase#Destination}</rad1:Origin>
+                  <rad1:Destination>${#TestCase#Origin}</rad1:Destination>
                   <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
                   <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
                   <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
                   <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
-                  <rad1:DateOfDeparture>2023-02-15</rad1:DateOfDeparture>
+                  <rad1:DateOfDeparture>${#TestCase#ReturnDate}</rad1:DateOfDeparture>
                   <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
                   <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -163,6 +277,58 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="d73ccb6c-859c-4f82-b9cc-2309dcca1112" name="Transfer LFID PHYID FareId and TripId" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>PhysicalFlightID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[1]/a:PFID[1]</con:sourcePath>
+        <con:targetType>PhysicalFlightID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>LFID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:LFID[1]</con:sourcePath>
+        <con:targetType>LFID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>fareid</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
+        <con:targetType>fareid</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:targetTransferType>XPATH</con:targetTransferType>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>TripId</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:TripId[1]</con:sourcePath>
+        <con:targetType>TripId</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="100be009-2fed-4853-baaf-089c6a8b0118" name="3.SummaryPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -180,7 +346,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       <tem:SummaryPNR>
          <!--Optional:-->
          <tem:SummaryPnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
             </rad:CarrierCodes>
@@ -191,7 +357,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                <rad:SeriesNumber>299</rad:SeriesNumber>
                <rad:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </rad1:ReservationInfo>
-            <rad1:SecurityToken>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityToken>
+            <rad1:SecurityToken>${#TestCase#securityToken}</rad1:SecurityToken>
             <rad1:CarrierCurrency>CAD</rad1:CarrierCurrency>
             <rad1:DisplayCurrency>CAD</rad1:DisplayCurrency>
             <rad1:IATANum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -201,11 +367,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             <rad1:PromoCode>${empty}</rad1:PromoCode>
             <rad1:ExternalBookingID>${empty}</rad1:ExternalBookingID>
             <rad1:Address>
-               <rad1:Address1>${empty}</rad1:Address1>
+               <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
                <rad1:Address2>${empty}</rad1:Address2>
-               <rad1:City>${empty}</rad1:City>
-               <rad1:State>${empty}</rad1:State>
-               <rad1:Postal>${empty}</rad1:Postal>
+               <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+               <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+               <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
                <rad1:Country>0</rad1:Country>
                <rad1:CountryCode>${empty}</rad1:CountryCode>
                <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -217,11 +383,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                <!--Zero or more repetitions:-->
                <rad1:Person>
                   <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                  <rad1:FirstName>Madhu</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>ADT</rad1:MiddleName>
-                  <rad1:Age>35</rad1:Age>
-                  <rad1:DOB>1987-09-25</rad1:DOB>
+                  <rad1:FirstName>${#TestCase#p_FirstName}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleName}</rad1:MiddleName>
+                  <rad1:Age>${#TestCase#ADT_age}</rad1:Age>
+                  <rad1:DOB>${#TestCase#ADT_DOB}</rad1:DOB>
                   <rad1:Gender>Male</rad1:Gender>
                   <rad1:Title>MR</rad1:Title>
                   <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
@@ -235,11 +401,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
                   <rad1:UseInventory>true</rad1:UseInventory>
                   <rad1:Address>
-                     <rad1:Address1>6310 Hazeltine national dr</rad1:Address1>
-                     <rad1:Address2>Downtown</rad1:Address2>
-                     <rad1:City>Orlando</rad1:City>
-                     <rad1:State>FL</rad1:State>
-                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
+                     <rad1:Address2>${empty}</rad1:Address2>
+                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
                      <rad1:Country>USA</rad1:Country>
                      <rad1:CountryCode>${empty}</rad1:CountryCode>
                      <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -257,13 +423,13 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                      <rad1:ContactInfo>
                         <rad1:ContactID>-1</rad1:ContactID>
                         <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>radix@radixx.com</rad1:ContactField>
+                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
                         <rad1:Extension>${empty}</rad1:Extension>
                         <rad1:CountryCode>${empty}</rad1:CountryCode>
                         <rad1:AreaCode>${empty}</rad1:AreaCode>
                         <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>radix@radixx.com</rad1:Display>
+                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
                         <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                      
@@ -277,11 +443,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                </rad1:Person>
                <rad1:Person>
                   <rad1:PersonOrgID>-2</rad1:PersonOrgID>
-                  <rad1:FirstName>MAMATHA</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>ADT</rad1:MiddleName>
-                  <rad1:Age>30</rad1:Age>
-                  <rad1:DOB>1991-12-07</rad1:DOB>
+                  <rad1:FirstName>${#TestCase#p_FirstNameTwo}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastNameTwo}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleNameTwo}</rad1:MiddleName>
+                  <rad1:Age>${#TestCase#ADT_age}</rad1:Age>
+                  <rad1:DOB>${#TestCase#ADT_DOB}</rad1:DOB>
                   <rad1:Gender>Female</rad1:Gender>
                   <rad1:Title>MRS</rad1:Title>
                   <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
@@ -295,11 +461,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
                   <rad1:UseInventory>true</rad1:UseInventory>
                   <rad1:Address>
-                     <rad1:Address1>6310 Hazeltine national dr</rad1:Address1>
-                     <rad1:Address2>Downtown</rad1:Address2>
-                     <rad1:City>Orlando</rad1:City>
-                     <rad1:State>FL</rad1:State>
-                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
+                     <rad1:Address2>${empty}</rad1:Address2>
+                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
                      <rad1:Country>USA</rad1:Country>
                      <rad1:CountryCode>${empty}</rad1:CountryCode>
                      <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -317,13 +483,13 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                      <rad1:ContactInfo>
                         <rad1:ContactID>-1</rad1:ContactID>
                         <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>radix@radixx.com</rad1:ContactField>
+                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
                         <rad1:Extension>${empty}</rad1:Extension>
                         <rad1:CountryCode>${empty}</rad1:CountryCode>
                         <rad1:AreaCode>${empty}</rad1:AreaCode>
                         <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>radix@radixx.com</rad1:Display>
+                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
                         <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                   </rad1:ContactInfos>
@@ -336,9 +502,9 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                </rad1:Person>
                <rad1:Person>
                   <rad1:PersonOrgID>-3</rad1:PersonOrgID>
-                  <rad1:FirstName>Yagna</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>INF</rad1:MiddleName>
+                  <rad1:FirstName>${#TestCase#p_FirstNameInfOne}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastNameInfOne}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleNameInfOne}</rad1:MiddleName>
                   <rad1:Age>1</rad1:Age>
                   <rad1:DOB>2022-04-20</rad1:DOB>
                   <rad1:Gender>Female</rad1:Gender>
@@ -354,11 +520,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
                   <rad1:UseInventory>true</rad1:UseInventory>
                   <rad1:Address>
-                     <rad1:Address1>6310 Hazeltine national dr</rad1:Address1>
-                     <rad1:Address2>Downtown</rad1:Address2>
-                     <rad1:City>Orlando</rad1:City>
-                     <rad1:State>FL</rad1:State>
-                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
+                     <rad1:Address2>${empty}</rad1:Address2>
+                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
                      <rad1:Country>USA</rad1:Country>
                      <rad1:CountryCode>${empty}</rad1:CountryCode>
                      <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -376,13 +542,13 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                      <rad1:ContactInfo>
                         <rad1:ContactID>-1</rad1:ContactID>
                         <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>radix@radixx.com</rad1:ContactField>
+                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
                         <rad1:Extension>${empty}</rad1:Extension>
                         <rad1:CountryCode>${empty}</rad1:CountryCode>
                         <rad1:AreaCode>${empty}</rad1:AreaCode>
                         <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>radix@radixx.com</rad1:Display>
+                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
                         <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                      
@@ -396,11 +562,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                </rad1:Person>
                <rad1:Person>
                   <rad1:PersonOrgID>-4</rad1:PersonOrgID>
-                  <rad1:FirstName>LUCKY</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>CHD</rad1:MiddleName>
-                  <rad1:Age>6</rad1:Age>
-                  <rad1:DOB>2017-06-21</rad1:DOB>
+                  <rad1:FirstName>${#TestCase#p_FirstNameCHD}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastNameCHD}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleNameCHD}</rad1:MiddleName>
+                  <rad1:Age>${#TestCase#CHD_age}</rad1:Age>
+                  <rad1:DOB>${#TestCase#CHD_DOB}</rad1:DOB>
                   <rad1:Gender>Male</rad1:Gender>
                   <rad1:Title>MSTR</rad1:Title>
                   <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
@@ -414,11 +580,11 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
                   <rad1:UseInventory>true</rad1:UseInventory>
                   <rad1:Address>
-                     <rad1:Address1>6310 Hazeltine national dr</rad1:Address1>
-                     <rad1:Address2>Downtown</rad1:Address2>
-                     <rad1:City>Orlando</rad1:City>
-                     <rad1:State>FL</rad1:State>
-                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Address1>${#TestCase#p_HomeCity}</rad1:Address1>
+                     <rad1:Address2>${empty}</rad1:Address2>
+                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+                     <rad1:Postal>${#TestCase#p_DestPostal}</rad1:Postal>
                      <rad1:Country>USA</rad1:Country>
                      <rad1:CountryCode>${empty}</rad1:CountryCode>
                      <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -436,13 +602,13 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                      <rad1:ContactInfo>
                         <rad1:ContactID>-1</rad1:ContactID>
                         <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>radix@radixx.com</rad1:ContactField>
+                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
                         <rad1:Extension>${empty}</rad1:Extension>
                         <rad1:CountryCode>${empty}</rad1:CountryCode>
                         <rad1:AreaCode>${empty}</rad1:AreaCode>
                         <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>radix@radixx.com</rad1:Display>
+                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
                         <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                      
@@ -458,7 +624,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             </rad1:Passengers>
             <rad1:Segments>
                <!--Zero or more repetitions:-->
-               <rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${2.RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:TripId[1]}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></rad1:Segment>
+               <rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${#TestCase#fareid}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:RecordLocator>${empty}</rad1:RecordLocator><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:CRSCode>${empty}</rad1:CRSCode></rad1:Segment>
                
             </rad1:Segments>
             <rad1:Payments xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -495,6 +661,23 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer ResBalance" id="071923b1-7fbf-4eab-9d2a-82be098274f6">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>ResBalance</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.SummaryPNR</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
+        <con:targetType>ResBalance</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="49e057bd-01e7-4bbe-83fa-a43ffc558418" name="4.AssessPaymentMethod" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -512,7 +695,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       <tem:AssessPaymentMethodFees>
          <!--Optional:-->
          <tem:AssessPaymentMethodFeesRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode><rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode></rad:CarrierCode>
@@ -528,7 +711,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <!--Optional:-->
                   <rad1:PaymentMethodType>${empty}</rad1:PaymentMethodType>
                   <rad1:CardNumber>${empty}</rad1:CardNumber>
-                  <rad1:PaymentAmount>${3.SummaryPNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad1:PaymentAmount>
+                  <rad1:PaymentAmount>${#TestCase#ResBalance}</rad1:PaymentAmount>
                </rad1:PaymentToAssessFee>
             </rad1:PaymentsToAssessFee>
          </tem:AssessPaymentMethodFeesRequest>
@@ -560,6 +743,181 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="e831a206-c92f-412f-855a-95e489c12f95" name="4. AssessPaymentMethodFees" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
+      <con:operation>AssessPaymentMethodFees</con:operation>
+      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="4. AssessPaymentMethodFees">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Fees.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AssessPaymentMethodFees>
+         <!--Optional:-->
+         <tem:AssessPaymentMethodFeesRequest>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
+            <rad1:PaymentsToAssessFee>
+               <!--Zero or more repetitions:-->
+               <rad1:PaymentToAssessFee>
+                  <rad1:PaymentMethod>CASH</rad1:PaymentMethod>
+                  <rad1:CardNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:PaymentAmount>${#TestCase#ResBalance}</rad1:PaymentAmount>
+               </rad1:PaymentToAssessFee>
+            </rad1:PaymentsToAssessFee>
+         </tem:AssessPaymentMethodFeesRequest>
+      </tem:AssessPaymentMethodFees>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
+        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
+          <con:configuration>
+            <token>Successful Transaction</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f4f8d182-e94d-420f-973e-79d7b7fd4447">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="488e5be0-d9d9-4916-bcbf-a47f3fa6db42">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="43f54844-b6cd-4ffa-800d-588a2745aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
   <con:testStep id="5a6dd949-89ec-4f42-8f6d-fd25a7ccf3e0" name="5.CreatePNR-commit" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -577,7 +935,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -622,6 +980,34 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer ConfirmationNum and Balance" id="7333fbbf-19d0-4d55-a927-b8e67daa1c83">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>ConfrimationNum</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
+        <con:targetType>ConfrimationNum</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>ResBalance</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
+        <con:targetType>ResBalance</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="0d019239-95bf-4368-9373-6488999a1a84" name="6.InsertExternalProcessedPayment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -640,7 +1026,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
          <!--Optional:-->
          <tem:ExternalProcessedPaymentRequest>
             <rad:TransactionInfo>
-               <rad1:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityGUID>
+               <rad1:SecurityGUID>${#TestCase#securityToken}</rad1:SecurityGUID>
                <rad1:CarrierCodes>
                   <!--Zero or more repetitions:-->
                   <rad1:CarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -652,12 +1038,12 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             </rad:TransactionInfo>
             <rad:ReservationInfo>
                <rad1:SeriesNumber>299</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${5.CreatePNR-commit#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad1:ConfirmationNumber>
+               <rad1:ConfirmationNumber>${#TestCase#ConfrimationNum}</rad1:ConfirmationNumber>
             </rad:ReservationInfo>
             <rad:ExternalPayments>
                <!--Zero or more repetitions:-->
                <rad:InsertExternalProcessedPayment>
-                  <rad:BaseAmount>${3.SummaryPNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad:BaseAmount>
+                  <rad:BaseAmount>${#TestCase#ResBalance}</rad:BaseAmount>
                   <rad:BaseCurrency>CAD</rad:BaseCurrency>
                   <rad:CardHolder>john</rad:CardHolder>
                   <rad:CardNumber>na</rad:CardNumber>
@@ -671,7 +1057,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad:ExchangeRateDate>2017-01-01</rad:ExchangeRateDate>
                   <rad:FFNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:PaymentComment>test</rad:PaymentComment>
-                  <rad:PaymentAmount>${3.SummaryPNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad:PaymentAmount>
+                  <rad:PaymentAmount>${#TestCase#ResBalance}</rad:PaymentAmount>
                   <rad:PaymentMethod>CASH</rad:PaymentMethod>
                   <rad:PaymentMethodType>CASH</rad:PaymentMethodType>
                   <rad:Reference>test</rad:Reference>
@@ -685,7 +1071,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
                   <rad:GcxID>1</rad:GcxID>
                   <rad:GcxOptOption>1</rad:GcxOptOption>
                   <rad:OriginalCurrency>CAD</rad:OriginalCurrency>
-                  <rad:OriginalAmount>${3.SummaryPNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad:OriginalAmount>
+                  <rad:OriginalAmount>${#TestCase#ResBalance}</rad:OriginalAmount>
                   <rad:TransactionStatus>APPROVED</rad:TransactionStatus>
                   <rad:AuthorizationCode>t1</rad:AuthorizationCode>
                   <rad:PaymentReference>t2</rad:PaymentReference>
@@ -818,7 +1204,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -832,7 +1218,7 @@ testRunner.testCase.setPropertyValue("p_MiddleName", MiddleName.toUpperCase().co
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${5.CreatePNR-commit#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${#TestCase#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -907,16 +1293,84 @@ m.append(res, "UTF-8")
   </con:testStep>
   <con:properties>
     <con:property>
+      <con:name>p_HomeAddress</con:name>
+      <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeCity</con:name>
+      <con:value>ORLANDO</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeState</con:name>
+      <con:value>FL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomePostal</con:name>
+      <con:value>32822</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_Email</con:name>
+      <con:value>radix@radixx.com</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ADT_age</con:name>
+      <con:value>44</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CHD_age</con:name>
+      <con:value>6</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameInfCHD</con:name>
+      <con:value>UCHBQYCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastNameInfCHD</con:name>
+      <con:value>DOTVYVCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameCHD</con:name>
+      <con:value>DFQLYNCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameInfCHD</con:name>
+      <con:value>UBKTVACHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>fareid</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameCHD</con:name>
+      <con:value>PJOSCBCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>1098816320</con:value>
+    </con:property>
+    <con:property>
+      <con:name>currency</con:name>
+      <con:value>CAD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PhysicalFlightID</con:name>
+      <con:value>-1625504109</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value>0</con:value>
+    </con:property>
+    <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-03-18</con:value>
+      <con:value>2023-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-03-21</con:value>
+      <con:value>2023-03-24</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-03-21</con:value>
+      <con:value>2023-03-26</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -925,6 +1379,70 @@ m.append(res, "UTF-8")
     <con:property>
       <con:name>Destination</con:name>
       <con:value>NCE</con:value>
+    </con:property>
+    <con:property>
+      <con:name>paycurrency</con:name>
+      <con:value>CAD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstName</con:name>
+      <con:value>DFQLYNADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastName</con:name>
+      <con:value>LEIVNWADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleName</con:name>
+      <con:value>PJOSCBADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameTwo</con:name>
+      <con:value>DFQLYNADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastNameTwo</con:name>
+      <con:value>LEIVNWADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameTwo</con:name>
+      <con:value>PJOSCBADT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastNameCHD</con:name>
+      <con:value>LEIVNWCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameInfOne</con:name>
+      <con:value>DFQLYNINF</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastNameInfOne</con:name>
+      <con:value>LEIVNWINF</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameInfOne</con:name>
+      <con:value>PJOSCBINF</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ADT_DOB</con:name>
+      <con:value>1979-03-16</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CHD_DOB</con:name>
+      <con:value>2017-03-16</con:value>
+    </con:property>
+    <con:property>
+      <con:name>securityToken</con:name>
+      <con:value>a62e99f107x974ibp464zd2f69mba1abaec23f9eacdc</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TripId</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ConfrimationNum</con:name>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

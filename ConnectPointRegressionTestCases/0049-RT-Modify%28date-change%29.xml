@@ -12,6 +12,207 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
+  <con:testStep type="calltestcase" name="1. Prequisite Run Test#48" id="646813e6-9627-4aae-8a0a-98dc748fda4c">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>8d35b7b8-3174-4a59-9823-953c726b95a0</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>p_HomeAddress</con:name>
+          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeCity</con:name>
+          <con:value>ORLANDO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeState</con:name>
+          <con:value>FL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomePostal</con:name>
+          <con:value>32822</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_Email</con:name>
+          <con:value>radix@radixx.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_age</con:name>
+          <con:value>44</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_age</con:name>
+          <con:value>6</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfCHD</con:name>
+          <con:value>UCHBQYCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastNameInfCHD</con:name>
+          <con:value>DOTVYVCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameCHD</con:name>
+          <con:value>DZSJGZCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfCHD</con:name>
+          <con:value>UBKTVACHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameCHD</con:name>
+          <con:value>GADKVCCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>812192035</con:value>
+        </con:property>
+        <con:property>
+          <con:name>currency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PhysicalFlightID</con:name>
+          <con:value>-1425536421</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ResBalance</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DepartureDate</con:name>
+          <con:value>2023-03-16</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReturnDate</con:name>
+          <con:value>2023-03-24</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ModifyDate</con:name>
+          <con:value>2023-03-26</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Origin</con:name>
+          <con:value>YUL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Destination</con:name>
+          <con:value>NCE</con:value>
+        </con:property>
+        <con:property>
+          <con:name>paycurrency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+          <con:value>DZSJGZADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+          <con:value>SKDTAAADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+          <con:value>GADKVCADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameTwo</con:name>
+          <con:value>DZSJGZADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastNameTwo</con:name>
+          <con:value>SKDTAAADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameTwo</con:name>
+          <con:value>GADKVCADT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastNameCHD</con:name>
+          <con:value>SKDTAACHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfOne</con:name>
+          <con:value>DZSJGZINF</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastNameInfOne</con:name>
+          <con:value>SKDTAAINF</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfOne</con:name>
+          <con:value>GADKVCINF</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_DOB</con:name>
+          <con:value>1979-03-16</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_DOB</con:name>
+          <con:value>2017-03-16</con:value>
+        </con:property>
+        <con:property>
+          <con:name>securityToken</con:name>
+          <con:value>e6d51967522441b0a578523f6cn41766j3sea1ca5e0a</con:value>
+        </con:property>
+        <con:property>
+          <con:name>TripId</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ConfrimationNum</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>p_HomeAddress</con:entry>
+        <con:entry>p_HomeCity</con:entry>
+        <con:entry>p_HomeState</con:entry>
+        <con:entry>p_HomePostal</con:entry>
+        <con:entry>p_Email</con:entry>
+        <con:entry>ADT_age</con:entry>
+        <con:entry>CHD_age</con:entry>
+        <con:entry>p_FirstNameInfCHD</con:entry>
+        <con:entry>p_LastNameInfCHD</con:entry>
+        <con:entry>p_FirstNameCHD</con:entry>
+        <con:entry>p_MiddleNameInfCHD</con:entry>
+        <con:entry>fareid</con:entry>
+        <con:entry>p_MiddleNameCHD</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>currency</con:entry>
+        <con:entry>PhysicalFlightID</con:entry>
+        <con:entry>ResBalance</con:entry>
+        <con:entry>DepartureDate</con:entry>
+        <con:entry>ReturnDate</con:entry>
+        <con:entry>ModifyDate</con:entry>
+        <con:entry>Origin</con:entry>
+        <con:entry>Destination</con:entry>
+        <con:entry>paycurrency</con:entry>
+        <con:entry>p_FirstName</con:entry>
+        <con:entry>p_LastName</con:entry>
+        <con:entry>p_MiddleName</con:entry>
+        <con:entry>p_FirstNameTwo</con:entry>
+        <con:entry>p_LastNameTwo</con:entry>
+        <con:entry>p_MiddleNameTwo</con:entry>
+        <con:entry>p_LastNameCHD</con:entry>
+        <con:entry>p_FirstNameInfOne</con:entry>
+        <con:entry>p_LastNameInfOne</con:entry>
+        <con:entry>p_MiddleNameInfOne</con:entry>
+        <con:entry>ADT_DOB</con:entry>
+        <con:entry>CHD_DOB</con:entry>
+        <con:entry>securityToken</con:entry>
+        <con:entry>TripId</con:entry>
+        <con:entry>ConfrimationNum</con:entry>
+      </con:returnProperties>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="7f1efe27-2dd3-41d5-a5eb-2ff93c962611" name="1.RetrieveSecurityToken">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -130,7 +331,7 @@ testRunner.testCase.setPropertyValue("paycurrency", paycurrency);</script>
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>E2ORIU</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Prequisite Run Test#48#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -730,7 +931,7 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>1e8b5dae313f487b89d9s67cieec62x7e76dz593a4dc</con:value>
+      <con:value>f319b82791814w86f960dda176mefa68i1v06f8e26af</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureDate</con:name>

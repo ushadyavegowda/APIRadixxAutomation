@@ -3,15 +3,6 @@
   <con:settings>
     <con:setting id="8d35b7b8-3174-4a59-9823-953c726b95a0fileName">0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF</con:setting>
   </con:settings>
-  <con:testStep id="470c744f-9a4f-4d74-966f-833b9f3a7c1c" name="1. RetrieveSecuirtyToken" type="calltestcase" disabled="true">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
   <con:testStep type="request" id="4b8682b7-fb60-4a28-8c5c-0dcbc043ba79" name="1.RetrieveSecurityToken">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -32,11 +23,11 @@
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
-            <rad1:LogonID>CP_1D_INT</rad1:LogonID>
-            <rad1:Password>R@d1xx!</rad1:Password>
+            <rad1:LogonID>${#Project#TS_LoginId}</rad1:LogonID>
+            <rad1:Password>${#Project#TS_Password}</rad1:Password>
          </tem:RetrieveSecurityTokenRequest>
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
@@ -77,6 +68,7 @@ import java.util.Date;
 def DepartureDate = new Date().plus(4)
 def ReturnDate = new Date().plus(8)
 def ModifyDate = new Date().plus(10)
+
 
 
 /* Perf prod*/ 
@@ -1330,7 +1322,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHD</con:name>
-      <con:value>DFQLYNCHD</con:value>
+      <con:value>TQFFNJCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameInfCHD</con:name>
@@ -1342,7 +1334,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>p_MiddleNameCHD</con:name>
-      <con:value>PJOSCBCHD</con:value>
+      <con:value>OAQYHHCHD</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
@@ -1386,43 +1378,43 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>DFQLYNADT</con:value>
+      <con:value>TQFFNJADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>LEIVNWADT</con:value>
+      <con:value>VLZGZTADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>PJOSCBADT</con:value>
+      <con:value>OAQYHHADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameTwo</con:name>
-      <con:value>DFQLYNADT</con:value>
+      <con:value>TQFFNJADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameTwo</con:name>
-      <con:value>LEIVNWADT</con:value>
+      <con:value>VLZGZTADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameTwo</con:name>
-      <con:value>PJOSCBADT</con:value>
+      <con:value>OAQYHHADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameCHD</con:name>
-      <con:value>LEIVNWCHD</con:value>
+      <con:value>VLZGZTCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameInfOne</con:name>
-      <con:value>DFQLYNINF</con:value>
+      <con:value>TQFFNJINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameInfOne</con:name>
-      <con:value>LEIVNWINF</con:value>
+      <con:value>VLZGZTINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameInfOne</con:name>
-      <con:value>PJOSCBINF</con:value>
+      <con:value>OAQYHHINF</con:value>
     </con:property>
     <con:property>
       <con:name>ADT_DOB</con:name>
@@ -1434,7 +1426,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>a62e99f107x974ibp464zd2f69mba1abaec23f9eacdc</con:value>
+      <con:value>a66ca5722ei466yevd64k994a58792fc417303b1072a</con:value>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>

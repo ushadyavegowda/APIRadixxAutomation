@@ -57,6 +57,15 @@
       <con:name>LFID</con:name>
       <con:value>LFID</con:value>
     </con:property>
+    <con:property>
+      <con:name>TS_LoginId</con:name>
+    </con:property>
+    <con:property>
+      <con:name>TS_Password</con:name>
+    </con:property>
+    <con:property>
+      <con:name>TS_CarrierCode</con:name>
+    </con:property>
   </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
@@ -189,6 +198,18 @@
     <con:property>
       <con:name>LFID</con:name>
       <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>TS_LoginId</con:name>
+      <con:value>CP_1D_INT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TS_Password</con:name>
+      <con:value>R@d1xx!</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TS_CarrierCode</con:name>
+      <con:value>TS</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>

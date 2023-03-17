@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/CancelZeroChargeService" path="/CancelZeroChargeService" id="d37004dc-6438-4117-9037-d2e13ca6ab8b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="d37004dc-6438-4117-9037-d2e13ca6ab8b" name="/CancelZeroChargeService" path="/CancelZeroChargeService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d37004dc-6438-4117-9037-d2e13ca6ab8bfileName">%2FCancelZeroChargeService</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="59383559-0591-4a51-9f69-e0b9f605f850" method="POST">
+  <con:method id="59383559-0591-4a51-9f69-e0b9f605f850" method="POST" name="POST">
     <con:description>CancelZeroChargeService
 CancelZeroChargeService</con:description>
     <con:settings/>
@@ -35,7 +35,7 @@ CancelZeroChargeService</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="b113b16c-f101-4394-b32e-1cc9d8c2e1f6" mediaType="application/json" postQueryString="false">
+    <con:request id="b113b16c-f101-4394-b32e-1cc9d8c2e1f6" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

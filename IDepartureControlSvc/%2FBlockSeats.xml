@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/BlockSeats" path="/BlockSeats" id="fceb9abc-f556-40a2-8a0f-fdc4ab099046" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="fceb9abc-f556-40a2-8a0f-fdc4ab099046" name="/BlockSeats" path="/BlockSeats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="fceb9abc-f556-40a2-8a0f-fdc4ab099046fileName">%2FBlockSeats</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="3a9af96f-89f0-4e4c-a671-e005384c361a" method="POST">
+  <con:method id="3a9af96f-89f0-4e4c-a671-e005384c361a" method="POST" name="POST">
     <con:description>BlockSeats
 BlockSeats</con:description>
     <con:settings/>
@@ -37,7 +37,7 @@ BlockSeats</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="bc4031af-f92f-4457-b3dd-d5aed364b9b9" mediaType="application/json" postQueryString="false">
+    <con:request id="bc4031af-f92f-4457-b3dd-d5aed364b9b9" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings/>
       <con:endpoint>http://20q4dcsint.radixxuat.com</con:endpoint>
       <con:request>{\r

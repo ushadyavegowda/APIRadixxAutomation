@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/RetrievePassengersByFlight" path="/RetrievePassengersByFlight" id="81bc0f4b-1e30-41a6-995f-c5fd3b8f2e42" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="81bc0f4b-1e30-41a6-995f-c5fd3b8f2e42" name="/RetrievePassengersByFlight" path="/RetrievePassengersByFlight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="81bc0f4b-1e30-41a6-995f-c5fd3b8f2e42fileName">%2FRetrievePassengersByFlight</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="c09ce876-7289-432f-baaf-758ea75fc9f0" method="POST">
+  <con:method id="c09ce876-7289-432f-baaf-758ea75fc9f0" method="POST" name="POST">
     <con:description>RetrievePassengersByFlight
 RetrievePassengersByFlight</con:description>
     <con:settings/>
@@ -32,7 +32,7 @@ RetrievePassengersByFlight</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="d4782335-0623-4d6b-8f11-119c3365e055" mediaType="application/json">
+    <con:request id="d4782335-0623-4d6b-8f11-119c3365e055" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

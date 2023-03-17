@@ -7,16 +7,12 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="LoginDCS" id="d654e674-8af3-4739-bad5-67f79ab78095">
+  <con:testStep id="d654e674-8af3-4739-bad5-67f79ab78095" name="LoginDCS" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>f76528fa-fc56-469d-b061-cbc6bfa97623</con:targetTestCase>
@@ -25,10 +21,10 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="1 - GetLFID" id="f61622fc-abf9-44ee-b44a-241fb0aa3272">
+  <con:testStep id="f61622fc-abf9-44ee-b44a-241fb0aa3272" name="1. GetLFID" type="restrequest">
     <con:settings/>
-    <con:config service="IDepartureControlSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="1 - GetLFID" id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="POST" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" service="IDepartureControlSvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" name="1. GetLFID" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -47,7 +43,7 @@
    "CorrId" : "string"\r
 }</con:request>
         <con:originalUri>https://rdxdcsuat.radixxuat.com/RDX/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes">
+        <con:assertion id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -62,13 +58,13 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer LFID" id="580a489b-25c4-443e-b5ec-127896227da2">
+  <con:testStep id="580a489b-25c4-443e-b5ec-127896227da2" name="Transfer LFID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicalFlightId</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>1 - GetLFID</con:sourceStep>
+        <con:sourceStep>1. GetLFID</con:sourceStep>
         <con:sourcePath>$['LogicalFlightId']</con:sourcePath>
         <con:targetType>LFID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>

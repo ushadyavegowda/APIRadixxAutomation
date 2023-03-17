@@ -8,11 +8,7 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -973,11 +969,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>814.50</con:value>
+      <con:value>499.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>172426</con:value>
+      <con:value>128871</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -985,7 +981,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>LHNNV8</con:value>
+      <con:value>IRGO5S</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>

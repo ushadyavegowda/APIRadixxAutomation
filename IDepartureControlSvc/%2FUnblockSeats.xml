@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/UnblockSeats" path="/UnblockSeats" id="4861979e-19d8-4dd7-ad1a-af0034b22e8e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="4861979e-19d8-4dd7-ad1a-af0034b22e8e" name="/UnblockSeats" path="/UnblockSeats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4861979e-19d8-4dd7-ad1a-af0034b22e8efileName">%2FUnblockSeats</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="2671965f-7a69-459d-9243-1497003b8f78" method="POST">
+  <con:method id="2671965f-7a69-459d-9243-1497003b8f78" method="POST" name="POST">
     <con:description>UnblockSeats
 UnblockSeats</con:description>
     <con:settings/>
@@ -37,7 +37,7 @@ UnblockSeats</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="5179570f-de33-42f6-8548-0d8bae86509f" mediaType="application/json">
+    <con:request id="5179570f-de33-42f6-8548-0d8bae86509f" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://20q4dcsint.radixxuat.com</con:endpoint>
       <con:request>{\r

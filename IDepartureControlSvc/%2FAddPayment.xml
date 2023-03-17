@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/AddPayment" path="/AddPayment" id="e2d358f8-e650-447b-bae0-8dec2eeb2680" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="e2d358f8-e650-447b-bae0-8dec2eeb2680" name="/AddPayment" path="/AddPayment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e2d358f8-e650-447b-bae0-8dec2eeb2680fileName">%2FAddPayment</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="b6aa5ddf-e1fc-4ddf-8bdb-5924301120b5" method="POST">
+  <con:method id="b6aa5ddf-e1fc-4ddf-8bdb-5924301120b5" method="POST" name="POST">
     <con:description>AddPayment
 AddPayment</con:description>
     <con:settings/>
@@ -119,7 +119,7 @@ AddPayment</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="4580ef12-d3eb-4b43-8a49-667b2d9eb2bb" mediaType="application/json" postQueryString="false">
+    <con:request id="4580ef12-d3eb-4b43-8a49-667b2d9eb2bb" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

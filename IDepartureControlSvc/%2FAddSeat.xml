@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/AddSeat" path="/AddSeat" id="14395a7a-43ba-409c-94ca-bb6d39b592d5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="14395a7a-43ba-409c-94ca-bb6d39b592d5" name="/AddSeat" path="/AddSeat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="14395a7a-43ba-409c-94ca-bb6d39b592d5fileName">%2FAddSeat</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="57df51fb-611a-45fc-9b2f-48669a99c4c3" method="POST">
+  <con:method id="57df51fb-611a-45fc-9b2f-48669a99c4c3" method="POST" name="POST">
     <con:description>AddSeat
 AddSeat</con:description>
     <con:settings/>
@@ -42,7 +42,7 @@ AddSeat</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="c48bf491-83c8-4964-be99-00a523192bb3" mediaType="application/json">
+    <con:request id="c48bf491-83c8-4964-be99-00a523192bb3" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

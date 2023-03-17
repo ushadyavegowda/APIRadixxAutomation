@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/AddBaggage" path="/AddBaggage" id="7fab0876-6c69-4e9b-90bf-6d315b4ad722" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="7fab0876-6c69-4e9b-90bf-6d315b4ad722" name="/AddBaggage" path="/AddBaggage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7fab0876-6c69-4e9b-90bf-6d315b4ad722fileName">%2FAddBaggage</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="ea394e33-af36-4b86-a4b9-10e69091466f" method="POST">
+  <con:method id="ea394e33-af36-4b86-a4b9-10e69091466f" method="POST" name="POST">
     <con:description>AddBaggage
 AddBaggage</con:description>
     <con:settings/>
@@ -45,7 +45,7 @@ AddBaggage</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="a6c5edc4-76e0-4b72-b8c6-62605132c52a" mediaType="application/json" postQueryString="false">
+    <con:request id="a6c5edc4-76e0-4b72-b8c6-62605132c52a" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>

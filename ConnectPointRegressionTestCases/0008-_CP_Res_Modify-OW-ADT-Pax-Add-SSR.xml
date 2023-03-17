@@ -1,80 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="b288fa0d-d894-499e-b551-dba9ab404c7b" keepSession="false" name="0008 _CP_Res_Modify OW ADT Pax Add SSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5811f03a-c701-4332-98b5-04eba3ff91e3" keepSession="false" name="0008 _CP_Res_Modify OW ADT Pax Add SSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="b288fa0d-d894-499e-b551-dba9ab404c7bfileName">0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR</con:setting>
+    <con:setting id="5811f03a-c701-4332-98b5-04eba3ff91e3fileName">0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="cc292aee-69bd-430c-9b3b-901dd8ec379e" name="Create RT Booking" type="calltestcase">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>cf5b1ad3-fb89-4aac-815a-27e9a1e5acbd</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>Balance</con:name>
-          <con:value>6549.56</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LFID</con:name>
-          <con:value>128826</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>PNR</con:name>
-          <con:value>C5ZLMT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid_returnSeg</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>LFID_returnSeg</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>s_ServiceID</con:name>
-          <con:value>43</con:value>
-        </con:property>
-        <con:property>
-          <con:name>s_SSRCategory</con:name>
-          <con:value>42</con:value>
-        </con:property>
-        <con:property>
-          <con:name>s_Amount</con:name>
-          <con:value>25</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ReservationPaymentID</con:name>
-        </con:property>
-      </con:properties>
-      <con:returnProperties>
-        <con:entry>Balance</con:entry>
-        <con:entry>LFID</con:entry>
-        <con:entry>fareid</con:entry>
-        <con:entry>PNR</con:entry>
-        <con:entry>fareid_returnSeg</con:entry>
-        <con:entry>LFID_returnSeg</con:entry>
-        <con:entry>s_ServiceID</con:entry>
-        <con:entry>s_SSRCategory</con:entry>
-        <con:entry>s_Amount</con:entry>
-      </con:returnProperties>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="074ec58d-afcb-4fbf-b642-b72aa4513a91" name="1. Run_0001_CP_Res_Create OW ADT Pax CASH payment" type="calltestcase">
+  <con:testStep id="a06462b9-1b07-467b-9596-8c3cb1ec01eb" name="1. Run Test 0001" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c1c01e3b-345e-4ee3-9524-18353ef5c636</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>814.50</con:value>
+          <con:value>19913.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>172426</con:value>
+          <con:value>128873</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -82,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>XTAOTQ</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -90,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-8</con:value>
+          <con:value>-20</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -104,7 +45,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="2ed5007f-d7fc-4f97-b90a-12365616e8c3" name="2. RetrivePNR" type="request">
+  <con:testStep id="7c59fd14-76aa-40ee-9618-d06db43f2204" name="2. RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -135,7 +76,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${1. Run Test 0001#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -171,7 +112,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="70ca31d7-e595-4eea-93cd-a03729aad093" name="Property Transfer" type="transfer">
+  <con:testStep id="1cb23028-d10f-47b0-a8ab-ddbe25b5889d" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -195,25 +136,14 @@ declare namespace ns1='http://tempuri.org/';
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>PhysicalFlightID_ReturnSeg</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>RetrivePNR</con:sourceStep>
-        <con:sourcePath>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-declare namespace ns1='http://tempuri.org/';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[a:Origin = '${#TestSuite#Destination}']/a:PhysicalFlights[1]/a:PhysicalFlight[1]/a:PhysicalFlightID[1]</con:sourcePath>
-        <con:targetType>PhysicalFlightID_ReturnSeg</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="16cf7f64-104b-46be-a00c-6c7d6473a0eb" name="2 RetrieveAARQuote" type="request">
+  <con:testStep id="ed3a8623-dae5-4650-8923-6f1121edaff3" name="3 RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveAARQuote</con:operation>
-      <con:request id="54501837-f6a9-4255-9cde-5dcda727641b" name="2 RetrieveAARQuote">
+      <con:request id="54501837-f6a9-4255-9cde-5dcda727641b" name="3 RetrieveAARQuote">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -258,13 +188,13 @@ declare namespace ns1='http://tempuri.org/';
                   <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <!--Optional:-->
                   <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:LogicalFlightID>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#LFID}</rad1:LogicalFlightID>
+                  <rad1:LogicalFlightID>${1. Run Test 0001#LFID}</rad1:LogicalFlightID>
                   <!--Optional:-->
                   <rad1:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <!--Optional:-->
                   <rad1:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <!--Optional:-->
-                  <rad1:ServiceCode>${#TestSuite#ServiceCode}</rad1:ServiceCode>
+                  <rad1:ServiceCode>${#TestCase#ServiceCode}</rad1:ServiceCode>
                   <!--Optional:-->
                   <rad1:ServiceTypes>
                      <!--Zero or more repetitions:-->
@@ -311,13 +241,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="bad441ab-e0f4-4396-a17e-5a256e937546" name="Transfer SSR Info" type="transfer">
+  <con:testStep id="697f5559-c618-4a19-b71c-ecacc506db27" name="Transfer SSR Info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_ServiceID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:ServiceID[1]</con:sourcePath>
@@ -329,7 +259,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_SSRCategory</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:CategoryID[1]</con:sourcePath>
@@ -340,7 +270,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>s_Amount</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:Amount[1]</con:sourcePath>
@@ -351,7 +281,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ServiceCode</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2 RetrieveAARQuote</con:sourceStep>
+        <con:sourceStep>3 RetrieveAARQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
 //ns1:RetrieveAARQuoteResponse[1]/ns1:RetrieveAARQuoteResult[1]/a:ServiceQuotes[1]/a:ViewAARQuote[1]/a:SSRCode[1]</con:sourcePath>
@@ -361,12 +291,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="55c9e335-17fd-4c84-a260-ae34d1a91c4b" name="ModifyPNR_Add SSR to both segment" type="request">
+  <con:testStep id="eacc14c0-5939-4040-8f00-2cf0370b4d4b" name="4 ModifyPNR_Add SSR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request id="291e0f31-a000-4516-a88f-1b14c2908bcc" name="ModifyPNR_Add SSR to both segment">
+      <con:request id="291e0f31-a000-4516-a88f-1b14c2908bcc" name="4 ModifyPNR_Add SSR">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -391,8 +321,8 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:HistoricUserName>radixx</rad:HistoricUserName>
             <rad1:ActionType>AddSpecialServiceToReservation</rad1:ActionType>
             <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad:ConfirmationNumber>
+               <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${1. Run Test 0001#PNR}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:FareInformationID>-215</rad1:FareInformationID>
             <rad1:LogicalFlightKeyToReplace xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -405,7 +335,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad1:CodeType>${#TestCase#ServiceCode}</rad1:CodeType>
                   <rad1:ServiceID>${#TestCase#s_ServiceID}</rad1:ServiceID>
                   <rad1:SSRCategory>${#TestCase#s_SSRCategory}</rad1:SSRCategory>
-                  <rad1:LogicalFlightID>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#LFID}</rad1:LogicalFlightID>
+                  <rad1:LogicalFlightID>${1. Run Test 0001#LFID}</rad1:LogicalFlightID>
                   <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
                   <rad1:Amount>${#TestCase#s_Amount}</rad1:Amount>
                   <rad1:OverrideAmount>true</rad1:OverrideAmount>
@@ -468,94 +398,109 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="dce9b6b0-b62f-4305-a69c-7ab16e636b50" name="Save PNR" type="request">
+  <con:testStep id="599ffb2d-6cc8-4906-b880-17f2b6789e11" name="Transfer Balance" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>Balance</con:name>
+        <con:sourceStep>4 ModifyPNR_Add SSR</con:sourceStep>
+        <con:targetStep>5 AssessPaymentMethodFees</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="724886d0-3cda-42f5-ac1c-6bdf00e32c2d" name="Delay after modify call" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="4d162227-9c49-45ac-8255-c6dd7721de01" name="5 AssessPaymentMethodFees" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
-      <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="Save PNR" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
+      <con:operation>AssessPaymentMethodFees</con:operation>
+      <con:request id="d8584d8e-fe96-40a0-a905-833328bcc9e9" name="5 AssessPaymentMethodFees">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:CreatePNR>\r
-         <!--Optional:-->\r
-         <tem:CreatePnrRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
-            <rad1:ActionType>SaveReservation</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber>${Create RT Booking#PNR}</rad:ConfirmationNumber>\r
-            </rad1:ReservationInfo>\r
-         </tem:CreatePnrRequest>\r
-      </tem:CreatePNR>\r
-   </soapenv:Body>\r
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Fees.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fees.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AssessPaymentMethodFees>
+         <!--Optional:-->
+         <tem:AssessPaymentMethodFeesRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>::1</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>${#TestSuite#UserName}</rad:HistoricUserName>
+            <rad1:PaymentsToAssessFee>
+               <!--Zero or more repetitions:-->
+               <rad1:PaymentToAssessFee>
+                  <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
+                  <rad1:CardNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount>
+               </rad1:PaymentToAssessFee>
+            </rad1:PaymentsToAssessFee>
+         </tem:AssessPaymentMethodFeesRequest>
+      </tem:AssessPaymentMethodFees>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
-        <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
+        <con:assertion id="6f6f30f9-3137-42d2-a769-c9d87e0884d8" type="SOAP Response"/>
+        <con:assertion id="7dc48d6a-bb52-4e2e-bce7-28e1dbcc95cd" name="Contains" type="Simple Contains">
           <con:configuration>
-            <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions';
-declare namespace ns1='http://tempuri.org/';
-//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:Exceptions[1]/b:ExceptionInformation.Exception[1]/b:ExceptionLevel[1]</path>
-            <content>Success</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
+            <token>Successful Transaction</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
             <con:authProfile>Inherit From Parent</con:authProfile>
@@ -564,70 +509,70 @@ declare namespace ns1='http://tempuri.org/';
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
-            <con:authProfile>No Authorization</con:authProfile>
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
             <con:authProfile>Inherit From Parent</con:authProfile>
@@ -645,54 +590,14 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="3020b8ec-53e7-49df-9d30-bc88c2dc039d" name="Transfer Balance" type="transfer">
+  <con:testStep id="42787582-0b58-4153-8936-8b68b2ea5522" name="Balance Transfer AssessPaymentMethod" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
-        <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</con:sourcePath>
-        <con:targetType>Balance</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>Balance</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
-        <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</con:sourcePath>
-        <con:targetType>Balance</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>Balance</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
-        <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</con:sourcePath>
-        <con:targetType>Balance</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>Balance</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
-        <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</con:sourcePath>
-        <con:targetType>Balance</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>Balance</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>4. ModifyPnr_DeptSegment</con:sourceStep>
-        <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</con:sourcePath>
+        <con:sourceStep>3. ModifyPNR_Add Pax</con:sourceStep>
+        <con:sourcePath>${4. AssessPaymentMethodFees#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:AssessPaymentMethodFeesResponse[1]/ns1:AssessPaymentMethodFeesResult[1]/a:ReservationBalance[1]}</con:sourcePath>
         <con:targetType>Balance</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -700,18 +605,18 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="d3fe3ad9-4b48-45dc-8646-1d591bec7bff" name="Delay after modify call" type="delay">
+  <con:testStep id="18132d4a-9ab3-4fc0-989c-f56787ac01cf" name="Delay after AccessPaymentMethod" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="3fb05de6-2fcd-4d96-9cf0-b16831e6109a" name="5 InsertExternalProcessedPayment_CASH" type="request">
+  <con:testStep id="67dab5e7-cddf-4f2b-b60f-bf894c964470" name="6 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>InsertExternalProcessedPayment</con:operation>
-      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="5 InsertExternalProcessedPayment_CASH">
+      <con:request id="9d7c2303-c5ba-45a0-bbcc-075533e03849" name="6 InsertExternalProcessedPayment_CASH">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -990,13 +895,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="9cf17fac-a037-4030-a4f3-3104d38fd5b8" name="Property ReservationPaymentID" type="transfer">
+  <con:testStep id="a5b961e3-6c76-4da3-906a-1de098437341" name="Property ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
         <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
         <con:targetType>ReservationPaymentID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -1006,7 +911,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ReservationPaymentID</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>5 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
         <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
         <con:targetType>ReservationPaymentID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -1015,125 +920,13 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="c954dd85-f6e1-4eeb-8a85-86fb1917aa54" name="Delay after IEP" type="delay">
+  <con:testStep id="db4ba1c1-2630-49e9-a865-7073212986b3" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="66bb0e69-5e12-4dea-b99a-1cf9cb3424ff" name="6 UpdateExternalProcessedPaymentDetails" type="request">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
-      <con:operation>UpdateExternalProcessedPaymentDetails</con:operation>
-      <con:request id="e67a35c9-3d18-4153-b563-dc96962ec9ea" name="6 UpdateExternalProcessedPaymentDetails">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Fulfillment.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:UpdateExternalProcessedPaymentDetails>
-         <!--Optional:-->
-         <tem:UpdateExternalProcessedPaymentDetailsRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:UpdatePayments>
-               <!--Optional:-->
-               <rad1:AuthorizationCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CVCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardCurrency>${#TestSuite#currency}</rad1:CardCurrency>
-               <!--Optional:-->
-               <rad1:CardHolder xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:CardNumber>${#TestSuite#PaymentMethod}</rad1:CardNumber>
-               <rad1:CurrencyPaid>${#TestSuite#currency}</rad1:CurrencyPaid>
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <rad1:DatePaid>${#TestSuite#DepartureDate}</rad1:DatePaid>
-               
-               <rad1:ExpirationDate>${#TestSuite#ExpirationDate}</rad1:ExpirationDate><rad1:MerchantID>${#TestSuite#ID}</rad1:MerchantID>
-               <!--Optional:-->
-               <rad1:PaymentAmount>${#TestCase#Balance}</rad1:PaymentAmount>
-               <rad1:PaymentMethod>${#TestSuite#PaymentMethod}</rad1:PaymentMethod>
-               <!--Optional:-->
-               <rad1:PaymentReference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:ProcessorName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <!--Optional:-->
-               <rad1:Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-               <rad1:ResPaymentId>${#TestCase#ReservationPaymentID}</rad1:ResPaymentId>
-               <!--Optional:-->
-               <rad1:ResponseCode>${empty}</rad1:ResponseCode>
-               <!--Optional:-->
-               <rad1:ResponseMessage>${#TestSuite#Comments}</rad1:ResponseMessage>
-               <!--Optional:-->
-               <rad1:Result>${empty}</rad1:Result>
-               <!--Optional:-->
-               <rad1:TransactionID>${empty}</rad1:TransactionID>
-               <rad1:TransactionStatus>APPROVED</rad1:TransactionStatus>
-            </rad1:UpdatePayments>
-         </tem:UpdateExternalProcessedPaymentDetailsRequest>
-      </tem:UpdateExternalProcessedPaymentDetails>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion id="61b0b4e3-d985-4935-812e-37025fbb062c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3a956b3a-995e-49fc-be39-83d1b1ec479d" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>1500</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="3385cbea-1429-458a-8fda-3654404018fb" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c02e737b-5493-4596-a7af-1a6851f9e3d1" name="Schema Compliance" type="Schema Compliance">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fulfillment/UpdateExternalProcessedPaymentDetails" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-        <con:environmentSpec>
-          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="727f9296-9c3c-43ed-a00b-f7d4e25f15cd" name="Delay after UEP" type="delay">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="6b88e751-9246-4973-816f-dba130ab2087" name="7. Save PNR" type="request">
+  <con:testStep id="b8ca09a8-5256-4e89-a499-b6f84eab8e3f" name="7. Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1310,6 +1103,12 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="2bd195b5-7a3d-4196-85f2-326e24cf70dd" name="Delay after PNR" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1321,7 +1120,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
-      <con:value>12.50</con:value>
+      <con:value>50</con:value>
     </con:property>
     <con:property>
       <con:name>s_SSRCategory</con:name>
@@ -1329,23 +1128,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>
-      <con:value>221</con:value>
+      <con:value>74</con:value>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value>SBUN</con:value>
+      <con:value>VGML</con:value>
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>59758</con:value>
+      <con:value>61475</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>96404</con:value>
-    </con:property>
-    <con:property>
-      <con:name>PhysicalFlightID_ReturnSeg</con:name>
-      <con:value>186904</con:value>
+      <con:value>86298</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

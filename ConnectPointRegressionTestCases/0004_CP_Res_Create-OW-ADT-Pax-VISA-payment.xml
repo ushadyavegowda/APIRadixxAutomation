@@ -8,11 +8,7 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
@@ -1551,16 +1547,15 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="7d690c1d-e0e5-409d-b146-4c0df383774e" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="9164f423-0176-4593-a646-b799c64ea2e9" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'DEC22_QAT_RQ_RS'
-//context.expand( '${#TestSuite#JIRA folder}' )
-def dirpath = "C:/Users/SG0222238/Downloads/Brightline/${tfolder}/${kase.name}"
+def tfolder = 'RegAprilRelease'
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
 log.info(dirpath)
 def Dir = new File(dirpath)
 if(!Dir.exists()) Dir.mkdirs()
@@ -1591,11 +1586,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>19361.00</con:value>
+      <con:value>499.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128862</con:value>
+      <con:value>128871</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1603,7 +1598,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>RQ2JXF</con:value>
+      <con:value>QMA8PY</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1611,7 +1606,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-11</con:value>
+      <con:value>-31</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

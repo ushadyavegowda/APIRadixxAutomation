@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ReaccomPassengers" path="/ReaccomPassengers" id="0fec8693-5199-4dcf-a344-c6cace604b37" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="0fec8693-5199-4dcf-a344-c6cace604b37" name="/ReaccomPassengers" path="/ReaccomPassengers" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="0fec8693-5199-4dcf-a344-c6cace604b37fileName">%2FReaccomPassengers</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="4ed72f7d-2a7a-4930-9ad9-e8743d9e7692" method="POST">
+  <con:method id="4ed72f7d-2a7a-4930-9ad9-e8743d9e7692" method="POST" name="POST">
     <con:description>ReaccomPassengers
 ReaccomPassengers</con:description>
     <con:settings/>
@@ -44,7 +44,7 @@ ReaccomPassengers</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="b724331e-6689-44dc-bad7-68003c7f7f02" mediaType="application/json" postQueryString="false">
+    <con:request id="b724331e-6689-44dc-bad7-68003c7f7f02" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

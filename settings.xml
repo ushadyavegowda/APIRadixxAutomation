@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" compositeProjectFormat="1.3" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.43.1" projectVersion="" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" compositeProjectFormat="1.3" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" projectVersion="" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.44.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">ReadyApi</con:setting>
   </con:settings>
@@ -28,6 +28,18 @@
     </con:property>
     <con:property>
       <con:name>URL</con:name>
+    </con:property>
+    <con:property>
+      <con:name>FareID</con:name>
+      <con:value>FareID</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value>ResBalance</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PNR</con:name>
+      <con:value>PNR</con:value>
     </con:property>
     <con:property>
       <con:name>DCSUsername</con:name>
@@ -108,7 +120,7 @@
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.ConnectPoint/ConnectPoint.Fulfillment.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_Seating" type="SOAP">
-      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
     </con:service>
     <con:service name="BasicHttpBinding_IConnectPoint_TravelAgents" type="SOAP">
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.TravelAgents.svc</con:endpoint>
@@ -116,15 +128,15 @@
     <con:service name="BasicHttpBinding_IConnectPoint_Flight" type="SOAP">
       <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
     </con:service>
-    <con:service type="REST" name="IDepartureControlSvc">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#RestEndpoint}</con:endpoint>
+    <con:service name="IDepartureControlSvc" type="REST">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#RestEndpoint}</con:endpoint>
     </con:service>
-    <con:service type="REST" name="IAuthenticationSvc">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#RestEndpoint}</con:endpoint>
+    <con:service name="IAuthenticationSvc" type="REST">
+      <con:endpoint authProfile="No Authorization" incomingWss="" outgoingWss="" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="" wssTimeToLive="" wssType="">${#Project#RestEndpoint}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>LogonID</con:name>
-      <con:value>CP_1D_20Q4</con:value>
+      <con:value>CP_1D_INT</con:value>
     </con:property>
     <con:property>
       <con:name>Password</con:name>
@@ -145,6 +157,18 @@
     <con:property>
       <con:name>URL</con:name>
       <con:value>https://rdxappint.radixxuat.com/RDX/</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FareID</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>PNR</con:name>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>DCSUsername</con:name>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/GetConvertedPaymentAmount" path="/GetConvertedPaymentAmount" id="4540b478-1b0d-499d-a831-a559624e53d0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="4540b478-1b0d-499d-a831-a559624e53d0" name="/GetConvertedPaymentAmount" path="/GetConvertedPaymentAmount" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4540b478-1b0d-499d-a831-a559624e53d0fileName">%2FGetConvertedPaymentAmount</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="9ed416f0-098f-4fa0-a146-e944411a23b8" method="POST">
+  <con:method id="9ed416f0-098f-4fa0-a146-e944411a23b8" method="POST" name="POST">
     <con:description>GetConvertedPaymentAmount
 GetConvertedPaymentAmount</con:description>
     <con:settings/>
@@ -53,7 +53,7 @@ GetConvertedPaymentAmount</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="8e046502-9243-4df6-8712-4bd78c743543" mediaType="application/json" postQueryString="false">
+    <con:request id="8e046502-9243-4df6-8712-4bd78c743543" mediaType="application/json" name="Request 1" postQueryString="false">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

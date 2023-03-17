@@ -7,16 +7,12 @@
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="LoginDCS" id="1a2bd46e-39a1-4f36-b92c-ac9e9a1a0a56">
+  <con:testStep id="a9fe07ed-0ec9-449b-8138-d1b4b47ef233" name="LoginDCS" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>f76528fa-fc56-469d-b061-cbc6bfa97623</con:targetTestCase>
@@ -25,10 +21,10 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="1 - GetLFID" id="06663534-6829-4d8e-97b2-53b8050d4ddf">
+  <con:testStep id="48ffb30c-2c5b-41a2-927c-d36f9f0ab2a3" name="1. GetLFID" type="restrequest">
     <con:settings/>
-    <con:config service="IDepartureControlSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="1 - GetLFID" id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="POST" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" service="IDepartureControlSvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="d17b1a2c-ce9c-436c-bb9e-6338a28be8b2" mediaType="application/json" name="1. GetLFID" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -47,7 +43,7 @@
    "CorrId" : "string"\r
 }</con:request>
         <con:originalUri>https://rdxdcsuat.radixxuat.com/RDX/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes">
+        <con:assertion id="9a7310b7-414b-4a93-aa55-0ea9ee70a9e0" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -62,13 +58,13 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Transfer LFID" id="4603e9b3-d022-401b-a64b-7e83f74a5f3e">
+  <con:testStep id="6963afb2-3757-483c-b02b-d8fcd92855fa" name="Transfer LFID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers disabled="false" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicalFlightId</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>1 - GetLFID</con:sourceStep>
+        <con:sourceStep>1. GetLFID</con:sourceStep>
         <con:sourcePath>$['LogicalFlightId']</con:sourcePath>
         <con:targetType>LFID</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -114,7 +110,7 @@
                   <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:FareBasisCode>${#TestSuite#FBC}</rad:FareBasisCode>
+                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:LFID>${#TestCase#LFID}</rad:LFID>
                   <rad:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -318,27 +314,27 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <a:ActionType>GetSummary</a:ActionType>
             <a:ReservationInfo xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
                <b:SeriesNumber>299</b:SeriesNumber>
-               <b:ConfirmationNumber>${Data Source#ConfirmationNumber}</b:ConfirmationNumber>
+               <b:ConfirmationNumber i:nil="true"/>
             </a:ReservationInfo>
             <a:SecurityToken>${#TestCase#securityToken}</a:SecurityToken>
             <a:CarrierCurrency>${#TestSuite#currency}</a:CarrierCurrency>
             <a:DisplayCurrency>${#TestSuite#currency}</a:DisplayCurrency>
-            <a:IATANum>${Data Source#IATANum}</a:IATANum>
-            <a:User>${Data Source#User}</a:User>
+            <a:IATANum i:nil="true"/>
+            <a:User i:nil="true"/>
             <a:ReceiptLanguageID>1</a:ReceiptLanguageID>
             <a:PromoCode>${empty}</a:PromoCode>
-            <a:ExternalBookingID>${Data Source#ExternalBookingID}</a:ExternalBookingID>
+            <a:ExternalBookingID i:nil="true"/>
             <a:Address>
-               <a:Address1>${Data Source#Address1}</a:Address1>
-               <a:Address2>${Data Source#Address2}</a:Address2>
-               <a:City>${Data Source#City}</a:City>
-               <a:State>${Data Source#State}</a:State>
-               <a:Postal>${Data Source#Postal}</a:Postal>
-               <a:Country>${Data Source#Country}</a:Country>
-               <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-               <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
+               <a:Address1 i:nil="true"/>
+               <a:Address2 i:nil="true"/>
+               <a:City i:nil="true"/>
+               <a:State i:nil="true"/>
+               <a:Postal i:nil="true"/>
+               <a:Country i:nil="true"/>
+               <a:CountryCode i:nil="true"/>
+               <a:AreaCode i:nil="true"/>
                <a:PhoneNumber>${#TestSuite#p_PhoneNumber}</a:PhoneNumber>
-               <a:Display>${Data Source#Display}</a:Display>
+               <a:Display i:nil="true"/>
             </a:Address>
             <a:ContactInfos i:nil="true"/>
             <a:Passengers>
@@ -350,38 +346,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483648</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474836</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-2</a:PersonOrgID>
@@ -391,38 +387,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483647</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474835</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-3</a:PersonOrgID>
@@ -432,38 +428,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483646</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474834</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-4</a:PersonOrgID>
@@ -473,38 +469,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483645</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474833</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-5</a:PersonOrgID>
@@ -514,38 +510,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483644</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474832</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-6</a:PersonOrgID>
@@ -555,38 +551,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483643</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474831</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-7</a:PersonOrgID>
@@ -596,38 +592,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483642</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474830</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-8</a:PersonOrgID>
@@ -637,38 +633,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483641</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474829</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-9</a:PersonOrgID>
@@ -678,38 +674,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483640</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474828</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
 			   <a:Person>
                   <a:PersonOrgID>-10</a:PersonOrgID>
@@ -719,38 +715,38 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:Age>${#TestSuite#p_Age}</a:Age>
                   <a:DOB>${#TestSuite#p_DOB}</a:DOB>
                   <a:Gender>${#TestSuite#p_Gender}</a:Gender>
-                  <a:Title>${Data Source#Title}</a:Title>
+                  <a:Title i:nil="true"/>
                   <a:NationalityLaguageID>1</a:NationalityLaguageID>
                   <a:RelationType>Self</a:RelationType>
                   <a:WBCID>-2147483639</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>ADT</a:PTC>
                   <a:TravelsWithPersonOrgID>-1</a:TravelsWithPersonOrgID>
-                  <a:RedressNumber>${Data Source#RedressNumber}</a:RedressNumber>
-                  <a:KnownTravelerNumber>${Data Source#KnownTravelerNumber}</a:KnownTravelerNumber>
+                  <a:RedressNumber i:nil="true"/>
+                  <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
                   <a:UseInventory>true</a:UseInventory>
                   <a:Address>
-                     <a:Address1>${Data Source#Address1}</a:Address1>
-                     <a:Address2>${Data Source#Address2}</a:Address2>
-                     <a:City>${Data Source#City}</a:City>
-                     <a:State>${Data Source#State}</a:State>
-                     <a:Postal>${Data Source#Postal}</a:Postal>
+                     <a:Address1 i:nil="true"/>
+                     <a:Address2 i:nil="true"/>
+                     <a:City i:nil="true"/>
+                     <a:State i:nil="true"/>
+                     <a:Postal i:nil="true"/>
                      <a:Country>0</a:Country>
-                     <a:CountryCode>${Data Source#CountryCode}</a:CountryCode>
-                     <a:AreaCode>${Data Source#AreaCode}</a:AreaCode>
-                     <a:PhoneNumber>${Data Source#PhoneNumber}</a:PhoneNumber>
-                     <a:Display>${Data Source#Display}</a:Display>
+                     <a:CountryCode i:nil="true"/>
+                     <a:AreaCode i:nil="true"/>
+                     <a:PhoneNumber i:nil="true"/>
+                     <a:Display i:nil="true"/>
                   </a:Address>
-                  <a:Company>${Data Source#Company}</a:Company>
-                  <a:Comments>${Data Source#Comments}</a:Comments>
-                  <a:Passport>${Data Source#Passport}</a:Passport>
+                  <a:Company i:nil="true"/>
+                  <a:Comments i:nil="true"/>
+                  <a:Passport i:nil="true"/>
                   <a:Nationality>${#TestSuite#p_Nationality}</a:Nationality>
                   <a:ProfileId>-21474827</a:ProfileId>
                   <a:IsPrimaryPassenger>true</a:IsPrimaryPassenger>
                   <a:ContactInfos i:nil="true"/>
-                  <a:FrequentFlyerNumber>${Data Source#FrequentFlyerNumber}</a:FrequentFlyerNumber>
-                  <a:Suffix>${Data Source#Suffix}</a:Suffix>
+                  <a:FrequentFlyerNumber i:nil="true"/>
+                  <a:Suffix i:nil="true"/>
                </a:Person>
             </a:Passengers>
             <a:Segments>
@@ -759,15 +755,15 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:FareInformationID>${#TestCase#FareId}</a:FareInformationID>
                   <a:MarketingCode>1</a:MarketingCode>
                   <a:StoreFrontID>1</a:StoreFrontID>
-                  <a:RecordLocator>${Data Source#RecordLocator}</a:RecordLocator>
+                  <a:RecordLocator i:nil="true"/>
                   <a:SpecialServices i:nil="true"/>
                   <a:Seats i:nil="true"/>
-                  <a:CRSCode>${Data Source#CRSCode}</a:CRSCode>
+                  <a:CRSCode i:nil="true"/>
                </a:Segment>
             </a:Segments>
             <a:Payments i:nil="true"/>
-            <a:Comment>${Data Source#Comment}</a:Comment>
-            <a:ReferralID>${Data Source#ReferralID}</a:ReferralID>
+            <a:Comment i:nil="true"/>
+            <a:ReferralID i:nil="true"/>
          </SummaryPnrRequest>
       </SummaryPNR>
    </s:Body>
@@ -2181,7 +2177,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>1893.40</con:value>
+      <con:value>21445.00</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -2189,19 +2185,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1893.40</con:value>
+      <con:value>21445.0</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>SGRZEU</con:value>
+      <con:value>QLLGU2</con:value>
     </con:property>
     <con:property>
       <con:name>RecordNumber</con:name>
-      <con:value>1</con:value>
+      <con:value>7</con:value>
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>103877</con:value>
+      <con:value>103901</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNum</con:name>
@@ -2209,7 +2205,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186583</con:value>
+      <con:value>186607</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

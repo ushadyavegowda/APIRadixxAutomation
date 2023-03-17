@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="091f37f8-c93e-4393-8ee6-0904ac566d29" keepSession="false" name="0009_CP_Res_Modify-AddServicebundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="ea3fddbf-5b3f-4411-b89e-f3dddfd9ef92" keepSession="false" name="0009_CP_Res_Modify-AddServicebundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="091f37f8-c93e-4393-8ee6-0904ac566d29fileName">0009_CP_Res_Modify-AddServicebundle</con:setting>
+    <con:setting id="ea3fddbf-5b3f-4411-b89e-f3dddfd9ef92fileName">0009_CP_Res_Modify-AddServicebundle</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep disabled="true" id="4a2eea2f-f97e-4d4f-aff7-0f408aad9ccb" name="1. Login" type="calltestcase">
+  <con:testStep disabled="true" id="71d3f42c-f58f-4a08-ae17-b075e73b7332" name="1. Login" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>FirstNameRandom</con:name>
-        </con:property>
-      </con:properties>
+      <con:targetTestCase>7bf6ed4a-dd6f-48b8-b750-4e7ebf203757</con:targetTestCase>
+      <con:properties/>
       <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="f49d0798-fa4e-446d-bc03-ee4adeb55b8e" name="1. Run 0009_CP_res_modify Add passenger Test case" type="calltestcase">
+  <con:testStep id="fad4402c-6e70-411e-bb1b-585425560d8a" name="1. Run 0009_CP_res_modify Add passenger Test case" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>75188f55-f076-43f5-b391-3dd60d793fdc</con:targetTestCase>
+      <con:targetTestCase>3688b777-a462-49bf-83d2-6e18f6da13ba</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>securityToken</con:name>
@@ -36,19 +32,19 @@
         </con:property>
         <con:property>
           <con:name>p_FirstName</con:name>
-          <con:value>AWIYOPTWO</con:value>
+          <con:value>WVHQERTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_LastName</con:name>
-          <con:value>LRUVUVTWO</con:value>
+          <con:value>ZALBNMTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_MiddleName</con:name>
-          <con:value>LRUVUVTWOT</con:value>
+          <con:value>ZALBNMTWOT</con:value>
         </con:property>
         <con:property>
           <con:name>p_DOB</con:name>
-          <con:value>1998-02-21</con:value>
+          <con:value>1998-02-26</con:value>
         </con:property>
         <con:property>
           <con:name>p_Gender</con:name>
@@ -128,7 +124,7 @@
         </con:property>
         <con:property>
           <con:name>Passport</con:name>
-          <con:value>52958485</con:value>
+          <con:value>34737403</con:value>
         </con:property>
         <con:property>
           <con:name>Nationality</con:name>
@@ -136,11 +132,11 @@
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1629</con:value>
+          <con:value>999</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>J4QV5N</con:value>
+          <con:value>3SDOZH</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -178,7 +174,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="65ac91d5-6a6f-4121-aec4-6ccbece05b5e" name="2. RetrivePNR" type="request">
+  <con:testStep id="243bab15-760a-4ab8-a97a-e3aee354cda4" name="2. RetrivePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -245,7 +241,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="66fbc361-a3b7-436d-9d49-e928cda2115f" name="Property Transfer" type="transfer">
+  <con:testStep id="5733cff2-d91a-4b4a-9ce3-b52453ee5c0c" name="Property Transfer" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -282,7 +278,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="f3bb69cd-c5b6-421c-b835-7e77e0b3666c" name="3 RetrieveAARQuote" type="request">
+  <con:testStep id="fa8baa76-eb28-4456-aa32-8cd34de17e66" name="3 RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -385,7 +381,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="3677fb3c-a655-4d18-a3e1-b5a43676bbdd" name="Transfer SSR Info" type="transfer">
+  <con:testStep id="1daa90d6-7eae-406c-b204-11942e2b0178" name="Transfer SSR Info" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -435,7 +431,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="95d73f1d-150a-41cb-8584-2833fef450ec" name="4 - RetrieveServiceBundleDetails" type="request">
+  <con:testStep id="cb81438d-5964-40e3-9b71-df6246c268c0" name="4 - RetrieveServiceBundleDetails" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -497,7 +493,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="16e0aa4f-59a9-4113-92e8-6b0970a296f2" name="5 ModifyPNR_Add SSR" type="request">
+  <con:testStep id="4000f978-dc7a-4e7b-b9a2-71532d27b7bd" name="5 ModifyPNR_Add SSR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -604,7 +600,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="924354b4-35e4-4dc2-8554-99f8a5473989" name="Transfer Balance" type="transfer">
+  <con:testStep id="e3af0539-87d5-4953-b6ca-4ec6a237f9d5" name="Transfer Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -617,13 +613,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="ba927afd-c7f6-44a6-91df-a3fce6ec3b7b" name="Delay after modify call" type="delay">
+  <con:testStep id="5afb9b0f-f09c-4caf-afe8-223dac24d3b4" name="Delay after modify call" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="5986559b-cc2f-476d-99e5-921809d58aa8" name="5 InsertExternalProcessedPayment_CASH" type="request">
+  <con:testStep id="b1cf4fc4-741e-44d1-a515-c325e6f99abf" name="5 InsertExternalProcessedPayment_CASH" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -907,7 +903,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="bb30b505-1d54-4495-84e4-6bea7c3e4011" name="Property ReservationPaymentID" type="transfer">
+  <con:testStep id="0f09e48a-19cf-403d-951a-39e13e26ac61" name="Property ReservationPaymentID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -932,13 +928,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="6b508182-a62c-4678-9830-2c3d19020f8d" name="Delay after IEP" type="delay">
+  <con:testStep id="7e90c620-b7cc-4fa5-b319-9205edde46c0" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="46a1bf71-1eb2-47f8-8883-3da958cabc8d" name="7. Save PNR" type="request">
+  <con:testStep id="c83961bc-a148-42d9-8960-7edcc5c42ed5" name="7. Save PNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>

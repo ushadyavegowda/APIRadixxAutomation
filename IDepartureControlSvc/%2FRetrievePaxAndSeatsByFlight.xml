@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/RetrievePaxAndSeatsByFlight" path="/RetrievePaxAndSeatsByFlight" id="f8389aa0-41fd-45f5-8eb4-9f86680c914b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="f8389aa0-41fd-45f5-8eb4-9f86680c914b" name="/RetrievePaxAndSeatsByFlight" path="/RetrievePaxAndSeatsByFlight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f8389aa0-41fd-45f5-8eb4-9f86680c914bfileName">%2FRetrievePaxAndSeatsByFlight</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="74d8ccd1-d58a-458d-bd05-b440f1594b54" method="POST">
+  <con:method id="74d8ccd1-d58a-458d-bd05-b440f1594b54" method="POST" name="POST">
     <con:description>RetrievePaxAndSeatsByFlight
 RetrievePaxAndSeatsByFlight</con:description>
     <con:settings/>
@@ -32,7 +32,7 @@ RetrievePaxAndSeatsByFlight</con:description>
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="15ed1e54-1e49-415e-8727-55ccb819cdb0" mediaType="application/json">
+    <con:request id="15ed1e54-1e49-415e-8727-55ccb819cdb0" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
       <con:request>{\r

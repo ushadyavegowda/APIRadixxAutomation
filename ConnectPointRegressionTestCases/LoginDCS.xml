@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f76528fa-fc56-469d-b061-cbc6bfa97623" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="LoginDCS" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="f76528fa-fc56-469d-b061-cbc6bfa97623" keepSession="false" name="LoginDCS" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f76528fa-fc56-469d-b061-cbc6bfa97623fileName">LoginDCS</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="Login" id="0a1077c7-b2a6-4877-bc66-ffdf78c772c7">
+  <con:testStep id="0a1077c7-b2a6-4877-bc66-ffdf78c772c7" name="Login" type="restrequest">
     <con:settings/>
-    <con:config service="IAuthenticationSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2/Login" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Login" id="e43b3305-0767-434e-8740-6fcad67abba3" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="POST" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2/Login" service="IAuthenticationSvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="e43b3305-0767-434e-8740-6fcad67abba3" mediaType="application/json" name="Login" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -23,7 +23,7 @@
    "CorrId" : ""\r
 }</con:request>
         <con:originalUri>http://20q4dcsuat.radixxuat.com/20Q4/Radixx.Ecosystem.Gtwy/Authentication.svc/v2/Login</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="86bd62fd-f22f-45ce-a99e-f75bc49145ad" name="Valid HTTP Status Codes">
+        <con:assertion id="86bd62fd-f22f-45ce-a99e-f75bc49145ad" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -38,7 +38,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="GroovyScript_DCSSecToken" id="7d38d990-b6cd-47d2-88e6-d64f7085d6c2">
+  <con:testStep id="7d38d990-b6cd-47d2-88e6-d64f7085d6c2" name="GroovyScript_DCSSecToken" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods

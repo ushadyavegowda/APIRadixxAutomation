@@ -6,7 +6,7 @@
   <con:call id="3da46961-1227-44b0-9fd2-3a07094c607b" name="Request 1">
     <con:settings/>
     <con:encoding>UTF-8</con:encoding>
-    <con:endpoint/>
+    <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Seating.svc</con:endpoint>
     <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Seating.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:rad3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r

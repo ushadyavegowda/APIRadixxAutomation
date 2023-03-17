@@ -666,7 +666,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="38d78d11-bbfe-45ba-9673-d7a65c048514">
+  <con:testStep id="38d78d11-bbfe-45ba-9673-d7a65c048514" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>30000</delay>
@@ -1040,7 +1040,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay for eticket generation" id="d4f7b193-ac7f-415d-9691-a2f2e23a772c">
+  <con:testStep id="d4f7b193-ac7f-415d-9691-a2f2e23a772c" name="Delay for eticket generation" type="delay">
     <con:settings/>
     <con:config>
       <delay>300000</delay>

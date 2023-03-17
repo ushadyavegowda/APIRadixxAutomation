@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="f2d675ec-8f91-42ca-8ada-eb41b5d34517" name="/RemoveSeat" path="/RemoveSeat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="f2d675ec-8f91-42ca-8ada-eb41b5d34517" name="/RemoveSeat" path="/RemoveSeat" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f2d675ec-8f91-42ca-8ada-eb41b5d34517fileName">%2FRemoveSeat</con:setting>
   </con:settings>

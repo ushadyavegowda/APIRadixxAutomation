@@ -4,7 +4,7 @@
     <con:setting id="575709dd-176d-4a2c-a6f4-6902b544ec24fileName">0060_CP_CodeShare_ModifyAddSegment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1. Run 0055_CP_CodeShare_CreateRes" id="4b1e6f99-8ce0-413b-9519-331926629740">
+  <con:testStep id="4b1e6f99-8ce0-413b-9519-331926629740" name="1. Run 0055_CP_CodeShare_CreateRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>80bfd4eb-8ced-48d0-8672-4adb9cc23d12</con:targetTestCase>
@@ -439,7 +439,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="7168e4df-bac4-48d6-b339-c458944fb95c" name="Response SLA" type="Response SLA Assertion" disabled="true">
+        <con:assertion disabled="true" id="7168e4df-bac4-48d6-b339-c458944fb95c" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>2000</SLA>
           </con:configuration>
@@ -463,10 +463,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer-ExceptionCode" id="d14ba7ca-9977-42f0-aee7-76d25a67d5c7" disabled="true">
+  <con:testStep disabled="true" id="d14ba7ca-9977-42f0-aee7-76d25a67d5c7" name="Property Transfer-ExceptionCode" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ExceptionCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4. ModifyPnr_AddSegment</con:sourceStep>
@@ -478,7 +478,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="b8829308-e288-4d83-bce9-8d65d12259f5" disabled="true">
+  <con:testStep disabled="true" id="b8829308-e288-4d83-bce9-8d65d12259f5" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>def ExceptionCode= testRunner.testCase.getPropertyValue( "ExceptionCode" )
@@ -487,7 +487,7 @@ if (ExceptionCode = '9999')
 	testRunner.gotoStep(testRunner.testCase.getTestStepIndexByName('4. ModifyPnr_DeptSegment'))</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay confirming segments" id="6802cde2-6720-4306-88aa-044ef0b8f874" disabled="true">
+  <con:testStep disabled="true" id="6802cde2-6720-4306-88aa-044ef0b8f874" name="Delay confirming segments" type="delay">
     <con:settings/>
     <con:config>
       <delay>60000</delay>

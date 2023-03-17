@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/authentication" id="e82d3e4c-0e83-4661-9be2-9fd07c35821b" name="IAuthenticationSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:interface xsi:type="con:RestService" basePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/Authentication.svc/v2" definitionUrl="https://20q4dcsuat.radixxuat.com/20Q4/radixx.ecosystem.gtwy/documentation.svc/authentication" id="e82d3e4c-0e83-4661-9be2-9fd07c35821b" name="IAuthenticationSvc" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:description>Provides methods related to authentication</con:description>
   <con:settings>
     <con:setting id="e82d3e4c-0e83-4661-9be2-9fd07c35821bfileName">IAuthenticationSvc</con:setting>

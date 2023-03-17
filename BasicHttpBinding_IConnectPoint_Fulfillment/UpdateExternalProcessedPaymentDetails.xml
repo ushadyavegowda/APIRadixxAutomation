@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/UpdateExternalProcessedPaymentDetails" anonymous="optional" bindingOperationName="UpdateExternalProcessedPaymentDetails" id="c5da39ab-06b7-445c-b55c-085f59404ef8" inputName="" isOneWay="false" name="UpdateExternalProcessedPaymentDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/UpdateExternalProcessedPaymentDetails" anonymous="optional" bindingOperationName="UpdateExternalProcessedPaymentDetails" id="c5da39ab-06b7-445c-b55c-085f59404ef8" inputName="" isOneWay="false" name="UpdateExternalProcessedPaymentDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c5da39ab-06b7-445c-b55c-085f59404ef8fileName">UpdateExternalProcessedPaymentDetails</con:setting>
   </con:settings>

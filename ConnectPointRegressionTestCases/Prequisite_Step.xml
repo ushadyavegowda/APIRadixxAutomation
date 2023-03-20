@@ -159,6 +159,22 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="3d624e87-3216-425c-a55a-3c5925bebdb4" name="Groovy Script_securityToken" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>// importing the Java methods
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+//
+//def DepartureDate = new Date().plus(1)
+//def ModifyDate = new Date().plus(2)
+def securityToken = context.expand( '${1. RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+testRunner.testCase.testSuite.setPropertyValue("securityToken", securityToken);
+
+log.info(securityToken)</script>
+    </con:config>
+  </con:testStep>
   <con:testStep id="d8523e1d-5331-40b9-9cb2-9cbd163428a6" name="Groovy Script_input TestSuite" type="groovy">
     <con:settings/>
     <con:config>
@@ -199,13 +215,14 @@ def p_DOB_INF= new Date().minus(120)
 def origin = "YVR"
 def destination = "YYZ"
 def new_Segment = "NRT"
-def flightnum = "899"
+def flightnum = "699"
 def carriercode = "1D"
-def FBC = "BOW"
+def FBC = "EOW"
 def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
 def FlightNumReturn = "203"
+
 
 
 def generator = { String alphabet, int n ->
@@ -342,7 +359,9 @@ testRunner.testCase.testSuite.setPropertyValue("CS_CarrierCode", "1D");
 testRunner.testCase.testSuite.setPropertyValue("CS_FlightNumber","102/1534");
 testRunner.testCase.testSuite.setPropertyValue("CS_Origin", "YUL");
 testRunner.testCase.testSuite.setPropertyValue("CS_Destination", "MIA");
-testRunner.testCase.testSuite.setPropertyValue("CS_FarebasisCode", "B");
+testRunner.testCase.testSuite.setPropertyValue("CS_Fareclass", "B");
+testRunner.testCase.testSuite.setPropertyValue("CS_FBcode", "BRT2");
+testRunner.testCase.testSuite.setPropertyValue("CS_Upgrade_FBcode", "BOW");
 testRunner.testCase.testSuite.setPropertyValue("CS_DepartureDate", CS_DepartureDate.format("yyyy-MM-dd"));
 
 //SSR info

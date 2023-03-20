@@ -8,11 +8,11 @@
   <con:properties>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-03-16</con:value>
+      <con:value>2023-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-03-19</con:value>
+      <con:value>2023-03-23</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -40,19 +40,19 @@
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>PZMRJHADT</con:value>
+      <con:value>GLPJWNADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>VHTILNADT</con:value>
+      <con:value>ULSGJWADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>PHFOBCINF</con:value>
+      <con:value>VZPVKMINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1979-03-13</con:value>
+      <con:value>1979-03-17</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -76,7 +76,7 @@
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>
-      <con:value>AFGHRK@radixx.com</con:value>
+      <con:value>VEOKPL@radixx.com</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -84,7 +84,7 @@
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>2e7765fdf7854ud3baba8dd935hbcde119q6wbo4zfd1</con:value>
+      <con:value>b92f249a601dbsd4x6m669h9r56e38g9a827f979db01</con:value>
     </con:property>
     <con:property>
       <con:name>IATANumber</con:name>
@@ -96,7 +96,7 @@
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-03-19</con:value>
+      <con:value>2023-03-23</con:value>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
@@ -120,35 +120,35 @@
     </con:property>
     <con:property>
       <con:name>ModifyDate_returnSeg</con:name>
-      <con:value>2023-03-28</con:value>
+      <con:value>2023-04-01</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHD</con:name>
-      <con:value>PZMRJHCHD</con:value>
+      <con:value>GLPJWNCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameCHD</con:name>
-      <con:value>VHTILNCHD</con:value>
+      <con:value>ULSGJWCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_CHD</con:name>
-      <con:value>2017-03-13</con:value>
+      <con:value>2017-03-17</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameINF</con:name>
-      <con:value>PZMRJHINF</con:value>
+      <con:value>GLPJWNINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameINF</con:name>
-      <con:value>VHTILNINF</con:value>
+      <con:value>ULSGJWINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_INF</con:name>
-      <con:value>2022-11-13</con:value>
+      <con:value>2022-11-17</con:value>
     </con:property>
     <con:property>
       <con:name>Date_NewSeg</con:name>
-      <con:value>2023-03-29</con:value>
+      <con:value>2023-04-02</con:value>
     </con:property>
     <con:property>
       <con:name>New_Segment</con:name>
@@ -192,7 +192,7 @@
     </con:property>
     <con:property>
       <con:name>ExpirationDate</con:name>
-      <con:value>2023-06-21</con:value>
+      <con:value>2023-06-25</con:value>
     </con:property>
     <con:property>
       <con:name>p_Age</con:name>
@@ -260,7 +260,7 @@
     </con:property>
     <con:property>
       <con:name>ExchangeRateDate</con:name>
-      <con:value>2023-03-13</con:value>
+      <con:value>2023-03-17</con:value>
     </con:property>
     <con:property>
       <con:name>ID</con:name>
@@ -432,11 +432,11 @@
     </con:property>
     <con:property>
       <con:name>FirstNameRandom</con:name>
-      <con:value>TOyNsF</con:value>
+      <con:value>UL33MG</con:value>
     </con:property>
     <con:property>
       <con:name>LasttNameRandom</con:name>
-      <con:value>NeeR8G</con:value>
+      <con:value>sQOaBd</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNumReturn</con:name>
@@ -476,15 +476,31 @@
     </con:property>
     <con:property>
       <con:name>CS_FarebasisCode</con:name>
-      <con:value>B</con:value>
+      <con:value>BRT2</con:value>
     </con:property>
     <con:property>
       <con:name>CS_DepartureDate</con:name>
-      <con:value>2023-03-18</con:value>
+      <con:value>2023-03-22</con:value>
     </con:property>
     <con:property>
       <con:name>ExternalBookingReference</con:name>
-      <con:value>QK9078</con:value>
+      <con:value>OK0291</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Fareclass</con:name>
+      <con:value>B</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Upgrade_FareBasiscode</con:name>
+      <con:value>BOW</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_FBcode</con:name>
+      <con:value>BRT2</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Upgrade_FBcode</con:name>
+      <con:value>BOW</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

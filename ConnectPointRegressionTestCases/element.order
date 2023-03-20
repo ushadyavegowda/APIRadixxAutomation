@@ -47,3 +47,11 @@ Create-OW-pnr-withSSR.xml
 0016_CP_Res_CreateBooking_Nopayment_Add-seat.xml
 0017_CP_Res_CreateBooking_Nopayment_No-Assignment.xml
 0018_CP_Res_ModifyBooking_NoPayment_Add-Seat.xml
+0048-External-RT-2ADT%2B1CHD%2B1INF.xml
+0055_CP_CodeShare_CreateRes.xml
+0056_CP_CodeShare_ModifyReplaceflight.xml
+0060_CP_CodeShare_ModifyAddSegment.xml
+0057_CP_Codeshare_FareUpgrade.xml
+0049-RT-Modify%28date-change%29.xml
+0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
+0054_CP_Interline_CancelRes.xml

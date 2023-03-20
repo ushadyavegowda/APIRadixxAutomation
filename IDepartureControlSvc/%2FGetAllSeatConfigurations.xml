@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="b129d20e-bdf6-41c7-a56a-fb03bd3e8a61" name="/GetAllSeatConfigurations" path="/GetAllSeatConfigurations" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="b129d20e-bdf6-41c7-a56a-fb03bd3e8a61" name="/GetAllSeatConfigurations" path="/GetAllSeatConfigurations" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b129d20e-bdf6-41c7-a56a-fb03bd3e8a61fileName">%2FGetAllSeatConfigurations</con:setting>
   </con:settings>

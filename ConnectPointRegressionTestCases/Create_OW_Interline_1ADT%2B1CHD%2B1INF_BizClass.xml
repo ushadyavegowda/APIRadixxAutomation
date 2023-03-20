@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="3a854512-72d2-486c-b5ce-bd607f172210" keepSession="false" maxResults="0" name="Create_OW_Interline_1ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="f7a10861-6ab8-40ae-af6a-214cb6fab909" keepSession="false" maxResults="0" name="Create_OW_Interline_1ADT+1CHD+1INF_BizClass" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="3a854512-72d2-486c-b5ce-bd607f172210fileName">Create_OW_Interline_1ADT%2B1CHD%2B1INF</con:setting>
+    <con:setting id="f7a10861-6ab8-40ae-af6a-214cb6fab909fileName">Create_OW_Interline_1ADT%2B1CHD%2B1INF_BizClass</con:setting>
   </con:settings>
-  <con:testStep id="4a7c37f0-dacf-4c08-8c3e-6e09aa4a8d28" name="1.RetrieveSecurityToken" type="request">
+  <con:testStep id="31c49435-155c-48d1-ba51-8160866ab570" name="1.RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -58,7 +58,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="7024bd86-43b6-4c3a-b471-29f6a9e79ba7" name="InputValues" type="groovy">
+  <con:testStep id="56cae13b-f3d9-40c0-a066-05833604f043" name="InputValues" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -146,7 +146,7 @@ testRunner.testCase.setPropertyValue("p_HomeState", "FL");
 testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
     </con:config>
   </con:testStep>
-  <con:testStep disabled="true" id="43761e8b-acf6-4323-a665-305188f2eb80" name="1. Login" type="calltestcase">
+  <con:testStep disabled="true" id="c0922085-c78c-4325-9fbc-628932b78b6b" name="1. Login" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -155,7 +155,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="208d25d0-1b9d-48ac-996d-3be75b97c8c2" name="2.RetrieveFareQuote" type="request">
+  <con:testStep id="0dc44313-3658-4dcb-a424-34447e1c5695" name="2.RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -244,7 +244,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="9fef9f25-ae11-4fe8-8918-973861dc2a99" name="Transfer LFID PHYID FareId and TripId" type="transfer">
+  <con:testStep id="21b9d1f4-a8be-428a-bd5b-6117b5253e42" name="Transfer LFID PHYID FareId and TripId" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -276,7 +276,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[2]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>fareid</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -289,7 +289,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:CombinableFlights[1]/a:CombinableFlight[1]/a:CombinableFareInfoDetails[1]/a:CombinableFareInfo[1]/a:FareID[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[2]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:CombinableFlights[1]/a:CombinableFlight[1]/a:CombinableFareInfoDetails[1]/a:CombinableFareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>TripId</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
@@ -300,7 +300,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FCCode[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[3]/a:FareInfos[1]/a:FareInfo[1]/a:FCCode[1]</con:sourcePath>
         <con:targetType>FCCode</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
@@ -318,7 +318,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="af29abd7-f618-42d1-89f3-1890a1f0941f" name="3.SummaryPNR" type="request">
+  <con:testStep id="89648294-e06d-4a0c-96d3-807dbd2c9b85" name="3.SummaryPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -533,7 +533,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="39056539-f072-475d-ad91-2b0287e7e21b" name="Property Transfer ResBalance" type="transfer">
+  <con:testStep id="d6bde2bf-d569-4ab8-8296-457f990fe9ac" name="Property Transfer ResBalance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -550,7 +550,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="26722404-f081-4f81-9b05-5e4f91fd31e2" name="4.AssessPaymentMethod" type="request">
+  <con:testStep id="19da74e3-aa4e-42b6-9fd7-b032624a268a" name="4.AssessPaymentMethod" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
@@ -615,13 +615,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="af665548-5639-47c6-848f-4297dc886a7d">
+  <con:testStep type="delay" name="Delay" id="97d9e8db-4187-4dfe-babd-244a991b4c06">
     <con:settings/>
     <con:config>
       <delay>2000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="2fd0efc3-041b-4436-86d8-cf8644a390d7" name="5.CreatePNR-commit" type="request">
+  <con:testStep id="f8e0e39e-f13b-4a29-964b-39fe0ec45ffd" name="5.CreatePNR-commit" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -683,7 +683,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="25158c2b-16c9-4ae3-9046-b85a43d1b7d1" name="Property Transfer ConfirmationNum and Balance" type="transfer">
+  <con:testStep id="5de97050-e076-4b95-bad4-1342ec2fe16d" name="Property Transfer ConfirmationNum and Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -711,7 +711,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="70c6dd77-83cb-44de-8d7b-9b230b96d32e" name="6.InsertExternalProcessedPayment" type="request">
+  <con:testStep id="770081d5-f7e7-43b7-815b-7cf09b99dd2e" name="6.InsertExternalProcessedPayment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -890,7 +890,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="76dfa6a0-1b00-474c-a17f-778095f09a25" name="7.CreatePNR-save" type="request">
+  <con:testStep id="90b63fac-92d5-4d23-871b-aeac3d3876df" name="7.CreatePNR-save" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -952,7 +952,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="9969abff-8ddf-4f3e-9ec9-b56249085083" name="Property Transfer Key" type="transfer">
+  <con:testStep id="63a1461e-e70b-490d-9ceb-e888a410a0a6" name="Property Transfer Key" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -969,7 +969,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="23d5e21b-dfbf-4727-9f4c-b067ef9b1e23" name="Groovy Script" type="groovy">
+  <con:testStep id="dd1039a7-5012-44ef-a08b-ae0f961bef9b" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1014,11 +1014,11 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>88a1b285e92446acf1ox6a637fq76a3ac8a565928ec5</con:value>
+      <con:value>9086478d2e104djcm3gfr9te0bc2tb1bk4p579d1e2c2</con:value>
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">U3LCQ1</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -1038,19 +1038,19 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>1018.28</con:value>
+      <con:value>0</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value>1</con:value>
+      <con:value>3</con:value>
     </con:property>
     <con:property>
       <con:name>LogicFlightKey</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-1119085969:3/24/2023 4:50:00 PM</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>
-      <con:value>1</con:value>
+      <con:value>3</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
@@ -1062,7 +1062,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>FCCode</con:name>
-      <con:value>Q</con:value>
+      <con:value>C</con:value>
     </con:property>
     <con:property>
       <con:name>FBCode</con:name>

@@ -87,7 +87,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>0LJ8QG</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>U3LCQ1</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -159,7 +159,7 @@
                   <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
                   <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
                   <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
-                  <rad1:DateOfDeparture>2023-02-10</rad1:DateOfDeparture>
+                  <rad1:DateOfDeparture>2023-03-24</rad1:DateOfDeparture>
                   <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
                   <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -172,7 +172,7 @@
                   <rad1:LanguageCode>en</rad1:LanguageCode>
                   <rad1:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareQuoteRequestInfos>
-                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>5</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo>
+                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo>
                         <rad1:PassengerTypeID>1</rad1:PassengerTypeID>
                         <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>
                      </rad1:FareQuoteRequestInfo>
@@ -233,7 +233,7 @@
             <rad1:AARQuotes>
                <rad1:AARQuote>
                   <rad1:AARRequestPtcs>
-                     <rad1:AARRequestPtc><rad1:PassengerTypeID>5</rad1:PassengerTypeID><rad1:Quantity>1</rad1:Quantity></rad1:AARRequestPtc><rad1:AARRequestPtc><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:Quantity>1</rad1:Quantity></rad1:AARRequestPtc><rad1:AARRequestPtc>
+                     <rad1:AARRequestPtc><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:Quantity>1</rad1:Quantity></rad1:AARRequestPtc><rad1:AARRequestPtc>
                         <rad1:PassengerTypeID>1</rad1:PassengerTypeID>
                         <rad1:Quantity>1</rad1:Quantity>
                      </rad1:AARRequestPtc>
@@ -242,7 +242,7 @@
                   <rad1:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:Category xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:Currency>CAD</rad1:Currency>
-                  <rad1:DepartureDate>2023-02-10</rad1:DepartureDate>
+                  <rad1:DepartureDate>2023-03-24</rad1:DepartureDate>
                   <rad1:DestinationAirportCode>CDG</rad1:DestinationAirportCode>
                   <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -251,7 +251,7 @@
                   <rad1:OperatingCarrierCode>1</rad1:OperatingCarrierCode>
                   <rad1:ServiceCode>CNDY</rad1:ServiceCode>
                   <rad1:ServiceTypes>
-                     <arr:int>3</arr:int>
+                     <arr:int>1</arr:int>
                      <arr:int>1</arr:int>
                   </rad1:ServiceTypes>
                   <rad1:UTCOffset>0</rad1:UTCOffset>
@@ -401,10 +401,10 @@
             <rad1:ActionType>AddSpecialServiceToReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>U3LCQ1</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:FareInformationID>1</rad1:FareInformationID>
-            <rad1:LogicalFlightKeyToReplace>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]}</rad1:LogicalFlightKeyToReplace>
+            <rad1:LogicalFlightKeyToReplace>${4.RetrieveAARQuote#Response}</rad1:LogicalFlightKeyToReplace>
             <rad1:LogicalFlightKeyToRemove>${empty}</rad1:LogicalFlightKeyToRemove>
             <rad1:PersonOrgIdentifierToRemove>0</rad1:PersonOrgIdentifierToRemove>
             <rad1:PassengersToAdd>

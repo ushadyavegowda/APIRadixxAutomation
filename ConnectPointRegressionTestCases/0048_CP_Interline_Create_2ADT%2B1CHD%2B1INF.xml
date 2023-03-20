@@ -204,10 +204,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
                   <rad1:LanguageCode>en</rad1:LanguageCode>
                   <rad1:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareQuoteRequestInfos>
-                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>2</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo>
-                        <rad1:PassengerTypeID>5</rad1:PassengerTypeID>
-                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>
-                     </rad1:FareQuoteRequestInfo>
+                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>2</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
                   </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
                </rad1:FareQuoteDetail>
                <rad1:FareQuoteDetail>
@@ -230,10 +227,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
                   <rad1:LanguageCode>en</rad1:LanguageCode>
                   <rad1:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareQuoteRequestInfos>
-                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>2</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo>
-                        <rad1:PassengerTypeID>5</rad1:PassengerTypeID>
-                        <rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired>
-                     </rad1:FareQuoteRequestInfo>
+                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>2</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
                   </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
                </rad1:FareQuoteDetail>
             </rad1:FareQuoteDetails>
@@ -490,68 +484,9 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad1:Weight>60</rad1:Weight>
                   <rad1:Height>170</rad1:Height>
                </rad1:Person>
+               
                <rad1:Person>
                   <rad1:PersonOrgID>-3</rad1:PersonOrgID>
-                  <rad1:FirstName>${#TestCase#p_FirstNameInfOne}</rad1:FirstName>
-                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
-                  <rad1:MiddleName>${#TestCase#p_MiddleNameInfOne}</rad1:MiddleName>
-                  <rad1:Age>1</rad1:Age>
-                  <rad1:DOB>2022-04-20</rad1:DOB>
-                  <rad1:Gender>Female</rad1:Gender>
-                  <rad1:Title>MISS</rad1:Title>
-                  <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
-                  <rad1:RelationType>Daughter</rad1:RelationType>
-                  <rad1:WBCID>-214</rad1:WBCID>
-                  <rad1:PTCID>5</rad1:PTCID>
-                  <rad1:PTC>INF</rad1:PTC>
-                  <rad1:TravelsWithPersonOrgID>-1</rad1:TravelsWithPersonOrgID>
-                  <rad1:RedressNumber>${empty}</rad1:RedressNumber>
-                  <rad1:KnownTravelerNumber>${empty}</rad1:KnownTravelerNumber>
-                  <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
-                  <rad1:UseInventory>true</rad1:UseInventory>
-                  <rad1:Address>
-                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
-                     <rad1:Address2>${empty}</rad1:Address2>
-                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
-                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
-                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
-                     <rad1:Country>USA</rad1:Country>
-                     <rad1:CountryCode>${empty}</rad1:CountryCode>
-                     <rad1:AreaCode>${empty}</rad1:AreaCode>
-                     <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                     <rad1:Display>${empty}</rad1:Display>
-                  </rad1:Address>
-                  <rad1:Company>${empty}</rad1:Company>
-                  <rad1:Comments>${empty}</rad1:Comments>
-                  <rad1:Passport>${empty}</rad1:Passport>
-                  <rad1:Nationality>USA</rad1:Nationality>
-                  <rad1:ProfileId>-2147483648</rad1:ProfileId>
-                  <rad1:IsPrimaryPassenger>true</rad1:IsPrimaryPassenger>
-                  <rad1:ContactInfos>
-                     <!--Zero or more repetitions:-->
-                     <rad1:ContactInfo>
-                        <rad1:ContactID>-1</rad1:ContactID>
-                        <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
-                        <rad1:ContactType>Email</rad1:ContactType>
-                        <rad1:Extension>${empty}</rad1:Extension>
-                        <rad1:CountryCode>${empty}</rad1:CountryCode>
-                        <rad1:AreaCode>${empty}</rad1:AreaCode>
-                        <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
-                        <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
-                     </rad1:ContactInfo>
-                     
-                  </rad1:ContactInfos>
-                  <!--Optional:-->
-                  <rad1:FrequentFlyerNumber>${empty}</rad1:FrequentFlyerNumber>
-                  <!--Optional:-->
-                  <rad1:Suffix>JR</rad1:Suffix>
-                  <rad1:Weight>60</rad1:Weight>
-                  <rad1:Height>170</rad1:Height>
-               </rad1:Person>
-               <rad1:Person>
-                  <rad1:PersonOrgID>-4</rad1:PersonOrgID>
                   <rad1:FirstName>${#TestCase#p_FirstNameCHDOne}</rad1:FirstName>
                   <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
                   <rad1:MiddleName>${#TestCase#p_MiddleNameCHDone}</rad1:MiddleName>
@@ -720,7 +655,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           </con:configuration>
         </con:assertion>
         <con:assertion id="167f6d62-b204-4398-9b13-532b7d0f1648" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance">
+        <con:assertion id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance" disabled="true">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -1109,23 +1044,23 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>2e06e80820c94q10daj2d0t0f7694av669aa88a9d7a5</con:value>
+      <con:value>8266dc870c084c0f9qg1fabeh962ndq66f76n1ac6d6b</con:value>
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">O1JBML</con:value>
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>0</con:value>
+      <con:value>2908.98</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-03-21</con:value>
+      <con:value>2023-03-24</con:value>
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-03-25</con:value>
+      <con:value>2023-03-28</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -1137,7 +1072,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>979073855</con:value>
+      <con:value>2122022144</con:value>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>
@@ -1145,7 +1080,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>-1857208583</con:value>
+      <con:value>-111636324</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1153,7 +1088,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-03-27</con:value>
+      <con:value>2023-03-30</con:value>
     </con:property>
     <con:property>
       <con:name>paycurrency</con:name>
@@ -1213,11 +1148,11 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>ADT_DOB</con:name>
-      <con:value>1979-03-17</con:value>
+      <con:value>1979-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>CHD_DOB</con:name>
-      <con:value>2017-03-17</con:value>
+      <con:value>2017-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>

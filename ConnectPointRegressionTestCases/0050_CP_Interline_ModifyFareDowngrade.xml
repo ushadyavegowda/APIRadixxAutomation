@@ -4,198 +4,7 @@
     <con:setting id="b7b5bc73-c11a-4a07-b4b4-938efdc1a513fileName">0050_CP_Interline_ModifyFareDowngrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="dd37a7d2-e772-45f1-a570-501e26c39015" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf" type="calltestcase">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>3a854512-72d2-486c-b5ce-bd607f172210</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>securityToken</con:name>
-          <con:value>734v131d73b104e918ibad7c61c6ic69u3r1a4b638d2</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ConfrimationNum</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>Origin</con:name>
-          <con:value>YUL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>Destination</con:name>
-          <con:value>NCE</con:value>
-        </con:property>
-        <con:property>
-          <con:name>DepartureDate</con:name>
-          <con:value>2023-03-23</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ReturnDate</con:name>
-          <con:value>2023-03-27</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ResBalance</con:name>
-          <con:value>0</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LogicFlightKey</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>TripId</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LFID</con:name>
-          <con:value>-235160701</con:value>
-        </con:property>
-        <con:property>
-          <con:name>PhysicalFlightID</con:name>
-          <con:value>-1843352587</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_Email</con:name>
-          <con:value>radix@radixx.com</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_age</con:name>
-          <con:value>25</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_age</con:name>
-          <con:value>6</con:value>
-        </con:property>
-        <con:property>
-          <con:name>currency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>paycurrency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ModifyDate</con:name>
-          <con:value>2023-03-29</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeAddress</con:name>
-          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeCity</con:name>
-          <con:value>ORLANDO</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeState</con:name>
-          <con:value>FL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomePostal</con:name>
-          <con:value>32822</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstName</con:name>
-          <con:value>BobADL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleName</con:name>
-          <con:value>Mol</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastName</con:name>
-          <con:value>Young</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_DOB</con:name>
-          <con:value>1979-03-19</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameTwo</con:name>
-          <con:value>Mechile</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameTwo</con:name>
-          <con:value>Corry</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameInfOne</con:name>
-          <con:value>EllahInf</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameInfOne</con:name>
-          <con:value>Lucy</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameCHDOne</con:name>
-          <con:value>TomCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameCHDone</con:name>
-          <con:value>Chris</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_DOB</con:name>
-          <con:value>2017-03-19</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyFirstName</con:name>
-          <con:value>MattADL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyMiddleName</con:name>
-          <con:value>Charles</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyLastName</con:name>
-          <con:value>Cameron</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties>
-        <con:entry>securityToken</con:entry>
-        <con:entry>ConfrimationNum</con:entry>
-        <con:entry>Origin</con:entry>
-        <con:entry>Destination</con:entry>
-        <con:entry>DepartureDate</con:entry>
-        <con:entry>ReturnDate</con:entry>
-        <con:entry>ResBalance</con:entry>
-        <con:entry>fareid</con:entry>
-        <con:entry>LogicFlightKey</con:entry>
-        <con:entry>TripId</con:entry>
-        <con:entry>LFID</con:entry>
-        <con:entry>PhysicalFlightID</con:entry>
-        <con:entry>p_Email</con:entry>
-        <con:entry>ADT_age</con:entry>
-        <con:entry>CHD_age</con:entry>
-        <con:entry>currency</con:entry>
-        <con:entry>paycurrency</con:entry>
-        <con:entry>ModifyDate</con:entry>
-        <con:entry>p_HomeAddress</con:entry>
-        <con:entry>p_HomeCity</con:entry>
-        <con:entry>p_HomeState</con:entry>
-        <con:entry>p_HomePostal</con:entry>
-        <con:entry>p_FirstName</con:entry>
-        <con:entry>p_MiddleName</con:entry>
-        <con:entry>p_LastName</con:entry>
-        <con:entry>ADT_DOB</con:entry>
-        <con:entry>p_FirstNameTwo</con:entry>
-        <con:entry>p_MiddleNameTwo</con:entry>
-        <con:entry>p_FirstNameInfOne</con:entry>
-        <con:entry>p_MiddleNameInfOne</con:entry>
-        <con:entry>p_FirstNameCHDOne</con:entry>
-        <con:entry>p_MiddleNameCHDone</con:entry>
-        <con:entry>CHD_DOB</con:entry>
-        <con:entry>p_ModifyFirstName</con:entry>
-        <con:entry>p_ModifyMiddleName</con:entry>
-        <con:entry>p_ModifyLastName</con:entry>
-      </con:returnProperties>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep disabled="true" id="7a957f56-2468-421d-bd85-9d736a9402bb" name="1.RetrieveSecurityToken" type="request">
+  <con:testStep id="7a957f56-2468-421d-bd85-9d736a9402bb" name="1.RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -250,6 +59,207 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="calltestcase" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass" id="cad27b84-14be-404c-b842-6164295b6fc7" disabled="true">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f7a10861-6ab8-40ae-af6a-214cb6fab909</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>securityToken</con:name>
+          <con:value>72ad80ab4ba0f0p43164af3468a844a9893a8d0122af</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ConfrimationNum</con:name>
+          <con:value>CMUH0E</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Origin</con:name>
+          <con:value>YUL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Destination</con:name>
+          <con:value>NCE</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DepartureDate</con:name>
+          <con:value>2023-03-24</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReturnDate</con:name>
+          <con:value>2023-03-28</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ResBalance</con:name>
+          <con:value>2378.28</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value>3</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LogicFlightKey</con:name>
+          <con:value>-1119085969:3/24/2023 4:50:00 PM</con:value>
+        </con:property>
+        <con:property>
+          <con:name>TripId</con:name>
+          <con:value>3</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LFID</con:name>
+          <con:value>-111636324</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PhysicalFlightID</con:name>
+          <con:value>2122022144</con:value>
+        </con:property>
+        <con:property>
+          <con:name>FCCode</con:name>
+          <con:value>C</con:value>
+        </con:property>
+        <con:property>
+          <con:name>FBCode</con:name>
+          <con:value>QIFLXCAO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_Email</con:name>
+          <con:value>radix@radixx.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_age</con:name>
+          <con:value>25</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_age</con:name>
+          <con:value>6</con:value>
+        </con:property>
+        <con:property>
+          <con:name>currency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>paycurrency</con:name>
+          <con:value>CAD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ModifyDate</con:name>
+          <con:value>2023-03-30</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeAddress</con:name>
+          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeCity</con:name>
+          <con:value>ORLANDO</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomeState</con:name>
+          <con:value>FL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_HomePostal</con:name>
+          <con:value>32822</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+          <con:value>BobADL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+          <con:value>Mol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+          <con:value>Young</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_DOB</con:name>
+          <con:value>1979-03-20</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameTwo</con:name>
+          <con:value>Mechile</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameTwo</con:name>
+          <con:value>Corry</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfOne</con:name>
+          <con:value>EllahInf</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfOne</con:name>
+          <con:value>Lucy</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameCHDOne</con:name>
+          <con:value>TomCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameCHDone</con:name>
+          <con:value>Chris</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_DOB</con:name>
+          <con:value>2017-03-20</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyFirstName</con:name>
+          <con:value>MattADL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyMiddleName</con:name>
+          <con:value>Charles</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyLastName</con:name>
+          <con:value>Cameron</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>securityToken</con:entry>
+        <con:entry>ConfrimationNum</con:entry>
+        <con:entry>Origin</con:entry>
+        <con:entry>Destination</con:entry>
+        <con:entry>DepartureDate</con:entry>
+        <con:entry>ReturnDate</con:entry>
+        <con:entry>ResBalance</con:entry>
+        <con:entry>fareid</con:entry>
+        <con:entry>LogicFlightKey</con:entry>
+        <con:entry>TripId</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>PhysicalFlightID</con:entry>
+        <con:entry>FCCode</con:entry>
+        <con:entry>FBCode</con:entry>
+        <con:entry>p_Email</con:entry>
+        <con:entry>ADT_age</con:entry>
+        <con:entry>CHD_age</con:entry>
+        <con:entry>currency</con:entry>
+        <con:entry>paycurrency</con:entry>
+        <con:entry>ModifyDate</con:entry>
+        <con:entry>p_HomeAddress</con:entry>
+        <con:entry>p_HomeCity</con:entry>
+        <con:entry>p_HomeState</con:entry>
+        <con:entry>p_HomePostal</con:entry>
+        <con:entry>p_FirstName</con:entry>
+        <con:entry>p_MiddleName</con:entry>
+        <con:entry>p_LastName</con:entry>
+        <con:entry>ADT_DOB</con:entry>
+        <con:entry>p_FirstNameTwo</con:entry>
+        <con:entry>p_MiddleNameTwo</con:entry>
+        <con:entry>p_FirstNameInfOne</con:entry>
+        <con:entry>p_MiddleNameInfOne</con:entry>
+        <con:entry>p_FirstNameCHDOne</con:entry>
+        <con:entry>p_MiddleNameCHDone</con:entry>
+        <con:entry>CHD_DOB</con:entry>
+        <con:entry>p_ModifyFirstName</con:entry>
+        <con:entry>p_ModifyMiddleName</con:entry>
+        <con:entry>p_ModifyLastName</con:entry>
+      </con:returnProperties>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
   <con:testStep id="77be0d04-a07b-41b6-9626-b8bb1d6ed67d" name="2.RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -267,7 +277,7 @@
       <tem:RetrievePNR>
          <!--Optional:-->
          <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
@@ -279,7 +289,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#ConfrimationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -327,7 +337,7 @@
    <soapenv:Body>
       <tem:RetrieveFareQuote>
          <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
             <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#currency}</rad:CurrencyOfFareQuote>
             <rad:PromotionalCode xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
@@ -338,13 +348,13 @@
             <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
             <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
                <rad:FareQuoteDetail>
-                  <rad:Origin>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#Origin}</rad:Origin>
-                  <rad:Destination>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#Destination}</rad:Destination>
+                  <rad:Origin>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#Origin}</rad:Origin>
+                  <rad:Destination>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#Destination}</rad:Destination>
                   <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#DepartureDate}</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -357,11 +367,8 @@
                   <rad:LanguageCode>en</rad:LanguageCode>
                   <rad:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareQuoteRequestInfos>
-                     <rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>6</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo>
-                        <rad:PassengerTypeID>5</rad:PassengerTypeID>
-                        <rad:TotalSeatsRequired>1</rad:TotalSeatsRequired>
-                     </rad:FareQuoteRequestInfo>
-                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#LogicFlightKey}</rad:LogicalFlightKey>
+                     <rad:FareQuoteRequestInfo><rad:PassengerTypeID>6</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo>
+                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#LogicFlightKey}</rad:LogicalFlightKey>
                </rad:FareQuoteDetail>
             </rad:FareQuoteDetails>
             <rad:ProfileId xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:ProfileId>
@@ -395,6 +402,56 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer NewFairID" id="934f4932-f177-4557-a8be-2958ff2e10f1">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>NewFairID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
+        <con:targetType>NewFairID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>NewFCCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FCCode[1]</con:sourcePath>
+        <con:targetType>NewFCCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>NewFBCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FBCode[1]</con:sourcePath>
+        <con:targetType>NewFBCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>NewFlightLogicCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:LFID[1]</con:sourcePath>
+        <con:targetType>NewFlightLogicCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="247e65fe-8395-42a4-97ca-0fb2cbfd0998" name="4.Modify PNR- Fare Downgrade" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -412,7 +469,7 @@
       <tem:ModifyPNR>
          <!--Optional:-->
          <tem:ModifyPnrRequest>
-            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes><rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode></rad:CarrierCodes>
             <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
             <!--Optional:-->
@@ -420,10 +477,10 @@
             <rad1:ActionType>ReplaceFlightOnReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#ConfrimationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
-            <rad1:FareInformationID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#TripId}</rad1:FareInformationID>
-            <rad1:LogicalFlightKeyToReplace>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]}</rad1:LogicalFlightKeyToReplace>
+            <rad1:FareInformationID>${#TestCase#NewFairID}</rad1:FareInformationID>
+            <rad1:LogicalFlightKeyToReplace>${#TestCase#NewFlightLogicCode}</rad1:LogicalFlightKeyToReplace>
             <rad1:LogicalFlightKeyToRemove>${empty}</rad1:LogicalFlightKeyToRemove>
             <rad1:PersonOrgIdentifierToRemove>0</rad1:PersonOrgIdentifierToRemove>
             <rad1:PassengersToAdd>
@@ -494,7 +551,7 @@
       <tem:AssessPaymentMethodFees>
          <!--Optional:-->
          <tem:AssessPaymentMethodFeesRequest>
-            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -512,7 +569,7 @@
                   <!--Optional:-->
                   <rad1:PaymentMethodType>?</rad1:PaymentMethodType>
                   <rad1:CardNumber>?</rad1:CardNumber>
-                  <rad1:PaymentAmount>${4.Modify PNR- Fare Downgrade#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]}</rad1:PaymentAmount>
+                  <rad1:PaymentAmount>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#ResBalance}</rad1:PaymentAmount>
                </rad1:PaymentToAssessFee>
             </rad1:PaymentsToAssessFee>
          </tem:AssessPaymentMethodFeesRequest>
@@ -562,7 +619,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -626,7 +683,7 @@
          <!--Optional:-->
          <tem:ExternalProcessedPaymentRequest>
             <rad:TransactionInfo>
-               <rad1:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad1:SecurityGUID>
+               <rad1:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad1:SecurityGUID>
                <rad1:CarrierCodes>
                   <!--Zero or more repetitions:-->
                   <rad1:CarrierCode><rad1:AccessibleCarrierCode>1D</rad1:AccessibleCarrierCode></rad1:CarrierCode>
@@ -804,7 +861,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -892,6 +949,23 @@ m.append(res, "UTF-8")
 }</script>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>NewFairID</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>NewFCCode</con:name>
+      <con:value>Q</con:value>
+    </con:property>
+    <con:property>
+      <con:name>NewFBCode</con:name>
+      <con:value>QIFLXCAO</con:value>
+    </con:property>
+    <con:property>
+      <con:name>NewFlightLogicCode</con:name>
+      <con:value>-111636324</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
 </con:testCase>

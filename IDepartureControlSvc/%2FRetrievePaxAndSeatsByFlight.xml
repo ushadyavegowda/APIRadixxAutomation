@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="f8389aa0-41fd-45f5-8eb4-9f86680c914b" name="/RetrievePaxAndSeatsByFlight" path="/RetrievePaxAndSeatsByFlight" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="f8389aa0-41fd-45f5-8eb4-9f86680c914b" name="/RetrievePaxAndSeatsByFlight" path="/RetrievePaxAndSeatsByFlight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f8389aa0-41fd-45f5-8eb4-9f86680c914bfileName">%2FRetrievePaxAndSeatsByFlight</con:setting>
   </con:settings>

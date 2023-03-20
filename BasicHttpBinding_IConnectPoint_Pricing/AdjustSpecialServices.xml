@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/AdjustSpecialServices" anonymous="optional" bindingOperationName="AdjustSpecialServices" id="20d4c7ee-bddc-44f6-bb48-b3d300804543" inputName="" isOneWay="false" name="AdjustSpecialServices" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/AdjustSpecialServices" anonymous="optional" bindingOperationName="AdjustSpecialServices" id="20d4c7ee-bddc-44f6-bb48-b3d300804543" inputName="" isOneWay="false" name="AdjustSpecialServices" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="20d4c7ee-bddc-44f6-bb48-b3d300804543fileName">AdjustSpecialServices</con:setting>
   </con:settings>

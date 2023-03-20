@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="fb3c0d22-3c79-401d-8d22-4dc8d7c52100" name="/UpdateFlightStatus" path="/UpdateFlightStatus" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="fb3c0d22-3c79-401d-8d22-4dc8d7c52100" name="/UpdateFlightStatus" path="/UpdateFlightStatus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="fb3c0d22-3c79-401d-8d22-4dc8d7c52100fileName">%2FUpdateFlightStatus</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile" anonymous="optional" bindingOperationName="RetrieveProfile" id="45141f05-3c67-41fa-aa7d-2d4307bcc905" inputName="" isOneWay="false" name="RetrieveProfile" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Profiles/RetrieveProfile" anonymous="optional" bindingOperationName="RetrieveProfile" id="45141f05-3c67-41fa-aa7d-2d4307bcc905" inputName="" isOneWay="false" name="RetrieveProfile" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="45141f05-3c67-41fa-aa7d-2d4307bcc905fileName">RetrieveProfile</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="100a5f9e-a04d-400c-aa5f-7f591b7de8aa" name="/RetrievePassengersByName" path="/RetrievePassengersByName" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="100a5f9e-a04d-400c-aa5f-7f591b7de8aa" name="/RetrievePassengersByName" path="/RetrievePassengersByName" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="100a5f9e-a04d-400c-aa5f-7f591b7de8aafileName">%2FRetrievePassengersByName</con:setting>
   </con:settings>

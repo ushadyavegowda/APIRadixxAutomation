@@ -3,44 +3,46 @@
   <con:settings>
     <con:setting id="287e453b-2439-4eeb-bf76-410588185372fileName">0049_CP_Interline_ModifyReplaceflight</con:setting>
   </con:settings>
-  <con:testStep disabled="true" id="71452e74-87b6-48f0-b5f5-e1d15ddc3f03" name="1. RetrieveSecuirtyToken" type="calltestcase">
+  <con:testStep type="calltestcase" name="1. Prequisite Run Test#48" id="d9e14ca5-44c7-49fd-b03e-3afa119056aa">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="646813e6-9627-4aae-8a0a-98dc748fda4c" name="1. Prequisite Run Test#48" type="calltestcase">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>8d35b7b8-3174-4a59-9823-953c726b95a0</con:targetTestCase>
+      <con:targetTestCase>3a854512-72d2-486c-b5ce-bd607f172210</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>securityToken</con:name>
+          <con:value>c7189629zdf1ffs763y4p361h37aaab956b97740d70f</con:value>
         </con:property>
         <con:property>
           <con:name>ConfrimationNum</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>ResBalance</con:name>
-        </con:property>
-        <con:property>
-          <con:name>DepartureDate</con:name>
-        </con:property>
-        <con:property>
-          <con:name>ReturnDate</con:name>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>Origin</con:name>
+          <con:value>YUL</con:value>
         </con:property>
         <con:property>
           <con:name>Destination</con:name>
+          <con:value>NCE</con:value>
         </con:property>
         <con:property>
-          <con:name>PhysicalFlightID</con:name>
+          <con:name>DepartureDate</con:name>
+          <con:value>2023-03-24</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ReturnDate</con:name>
+          <con:value>2023-03-28</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ResBalance</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>fareid</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LogicFlightKey</con:name>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>TripId</con:name>
@@ -48,174 +50,148 @@
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
+          <con:value>-111636324</con:value>
         </con:property>
         <con:property>
-          <con:name>fareid</con:name>
+          <con:name>PhysicalFlightID</con:name>
+          <con:value>2122022144</con:value>
         </con:property>
         <con:property>
-          <con:name>ModifyDate</con:name>
+          <con:name>p_Email</con:name>
+          <con:value>radix@radixx.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_age</con:name>
+          <con:value>25</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_age</con:name>
+          <con:value>6</con:value>
+        </con:property>
+        <con:property>
+          <con:name>currency</con:name>
+          <con:value>CAD</con:value>
         </con:property>
         <con:property>
           <con:name>paycurrency</con:name>
           <con:value>CAD</con:value>
         </con:property>
         <con:property>
-          <con:name>currency</con:name>
-        </con:property>
-        <con:property>
-          <con:name>CarrierCode</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstName</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_LastName</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleName</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameTwo</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameTwo</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameCHDOne</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameCHDone</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameInfOne</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameInfOne</con:name>
-        </con:property>
-        <con:property>
-          <con:name>ADT_age</con:name>
-        </con:property>
-        <con:property>
-          <con:name>CHD_age</con:name>
-        </con:property>
-        <con:property>
-          <con:name>ADT_DOB</con:name>
-        </con:property>
-        <con:property>
-          <con:name>CHD_DOB</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_Email</con:name>
+          <con:name>ModifyDate</con:name>
+          <con:value>2023-03-30</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomeAddress</con:name>
+          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomeCity</con:name>
+          <con:value>ORLANDO</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomeState</con:name>
+          <con:value>FL</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomePostal</con:name>
+          <con:value>32822</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstName</con:name>
+          <con:value>BobADL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleName</con:name>
+          <con:value>Mol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_LastName</con:name>
+          <con:value>Young</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ADT_DOB</con:name>
+          <con:value>1979-03-20</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameTwo</con:name>
+          <con:value>Mechile</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameTwo</con:name>
+          <con:value>Corry</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameInfOne</con:name>
+          <con:value>EllahInf</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameInfOne</con:name>
+          <con:value>Lucy</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_FirstNameCHDOne</con:name>
+          <con:value>TomCHD</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_MiddleNameCHDone</con:name>
+          <con:value>Chris</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CHD_DOB</con:name>
+          <con:value>2017-03-20</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyFirstName</con:name>
+          <con:value>MattADL</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyMiddleName</con:name>
+          <con:value>Charles</con:value>
+        </con:property>
+        <con:property>
+          <con:name>p_ModifyLastName</con:name>
+          <con:value>Cameron</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
+        <con:entry>securityToken</con:entry>
+        <con:entry>ConfrimationNum</con:entry>
+        <con:entry>Origin</con:entry>
+        <con:entry>Destination</con:entry>
+        <con:entry>DepartureDate</con:entry>
+        <con:entry>ReturnDate</con:entry>
+        <con:entry>ResBalance</con:entry>
+        <con:entry>fareid</con:entry>
+        <con:entry>LogicFlightKey</con:entry>
+        <con:entry>TripId</con:entry>
+        <con:entry>LFID</con:entry>
+        <con:entry>PhysicalFlightID</con:entry>
+        <con:entry>p_Email</con:entry>
+        <con:entry>ADT_age</con:entry>
+        <con:entry>CHD_age</con:entry>
+        <con:entry>currency</con:entry>
+        <con:entry>paycurrency</con:entry>
+        <con:entry>ModifyDate</con:entry>
         <con:entry>p_HomeAddress</con:entry>
         <con:entry>p_HomeCity</con:entry>
         <con:entry>p_HomeState</con:entry>
         <con:entry>p_HomePostal</con:entry>
-        <con:entry>p_Email</con:entry>
-        <con:entry>ADT_age</con:entry>
-        <con:entry>CHD_age</con:entry>
-        <con:entry>p_FirstNameInfCHD</con:entry>
-        <con:entry>p_LastNameInfCHD</con:entry>
-        <con:entry>p_FirstNameCHD</con:entry>
-        <con:entry>p_MiddleNameInfCHD</con:entry>
-        <con:entry>fareid</con:entry>
-        <con:entry>p_MiddleNameCHD</con:entry>
-        <con:entry>LFID</con:entry>
-        <con:entry>currency</con:entry>
-        <con:entry>PhysicalFlightID</con:entry>
-        <con:entry>ResBalance</con:entry>
-        <con:entry>DepartureDate</con:entry>
-        <con:entry>ReturnDate</con:entry>
-        <con:entry>ModifyDate</con:entry>
-        <con:entry>Origin</con:entry>
-        <con:entry>Destination</con:entry>
-        <con:entry>paycurrency</con:entry>
         <con:entry>p_FirstName</con:entry>
-        <con:entry>p_LastName</con:entry>
         <con:entry>p_MiddleName</con:entry>
-        <con:entry>p_FirstNameTwo</con:entry>
-        <con:entry>p_LastNameTwo</con:entry>
-        <con:entry>p_MiddleNameTwo</con:entry>
-        <con:entry>p_LastNameCHD</con:entry>
-        <con:entry>p_FirstNameInfOne</con:entry>
-        <con:entry>p_LastNameInfOne</con:entry>
-        <con:entry>p_MiddleNameInfOne</con:entry>
+        <con:entry>p_LastName</con:entry>
         <con:entry>ADT_DOB</con:entry>
+        <con:entry>p_FirstNameTwo</con:entry>
+        <con:entry>p_MiddleNameTwo</con:entry>
+        <con:entry>p_FirstNameInfOne</con:entry>
+        <con:entry>p_MiddleNameInfOne</con:entry>
+        <con:entry>p_FirstNameCHDOne</con:entry>
+        <con:entry>p_MiddleNameCHDone</con:entry>
         <con:entry>CHD_DOB</con:entry>
-        <con:entry>securityToken</con:entry>
-        <con:entry>TripId</con:entry>
-        <con:entry>ConfrimationNum</con:entry>
+        <con:entry>p_ModifyFirstName</con:entry>
+        <con:entry>p_ModifyMiddleName</con:entry>
+        <con:entry>p_ModifyLastName</con:entry>
       </con:returnProperties>
       <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep disabled="true" id="7f1efe27-2dd3-41d5-a5eb-2ff93c962611" name="1.RetrieveSecurityToken" type="request">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
-      <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7" incomingWss="" name="1.RetrieveSecurityToken" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Security.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:RetrieveSecurityToken>
-         <!--Optional:-->
-         <tem:RetrieveSecurityTokenRequest>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <rad1:LogonID>CP_1D_INT</rad1:LogonID>
-            <rad1:Password>R@d1xx!</rad1:Password>
-         </tem:RetrieveSecurityTokenRequest>
-      </tem:RetrieveSecurityToken>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion disabled="true" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance" type="Schema Compliance">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
     </con:config>
   </con:testStep>
   <con:testStep disabled="true" id="97bbf94c-edbc-4682-b5d4-2a01209bff88" name="InputValues" type="groovy">

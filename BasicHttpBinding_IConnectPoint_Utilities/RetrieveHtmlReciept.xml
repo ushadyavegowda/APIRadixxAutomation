@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveHtmlReciept" anonymous="optional" bindingOperationName="RetrieveHtmlReciept" id="2f3089b1-0876-4897-9582-2ec5ca8c1364" inputName="" isOneWay="false" name="RetrieveHtmlReciept" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/RetrieveHtmlReciept" anonymous="optional" bindingOperationName="RetrieveHtmlReciept" id="2f3089b1-0876-4897-9582-2ec5ca8c1364" inputName="" isOneWay="false" name="RetrieveHtmlReciept" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2f3089b1-0876-4897-9582-2ec5ca8c1364fileName">RetrieveHtmlReciept</con:setting>
   </con:settings>

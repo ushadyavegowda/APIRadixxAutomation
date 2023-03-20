@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Fees/AssessPaymentMethodFees" anonymous="optional" bindingOperationName="AssessPaymentMethodFees" id="59865acd-7fdf-4d17-9512-221ca9b08692" inputName="" isOneWay="false" name="AssessPaymentMethodFees" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fees/AssessPaymentMethodFees" anonymous="optional" bindingOperationName="AssessPaymentMethodFees" id="59865acd-7fdf-4d17-9512-221ca9b08692" inputName="" isOneWay="false" name="AssessPaymentMethodFees" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="59865acd-7fdf-4d17-9512-221ca9b08692fileName">AssessPaymentMethodFees</con:setting>
   </con:settings>

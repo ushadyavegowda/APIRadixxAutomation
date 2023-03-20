@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="e2d358f8-e650-447b-bae0-8dec2eeb2680" name="/AddPayment" path="/AddPayment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="e2d358f8-e650-447b-bae0-8dec2eeb2680" name="/AddPayment" path="/AddPayment" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e2d358f8-e650-447b-bae0-8dec2eeb2680fileName">%2FAddPayment</con:setting>
   </con:settings>

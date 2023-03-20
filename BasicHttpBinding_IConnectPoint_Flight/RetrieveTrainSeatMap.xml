@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" anonymous="optional" bindingOperationName="RetrieveTrainSeatMap" id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6" inputName="" isOneWay="false" name="RetrieveTrainSeatMap" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveTrainSeatMap" anonymous="optional" bindingOperationName="RetrieveTrainSeatMap" id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6" inputName="" isOneWay="false" name="RetrieveTrainSeatMap" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a3d953e4-e5ec-4e7e-89b9-7d9de7ab2eb6fileName">RetrieveTrainSeatMap</con:setting>
   </con:settings>

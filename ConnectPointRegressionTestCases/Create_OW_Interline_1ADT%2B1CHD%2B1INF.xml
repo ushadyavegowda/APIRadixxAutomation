@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="3a854512-72d2-486c-b5ce-bd607f172210" keepSession="false" maxResults="0" name="Create_OW_Interline_1ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="3a854512-72d2-486c-b5ce-bd607f172210" keepSession="false" maxResults="0" name="Create_OW_Interline_1ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3a854512-72d2-486c-b5ce-bd607f172210fileName">Create_OW_Interline_1ADT%2B1CHD%2B1INF</con:setting>
   </con:settings>
-  <con:testStep id="a8cf6c87-58b9-4155-a9b1-ad1c2b3036ae" name="1. RetrieveSecuirtyToken" type="calltestcase" disabled="true">
+  <con:testStep disabled="true" id="a8cf6c87-58b9-4155-a9b1-ad1c2b3036ae" name="1. RetrieveSecuirtyToken" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -12,12 +12,12 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4a7c37f0-dacf-4c08-8c3e-6e09aa4a8d28" name="1.RetrieveSecurityToken">
+  <con:testStep id="4a7c37f0-dacf-4c08-8c3e-6e09aa4a8d28" name="1.RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request name="1.RetrieveSecurityToken" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7">
+      <con:request id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7" incomingWss="" name="1.RetrieveSecurityToken" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -41,19 +41,19 @@
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes">
+        <con:assertion id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance">
+        <con:assertion id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -62,7 +62,7 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
@@ -155,7 +155,7 @@ testRunner.testCase.setPropertyValue("p_HomeState", "FL");
 testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="43761e8b-acf6-4323-a665-305188f2eb80" name="1. Login" type="calltestcase" disabled="true">
+  <con:testStep disabled="true" id="43761e8b-acf6-4323-a665-305188f2eb80" name="1. Login" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -292,7 +292,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetTransferType>XPATH</con:targetTransferType>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>TripId</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
@@ -579,10 +579,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer ResBalance" id="39056539-f072-475d-ad91-2b0287e7e21b">
+  <con:testStep id="39056539-f072-475d-ad91-2b0287e7e21b" name="Property Transfer ResBalance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ResBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.SummaryPNR</con:sourceStep>
@@ -723,10 +723,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer ConfirmationNum and Balance" id="25158c2b-16c9-4ae3-9046-b85a43d1b7d1">
+  <con:testStep id="25158c2b-16c9-4ae3-9046-b85a43d1b7d1" name="Property Transfer ConfirmationNum and Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ConfrimationNum</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
@@ -738,7 +738,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ResBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
@@ -992,12 +992,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer Key" id="9969abff-8ddf-4f3e-9ec9-b56249085083">
+  <con:testStep id="9969abff-8ddf-4f3e-9ec9-b56249085083" name="Property Transfer Key" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicFlightKey</con:name>
-        <con:sourceType xsi:nil="true"/>
+        <con:sourceType/>
         <con:sourceStep>7.CreatePNR-save</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
@@ -1058,7 +1058,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -1086,7 +1086,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>LogicFlightKey</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>
@@ -1098,7 +1098,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>

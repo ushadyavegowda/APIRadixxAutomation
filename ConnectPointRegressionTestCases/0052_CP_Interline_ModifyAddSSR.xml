@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="97c850e8-7ac4-4df6-82b7-d480cd82c4ef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0052_CP_Interline_ModifyAddSSR" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="97c850e8-7ac4-4df6-82b7-d480cd82c4ef" keepSession="false" maxResults="0" name="0052_CP_Interline_ModifyAddSSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="97c850e8-7ac4-4df6-82b7-d480cd82c4effileName">0052_CP_Interline_ModifyAddSSR</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="request" id="16b57f88-4d74-4d51-8533-e6c604a4cf9f" name="1.RetrieveSecurityToken">
+  <con:testStep id="16b57f88-4d74-4d51-8533-e6c604a4cf9f" name="1.RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request name="1.RetrieveSecurityToken" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7">
+      <con:request id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7" incomingWss="" name="1.RetrieveSecurityToken" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -33,19 +33,19 @@
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes">
+        <con:assertion id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance">
+        <con:assertion id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -53,17 +53,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="38296b77-e58f-430b-b754-4a31a4544a0b" name="2.RetrievePNR">
+  <con:testStep id="38296b77-e58f-430b-b754-4a31a4544a0b" name="2.RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request name="2.RetrievePNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="42098b23-dfbf-4f54-9083-fbdd0f694d5a">
+      <con:request id="42098b23-dfbf-4f54-9083-fbdd0f694d5a" incomingWss="" name="2.RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -93,19 +93,19 @@
       </tem:RetrievePNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="c52234da-72f1-42e5-8209-580b9f84d59a" name="Valid HTTP Status Codes">
+        <con:assertion id="c52234da-72f1-42e5-8209-580b9f84d59a" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="8deac603-0804-415f-ac6c-2c20cf14dbc4" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="8deac603-0804-415f-ac6c-2c20cf14dbc4" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="34475ae8-2105-4b2e-8fe8-09fd2699e4e5" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="1e640b58-2063-46a9-ad9b-6c5d563c08ac" name="Schema Compliance" disabled="true">
+        <con:assertion id="34475ae8-2105-4b2e-8fe8-09fd2699e4e5" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion disabled="true" id="1e640b58-2063-46a9-ad9b-6c5d563c08ac" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -113,17 +113,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="bb259fbf-f9ac-466b-8472-f4678d900e2c" name="3.RetrieveFareQuote">
+  <con:testStep id="bb259fbf-f9ac-466b-8472-f4678d900e2c" name="3.RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveFareQuote</con:operation>
-      <con:request name="3.RetrieveFareQuote" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="358a923a-b5fc-4b1a-b6b3-3560af3387ba">
+      <con:request id="358a923a-b5fc-4b1a-b6b3-3560af3387ba" incomingWss="" name="3.RetrieveFareQuote" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -185,19 +185,19 @@
       </tem:RetrieveFareQuote>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="e0ddcc4c-c513-48b7-8352-18a3fd27268a" name="Valid HTTP Status Codes">
+        <con:assertion id="e0ddcc4c-c513-48b7-8352-18a3fd27268a" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="d6015135-2c4a-4d17-bd68-c18bb58adeb2" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="d6015135-2c4a-4d17-bd68-c18bb58adeb2" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="874c79ee-ef1e-40ef-a5c9-61ab3c4db6d1" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="498d7619-e2ec-42df-abd0-0e4e78656755" name="Schema Compliance">
+        <con:assertion id="874c79ee-ef1e-40ef-a5c9-61ab3c4db6d1" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="498d7619-e2ec-42df-abd0-0e4e78656755" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -205,17 +205,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuote"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuote" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="dbb775b4-2fd6-44e2-8990-2941c950eea1" name="4.RetrieveAARQuote">
+  <con:testStep id="dbb775b4-2fd6-44e2-8990-2941c950eea1" name="4.RetrieveAARQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveAARQuote</con:operation>
-      <con:request name="4.RetrieveAARQuote" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="529963bf-de9b-41b2-92b9-04508f5b19ae">
+      <con:request id="529963bf-de9b-41b2-92b9-04508f5b19ae" incomingWss="" name="4.RetrieveAARQuote" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -288,19 +288,19 @@
       </tem:RetrieveAARQuote>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="fa53d67e-dcdc-48c1-80ec-4ffca3ccb9c2" name="Valid HTTP Status Codes">
+        <con:assertion id="fa53d67e-dcdc-48c1-80ec-4ffca3ccb9c2" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="8d19d725-fb8e-4721-8b41-2376f6598426" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="8d19d725-fb8e-4721-8b41-2376f6598426" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="ab57d84d-a3b6-4670-842e-9717691b936a" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="26aa784e-3fce-467e-b5d7-403a09340240" name="Schema Compliance">
+        <con:assertion id="ab57d84d-a3b6-4670-842e-9717691b936a" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="26aa784e-3fce-467e-b5d7-403a09340240" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -308,17 +308,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Pricing/RetrieveAARQuote" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4ca5e348-6f74-4409-82c0-8b1ecd4fe590" name="5.RetriveServiceBundleDetails" disabled="true">
+  <con:testStep disabled="true" id="4ca5e348-6f74-4409-82c0-8b1ecd4fe590" name="5.RetriveServiceBundleDetails" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
       <con:operation>RetrieveServiceBundleDetails</con:operation>
-      <con:request name="5.RetriveServiceBundleDetails" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="dea3bb94-e682-48e5-85a8-e4f7c36ccb0e">
+      <con:request id="dea3bb94-e682-48e5-85a8-e4f7c36ccb0e" incomingWss="" name="5.RetriveServiceBundleDetails" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -347,19 +347,19 @@
       </tem:RetrieveServiceBundleDetails>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="2b7e5243-b872-49bf-9246-aca376a9a711" name="Valid HTTP Status Codes">
+        <con:assertion id="2b7e5243-b872-49bf-9246-aca376a9a711" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="529b12e7-2d7d-47e6-8609-7a6628678d34" name="Response SLA">
+        <con:assertion id="529b12e7-2d7d-47e6-8609-7a6628678d34" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="686029f0-2022-4923-b329-2ebbe01186a9" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="9b9c828a-df66-48fd-a68a-bd7a0e0e1100" name="Schema Compliance">
+        <con:assertion id="686029f0-2022-4923-b329-2ebbe01186a9" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="9b9c828a-df66-48fd-a68a-bd7a0e0e1100" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -367,17 +367,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetails"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceBundleDetails" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="47f82458-7dbe-4b86-b264-326620ef6891" name="6.ModifyPNR-Add Service">
+  <con:testStep id="47f82458-7dbe-4b86-b264-326620ef6891" name="6.ModifyPNR-Add Service" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ModifyPNR</con:operation>
-      <con:request name="6.ModifyPNR-Add Service" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2365ead8-2b7e-4a70-9f89-25464326ebf5">
+      <con:request id="2365ead8-2b7e-4a70-9f89-25464326ebf5" incomingWss="" name="6.ModifyPNR-Add Service" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -500,19 +500,19 @@
       </tem:ModifyPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="a8f6c24e-8435-43bd-8355-cb17b1da8699" name="Valid HTTP Status Codes">
+        <con:assertion id="a8f6c24e-8435-43bd-8355-cb17b1da8699" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="3ea034c9-2439-424b-8b43-ece168765351" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="3ea034c9-2439-424b-8b43-ece168765351" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="3031e8db-b363-4d9b-8c8f-90d4b75c1ada" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="214f44bf-ee32-4ba1-aae8-ec7ea8c259c0" name="Schema Compliance" disabled="true">
+        <con:assertion id="3031e8db-b363-4d9b-8c8f-90d4b75c1ada" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion disabled="true" id="214f44bf-ee32-4ba1-aae8-ec7ea8c259c0" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -520,17 +520,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="3673b2a0-989b-48f7-b155-d1454dece163" name="7.AddtoVCHR">
+  <con:testStep id="3673b2a0-989b-48f7-b155-d1454dece163" name="7.AddtoVCHR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
       <con:operation>AddVoucherToReservation</con:operation>
-      <con:request name="7.AddtoVCHR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c1cbe3bc-a611-4683-a154-e4d70564a1c2">
+      <con:request id="c1cbe3bc-a611-4683-a154-e4d70564a1c2" incomingWss="" name="7.AddtoVCHR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -562,19 +562,19 @@
       </tem:AddVoucherToReservation>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="775a7ff0-c80e-42e9-9e87-29cfdb58f089" name="Valid HTTP Status Codes">
+        <con:assertion id="775a7ff0-c80e-42e9-9e87-29cfdb58f089" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="812506e7-aa92-4f0d-ab0a-f077e60e9a3d" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="812506e7-aa92-4f0d-ab0a-f077e60e9a3d" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="140d055c-15aa-49ca-95f2-c92648faf73f" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="6742b878-9e47-441a-95ef-89b194d43bcb" name="Schema Compliance" disabled="true">
+        <con:assertion id="140d055c-15aa-49ca-95f2-c92648faf73f" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion disabled="true" id="6742b878-9e47-441a-95ef-89b194d43bcb" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -582,17 +582,17 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Fulfillment/AddVoucherToReservation"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Fulfillment/AddVoucherToReservation" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="caa8f3a3-045b-4ff0-94b3-137bb8957c93" name="8.CreatePNR-save">
+  <con:testStep id="caa8f3a3-045b-4ff0-94b3-137bb8957c93" name="8.CreatePNR-save" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="8.CreatePNR-save" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4c25dbfb-7dd7-4f2e-81fe-5151f549c81b">
+      <con:request id="4c25dbfb-7dd7-4f2e-81fe-5151f549c81b" incomingWss="" name="8.CreatePNR-save" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -624,19 +624,19 @@
       </tem:CreatePNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="3e024397-96f9-4ada-922b-b2be198021a4" name="Valid HTTP Status Codes">
+        <con:assertion id="3e024397-96f9-4ada-922b-b2be198021a4" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="07389224-f2e2-4fcc-89df-5b13381108d3" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="07389224-f2e2-4fcc-89df-5b13381108d3" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="f4a451c3-da10-4e92-bd6b-349102f73a98" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="2ac7725f-5809-432a-aab9-d8098968b790" name="Schema Compliance" disabled="true">
+        <con:assertion id="f4a451c3-da10-4e92-bd6b-349102f73a98" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion disabled="true" id="2ac7725f-5809-432a-aab9-d8098968b790" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -644,12 +644,12 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="4832cc9d-9770-41ae-bbe5-951e5cc284c8">
+  <con:testStep id="4832cc9d-9770-41ae-bbe5-951e5cc284c8" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

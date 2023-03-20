@@ -145,7 +145,7 @@
     </con:service>
     <con:property>
       <con:name>LogonID</con:name>
-      <con:value>CP_1D_20Q4</con:value>
+      <con:value>CP_1D_INT</con:value>
     </con:property>
     <con:property>
       <con:name>Password</con:name>

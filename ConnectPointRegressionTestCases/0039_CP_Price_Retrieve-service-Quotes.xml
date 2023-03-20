@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="a41a1b9c-4e5f-4c53-8daa-044b96c18c60" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0039_CP_Price_Retrieve service Quotes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a41a1b9c-4e5f-4c53-8daa-044b96c18c60fileName">0039_CP_Price_Retrieve-service-Quotes</con:setting>
+  </con:settings>
+  <con:testStep type="calltestcase" name="LoginToDCS" id="2a39d37d-f770-43db-8ed7-a460adc6c2d0">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f76528fa-fc56-469d-b061-cbc6bfa97623</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GetLFID" id="7e1b7c5a-14e3-49f0-ab48-3b9e75264e11">
+    <con:settings/>
+    <con:config service="IDepartureControlSvc" resourcePath="/${#Project#ENV}/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="07ad27bc-e438-4639-994f-31bfbdb830fd" mediaType="application/json" name="GetLFID" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://20q4dcsuat.radixxuat.com</con:endpoint>
+        <con:request>{\r
+   "Param" : {\r
+      "FlightOriginDate" : "${#TestSuite#DepartureDate}",\r
+      "Origin" : "${#TestSuite#Origin}",\r
+      "Destination" : "${#TestSuite#Destination}",\r
+      "FlightNumber" : "${#TestSuite#flightnum}",\r
+      "CarrierCode" : "${#TestSuite#carriercode}",\r
+      "ApplicationUserId" : "radixx",\r
+      "ApplicationId" : "radixx1"\r
+   },\r
+   "SecurityToken" : "${#TestSuite#DcsSecToken}",\r
+   "CorrId" : "299"\r
+}</con:request>
+        <con:originalUri>https://rdxdcsint.radixxuat.com/RDX/Radixx.Ecosystem.Gtwy/DepartureControl.svc/v1/GetLogicalFlightAndDepartDate</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ff2a36d7-481a-4329-82ce-13e6af6ee8e0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer  LFID" id="64b88f9f-cd08-420c-8220-c19b71b43898">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="false" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>LFID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>GetLFID</con:sourceStep>
+        <con:sourcePath>$['LogicalFlightId']</con:sourcePath>
+        <con:targetType>LFID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="edd9639d-4062-43a7-8aea-5ad3daf17751" name="RetrieveSecuirtyToken and Input parameters" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="4bf27f00-9a1b-4786-a3a1-41e6df3eacd0" name="RetrieveServiceQuote">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
+      <con:operation>RetrieveServiceQuote</con:operation>
+      <con:request name="RetrieveServiceQuote" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f1001e6e-0ad4-4fef-81f2-23d24ddb520a">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.Service" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveServiceQuote>
+         <!--Optional:-->
+         <tem:RetrieveServiceQuoteRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#Project#CarrierCode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>299</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
+            <rad1:LogicalFlightID>${#TestCase#LFID}</rad1:LogicalFlightID>
+            <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
+            <rad1:AirportCode>${#TestSuite#Origin}</rad1:AirportCode>
+            <rad1:ServiceCode>${#TestCase#ServiceCode}</rad1:ServiceCode>
+            <rad1:Cabin>?</rad1:Cabin>
+            <rad1:Category>?</rad1:Category>
+            <rad1:Currency>${#TestSuite#currency}</rad1:Currency>
+            <rad1:UTCOffset>0</rad1:UTCOffset>
+            <rad1:OperatingCarrierCode>${#TestSuite#carriercode}</rad1:OperatingCarrierCode>
+            <rad1:MarketingCarrierCode>${#TestSuite#carriercode}</rad1:MarketingCarrierCode>
+            <rad1:FareClass>B</rad1:FareClass>
+            <rad1:FareBasisCode>${#TestSuite#FBC}</rad1:FareBasisCode>
+            <rad1:ReservationChannel>STANDARD</rad1:ReservationChannel>
+            <!--Optional:-->
+            <rad1:ServiceTypes>
+               <!--Zero or more repetitions:-->
+               <arr:int>1</arr:int>
+            </rad1:ServiceTypes>
+         </tem:RetrieveServiceQuoteRequest>
+      </tem:RetrieveServiceQuote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="9e4cb7b2-c177-4283-9ad1-2ff4fae9aaa5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" name="Response SLA" disabled="true" id="718c1511-86ae-42a3-b7b5-a0b1650950a9">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="d42c4d16-a284-48a7-8a19-7cff702d1175" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="c8ca509c-765c-4afc-9829-3638234a3b3c" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuote"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>ServiceCode</con:name>
+      <con:value>VGML</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstName</con:name>
+      <con:value>HFGZIDTWO</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastName</con:name>
+      <con:value>XQUUBITWO</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleName</con:name>
+      <con:value>XQUUBITWOT</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_DOB</con:name>
+      <con:value>1998-03-03</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_Gender</con:name>
+      <con:value>Male</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_Age</con:name>
+      <con:value>25</con:value>
+    </con:property>
+    <con:property>
+      <con:name>PersonOrgID</con:name>
+      <con:value>-3</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Address1</con:name>
+      <con:value>123 Elm Street</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Address2</con:name>
+    </con:property>
+    <con:property>
+      <con:name>LFID</con:name>
+      <con:value>186601</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>

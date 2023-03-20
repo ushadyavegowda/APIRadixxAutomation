@@ -56,3 +56,9 @@ Create-OW-pnr-withSSR.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
 0054_CP_Interline_CancelRes.xml
 0038_CP_Res_CreateOWBooking_Cash_promocode.xml
+0039_CP_Price_Retrieve-service-Quotes.xml
+0040_CP_Flight_RetrieveAirportRoutes.xml
+0041_Prequisite_CP_Res_Modify_Add-and-RemoveSSR.xml
+CP_41-CP_Res_Modify_Add-and-RemoveSSR.xml
+0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
+CP_43-CP_ModifyBooking-1ADT1CHD1-INF-Fare-bundle.xml

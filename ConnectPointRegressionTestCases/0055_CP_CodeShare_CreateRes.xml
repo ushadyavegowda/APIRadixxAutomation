@@ -26,8 +26,8 @@
                   <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
-            <rad1:LogonID>CP_1D_INT</rad1:LogonID>
-            <rad1:Password>R@d1xx!</rad1:Password>
+            <rad1:LogonID>${#Project#TS_LoginId}</rad1:LogonID>
+            <rad1:Password>${#Project#TS_Password}</rad1:Password>
          </tem:RetrieveSecurityTokenRequest>
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
@@ -57,6 +57,99 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="876d188e-132d-48f6-a24e-d03417bccbae" name="InputValues" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>// importing the Java methods
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+def DepartureDate = new Date().plus(4)
+def ReturnDate = new Date().plus(8)
+def ModifyDate = new Date().plus(10)
+
+
+
+/* Perf prod*/ 
+def origin = "YUL"
+def destination = "MIA"
+
+def securityToken = context.expand( '${1.RetrieveSecurityToken#Response#declare namespace a=\'http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response\'; declare namespace ns1=\'http://tempuri.org/\'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}' )
+testRunner.testCase.setPropertyValue("securityToken", securityToken);
+
+
+def currency = "CAD"
+def paycurrency = "CAD"
+
+//Fare Information
+def FareClass= "B"
+def FareBasisCode= "BOW"
+
+testRunner.testCase.setPropertyValue("FareClass", FareClass);
+testRunner.testCase.setPropertyValue("FareBasisCode", FareBasisCode);
+
+//Date and flight info
+testRunner.testCase.setPropertyValue("DepartureDate", DepartureDate.format("yyyy-MM-dd"));
+testRunner.testCase.setPropertyValue("ReturnDate", ReturnDate.format("yyyy-MM-dd"));
+testRunner.testCase.setPropertyValue("ModifyDate", ModifyDate.format("yyyy-MM-dd"));
+testRunner.testCase.setPropertyValue("Origin", origin);
+testRunner.testCase.setPropertyValue("Destination", destination);
+testRunner.testCase.setPropertyValue("currency", currency);
+testRunner.testCase.setPropertyValue("paycurrency", paycurrency);
+
+//************Passenger Info
+def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+def MiddleName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
+//pax one
+testRunner.testCase.setPropertyValue("p_FirstName", "BobADL");
+testRunner.testCase.setPropertyValue("p_LastName", "Young");
+testRunner.testCase.setPropertyValue("p_MiddleName", "Mol");
+//PaX two
+testRunner.testCase.setPropertyValue("p_FirstNameTwo", "Mechile");
+testRunner.testCase.setPropertyValue("p_MiddleNameTwo", "Corry");
+//CHD
+testRunner.testCase.setPropertyValue("p_FirstNameCHDOne", "TomCHD");
+testRunner.testCase.setPropertyValue("p_MiddleNameCHDone", "Chris");
+//infant
+testRunner.testCase.setPropertyValue("p_FirstNameInfOne", "EllahInf");
+testRunner.testCase.setPropertyValue("p_MiddleNameInfOne", "Lucy")
+//Modify Name
+testRunner.testCase.setPropertyValue("p_ModifyFirstName", "MattADL");
+testRunner.testCase.setPropertyValue("p_ModifyMiddleName", "Charles");
+testRunner.testCase.setPropertyValue("p_ModifyLastName", "Cameron");
+
+
+//******************************DOB	
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");	
+
+//ADT age	
+int age = 44;	
+Calendar a  = Calendar.getInstance();	
+a.add(Calendar.YEAR,- age);	
+ADT_DOB= sdf.format(a.getTime());	
+//CHD age	
+int ChdAge = 6;	
+Calendar c  = Calendar.getInstance();	
+c.add(Calendar.YEAR,- ChdAge);	
+CHD_DOB= sdf.format(c.getTime());	
+//INF age	
+def p_DOB_INF= new Date().minus(120)
+testRunner.testCase.setPropertyValue("ADT_age", "25");
+testRunner.testCase.setPropertyValue("CHD_age", "6");
+testRunner.testCase.setPropertyValue("ADT_DOB", ADT_DOB);
+testRunner.testCase.setPropertyValue("CHD_DOB", CHD_DOB);
+//testRunner.testCase.setPropertyValue("p_DOB_INF", p_DOB_INF);
+
+
+//APIS info - 1 ADT
+testRunner.testCase.setPropertyValue("p_Email","radix@radixx.com");
+testRunner.testCase.setPropertyValue("p_HomeAddress", "6310 HAZELTINE NATIONAL DR");
+testRunner.testCase.setPropertyValue("p_HomeCity", "ORLANDO");
+testRunner.testCase.setPropertyValue("p_HomeState", "FL");
+testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="e5581572-b8e9-4b86-939d-1a416853d030" name="2.RetrieveFareQuote">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -74,7 +167,7 @@
       <tem:RetrieveFareQuote>
          <!--Optional:-->
          <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                
@@ -83,27 +176,27 @@
             <rad:ClientIPAddress>::1</rad:ClientIPAddress>
             <!--Optional:-->
             <rad:HistoricUserName>Web</rad:HistoricUserName>
-            <rad1:CurrencyOfFareQuote>CAD</rad1:CurrencyOfFareQuote>
+            <rad1:CurrencyOfFareQuote>${#TestCase#currency}</rad1:CurrencyOfFareQuote>
             <rad1:PromotionalCode>${empty}</rad1:PromotionalCode>
             <rad1:IataNumberOfRequestor xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             <rad1:CorporationID>-214</rad1:CorporationID>
             <rad1:FareFilterMethod>NoCombinabilityAllFares</rad1:FareFilterMethod>
-            <rad1:FareGroupMethod>FareClassFareBasis</rad1:FareGroupMethod>
+            <rad1:FareGroupMethod>WebFareTypes</rad1:FareGroupMethod>
             <rad1:InventoryFilterMethod>Available</rad1:InventoryFilterMethod>
             <rad1:FareQuoteDetails>
                <rad1:FareQuoteDetail>
-                  <rad1:Origin>YUL</rad1:Origin>
-                  <rad1:Destination>MIA</rad1:Destination>
+                  <rad1:Origin>${#TestCase#Origin}</rad1:Origin>
+                  <rad1:Destination>${#TestCase#Destination}</rad1:Destination>
                   <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
                   <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
                   <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
                   <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
-                  <rad1:DateOfDeparture>2023-02-10</rad1:DateOfDeparture>
+                  <rad1:DateOfDeparture>${#TestCase#DepartureDate}</rad1:DateOfDeparture>
                   <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
-                  <rad1:FareClass>B</rad1:FareClass>
-                  <rad1:FareBasisCode>BOW</rad1:FareBasisCode>
+                  <rad1:FareClass>${#TestCase#FareClass}</rad1:FareClass>
+                  <rad1:FareBasisCode>${#TestCase#FareBasisCode}</rad1:FareBasisCode>
                   <rad1:Cabin>${empty}</rad1:Cabin>
-                  <rad1:LFID>181501</rad1:LFID>
+                  <rad1:LFID>1</rad1:LFID>
                   <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>
                   <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>
                   <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>
@@ -114,29 +207,7 @@
                      <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
                   </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
                </rad1:FareQuoteDetail>
-               <rad1:FareQuoteDetail>
-                  <rad1:Origin>MIA</rad1:Origin>
-                  <rad1:Destination>YUL</rad1:Destination>
-                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
-                  <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
-                  <rad1:UseAirportsNotMetroGroupsForFrom>true</rad1:UseAirportsNotMetroGroupsForFrom>
-                  <rad1:UseAirportsNotMetroGroupsForTo>true</rad1:UseAirportsNotMetroGroupsForTo>
-                  <rad1:DateOfDeparture>2023-02-20</rad1:DateOfDeparture>
-                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
-                  <rad1:FareClass>B</rad1:FareClass>
-                  <rad1:FareBasisCode>BOW</rad1:FareBasisCode>
-                  <rad1:Cabin>${empty}</rad1:Cabin>
-                  <rad1:LFID>182248</rad1:LFID>
-                  <rad1:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>
-                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>
-                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>
-                  <rad1:LanguageCode>en</rad1:LanguageCode>
-                  <rad1:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:FareQuoteRequestInfos>
-                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
-                  </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
-               </rad1:FareQuoteDetail>
+               
             </rad1:FareQuoteDetails>
             <rad1:ProfileId>-214</rad1:ProfileId>
          </tem:RetrieveFareQuoteRequest>
@@ -168,6 +239,22 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer FairInforID" id="bc90300c-a067-4e8c-924f-e16ba1a88373">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>FairInformationID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+//ns1:RetrieveFareQuoteResponse[1]</con:sourcePath>
+        <con:targetType>FairInformationID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="01b01019-a663-46ed-a660-c8b222974dd2" name="3.SummaryPNR">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -185,7 +272,7 @@
       <tem:SummaryPNR>
          <!--Optional:-->
          <tem:SummaryPnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
             </rad:CarrierCodes>
@@ -196,11 +283,11 @@
                <rad:SeriesNumber>299</rad:SeriesNumber>
                <rad:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </rad1:ReservationInfo>
-            <rad1:SecurityToken>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityToken>
+            <rad1:SecurityToken>${#TestCase#securityToken}</rad1:SecurityToken>
             <rad1:CarrierCurrency>CAD</rad1:CarrierCurrency>
             <rad1:DisplayCurrency>CAD</rad1:DisplayCurrency>
-            <rad1:IATANum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:User xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:IATANum>${empty}</rad1:IATANum>
+            <rad1:User>${empty}</rad1:User>
             <!--If not sure of receipt language id then provide value as 1. System picks default language Id-->
             <rad1:ReceiptLanguageID>1</rad1:ReceiptLanguageID>
             <rad1:PromoCode>${empty}</rad1:PromoCode>
@@ -222,11 +309,11 @@
                <!--Zero or more repetitions:-->
                <rad1:Person>
                   <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                  <rad1:FirstName>Madhu</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>ADT</rad1:MiddleName>
-                  <rad1:Age>34</rad1:Age>
-                  <rad1:DOB>1987-09-25</rad1:DOB>
+                  <rad1:FirstName>${#TestCase#p_FirstName}</rad1:FirstName>
+                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleName}</rad1:MiddleName>
+                  <rad1:Age>${#TestCase#ADT_age}</rad1:Age>
+                  <rad1:DOB>${#TestCase#ADT_DOB}</rad1:DOB>
                   <rad1:Gender>Male</rad1:Gender>
                   <rad1:Title>MR</rad1:Title>
                   <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
@@ -240,11 +327,11 @@
                   <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
                   <rad1:UseInventory>true</rad1:UseInventory>
                   <rad1:Address>
-                     <rad1:Address1>6310 Hazeltine national dr</rad1:Address1>
-                     <rad1:Address2>Downtown</rad1:Address2>
-                     <rad1:City>Orlando</rad1:City>
-                     <rad1:State>FL</rad1:State>
-                     <rad1:Postal>32822</rad1:Postal>
+                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
+                     <rad1:Address2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
+                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
+                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
                      <rad1:Country>USA</rad1:Country>
                      <rad1:CountryCode>${empty}</rad1:CountryCode>
                      <rad1:AreaCode>${empty}</rad1:AreaCode>
@@ -262,13 +349,13 @@
                      <rad1:ContactInfo>
                         <rad1:ContactID>-1</rad1:ContactID>
                         <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>radix@radixx.com</rad1:ContactField>
+                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
                         <rad1:Extension>${empty}</rad1:Extension>
                         <rad1:CountryCode>${empty}</rad1:CountryCode>
                         <rad1:AreaCode>${empty}</rad1:AreaCode>
                         <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>radix@radixx.com</rad1:Display>
+                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
                         <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                      
@@ -285,7 +372,7 @@
             </rad1:Passengers>
             <rad1:Segments>
                <!--Zero or more repetitions:-->
-               <rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${2.RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></rad1:Segment><rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${2.RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[2]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:RecordLocator>${empty}</rad1:RecordLocator><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></rad1:Segment>
+               <rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${#TestCase#FairInformationID}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:RecordLocator>${empty}</rad1:RecordLocator><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></rad1:Segment><rad1:Segment><rad1:PersonOrgID>-1</rad1:PersonOrgID><rad1:FareInformationID>${#TestCase#FairInformationID}</rad1:FareInformationID><rad1:MarketingCode>${empty}</rad1:MarketingCode><rad1:StoreFrontID>${empty}</rad1:StoreFrontID><rad1:RecordLocator>${empty}</rad1:RecordLocator><rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rad1:Seats xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></rad1:Segment>
                
             </rad1:Segments>
             <rad1:Payments xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -322,6 +409,22 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer ResBalance" id="70d6d8f8-e836-42cb-b677-731940a37e8d">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>ResBalance</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>3.SummaryPNR</con:sourceStep>
+        <con:sourcePath>//faultcode[1]</con:sourcePath>
+        <con:targetType>ResBalance</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:type>XPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="55680105-365f-48c2-a25c-1d20a4c14baf" name="4.AssessPaymentMethod">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -339,7 +442,7 @@
       <tem:AssessPaymentMethodFees>
          <!--Optional:-->
          <tem:AssessPaymentMethodFeesRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode><rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode></rad:CarrierCode>
@@ -355,7 +458,7 @@
                   <!--Optional:-->
                   <rad1:PaymentMethodType>${empty}</rad1:PaymentMethodType>
                   <rad1:CardNumber>${empty}</rad1:CardNumber>
-                  <rad1:PaymentAmount>${3.SummaryPNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:SummaryPNRResponse[1]/ns1:SummaryPNRResult[1]/a:ReservationBalance[1]}</rad1:PaymentAmount>
+                  <rad1:PaymentAmount>${#TestCase#ResBalance}</rad1:PaymentAmount>
                </rad1:PaymentToAssessFee>
             </rad1:PaymentsToAssessFee>
          </tem:AssessPaymentMethodFeesRequest>
@@ -404,7 +507,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -449,6 +552,22 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer ConfirmationNumber" id="4a66da4f-51fd-42e3-893a-37cc17fab291">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>ConfirmationNumber</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]</con:sourcePath>
+        <con:targetType>ConfirmationNumber</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="31961aa0-f799-4d5b-b30b-7c931a8502d6" name="6.InsertExternalProcessedPayment">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -467,7 +586,7 @@
          <!--Optional:-->
          <tem:ExternalProcessedPaymentRequest>
             <rad:TransactionInfo>
-               <rad1:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityGUID>
+               <rad1:SecurityGUID>${#TestCase#securityToken}</rad1:SecurityGUID>
                <rad1:CarrierCodes>
                   <!--Zero or more repetitions:-->
                   <rad1:CarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -479,7 +598,7 @@
             </rad:TransactionInfo>
             <rad:ReservationInfo>
                <rad1:SeriesNumber>299</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${5.CreatePNR-commit#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad1:ConfirmationNumber>
+               <rad1:ConfirmationNumber>${#TestCase#ConfirmationNumber}</rad1:ConfirmationNumber>
             </rad:ReservationInfo>
             <rad:ExternalPayments>
                <!--Zero or more repetitions:-->
@@ -645,7 +764,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -659,7 +778,7 @@
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${5.CreatePNR-commit#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${#TestCase#ConfirmationNumber}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -732,6 +851,143 @@ m.append(res, "UTF-8")
 }</script>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>securityToken</con:name>
+      <con:value>cq520a595f0134bbfaxbi6uaf960vfqc62l4ffa718e7</con:value>
+    </con:property>
+    <con:property>
+      <con:name>DepartureDate</con:name>
+      <con:value>2023-03-23</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ReturnDate</con:name>
+      <con:value>2023-03-27</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ModifyDate</con:name>
+      <con:value>2023-03-29</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Origin</con:name>
+      <con:value>YUL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Destination</con:name>
+      <con:value>MIA</con:value>
+    </con:property>
+    <con:property>
+      <con:name>currency</con:name>
+      <con:value>CAD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>paycurrency</con:name>
+      <con:value>CAD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstName</con:name>
+      <con:value>BobADL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_LastName</con:name>
+      <con:value>Young</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleName</con:name>
+      <con:value>Mol</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameTwo</con:name>
+      <con:value>Mechile</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameTwo</con:name>
+      <con:value>Corry</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameCHDOne</con:name>
+      <con:value>TomCHD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameCHDone</con:name>
+      <con:value>Chris</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_FirstNameInfOne</con:name>
+      <con:value>EllahInf</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_MiddleNameInfOne</con:name>
+      <con:value>Lucy</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_ModifyFirstName</con:name>
+      <con:value>MattADL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_ModifyMiddleName</con:name>
+      <con:value>Charles</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_ModifyLastName</con:name>
+      <con:value>Cameron</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ADT_age</con:name>
+      <con:value>25</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CHD_age</con:name>
+      <con:value>6</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ADT_DOB</con:name>
+      <con:value>1979-03-19</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CHD_DOB</con:name>
+      <con:value>2017-03-19</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_Email</con:name>
+      <con:value>radix@radixx.com</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeAddress</con:name>
+      <con:value>6310 HAZELTINE NATIONAL DR</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeCity</con:name>
+      <con:value>ORLANDO</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomeState</con:name>
+      <con:value>FL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>p_HomePostal</con:name>
+      <con:value>32822</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FareClass</con:name>
+      <con:value>B</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FareBasisCode</con:name>
+      <con:value>BOW</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FairInformationID</con:name>
+      <con:value></con:value>
+    </con:property>
+    <con:property>
+      <con:name>ResBalance</con:name>
+      <con:value>a:DeserializationFailed</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ConfirmationNumber</con:name>
+      <con:value></con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
 </con:testCase>

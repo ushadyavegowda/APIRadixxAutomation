@@ -4,18 +4,18 @@
     <con:setting id="b7b5bc73-c11a-4a07-b4b4-938efdc1a513fileName">0050_CP_Interline_ModifyFareDowngrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1. Prequisite Run CreateOW_Interline_1ADT" id="4a1a187b-f6c8-42fa-b62f-501a1e80827f">
+  <con:testStep type="calltestcase" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf" id="dd37a7d2-e772-45f1-a570-501e26c39015">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>c5a42371-a0f4-4cb5-bf18-a554fb7aa77d</con:targetTestCase>
+      <con:targetTestCase>3a854512-72d2-486c-b5ce-bd607f172210</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>securityToken</con:name>
-          <con:value>d0ee2f5f6fe54xb0d335u866vef06fk5t2a80349ad1e</con:value>
+          <con:value>734v131d73b104e918ibad7c61c6ic69u3r1a4b638d2</con:value>
         </con:property>
         <con:property>
           <con:name>ConfrimationNum</con:name>
-          <con:value>VR6RN2</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>Origin</con:name>
@@ -27,15 +27,15 @@
         </con:property>
         <con:property>
           <con:name>DepartureDate</con:name>
-          <con:value>2023-03-21</con:value>
+          <con:value>2023-03-23</con:value>
         </con:property>
         <con:property>
           <con:name>ReturnDate</con:name>
-          <con:value>2023-03-25</con:value>
+          <con:value>2023-03-27</con:value>
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>509.20</con:value>
+          <con:value>0</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -43,7 +43,7 @@
         </con:property>
         <con:property>
           <con:name>LogicFlightKey</con:name>
-          <con:value>1080282067:1009271061:3/22/2023 6:40:00 AM</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>TripId</con:name>
@@ -51,11 +51,11 @@
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>-1857208583</con:value>
+          <con:value>-235160701</con:value>
         </con:property>
         <con:property>
           <con:name>PhysicalFlightID</con:name>
-          <con:value>979073855</con:value>
+          <con:value>-1843352587</con:value>
         </con:property>
         <con:property>
           <con:name>p_Email</con:name>
@@ -79,7 +79,7 @@
         </con:property>
         <con:property>
           <con:name>ModifyDate</con:name>
-          <con:value>2023-03-27</con:value>
+          <con:value>2023-03-29</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomeAddress</con:name>
@@ -111,7 +111,7 @@
         </con:property>
         <con:property>
           <con:name>ADT_DOB</con:name>
-          <con:value>1979-03-17</con:value>
+          <con:value>1979-03-19</con:value>
         </con:property>
         <con:property>
           <con:name>p_FirstNameTwo</con:name>
@@ -139,7 +139,7 @@
         </con:property>
         <con:property>
           <con:name>CHD_DOB</con:name>
-          <con:value>2017-03-17</con:value>
+          <con:value>2017-03-19</con:value>
         </con:property>
         <con:property>
           <con:name>p_ModifyFirstName</con:name>
@@ -195,7 +195,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="7a957f56-2468-421d-bd85-9d736a9402bb" name="1.RetrieveSecurityToken">
+  <con:testStep type="request" id="7a957f56-2468-421d-bd85-9d736a9402bb" name="1.RetrieveSecurityToken" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
@@ -267,7 +267,7 @@
       <tem:RetrievePNR>
          <!--Optional:-->
          <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
@@ -279,7 +279,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>PEE4OS</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -327,9 +327,9 @@
    <soapenv:Body>
       <tem:RetrieveFareQuote>
          <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
-            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">CAD</rad:CurrencyOfFareQuote>
+            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#currency}</rad:CurrencyOfFareQuote>
             <rad:PromotionalCode xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
             <rad:IataNumberOfRequestor xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
             <rad:CorporationID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:CorporationID>
@@ -338,13 +338,13 @@
             <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
             <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
                <rad:FareQuoteDetail>
-                  <rad:Origin>YUL</rad:Origin>
-                  <rad:Destination>NCE</rad:Destination>
+                  <rad:Origin>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#Origin}</rad:Origin>
+                  <rad:Destination>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#Destination}</rad:Destination>
                   <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>2023-02-10</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -361,7 +361,7 @@
                         <rad:PassengerTypeID>5</rad:PassengerTypeID>
                         <rad:TotalSeatsRequired>1</rad:TotalSeatsRequired>
                      </rad:FareQuoteRequestInfo>
-                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]}</rad:LogicalFlightKey>
+                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#LogicFlightKey}</rad:LogicalFlightKey>
                </rad:FareQuoteDetail>
             </rad:FareQuoteDetails>
             <rad:ProfileId xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:ProfileId>
@@ -412,7 +412,7 @@
       <tem:ModifyPNR>
          <!--Optional:-->
          <tem:ModifyPnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes><rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode></rad:CarrierCodes>
             <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
             <!--Optional:-->
@@ -420,9 +420,9 @@
             <rad1:ActionType>ReplaceFlightOnReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#ConfrimationNum}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
-            <rad1:FareInformationID>${3.RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:TripId[1]}</rad1:FareInformationID>
+            <rad1:FareInformationID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#TripId}</rad1:FareInformationID>
             <rad1:LogicalFlightKeyToReplace>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]}</rad1:LogicalFlightKeyToReplace>
             <rad1:LogicalFlightKeyToRemove>${empty}</rad1:LogicalFlightKeyToRemove>
             <rad1:PersonOrgIdentifierToRemove>0</rad1:PersonOrgIdentifierToRemove>
@@ -494,7 +494,7 @@
       <tem:AssessPaymentMethodFees>
          <!--Optional:-->
          <tem:AssessPaymentMethodFeesRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -562,7 +562,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
@@ -626,7 +626,7 @@
          <!--Optional:-->
          <tem:ExternalProcessedPaymentRequest>
             <rad:TransactionInfo>
-               <rad1:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad1:SecurityGUID>
+               <rad1:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad1:SecurityGUID>
                <rad1:CarrierCodes>
                   <!--Zero or more repetitions:-->
                   <rad1:CarrierCode><rad1:AccessibleCarrierCode>1D</rad1:AccessibleCarrierCode></rad1:CarrierCode>
@@ -804,7 +804,7 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1.RetrieveSecurityToken#Response#declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Security.Response'; declare namespace ns1='http://tempuri.org/'; //ns1:RetrieveSecurityTokenResponse[1]/ns1:RetrieveSecurityTokenResult[1]/a:SecurityToken[1]}</rad:SecurityGUID>
+            <rad:SecurityGUID>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>

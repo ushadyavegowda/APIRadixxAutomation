@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache" anonymous="optional" bindingOperationName="ClearServiceCache" id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2" inputName="" isOneWay="false" name="ClearServiceCache" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/ClearServiceCache" anonymous="optional" bindingOperationName="ClearServiceCache" id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2" inputName="" isOneWay="false" name="ClearServiceCache" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3e75e6e5-0b26-4eac-837f-f1e73eaa56f2fileName">ClearServiceCache</con:setting>
   </con:settings>

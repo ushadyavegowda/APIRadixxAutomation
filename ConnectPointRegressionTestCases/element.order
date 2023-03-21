@@ -38,6 +38,7 @@ Create-OW-pnr-withSSR.xml
 0011_CP_Res_ModifyRemoveServiceBundle.xml
 0012_CP_Res_ModifyAddServiceBundle.xml
 0013_Res_CreateBooking-%26-Checkin.xml
+0050_CP_Interline_ModifyFareDowngrade.xml
 0014_CP_Res_CreateBooking_FreeflightVoucher.xml
 0015_CP_Res_CreateBooking_StandardVoucher.xml
 0016_CP_Res_CreateBooking_Nopayment_Add-seat.xml
@@ -48,7 +49,6 @@ Create_OW_Interline_1ADT%2B1CHD%2B1INF_BizClass.xml
 Create_OW_Interline_1ADT.xml
 0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF.xml
 0049_CP_Interline_ModifyReplaceflight.xml
-0050_CP_Interline_ModifyFareDowngrade.xml
 0051_CP_Interline_ModifyAddSegment.xml
 0052_CP_Interline_ModifyAddSSR.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml

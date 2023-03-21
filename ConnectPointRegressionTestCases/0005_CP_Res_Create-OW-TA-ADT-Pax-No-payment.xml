@@ -851,19 +851,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>3391.78</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>pnr</con:name>
-      <con:value>Q3HHGG</con:value>
+      <con:value>CJD1WG</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value/>
+      <con:value>194527</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

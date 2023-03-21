@@ -17,11 +17,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>499.50</con:value>
+          <con:value>2117.00</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128871</con:value>
+          <con:value>194527</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -29,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>LH7AR2</con:value>
+          <con:value>ZU4LCN</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -37,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-28</con:value>
+          <con:value>-19</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -365,7 +365,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>3. FareQuote1ADT_NewDate</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[a:LFID = '${#TestCase#LFID}']/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>fareid</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -1264,7 +1264,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>128871:3/1/2023 1:00:00 AM</con:value>
+      <con:value>194527:3/24/2023 12:10:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

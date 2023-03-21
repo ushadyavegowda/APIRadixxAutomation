@@ -1252,12 +1252,12 @@ declare namespace ns1='http://tempuri.org/';
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="0f3e7afa-8725-4b76-9f04-266f3c27ac15" name="8 CreatePNR - SaveReservation" type="request">
+  <con:testStep id="0f3e7afa-8725-4b76-9f04-266f3c27ac15" name="7 CreatePNR - SaveReservation" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="8 CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="d8dbad66-a034-4b0e-857f-5087cc87e5b9" incomingWss="" name="7 CreatePNR - SaveReservation" outgoingWss="" sslKeystore="" timeout="0" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1435,7 +1435,7 @@ declare namespace ns1='http://tempuri.org/';
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>8 CreatePNR - SaveReservation</con:sourceStep>
+        <con:sourceStep>7 CreatePNR - SaveReservation</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
 //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
@@ -1491,11 +1491,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>30858.50</con:value>
+      <con:value>2117.00</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196825</con:value>
+      <con:value>194527</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1503,7 +1503,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value/>
+      <con:value>YCBGK9</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1511,7 +1511,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-30</con:value>
+      <con:value>-17</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

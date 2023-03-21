@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="c04aeea7-c6a9-4087-989a-419ef393d7d9" keepSession="false" name="0040_CP_Flight_RetrieveAirportRoutes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c04aeea7-c6a9-4087-989a-419ef393d7d9fileName">0040_CP_Flight_RetrieveAirportRoutes</con:setting>
+  </con:settings>
+  <con:testStep id="9eab0b6c-660b-4b6f-8ec2-3cf6959f866b" name="RetrieveSecuirtyToken and Input parameters" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="af33bb78-6b02-4770-b958-cd3774f91041" name="RetriveAirportRoute" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Flight</con:interface>
+      <con:operation>RetrieveAirportRoutes</con:operation>
+      <con:request id="e505e971-bc15-4044-9dab-079221039286" incomingWss="" name="RetriveAirportRoute" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>${#Project#URL}Radixx.Connectpoint/ConnectPoint.Flight.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Flight.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveAirportRoutes>
+         <!--Optional:-->
+         <tem:RetrieveAirportRoutesRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:LanguageCode>?</rad1:LanguageCode>
+         </tem:RetrieveAirportRoutesRequest>
+      </tem:RetrieveAirportRoutes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="763e5c0a-1195-4e4d-86d3-ae5a29b19322" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="e954509f-70bc-4115-9d04-9a68bf8a5d24" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="bee23d97-8bfe-4447-b7e6-2e6cca59d66e" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Flight/RetrieveAirportRoutes" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

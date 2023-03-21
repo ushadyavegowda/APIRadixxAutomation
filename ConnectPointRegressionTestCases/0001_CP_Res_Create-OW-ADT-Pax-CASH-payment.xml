@@ -1926,6 +1926,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
+    <con:testStepId>dc9a2870-ac26-4023-86da-fe056214c53e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
     <con:testStepId>bc0dda71-377e-4643-9c3e-cf8a5052bd5a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
@@ -2727,11 +2732,6 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>8d4abd7c-7c19-47b0-83da-83e0b037a5d1</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>5585c0aa-2d8e-459b-9a55-fe374dabc86d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

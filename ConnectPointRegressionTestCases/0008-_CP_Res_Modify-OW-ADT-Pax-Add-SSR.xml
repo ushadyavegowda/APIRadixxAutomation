@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5811f03a-c701-4332-98b5-04eba3ff91e3" keepSession="false" name="0008 _CP_Res_Modify OW ADT Pax Add SSR" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="5811f03a-c701-4332-98b5-04eba3ff91e3" keepSession="false" name="0008 _CP_Res_Modify OW ADT Pax Add SSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5811f03a-c701-4332-98b5-04eba3ff91e3fileName">0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="d9b825ff-07a9-4122-a97a-d11a4c2f210d" keepSession="false" name="0012_CP_Res_ModifyAddServiceBundle" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="d9b825ff-07a9-4122-a97a-d11a4c2f210d" keepSession="false" name="0012_CP_Res_ModifyAddServiceBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d9b825ff-07a9-4122-a97a-d11a4c2f210dfileName">0012_CP_Res_ModifyAddServiceBundle</con:setting>
   </con:settings>
@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>499.50</con:value>
+          <con:value>16348.25</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128873</con:value>
+          <con:value>196832</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>7N6GT7</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-2</con:value>
+          <con:value>-30</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>

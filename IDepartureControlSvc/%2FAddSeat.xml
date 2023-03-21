@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="14395a7a-43ba-409c-94ca-bb6d39b592d5" name="/AddSeat" path="/AddSeat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="14395a7a-43ba-409c-94ca-bb6d39b592d5" name="/AddSeat" path="/AddSeat" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="14395a7a-43ba-409c-94ca-bb6d39b592d5fileName">%2FAddSeat</con:setting>
   </con:settings>

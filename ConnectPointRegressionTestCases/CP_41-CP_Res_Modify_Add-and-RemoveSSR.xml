@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="224abeb8-bd2b-4456-b194-edf2f9299239" keepSession="false" maxResults="0" name="CP_41 CP_Res_Modify_Add and RemoveSSR" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="224abeb8-bd2b-4456-b194-edf2f9299239" keepSession="false" maxResults="0" name="CP_41 CP_Res_Modify_Add and RemoveSSR" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="224abeb8-bd2b-4456-b194-edf2f9299239fileName">CP_41-CP_Res_Modify_Add-and-RemoveSSR</con:setting>
   </con:settings>

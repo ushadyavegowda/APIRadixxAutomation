@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="b7b5bc73-c11a-4a07-b4b4-938efdc1a513" keepSession="false" maxResults="0" name="0050_CP_Interline_ModifyFareDowngrade" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="b7b5bc73-c11a-4a07-b4b4-938efdc1a513" keepSession="false" maxResults="0" name="0050_CP_Interline_ModifyFareDowngrade" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b7b5bc73-c11a-4a07-b4b4-938efdc1a513fileName">0050_CP_Interline_ModifyFareDowngrade</con:setting>
   </con:settings>
@@ -59,7 +59,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass" id="cad27b84-14be-404c-b842-6164295b6fc7" disabled="true">
+  <con:testStep disabled="true" id="cad27b84-14be-404c-b842-6164295b6fc7" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>f7a10861-6ab8-40ae-af6a-214cb6fab909</con:targetTestCase>
@@ -402,10 +402,10 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer NewFairID" id="934f4932-f177-4557-a8be-2958ff2e10f1">
+  <con:testStep id="934f4932-f177-4557-a8be-2958ff2e10f1" name="Property Transfer NewFairID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFairID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -417,7 +417,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFCCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -428,7 +428,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFBCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -439,7 +439,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFlightLogicCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>

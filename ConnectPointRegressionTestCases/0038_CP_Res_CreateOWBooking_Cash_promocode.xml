@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="98f9c826-f5fc-4fc0-9d27-b926b473793b" keepSession="false" name="0038_CP_Res_CreateOWBooking_Cash_promocode" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="98f9c826-f5fc-4fc0-9d27-b926b473793b" keepSession="false" name="0038_CP_Res_CreateOWBooking_Cash_promocode" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="98f9c826-f5fc-4fc0-9d27-b926b473793bfileName">0038_CP_Res_CreateOWBooking_Cash_promocode</con:setting>
   </con:settings>

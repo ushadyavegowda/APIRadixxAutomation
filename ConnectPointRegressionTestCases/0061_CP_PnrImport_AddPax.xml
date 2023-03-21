@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="e416834e-b979-4cab-b212-6954ca4bf962" keepSession="false" name="0061_CP_PnrImport_AddPax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e416834e-b979-4cab-b212-6954ca4bf962fileName">0061_CP_PnrImport_AddPax</con:setting>
+  </con:settings>
+  <con:testStep id="90d2ebfe-e11a-4732-b9b5-b7c28deeb3a4" name="1.Run 0059_CP_PnrImport_CreateGroupRes" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="c8af3660-0daa-4b4d-a0fb-cde0ec3ca173" name="2. RetrieveFareQuote" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
+      <con:operation>RetrieveFareQuote</con:operation>
+      <con:request id="f6dd2c79-0bb9-4c77-a351-de48bca98bb7" name="2. RetrieveFareQuote">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.ConnectPoint/ConnectPoint.Pricing.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveFareQuote>
+         <tem:RetrieveFareQuoteRequest>
+            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">${#TestSuite#currency}</rad:CurrencyOfFareQuote>
+            <rad:PromotionalCode xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+            <rad:IataNumberOfRequestor xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
+            <rad:CorporationID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:CorporationID>
+            <rad:FareFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">NoCombinabilityAllFares</rad:FareFilterMethod>
+            <rad:FareGroupMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">FareClassFareBasis</rad:FareGroupMethod>
+            <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">All</rad:InventoryFilterMethod>
+            <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
+               <rad:FareQuoteDetail>
+                  <rad:Origin>${#TestSuite#Origin}</rad:Origin>
+                  <rad:Destination>${#TestSuite#Destination}</rad:Destination>
+                  <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
+                  <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
+                  <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
+                  <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
+                  <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
+                  <rad:FareTypeCategory>${#TestSuite#ID}</rad:FareTypeCategory>
+                  <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:LFID>-1</rad:LFID>
+                  <rad:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore>
+                  <rad:NumberOfDaysAfter>0</rad:NumberOfDaysAfter>
+                  <rad:LanguageCode>en</rad:LanguageCode>
+                  <rad:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:FareQuoteRequestInfos>
+                     <rad:FareQuoteRequestInfo>
+                        <rad:PassengerTypeID>${#TestSuite#ID}</rad:PassengerTypeID>
+                        <rad:TotalSeatsRequired>${#TestSuite#ID}</rad:TotalSeatsRequired>
+                     </rad:FareQuoteRequestInfo>
+                  </rad:FareQuoteRequestInfos>
+               </rad:FareQuoteDetail>
+            </rad:FareQuoteDetails>
+            <rad:ProfileId xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:ProfileId>
+         </tem:RetrieveFareQuoteRequest>
+      </tem:RetrieveFareQuote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="c1f8f955-ad53-4d9f-aece-902a9e63b8af" type="SOAP Response"/>
+        <con:assertion id="c92c3915-fe4a-4433-9401-58ef95ba0671" name="Check for existence of [a:FareID]" type="XPath Match">
+          <con:configuration>
+            <path>declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+declare namespace ns1='http://tempuri.org/';
+exists( //ns1:RetrieveFareQuoteResponse/ns1:RetrieveFareQuoteResult/a:FlightSegments/a:FlightSegment/a:FareTypes/a:FareType/a:FareInfos/a:FareInfo/a:FareID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="ea685aa8-313a-4711-8911-ff0fd80f1167" name="Contains" type="Simple Contains">
+          <con:configuration>
+            <token>Successful Transaction</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="0d5dcc74-672f-4b0a-b6d5-eef60e4d1164" name="Schema Compliance" type="Schema Compliance">
+          <con:configuration>
+            <definition/>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="42067210-8faf-496e-9903-735195c8b807">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2fb8d303-fbf4-417d-bb55-a4b3fd95d992">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82c600e1-08a5-4119-8f39-3ec0063af62b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="aa4d83a8-992e-4595-b337-c133b99c7d47">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="266625f2-0734-4c67-922f-44c12c1e96c3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1228afff-bd8a-4ac8-8219-3476c0c2e1a7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="22c0b523-17e2-4fd7-bec7-1e97bba8fca0">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="29f1cd0d-74cc-467c-b769-6ed28af6a934">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b2cb9c1f-3447-44cc-817e-6c9250a145e7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f767135c-09a3-4e04-8b74-c590a4545d2f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="58517e45-67c6-46bc-91a7-7797dc6d5a29">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f4f8d182-e94d-420f-973e-79d7b7fd4447">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="5e240e72-1cf2-4ca5-b39f-e331e343e588">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="470465ed-5408-41d0-b35d-9664d7e62e41">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8dd82788-5479-4828-bb65-93a451e6597a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="30ab15a5-9b61-4b0e-a3d0-750dbd01aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="70182b60-9e06-48f3-80d0-3b931c509804">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="98c7d7c1-1301-4b4a-b3b8-3e00e73f7d58">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="01df9476-85e6-4abe-8ebd-ccd26599bd57">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d6291f86-aed6-4f4f-9979-ede938dd6d41">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="443d548e-7832-470a-9c5a-142462db637e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="cf6dd0cd-2bdd-4427-9583-077b0f2cc3c7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9f4a82e7-73e7-494c-8588-d0dc56c1637a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="823483de-13b5-4699-b242-7a2a932165fd">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e19b76a9-9631-4bb0-b5f3-a8df542369bb">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9c38f7e8-32de-4fc7-b864-5c02856c899f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d7e55844-7e2b-4752-a457-3386f2e7d52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="16846aa6-d89c-4a10-8bae-e8fef5da42a3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1f5ec027-962d-4f25-a6ee-1ae8f0f33f24">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="95d589f0-de97-4106-bb99-20277cf5b07a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f16ee803-1c40-4999-8e75-ed9970e88874">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0df698c7-f3f2-4bb7-a6fc-54712b2e8e65">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="377b43a4-6040-43b4-b917-084b0f2c0148">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3675b90-2639-4214-9670-d4333b5e6d39">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9a433573-65e6-4dfa-8a67-14ed29034e9d">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="488e5be0-d9d9-4916-bcbf-a47f3fa6db42">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="43f54844-b6cd-4ffa-800d-588a2745aa74">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff76c282-7c43-48ac-88d6-a00107f279b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="e2e5e74d-9765-45d6-af8e-de0f6e8bcead" name="InputValues" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>// importing the Java methods
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+//BookingDate
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+def BookingDate= new Date()
+//ADT age
+//int age = 25;
+Calendar a  = Calendar.getInstance();
+//a.add(Calendar.YEAR,- age);
+BookingDate1= sdf.format(a.getTime());
+
+testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
+
+//def generator = { String alphabet, int n ->
+//  new Random().with {
+//    (1..n).collect { alphabet[ nextInt( alphabet.length() ) ] }.join()
+ // }
+//}
+//FirstNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+//LastNameRandom = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+///ExternalBookingRef = generator( (('A'..'Z')+('0'..'9')+('a'..'z')).join(), 6 )
+//testRunner.testCase.testSuite.setPropertyValue("FirstNameRandom", FirstNameRandom);
+//testRunner.testCase.testSuite.setPropertyValue("LasttNameRandom", LastNameRandom);
+//testRunner.testCase.testSuite.setPropertyValue("ExternalBookingRef",ExternalBookingRef);</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="dc8e2827-835a-4b13-9111-4033d87500df" name="Property Transfer-FlightNo" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>FlightNo</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[3]/a:FlightNum[1]</con:sourcePath>
+        <con:targetType>FlightNo</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>DepartureTime</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[3]/a:DepartureDate[1]</con:sourcePath>
+        <con:targetType>DepartureTime</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ArrivalTime</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[3]/a:ArrivalDate[1]</con:sourcePath>
+        <con:targetType>ArrivalTime</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>CarrierCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[3]/a:OperatingCarrier[1]</con:sourcePath>
+        <con:targetType>CarrierCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="b404d935-b03e-4062-8f9a-f9e07372665a" name="ImportPNR_Add_2Pax" type="request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>ImportPNR</con:operation>
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="12c141f1-f1df-45d0-8579-588226bc1b09" incomingWss="" name="ImportPNR_Add_2Pax" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Only the first nodes</con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ImportPNR xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+         <ImportPNRRequest>
+            <SecurityGUID xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestSuite#securityToken}</SecurityGUID>
+            <CarrierCodes xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+               <CarrierCode>
+                  <AccessibleCarrierCode>1D</AccessibleCarrierCode>
+               </CarrierCode>
+            </CarrierCodes>
+            <ClientIPAddress xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+            <HistoricUserName xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+            <ActionType xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">ImportPNR</ActionType>
+            <ImportPNR xmlns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+               <SeriesNumber>${#TestSuite#SeriesNumber}</SeriesNumber>
+               <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <BookingAction>SystemDetermined</BookingAction>
+               <BookingCarrier xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <IATANumber>${#TestSuite#IATANumber}</IATANumber>
+               <ExternalAppID>${#TestSuite#IATANumber}</ExternalAppID>
+               <ExternalBookingReference>${#TestSuite#ExternalBookingReference}</ExternalBookingReference>
+               <OriginalBookingDate>${#TestCase#BookingDate}</OriginalBookingDate>
+               <ReservationCurrency>${#TestSuite#currency}</ReservationCurrency>
+               <User>pnrimport</User>
+               <PromoCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <RecieptLanguageCode>en-us</RecieptLanguageCode>
+               <ReservationChannel>11</ReservationChannel>
+               <Segments>
+                  <ImportPNR.Reservation.Segment>
+                     <CarrierCode>${#TestCase#CarrierCode}</CarrierCode>
+                     <FlightNumber>${#TestCase#FlightNo}</FlightNumber>
+                     <DepartureDate>${#TestSuite#DepartureDate}</DepartureDate>
+                     <Origin>${#TestSuite#Origin}</Origin>
+                     <OriginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Destination>${#TestSuite#Destination}</Destination>
+                     <DestinationName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DepartureTime>${#TestCase#DepartureTime}</DepartureTime>
+                     <ArrivalTime>${#TestCase#ArrivalTime}</ArrivalTime>
+                     <AirlinePersons>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-1</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-2</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-3</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-4</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-5</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-6</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-7</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-8</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-9</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-10</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-11</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                        <ImportPNR.Reservation.Segment.AirlinePerson>
+                           <PersonOrgID>-12</PersonOrgID>
+                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Charges>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                                 <CodeType>SEAT</CodeType>
+                                 <Amount>0</Amount>
+                                 <Currency>${#TestSuite#currency}</Currency>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Charge>
+                           </Charges>
+                           <Seats>
+                              <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                                 <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                 <SeatRow>-2147483648</SeatRow>
+                              </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
+                           </Seats>
+                        </ImportPNR.Reservation.Segment.AirlinePerson>
+                     </AirlinePersons>
+                  </ImportPNR.Reservation.Segment>
+               </Segments>
+               <Persons>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-1</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>NADENDLA</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-1</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>NADENDLA</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-2</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>MYLEN</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-2</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>MYLEN</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-3</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>OLIVER</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-3</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>OLIVER</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-4</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>STEPHANIE</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-4</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>STEPHANIE</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-5</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>ANNIE</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-5</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>ANNIE</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-6</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>MATHIEU</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-6</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>MATHIEU</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-7</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>DANIEL</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-7</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>DANIEL</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-8</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>MARIE JOSEE</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-8</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>MARIE JOSEE</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-9</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>MARISSA</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-9</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>MARISSA</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-10</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MR</Title>
+                     <LastName>${#TestSuite#p_LastName}</LastName>
+                     <FirstName>THOMAS</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>M</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-10</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>${#TestSuite#p_LastName}</LastName>
+                           <FirstName>THOMAS</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>M</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-11</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MRS</Title>
+                     <LastName>New</LastName>
+                     <FirstName>PREETY</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>F</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-11</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>NEW</LastName>
+                           <FirstName>PREETY</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>F</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+                  <ImportPNR.Reservation.Person>
+                     <PersonOrgID>-12</PersonOrgID>
+                     <PTCID>1</PTCID>
+                     <PTC>ADT</PTC>
+                     <Title>MRS</Title>
+                     <LastName>New</LastName>
+                     <FirstName>RESHMA</FirstName>
+                     <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DateOfBirth>${#TestSuite#p_DOB}</DateOfBirth>
+                     <Gender>F</Gender>
+                     <Phone>9999999999</Phone>
+                     <Mobile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Email xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Address xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <City xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Postal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Province xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <DocumentExpDate>0001-01-01T00:00:00</DocumentExpDate>
+                     <SecureFlightRedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <SecureFlightKnownTravellerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     <ApisInfos>
+                        <ImportPNR.Reservation.Person.ApisInformation>
+                           <ApisInfoIndex>-12</ApisInfoIndex>
+                           <SeriesNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <RecordNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <LastName>New</LastName>
+                           <FirstName>RESHMA</FirstName>
+                           <MiddleName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthDate>${#TestSuite#p_DOB}</BirthDate>
+                           <Gender>F</Gender>
+                           <Citizenship xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResidenceCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <CrewType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomePostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <HomeCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationPostal xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DestinationCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Embarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCity xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthState xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <BirthCountry xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentType1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate1>0001-01-01T00:00:00</ExpirationDate1>
+                           <DocumentType2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentNumber2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <IssueCountry2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ExpirationDate2>0001-01-01T00:00:00</ExpirationDate2>
+                           <ResultCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ResultMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <PhysicalFlightID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <ActualDepartureDate>0001-01-01T00:00:00</ActualDepartureDate>
+                           <FlightNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Debarkation xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <Arrival xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned1 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <DocumentScanned2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </ImportPNR.Reservation.Person.ApisInformation>
+                     </ApisInfos>
+                  </ImportPNR.Reservation.Person>
+               </Persons>
+               <Comments>
+                  <ImportPNR.Reservation.Comment>
+                     <CommentDate>${#TestCase#BookingDate}</CommentDate>
+                     <CommentText>Original PNR: TTS_11092383_58194831.pnr</CommentText>
+                  </ImportPNR.Reservation.Comment>
+                  <ImportPNR.Reservation.Comment>
+                     <CommentDate>${#TestCase#BookingDate}</CommentDate>
+                     <CommentText>Original Booking Date: ${#TestCase#BookingDate}</CommentText>
+                  </ImportPNR.Reservation.Comment>
+               </Comments>
+               <Errors xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </ImportPNR>
+         </ImportPNRRequest>
+      </ImportPNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response" type="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="f6156724-6890-48ed-af5a-7674c6396f80">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4d762d7a-6abb-457b-89b5-66226c5e0579">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9b16a2af-92ef-4ce2-96ed-8b082818b680">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e2c8e4ad-10cf-4003-bf99-bacb52d3c429">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="864e527a-c641-48b9-b83c-f40870b226d2">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="38309501-9ebe-47ac-9922-26cb2dc6effb">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="898ce034-b4ef-4205-b9f0-28dbfd8a74c5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="973329e8-5566-490a-aa4f-b2ea20289f9f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="fe6575cc-9e0b-4ce2-b7f9-96c095dab1a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="76619524-c526-4b11-9589-656814d1f938">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="bd11b882-3479-4195-a8b3-162b65c4596b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="64d5544a-e25b-4cdc-9037-946b891c44db">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="710dcd25-7206-4daf-b76c-89557bec364b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="bef89c14-e1db-48fe-9350-909bfad2f077">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d18fe454-1710-4567-884d-fe3764281570">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="76f6c5c7-354b-4528-9368-2bd2f94fcb52">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0605e29f-d8e8-4b21-b409-b75b02898afd">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="527c3069-3939-421e-8667-280b278fed21">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="09c2caf3-0bca-46e2-993d-2f66729eb9e2">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="eaff366b-69ee-4765-9f70-905cd25b3f87">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dac34d92-57eb-4259-8921-231a4d37bcd7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="5d9c6fbd-1587-4b0e-bb09-4408101f7149">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="df566a4a-cc8a-403a-961a-dd979f117eec">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="991efb52-1ccf-4d3d-a4ac-8bb6a6c1dd08">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f1dd586f-3bfb-4425-b50d-d95cda0a5719">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8f525b2f-3183-469c-a405-684756d8bb80">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="305264bc-a23b-46ef-9cb3-82b6374b0c57">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2a81289e-ec70-4057-9b45-13189193fdca">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="c2bd8053-9f70-4356-9c53-a6cf426afb3e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="cba3ad40-f2a3-439f-b837-7b361e6bf9d5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="fb7cf536-6ada-44fd-9375-e49070914a5d">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e91b5673-a717-4aa8-8d2b-e0aee72f0fce">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4c5156e6-8a20-4ff2-bd89-d37765891f5a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2bdd6c8a-ccb5-4ac8-a7cc-18e806cf31ac">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e5ed51e4-003a-45b9-a02a-24df37d0ceaf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="65fb5d11-d2b4-4344-983f-645ad55ab9d2">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e3e82b52-5f83-4e33-b38e-ae18b3a800f4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9ff94a56-6bd8-4c24-9e20-bc5e85a9e973">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e8e3cb64-0161-426a-96ac-016c83caa785">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="93bb2e59-cc6a-4d27-b592-185338c62fac">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="423efa14-6a6c-4652-87a4-3e2fb72c5a67">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="45f1476e-67ef-49df-a997-e8ad92b399aa">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1fa18017-af2e-4b40-9e01-c5b446e0c9a8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1fa4d6d4-db45-473b-b0e8-5731ae9a166c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>ExternalBookingReference</con:name>
+    </con:property>
+    <con:property>
+      <con:name>FlightNo</con:name>
+      <con:value>913</con:value>
+    </con:property>
+    <con:property>
+      <con:name>DepartureTime</con:name>
+      <con:value>2023-03-24T10:00:00</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ArrivalTime</con:name>
+      <con:value>2023-03-24T17:00:00</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CarrierCode</con:name>
+      <con:value>1D</con:value>
+    </con:property>
+    <con:property>
+      <con:name>BookingDate</con:name>
+      <con:value>2023-03-21</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>

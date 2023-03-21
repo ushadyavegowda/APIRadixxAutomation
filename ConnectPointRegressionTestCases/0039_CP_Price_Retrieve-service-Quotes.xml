@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="a41a1b9c-4e5f-4c53-8daa-044b96c18c60" keepSession="false" name="0039_CP_Price_Retrieve service Quotes" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="a41a1b9c-4e5f-4c53-8daa-044b96c18c60" keepSession="false" name="0039_CP_Price_Retrieve service Quotes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a41a1b9c-4e5f-4c53-8daa-044b96c18c60fileName">0039_CP_Price_Retrieve-service-Quotes</con:setting>
   </con:settings>

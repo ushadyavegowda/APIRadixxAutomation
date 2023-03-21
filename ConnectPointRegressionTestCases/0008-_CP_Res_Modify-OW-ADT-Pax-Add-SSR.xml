@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -1120,19 +1120,19 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>s_SSRCategory</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>

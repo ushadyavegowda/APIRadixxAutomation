@@ -59,18 +59,18 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass" id="cad27b84-14be-404c-b842-6164295b6fc7">
+  <con:testStep disabled="true" id="cad27b84-14be-404c-b842-6164295b6fc7" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>f7a10861-6ab8-40ae-af6a-214cb6fab909</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>securityToken</con:name>
-          <con:value>2c13u36aacqbwd6d43a4r3x4o455a5db49a909b82799</con:value>
+          <con:value>72ad80ab4ba0f0p43164af3468a844a9893a8d0122af</con:value>
         </con:property>
         <con:property>
           <con:name>ConfrimationNum</con:name>
-          <con:value>0NRR00</con:value>
+          <con:value>CMUH0E</con:value>
         </con:property>
         <con:property>
           <con:name>Origin</con:name>
@@ -82,15 +82,15 @@
         </con:property>
         <con:property>
           <con:name>DepartureDate</con:name>
-          <con:value>2023-03-25</con:value>
+          <con:value>2023-03-24</con:value>
         </con:property>
         <con:property>
           <con:name>ReturnDate</con:name>
-          <con:value>2023-03-29</con:value>
+          <con:value>2023-03-28</con:value>
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>2378.52</con:value>
+          <con:value>2378.28</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -98,7 +98,7 @@
         </con:property>
         <con:property>
           <con:name>LogicFlightKey</con:name>
-          <con:value>393526247:3/25/2023 4:50:00 PM</con:value>
+          <con:value>-1119085969:3/24/2023 4:50:00 PM</con:value>
         </con:property>
         <con:property>
           <con:name>TripId</con:name>
@@ -106,11 +106,11 @@
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>493482282</con:value>
+          <con:value>-111636324</con:value>
         </con:property>
         <con:property>
           <con:name>PhysicalFlightID</con:name>
-          <con:value>1457378468</con:value>
+          <con:value>2122022144</con:value>
         </con:property>
         <con:property>
           <con:name>FCCode</con:name>
@@ -142,7 +142,7 @@
         </con:property>
         <con:property>
           <con:name>ModifyDate</con:name>
-          <con:value>2023-03-31</con:value>
+          <con:value>2023-03-30</con:value>
         </con:property>
         <con:property>
           <con:name>p_HomeAddress</con:name>
@@ -174,7 +174,7 @@
         </con:property>
         <con:property>
           <con:name>ADT_DOB</con:name>
-          <con:value>1979-03-21</con:value>
+          <con:value>1979-03-20</con:value>
         </con:property>
         <con:property>
           <con:name>p_FirstNameTwo</con:name>
@@ -202,7 +202,7 @@
         </con:property>
         <con:property>
           <con:name>CHD_DOB</con:name>
-          <con:value>2017-03-21</con:value>
+          <con:value>2017-03-20</con:value>
         </con:property>
         <con:property>
           <con:name>p_ModifyFirstName</con:name>
@@ -321,23 +321,6 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="LogicalFlightKey" id="aa6cd4ac-7131-44dd-8535-2eda1f73eae5">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-        <con:name>LogicalFlightKey</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>2.RetrievePNR</con:sourceStep>
-        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
-declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]</con:sourcePath>
-        <con:targetType>LogicalFlightKey</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
   <con:testStep id="c471bae4-6825-4444-95ff-5ec55ed818cf" name="3.RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -361,8 +344,8 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad:IataNumberOfRequestor xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
             <rad:CorporationID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:CorporationID>
             <rad:FareFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">NoCombinabilityAllFares</rad:FareFilterMethod>
-            <rad:FareGroupMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">FareClassFareBasis</rad:FareGroupMethod>
-            <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">All</rad:InventoryFilterMethod>
+            <rad:FareGroupMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">WebFareTypes</rad:FareGroupMethod>
+            <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
             <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
                <rad:FareQuoteDetail>
                   <rad:Origin>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#Origin}</rad:Origin>
@@ -371,7 +354,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#ModifyDate}</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -385,7 +368,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:FareQuoteRequestInfos>
                      <rad:FareQuoteRequestInfo><rad:PassengerTypeID>6</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo>
-                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${#TestCase#LogicalFlightKey}</rad:LogicalFlightKey>
+                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf_BizClass#LogicFlightKey}</rad:LogicalFlightKey>
                </rad:FareQuoteDetail>
             </rad:FareQuoteDetails>
             <rad:ProfileId xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:ProfileId>
@@ -419,10 +402,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer NewFairID" id="934f4932-f177-4557-a8be-2958ff2e10f1">
+  <con:testStep id="934f4932-f177-4557-a8be-2958ff2e10f1" name="Property Transfer NewFairID" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFairID</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -434,7 +417,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFCCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -445,7 +428,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFBCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -456,7 +439,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>NewFlightLogicCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.RetrieveFareQuote</con:sourceStep>
@@ -982,10 +965,6 @@ m.append(res, "UTF-8")
     <con:property>
       <con:name>NewFlightLogicCode</con:name>
       <con:value>-111636324</con:value>
-    </con:property>
-    <con:property>
-      <con:name>LogicalFlightKey</con:name>
-      <con:value>393526247:3/25/2023 4:50:00 PM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

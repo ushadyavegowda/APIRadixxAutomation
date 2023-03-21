@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBalanceDashboardInfo" anonymous="optional" bindingOperationName="RetrieveBalanceDashboardInfo" id="76639f18-8449-4b2e-b681-3d1f92ddfdb7" inputName="" isOneWay="false" name="RetrieveBalanceDashboardInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBalanceDashboardInfo" anonymous="optional" bindingOperationName="RetrieveBalanceDashboardInfo" id="76639f18-8449-4b2e-b681-3d1f92ddfdb7" inputName="" isOneWay="false" name="RetrieveBalanceDashboardInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="76639f18-8449-4b2e-b681-3d1f92ddfdb7fileName">RetrieveBalanceDashboardInfo</con:setting>
   </con:settings>

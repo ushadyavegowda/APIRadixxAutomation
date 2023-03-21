@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyIncentiveReport" anonymous="optional" bindingOperationName="RetrieveAgencyIncentiveReport" id="71d39967-1791-4097-a417-2ffb43e8c0d3" inputName="" isOneWay="false" name="RetrieveAgencyIncentiveReport" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveAgencyIncentiveReport" anonymous="optional" bindingOperationName="RetrieveAgencyIncentiveReport" id="71d39967-1791-4097-a417-2ffb43e8c0d3" inputName="" isOneWay="false" name="RetrieveAgencyIncentiveReport" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="71d39967-1791-4097-a417-2ffb43e8c0d3fileName">RetrieveAgencyIncentiveReport</con:setting>
   </con:settings>

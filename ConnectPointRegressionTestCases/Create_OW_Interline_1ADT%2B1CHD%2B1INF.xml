@@ -294,7 +294,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FCCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
@@ -305,7 +305,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FBCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
@@ -602,7 +602,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           </con:configuration>
         </con:assertion>
         <con:assertion id="167f6d62-b204-4398-9b13-532b7d0f1648" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance" disabled="true">
+        <con:assertion disabled="true" id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -615,7 +615,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="af665548-5639-47c6-848f-4297dc886a7d">
+  <con:testStep id="af665548-5639-47c6-848f-4297dc886a7d" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>2000</delay>
@@ -1018,7 +1018,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">U3LCQ1</con:value>
+      <con:value>U3LCQ1</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -1046,7 +1046,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>LogicFlightKey</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-1119085969:3/24/2023 4:50:00 PM</con:value>
+      <con:value>-1119085969:3/24/2023 4:50:00 PM</con:value>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>

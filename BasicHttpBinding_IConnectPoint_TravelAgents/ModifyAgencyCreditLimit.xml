@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyCreditLimit" anonymous="optional" bindingOperationName="ModifyAgencyCreditLimit" id="7b3719f0-bc2d-4376-a5ad-1f5362cfe899" inputName="" isOneWay="false" name="ModifyAgencyCreditLimit" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/ModifyAgencyCreditLimit" anonymous="optional" bindingOperationName="ModifyAgencyCreditLimit" id="7b3719f0-bc2d-4376-a5ad-1f5362cfe899" inputName="" isOneWay="false" name="ModifyAgencyCreditLimit" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7b3719f0-bc2d-4376-a5ad-1f5362cfe899fileName">ModifyAgencyCreditLimit</con:setting>
   </con:settings>

@@ -4,7 +4,7 @@
     <con:setting id="fb83ed75-87af-496d-8301-b6373c675fcffileName">0051_CP_Interline_ModifyAddSegment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="32adf3a0-b9c3-4633-96c8-f9ebf4f724fe" name="1. Prerequisites Create_OW_Interline_1ADT" type="calltestcase" disabled="true">
+  <con:testStep disabled="true" id="32adf3a0-b9c3-4633-96c8-f9ebf4f724fe" name="1. Prerequisites Create_OW_Interline_1ADT" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>c5a42371-a0f4-4cb5-bf18-a554fb7aa77d</con:targetTestCase>
@@ -195,7 +195,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf" id="1e3f0c60-83b4-4ecb-bc05-53c7b202cf02">
+  <con:testStep id="1e3f0c60-83b4-4ecb-bc05-53c7b202cf02" name="Prerequisites_Create_OW_Interline_1ADT+1CHD+1Inf" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>3a854512-72d2-486c-b5ce-bd607f172210</con:targetTestCase>
@@ -206,7 +206,7 @@
         </con:property>
         <con:property>
           <con:name>ConfrimationNum</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>Origin</con:name>
@@ -234,7 +234,7 @@
         </con:property>
         <con:property>
           <con:name>LogicFlightKey</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>TripId</con:name>

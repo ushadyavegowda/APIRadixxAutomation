@@ -11,6 +11,10 @@ LoginDCS.xml
 0008-_CP_Res_Modify-OW-ADT-Pax-Add-SSR.xml
 0009_Prequisite_Modify-add-new-passenger.xml
 0009_CP_Res_Modify-AddServicebundle.xml
+Test5_Modify-OW-pnr-to-another-date.xml
+Test6_ModifyBooking-OW-pnr-to-add-passengers.xml
+Test12_modify-RT-pnr---add-SSR.xml
+Test14_Create-TA-booking.xml
 Create-OW-pnr-withSSR.xml
 0019_CP_Res_CreateBooking_APISinfo.xml
 0020_CP_Res_CreateOWADTCashPayment.xml
@@ -49,6 +53,13 @@ Create_OW_Interline_1ADT%2B1CHD%2B1INF_BizClass.xml
 Create_OW_Interline_1ADT.xml
 0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF.xml
 0049_CP_Interline_ModifyReplaceflight.xml
+0058_CP_Codeshare_ModifyAddSSRbundle.xml
+0059_CP_Codeshare_CancelRes.xml
+0061_CP_PnrImport_CreateGroupRes.xml
+0062_CP_PnrImport_AddPax.xml
+0063_CP_PnrImport_RemovePax.xml
+0064_CP_PnrImport_CancelRes.xml
+0050_CP_Interline_ModifyFareDowngrade.xml
 0051_CP_Interline_ModifyAddSegment.xml
 0052_CP_Interline_ModifyAddSSR.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml

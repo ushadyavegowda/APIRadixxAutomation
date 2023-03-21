@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="89fae0d0-edbe-4e9f-8f18-65f444ae1453" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0059_CP_Codeshare_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="89fae0d0-edbe-4e9f-8f18-65f444ae1453" keepSession="false" name="0059_CP_Codeshare_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="89fae0d0-edbe-4e9f-8f18-65f444ae1453fileName">0059_CP_Codeshare_CancelRes</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="1. Run 0055_CP_CodeShare_CreateRes" id="25645b57-9d5f-4d7f-87d8-e14a0252f820">
+  <con:testStep id="25645b57-9d5f-4d7f-87d8-e14a0252f820" name="1. Run 0055_CP_CodeShare_CreateRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -13,7 +13,7 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="Properties" id="300a95bf-c2ab-4412-a779-5280d4d364e6">
+  <con:testStep id="300a95bf-c2ab-4412-a779-5280d4d364e6" name="Properties" type="properties">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -24,12 +24,12 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="fcfc48f6-3f07-4a86-801b-a3aef5f03a18" name="2- RetrievePNR">
+  <con:testStep id="fcfc48f6-3f07-4a86-801b-a3aef5f03a18" name="2- RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>RetrievePNR</con:operation>
-      <con:request name="2- RetrievePNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7511491e-af68-4804-8eb5-06cce6682b48">
+      <con:request id="7511491e-af68-4804-8eb5-06cce6682b48" incomingWss="" name="2- RetrievePNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -61,14 +61,14 @@
       </tem:RetrievePNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="64aec162-5e21-4d1f-8cd7-a0ab5cc8c063" name="Valid HTTP Status Codes">
+        <con:assertion id="64aec162-5e21-4d1f-8cd7-a0ab5cc8c063" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="71215dd3-2496-41ba-9498-70bdd882156f" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="68990ee7-2fa5-4671-9f00-0d03cc7187d4" name="Schema Compliance">
+        <con:assertion id="71215dd3-2496-41ba-9498-70bdd882156f" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="68990ee7-2fa5-4671-9f00-0d03cc7187d4" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -76,15 +76,15 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer -PNR" id="21812058-6355-4bea-b703-6fb9985b32c9">
+  <con:testStep id="21812058-6355-4bea-b703-6fb9985b32c9" name="Property Transfer -PNR" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>PNR</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2- RetrievePNR</con:sourceStep>
@@ -95,12 +95,12 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="5ca1ecd2-34b1-49ba-895d-91a54b40ef4c" name="3 - CancelPNR">
+  <con:testStep id="5ca1ecd2-34b1-49ba-895d-91a54b40ef4c" name="3 - CancelPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CancelPNR</con:operation>
-      <con:request name="3 - CancelPNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0add94bb-6161-482b-be52-f2704a40dc57">
+      <con:request id="0add94bb-6161-482b-be52-f2704a40dc57" incomingWss="" name="3 - CancelPNR" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -134,14 +134,14 @@
       </tem:CancelPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="c897247e-7301-4259-b30e-9a8d857ee43c" name="Valid HTTP Status Codes">
+        <con:assertion id="c897247e-7301-4259-b30e-9a8d857ee43c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="814a0907-75c8-43de-996f-810f929ecfba" name="Not SOAP Fault"/>
-        <con:assertion type="Response SLA Assertion" id="4c0a5a9c-b804-476c-a830-01402c49b8bf" name="Response SLA">
+        <con:assertion id="814a0907-75c8-43de-996f-810f929ecfba" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="4c0a5a9c-b804-476c-a830-01402c49b8bf" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>10000</SLA>
           </con:configuration>
@@ -151,7 +151,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CancelPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CancelPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="89b616d7-3c9a-46b9-96e4-24d1bb46d503">
@@ -164,12 +164,12 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="7c8b6c3c-965c-467f-bb8a-7cf73e6ee265" name="4 - CreatePNR (Save)">
+  <con:testStep id="7c8b6c3c-965c-467f-bb8a-7cf73e6ee265" name="4 - CreatePNR (Save)" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>CreatePNR</con:operation>
-      <con:request name="4 - CreatePNR (Save)" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="84842c45-70b3-4570-b7a3-3c193b5b27a1">
+      <con:request id="84842c45-70b3-4570-b7a3-3c193b5b27a1" incomingWss="" name="4 - CreatePNR (Save)" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -201,19 +201,19 @@
       </tem:CreatePNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="8f8d0805-625f-4360-9a48-7606df19f826" name="Valid HTTP Status Codes">
+        <con:assertion id="8f8d0805-625f-4360-9a48-7606df19f826" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="e3f0dc1f-1cea-4222-8e85-7f072e08bfb1" name="Not SOAP Fault"/>
+        <con:assertion id="e3f0dc1f-1cea-4222-8e85-7f072e08bfb1" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="89b616d7-3c9a-46b9-96e4-24d1bb46d503">
@@ -226,7 +226,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="662fe02a-f0fe-4c96-b724-0e8432cb2601">
+  <con:testStep id="662fe02a-f0fe-4c96-b724-0e8432cb2601" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

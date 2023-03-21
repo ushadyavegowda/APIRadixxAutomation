@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingHistory" anonymous="optional" bindingOperationName="RetrieveBookingHistory" id="24322bc7-5474-4b25-969c-63074aec5a85" inputName="" isOneWay="false" name="RetrieveBookingHistory" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveBookingHistory" anonymous="optional" bindingOperationName="RetrieveBookingHistory" id="24322bc7-5474-4b25-969c-63074aec5a85" inputName="" isOneWay="false" name="RetrieveBookingHistory" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="24322bc7-5474-4b25-969c-63074aec5a85fileName">RetrieveBookingHistory</con:setting>
   </con:settings>

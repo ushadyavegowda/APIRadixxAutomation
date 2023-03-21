@@ -1570,7 +1570,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <delay>3000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep disabled="true" id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1634,6 +1634,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
   </con:properties>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>dc9a2870-ac26-4023-86da-fe056214c53e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>dc9a2870-ac26-4023-86da-fe056214c53e</con:testStepId>
     <con:status>NONE</con:status>
@@ -2441,11 +2446,6 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>8d4abd7c-7c19-47b0-83da-83e0b037a5d1</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>5585c0aa-2d8e-459b-9a55-fe374dabc86d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

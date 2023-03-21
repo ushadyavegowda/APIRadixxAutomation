@@ -937,31 +937,31 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:CreatePNR>
-         <!--Optional:-->
-         <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>
-            <!--Optional:-->
-            <rad:HistoricUserName>radixx</rad:HistoricUserName>
-            <rad1:ActionType>SaveReservation</rad1:ActionType>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-         </tem:CreatePnrRequest>
-      </tem:CreatePNR>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:CreatePNR>\r
+         <!--Optional:-->\r
+         <tem:CreatePnrRequest>\r
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
+            <rad:CarrierCodes>\r
+               <!--Zero or more repetitions:-->\r
+               <rad:CarrierCode>\r
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
+               </rad:CarrierCode>\r
+            </rad:CarrierCodes>\r
+            <!--Optional:-->\r
+            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>\r
+            <!--Optional:-->\r
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
+            <rad1:ActionType>SaveReservation</rad1:ActionType>\r
+            <rad1:ReservationInfo>\r
+               <rad:SeriesNumber>299</rad:SeriesNumber>\r
+               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>\r
+            </rad1:ReservationInfo>\r
+         </tem:CreatePnrRequest>\r
+      </tem:CreatePNR>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">

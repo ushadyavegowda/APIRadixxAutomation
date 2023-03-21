@@ -476,7 +476,7 @@
     </con:property>
     <con:property>
       <con:name>CS_FarebasisCode</con:name>
-      <con:value>B</con:value>
+      <con:value>BRT2</con:value>
     </con:property>
     <con:property>
       <con:name>CS_DepartureDate</con:name>
@@ -485,6 +485,22 @@
     <con:property>
       <con:name>ExternalBookingReference</con:name>
       <con:value>DX3706</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Fareclass</con:name>
+      <con:value>B</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Upgrade_FareBasiscode</con:name>
+      <con:value>BOW</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_FBcode</con:name>
+      <con:value>BRT2</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_Upgrade_FBcode</con:name>
+      <con:value>BOW</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

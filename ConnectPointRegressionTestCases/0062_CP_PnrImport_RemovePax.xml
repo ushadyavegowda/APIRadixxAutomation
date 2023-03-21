@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="45162e52-f3e9-483f-b249-2ab608d64ca6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="0062_CP_PnrImport_RemovePax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="45162e52-f3e9-483f-b249-2ab608d64ca6" keepSession="false" name="0062_CP_PnrImport_RemovePax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="45162e52-f3e9-483f-b249-2ab608d64ca6fileName">0062_CP_PnrImport_RemovePax</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="1.Run 0059_CP_PnrImport_CreateGroupRes" id="cff18534-56ce-471a-8d65-43175cd9cd15">
+  <con:testStep id="cff18534-56ce-471a-8d65-43175cd9cd15" name="1.Run 0059_CP_PnrImport_CreateGroupRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -253,10 +253,10 @@ testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
 //testRunner.testCase.testSuite.setPropertyValue("ExternalBookingRef",ExternalBookingRef);</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer-FlightNo" id="74dddbf1-9f01-4704-8fd7-d56f60b4d4bd">
+  <con:testStep id="74dddbf1-9f01-4704-8fd7-d56f60b4d4bd" name="Property Transfer-FlightNo" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FlightNo</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -268,7 +268,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>DepartureTime</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -279,7 +279,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ArrivalTime</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -290,7 +290,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>CarrierCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -303,12 +303,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="8a0904a7-1ea7-4ae0-8edb-b9c0f56b5372" name="ImportPNR_Remove_1Pax">
+  <con:testStep id="8a0904a7-1ea7-4ae0-8edb-b9c0f56b5372" name="ImportPNR_Remove_1Pax" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ImportPNR</con:operation>
-      <con:request name="ImportPNR_Remove_1Pax" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="12c141f1-f1df-45d0-8579-588226bc1b09" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="12c141f1-f1df-45d0-8579-588226bc1b09" incomingWss="" name="ImportPNR_Remove_1Pax" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Only the first nodes</con:setting>
@@ -1237,14 +1237,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </ImportPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response"/>
+        <con:assertion id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="f6156724-6890-48ed-af5a-7674c6396f80">

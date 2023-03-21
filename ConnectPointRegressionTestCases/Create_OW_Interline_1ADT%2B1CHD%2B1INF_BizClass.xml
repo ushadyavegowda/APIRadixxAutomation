@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="7ab41546-f4e1-4abe-a130-db4150a636fd" keepSession="false" maxResults="0" name="0053_CP_Interline_ModifyNameChange_1ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="f7a10861-6ab8-40ae-af6a-214cb6fab909" keepSession="false" maxResults="0" name="Create_OW_Interline_1ADT+1CHD+1INF_BizClass" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="7ab41546-f4e1-4abe-a130-db4150a636fdfileName">0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF</con:setting>
+    <con:setting id="f7a10861-6ab8-40ae-af6a-214cb6fab909fileName">Create_OW_Interline_1ADT%2B1CHD%2B1INF_BizClass</con:setting>
   </con:settings>
-  <con:testStep id="6f9bf2a6-d277-4830-befd-cb6ef34dd12d" name="1. RetrieveSecuirtyToken" type="calltestcase" disabled="true">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
-      <con:runMode>PARALLELL</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="request" id="6fa68f54-d272-49df-99c9-89840a289b0f" name="1.RetrieveSecurityToken">
+  <con:testStep id="31c49435-155c-48d1-ba51-8160866ab570" name="1.RetrieveSecurityToken" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Security</con:interface>
       <con:operation>RetrieveSecurityToken</con:operation>
-      <con:request name="1.RetrieveSecurityToken" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7">
+      <con:request id="6e87f840-bc09-498a-aeeb-2c12bd99a2a7" incomingWss="" name="1.RetrieveSecurityToken" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -41,19 +32,19 @@
       </tem:RetrieveSecurityToken>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes">
+        <con:assertion id="0add8390-74c9-4987-9e6f-15d8fed71fc3" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" disabled="true">
+        <con:assertion disabled="true" id="ecca5991-de9d-4e4e-95ac-17d3be6bdb43" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance">
+        <con:assertion id="b88f798e-d6fa-4058-80b5-421bf9dbcd16" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
+        <con:assertion id="e80a0237-86dc-4a77-98db-a15607029657" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -62,12 +53,12 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="47225c0f-3741-4c32-9716-f1fd8881c7b5" name="InputValues" type="groovy">
+  <con:testStep id="56cae13b-f3d9-40c0-a066-05833604f043" name="InputValues" type="groovy">
     <con:settings/>
     <con:config>
       <script>// importing the Java methods
@@ -155,7 +146,7 @@ testRunner.testCase.setPropertyValue("p_HomeState", "FL");
 testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="43ff8fc4-d98e-4f5b-8397-051e48a503ef" name="1. Login" type="calltestcase" disabled="true">
+  <con:testStep disabled="true" id="c0922085-c78c-4325-9fbc-628932b78b6b" name="1. Login" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
@@ -164,7 +155,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="bf42adc2-6599-4abd-b34e-86687132bd2b" name="2.RetrieveFareQuote" type="request">
+  <con:testStep id="0dc44313-3658-4dcb-a424-34447e1c5695" name="2.RetrieveFareQuote" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
@@ -218,7 +209,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
                   <rad1:LanguageCode>en</rad1:LanguageCode>
                   <rad1:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:FareQuoteRequestInfos>
-                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>5</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
+                     <rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>6</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo><rad1:FareQuoteRequestInfo><rad1:PassengerTypeID>1</rad1:PassengerTypeID><rad1:TotalSeatsRequired>1</rad1:TotalSeatsRequired></rad1:FareQuoteRequestInfo>
                   </rad1:FareQuoteRequestInfos><rad1:ActionType>NewBooking</rad1:ActionType>
                </rad1:FareQuoteDetail>
                
@@ -253,7 +244,7 @@ testRunner.testCase.setPropertyValue("p_HomePostal", "32822");</script>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="10c7902d-1161-4065-b4d0-3f81a1277161" name="Transfer LFID PHYID FareId and TripId" type="transfer">
+  <con:testStep id="21b9d1f4-a8be-428a-bd5b-6117b5253e42" name="Transfer LFID PHYID FareId and TripId" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -285,27 +276,49 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[2]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>fareid</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
         <con:targetTransferType>XPATH</con:targetTransferType>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>TripId</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:TripId[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[2]/a:FareInfos[1]/a:FareInfo[1]/a:CombinableTrips[1]/a:CombinableTrip[1]/a:CombinableFlights[1]/a:CombinableFlight[1]/a:CombinableFareInfoDetails[1]/a:CombinableFareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>TripId</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>FCCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[3]/a:FareInfos[1]/a:FareInfo[1]/a:FCCode[1]</con:sourcePath>
+        <con:targetType>FCCode</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>FBCode</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>2.RetrieveFareQuote</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FBCode[1]</con:sourcePath>
+        <con:targetType>FBCode</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="0c6290d0-f446-4c3c-91c6-2aee87ed37cb" name="3.SummaryPNR" type="request">
+  <con:testStep id="89648294-e06d-4a0c-96d3-807dbd2c9b85" name="3.SummaryPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -418,71 +431,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad1:Height>170</rad1:Height>
                </rad1:Person>
                
+               
                <rad1:Person>
-                  <rad1:PersonOrgID>-3</rad1:PersonOrgID>
-                  <rad1:FirstName>${#TestCase#p_FirstNameInfOne}</rad1:FirstName>
+                  <rad1:PersonOrgID>-2</rad1:PersonOrgID>
+                  <rad1:FirstName>${#TestCase#p_FirstNameCHDOne}</rad1:FirstName>
                   <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
-                  <rad1:MiddleName>${#TestCase#p_MiddleNameInfOne}</rad1:MiddleName>
-                  <rad1:Age>1</rad1:Age>
-                  <rad1:DOB>2022-04-20</rad1:DOB>
-                  <rad1:Gender>Female</rad1:Gender>
-                  <rad1:Title>MISS</rad1:Title>
-                  <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
-                  <rad1:RelationType>Daughter</rad1:RelationType>
-                  <rad1:WBCID>-214</rad1:WBCID>
-                  <rad1:PTCID>5</rad1:PTCID>
-                  <rad1:PTC>INF</rad1:PTC>
-                  <rad1:TravelsWithPersonOrgID>-1</rad1:TravelsWithPersonOrgID>
-                  <rad1:RedressNumber>${empty}</rad1:RedressNumber>
-                  <rad1:KnownTravelerNumber>${empty}</rad1:KnownTravelerNumber>
-                  <rad1:MarketingOptIn>false</rad1:MarketingOptIn>
-                  <rad1:UseInventory>true</rad1:UseInventory>
-                  <rad1:Address>
-                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
-                     <rad1:Address2>${empty}</rad1:Address2>
-                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
-                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
-                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
-                     <rad1:Country>USA</rad1:Country>
-                     <rad1:CountryCode>${empty}</rad1:CountryCode>
-                     <rad1:AreaCode>${empty}</rad1:AreaCode>
-                     <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                     <rad1:Display>${empty}</rad1:Display>
-                  </rad1:Address>
-                  <rad1:Company>${empty}</rad1:Company>
-                  <rad1:Comments>${empty}</rad1:Comments>
-                  <rad1:Passport>${empty}</rad1:Passport>
-                  <rad1:Nationality>USA</rad1:Nationality>
-                  <rad1:ProfileId>-2147483648</rad1:ProfileId>
-                  <rad1:IsPrimaryPassenger>true</rad1:IsPrimaryPassenger>
-                  <rad1:ContactInfos>
-                     <!--Zero or more repetitions:-->
-                     <rad1:ContactInfo>
-                        <rad1:ContactID>-1</rad1:ContactID>
-                        <rad1:PersonOrgID>-1</rad1:PersonOrgID>
-                        <rad1:ContactField>${#TestCase#p_Email}</rad1:ContactField>
-                        <rad1:ContactType>Email</rad1:ContactType>
-                        <rad1:Extension>${empty}</rad1:Extension>
-                        <rad1:CountryCode>${empty}</rad1:CountryCode>
-                        <rad1:AreaCode>${empty}</rad1:AreaCode>
-                        <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
-                        <rad1:Display>${#TestCase#p_Email}</rad1:Display>
-                        <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
-                     </rad1:ContactInfo>
-                     
-                  </rad1:ContactInfos>
-                  <!--Optional:-->
-                  <rad1:FrequentFlyerNumber>${empty}</rad1:FrequentFlyerNumber>
-                  <!--Optional:-->
-                  <rad1:Suffix>JR</rad1:Suffix>
-                  <rad1:Weight>60</rad1:Weight>
-                  <rad1:Height>170</rad1:Height>
-               </rad1:Person>
-               <rad1:Person>
-                  <rad1:PersonOrgID>-4</rad1:PersonOrgID>
-                  <rad1:FirstName>${#TestCase#p_FirstNameCHD}</rad1:FirstName>
-                  <rad1:LastName>${#TestCase#p_LastName}</rad1:LastName>
-                  <rad1:MiddleName>${#TestCase#p_MiddleNameCHD}</rad1:MiddleName>
+                  <rad1:MiddleName>${#TestCase#p_MiddleNameCHDone}</rad1:MiddleName>
                   <rad1:Age>${#TestCase#CHD_age}</rad1:Age>
                   <rad1:DOB>${#TestCase#CHD_DOB}</rad1:DOB>
                   <rad1:Gender>Male</rad1:Gender>
@@ -579,10 +533,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer ResBalance" id="c130c560-8a05-4539-8d09-1e8158e74572">
+  <con:testStep id="d6bde2bf-d569-4ab8-8296-457f990fe9ac" name="Property Transfer ResBalance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ResBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>3.SummaryPNR</con:sourceStep>
@@ -596,7 +550,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="292c63cc-09c9-44f4-9f17-1dd09821b5d4" name="4.AssessPaymentMethod" type="request">
+  <con:testStep id="19da74e3-aa4e-42b6-9fd7-b032624a268a" name="4.AssessPaymentMethod" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fees</con:interface>
@@ -648,7 +602,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
           </con:configuration>
         </con:assertion>
         <con:assertion id="167f6d62-b204-4398-9b13-532b7d0f1648" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
-        <con:assertion id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance">
+        <con:assertion disabled="true" id="c825cbed-ea3f-4871-8f4e-1dbc31f162e7" name="Schema Compliance" type="Schema Compliance">
           <con:configuration/>
         </con:assertion>
         <con:credentials>
@@ -661,7 +615,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="efebe079-5bd5-431a-a317-988753342ed2" name="5.CreatePNR-commit" type="request">
+  <con:testStep id="97d9e8db-4187-4dfe-babd-244a991b4c06" name="Delay" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>2000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="f8e0e39e-f13b-4a29-964b-39fe0ec45ffd" name="5.CreatePNR-commit" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -723,10 +683,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer ConfirmationNum and Balance" id="2974b10a-6a91-4019-8387-3a07634a4a28">
+  <con:testStep id="5de97050-e076-4b95-bad4-1342ec2fe16d" name="Property Transfer ConfirmationNum and Balance" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ConfrimationNum</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
@@ -738,7 +698,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ResBalance</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>5.CreatePNR-commit</con:sourceStep>
@@ -751,7 +711,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="b833ade5-9927-49ce-add8-c42e7c4bacb1" name="6.InsertExternalProcessedPayment" type="request">
+  <con:testStep id="770081d5-f7e7-43b7-815b-7cf09b99dd2e" name="6.InsertExternalProcessedPayment" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Fulfillment</con:interface>
@@ -930,7 +890,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="66d5631e-bd49-4fe4-8630-dfb90c7bfebe" name="7.CreatePNR-save" type="request">
+  <con:testStep id="90b63fac-92d5-4d23-871b-aeac3d3876df" name="7.CreatePNR-save" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -992,76 +952,16 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="a2f65e4e-e03b-4785-8450-58b513b9e04c" name="8.RetrievePNR">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
-      <con:operation>RetrievePNR</con:operation>
-      <con:request name="8.RetrievePNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="42098b23-dfbf-4f54-9083-fbdd0f694d5a">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:RetrievePNR>
-         <!--Optional:-->
-         <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <!--Optional:-->
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:ActionType>GetReservation</rad1:ActionType>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#TestCase#ConfrimationNum}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-         </tem:RetrievePnrRequest>
-      </tem:RetrievePNR>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="c52234da-72f1-42e5-8209-580b9f84d59a" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="8deac603-0804-415f-ac6c-2c20cf14dbc4" name="Response SLA" disabled="true">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="34475ae8-2105-4b2e-8fe8-09fd2699e4e5" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="1e640b58-2063-46a9-ad9b-6c5d563c08ac" name="Schema Compliance" disabled="true">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer Key" id="504d0bd0-dfa2-43da-b2df-dceab9e372fc">
+  <con:testStep id="63a1461e-e70b-490d-9ceb-e888a410a0a6" name="Property Transfer Key" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>LogicFlightKey</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>8.RetrievePNR</con:sourceStep>
+        <con:sourceStep>7.CreatePNR-save</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]</con:sourcePath>
+//ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:Key[1]</con:sourcePath>
         <con:targetType>LogicFlightKey</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -1069,342 +969,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1833e62e-8419-4498-9c45-fe3b068518f1" name="9.RetrieveFareQuote">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Pricing</con:interface>
-      <con:operation>RetrieveFareQuote</con:operation>
-      <con:request name="9.RetrieveFareQuote" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="358a923a-b5fc-4b1a-b6b3-3560af3387ba">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Pricing.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:RetrieveFareQuote>
-         <tem:RetrieveFareQuoteRequest>
-            <rad:SecurityGUID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">${#TestCase#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
-            <rad:CurrencyOfFareQuote xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">CAD</rad:CurrencyOfFareQuote>
-            <rad:PromotionalCode xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
-            <rad:IataNumberOfRequestor xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote"/>
-            <rad:CorporationID xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:CorporationID>
-            <rad:FareFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">NoCombinabilityAllFares</rad:FareFilterMethod>
-            <rad:FareGroupMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">WebFareTypes</rad:FareGroupMethod>
-            <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
-            <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
-               <rad:FareQuoteDetail>
-                  <rad:Origin>${#TestCase#Origin}</rad:Origin>
-                  <rad:Destination>${#TestCase#Destination}</rad:Destination>
-                  <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
-                  <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
-                  <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
-                  <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>${#TestCase#DepartureDate}</rad:DateOfDeparture>
-                  <rad:FareTypeCategory>1</rad:FareTypeCategory>
-                  <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:Cabin xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:LFID>0</rad:LFID>
-                  <rad:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore>
-                  <rad:NumberOfDaysAfter>0</rad:NumberOfDaysAfter>
-                  <rad:LanguageCode>en</rad:LanguageCode>
-                  <rad:TicketPackageID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad:FareQuoteRequestInfos>
-                     <rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>5</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo>
-                        <rad:PassengerTypeID>6</rad:PassengerTypeID>
-                        <rad:TotalSeatsRequired>1</rad:TotalSeatsRequired>
-                     </rad:FareQuoteRequestInfo>
-                  </rad:FareQuoteRequestInfos><rad:ActionType>ReplaceFlightOnReservation</rad:ActionType><rad:LogicalFlightKey>${#TestCase#LogicFlightKey}</rad:LogicalFlightKey>
-               </rad:FareQuoteDetail>
-               
-            </rad:FareQuoteDetails>
-            <rad:ProfileId xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">0</rad:ProfileId>
-         </tem:RetrieveFareQuoteRequest>
-      </tem:RetrieveFareQuote>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="e0ddcc4c-c513-48b7-8352-18a3fd27268a" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="d6015135-2c4a-4d17-bd68-c18bb58adeb2" name="Response SLA" disabled="true">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="874c79ee-ef1e-40ef-a5c9-61ab3c4db6d1" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="498d7619-e2ec-42df-abd0-0e4e78656755" name="Schema Compliance">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuote"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="request" id="76e2598f-5239-421c-9380-29bba338b115" name="10.ModifyPNR- Name change">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
-      <con:operation>ModifyPNR</con:operation>
-      <con:request name="10.ModifyPNR- Name change" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2365ead8-2b7e-4a70-9f89-25464326ebf5">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ModifyPNR>
-         <!--Optional:-->
-         <tem:ModifyPnrRequest>
-            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
-            <!--Optional:-->
-            <rad:HistoricUserName>${empty}</rad:HistoricUserName>
-            <rad1:ActionType>UpdatePassengerInformationNoFee</rad1:ActionType>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#TestCase#ConfrimationNum}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-            <rad1:FareInformationID>1</rad1:FareInformationID>
-            <rad1:LogicalFlightKeyToReplace>${#TestCase#LogicFlightKey}</rad1:LogicalFlightKeyToReplace>
-            <rad1:LogicalFlightKeyToRemove>${empty}</rad1:LogicalFlightKeyToRemove>
-            <rad1:PersonOrgIdentifierToRemove>-1</rad1:PersonOrgIdentifierToRemove>
-            <rad1:PassengersToAdd>
-               <!--Zero or more repetitions:-->
-               <rad1:ModifyPNR.Passenger>
-                  <rad1:PersonOrgID>54358</rad1:PersonOrgID>
-                  <rad1:FirstName>Madhu</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>ADT</rad1:MiddleName>
-                  <rad1:Age>35</rad1:Age>
-                  <rad1:DOB>1987-09-25</rad1:DOB>
-                  <rad1:Gender>Male</rad1:Gender>
-                  <rad1:Title>MR</rad1:Title>
-                  <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
-                  <rad1:RelationType>Self</rad1:RelationType>
-                  <rad1:WBCID>-214</rad1:WBCID>
-                  <rad1:PTCID>1</rad1:PTCID>
-                  <rad1:PTC>ADT</rad1:PTC>
-                  <rad1:UseInventory>true</rad1:UseInventory>
-                  <rad1:Address>
-                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
-                     <rad1:Address2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
-                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
-                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
-                     <rad1:Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                     <rad1:CountryCode>0</rad1:CountryCode>
-                     <rad1:AreaCode>0</rad1:AreaCode>
-                     <rad1:PhoneNumber>123456789</rad1:PhoneNumber>
-                     <rad1:Display>${empty}</rad1:Display>
-                  </rad1:Address>
-                  <rad1:Company>Radixx</rad1:Company>
-                  <rad1:Comments>${empty}</rad1:Comments>
-                  <rad1:Passport>${empty}</rad1:Passport>
-                  <rad1:Nationality xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:ProfileId>-2147483648</rad1:ProfileId>
-                  <rad1:ContactInfos xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:Weight>70</rad1:Weight>
-                  <rad1:Height>165</rad1:Height>
-                  <rad1:DropOffID>-1</rad1:DropOffID>
-                  <rad1:PickUpID>-1</rad1:PickUpID>
-                  <rad1:LapChildID>-1</rad1:LapChildID>
-                  <rad1:FrequentFlyerNumber>${empty}</rad1:FrequentFlyerNumber>
-                  <rad1:SelecteeStatus>-1</rad1:SelecteeStatus>
-                  <rad1:StoreFrontID>${empty}</rad1:StoreFrontID>
-                  <rad1:TravelsWithPersonOrgID>40394</rad1:TravelsWithPersonOrgID>
-                  <rad1:RedressNumber>${empty}</rad1:RedressNumber>
-                  <rad1:KnownTravelerNumber>${empty}</rad1:KnownTravelerNumber>
-                  <rad1:RecordLocator>${empty}</rad1:RecordLocator>
-               </rad1:ModifyPNR.Passenger>
-            </rad1:PassengersToAdd>
-            <rad1:PassengersToUpdate>
-               <!--Zero or more repetitions:-->
-               <rad1:ModifyPNR.UpdatePassenger>
-                  <rad1:PersonOrgID>54358</rad1:PersonOrgID>
-                  <rad1:FirstName>Madhu</rad1:FirstName>
-                  <rad1:LastName>Nadendla</rad1:LastName>
-                  <rad1:MiddleName>Modified</rad1:MiddleName>
-                  <rad1:Age>35</rad1:Age>
-                  <rad1:DOB>1987-09-25</rad1:DOB>
-                  <rad1:Gender>Male</rad1:Gender>
-                  <rad1:Title>MR</rad1:Title>
-                  <rad1:NationalityLaguageID>840</rad1:NationalityLaguageID>
-                  <rad1:RelationType>Self</rad1:RelationType>
-                  <rad1:WBCID>-214</rad1:WBCID>
-                  <rad1:PTCID>1</rad1:PTCID>
-                  <rad1:PTC>ADT</rad1:PTC>
-                  <rad1:UseInventory>true</rad1:UseInventory>
-                  <rad1:Address>
-                     <rad1:Address1>${#TestCase#p_HomeAddress}</rad1:Address1>
-                     <rad1:Address2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                     <rad1:City>${#TestCase#p_HomeCity}</rad1:City>
-                     <rad1:State>${#TestCase#p_HomeState}</rad1:State>
-                     <rad1:Postal>${#TestCase#p_HomePostal}</rad1:Postal>
-                     <rad1:Country xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                     <rad1:CountryCode>0</rad1:CountryCode>
-                     <rad1:AreaCode>0</rad1:AreaCode>
-                     <rad1:PhoneNumber>123456789</rad1:PhoneNumber>
-                     <rad1:Display>${empty}</rad1:Display>
-                  </rad1:Address>
-                  <rad1:Company>Radixx</rad1:Company>
-                  <rad1:Comments>${empty}</rad1:Comments>
-                  <rad1:Passport>${empty}</rad1:Passport>
-                  <rad1:Nationality>${empty}</rad1:Nationality>
-                  <rad1:ProfileId>-2147483648</rad1:ProfileId>
-                  <rad1:ContactInfos xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:Weight>70</rad1:Weight>
-                  <rad1:Height>165</rad1:Height>
-                  <rad1:RedressNumber>${empty}</rad1:RedressNumber>
-                  <rad1:KnownTravelerNumber>${empty}</rad1:KnownTravelerNumber>
-                  <rad1:FrequentFlyerNumber>${empty}</rad1:FrequentFlyerNumber>
-               </rad1:ModifyPNR.UpdatePassenger>
-            </rad1:PassengersToUpdate>
-            <rad1:SpecialServices xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-            <rad1:SpecialServicesToCancel>
-               <!--Zero or more repetitions:-->
-            </rad1:SpecialServicesToCancel>
-            <rad1:ContactInformationToAdd>
-               <!--Zero or more repetitions:-->
-            </rad1:ContactInformationToAdd>
-            <rad1:ContactInformationToUpdate>
-               <!--Zero or more repetitions:-->
-            </rad1:ContactInformationToUpdate>
-            <rad1:CommentToAdd>
-               <rad1:CommentID>-1</rad1:CommentID>
-               <rad1:Comment>Testing</rad1:Comment>
-            </rad1:CommentToAdd>
-            <rad1:IsFlightDisruptionModify>false</rad1:IsFlightDisruptionModify>
-         </tem:ModifyPnrRequest>
-      </tem:ModifyPNR>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="a8f6c24e-8435-43bd-8355-cb17b1da8699" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="3ea034c9-2439-424b-8b43-ece168765351" name="Response SLA" disabled="true">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="3031e8db-b363-4d9b-8c8f-90d4b75c1ada" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="214f44bf-ee32-4ba1-aae8-ec7ea8c259c0" name="Schema Compliance" disabled="true">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer NewConfirmationNum" id="ba18e52e-6c5c-4f9b-88d4-3f6344d1b20a">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-        <con:name>NewConfirmationNum</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>10.ModifyPNR- Name change</con:sourceStep>
-        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
-declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
-//ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ConfirmationNumber[1]</con:sourcePath>
-        <con:targetType>NewConfirmationNum</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="request" id="f6dc7fb7-09d4-492b-afca-7abd751d54ef" name="11.CreatePNR-Save">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
-      <con:operation>CreatePNR</con:operation>
-      <con:request name="11.CreatePNR-Save" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4c25dbfb-7dd7-4f2e-81fe-5151f549c81b">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:CreatePNR>
-         <!--Optional:-->
-         <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${#TestCase#securityToken}</rad:SecurityGUID>
-            <rad:CarrierCodes>
-               <!--Zero or more repetitions:-->
-               <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
-               </rad:CarrierCode>
-            </rad:CarrierCodes>
-            <!--Optional:-->
-            <rad:ClientIPAddress>?</rad:ClientIPAddress>
-            <!--Optional:-->
-            <rad:HistoricUserName>?</rad:HistoricUserName>
-            <rad1:ActionType>SaveReservation</rad1:ActionType>
-            <rad1:ReservationInfo>
-               <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${#TestCase#NewConfirmationNum}</rad:ConfirmationNumber>
-            </rad1:ReservationInfo>
-         </tem:CreatePnrRequest>
-      </tem:CreatePNR>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:assertion type="Valid HTTP Status Codes" id="3e024397-96f9-4ada-922b-b2be198021a4" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="07389224-f2e2-4fcc-89df-5b13381108d3" name="Response SLA" disabled="true">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="SOAP Fault Assertion" id="f4a451c3-da10-4e92-bd6b-349102f73a98" name="Not SOAP Fault"/>
-        <con:assertion type="Schema Compliance" id="2ac7725f-5809-432a-aab9-d8098968b790" name="Schema Compliance" disabled="true">
-          <con:configuration/>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="2d768062-9bf0-4ba0-9fda-a22eb6dec9d3" name="Groovy Script" type="groovy">
+  <con:testStep id="dd1039a7-5012-44ef-a08b-ae0f961bef9b" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1449,151 +1014,155 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value/>
+      <con:value>9086478d2e104djcm3gfr9te0bc2tb1bk4p579d1e2c2</con:value>
     </con:property>
     <con:property>
       <con:name>ConfrimationNum</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-    </con:property>
-    <con:property>
-      <con:name>NewConfirmationNum</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
-      <con:value/>
+      <con:value>YUL</con:value>
     </con:property>
     <con:property>
       <con:name>Destination</con:name>
-      <con:value/>
+      <con:value>NCE</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value/>
+      <con:value>2023-03-24</con:value>
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value/>
+      <con:value>2023-03-28</con:value>
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value/>
+      <con:value>0</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value>3</con:value>
     </con:property>
     <con:property>
       <con:name>LogicFlightKey</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>TripId</con:name>
-      <con:value/>
+      <con:value>3</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value/>
+      <con:value>-111636324</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value/>
+      <con:value>2122022144</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FCCode</con:name>
+      <con:value>C</con:value>
+    </con:property>
+    <con:property>
+      <con:name>FBCode</con:name>
+      <con:value>QIFLXCAO</con:value>
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>
-      <con:value/>
+      <con:value>radix@radixx.com</con:value>
     </con:property>
     <con:property>
       <con:name>ADT_age</con:name>
-      <con:value/>
+      <con:value>25</con:value>
     </con:property>
     <con:property>
       <con:name>CHD_age</con:name>
-      <con:value/>
+      <con:value>6</con:value>
     </con:property>
     <con:property>
       <con:name>currency</con:name>
-      <con:value/>
+      <con:value>CAD</con:value>
     </con:property>
     <con:property>
       <con:name>paycurrency</con:name>
-      <con:value/>
+      <con:value>CAD</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value/>
+      <con:value>2023-03-30</con:value>
     </con:property>
     <con:property>
       <con:name>p_HomeAddress</con:name>
-      <con:value/>
+      <con:value>6310 HAZELTINE NATIONAL DR</con:value>
     </con:property>
     <con:property>
       <con:name>p_HomeCity</con:name>
-      <con:value/>
+      <con:value>ORLANDO</con:value>
     </con:property>
     <con:property>
       <con:name>p_HomeState</con:name>
-      <con:value/>
+      <con:value>FL</con:value>
     </con:property>
     <con:property>
       <con:name>p_HomePostal</con:name>
-      <con:value/>
+      <con:value>32822</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value/>
+      <con:value>BobADL</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value/>
+      <con:value>Mol</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value/>
+      <con:value>Young</con:value>
     </con:property>
     <con:property>
       <con:name>ADT_DOB</con:name>
-      <con:value/>
+      <con:value>1979-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameTwo</con:name>
-      <con:value/>
+      <con:value>Mechile</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameTwo</con:name>
-      <con:value/>
+      <con:value>Corry</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameInfOne</con:name>
-      <con:value/>
+      <con:value>EllahInf</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameInfOne</con:name>
-      <con:value/>
+      <con:value>Lucy</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHDOne</con:name>
-      <con:value/>
+      <con:value>TomCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleNameCHDone</con:name>
-      <con:value/>
+      <con:value>Chris</con:value>
     </con:property>
     <con:property>
       <con:name>CHD_DOB</con:name>
-      <con:value/>
+      <con:value>2017-03-20</con:value>
     </con:property>
     <con:property>
       <con:name>p_ModifyFirstName</con:name>
-      <con:value/>
+      <con:value>MattADL</con:value>
     </con:property>
     <con:property>
       <con:name>p_ModifyMiddleName</con:name>
-      <con:value/>
+      <con:value>Charles</con:value>
     </con:property>
     <con:property>
       <con:name>p_ModifyLastName</con:name>
-      <con:value/>
+      <con:value>Cameron</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

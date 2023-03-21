@@ -254,10 +254,10 @@ testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
 //testRunner.testCase.testSuite.setPropertyValue("ExternalBookingRef",ExternalBookingRef);</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Property Transfer-FlightNo" id="c645076d-9952-4017-bc13-6dd46dfe153d">
+  <con:testStep id="c645076d-9952-4017-bc13-6dd46dfe153d" name="Property Transfer-FlightNo" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>FlightNo</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -269,7 +269,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetPath/>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>DepartureTime</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -280,7 +280,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ArrivalTime</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -291,7 +291,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>CarrierCode</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
@@ -304,12 +304,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="691f3df8-d01a-4d03-80bb-93867a685619" name="ImportPNR_OW_BOOKING_10Pax">
+  <con:testStep id="691f3df8-d01a-4d03-80bb-93867a685619" name="ImportPNR_OW_BOOKING_10Pax" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ImportPNR</con:operation>
-      <con:request name="ImportPNR_OW_BOOKING_10Pax" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="12c141f1-f1df-45d0-8579-588226bc1b09" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="12c141f1-f1df-45d0-8579-588226bc1b09" incomingWss="" name="ImportPNR_OW_BOOKING_10Pax" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Only the first nodes</con:setting>
@@ -1327,14 +1327,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </ImportPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response"/>
+        <con:assertion id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="f6156724-6890-48ed-af5a-7674c6396f80">
@@ -1473,7 +1473,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="873518c6-7268-48ec-b035-7d030d4da4ad" name="Groovy Script_to copyRQ and RS" type="groovy" disabled="true">
+  <con:testStep disabled="true" id="873518c6-7268-48ec-b035-7d030d4da4ad" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

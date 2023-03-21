@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="d37004dc-6438-4117-9037-d2e13ca6ab8b" name="/CancelZeroChargeService" path="/CancelZeroChargeService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="d37004dc-6438-4117-9037-d2e13ca6ab8b" name="/CancelZeroChargeService" path="/CancelZeroChargeService" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d37004dc-6438-4117-9037-d2e13ca6ab8bfileName">%2FCancelZeroChargeService</con:setting>
   </con:settings>

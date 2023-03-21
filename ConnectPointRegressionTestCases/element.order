@@ -51,3 +51,9 @@ Create-OW-pnr-withSSR.xml
 0049-RT-Modify%28date-change%29.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
 0054_CP_Interline_CancelRes.xml
+0058_CP_Codeshare_ModifyAddSSRbundle.xml
+0059_CP_Codeshare_CancelRes.xml
+0060_CP_PnrImport_CreateGroupRes.xml
+0061_CP_PnrImport_AddPax.xml
+0062_CP_PnrImport_RemovePax.xml
+0063_CP_PnrImport_CancelRes.xml

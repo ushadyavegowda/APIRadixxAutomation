@@ -227,7 +227,7 @@ def ebr = { String alphabet, int n ->
 ebr1 = ebr( (('A'..'Z')).join(), 2 )
 ebr2 = ebr( (('0'..'9')).join(), 4 )
 ExternalBookingReference = ebr1 + ebr2
-testRunner.testCase.testSuite.setPropertyValue("ExternalBookingReference",ExternalBookingReference);
+testRunner.testCase.testSuite.setPropertyValue("ExternalBookingReference",ExternalBookingReference.toUpperCase());
 
 	//Summary and FQ	
 testRunner.testCase.testSuite.setPropertyValue("LanguageCode", "en");

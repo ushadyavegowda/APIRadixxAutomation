@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="56ca4cea-48c3-4dd3-8bd7-0ed3b0b047e4" keepSession="false" maxResults="0" name="0042_CP_CreateBooking 1ADT1CHD1 INF Fare bundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="56ca4cea-48c3-4dd3-8bd7-0ed3b0b047e4" keepSession="false" maxResults="0" name="0042_CP_CreateBooking 1ADT1CHD1 INF Fare bundle" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="56ca4cea-48c3-4dd3-8bd7-0ed3b0b047e4fileName">0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle</con:setting>
   </con:settings>

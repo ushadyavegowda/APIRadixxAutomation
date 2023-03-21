@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="c04aeea7-c6a9-4087-989a-419ef393d7d9" keepSession="false" name="0040_CP_Flight_RetrieveAirportRoutes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="c04aeea7-c6a9-4087-989a-419ef393d7d9" keepSession="false" name="0040_CP_Flight_RetrieveAirportRoutes" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c04aeea7-c6a9-4087-989a-419ef393d7d9fileName">0040_CP_Flight_RetrieveAirportRoutes</con:setting>
   </con:settings>

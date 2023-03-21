@@ -831,11 +831,11 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186597</con:value>
+      <con:value>null</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>192965</con:value>
+      <con:value>null</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>

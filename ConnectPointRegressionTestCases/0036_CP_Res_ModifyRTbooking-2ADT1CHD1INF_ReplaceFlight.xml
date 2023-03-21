@@ -19,11 +19,11 @@
         </con:property>
         <con:property>
           <con:name>LFID_Onward</con:name>
-          <con:value>186607</con:value>
+          <con:value>null</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Return</con:name>
-          <con:value>196161</con:value>
+          <con:value>null</con:value>
         </con:property>
         <con:property>
           <con:name>FareID_Onward</con:name>
@@ -35,7 +35,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>L9VX3U</con:value>
+          <con:value>CZEME8</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>

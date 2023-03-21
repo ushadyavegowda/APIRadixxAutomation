@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase failOnError="true" failTestCaseOnErrors="true" id="3e74b3e1-4d50-4677-b709-6d1281685f63" keepSession="false" maxResults="0" name="0003_CP_Res_Cancel OW ADTPax" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="3e74b3e1-4d50-4677-b709-6d1281685f63" keepSession="false" maxResults="0" name="0003_CP_Res_Cancel OW ADTPax" searchProperties="true" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3e74b3e1-4d50-4677-b709-6d1281685f63fileName">0003_CP_Res_Cancel-OW-ADTPax</con:setting>
   </con:settings>

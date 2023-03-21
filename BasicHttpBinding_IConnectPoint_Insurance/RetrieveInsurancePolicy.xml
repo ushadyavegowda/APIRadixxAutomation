@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsurancePolicy" anonymous="optional" bindingOperationName="RetrieveInsurancePolicy" id="edf20cac-6b48-4a67-8eb7-67091bbf5754" inputName="" isOneWay="false" name="RetrieveInsurancePolicy" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Insurance/RetrieveInsurancePolicy" anonymous="optional" bindingOperationName="RetrieveInsurancePolicy" id="edf20cac-6b48-4a67-8eb7-67091bbf5754" inputName="" isOneWay="false" name="RetrieveInsurancePolicy" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="edf20cac-6b48-4a67-8eb7-67091bbf5754fileName">RetrieveInsurancePolicy</con:setting>
   </con:settings>

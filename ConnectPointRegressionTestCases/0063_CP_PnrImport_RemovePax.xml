@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="45162e52-f3e9-483f-b249-2ab608d64ca6" keepSession="false" name="0062_CP_PnrImport_RemovePax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="45162e52-f3e9-483f-b249-2ab608d64ca6" keepSession="false" name="0063_CP_PnrImport_RemovePax" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="45162e52-f3e9-483f-b249-2ab608d64ca6fileName">0062_CP_PnrImport_RemovePax</con:setting>
+    <con:setting id="45162e52-f3e9-483f-b249-2ab608d64ca6fileName">0063_CP_PnrImport_RemovePax</con:setting>
   </con:settings>
   <con:testStep id="cff18534-56ce-471a-8d65-43175cd9cd15" name="1.Run 0059_CP_PnrImport_CreateGroupRes" type="calltestcase">
     <con:settings/>

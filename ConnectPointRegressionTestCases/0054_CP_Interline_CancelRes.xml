@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6ebf2e6a-f517-4cbd-97e2-4b281261563d" keepSession="false" maxResults="0" name="0054_CP_Interline_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6ebf2e6a-f517-4cbd-97e2-4b281261563dfileName">0054_CP_Interline_CancelRes1</con:setting>
+    <con:setting id="6ebf2e6a-f517-4cbd-97e2-4b281261563dfileName">0054_CP_Interline_CancelRes</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep id="afb2f48b-8d1f-451f-bcf6-b29ca148a04c" name="1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF" type="calltestcase">

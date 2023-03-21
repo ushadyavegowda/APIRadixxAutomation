@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/AdjustFares" anonymous="optional" bindingOperationName="AdjustFares" id="f0f9eccc-58c8-4c0e-a7a6-bd50227daf85" inputName="" isOneWay="false" name="AdjustFares" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/AdjustFares" anonymous="optional" bindingOperationName="AdjustFares" id="f0f9eccc-58c8-4c0e-a7a6-bd50227daf85" inputName="" isOneWay="false" name="AdjustFares" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f0f9eccc-58c8-4c0e-a7a6-bd50227daf85fileName">AdjustFares</con:setting>
   </con:settings>

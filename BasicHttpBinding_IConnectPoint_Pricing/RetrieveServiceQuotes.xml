@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuotes" anonymous="optional" bindingOperationName="RetrieveServiceQuotes" id="88d8ec50-8830-4e79-ba6b-5a9fe16593c4" inputName="" isOneWay="false" name="RetrieveServiceQuotes" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveServiceQuotes" anonymous="optional" bindingOperationName="RetrieveServiceQuotes" id="88d8ec50-8830-4e79-ba6b-5a9fe16593c4" inputName="" isOneWay="false" name="RetrieveServiceQuotes" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="88d8ec50-8830-4e79-ba6b-5a9fe16593c4fileName">RetrieveServiceQuotes</con:setting>
   </con:settings>

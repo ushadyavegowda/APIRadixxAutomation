@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="6e329a16-92ec-49b0-919e-68f7e0a4fb2a" keepSession="false" maxResults="0" name="0053_CP_Interline_ModifyNameChange_1ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6e329a16-92ec-49b0-919e-68f7e0a4fb2afileName">0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF1</con:setting>
+    <con:setting id="6e329a16-92ec-49b0-919e-68f7e0a4fb2afileName">0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF</con:setting>
   </con:settings>
   <con:testStep id="4dfb36c7-6e7f-4bf6-ba17-c1bd20343e10" name="Pre_reqRun_Create_OW_Interline_1AT_1CHD_1INF" type="calltestcase">
     <con:settings/>

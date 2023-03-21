@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" anonymous="optional" bindingOperationName="RetrieveSeatAvailabilityShop" id="a11224b3-5cb7-4335-a2fa-8126085e3d8b" inputName="" isOneWay="false" name="RetrieveSeatAvailabilityShop" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveSeatAvailabilityShop" anonymous="optional" bindingOperationName="RetrieveSeatAvailabilityShop" id="a11224b3-5cb7-4335-a2fa-8126085e3d8b" inputName="" isOneWay="false" name="RetrieveSeatAvailabilityShop" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a11224b3-5cb7-4335-a2fa-8126085e3d8bfileName">RetrieveSeatAvailabilityShop</con:setting>
   </con:settings>

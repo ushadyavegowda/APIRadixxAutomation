@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="a9800376-8662-4b54-9f41-e3422d16f8ef" keepSession="false" maxResults="0" name="0055_CP_CodeShare_CreateRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="a9800376-8662-4b54-9f41-e3422d16f8effileName">0055_CP_CodeShare_CreateRes1</con:setting>
+    <con:setting id="a9800376-8662-4b54-9f41-e3422d16f8effileName">0055_CP_CodeShare_CreateRes</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep id="25d45db2-8047-46db-9d40-f9b677bd288a" name="RetrieveSecurityToken  and Input Parameters" type="calltestcase">

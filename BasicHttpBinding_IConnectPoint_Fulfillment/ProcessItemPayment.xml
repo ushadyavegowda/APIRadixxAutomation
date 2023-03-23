@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/ProcessItemPayment" anonymous="optional" bindingOperationName="ProcessItemPayment" id="70b8f3f2-1ce9-492b-a053-fd9480de04f6" inputName="" isOneWay="false" name="ProcessItemPayment" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Fulfillment/ProcessItemPayment" anonymous="optional" bindingOperationName="ProcessItemPayment" id="70b8f3f2-1ce9-492b-a053-fd9480de04f6" inputName="" isOneWay="false" name="ProcessItemPayment" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="70b8f3f2-1ce9-492b-a053-fd9480de04f6fileName">ProcessItemPayment</con:setting>
   </con:settings>

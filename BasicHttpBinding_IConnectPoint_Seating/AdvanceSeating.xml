@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating" anonymous="optional" bindingOperationName="AdvanceSeating" id="328be1bb-40e6-4f84-96e9-668f2758a564" inputName="" isOneWay="false" name="AdvanceSeating" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Seating/AdvanceSeating" anonymous="optional" bindingOperationName="AdvanceSeating" id="328be1bb-40e6-4f84-96e9-668f2758a564" inputName="" isOneWay="false" name="AdvanceSeating" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="328be1bb-40e6-4f84-96e9-668f2758a564fileName">AdvanceSeating</con:setting>
   </con:settings>

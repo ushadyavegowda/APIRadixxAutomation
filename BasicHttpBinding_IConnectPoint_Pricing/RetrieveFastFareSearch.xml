@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFastFareSearch" anonymous="optional" bindingOperationName="RetrieveFastFareSearch" id="56b5eb94-4be5-42ce-af85-1486e49caac4" inputName="" isOneWay="false" name="RetrieveFastFareSearch" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFastFareSearch" anonymous="optional" bindingOperationName="RetrieveFastFareSearch" id="56b5eb94-4be5-42ce-af85-1486e49caac4" inputName="" isOneWay="false" name="RetrieveFastFareSearch" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="56b5eb94-4be5-42ce-af85-1486e49caac4fileName">RetrieveFastFareSearch</con:setting>
   </con:settings>

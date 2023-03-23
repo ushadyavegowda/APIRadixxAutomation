@@ -20,7 +20,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>4BAE56</con:value>
+          <con:value>KATZ48</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -303,7 +303,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>OALogicalFlightKey</con:name>
-      <con:value>461:3/24/2023 7:30:00 AM</con:value>
+      <con:value>481:3/26/2023 7:30:00 AM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

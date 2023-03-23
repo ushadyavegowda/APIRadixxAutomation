@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDistributorDetails" anonymous="optional" bindingOperationName="RetrieveDistributorDetails" id="dd2d3685-8a1f-41e0-b8e9-25438476f0f0" inputName="" isOneWay="false" name="RetrieveDistributorDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveDistributorDetails" anonymous="optional" bindingOperationName="RetrieveDistributorDetails" id="dd2d3685-8a1f-41e0-b8e9-25438476f0f0" inputName="" isOneWay="false" name="RetrieveDistributorDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="dd2d3685-8a1f-41e0-b8e9-25438476f0f0fileName">RetrieveDistributorDetails</con:setting>
   </con:settings>

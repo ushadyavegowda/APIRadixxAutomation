@@ -59,7 +59,6 @@ Create_OW_Interline_1ADT.xml
 0062_CP_PnrImport_AddPax.xml
 0063_CP_PnrImport_RemovePax.xml
 0064_CP_PnrImport_CancelRes.xml
-0050_CP_Interline_ModifyFareDowngrade.xml
 0051_CP_Interline_ModifyAddSegment.xml
 0052_CP_Interline_ModifyAddSSR.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml

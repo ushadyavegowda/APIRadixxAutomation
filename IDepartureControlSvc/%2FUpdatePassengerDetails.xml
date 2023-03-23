@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="8342a6d5-be4c-40bb-8bd8-a4d207e7463d" name="/UpdatePassengerDetails" path="/UpdatePassengerDetails" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="8342a6d5-be4c-40bb-8bd8-a4d207e7463d" name="/UpdatePassengerDetails" path="/UpdatePassengerDetails" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8342a6d5-be4c-40bb-8bd8-a4d207e7463dfileName">%2FUpdatePassengerDetails</con:setting>
   </con:settings>

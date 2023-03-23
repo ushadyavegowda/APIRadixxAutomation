@@ -20,7 +20,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>4ADVR6</con:value>
+          <con:value>5252S8</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1041,19 +1041,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PFID</con:name>
-      <con:value>95875</con:value>
+      <con:value>108513</con:value>
     </con:property>
     <con:property>
       <con:name>PersonOrgID_ADT</con:name>
-      <con:value>70829</con:value>
+      <con:value>71435</con:value>
     </con:property>
     <con:property>
       <con:name>PersonOrgID_CHD</con:name>
-      <con:value>70827</con:value>
+      <con:value>71434</con:value>
     </con:property>
     <con:property>
       <con:name>PersonOrgId_INF</con:name>
-      <con:value>70828</con:value>
+      <con:value>71433</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

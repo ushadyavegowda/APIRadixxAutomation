@@ -874,7 +874,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>BookingDate</con:name>
-      <con:value>2023-03-20</con:value>
+      <con:value>2023-03-23</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

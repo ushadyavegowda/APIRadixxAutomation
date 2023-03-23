@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/OverrideReservationCharges" anonymous="optional" bindingOperationName="OverrideReservationCharges" id="01349dcd-c441-4501-8624-c7ea36832187" inputName="" isOneWay="false" name="OverrideReservationCharges" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/OverrideReservationCharges" anonymous="optional" bindingOperationName="OverrideReservationCharges" id="01349dcd-c441-4501-8624-c7ea36832187" inputName="" isOneWay="false" name="OverrideReservationCharges" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="01349dcd-c441-4501-8624-c7ea36832187fileName">OverrideReservationCharges</con:setting>
   </con:settings>

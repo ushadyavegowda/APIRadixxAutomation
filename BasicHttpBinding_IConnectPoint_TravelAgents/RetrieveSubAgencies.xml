@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveSubAgencies" anonymous="optional" bindingOperationName="RetrieveSubAgencies" id="31abdb86-2d8f-4b59-9ec7-ab4b68bb2333" inputName="" isOneWay="false" name="RetrieveSubAgencies" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveSubAgencies" anonymous="optional" bindingOperationName="RetrieveSubAgencies" id="31abdb86-2d8f-4b59-9ec7-ab4b68bb2333" inputName="" isOneWay="false" name="RetrieveSubAgencies" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="31abdb86-2d8f-4b59-9ec7-ab4b68bb2333fileName">RetrieveSubAgencies</con:setting>
   </con:settings>

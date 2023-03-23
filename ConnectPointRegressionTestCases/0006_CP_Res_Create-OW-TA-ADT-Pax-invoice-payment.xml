@@ -146,7 +146,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         <con:sourceStep>2 RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[a:LFID = '${#TestCase#LFID}']/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1 ]/a:FareID[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[1]/a:FareID[1]</con:sourcePath>
         <con:targetType>fareid</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -804,31 +804,31 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:CreatePNR>\r
-         <!--Optional:-->\r
-         <tem:CreatePnrRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            <rad1:ActionType>CommitSummary</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>\r
-            </rad1:ReservationInfo>\r
-         </tem:CreatePnrRequest>\r
-      </tem:CreatePNR>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CreatePNR>
+         <!--Optional:-->
+         <tem:CreatePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ActionType>CommitSummary</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </rad1:ReservationInfo>
+         </tem:CreatePnrRequest>
+      </tem:CreatePNR>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="b32b5362-60bf-4a54-a5ea-c1939a44c36c" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
@@ -917,11 +917,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>3391.78</con:value>
+      <con:value>2884.00</con:value>
     </con:property>
     <con:property>
       <con:name>pnr</con:name>
@@ -929,7 +929,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value/>
+      <con:value>196797</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

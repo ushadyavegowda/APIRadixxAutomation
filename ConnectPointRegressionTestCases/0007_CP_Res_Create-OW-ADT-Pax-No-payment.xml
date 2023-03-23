@@ -969,11 +969,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>499.50</con:value>
+      <con:value>2117.00</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>128871</con:value>
+      <con:value>194527</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -981,7 +981,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>IRGO5S</con:value>
+      <con:value>DJ5E8W</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>

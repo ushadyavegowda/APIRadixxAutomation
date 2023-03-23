@@ -17,11 +17,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>19913.50</con:value>
+          <con:value>2117.00</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128873</con:value>
+          <con:value>194527</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -29,7 +29,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value/>
+          <con:value>FQUC0M</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -37,7 +37,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-19</con:value>
+          <con:value>-21</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -485,7 +485,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>128871:3/1/2023 1:00:00 AM</con:value>
+      <con:value>194527:3/24/2023 12:10:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

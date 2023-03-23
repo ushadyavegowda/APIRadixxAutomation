@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR" anonymous="optional" bindingOperationName="EvaluateModificationOfPNR" id="1aaf87e7-045b-4c65-8c5f-9824f3e777b5" inputName="" isOneWay="false" name="EvaluateModificationOfPNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR" anonymous="optional" bindingOperationName="EvaluateModificationOfPNR" id="1aaf87e7-045b-4c65-8c5f-9824f3e777b5" inputName="" isOneWay="false" name="EvaluateModificationOfPNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="1aaf87e7-045b-4c65-8c5f-9824f3e777b5fileName">EvaluateModificationOfPNR</con:setting>
   </con:settings>

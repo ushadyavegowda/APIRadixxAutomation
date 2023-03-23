@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>19913.50</con:value>
+          <con:value>15785.75</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128873</con:value>
+          <con:value>196833</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-20</con:value>
+          <con:value>-53</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1120,27 +1120,27 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
-      <con:value>50</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>s_SSRCategory</con:name>
-      <con:value>6</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>
-      <con:value>74</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value>VGML</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>61475</con:value>
+      <con:value>70951</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>86298</con:value>
+      <con:value>108512</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

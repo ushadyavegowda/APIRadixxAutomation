@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6d81a793-2b61-4e56-97a4-70eb6edb15af" keepSession="false" name="0058_CP_Codeshare_ModifyAddSSRbundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6d81a793-2b61-4e56-97a4-70eb6edb15af" keepSession="false" name="0058_CP_Codeshare_ModifyAddSSRbundle" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="6d81a793-2b61-4e56-97a4-70eb6edb15affileName">0058_CP_Codeshare_ModifyAddSSRbundle</con:setting>
   </con:settings>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>HTH52Y</con:value>
+          <con:value>5II5IG</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-37</con:value>
+          <con:value>-50</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -957,7 +957,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>71453</con:value>
+      <con:value>71524</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>

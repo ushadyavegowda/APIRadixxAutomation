@@ -192,7 +192,7 @@ def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
-def CS_DepartureDate = new Date().plus(5)
+def CS_DepartureDate = new Date().plus(4)
 
 //DOB	
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");	
@@ -222,6 +222,7 @@ def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
 def FlightNumReturn = "827"
+def Othercarriercode = "9RX"
 
 
 
@@ -266,6 +267,7 @@ testRunner.testCase.testSuite.setPropertyValue("currency", currency);
 testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
 testRunner.testCase.testSuite.setPropertyValue("FlightNumReturn", FlightNumReturn);
+testRunner.testCase.testSuite.setPropertyValue("Othercarriercode", Othercarriercode);
 
 //Passenger Info
 def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)

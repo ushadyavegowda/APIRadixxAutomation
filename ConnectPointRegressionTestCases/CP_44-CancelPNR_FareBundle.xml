@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8a5b7fb0-b3cc-4731-858f-4aad2af968ad" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CP_44 CancelPNR_FareBundle" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8a5b7fb0-b3cc-4731-858f-4aad2af968adfileName">CP_44-CancelPNR_FareBundle</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep id="a895ab4f-eba5-4435-b485-b8fa379bfe2f" name="RetrieveSecurityToken  and Input Parameters" type="calltestcase">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="3e9f20d8-db0e-4129-83c1-992103370f3f" name="2.RetrievePNR">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>RetrievePNR</con:operation>
+      <con:request name="2.RetrievePNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="42098b23-dfbf-4f54-9083-fbdd0f694d5a">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrievePNR>
+         <!--Optional:-->
+         <tem:RetrievePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ActionType>GetReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${#[ConnectPointRegressionTestCases#CP_43 CP_ModifyBooking 1ADT1CHD1 INF Fare bundle#CreatePNR-save]#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+         </tem:RetrievePnrRequest>
+      </tem:RetrievePNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="c52234da-72f1-42e5-8209-580b9f84d59a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="8deac603-0804-415f-ac6c-2c20cf14dbc4" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="34475ae8-2105-4b2e-8fe8-09fd2699e4e5" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="1e640b58-2063-46a9-ad9b-6c5d563c08ac" name="Schema Compliance" disabled="true">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="87a8d001-f5a8-44a2-b1dc-26548df1651e" name="3.CancelPNR">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>CancelPNR</con:operation>
+      <con:request name="3.CancelPNR" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f42e9cf0-40ab-460d-b6af-d76bd2b2e0ff">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CancelPNR>
+         <!--Optional:-->
+         <tem:CancelPnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName>web</rad:HistoricUserName>
+            <rad1:ActionType>CancelReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <!--Optional:-->
+            <rad1:IsFlightDisruptionCancel>false</rad1:IsFlightDisruptionCancel>
+         </tem:CancelPnrRequest>
+      </tem:CancelPNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="d9dd1117-f9b3-46fc-9ed6-030b31c28715" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="3f3a74ac-e9eb-4bd0-aadc-d3f901bf508b" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="e3136149-0f2b-463b-89b1-82343afbb2f0" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="868eb170-9343-42c6-849f-bd0d905001b1" name="Schema Compliance" disabled="true">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CancelPNR"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="481f48b2-119a-4e9d-bf13-56f4b48d2b40" name="4.CreatePNR-save">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
+      <con:operation>CreatePNR</con:operation>
+      <con:request name="4.CreatePNR-save" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4c25dbfb-7dd7-4f2e-81fe-5151f549c81b">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CreatePNR>
+         <!--Optional:-->
+         <tem:CreatePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>?</rad:HistoricUserName>
+            <rad1:ActionType>SaveReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+         </tem:CreatePnrRequest>
+      </tem:CreatePNR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="3e024397-96f9-4ada-922b-b2be198021a4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="07389224-f2e2-4fcc-89df-5b13381108d3" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="f4a451c3-da10-4e92-bd6b-349102f73a98" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="2ac7725f-5809-432a-aab9-d8098968b790" name="Schema Compliance" disabled="true">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="ed4e2cdb-3900-489a-b534-7dec0c9b1635">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+//date time is appended to the file name
+//def dt = new Date().format('yyyyMMdd_HHmmss')
+ 
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder ='Feb_Regression'
+ 
+//context.expand( '${#TestSuite#JIRA folder}' )
+ 
+def dirpath = "C:/Download/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+ 
+//log.info (kase);
+ 
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{
+log.info(i);
+def step = kase.getTestStepAt(i).name
+log.info(step)
+if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+{
+def filepath = "${dirpath}/${step}_reqres.xml"
+def m = new File(filepath)
+def str = '${' + step + '#RawRequest}'
+def req = context.expand(str)
+log.info(req)
+m.write(req,"UTF-8")
+def resp = '${' + step + '#Response}'
+def res = context.expand( resp )
+m.append("\n\n\n\n\n", "UTF-8")
+m.append(res, "UTF-8")
+}
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

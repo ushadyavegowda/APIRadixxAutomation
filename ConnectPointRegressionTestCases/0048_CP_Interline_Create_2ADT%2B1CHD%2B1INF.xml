@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="26b3845d-36e7-4b2e-9009-ab2c915e7407" keepSession="false" maxResults="0" name="0048_CP_Interline_Create_2ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="26b3845d-36e7-4b2e-9009-ab2c915e7407" keepSession="false" maxResults="0" name="0048_CP_Interline_Create_2ADT+1CHD+1INF" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="26b3845d-36e7-4b2e-9009-ab2c915e7407fileName">0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF</con:setting>
   </con:settings>

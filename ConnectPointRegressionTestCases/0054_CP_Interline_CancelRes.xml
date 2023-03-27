@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6ebf2e6a-f517-4cbd-97e2-4b281261563d" keepSession="false" maxResults="0" name="0054_CP_Interline_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6ebf2e6a-f517-4cbd-97e2-4b281261563d" keepSession="false" maxResults="0" name="0054_CP_Interline_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="6ebf2e6a-f517-4cbd-97e2-4b281261563dfileName">0054_CP_Interline_CancelRes</con:setting>
   </con:settings>

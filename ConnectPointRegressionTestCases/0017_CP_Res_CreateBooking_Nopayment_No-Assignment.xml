@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" failOnError="false" failTestCaseOnErrors="true" id="c26706d3-b514-4e72-b1be-9e696170d247" keepSession="false" maxResults="0" name="0017_CP_Res_CreateBooking_Nopayment_No Assignment" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="false" failTestCaseOnErrors="true" id="c26706d3-b514-4e72-b1be-9e696170d247" keepSession="false" maxResults="0" name="0017_CP_Res_CreateBooking_Nopayment_No Assignment" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c26706d3-b514-4e72-b1be-9e696170d247fileName">0017_CP_Res_CreateBooking_Nopayment_No-Assignment</con:setting>
   </con:settings>

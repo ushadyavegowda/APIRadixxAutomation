@@ -74,3 +74,5 @@ Create_OW_Interline_1ADT.xml
 0041_Prequisite_CP_Res_Modify_Add-and-RemoveSSR.xml
 CP_41-CP_Res_Modify_Add-and-RemoveSSR.xml
 0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
+CP_43-CP_ModifyBooking-1ADT1CHD1-INF-Fare-bundle.xml
+CP_44-CancelPNR_FareBundle.xml

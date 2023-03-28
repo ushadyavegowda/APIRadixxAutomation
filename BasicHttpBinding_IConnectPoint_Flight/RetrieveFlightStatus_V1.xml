@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" anonymous="optional" bindingOperationName="RetrieveFlightStatus_V1" id="dafda11b-01c2-433c-8a96-1f02db3b232f" inputName="" isOneWay="false" name="RetrieveFlightStatus_V1" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveFlightStatus_V1" anonymous="optional" bindingOperationName="RetrieveFlightStatus_V1" id="dafda11b-01c2-433c-8a96-1f02db3b232f" inputName="" isOneWay="false" name="RetrieveFlightStatus_V1" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="dafda11b-01c2-433c-8a96-1f02db3b232ffileName">RetrieveFlightStatus_V1</con:setting>
   </con:settings>

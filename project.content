@@ -228,3 +228,5 @@ ConnectPointRegressionTestCases\0040_CP_Flight_RetrieveAirportRoutes.xml
 ConnectPointRegressionTestCases\0041_Prequisite_CP_Res_Modify_Add-and-RemoveSSR.xml
 ConnectPointRegressionTestCases\CP_41-CP_Res_Modify_Add-and-RemoveSSR.xml
 ConnectPointRegressionTestCases\0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
+ConnectPointRegressionTestCases\CP_43-CP_ModifyBooking-1ADT1CHD1-INF-Fare-bundle.xml
+ConnectPointRegressionTestCases\CP_44-CancelPNR_FareBundle.xml

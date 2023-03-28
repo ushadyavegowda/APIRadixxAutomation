@@ -1610,19 +1610,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2117.00</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>194527</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value>1</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>YCBGK9</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1630,7 +1630,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-17</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

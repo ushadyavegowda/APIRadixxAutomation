@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" anonymous="optional" bindingOperationName="RetrieveAllConfirmations" id="f818456b-3c6d-4125-874d-47ffd097cbc0" inputName="" isOneWay="false" name="RetrieveAllConfirmations" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/RetrieveAllConfirmations" anonymous="optional" bindingOperationName="RetrieveAllConfirmations" id="f818456b-3c6d-4125-874d-47ffd097cbc0" inputName="" isOneWay="false" name="RetrieveAllConfirmations" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f818456b-3c6d-4125-874d-47ffd097cbc0fileName">RetrieveAllConfirmations</con:setting>
   </con:settings>

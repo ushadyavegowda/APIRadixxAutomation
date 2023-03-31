@@ -1485,31 +1485,31 @@ declare namespace ns1='http://tempuri.org/';
   <con:properties>
     <con:property>
       <con:name>FareId_Onward</con:name>
-      <con:value>1</con:value>
+      <con:value>2</con:value>
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>871.15</con:value>
+      <con:value>4086.50</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>OQTXFL</con:value>
+      <con:value>QBN9BM</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>871.15</con:value>
+      <con:value>4086.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186593</con:value>
+      <con:value>196865</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>176860</con:value>
+      <con:value>176884</con:value>
     </con:property>
     <con:property>
       <con:name>FareId_Return</con:name>
-      <con:value>4</con:value>
+      <con:value>9</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

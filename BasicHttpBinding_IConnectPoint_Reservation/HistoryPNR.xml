@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/HistoryPNR" anonymous="optional" bindingOperationName="HistoryPNR" id="ae4f17ba-5e48-4f88-82e7-6657f6a62b14" inputName="" isOneWay="false" name="HistoryPNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/HistoryPNR" anonymous="optional" bindingOperationName="HistoryPNR" id="ae4f17ba-5e48-4f88-82e7-6657f6a62b14" inputName="" isOneWay="false" name="HistoryPNR" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ae4f17ba-5e48-4f88-82e7-6657f6a62b14fileName">HistoryPNR</con:setting>
   </con:settings>

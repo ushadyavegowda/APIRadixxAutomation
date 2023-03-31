@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Utilities/UpdateExternalBookingReference" anonymous="optional" bindingOperationName="UpdateExternalBookingReference" id="8fbcffe1-d9b4-417e-8bad-9654ac6188e2" inputName="" isOneWay="false" name="UpdateExternalBookingReference" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Utilities/UpdateExternalBookingReference" anonymous="optional" bindingOperationName="UpdateExternalBookingReference" id="8fbcffe1-d9b4-417e-8bad-9654ac6188e2" inputName="" isOneWay="false" name="UpdateExternalBookingReference" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8fbcffe1-d9b4-417e-8bad-9654ac6188e2fileName">UpdateExternalBookingReference</con:setting>
   </con:settings>

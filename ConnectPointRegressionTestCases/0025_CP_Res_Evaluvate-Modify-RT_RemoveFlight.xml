@@ -14,27 +14,27 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>2677.00</con:value>
+          <con:value>4086.50</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>VLNUK8</con:value>
+          <con:value>X5QGB6</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>2677.0</con:value>
+          <con:value>4086.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Onward</con:name>
-          <con:value>186607</con:value>
+          <con:value>196865</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Return</con:name>
-          <con:value>196161</con:value>
+          <con:value>176884</con:value>
         </con:property>
         <con:property>
           <con:name>FareId_Return</con:name>
-          <con:value>5</con:value>
+          <con:value>12</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -636,7 +636,7 @@ declare namespace ns1='http://tempuri.org/';
   <con:properties>
     <con:property>
       <con:name>LFKey</con:name>
-      <con:value>186607:3/9/2023 9:00:00 AM</con:value>
+      <con:value>176884:3/29/2023 3:00:00 PM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

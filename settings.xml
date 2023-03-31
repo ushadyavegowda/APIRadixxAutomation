@@ -189,7 +189,7 @@
     </con:property>
     <con:property>
       <con:name>RestEndpoint</con:name>
-      <con:value>http://rdxdcsint.radixxuat.com</con:value>
+      <con:value>http://rdxappint.radixxuat.com</con:value>
     </con:property>
     <con:property>
       <con:name>ENV</con:name>

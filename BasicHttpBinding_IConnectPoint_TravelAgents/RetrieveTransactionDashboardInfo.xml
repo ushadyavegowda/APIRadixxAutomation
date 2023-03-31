@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTransactionDashboardInfo" anonymous="optional" bindingOperationName="RetrieveTransactionDashboardInfo" id="e40544af-ad6d-4262-b894-1f90f40ab2b1" inputName="" isOneWay="false" name="RetrieveTransactionDashboardInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTransactionDashboardInfo" anonymous="optional" bindingOperationName="RetrieveTransactionDashboardInfo" id="e40544af-ad6d-4262-b894-1f90f40ab2b1" inputName="" isOneWay="false" name="RetrieveTransactionDashboardInfo" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e40544af-ad6d-4262-b894-1f90f40ab2b1fileName">RetrieveTransactionDashboardInfo</con:setting>
   </con:settings>

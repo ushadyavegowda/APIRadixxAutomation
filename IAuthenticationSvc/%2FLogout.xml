@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="b5909c08-7fa5-4718-9155-84f35f4ca4c9" name="/Logout" path="/Logout" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="b5909c08-7fa5-4718-9155-84f35f4ca4c9" name="/Logout" path="/Logout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b5909c08-7fa5-4718-9155-84f35f4ca4c9fileName">%2FLogout</con:setting>
   </con:settings>

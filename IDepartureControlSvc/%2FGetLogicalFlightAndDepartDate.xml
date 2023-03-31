@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="403f09a4-9c81-4272-9b2f-bc28a713e7de" name="/GetLogicalFlightAndDepartDate" path="/GetLogicalFlightAndDepartDate" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="403f09a4-9c81-4272-9b2f-bc28a713e7de" name="/GetLogicalFlightAndDepartDate" path="/GetLogicalFlightAndDepartDate" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="403f09a4-9c81-4272-9b2f-bc28a713e7defileName">%2FGetLogicalFlightAndDepartDate</con:setting>
   </con:settings>

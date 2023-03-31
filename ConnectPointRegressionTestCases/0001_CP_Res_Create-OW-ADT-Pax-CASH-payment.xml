@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" failOnError="false" failTestCaseOnErrors="true" id="c1c01e3b-345e-4ee3-9524-18353ef5c636" keepSession="false" maxResults="0" name="0001_CP_Res_Create OW ADT Pax CASH payment" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase failOnError="false" failTestCaseOnErrors="true" id="c1c01e3b-345e-4ee3-9524-18353ef5c636" keepSession="false" maxResults="0" name="0001_CP_Res_Create OW ADT Pax CASH payment" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c1c01e3b-345e-4ee3-9524-18353ef5c636fileName">0001_CP_Res_Create-OW-ADT-Pax-CASH-payment</con:setting>
   </con:settings>
@@ -1610,11 +1610,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2117.00</con:value>
+      <con:value>1725.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>194527</con:value>
+      <con:value>202988</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1622,7 +1622,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>YCBGK9</con:value>
+      <con:value>KNNQDW</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1630,7 +1630,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>-17</con:value>
+      <con:value>-20</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

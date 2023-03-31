@@ -36,7 +36,7 @@
       "Origin" : "${#TestSuite#Origin}",\r
       "Destination" : "${#TestSuite#Destination}",\r
       "FlightNumber" : "${#TestSuite#flightnum}",\r
-      "CarrierCode" : "${#TestSuite#carriercode}",\r
+      "CarrierCode" : "${#TestSuite#Othercarriercode}",\r
       "ApplicationUserId" : "${#Project#DCSUsername}",\r
       "ApplicationId" : "AutomationAPI"\r
    },\r
@@ -73,7 +73,7 @@
       "Origin" : "${#TestSuite#Destination}",\r
       "Destination" : "${#TestSuite#Origin}",\r
       "FlightNumber" : "${#TestSuite#FlightNumReturn}",\r
-      "CarrierCode" : "${#TestSuite#carriercode}",\r
+      "CarrierCode" : "${#TestSuite#Othercarriercode}",\r
       "ApplicationUserId" : "${#Project#DCSUsername}",\r
       "ApplicationId" : "AutomationAPI"\r
    },\r
@@ -1130,19 +1130,19 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>8001.76</con:value>
+      <con:value>15489.97</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186607</con:value>
+      <con:value>123703</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>196161</con:value>
+      <con:value>123767</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>
-      <con:value>7</con:value>
+      <con:value>19</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_return</con:name>
@@ -1150,7 +1150,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>CZEME8</con:value>
+      <con:value>Q1D48P</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

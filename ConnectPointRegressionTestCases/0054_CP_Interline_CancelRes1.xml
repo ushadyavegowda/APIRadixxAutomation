@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="1bf28282-62fc-4888-a6c8-f319b0fbe345" keepSession="false" maxResults="0" name="0054_CP_Interline_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="1bf28282-62fc-4888-a6c8-f319b0fbe345fileName">0054_CP_Interline_CancelRes</con:setting>
+    <con:setting id="1bf28282-62fc-4888-a6c8-f319b0fbe345fileName">0054_CP_Interline_CancelRes1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep id="3d7946c4-e3b5-4e9b-9451-1426b3b6fe3b" name="1. Pre_ReqTestCase0053" type="calltestcase">

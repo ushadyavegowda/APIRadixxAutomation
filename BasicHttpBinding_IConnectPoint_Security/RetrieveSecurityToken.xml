@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" anonymous="optional" bindingOperationName="RetrieveSecurityToken" id="60fd4e80-cc7d-487e-b183-f23049b7c47d" inputName="" isOneWay="false" name="RetrieveSecurityToken" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Security/RetrieveSecurityToken" anonymous="optional" bindingOperationName="RetrieveSecurityToken" id="60fd4e80-cc7d-487e-b183-f23049b7c47d" inputName="" isOneWay="false" name="RetrieveSecurityToken" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="60fd4e80-cc7d-487e-b183-f23049b7c47dfileName">RetrieveSecurityToken</con:setting>
   </con:settings>

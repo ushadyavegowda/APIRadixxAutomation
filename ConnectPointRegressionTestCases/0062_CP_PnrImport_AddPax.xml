@@ -1668,15 +1668,15 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>FlightNo</con:name>
-      <con:value>913</con:value>
+      <con:value>510</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureTime</con:name>
-      <con:value>2023-03-24T10:00:00</con:value>
+      <con:value>2023-03-26T08:00:00</con:value>
     </con:property>
     <con:property>
       <con:name>ArrivalTime</con:name>
-      <con:value>2023-03-24T17:00:00</con:value>
+      <con:value>2023-03-26T15:45:00</con:value>
     </con:property>
     <con:property>
       <con:name>CarrierCode</con:name>
@@ -1684,7 +1684,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>BookingDate</con:name>
-      <con:value>2023-03-21</con:value>
+      <con:value>2023-03-23</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

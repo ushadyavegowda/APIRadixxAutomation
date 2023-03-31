@@ -7,7 +7,7 @@
   <con:testStep id="a60162b5-d696-43b0-a6f6-72880be89d1a" name="1. Run 0055_CP_CodeShare_CreateRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>80bfd4eb-8ced-48d0-8672-4adb9cc23d12</con:targetTestCase>
+      <con:targetTestCase>a9800376-8662-4b54-9f41-e3422d16f8ef</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>LFID</con:name>
@@ -26,7 +26,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>MPZ0OH</con:value>
+          <con:value>B4B39P</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1233,7 +1233,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>210620:3/20/2023 6:30:00 AM</con:value>
+      <con:value>216391:3/27/2023 6:30:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

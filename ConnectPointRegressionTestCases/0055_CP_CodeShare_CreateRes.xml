@@ -46,7 +46,7 @@
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${#TestSuite#CS_DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass>${#TestSuite#CS_Fareclass}</rad:FareClass>
                   <rad:FareBasisCode>${#TestSuite#CS_FBcode}</rad:FareBasisCode>
@@ -1107,11 +1107,11 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>FareID</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>VANK2W</con:value>
+      <con:value>8DCTSQ</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

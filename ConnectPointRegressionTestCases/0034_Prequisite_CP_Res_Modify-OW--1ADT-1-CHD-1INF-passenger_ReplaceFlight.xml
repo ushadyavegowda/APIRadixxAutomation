@@ -936,7 +936,7 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196719</con:value>
+      <con:value>194528</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -944,11 +944,11 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1016</con:value>
+      <con:value>5143.5</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>BUCPO4</con:value>
+      <con:value>767MEN</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

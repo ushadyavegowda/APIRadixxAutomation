@@ -7,7 +7,7 @@
   <con:testStep id="4b1e6f99-8ce0-413b-9519-331926629740" name="1. Run 0055_CP_CodeShare_CreateRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>80bfd4eb-8ced-48d0-8672-4adb9cc23d12</con:targetTestCase>
+      <con:targetTestCase>a9800376-8662-4b54-9f41-e3422d16f8ef</con:targetTestCase>
       <con:properties>
         <con:property>
           <con:name>LFID</con:name>
@@ -26,7 +26,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>HVUQ99</con:value>
+          <con:value>EQ4JMD</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -158,7 +158,7 @@ declare namespace ns1='http://tempuri.org/';
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>2023-03-25</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>2023-03-31</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass>${#TestSuite#CS_Fareclass}</rad:FareClass>
                   <rad:FareBasisCode>${empty}</rad:FareBasisCode>
@@ -1241,7 +1241,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>210620:3/20/2023 6:30:00 AM</con:value>
+      <con:value>216391:3/27/2023 6:30:00 AM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

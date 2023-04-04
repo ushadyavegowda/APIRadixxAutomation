@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>499.50</con:value>
+          <con:value>1725.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128871</con:value>
+          <con:value>202988</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>A11QBQ</con:value>
+          <con:value>BL2Q0O</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-50</con:value>
+          <con:value>-120</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1063,19 +1063,19 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>HEGEHETWO</con:value>
+      <con:value>VATWLITWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>AEVLLWTWO</con:value>
+      <con:value>QPRJRZTWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>AEVLLWTWOT</con:value>
+      <con:value>QPRJRZTWOT</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1998-02-26</con:value>
+      <con:value>1998-03-31</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -1155,7 +1155,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>Passport</con:name>
-      <con:value>43411206</con:value>
+      <con:value>49708764</con:value>
     </con:property>
     <con:property>
       <con:name>Nationality</con:name>
@@ -1163,11 +1163,11 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>999</con:value>
+      <con:value>1725.5</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>3SDOZH</con:value>
+      <con:value>BL2Q0O</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

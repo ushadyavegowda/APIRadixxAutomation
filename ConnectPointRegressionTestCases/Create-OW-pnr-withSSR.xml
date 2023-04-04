@@ -2069,11 +2069,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2568.50</con:value>
+      <con:value>1725.50</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>65864</con:value>
+      <con:value>202988</con:value>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -2081,7 +2081,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>2CFB4G</con:value>
+      <con:value>4LOJ68</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
@@ -2089,7 +2089,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>
-      <con:value>905800</con:value>
+      <con:value>920797</con:value>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>

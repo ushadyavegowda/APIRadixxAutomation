@@ -917,7 +917,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value>1</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
@@ -929,7 +929,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>196797</con:value>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

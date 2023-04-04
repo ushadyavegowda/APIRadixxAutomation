@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="4540b478-1b0d-499d-a831-a559624e53d0" name="/GetConvertedPaymentAmount" path="/GetConvertedPaymentAmount" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="4540b478-1b0d-499d-a831-a559624e53d0" name="/GetConvertedPaymentAmount" path="/GetConvertedPaymentAmount" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4540b478-1b0d-499d-a831-a559624e53d0fileName">%2FGetConvertedPaymentAmount</con:setting>
   </con:settings>

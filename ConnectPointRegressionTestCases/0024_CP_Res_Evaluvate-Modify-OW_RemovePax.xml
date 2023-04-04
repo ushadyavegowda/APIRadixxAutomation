@@ -14,19 +14,19 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>3295.00</con:value>
+          <con:value>4254.00</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>FJ5U91</con:value>
+          <con:value>Z270DJ</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>3295.0</con:value>
+          <con:value>4254.0</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>186607</con:value>
+          <con:value>176893</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -623,10 +623,84 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep disabled="true" id="0d9c43f1-9fd6-4792-9392-243cc340a5d1" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep disabled="true" id="e4c8f405-b808-4500-b7ad-f6d7dc725039" name="Groovy Script (REST)" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//context.expand( '${#TestSuite#JIRA folder}' )
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{  
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof RestTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                   
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+         
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>PersonOrgId</con:name>
-      <con:value>65075</con:value>
+      <con:value>75864</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

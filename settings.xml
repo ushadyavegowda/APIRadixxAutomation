@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" projectVersion="" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.44.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" compositeProjectFormat="1.3" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" projectVersion="" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.44.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">ReadyApi</con:setting>
   </con:settings>
@@ -161,7 +161,7 @@
     </con:property>
     <con:property>
       <con:name>TA_password</con:name>
-      <con:value>R@dixxRe5!</con:value>
+      <con:value>R@dixx1234</con:value>
     </con:property>
     <con:property>
       <con:name>URL</con:name>
@@ -189,7 +189,7 @@
     </con:property>
     <con:property>
       <con:name>RestEndpoint</con:name>
-      <con:value>http://rdxappint.radixxuat.com</con:value>
+      <con:value>http://rdxdcsint.radixxuat.com</con:value>
     </con:property>
     <con:property>
       <con:name>ENV</con:name>

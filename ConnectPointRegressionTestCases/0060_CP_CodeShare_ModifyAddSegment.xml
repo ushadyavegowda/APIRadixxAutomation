@@ -26,7 +26,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>EQ4JMD</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -158,7 +158,7 @@ declare namespace ns1='http://tempuri.org/';
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
-                  <rad:DateOfDeparture>2023-03-31</rad:DateOfDeparture>
+                  <rad:DateOfDeparture>${#TestSuite#CS_ModifyDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
                   <rad:FareClass>${#TestSuite#CS_Fareclass}</rad:FareClass>
                   <rad:FareBasisCode>${empty}</rad:FareBasisCode>
@@ -1241,7 +1241,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>216391:3/27/2023 6:30:00 AM</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

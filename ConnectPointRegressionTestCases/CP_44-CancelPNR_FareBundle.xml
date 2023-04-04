@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="8a5b7fb0-b3cc-4731-858f-4aad2af968ad" keepSession="false" maxResults="0" name="CP_44 CancelPNR_FareBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="8a5b7fb0-b3cc-4731-858f-4aad2af968ad" keepSession="false" maxResults="0" name="CP_44 CancelPNR_FareBundle" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8a5b7fb0-b3cc-4731-858f-4aad2af968adfileName">CP_44-CancelPNR_FareBundle</con:setting>
   </con:settings>

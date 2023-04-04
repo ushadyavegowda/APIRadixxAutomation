@@ -192,7 +192,8 @@ def ReturnDate = new Date().plus(6)
 def ModifyDate = new Date().plus(6)
 def ModifyDate_returnSeg = new Date().plus(15)
 def Date_NewSeg = new Date().plus(16)
-def CS_DepartureDate = new Date().plus(4)
+def CS_DepartureDate = new Date().plus(2)
+def CS_ModifyDate = new Date().plus(3)
 
 //DOB	
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");	
@@ -268,7 +269,7 @@ testRunner.testCase.testSuite.setPropertyValue("paycurrency", paycurrency);
 testRunner.testCase.testSuite.setPropertyValue("IATANumber", IATANumber);
 testRunner.testCase.testSuite.setPropertyValue("FlightNumReturn", FlightNumReturn);
 testRunner.testCase.testSuite.setPropertyValue("Othercarriercode", Othercarriercode);
-
+testRunner.testCase.testSuite.setPropertyValue("CS_ModifyDate", CS_ModifyDate.format("yyyy-MM-dd"));
 //Passenger Info
 def FirstName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
 def LastName = org.apache.commons.lang.RandomStringUtils.randomAlphabetic(6)
@@ -363,7 +364,7 @@ testRunner.testCase.testSuite.setPropertyValue("CS_Origin", "YUL");
 testRunner.testCase.testSuite.setPropertyValue("CS_Destination", "MIA");
 testRunner.testCase.testSuite.setPropertyValue("CS_Fareclass", "B");
 testRunner.testCase.testSuite.setPropertyValue("CS_FBcode", "BRT2");
-testRunner.testCase.testSuite.setPropertyValue("CS_Upgrade_FBcode", "BOW");
+testRunner.testCase.testSuite.setPropertyValue("CS_Upgrade_FBcode", "BSWGD");
 testRunner.testCase.testSuite.setPropertyValue("CS_DepartureDate", CS_DepartureDate.format("yyyy-MM-dd"));
 
 //SSR info

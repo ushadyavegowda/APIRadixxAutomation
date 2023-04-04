@@ -36,7 +36,7 @@
       "Origin" : "${#TestSuite#Origin}",\r
       "Destination" : "${#TestSuite#Destination}",\r
       "FlightNumber" : "${#TestSuite#flightnum}",\r
-      "CarrierCode" : "${#TestSuite#Othercarriercode}",\r
+      "CarrierCode" : "${#TestSuite#carriercode}",\r
       "ApplicationUserId" : "${#Project#DCSUsername}",\r
       "ApplicationId" : "AutomationAPI"\r
    },\r
@@ -73,7 +73,7 @@
       "Origin" : "${#TestSuite#Destination}",\r
       "Destination" : "${#TestSuite#Origin}",\r
       "FlightNumber" : "${#TestSuite#FlightNumReturn}",\r
-      "CarrierCode" : "${#TestSuite#Othercarriercode}",\r
+      "CarrierCode" : "${#TestSuite#carriercode}",\r
       "ApplicationUserId" : "${#Project#DCSUsername}",\r
       "ApplicationId" : "AutomationAPI"\r
    },\r
@@ -827,23 +827,23 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>15489.97</con:value>
+      <con:value>14712</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>123703</con:value>
+      <con:value>176893</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>123767</con:value>
+      <con:value>196880</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>
-      <con:value>34</con:value>
+      <con:value>22</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_return</con:name>
-      <con:value>1</con:value>
+      <con:value>4</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

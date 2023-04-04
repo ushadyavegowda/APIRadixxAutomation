@@ -192,7 +192,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <a:WBCID>-2147483648</a:WBCID>
                   <a:PTCID>1</a:PTCID>
                   <a:PTC>${#TestSuite#p_PTC}</a:PTC>
-                  <a:TravelsWithPersonOrgID>-2147483648</a:TravelsWithPersonOrgID>
+                  <a:TravelsWithPersonOrgID>-214</a:TravelsWithPersonOrgID>
                   <a:RedressNumber i:nil="true"/>
                   <a:KnownTravelerNumber i:nil="true"/>
                   <a:MarketingOptIn>true</a:MarketingOptIn>
@@ -1095,7 +1095,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1065.63</con:value>
+      <con:value>4978.13</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
@@ -1111,7 +1111,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>8DCTSQ</con:value>
+      <con:value>OHQ20W</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

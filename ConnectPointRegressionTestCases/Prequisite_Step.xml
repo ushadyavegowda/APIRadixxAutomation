@@ -212,16 +212,16 @@ def p_DOB_INF= new Date().minus(120)
 
 
 /* Perf prod*/ 
-def origin = "YVR"
-def destination = "CDG"
+def origin = "YYZ"
+def destination = "YVR"
 def new_Segment = "NRT"
-def flightnum = "826"
+def flightnum = "765"
 def carriercode = "1D"
 def FBC = "EOW"
 def currency = "CAD"
 def paycurrency = "CAD"
 def IATANumber = "1000"
-def FlightNumReturn = "827"
+def FlightNumReturn = "109"
 def Othercarriercode = "9RX"
 
 

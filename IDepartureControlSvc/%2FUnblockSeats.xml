@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="4861979e-19d8-4dd7-ad1a-af0034b22e8e" name="/UnblockSeats" path="/UnblockSeats" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="4861979e-19d8-4dd7-ad1a-af0034b22e8e" name="/UnblockSeats" path="/UnblockSeats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4861979e-19d8-4dd7-ad1a-af0034b22e8efileName">%2FUnblockSeats</con:setting>
   </con:settings>

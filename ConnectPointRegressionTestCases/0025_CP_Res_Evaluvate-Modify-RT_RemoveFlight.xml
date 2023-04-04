@@ -14,27 +14,27 @@
         </con:property>
         <con:property>
           <con:name>ResBalance</con:name>
-          <con:value>4086.50</con:value>
+          <con:value>4235.50</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>X5QGB6</con:value>
+          <con:value>QZBGRX</con:value>
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>4086.50</con:value>
+          <con:value>4235.5</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Onward</con:name>
-          <con:value>196865</con:value>
+          <con:value>176893</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Return</con:name>
-          <con:value>176884</con:value>
+          <con:value>196880</con:value>
         </con:property>
         <con:property>
           <con:name>FareId_Return</con:name>
-          <con:value>12</con:value>
+          <con:value>2</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -633,10 +633,84 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep disabled="true" id="a7114279-e59e-42fb-b8ce-8f394228215c" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script (REST)" id="2aa0fbd7-2f11-4172-b406-291dfd605b25" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//context.expand( '${#TestSuite#JIRA folder}' )
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{  
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof RestTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                   
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+         
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>LFKey</con:name>
-      <con:value>176884:3/29/2023 3:00:00 PM</con:value>
+      <con:value>176893:4/7/2023 3:00:00 PM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

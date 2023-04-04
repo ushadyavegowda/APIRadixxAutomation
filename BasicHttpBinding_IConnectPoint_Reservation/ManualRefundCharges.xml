@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Reservation/ManualRefundCharges" anonymous="optional" bindingOperationName="ManualRefundCharges" id="bf8706fb-2118-44f0-89db-103a9b5fc50f" inputName="" isOneWay="false" name="ManualRefundCharges" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Reservation/ManualRefundCharges" anonymous="optional" bindingOperationName="ManualRefundCharges" id="bf8706fb-2118-44f0-89db-103a9b5fc50f" inputName="" isOneWay="false" name="ManualRefundCharges" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="bf8706fb-2118-44f0-89db-103a9b5fc50ffileName">ManualRefundCharges</con:setting>
   </con:settings>

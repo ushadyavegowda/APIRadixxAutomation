@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareBundleDetails" anonymous="optional" bindingOperationName="RetrieveFareBundleDetails" id="e774aa99-6d5b-4ee7-a05d-29d0d3412d8d" inputName="" isOneWay="false" name="RetrieveFareBundleDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareBundleDetails" anonymous="optional" bindingOperationName="RetrieveFareBundleDetails" id="e774aa99-6d5b-4ee7-a05d-29d0d3412d8d" inputName="" isOneWay="false" name="RetrieveFareBundleDetails" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e774aa99-6d5b-4ee7-a05d-29d0d3412d8dfileName">RetrieveFareBundleDetails</con:setting>
   </con:settings>

@@ -2,6 +2,14 @@
 <con:testSuite id="941667e0-b84f-4edf-b402-502e0779ac90" name="ConnectPointRegressionTestCases" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="941667e0-b84f-4edf-b402-502e0779ac90fileName">ConnectPointRegressionTestCases</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@disable_log">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@errors_only">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@follow">true</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>
@@ -40,15 +48,15 @@
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>HTABWBADT</con:value>
+      <con:value>SFWWIQADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>UVFHXUADT</con:value>
+      <con:value>LIKEEOADT</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>PKGWYPINF</con:value>
+      <con:value>KNUBYFINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
@@ -76,7 +84,7 @@
     </con:property>
     <con:property>
       <con:name>p_Email</con:name>
-      <con:value>TAMAFO@radixx.com</con:value>
+      <con:value>FKNMVZ@radixx.com</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -84,7 +92,7 @@
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>
-      <con:value>d27583f85wdff4c7099346nep7b0r16db3l9632c62a2</con:value>
+      <con:value>8fbc8eo1payc196b6ew46471vfaeaf4ceb99775d3ace</con:value>
     </con:property>
     <con:property>
       <con:name>IATANumber</con:name>
@@ -124,11 +132,11 @@
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHD</con:name>
-      <con:value>HTABWBCHD</con:value>
+      <con:value>SFWWIQCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameCHD</con:name>
-      <con:value>UVFHXUCHD</con:value>
+      <con:value>LIKEEOCHD</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_CHD</con:name>
@@ -136,11 +144,11 @@
     </con:property>
     <con:property>
       <con:name>p_FirstNameINF</con:name>
-      <con:value>HTABWBINF</con:value>
+      <con:value>SFWWIQINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastNameINF</con:name>
-      <con:value>UVFHXUINF</con:value>
+      <con:value>LIKEEOINF</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB_INF</con:name>
@@ -432,11 +440,11 @@
     </con:property>
     <con:property>
       <con:name>FirstNameRandom</con:name>
-      <con:value>M1Xa7U</con:value>
+      <con:value>J67Jn5</con:value>
     </con:property>
     <con:property>
       <con:name>LasttNameRandom</con:name>
-      <con:value>GHcjFj</con:value>
+      <con:value>WIFbCa</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNumReturn</con:name>
@@ -484,7 +492,7 @@
     </con:property>
     <con:property>
       <con:name>ExternalBookingReference</con:name>
-      <con:value>UY8844</con:value>
+      <con:value>TT0680</con:value>
     </con:property>
     <con:property>
       <con:name>CS_Fareclass</con:name>

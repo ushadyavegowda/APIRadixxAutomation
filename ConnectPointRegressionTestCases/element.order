@@ -42,6 +42,7 @@ Create-OW-pnr-withSSR.xml
 0010_CP_CreatebookingAddServicebundle.xml
 0011_CP_Res_ModifyRemoveServiceBundle.xml
 0012_CP_Res_ModifyAddServiceBundle.xml
+0013_Res_CreateBooking-%26-Checkin.xml
 0050_CP_Interline_ModifyFareDowngrade.xml
 0014_CP_Res_CreateBooking_FreeflightVoucher.xml
 0015_CP_Res_CreateBooking_StandardVoucher.xml
@@ -63,12 +64,14 @@ Create_OW_Interline_1ADT.xml
 0064_CP_PnrImport_CancelRes.xml
 0051_CP_Interline_ModifyAddSegment.xml
 0052_CP_Interline_ModifyAddSSR.xml
+0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
+0054_CP_Interline_CancelRes.xml
 0055_CP_CodeShare_CreateRes.xml
 0056_CP_CodeShare_ModifyReplaceflight.xml
 0057_CP_Codeshare_FareUpgrade.xml
 0049-RT-Modify%28date-change%29.xml
-0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
-0054_CP_Interline_CancelRes.xml
+0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF1.xml
+0054_CP_Interline_CancelRes1.xml
 0060_CP_CodeShare_ModifyAddSegment.xml
 0038_CP_Res_CreateOWBooking_Cash_promocode.xml
 0039_CP_Price_Retrieve-service-Quotes.xml

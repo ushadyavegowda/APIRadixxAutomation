@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="ea3fddbf-5b3f-4411-b89e-f3dddfd9ef92" keepSession="false" name="0009_CP_Res_Modify-AddServicebundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="ea3fddbf-5b3f-4411-b89e-f3dddfd9ef92" keepSession="false" name="0009_CP_Res_Modify-AddServicebundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ea3fddbf-5b3f-4411-b89e-f3dddfd9ef92fileName">0009_CP_Res_Modify-AddServicebundle</con:setting>
   </con:settings>
@@ -32,19 +32,19 @@
         </con:property>
         <con:property>
           <con:name>p_FirstName</con:name>
-          <con:value>BTJYSHTWO</con:value>
+          <con:value>SSJALATWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_LastName</con:name>
-          <con:value>UQPVDLTWO</con:value>
+          <con:value>CSEEHTTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_MiddleName</con:name>
-          <con:value>UQPVDLTWOT</con:value>
+          <con:value>CSEEHTTWOT</con:value>
         </con:property>
         <con:property>
           <con:name>p_DOB</con:name>
-          <con:value>1998-03-31</con:value>
+          <con:value>1998-04-06</con:value>
         </con:property>
         <con:property>
           <con:name>p_Gender</con:name>
@@ -124,7 +124,7 @@
         </con:property>
         <con:property>
           <con:name>Passport</con:name>
-          <con:value>19904276</con:value>
+          <con:value>23483915</con:value>
         </con:property>
         <con:property>
           <con:name>Nationality</con:name>
@@ -132,11 +132,11 @@
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1725.5</con:value>
+          <con:value>1952</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>OZEUCL</con:value>
+          <con:value>YT1ADA</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1118,7 +1118,7 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>202988</con:value>
+      <con:value>176895</con:value>
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
@@ -1138,11 +1138,11 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>74876</con:value>
+      <con:value>77502</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>110044</con:value>
+      <con:value>97306</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>

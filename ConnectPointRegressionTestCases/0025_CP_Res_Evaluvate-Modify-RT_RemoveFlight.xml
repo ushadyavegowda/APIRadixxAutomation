@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="9c2bb185-679b-4718-9a4a-265d06857a9f" keepSession="false" name="0025_CP_Res_Evaluvate Modify RT_RemoveFlight" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="9c2bb185-679b-4718-9a4a-265d06857a9f" keepSession="false" name="0025_CP_Res_Evaluvate Modify RT_RemoveFlight" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9c2bb185-679b-4718-9a4a-265d06857a9ffileName">0025_CP_Res_Evaluvate-Modify-RT_RemoveFlight</con:setting>
   </con:settings>

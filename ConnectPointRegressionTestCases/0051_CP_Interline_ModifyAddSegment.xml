@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase disabled="true" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="fb83ed75-87af-496d-8301-b6373c675fcf" keepSession="false" maxResults="0" name="0051_CP_Interline_ModifyAddSegment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="fb83ed75-87af-496d-8301-b6373c675fcf" keepSession="false" maxResults="0" name="0051_CP_Interline_ModifyAddSegment" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="fb83ed75-87af-496d-8301-b6373c675fcffileName">0051_CP_Interline_ModifyAddSegment</con:setting>
   </con:settings>

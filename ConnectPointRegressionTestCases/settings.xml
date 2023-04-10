@@ -10,6 +10,9 @@
     <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@disable_log">true</con:setting>
     <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@errors_only">true</con:setting>
     <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@follow">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@disable_log">false</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@errors_only">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@follow">false</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>

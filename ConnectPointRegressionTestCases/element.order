@@ -39,6 +39,12 @@ Create-OW-pnr-withSSR.xml
 0036_Prequisite_CP_Res_ModifyRTbooking-2ADT1CHD1INF_ReplaceFlight.xml
 0013_Res_CreateBooking-%26-Checkin.xml
 0036_CP_Res_ModifyRTbooking-2ADT1CHD1INF_ReplaceFlight.xml
+0038_CP_Res_CreateOWBooking_Cash_promocode.xml
+0039_CP_Price_Retrieve-service-Quotes.xml
+0040_CP_Flight_RetrieveAirportRoutes.xml
+0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
+CP_43-CP_ModifyBooking-1ADT1CHD1-INF-Fare-bundle.xml
+CP_44-CancelPNR_FareBundle.xml
 0010_CP_CreatebookingAddServicebundle.xml
 0011_CP_Res_ModifyRemoveServiceBundle.xml
 0012_CP_Res_ModifyAddServiceBundle.xml
@@ -71,14 +77,8 @@ Test_CP_58-CS-Modify-add-SSR.xml
 0053_CP_Interline_ModifyNameChange_1ADT%2B1CHD%2B1INF.xml
 0054_CP_Interline_CancelRes.xml
 0060_CP_CodeShare_ModifyAddSegment.xml
-0038_CP_Res_CreateOWBooking_Cash_promocode.xml
-0039_CP_Price_Retrieve-service-Quotes.xml
-0040_CP_Flight_RetrieveAirportRoutes.xml
 0041_Prequisite_CP_Res_Modify_Add-and-RemoveSSR.xml
 CP_41-CP_Res_Modify_Add-and-RemoveSSR.xml
-0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
 0059_CP_Codeshare_CancelRes1.xml
 0058_CP_Codeshare_ModifyAddSSRbundle1.xml
 0061_CP_PnrImport_CreateGroupRes-3.xml
-CP_43-CP_ModifyBooking-1ADT1CHD1-INF-Fare-bundle.xml
-CP_44-CancelPNR_FareBundle.xml

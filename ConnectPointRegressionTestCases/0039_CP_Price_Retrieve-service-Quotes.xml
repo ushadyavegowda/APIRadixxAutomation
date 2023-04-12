@@ -104,7 +104,7 @@
             <rad:HistoricUserName>${empty}</rad:HistoricUserName>
             <rad1:LogicalFlightID>${#TestCase#LFID}</rad1:LogicalFlightID>
             <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
-            <rad1:AirportCode>${#TestSuite#Origin}</rad1:AirportCode>
+            <rad1:AirportCode>${#TestCase#Origin}</rad1:AirportCode>
             <rad1:ServiceCode>${#TestCase#ServiceCode}</rad1:ServiceCode>
             <rad1:Cabin>?</rad1:Cabin>
             <rad1:Category>?</rad1:Category>
@@ -192,6 +192,10 @@
     <con:property>
       <con:name>LFID</con:name>
       <con:value>176901</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Origin</con:name>
+      <con:value>YVR</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

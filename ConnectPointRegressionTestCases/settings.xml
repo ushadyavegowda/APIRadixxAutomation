@@ -16,11 +16,11 @@
   <con:properties>
     <con:property>
       <con:name>DepartureDate</con:name>
-      <con:value>2023-04-15</con:value>
+      <con:value>2023-04-09</con:value>
     </con:property>
     <con:property>
       <con:name>ModifyDate</con:name>
-      <con:value>2023-04-18</con:value>
+      <con:value>2023-04-12</con:value>
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
@@ -60,7 +60,7 @@
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1979-04-12</con:value>
+      <con:value>1979-04-06</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -104,7 +104,7 @@
     </con:property>
     <con:property>
       <con:name>ReturnDate</con:name>
-      <con:value>2023-04-18</con:value>
+      <con:value>2023-04-12</con:value>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
@@ -128,7 +128,7 @@
     </con:property>
     <con:property>
       <con:name>ModifyDate_returnSeg</con:name>
-      <con:value>2023-04-27</con:value>
+      <con:value>2023-04-21</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameCHD</con:name>
@@ -140,7 +140,7 @@
     </con:property>
     <con:property>
       <con:name>p_DOB_CHD</con:name>
-      <con:value>2017-04-12</con:value>
+      <con:value>2017-04-06</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstNameINF</con:name>
@@ -152,11 +152,11 @@
     </con:property>
     <con:property>
       <con:name>p_DOB_INF</con:name>
-      <con:value>2022-12-13</con:value>
+      <con:value>2022-12-07</con:value>
     </con:property>
     <con:property>
       <con:name>Date_NewSeg</con:name>
-      <con:value>2023-04-28</con:value>
+      <con:value>2023-04-22</con:value>
     </con:property>
     <con:property>
       <con:name>New_Segment</con:name>
@@ -200,7 +200,7 @@
     </con:property>
     <con:property>
       <con:name>ExpirationDate</con:name>
-      <con:value>2023-07-21</con:value>
+      <con:value>2023-07-15</con:value>
     </con:property>
     <con:property>
       <con:name>p_Age</con:name>
@@ -268,7 +268,7 @@
     </con:property>
     <con:property>
       <con:name>ExchangeRateDate</con:name>
-      <con:value>2023-04-12</con:value>
+      <con:value>2023-04-06</con:value>
     </con:property>
     <con:property>
       <con:name>ID</con:name>
@@ -484,11 +484,11 @@
     </con:property>
     <con:property>
       <con:name>CS_FarebasisCode</con:name>
-      <con:value>BRT2</con:value>
+      <con:value>B</con:value>
     </con:property>
     <con:property>
       <con:name>CS_DepartureDate</con:name>
-      <con:value>2023-04-14</con:value>
+      <con:value>2023-04-11</con:value>
     </con:property>
     <con:property>
       <con:name>ExternalBookingReference</con:name>

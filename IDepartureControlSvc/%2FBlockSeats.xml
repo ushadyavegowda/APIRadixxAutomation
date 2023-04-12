@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="fceb9abc-f556-40a2-8a0f-fdc4ab099046" name="/BlockSeats" path="/BlockSeats" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="fceb9abc-f556-40a2-8a0f-fdc4ab099046" name="/BlockSeats" path="/BlockSeats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="fceb9abc-f556-40a2-8a0f-fdc4ab099046fileName">%2FBlockSeats</con:setting>
   </con:settings>

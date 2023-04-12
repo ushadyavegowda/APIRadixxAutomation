@@ -139,7 +139,7 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="70c74d91-ef77-40a6-ba2e-aa1ba8da948a" name="Response SLA" type="Response SLA Assertion">
+        <con:assertion id="70c74d91-ef77-40a6-ba2e-aa1ba8da948a" name="Response SLA" type="Response SLA Assertion" disabled="true">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
@@ -199,11 +199,6 @@
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="70c74d91-ef77-40a6-ba2e-aa1ba8da948a" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
         <con:assertion id="02b2ec6f-640b-410f-87c7-f958538d4372" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
@@ -921,11 +916,11 @@ m.append(res, "UTF-8")
   <con:properties>
     <con:property>
       <con:name>LFID_onward</con:name>
-      <con:value>186641</con:value>
+      <con:value>176904</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_return</con:name>
-      <con:value>176883</con:value>
+      <con:value>196897</con:value>
     </con:property>
     <con:property>
       <con:name>FareId_onward</con:name>

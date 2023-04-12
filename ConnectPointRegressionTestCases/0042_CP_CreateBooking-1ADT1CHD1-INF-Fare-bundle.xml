@@ -1113,19 +1113,19 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>9101.76</con:value>
+      <con:value>20205.58</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186609</con:value>
+      <con:value>176901</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>196498</con:value>
+      <con:value>196888</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>
-      <con:value>7</con:value>
+      <con:value>34</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_return</con:name>

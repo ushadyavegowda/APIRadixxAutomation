@@ -3,12 +3,44 @@
   <con:settings>
     <con:setting id="45162e52-f3e9-483f-b249-2ab608d64ca6fileName">0063_CP_PnrImport_RemovePax</con:setting>
   </con:settings>
-  <con:testStep id="cff18534-56ce-471a-8d65-43175cd9cd15" name="1.Run 0059_CP_PnrImport_CreateGroupRes" type="calltestcase">
+  <con:testStep id="cff18534-56ce-471a-8d65-43175cd9cd15" name="1.Run 0061_CP_PnrImport_CreateGroupRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
+      <con:targetTestCase>257146a8-ff98-4fd1-b004-e90e9547efd1</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>FlightNo</con:name>
+          <con:value>720</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DepartureTime</con:name>
+          <con:value>2023-03-31T08:00:00</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ArrivalTime</con:name>
+          <con:value>2023-03-31T15:45:00</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CarrierCode</con:name>
+          <con:value>1D</con:value>
+        </con:property>
+        <con:property>
+          <con:name>BookingDate</con:name>
+          <con:value>2023-03-28</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ExternalBookingReference</con:name>
+          <con:value>UP4500</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>FlightNo</con:entry>
+        <con:entry>DepartureTime</con:entry>
+        <con:entry>ArrivalTime</con:entry>
+        <con:entry>CarrierCode</con:entry>
+        <con:entry>BookingDate</con:entry>
+        <con:entry>ExternalBookingReference</con:entry>
+      </con:returnProperties>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
@@ -336,7 +368,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                <BookingCarrier xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                <IATANumber>${#TestSuite#IATANumber}</IATANumber>
                <ExternalAppID>${#TestSuite#IATANumber}</ExternalAppID>
-               <ExternalBookingReference>${#TestSuite#ExternalBookingReference}</ExternalBookingReference>
+               <ExternalBookingReference>${1.Run 0061_CP_PnrImport_CreateGroupRes#ExternalBookingReference}</ExternalBookingReference>
                <OriginalBookingDate>${#TestCase#BookingDate}</OriginalBookingDate>
                <ReservationCurrency>${#TestSuite#currency}</ReservationCurrency>
                <User>pnrimport</User>
@@ -1383,21 +1415,58 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="fe52554f-e9ed-4fc8-a66e-ebb263f5b820" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>ExternalBookingReference</con:name>
     </con:property>
     <con:property>
       <con:name>FlightNo</con:name>
-      <con:value>699</con:value>
+      <con:value>720</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureTime</con:name>
-      <con:value>2023-03-23T09:00:00</con:value>
+      <con:value>2023-03-31T08:00:00</con:value>
     </con:property>
     <con:property>
       <con:name>ArrivalTime</con:name>
-      <con:value>2023-03-23T16:45:00</con:value>
+      <con:value>2023-03-31T15:45:00</con:value>
     </con:property>
     <con:property>
       <con:name>CarrierCode</con:name>
@@ -1405,7 +1474,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>BookingDate</con:name>
-      <con:value>2023-03-20</con:value>
+      <con:value>2023-03-28</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

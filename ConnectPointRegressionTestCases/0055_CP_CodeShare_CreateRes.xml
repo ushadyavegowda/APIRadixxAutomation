@@ -48,8 +48,8 @@
                   <rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo>
                   <rad:DateOfDeparture>${#TestSuite#DepartureDate}</rad:DateOfDeparture>
                   <rad:FareTypeCategory>1</rad:FareTypeCategory>
-                  <rad:FareClass>${#TestSuite#CS_Fareclass}</rad:FareClass>
-                  <rad:FareBasisCode>${#TestSuite#CS_FBcode}</rad:FareBasisCode>
+                  <rad:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad:Cabin>${empty}</rad:Cabin>
                   <rad:LFID>0</rad:LFID>
                   <rad:OperatingCarrierCode>${empty}</rad:OperatingCarrierCode>
@@ -1095,7 +1095,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>1065.63</con:value>
+      <con:value>4978.13</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
@@ -1107,11 +1107,11 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>FareID</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>VANK2W</con:value>
+      <con:value>ENIRTI</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

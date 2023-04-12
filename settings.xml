@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" compositeProjectFormat="1.3" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.40.2" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="QAEnvi" created="3.8.0" encryptionMode="Not encrypted" id="ba14653a-ef2b-4f2f-b634-d234a6ef888a" name="CPTestAutomation" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.40.2" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ba14653a-ef2b-4f2f-b634-d234a6ef888afileName">ReadyApi</con:setting>
   </con:settings>

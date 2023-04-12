@@ -3,12 +3,44 @@
   <con:settings>
     <con:setting id="f4f5637d-29c9-4a1a-b135-596da53e7271fileName">0064_CP_PnrImport_CancelRes</con:setting>
   </con:settings>
-  <con:testStep id="4f2451fb-4b79-4e5a-8c74-ebe22923ae66" name="1.Run 0059_CP_PnrImport_CreateGroupRes" type="calltestcase">
+  <con:testStep id="4f2451fb-4b79-4e5a-8c74-ebe22923ae66" name="1.Run 0061_CP_PnrImport_CreateGroupRes" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
-      <con:properties/>
-      <con:returnProperties/>
+      <con:targetTestCase>257146a8-ff98-4fd1-b004-e90e9547efd1</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>FlightNo</con:name>
+          <con:value>720</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DepartureTime</con:name>
+          <con:value>2023-03-30T08:00:00</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ArrivalTime</con:name>
+          <con:value>2023-03-30T15:45:00</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CarrierCode</con:name>
+          <con:value>1D</con:value>
+        </con:property>
+        <con:property>
+          <con:name>BookingDate</con:name>
+          <con:value>2023-03-27</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ExternalBookingReference</con:name>
+          <con:value>XS3591</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>FlightNo</con:entry>
+        <con:entry>DepartureTime</con:entry>
+        <con:entry>ArrivalTime</con:entry>
+        <con:entry>CarrierCode</con:entry>
+        <con:entry>BookingDate</con:entry>
+        <con:entry>ExternalBookingReference</con:entry>
+      </con:returnProperties>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
@@ -253,7 +285,7 @@ testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
 //testRunner.testCase.testSuite.setPropertyValue("ExternalBookingRef",ExternalBookingRef);</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="eccc4807-4dcd-4b94-ac7e-6471e3313071" name="Property Transfer-FlightNo" type="transfer">
+  <con:testStep id="eccc4807-4dcd-4b94-ac7e-6471e3313071" name="Property Transfer-FlightNo" type="transfer" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -303,7 +335,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="3c2b3f3e-b8fd-48d5-8962-2f442938e26e" name="ImportPNR_CancelRes" type="request">
+  <con:testStep id="3c2b3f3e-b8fd-48d5-8962-2f442938e26e" name="ImportPNR_CancelRes" type="request" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -519,192 +551,62 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://rdxappint.radixxuat.com/RDX/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:ImportPNR>\r
-         <!--Optional:-->\r
-         <tem:ImportPNRRequest>\r
-            <rad:SecurityGUID>?</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>?</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>?</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>?</rad:HistoricUserName>\r
-            <rad1:ActionType>?</rad1:ActionType>\r
-            <rad1:ImportPNR>\r
-               <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
-               <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
-               <rad1:BookingAction>?</rad1:BookingAction>\r
-               <rad1:BookingCarrier>?</rad1:BookingCarrier>\r
-               <rad1:IATANumber>?</rad1:IATANumber>\r
-               <rad1:ExternalAppID>?</rad1:ExternalAppID>\r
-               <rad1:ExternalBookingReference>?</rad1:ExternalBookingReference>\r
-               <rad1:OriginalBookingDate>?</rad1:OriginalBookingDate>\r
-               <rad1:ReservationCurrency>?</rad1:ReservationCurrency>\r
-               <rad1:User>?</rad1:User>\r
-               <rad1:PromoCode>?</rad1:PromoCode>\r
-               <rad1:RecieptLanguageCode>?</rad1:RecieptLanguageCode>\r
-               <rad1:ReservationChannel>?</rad1:ReservationChannel>\r
-               <rad1:Segments>\r
-                  <!--Zero or more repetitions:-->\r
-                  <rad1:ImportPNR.Reservation.Segment>\r
-                     <rad1:CarrierCode>?</rad1:CarrierCode>\r
-                     <rad1:FlightNumber>?</rad1:FlightNumber>\r
-                     <rad1:DepartureDate>?</rad1:DepartureDate>\r
-                     <rad1:Origin>?</rad1:Origin>\r
-                     <rad1:OriginName>?</rad1:OriginName>\r
-                     <rad1:Destination>?</rad1:Destination>\r
-                     <rad1:DestinationName>?</rad1:DestinationName>\r
-                     <rad1:DepartureTime>?</rad1:DepartureTime>\r
-                     <rad1:ArrivalTime>?</rad1:ArrivalTime>\r
-                     <rad1:AirlinePersons>\r
-                        <!--Zero or more repetitions:-->\r
-                        <rad1:ImportPNR.Reservation.Segment.AirlinePerson>\r
-                           <rad1:PersonOrgID>?</rad1:PersonOrgID>\r
-                           <rad1:TravelsWithPersonOrgID>?</rad1:TravelsWithPersonOrgID>\r
-                           <rad1:FareClass>?</rad1:FareClass>\r
-                           <rad1:FareBasisCode>?</rad1:FareBasisCode>\r
-                           <!--Optional:-->\r
-                           <rad1:RecordLocator>?</rad1:RecordLocator>\r
-                           <rad1:Charges>\r
-                              <!--Zero or more repetitions:-->\r
-                              <rad1:ImportPNR.Reservation.Segment.AirlinePerson.Charge>\r
-                                 <rad1:CodeType>?</rad1:CodeType>\r
-                                 <rad1:Amount>?</rad1:Amount>\r
-                                 <rad1:Currency>?</rad1:Currency>\r
-                              </rad1:ImportPNR.Reservation.Segment.AirlinePerson.Charge>\r
-                           </rad1:Charges>\r
-                           <rad1:Seats>\r
-                              <!--Zero or more repetitions:-->\r
-                              <rad1:ImportPNR.Reservation.Segment.AirlinePerson.Seat>\r
-                                 <rad1:Seat>?</rad1:Seat>\r
-                                 <rad1:SeatRow>?</rad1:SeatRow>\r
-                              </rad1:ImportPNR.Reservation.Segment.AirlinePerson.Seat>\r
-                           </rad1:Seats>\r
-                        </rad1:ImportPNR.Reservation.Segment.AirlinePerson>\r
-                     </rad1:AirlinePersons>\r
-                  </rad1:ImportPNR.Reservation.Segment>\r
-               </rad1:Segments>\r
-               <rad1:Persons>\r
-                  <!--Zero or more repetitions:-->\r
-                  <rad1:ImportPNR.Reservation.Person>\r
-                     <rad1:PersonOrgID>?</rad1:PersonOrgID>\r
-                     <rad1:PTCID>?</rad1:PTCID>\r
-                     <rad1:PTC>?</rad1:PTC>\r
-                     <rad1:Title>?</rad1:Title>\r
-                     <rad1:LastName>?</rad1:LastName>\r
-                     <rad1:FirstName>?</rad1:FirstName>\r
-                     <rad1:MiddleName>?</rad1:MiddleName>\r
-                     <rad1:DateOfBirth>?</rad1:DateOfBirth>\r
-                     <rad1:Gender>?</rad1:Gender>\r
-                     <rad1:Phone>?</rad1:Phone>\r
-                     <rad1:Mobile>?</rad1:Mobile>\r
-                     <rad1:Email>?</rad1:Email>\r
-                     <rad1:Address>?</rad1:Address>\r
-                     <rad1:City>?</rad1:City>\r
-                     <rad1:Postal>?</rad1:Postal>\r
-                     <rad1:Province>?</rad1:Province>\r
-                     <rad1:Country>?</rad1:Country>\r
-                     <rad1:DocumentID>?</rad1:DocumentID>\r
-                     <rad1:DocumentExpDate>?</rad1:DocumentExpDate>\r
-                     <rad1:SecureFlightRedressNumber>?</rad1:SecureFlightRedressNumber>\r
-                     <rad1:SecureFlightKnownTravellerNumber>?</rad1:SecureFlightKnownTravellerNumber>\r
-                     <rad1:ApisInfos>\r
-                        <!--Zero or more repetitions:-->\r
-                        <rad1:ImportPNR.Reservation.Person.ApisInformation>\r
-                           <rad1:ApisInfoIndex>?</rad1:ApisInfoIndex>\r
-                           <rad1:SeriesNumber>?</rad1:SeriesNumber>\r
-                           <rad1:ConfirmationNumber>?</rad1:ConfirmationNumber>\r
-                           <rad1:RecordNumber>?</rad1:RecordNumber>\r
-                           <rad1:LastName>?</rad1:LastName>\r
-                           <rad1:FirstName>?</rad1:FirstName>\r
-                           <rad1:MiddleName>?</rad1:MiddleName>\r
-                           <rad1:BirthDate>?</rad1:BirthDate>\r
-                           <rad1:Gender>?</rad1:Gender>\r
-                           <rad1:Citizenship>?</rad1:Citizenship>\r
-                           <rad1:ResidenceCountry>?</rad1:ResidenceCountry>\r
-                           <rad1:Status>?</rad1:Status>\r
-                           <rad1:CrewType>?</rad1:CrewType>\r
-                           <rad1:HomeAddress>?</rad1:HomeAddress>\r
-                           <rad1:HomeCity>?</rad1:HomeCity>\r
-                           <rad1:HomeState>?</rad1:HomeState>\r
-                           <rad1:HomePostal>?</rad1:HomePostal>\r
-                           <rad1:HomeCountry>?</rad1:HomeCountry>\r
-                           <rad1:DestinationAddress>?</rad1:DestinationAddress>\r
-                           <rad1:DestinationCity>?</rad1:DestinationCity>\r
-                           <rad1:DestinationState>?</rad1:DestinationState>\r
-                           <rad1:DestinationPostal>?</rad1:DestinationPostal>\r
-                           <rad1:DestinationCountry>?</rad1:DestinationCountry>\r
-                           <rad1:Embarkation>?</rad1:Embarkation>\r
-                           <rad1:BirthCity>?</rad1:BirthCity>\r
-                           <rad1:BirthState>?</rad1:BirthState>\r
-                           <rad1:BirthCountry>?</rad1:BirthCountry>\r
-                           <rad1:DocumentType1>?</rad1:DocumentType1>\r
-                           <rad1:DocumentNumber>?</rad1:DocumentNumber>\r
-                           <rad1:IssueCountry1>?</rad1:IssueCountry1>\r
-                           <rad1:ExpirationDate1>?</rad1:ExpirationDate1>\r
-                           <rad1:DocumentType2>?</rad1:DocumentType2>\r
-                           <rad1:DocumentNumber2>?</rad1:DocumentNumber2>\r
-                           <rad1:IssueCountry2>?</rad1:IssueCountry2>\r
-                           <rad1:ExpirationDate2>?</rad1:ExpirationDate2>\r
-                           <rad1:ResultCode>?</rad1:ResultCode>\r
-                           <rad1:ResultMessage>?</rad1:ResultMessage>\r
-                           <rad1:PhysicalFlightID>?</rad1:PhysicalFlightID>\r
-                           <rad1:ActualDepartureDate>?</rad1:ActualDepartureDate>\r
-                           <rad1:FlightNumber>?</rad1:FlightNumber>\r
-                           <rad1:Debarkation>?</rad1:Debarkation>\r
-                           <rad1:Arrival>?</rad1:Arrival>\r
-                           <rad1:DocumentScanned1>?</rad1:DocumentScanned1>\r
-                           <rad1:DocumentScanned2>?</rad1:DocumentScanned2>\r
-                        </rad1:ImportPNR.Reservation.Person.ApisInformation>\r
-                     </rad1:ApisInfos>\r
-                  </rad1:ImportPNR.Reservation.Person>\r
-               </rad1:Persons>\r
-               <rad1:Comments>\r
-                  <!--Zero or more repetitions:-->\r
-                  <rad1:ImportPNR.Reservation.Comment>\r
-                     <rad1:CommentDate>?</rad1:CommentDate>\r
-                     <rad1:CommentText>?</rad1:CommentText>\r
-                  </rad1:ImportPNR.Reservation.Comment>\r
-               </rad1:Comments>\r
-               <rad1:Errors>\r
-                  <!--Zero or more repetitions:-->\r
-                  <rad1:ImportPNR.Reservation.ImportError>\r
-                     <rad1:ErrorCode>?</rad1:ErrorCode>\r
-                     <rad1:RadixxQueue>?</rad1:RadixxQueue>\r
-                     <rad1:ErrorText>?</rad1:ErrorText>\r
-                  </rad1:ImportPNR.Reservation.ImportError>\r
-               </rad1:Errors>\r
-               <!--Optional:-->\r
-               <rad1:OALSegments>\r
-                  <!--Zero or more repetitions:-->\r
-                  <rad1:OALSegment>\r
-                     <rad1:OALCarrierCode>?</rad1:OALCarrierCode>\r
-                     <rad1:OALFlightNumber>?</rad1:OALFlightNumber>\r
-                     <rad1:OALDepartureDate>?</rad1:OALDepartureDate>\r
-                     <rad1:OALOrigin>?</rad1:OALOrigin>\r
-                     <rad1:OALDestination>?</rad1:OALDestination>\r
-                     <rad1:OALScheduledDepartureTime>?</rad1:OALScheduledDepartureTime>\r
-                     <rad1:OALScheduledArrivalTime>?</rad1:OALScheduledArrivalTime>\r
-                     <rad1:OALAirlinePersons>\r
-                        <!--Zero or more repetitions:-->\r
-                        <rad1:OALAirlinePerson>\r
-                           <rad1:PersonOrgID>?</rad1:PersonOrgID>\r
-                           <rad1:FareClass>?</rad1:FareClass>\r
-                        </rad1:OALAirlinePerson>\r
-                     </rad1:OALAirlinePersons>\r
-                  </rad1:OALSegment>\r
-               </rad1:OALSegments>\r
-            </rad1:ImportPNR>\r
-         </tem:ImportPNRRequest>\r
-      </tem:ImportPNR>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ImportPNR>
+         <!--Optional:-->
+         <tem:ImportPNRRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <rad:HistoricUserName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad1:ActionType>ImportPNR</rad1:ActionType>
+            <rad1:ImportPNR>
+               <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
+               <rad1:ConfirmationNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <rad1:BookingAction>SystemDetermined</rad1:BookingAction>
+               <rad1:BookingCarrier>${#TestCase#CarrierCode}</rad1:BookingCarrier>
+               <rad1:IATANumber>${#TestSuite#IATANumber}</rad1:IATANumber>
+               <rad1:ExternalAppID>${#TestSuite#IATANumber}</rad1:ExternalAppID>
+               <rad1:ExternalBookingReference>${1.Run 0061_CP_PnrImport_CreateGroupRes#ExternalBookingReference}</rad1:ExternalBookingReference>
+               <rad1:OriginalBookingDate>${#TestCase#BookingDate}</rad1:OriginalBookingDate>
+               <rad1:ReservationCurrency>${#TestSuite#currency}</rad1:ReservationCurrency>
+               <rad1:User>pnrimport</rad1:User>
+               <rad1:PromoCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+               <rad1:RecieptLanguageCode>en-us</rad1:RecieptLanguageCode>
+               <rad1:ReservationChannel>11</rad1:ReservationChannel>
+               <rad1:Segments>
+                  <!--Zero or more repetitions:-->
+               </rad1:Segments>
+               <rad1:Persons>
+                  <!--Zero or more repetitions:-->
+               </rad1:Persons>
+               <rad1:Comments>
+                  <!--Zero or more repetitions:-->
+                  <rad1:ImportPNR.Reservation.Comment>
+                     <rad1:CommentDate>${#TestCase#BookingDate}</rad1:CommentDate>
+                     <rad1:CommentText>Original PNR: TTS_11092383_58194831.pnr</rad1:CommentText>
+                  </rad1:ImportPNR.Reservation.Comment>
+               </rad1:Comments>
+               <rad1:Errors>
+                  <!--Zero or more repetitions:-->
+               </rad1:Errors>
+               <!--Optional:-->
+               <rad1:OALSegments>
+                  <!--Zero or more repetitions:-->
+               </rad1:OALSegments>
+            </rad1:ImportPNR>
+         </tem:ImportPNRRequest>
+      </tem:ImportPNR>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response" type="SOAP Response"/>
         <con:credentials>
@@ -874,7 +776,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     </con:property>
     <con:property>
       <con:name>BookingDate</con:name>
-      <con:value>2023-03-20</con:value>
+      <con:value>2023-03-27</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

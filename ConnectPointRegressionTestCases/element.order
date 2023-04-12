@@ -52,8 +52,7 @@ Create_OW_Interline_1ADT%2B1CHD%2B1INF_BizClass.xml
 Create_OW_Interline_1ADT.xml
 0048_CP_Interline_Create_2ADT%2B1CHD%2B1INF.xml
 0049_CP_Interline_ModifyReplaceflight.xml
-0058_CP_Codeshare_ModifyAddSSRbundle.xml
-0059_CP_Codeshare_CancelRes.xml
+Test_CP_58-CS-Modify-add-SSR.xml
 0061_CP_PnrImport_CreateGroupRes.xml
 0062_CP_PnrImport_AddPax.xml
 0063_CP_PnrImport_RemovePax.xml
@@ -73,3 +72,6 @@ Create_OW_Interline_1ADT.xml
 0041_Prequisite_CP_Res_Modify_Add-and-RemoveSSR.xml
 CP_41-CP_Res_Modify_Add-and-RemoveSSR.xml
 0042_CP_CreateBooking-1ADT1CHD1-INF-Fare-bundle.xml
+0059_CP_Codeshare_CancelRes.xml
+0058_CP_Codeshare_ModifyAddSSRbundle.xml
+0061_CP_PnrImport_CreateGroupRes-3.xml

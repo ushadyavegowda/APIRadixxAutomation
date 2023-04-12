@@ -152,7 +152,7 @@
   <con:properties>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value>VGML</con:value>
+      <con:value>BAG1</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
@@ -191,7 +191,7 @@
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186601</con:value>
+      <con:value>176901</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

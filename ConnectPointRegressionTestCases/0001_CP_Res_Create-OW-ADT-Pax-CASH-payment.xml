@@ -1737,7 +1737,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <delay>3000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep disabled="true" id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="bb94011c-272d-48c8-9bd8-33f9c120a5e4" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

@@ -15,19 +15,19 @@
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>8001.76</con:value>
+          <con:value>14902.3</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Onward</con:name>
-          <con:value>186607</con:value>
+          <con:value>176893</con:value>
         </con:property>
         <con:property>
           <con:name>LFID_Return</con:name>
-          <con:value>196161</con:value>
+          <con:value>196880</con:value>
         </con:property>
         <con:property>
           <con:name>FareID_Onward</con:name>
-          <con:value>7</con:value>
+          <con:value>34</con:value>
         </con:property>
         <con:property>
           <con:name>FareID_return</con:name>
@@ -35,7 +35,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>L9VX3U</con:value>
+          <con:value>F4HMCX</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1004,7 +1004,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value>5</con:value>
+      <con:value>8</con:value>
     </con:property>
     <con:property userSpecific="true">
       <con:name>PNR</con:name>
@@ -1048,7 +1048,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>196161:3/12/2023 3:00:00 PM</con:value>
+      <con:value>196880:4/10/2023 4:00:00 PM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

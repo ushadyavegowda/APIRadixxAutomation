@@ -1,207 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="6ebf2e6a-f517-4cbd-97e2-4b281261563d" keepSession="false" maxResults="0" name="0054_CP_Interline_CancelRes" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="8a5b7fb0-b3cc-4731-858f-4aad2af968ad" keepSession="false" maxResults="0" name="CP_44 CancelPNR_FareBundle" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6ebf2e6a-f517-4cbd-97e2-4b281261563dfileName">0054_CP_Interline_CancelRes</con:setting>
+    <con:setting id="8a5b7fb0-b3cc-4731-858f-4aad2af968adfileName">CP_44-CancelPNR_FareBundle</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep id="afb2f48b-8d1f-451f-bcf6-b29ca148a04c" name="1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF" type="calltestcase">
+  <con:testStep id="a895ab4f-eba5-4435-b485-b8fa379bfe2f" name="RetrieveSecurityToken  and Input Parameters" type="calltestcase">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>3a854512-72d2-486c-b5ce-bd607f172210</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>securityToken</con:name>
-          <con:value>b0e5d8f4f7kdoc6tn3186400iba7aef4890ce31a518a</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ConfrimationNum</con:name>
-          <con:value>PI0TVW</con:value>
-        </con:property>
-        <con:property>
-          <con:name>Origin</con:name>
-          <con:value>YUL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>Destination</con:name>
-          <con:value>NCE</con:value>
-        </con:property>
-        <con:property>
-          <con:name>DepartureDate</con:name>
-          <con:value>2023-03-24</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ReturnDate</con:name>
-          <con:value>2023-03-28</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ResBalance</con:name>
-          <con:value>1018.28</con:value>
-        </con:property>
-        <con:property>
-          <con:name>fareid</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LogicFlightKey</con:name>
-          <con:value>-1119085969:3/24/2023 4:50:00 PM</con:value>
-        </con:property>
-        <con:property>
-          <con:name>TripId</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>LFID</con:name>
-          <con:value>-111636324</con:value>
-        </con:property>
-        <con:property>
-          <con:name>PhysicalFlightID</con:name>
-          <con:value>2122022144</con:value>
-        </con:property>
-        <con:property>
-          <con:name>FCCode</con:name>
-        </con:property>
-        <con:property>
-          <con:name>FBCode</con:name>
-        </con:property>
-        <con:property>
-          <con:name>p_Email</con:name>
-          <con:value>radix@radixx.com</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_age</con:name>
-          <con:value>25</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_age</con:name>
-          <con:value>6</con:value>
-        </con:property>
-        <con:property>
-          <con:name>currency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>paycurrency</con:name>
-          <con:value>CAD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ModifyDate</con:name>
-          <con:value>2023-03-30</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeAddress</con:name>
-          <con:value>6310 HAZELTINE NATIONAL DR</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeCity</con:name>
-          <con:value>ORLANDO</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomeState</con:name>
-          <con:value>FL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_HomePostal</con:name>
-          <con:value>32822</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstName</con:name>
-          <con:value>BobADL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleName</con:name>
-          <con:value>Mol</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_LastName</con:name>
-          <con:value>Young</con:value>
-        </con:property>
-        <con:property>
-          <con:name>ADT_DOB</con:name>
-          <con:value>1979-03-20</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameTwo</con:name>
-          <con:value>Mechile</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameTwo</con:name>
-          <con:value>Corry</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameInfOne</con:name>
-          <con:value>EllahInf</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameInfOne</con:name>
-          <con:value>Lucy</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_FirstNameCHDOne</con:name>
-          <con:value>TomCHD</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_MiddleNameCHDone</con:name>
-          <con:value>Chris</con:value>
-        </con:property>
-        <con:property>
-          <con:name>CHD_DOB</con:name>
-          <con:value>2017-03-20</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyFirstName</con:name>
-          <con:value>MattADL</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyMiddleName</con:name>
-          <con:value>Charles</con:value>
-        </con:property>
-        <con:property>
-          <con:name>p_ModifyLastName</con:name>
-          <con:value>Cameron</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties>
-        <con:entry>securityToken</con:entry>
-        <con:entry>ConfrimationNum</con:entry>
-        <con:entry>Origin</con:entry>
-        <con:entry>Destination</con:entry>
-        <con:entry>DepartureDate</con:entry>
-        <con:entry>ReturnDate</con:entry>
-        <con:entry>ResBalance</con:entry>
-        <con:entry>fareid</con:entry>
-        <con:entry>LogicFlightKey</con:entry>
-        <con:entry>TripId</con:entry>
-        <con:entry>LFID</con:entry>
-        <con:entry>PhysicalFlightID</con:entry>
-        <con:entry>p_Email</con:entry>
-        <con:entry>ADT_age</con:entry>
-        <con:entry>CHD_age</con:entry>
-        <con:entry>currency</con:entry>
-        <con:entry>paycurrency</con:entry>
-        <con:entry>ModifyDate</con:entry>
-        <con:entry>p_HomeAddress</con:entry>
-        <con:entry>p_HomeCity</con:entry>
-        <con:entry>p_HomeState</con:entry>
-        <con:entry>p_HomePostal</con:entry>
-        <con:entry>p_FirstName</con:entry>
-        <con:entry>p_MiddleName</con:entry>
-        <con:entry>p_LastName</con:entry>
-        <con:entry>ADT_DOB</con:entry>
-        <con:entry>p_FirstNameTwo</con:entry>
-        <con:entry>p_MiddleNameTwo</con:entry>
-        <con:entry>p_FirstNameInfOne</con:entry>
-        <con:entry>p_MiddleNameInfOne</con:entry>
-        <con:entry>p_FirstNameCHDOne</con:entry>
-        <con:entry>p_MiddleNameCHDone</con:entry>
-        <con:entry>CHD_DOB</con:entry>
-        <con:entry>p_ModifyFirstName</con:entry>
-        <con:entry>p_ModifyMiddleName</con:entry>
-        <con:entry>p_ModifyLastName</con:entry>
-      </con:returnProperties>
+      <con:targetTestCase>19b662e5-acaa-4c2d-b343-9c8f079d4d2c</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep id="2e96c3fa-f581-497a-b78e-d0f239e256fd" name="2.RetrievePNR" type="request">
+  <con:testStep id="3e9f20d8-db0e-4129-83c1-992103370f3f" name="2.RetrievePNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -218,10 +30,10 @@
       <tem:RetrievePNR>
          <!--Optional:-->
          <tem:RetrievePnrRequest>
-            <rad:SecurityGUID>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -230,7 +42,7 @@
             <rad1:ActionType>GetReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#ConfrimationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${#[ConnectPointRegressionTestCases#CP_43 CP_ModifyBooking 1ADT1CHD1 INF Fare bundle#CreatePNR-save]#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:CreatePNRResponse[1]/ns1:CreatePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:RetrievePnrRequest>
       </tem:RetrievePNR>
@@ -261,7 +73,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="ef8b5e42-a063-4410-abb8-108cd44c93a4" name="3.CancelPNR" type="request">
+  <con:testStep id="87a8d001-f5a8-44a2-b1dc-26548df1651e" name="3.CancelPNR" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -278,10 +90,10 @@
       <tem:CancelPNR>
          <!--Optional:-->
          <tem:CancelPnrRequest>
-            <rad:SecurityGUID>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
-               <rad:CarrierCode><rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode></rad:CarrierCode>
+               <rad:CarrierCode><rad:AccessibleCarrierCode>1D</rad:AccessibleCarrierCode></rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
             <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -290,7 +102,7 @@
             <rad1:ActionType>CancelReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#ConfrimationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <!--Optional:-->
             <rad1:IsFlightDisruptionCancel>false</rad1:IsFlightDisruptionCancel>
@@ -323,7 +135,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="6e6e9542-d2d7-4c21-a752-8e9d6732e3dc" name="4.CreatePNR-save" type="request">
+  <con:testStep id="481f48b2-119a-4e9d-bf13-56f4b48d2b40" name="4.CreatePNR-save" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -340,21 +152,21 @@
       <tem:CreatePNR>
          <!--Optional:-->
          <tem:CreatePnrRequest>
-            <rad:SecurityGUID>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#securityToken}</rad:SecurityGUID>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
             <rad:CarrierCodes>
                <!--Zero or more repetitions:-->
                <rad:CarrierCode>
-                  <rad:AccessibleCarrierCode>${#Project#TS_CarrierCode}</rad:AccessibleCarrierCode>
+                  <rad:AccessibleCarrierCode>TS</rad:AccessibleCarrierCode>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
-            <rad:ClientIPAddress xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <rad:ClientIPAddress>?</rad:ClientIPAddress>
             <!--Optional:-->
             <rad:HistoricUserName>?</rad:HistoricUserName>
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Pre_req_Create_OW_InterLine_1ADT+1CHD+1INF#ConfrimationNum}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${2.RetrievePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -385,7 +197,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="55ff8ddc-efb5-4bcd-8221-e4afcd78d16d" name="Groovy Script" type="groovy">
+  <con:testStep id="ed4e2cdb-3900-489a-b534-7dec0c9b1635" name="Groovy Script" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -395,7 +207,7 @@
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'Feb_Regression'
+def tfolder ='Feb_Regression'
  
 //context.expand( '${#TestSuite#JIRA folder}' )
  

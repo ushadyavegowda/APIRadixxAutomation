@@ -812,7 +812,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="d43dc77c-e643-49db-b21f-e75ec97f214b" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep disabled="true" id="d43dc77c-e643-49db-b21f-e75ec97f214b" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -851,19 +851,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>3391.78</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>pnr</con:name>
-      <con:value>Q3HHGG</con:value>
+      <con:value>CJD1WG</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value/>
+      <con:value>194527</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

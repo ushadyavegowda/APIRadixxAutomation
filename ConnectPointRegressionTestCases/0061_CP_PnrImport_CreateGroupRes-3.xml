@@ -304,7 +304,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="4ec3305b-4dd6-4664-bb2a-4e23a771973d" name="ImportPNR_OW_BOOKING_10Pax" type="request" disabled="true">
+  <con:testStep disabled="true" id="4ec3305b-4dd6-4664-bb2a-4e23a771973d" name="ImportPNR_OW_BOOKING_10Pax" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -1473,7 +1473,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="6cff1972-55d3-4fe3-ace0-4cb6b49eebd6" name="ImportPNR_OW_BOOKING_10Pax 2" type="request" disabled="true">
+  <con:testStep disabled="true" id="6cff1972-55d3-4fe3-ace0-4cb6b49eebd6" name="ImportPNR_OW_BOOKING_10Pax 2" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
@@ -2642,12 +2642,12 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="e1008554-d514-4b85-b398-c3449abe7c6f" name="ImportPNR_OW_BOOKING_10Pax 3">
+  <con:testStep id="e1008554-d514-4b85-b398-c3449abe7c6f" name="ImportPNR_OW_BOOKING_10Pax 3" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>
       <con:operation>ImportPNR</con:operation>
-      <con:request name="ImportPNR_OW_BOOKING_10Pax 3" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="12c141f1-f1df-45d0-8579-588226bc1b09" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request defaultIncomingWss="" defaultOutgoingWss="" id="12c141f1-f1df-45d0-8579-588226bc1b09" incomingWss="" name="ImportPNR_OW_BOOKING_10Pax 3" outgoingWss="" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Only the first nodes</con:setting>
@@ -3665,14 +3665,14 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </ImportPNR>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response"/>
+        <con:assertion id="2b624fd2-dd44-448a-9e7e-e9afd12817e7" name="SOAP Response" type="SOAP Response"/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR"/>
+        <con:wsaConfig action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="f6156724-6890-48ed-af5a-7674c6396f80">
@@ -3811,10 +3811,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer -ExternalBookingReference" id="f947c1e8-b36b-4836-9d22-3fb05cf7801d">
+  <con:testStep id="f947c1e8-b36b-4836-9d22-3fb05cf7801d" name="PropertyTransfer -ExternalBookingReference" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ExternalBookingReference</con:name>
         <con:sourceType>RawRequest</con:sourceType>
         <con:sourceStep>ImportPNR_OW_BOOKING_10Pax</con:sourceStep>

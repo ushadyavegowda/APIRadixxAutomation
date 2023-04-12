@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="0a6e0e5e-b78e-4f32-9efc-a2a6dfeaed40" name="/GetServices" path="/GetServices" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="0a6e0e5e-b78e-4f32-9efc-a2a6dfeaed40" name="/GetServices" path="/GetServices" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="0a6e0e5e-b78e-4f32-9efc-a2a6dfeaed40fileName">%2FGetServices</con:setting>
   </con:settings>

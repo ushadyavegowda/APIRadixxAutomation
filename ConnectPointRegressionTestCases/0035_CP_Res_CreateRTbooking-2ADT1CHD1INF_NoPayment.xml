@@ -827,23 +827,23 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2686.92</con:value>
+      <con:value>14712</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186597</con:value>
+      <con:value>176893</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>192965</con:value>
+      <con:value>196880</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>
-      <con:value>7</con:value>
+      <con:value>22</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_return</con:name>
-      <con:value>1</con:value>
+      <con:value>4</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase failOnError="true" failTestCaseOnErrors="true" id="cbecdf18-f0fc-44c5-8f05-92cb9dc25b58" keepSession="false" maxResults="0" name="0059_CP_Codeshare_CancelRes" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="cbecdf18-f0fc-44c5-8f05-92cb9dc25b58fileName">0059_CP_Codeshare_CancelRes</con:setting>
+    <con:setting id="cbecdf18-f0fc-44c5-8f05-92cb9dc25b58fileName">0059_CP_Codeshare_CancelRes1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep id="2284c971-0fab-402f-a6da-5aed7848ea3e" name="1. Run 0055_CP_CodeShare_CreateRes" type="calltestcase">
@@ -146,7 +146,7 @@ declare namespace ns1='http://tempuri.org/';
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ExceptionCode</con:name>
-        <con:sourceType xsi:nil="true"/>
+        <con:sourceType/>
         <con:sourceStep>2. RetrivePNR</con:sourceStep>
         <con:sourcePath>${4. ModifyPnr_DeptSegment#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; declare namespace b='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions'; //ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:Exceptions[1]/b:ExceptionInformation.Exception[2]/b:ExceptionCode[1]}</con:sourcePath>
         <con:targetType>ExceptionCode</con:targetType>
@@ -417,7 +417,7 @@ declare namespace ns1='http://tempuri.org/';
       <delay>300000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep id="38444da3-8202-412f-8254-5d16e74c22bc" name="Groovy Script_to copyRQ and RS 2" type="groovy" disabled="true">
+  <con:testStep disabled="true" id="38444da3-8202-412f-8254-5d16e74c22bc" name="Groovy Script_to copyRQ and RS 2" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

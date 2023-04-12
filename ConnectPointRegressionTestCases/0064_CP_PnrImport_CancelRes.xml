@@ -285,7 +285,7 @@ testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
 //testRunner.testCase.testSuite.setPropertyValue("ExternalBookingRef",ExternalBookingRef);</script>
     </con:config>
   </con:testStep>
-  <con:testStep id="eccc4807-4dcd-4b94-ac7e-6471e3313071" name="Property Transfer-FlightNo" type="transfer" disabled="true">
+  <con:testStep disabled="true" id="eccc4807-4dcd-4b94-ac7e-6471e3313071" name="Property Transfer-FlightNo" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
@@ -335,7 +335,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep id="3c2b3f3e-b8fd-48d5-8962-2f442938e26e" name="ImportPNR_CancelRes" type="request" disabled="true">
+  <con:testStep disabled="true" id="3c2b3f3e-b8fd-48d5-8962-2f442938e26e" name="ImportPNR_CancelRes" type="request">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>BasicHttpBinding_IConnectPoint_Reservation</con:interface>

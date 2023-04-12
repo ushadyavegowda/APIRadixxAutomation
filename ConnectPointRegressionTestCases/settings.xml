@@ -2,6 +2,14 @@
 <con:testSuite id="941667e0-b84f-4edf-b402-502e0779ac90" name="ConnectPointRegressionTestCases" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="941667e0-b84f-4edf-b402-502e0779ac90fileName">ConnectPointRegressionTestCases</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@disable_log">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@errors_only">true</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientTransactionLogView$OptionsForm@follow">true</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>
@@ -16,15 +24,15 @@
     </con:property>
     <con:property>
       <con:name>Origin</con:name>
-      <con:value>YVR</con:value>
-    </con:property>
-    <con:property>
-      <con:name>Destination</con:name>
       <con:value>YYZ</con:value>
     </con:property>
     <con:property>
+      <con:name>Destination</con:name>
+      <con:value>YVR</con:value>
+    </con:property>
+    <con:property>
       <con:name>flightnum</con:name>
-      <con:value>699</con:value>
+      <con:value>765</con:value>
     </con:property>
     <con:property>
       <con:name>carriercode</con:name>
@@ -424,7 +432,7 @@
     </con:property>
     <con:property>
       <con:name>DcsSecToken</con:name>
-      <con:value>330d823e-fbf1-4575-b1d0-ca628ec248dc</con:value>
+      <con:value>c790bc1f-9a00-4cf5-bfb3-bcedcfb48b9e</con:value>
     </con:property>
     <con:property>
       <con:name>FBC</con:name>
@@ -440,7 +448,7 @@
     </con:property>
     <con:property>
       <con:name>FlightNumReturn</con:name>
-      <con:value>203</con:value>
+      <con:value>109</con:value>
     </con:property>
     <con:property>
       <con:name>p_FirstName_2ndPax</con:name>
@@ -500,7 +508,15 @@
     </con:property>
     <con:property>
       <con:name>CS_Upgrade_FBcode</con:name>
-      <con:value>BOW</con:value>
+      <con:value>BSWGD</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Othercarriercode</con:name>
+      <con:value>9RX</con:value>
+    </con:property>
+    <con:property>
+      <con:name>CS_ModifyDate</con:name>
+      <con:value>2023-04-15</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

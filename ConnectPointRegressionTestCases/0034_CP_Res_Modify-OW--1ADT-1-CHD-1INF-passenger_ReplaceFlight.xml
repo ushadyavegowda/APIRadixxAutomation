@@ -20,7 +20,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>LQSXA4</con:value>
+          <con:value>ZSZKDB</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -982,7 +982,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value>1</con:value>
+      <con:value>4</con:value>
     </con:property>
     <con:property userSpecific="true">
       <con:name>PNR</con:name>
@@ -1026,7 +1026,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LogicalFlightKey</con:name>
-      <con:value>196719:3/5/2023 7:00:00 AM</con:value>
+      <con:value>176893:4/7/2023 3:00:00 PM</con:value>
     </con:property>
     <con:property>
       <con:name>ReservationPaymentID</con:name>

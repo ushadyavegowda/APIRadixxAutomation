@@ -1473,10 +1473,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer -ExternalBookingReference" id="db908e79-16ae-4a03-95d0-6be3bf61dec9">
+  <con:testStep id="db908e79-16ae-4a03-95d0-6be3bf61dec9" name="PropertyTransfer -ExternalBookingReference" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>ExternalBookingReference</con:name>
         <con:sourceType>RawRequest</con:sourceType>
         <con:sourceStep>ImportPNR_OW_BOOKING_10Pax</con:sourceStep>
@@ -1567,7 +1567,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>FlightNo</con:name>
-      <con:value>699</con:value>
+      <con:value>510</con:value>
     </con:property>
     <con:property>
       <con:name>DepartureTime</con:name>

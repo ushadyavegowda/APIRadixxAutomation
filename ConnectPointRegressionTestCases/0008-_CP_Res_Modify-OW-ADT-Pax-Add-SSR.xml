@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>19913.50</con:value>
+          <con:value>1725.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>128873</con:value>
+          <con:value>202988</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value/>
+          <con:value>EHD36L</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-20</con:value>
+          <con:value>-117</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -403,8 +403,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
+        <con:sourceType>Response</con:sourceType>
         <con:sourceStep>4 ModifyPNR_Add SSR</con:sourceStep>
-        <con:targetStep>5 AssessPaymentMethodFees</con:targetStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:ModifyPNRResponse[1]/ns1:ModifyPNRResult[1]/a:ReservationBalance[1]</con:sourcePath>
+        <con:targetType>Balance</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
@@ -596,8 +601,10 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>Balance</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>3. ModifyPNR_Add Pax</con:sourceStep>
-        <con:sourcePath>${4. AssessPaymentMethodFees#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:AssessPaymentMethodFeesResponse[1]/ns1:AssessPaymentMethodFeesResult[1]/a:ReservationBalance[1]}</con:sourcePath>
+        <con:sourceStep>5 AssessPaymentMethodFees</con:sourceStep>
+        <con:sourcePath>declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response';
+//ns1:AssessPaymentMethodFeesResponse[1]/ns1:AssessPaymentMethodFeesResult[1]/a:ReservationBalance[1]</con:sourcePath>
         <con:targetType>Balance</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -643,7 +650,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             </rad:TransactionInfo>
             <rad:ReservationInfo>
                <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${1. Run_0001_CP_Res_Create OW ADT Pax CASH payment#PNR}</rad1:ConfirmationNumber>
+               <rad1:ConfirmationNumber>${1. Run Test 0001#PNR}</rad1:ConfirmationNumber>
             </rad:ReservationInfo>
             <rad:ExternalPayments>
                <!--Zero or more repetitions:-->
@@ -937,31 +944,31 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://20Q4appint.radixxuat.com/20Q4/Radixx.Connectpoint/ConnectPoint.Reservation.svc</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:CreatePNR>\r
-         <!--Optional:-->\r
-         <tem:CreatePnrRequest>\r
-            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>\r
-            <rad:CarrierCodes>\r
-               <!--Zero or more repetitions:-->\r
-               <rad:CarrierCode>\r
-                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>\r
-               </rad:CarrierCode>\r
-            </rad:CarrierCodes>\r
-            <!--Optional:-->\r
-            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>\r
-            <!--Optional:-->\r
-            <rad:HistoricUserName>radixx</rad:HistoricUserName>\r
-            <rad1:ActionType>SaveReservation</rad1:ActionType>\r
-            <rad1:ReservationInfo>\r
-               <rad:SeriesNumber>299</rad:SeriesNumber>\r
-               <rad:ConfirmationNumber>${1. Run_Test1 Create OW booking without SSR and seat#PNR}</rad:ConfirmationNumber>\r
-            </rad1:ReservationInfo>\r
-         </tem:CreatePnrRequest>\r
-      </tem:CreatePNR>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CreatePNR>
+         <!--Optional:-->
+         <tem:CreatePnrRequest>
+            <rad:SecurityGUID>${#TestSuite#securityToken}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>${#TestSuite#carriercode}</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress>1.1.1.1</rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>radixx</rad:HistoricUserName>
+            <rad1:ActionType>SaveReservation</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber>${1. Run Test 0001#PNR}</rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+         </tem:CreatePnrRequest>
+      </tem:CreatePNR>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion id="b2064914-0e65-449b-893e-6bc07ced3527" name="SOAP Response" type="SOAP Response"/>
         <con:assertion id="4411c793-fcdc-4aaf-a6f6-681e4738f6e0" name="XPath Match" type="XPath Match">
@@ -1109,6 +1116,42 @@ declare namespace ns1='http://tempuri.org/';
       <delay>1000</delay>
     </con:config>
   </con:testStep>
+  <con:testStep id="4e9b73dd-f66f-442c-bef7-3a96031ed348" name="Groovy Script_to copyRQ and RS 2" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>securityToken</con:name>
@@ -1120,27 +1163,31 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
-      <con:value>50</con:value>
+      <con:value>25</con:value>
     </con:property>
     <con:property>
       <con:name>s_SSRCategory</con:name>
-      <con:value>6</con:value>
+      <con:value>42</con:value>
     </con:property>
     <con:property>
       <con:name>s_ServiceID</con:name>
-      <con:value>74</con:value>
+      <con:value>43</con:value>
     </con:property>
     <con:property>
       <con:name>ServiceCode</con:name>
-      <con:value>VGML</con:value>
+      <con:value>NAME</con:value>
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>61475</con:value>
+      <con:value>74864</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>86298</con:value>
+      <con:value>110044</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Balance</con:name>
+      <con:value>30.0</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

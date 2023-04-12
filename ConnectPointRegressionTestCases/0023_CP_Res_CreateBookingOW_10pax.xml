@@ -2170,14 +2170,88 @@ declare namespace ns1='http://tempuri.org/';
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep disabled="true" id="d8c72e62-b14c-4ab5-bad8-7b3148142ae8" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep disabled="true" id="11f7fab2-9054-4e7e-9289-2d1c4688c0f6" name="Groovy Script (REST)" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//context.expand( '${#TestSuite#JIRA folder}' )
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{  
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof RestTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                   
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+         
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>FareId</con:name>
-      <con:value>1</con:value>
+      <con:value>2</con:value>
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>21445.00</con:value>
+      <con:value>14420.00</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentMethod</con:name>
@@ -2185,27 +2259,27 @@ declare namespace ns1='http://tempuri.org/';
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>21445.0</con:value>
+      <con:value>14420.0</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>QLLGU2</con:value>
+      <con:value>WPUMFL</con:value>
     </con:property>
     <con:property>
       <con:name>RecordNumber</con:name>
-      <con:value>7</con:value>
+      <con:value>4</con:value>
     </con:property>
     <con:property>
       <con:name>PHID</con:name>
-      <con:value>103901</con:value>
+      <con:value>97304</con:value>
     </con:property>
     <con:property>
       <con:name>FlightNum</con:name>
-      <con:value>699</con:value>
+      <con:value>765</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186607</con:value>
+      <con:value>176893</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

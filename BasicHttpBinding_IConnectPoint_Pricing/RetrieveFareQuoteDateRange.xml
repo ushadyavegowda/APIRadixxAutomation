@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteDateRange" anonymous="optional" bindingOperationName="RetrieveFareQuoteDateRange" id="717519f3-34a5-43f5-9407-fa3023856936" inputName="" isOneWay="false" name="RetrieveFareQuoteDateRange" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Pricing/RetrieveFareQuoteDateRange" anonymous="optional" bindingOperationName="RetrieveFareQuoteDateRange" id="717519f3-34a5-43f5-9407-fa3023856936" inputName="" isOneWay="false" name="RetrieveFareQuoteDateRange" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="717519f3-34a5-43f5-9407-fa3023856936fileName">RetrieveFareQuoteDateRange</con:setting>
   </con:settings>

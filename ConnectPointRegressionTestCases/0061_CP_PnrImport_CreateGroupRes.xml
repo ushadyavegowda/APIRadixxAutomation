@@ -263,7 +263,7 @@ testRunner.testCase.setPropertyValue("BookingDate", BookingDate1);
         <con:sourceStep>2. RetrieveFareQuote</con:sourceStep>
         <con:sourcePath>declare namespace ns1='http://tempuri.org/';
 declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response';
-//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[3]/a:FlightNum[1]</con:sourcePath>
+//ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:LegDetails[1]/a:LegDetail[4]/a:FlightNum[1]</con:sourcePath>
         <con:targetType>FlightNo</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
         <con:targetPath/>
@@ -358,9 +358,9 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                      <AirlinePersons>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-1</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
-                           <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                           <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
+                           <FareClass>${2. RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[3]/a:FCCode[1]}</FareClass>
+                           <FareBasisCode>${2. RetrieveFareQuote#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Response'; //ns1:RetrieveFareQuoteResponse[1]/ns1:RetrieveFareQuoteResult[1]/a:FlightSegments[1]/a:FlightSegment[1]/a:FareTypes[1]/a:FareType[1]/a:FareInfos[1]/a:FareInfo[3]/a:FBCode[1]}</FareBasisCode>
                            <Charges>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Charge>
                                  <CodeType>SEAT</CodeType>
@@ -376,13 +376,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-2</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -400,13 +400,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-3</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -424,13 +424,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-4</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -448,13 +448,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-5</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -472,13 +472,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-6</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -496,13 +496,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-7</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -520,13 +520,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-8</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -544,13 +544,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-9</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -568,13 +568,13 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
                         <ImportPNR.Reservation.Segment.AirlinePerson>
                            <PersonOrgID>-10</PersonOrgID>
-                           <TravelsWithPersonOrgID>-2147483648</TravelsWithPersonOrgID>
+                           <TravelsWithPersonOrgID>-214</TravelsWithPersonOrgID>
                            <FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                            <Charges>
@@ -592,7 +592,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                            <Seats>
                               <ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                                  <Seat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                                 <SeatRow>-2147483648</SeatRow>
+                                 <SeatRow>-214</SeatRow>
                               </ImportPNR.Reservation.Segment.AirlinePerson.Seat>
                            </Seats>
                         </ImportPNR.Reservation.Segment.AirlinePerson>
@@ -1473,7 +1473,61 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="db908e79-16ae-4a03-95d0-6be3bf61dec9" name="PropertyTransfer -ExternalBookingReference" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ExternalBookingReference</con:name>
+        <con:sourceType>RawRequest</con:sourceType>
+        <con:sourceStep>ImportPNR_OW_BOOKING_10Pax</con:sourceStep>
+        <con:sourcePath>declare namespace ns2='http://tempuri.org/';
+declare namespace ns1='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request';
+//ns2:ImportPNR[1]/ns2:ImportPNRRequest[1]/ns1:ImportPNR[1]/ns1:ExternalBookingReference[1]</con:sourcePath>
+        <con:targetType>ExternalBookingReference</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep disabled="true" id="873518c6-7268-48ec-b035-7d030d4da4ad" name="Groovy Script_to copyRQ and RS" type="groovy">
+    <con:settings/>
+    <con:config>
+      <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
+def project = context.testCase.testSuite.project;
+def suite = context.testCase.testSuite;
+def kase = context.testCase
+def tfolder = 'RegAprilRelease'
+//def dirpath = "C:/Users/SG0222238/Downloads/ConnectPoint/${tfolder}/${kase.name}"
+def dirpath = "//dsauto01.radixxhost.net/CP_RQ_RS/${tfolder}/${kase.name}"
+log.info(dirpath)
+def Dir = new File(dirpath)
+if(!Dir.exists()) Dir.mkdirs()
+//log.info (kase);
+for(def i=0; i &lt; kase.testStepCount -1 ; i++)
+{   
+    log.info(i);
+        def step = kase.getTestStepAt(i).name
+        log.info(step)
+        if(kase.getTestStepAt(i).disabled == false &amp;&amp; kase.getTestStepAt(i) instanceof WsdlTestRequestStep)
+        {
+        def filepath =  "${dirpath}/${step}_reqres.xml"
+        def m = new File(filepath)
+                    
+        def str = '${' + step + '#RawRequest}'
+          def req = context.expand(str)
+         log.info(req)
+          
+          m.write(req,"UTF-8")
+          def resp = '${' + step + '#Response}'
+          def res = context.expand( resp )
+          m.append("\n\n\n\n\n", "UTF-8")
+          m.append(res, "UTF-8")
+        }
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="336f4b1e-3ce3-484c-bd5e-87fe66253515" name="Groovy Script_to copyRQ and RS 2" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep
@@ -1517,11 +1571,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>DepartureTime</con:name>
-      <con:value>2023-03-26T08:00:00</con:value>
+      <con:value>2023-04-09T09:00:00</con:value>
     </con:property>
     <con:property>
       <con:name>ArrivalTime</con:name>
-      <con:value>2023-03-26T15:45:00</con:value>
+      <con:value>2023-04-09T14:00:00</con:value>
     </con:property>
     <con:property>
       <con:name>CarrierCode</con:name>
@@ -1529,7 +1583,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>BookingDate</con:name>
-      <con:value>2023-03-23</con:value>
+      <con:value>2023-04-06</con:value>
+    </con:property>
+    <con:property>
+      <con:name>ExternalBookingReference</con:name>
+      <con:value>SA8445</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>1725.50</con:value>
+          <con:value>2023.50</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>202988</con:value>
+          <con:value>176901</con:value>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>EHD36L</con:value>
+          <con:value>PRM1JC</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-117</con:value>
+          <con:value>-52</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -376,7 +376,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
         </con:assertion>
         <con:assertion id="abebc36c-3cdd-479b-8d31-54bc917f9ce2" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
-            <SLA>500</SLA>
+            <SLA>800</SLA>
           </con:configuration>
         </con:assertion>
         <con:assertion id="84f65dd1-27e5-4199-8fc0-5ac6ed8db5ff" name="Not SOAP Fault" type="SOAP Fault Assertion"/>
@@ -902,31 +902,6 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep id="a5b961e3-6c76-4da3-906a-1de098437341" name="Property ReservationPaymentID" type="transfer">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>ReservationPaymentID</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
-        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
-        <con:targetType>ReservationPaymentID</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
-        <con:name>ReservationPaymentID</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
-        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
-        <con:targetType>ReservationPaymentID</con:targetType>
-        <con:targetStep>#TestCase#</con:targetStep>
-        <con:targetPath/>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
   <con:testStep id="db4ba1c1-2630-49e9-a865-7073212986b3" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>
@@ -1179,11 +1154,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>74864</con:value>
+      <con:value>79665</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>110044</con:value>
+      <con:value>97312</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>

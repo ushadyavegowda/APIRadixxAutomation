@@ -812,7 +812,7 @@ declare namespace ns1='http://tempuri.org/';
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep disabled="true" id="d43dc77c-e643-49db-b21f-e75ec97f214b" name="Groovy Script_to copyRQ and RS" type="groovy">
+  <con:testStep id="d43dc77c-e643-49db-b21f-e75ec97f214b" name="Groovy Script_to copyRQ and RS" type="groovy">
     <con:settings/>
     <con:config>
       <script>import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep

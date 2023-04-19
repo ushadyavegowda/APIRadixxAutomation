@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="64985d4a-2938-4813-9baf-d4de4ce0d466" name="/Version" path="/Version" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="64985d4a-2938-4813-9baf-d4de4ce0d466" name="/Version" path="/Version" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="64985d4a-2938-4813-9baf-d4de4ce0d466fileName">%2FVersion</con:setting>
   </con:settings>

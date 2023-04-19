@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" anonymous="optional" bindingOperationName="UpdateLidAircraft" id="7166a9a7-5df1-46bf-a359-b40669edf1af" inputName="" isOneWay="false" name="UpdateLidAircraft" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Flight/UpdateLidAircraft" anonymous="optional" bindingOperationName="UpdateLidAircraft" id="7166a9a7-5df1-46bf-a359-b40669edf1af" inputName="" isOneWay="false" name="UpdateLidAircraft" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7166a9a7-5df1-46bf-a359-b40669edf1affileName">UpdateLidAircraft</con:setting>
   </con:settings>

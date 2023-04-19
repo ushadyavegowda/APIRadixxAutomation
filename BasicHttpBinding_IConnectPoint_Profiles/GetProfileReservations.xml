@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations" anonymous="optional" bindingOperationName="GetProfileReservations" id="3469d2e0-5301-4cf5-8507-2bcbc89a0748" inputName="" isOneWay="false" name="GetProfileReservations" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_Profiles/GetProfileReservations" anonymous="optional" bindingOperationName="GetProfileReservations" id="3469d2e0-5301-4cf5-8507-2bcbc89a0748" inputName="" isOneWay="false" name="GetProfileReservations" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3469d2e0-5301-4cf5-8507-2bcbc89a0748fileName">GetProfileReservations</con:setting>
   </con:settings>

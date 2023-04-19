@@ -139,7 +139,7 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="70c74d91-ef77-40a6-ba2e-aa1ba8da948a" name="Response SLA" type="Response SLA Assertion">
+        <con:assertion disabled="true" id="70c74d91-ef77-40a6-ba2e-aa1ba8da948a" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>

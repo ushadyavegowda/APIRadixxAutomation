@@ -902,6 +902,31 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep id="a5b961e3-6c76-4da3-906a-1de098437341" name="Property ReservationPaymentID" type="transfer">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ReservationPaymentID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
+        <con:targetType>ReservationPaymentID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers disabled="true" entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
+        <con:name>ReservationPaymentID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>6 InsertExternalProcessedPayment_CASH</con:sourceStep>
+        <con:sourcePath>${5 InsertExternalProcessedPayment_CASH#Response}</con:sourcePath>
+        <con:targetType>ReservationPaymentID</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep id="db4ba1c1-2630-49e9-a865-7073212986b3" name="Delay after IEP" type="delay">
     <con:settings/>
     <con:config>

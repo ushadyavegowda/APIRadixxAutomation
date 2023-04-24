@@ -1005,11 +1005,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2023.50</con:value>
+      <con:value>1850.00</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>176901</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>fareid</con:name>
@@ -1017,7 +1017,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>G4N0WT</con:value>
+      <con:value>SRRPSC</con:value>
     </con:property>
     <con:property>
       <con:name>securityToken</con:name>

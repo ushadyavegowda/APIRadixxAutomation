@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>2023.50</con:value>
+          <con:value>1850.00</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>176901</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>S5EPGJ</con:value>
+          <con:value>E41KHN</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-55</con:value>
+          <con:value>-90</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -199,17 +199,17 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
                </rad:CarrierCode>
             </rad:CarrierCodes>
             <!--Optional:-->
-            <rad:ClientIPAddress>?</rad:ClientIPAddress>
+            <rad:ClientIPAddress>${empty}</rad:ClientIPAddress>
             <!--Optional:-->
             <rad:HistoricUserName>${#TestSuite#UserName}</rad:HistoricUserName>
             <rad1:ActionType>AddPassengerToReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run 0001_CP#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:FareInformationID>1</rad1:FareInformationID>
-            <rad1:LogicalFlightKeyToReplace>?</rad1:LogicalFlightKeyToReplace>
-            <rad1:LogicalFlightKeyToRemove>?</rad1:LogicalFlightKeyToRemove>
+            <rad1:LogicalFlightKeyToReplace>${empty}</rad1:LogicalFlightKeyToReplace>
+            <rad1:LogicalFlightKeyToRemove>${empty}</rad1:LogicalFlightKeyToRemove>
             <rad1:PersonOrgIdentifierToRemove>-214</rad1:PersonOrgIdentifierToRemove>
             <rad1:PassengersToAdd>
                <!--Zero or more repetitions:-->
@@ -251,11 +251,11 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
                         <rad1:PersonOrgID>${#TestCase#PersonOrgID}</rad1:PersonOrgID>
                         <rad1:ContactField>${#TestSuite#p_Email}</rad1:ContactField>
                         <rad1:ContactType>Email</rad1:ContactType>
-                        <rad1:Extension>?</rad1:Extension>
-                        <rad1:CountryCode>?</rad1:CountryCode>
-                        <rad1:AreaCode>?</rad1:AreaCode>
-                        <rad1:PhoneNumber>?</rad1:PhoneNumber>
-                        <rad1:Display>?</rad1:Display>
+                        <rad1:Extension>${empty}</rad1:Extension>
+                        <rad1:CountryCode>${empty}</rad1:CountryCode>
+                        <rad1:AreaCode>${empty}</rad1:AreaCode>
+                        <rad1:PhoneNumber>${empty}</rad1:PhoneNumber>
+                        <rad1:Display>${empty}</rad1:Display>
                         <rad1:PreferredContactMethod>false</rad1:PreferredContactMethod>
                      </rad1:ContactInfo>
                   </rad1:ContactInfos>
@@ -264,14 +264,14 @@ testRunner.testCase.setPropertyValue("CommentID", "-214");</script>
                   <rad1:LapChildID>-2147483648</rad1:LapChildID>
                   <rad1:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <rad1:SelecteeStatus>${#TestCase#CommentID}</rad1:SelecteeStatus>
-                  <rad1:StoreFrontID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:StoreFrontID>${empty}</rad1:StoreFrontID>
                   <rad1:TravelsWithPersonOrgID>${#TestSuite#PersonOrgID}</rad1:TravelsWithPersonOrgID>
-                  <rad1:RedressNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:KnownTravelerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:RedressNumber>${empty}</rad1:RedressNumber>
+                  <rad1:KnownTravelerNumber>${empty}</rad1:KnownTravelerNumber>
+                  <rad1:RecordLocator>${empty}</rad1:RecordLocator>
                   <rad1:FlightInformations>
                      <rad1:ModifyPNR.FlightInformation>
-                        <rad1:LogicalFlightID>${1. Run 0001_CP#LFID}</rad1:LogicalFlightID>
+                        <rad1:LogicalFlightID>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:LogicalFlightID[1]}</rad1:LogicalFlightID>
                         <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
                         <rad1:FareInformationID>${1. Run 0001_CP#fareid}</rad1:FareInformationID>
                         <rad1:RecordLocator xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -1099,19 +1099,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>p_FirstName</con:name>
-      <con:value>DVQTWJTWO</con:value>
+      <con:value>BDBNCHTWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_LastName</con:name>
-      <con:value>GFUPSRTWO</con:value>
+      <con:value>RWCOXWTWO</con:value>
     </con:property>
     <con:property>
       <con:name>p_MiddleName</con:name>
-      <con:value>GFUPSRTWOT</con:value>
+      <con:value>RWCOXWTWOT</con:value>
     </con:property>
     <con:property>
       <con:name>p_DOB</con:name>
-      <con:value>1998-04-12</con:value>
+      <con:value>1998-04-20</con:value>
     </con:property>
     <con:property>
       <con:name>p_Gender</con:name>
@@ -1191,7 +1191,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>Passport</con:name>
-      <con:value>26216096</con:value>
+      <con:value>40937060</con:value>
     </con:property>
     <con:property>
       <con:name>Nationality</con:name>
@@ -1199,11 +1199,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2023.5</con:value>
+      <con:value>1850</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>S5EPGJ</con:value>
+      <con:value>E41KHN</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

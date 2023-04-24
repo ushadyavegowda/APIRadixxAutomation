@@ -1442,19 +1442,19 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>ResBalance</con:name>
-      <con:value>421.57</con:value>
+      <con:value>1811.00</con:value>
     </con:property>
     <con:property>
       <con:name>PNR</con:name>
-      <con:value>XPUPC7</con:value>
+      <con:value>L63AC2</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>421.57</con:value>
+      <con:value>1811.0</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>186601</con:value>
+      <con:value>185234</con:value>
     </con:property>
     <con:property>
       <con:name>origin</con:name>

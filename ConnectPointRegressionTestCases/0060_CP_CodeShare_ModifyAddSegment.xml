@@ -26,7 +26,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
       </con:properties>
       <con:returnProperties>

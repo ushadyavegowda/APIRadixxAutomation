@@ -148,9 +148,9 @@
             <rad:FareGroupMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">FareClassFareBasis</rad:FareGroupMethod>
             <rad:InventoryFilterMethod xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">Available</rad:InventoryFilterMethod>
             <rad:FareQuoteDetails xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
-               <rad:FareQuoteDetail><rad:Origin>${#TestSuite#Destination}</rad:Origin><rad:Destination>${#TestSuite#Origin}</rad:Destination><rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups><rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule><rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom><rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo><rad:DateOfDeparture>${#TestSuite#ReturnDate}</rad:DateOfDeparture><rad:FareTypeCategory>1</rad:FareTypeCategory><rad:FareClass>${empty}</rad:FareClass><rad:FareBasisCode>${empty}</rad:FareBasisCode><rad:Cabin>${empty}</rad:Cabin><rad:LFID>${#TestCase#LFID_Return}</rad:LFID><rad:OperatingCarrierCode>${empty}</rad:OperatingCarrierCode><rad:MarketingCarrierCode>${empty}</rad:MarketingCarrierCode><rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore><rad:NumberOfDaysAfter>0</rad:NumberOfDaysAfter><rad:LanguageCode>en</rad:LanguageCode><rad:TicketPackageID>${empty}</rad:TicketPackageID><rad:FareQuoteRequestInfos><rad:FareQuoteRequestInfo><rad:PassengerTypeID>6</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>5</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>2</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo></rad:FareQuoteRequestInfos><rad:ActionType>NewBooking</rad:ActionType></rad:FareQuoteDetail><rad:FareQuoteDetail>
-                  <rad:Origin>${#TestSuite#Origin}</rad:Origin>
-                  <rad:Destination>${#TestSuite#Destination}</rad:Destination>
+               <rad:FareQuoteDetail><rad:Origin>${#TestCase#Origin}</rad:Origin><rad:Destination>${#TestCase#Destination}</rad:Destination><rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups><rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule><rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom><rad:UseAirportsNotMetroGroupsForTo>true</rad:UseAirportsNotMetroGroupsForTo><rad:DateOfDeparture>${#TestSuite#ReturnDate}</rad:DateOfDeparture><rad:FareTypeCategory>1</rad:FareTypeCategory><rad:FareClass>${empty}</rad:FareClass><rad:FareBasisCode>${empty}</rad:FareBasisCode><rad:Cabin>${empty}</rad:Cabin><rad:LFID>${#TestCase#LFID_Onward}</rad:LFID><rad:OperatingCarrierCode>${empty}</rad:OperatingCarrierCode><rad:MarketingCarrierCode>${empty}</rad:MarketingCarrierCode><rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore><rad:NumberOfDaysAfter>0</rad:NumberOfDaysAfter><rad:LanguageCode>en</rad:LanguageCode><rad:TicketPackageID>${empty}</rad:TicketPackageID><rad:FareQuoteRequestInfos><rad:FareQuoteRequestInfo><rad:PassengerTypeID>6</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>5</rad:PassengerTypeID><rad:TotalSeatsRequired>1</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo><rad:FareQuoteRequestInfo><rad:PassengerTypeID>1</rad:PassengerTypeID><rad:TotalSeatsRequired>2</rad:TotalSeatsRequired></rad:FareQuoteRequestInfo></rad:FareQuoteRequestInfos><rad:ActionType>NewBooking</rad:ActionType></rad:FareQuoteDetail><rad:FareQuoteDetail>
+                  <rad:Origin>${#TestCase#Destination}</rad:Origin>
+                  <rad:Destination>${#TestCase#Origin}</rad:Destination>
                   <rad:UseAirportsNotMetroGroups>true</rad:UseAirportsNotMetroGroups>
                   <rad:UseAirportsNotMetroGroupsAsRule>true</rad:UseAirportsNotMetroGroupsAsRule>
                   <rad:UseAirportsNotMetroGroupsForFrom>true</rad:UseAirportsNotMetroGroupsForFrom>
@@ -160,7 +160,7 @@
                   <rad:FareClass>${empty}</rad:FareClass>
                   <rad:FareBasisCode>${empty}</rad:FareBasisCode>
                   <rad:Cabin>${empty}</rad:Cabin>
-                  <rad:LFID>${#TestCase#LFID_Onward}</rad:LFID>
+                  <rad:LFID>${#TestCase#LFID_Return}</rad:LFID>
                   <rad:OperatingCarrierCode>${empty}</rad:OperatingCarrierCode>
                   <rad:MarketingCarrierCode>${empty}</rad:MarketingCarrierCode>
                   <rad:NumberOfDaysBefore>0</rad:NumberOfDaysBefore>
@@ -1117,19 +1117,27 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
-      <con:value>186609</con:value>
+      <con:value>176909</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Return</con:name>
-      <con:value>196498</con:value>
+      <con:value>196896</con:value>
     </con:property>
     <con:property>
       <con:name>FareID_Onward</con:name>
-      <con:value>7</con:value>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:property>
     <con:property>
       <con:name>FareID_return</con:name>
       <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Origin</con:name>
+      <con:value>YUL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Destination</con:name>
+      <con:value>MCO</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

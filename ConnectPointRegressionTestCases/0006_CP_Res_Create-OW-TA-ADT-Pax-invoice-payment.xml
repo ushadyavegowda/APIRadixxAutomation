@@ -51,8 +51,8 @@
             <rad1:FareQuoteDetails>
                <!--Zero or more repetitions:-->
                <rad1:FareQuoteDetail>
-                  <rad1:Origin>${#TestSuite#Origin}</rad1:Origin>
-                  <rad1:Destination>${#TestSuite#Destination}</rad1:Destination>
+                  <rad1:Origin>${#TestCase#Origin}</rad1:Origin>
+                  <rad1:Destination>${#TestCase#Destination}</rad1:Destination>
                   <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
                   <!--Optional:-->
                   <rad1:UseAirportsNotMetroGroupsAsRule>true</rad1:UseAirportsNotMetroGroupsAsRule>
@@ -917,19 +917,27 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
   <con:properties>
     <con:property>
       <con:name>fareid</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>2884.00</con:value>
+      <con:value>1270.00</con:value>
     </con:property>
     <con:property>
       <con:name>pnr</con:name>
-      <con:value>Q3HHGG</con:value>
+      <con:value>9S1BUG</con:value>
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value/>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:property>
+    <con:property>
+      <con:name>Origin</con:name>
+      <con:value>YUL</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Destination</con:name>
+      <con:value>MCO</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

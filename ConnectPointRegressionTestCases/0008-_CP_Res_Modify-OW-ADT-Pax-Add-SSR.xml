@@ -11,11 +11,11 @@
       <con:properties>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>2023.50</con:value>
+          <con:value>1850.00</con:value>
         </con:property>
         <con:property>
           <con:name>LFID</con:name>
-          <con:value>176901</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>fareid</con:name>
@@ -23,7 +23,7 @@
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>PRM1JC</con:value>
+          <con:value>QW5ZYD</con:value>
         </con:property>
         <con:property>
           <con:name>securityToken</con:name>
@@ -31,7 +31,7 @@
         </con:property>
         <con:property>
           <con:name>ReservationPaymentID</con:name>
-          <con:value>-52</con:value>
+          <con:value>-87</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -185,16 +185,16 @@ declare namespace ns1='http://tempuri.org/';
                   <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
                   <rad1:DestinationAirportCode>${#TestSuite#Destination}</rad1:DestinationAirportCode>
                   <!--Optional:-->
-                  <rad1:FareBasisCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:FareBasisCode>${empty}</rad1:FareBasisCode>
                   <!--Optional:-->
-                  <rad1:FareClass xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                  <rad1:LogicalFlightID>${1. Run Test 0001#LFID}</rad1:LogicalFlightID>
+                  <rad1:FareClass>${empty}</rad1:FareClass>
+                  <rad1:LogicalFlightID>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:LogicalFlightID[1]}</rad1:LogicalFlightID>
                   <!--Optional:-->
-                  <rad1:MarketingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:MarketingCarrierCode>${empty}</rad1:MarketingCarrierCode>
                   <!--Optional:-->
-                  <rad1:OperatingCarrierCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <rad1:OperatingCarrierCode>${empty}</rad1:OperatingCarrierCode>
                   <!--Optional:-->
-                  <rad1:ServiceCode>${#TestCase#ServiceCode}</rad1:ServiceCode>
+                  <rad1:ServiceCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                   <!--Optional:-->
                   <rad1:ServiceTypes>
                      <!--Zero or more repetitions:-->
@@ -322,7 +322,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad1:ActionType>AddSpecialServiceToReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>${#TestSuite#SeriesNumber}</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run Test 0001#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
             <rad1:FareInformationID>-215</rad1:FareInformationID>
             <rad1:LogicalFlightKeyToReplace xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -335,7 +335,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
                   <rad1:CodeType>${#TestCase#ServiceCode}</rad1:CodeType>
                   <rad1:ServiceID>${#TestCase#s_ServiceID}</rad1:ServiceID>
                   <rad1:SSRCategory>${#TestCase#s_SSRCategory}</rad1:SSRCategory>
-                  <rad1:LogicalFlightID>${1. Run Test 0001#LFID}</rad1:LogicalFlightID>
+                  <rad1:LogicalFlightID>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:Airlines[1]/a:Airline[1]/a:LogicalFlight[1]/a:LogicalFlight[1]/a:LogicalFlightID[1]}</rad1:LogicalFlightID>
                   <rad1:DepartureDate>${#TestSuite#DepartureDate}</rad1:DepartureDate>
                   <rad1:Amount>${#TestCase#s_Amount}</rad1:Amount>
                   <rad1:OverrideAmount>true</rad1:OverrideAmount>
@@ -650,7 +650,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             </rad:TransactionInfo>
             <rad:ReservationInfo>
                <rad1:SeriesNumber>${#TestSuite#SeriesNumber}</rad1:SeriesNumber>
-               <rad1:ConfirmationNumber>${1. Run Test 0001#PNR}</rad1:ConfirmationNumber>
+               <rad1:ConfirmationNumber>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad1:ConfirmationNumber>
             </rad:ReservationInfo>
             <rad:ExternalPayments>
                <!--Zero or more repetitions:-->
@@ -964,7 +964,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
             <rad1:ActionType>SaveReservation</rad1:ActionType>
             <rad1:ReservationInfo>
                <rad:SeriesNumber>299</rad:SeriesNumber>
-               <rad:ConfirmationNumber>${1. Run Test 0001#PNR}</rad:ConfirmationNumber>
+               <rad:ConfirmationNumber>${2. RetrivePNR#Response#declare namespace ns1='http://tempuri.org/'; declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response'; //ns1:RetrievePNRResponse[1]/ns1:RetrievePNRResult[1]/a:ConfirmationNumber[1]}</rad:ConfirmationNumber>
             </rad1:ReservationInfo>
          </tem:CreatePnrRequest>
       </tem:CreatePNR>
@@ -1179,11 +1179,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>79665</con:value>
+      <con:value>83903</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>97312</con:value>
+      <con:value>49410</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>

@@ -32,19 +32,19 @@
         </con:property>
         <con:property>
           <con:name>p_FirstName</con:name>
-          <con:value>ZAYTSVTWO</con:value>
+          <con:value>YDRRESTWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_LastName</con:name>
-          <con:value>UHQYQWTWO</con:value>
+          <con:value>WLSAQETWO</con:value>
         </con:property>
         <con:property>
           <con:name>p_MiddleName</con:name>
-          <con:value>UHQYQWTWOT</con:value>
+          <con:value>WLSAQETWOT</con:value>
         </con:property>
         <con:property>
           <con:name>p_DOB</con:name>
-          <con:value>1998-04-12</con:value>
+          <con:value>1998-04-20</con:value>
         </con:property>
         <con:property>
           <con:name>p_Gender</con:name>
@@ -124,7 +124,7 @@
         </con:property>
         <con:property>
           <con:name>Passport</con:name>
-          <con:value>59743519</con:value>
+          <con:value>87173136</con:value>
         </con:property>
         <con:property>
           <con:name>Nationality</con:name>
@@ -132,11 +132,11 @@
         </con:property>
         <con:property>
           <con:name>Balance</con:name>
-          <con:value>2023.5</con:value>
+          <con:value>1850</con:value>
         </con:property>
         <con:property>
           <con:name>PNR</con:name>
-          <con:value>B9HGND</con:value>
+          <con:value>0NXSAM</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -1338,7 +1338,7 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>LFID</con:name>
-      <con:value>176901</con:value>
+      <con:value>66553</con:value>
     </con:property>
     <con:property>
       <con:name>s_Amount</con:name>
@@ -1358,11 +1358,11 @@ for(def i=0; i &lt; kase.testStepCount -1 ; i++)
     </con:property>
     <con:property>
       <con:name>PersonOrgID</con:name>
-      <con:value>79690</con:value>
+      <con:value>83994</con:value>
     </con:property>
     <con:property>
       <con:name>PhysicalFlightID</con:name>
-      <con:value>97312</con:value>
+      <con:value>49410</con:value>
     </con:property>
     <con:property>
       <con:name>Balance</con:name>

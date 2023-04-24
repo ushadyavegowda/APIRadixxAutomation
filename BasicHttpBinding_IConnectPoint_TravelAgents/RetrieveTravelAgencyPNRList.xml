@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTravelAgencyPNRList" anonymous="optional" bindingOperationName="RetrieveTravelAgencyPNRList" id="c5c465ee-8896-4ecd-8e6d-e0b37b554c44" inputName="" isOneWay="false" name="RetrieveTravelAgencyPNRList" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:con="http://eviware.com/soapui/config">
+<con:operation action="http://tempuri.org/IConnectPoint_TravelAgents/RetrieveTravelAgencyPNRList" anonymous="optional" bindingOperationName="RetrieveTravelAgencyPNRList" id="c5c465ee-8896-4ecd-8e6d-e0b37b554c44" inputName="" isOneWay="false" name="RetrieveTravelAgencyPNRList" receivesAttachments="false" sendsAttachments="false" type="Request-Response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c5c465ee-8896-4ecd-8e6d-e0b37b554c44fileName">RetrieveTravelAgencyPNRList</con:setting>
   </con:settings>

@@ -1056,7 +1056,7 @@ declare namespace a='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint
 def project = context.testCase.testSuite.project;
 def suite = context.testCase.testSuite;
 def kase = context.testCase
-def tfolder = 'RegAprilRelease'
+def tfolder = 'RegAprilRelease_Defect'
  
 //context.expand( '${#TestSuite#JIRA folder}' )
  
@@ -1095,7 +1095,7 @@ m.append(res, "UTF-8")
     </con:property>
     <con:property>
       <con:name>Balance</con:name>
-      <con:value>4978.13</con:value>
+      <con:value>5127.5</con:value>
     </con:property>
     <con:property>
       <con:name>LFID_Onward</con:name>
